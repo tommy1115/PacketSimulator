@@ -36,7 +36,7 @@ set cpu_max=0
 set ram_min=0
 set ram_max=0
 set file_path=new_file.txt
-set csvfile=out.csv
+set "csvfile=%~dp0rep\log\out.csv"
 
 echo "Test","Target","Version","Round","CPU_min","CPU_max","RAM_min(KB)","RAM_max(KB)","Timestamp","Duration","SCRIPT_FILENAME","APPL_SCRIPT_NAME","Protocol","E1_ADDR","E2_ADDR","CONSECUTIVE_LOST","CPU_UTIL_E1","CPU_UTIL_E2","DELAY_FACTOR","DELAY_VARIATION","END_TO_END_DELAY","JITTER_AVG","JITTER_MIN","JITTER_MAX","MEDIA_LOSS_RATE","MOS_ESTIMATE_AVG","MOS_ESTIMATE_MIN","MOS_ESTIMATE_MAX","ONE_WAY_DELAY_AVG","ONE_WAY_DELAY_MIN","ONE_WAY_DELAY_MAX","R_VALUE_AVG","R_VALUE_MIN","R_VALUE_MAX","REL_PRECISION","RESP_TIME_AVG","RESP_TIME_MIN","RESP_TIME_MAX","RSSI_E1_AVG","RSSI_E1_MIN","RSSI_E1_MAX","RSSI_E2_AVG","RSSI_E2_MIN","RSSI_E2_MAX","THROUGHPUT_AVG","THROUGHPUT_MIN","THROUGHPUT_MAX","TRANS_RATE_AVG","TRANS_RATE_MIN","TRANS_RATE_MAX" >> %csvfile%
 
@@ -88,7 +88,7 @@ for /f %%b in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"
         set /a idx+=1
     )
     set script_total=!idx!
-    echo !script_total!
+    @REM echo !script_total!
 
     set "case[1].script=HTTPtext"
     set "case[1].protocol=TCP"
@@ -156,7 +156,7 @@ for /f %%b in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"
 
                             REM ===== 執行後 =====
                             echo "正在進行執行後取樣 (20秒)..."
-                            for /L %%i in (1,1,20) do (
+                            for /L %%i in (1,1,3) do (
                                 set "cpu_int=0"
                                 set "ram_mb=0"
 
@@ -181,7 +181,7 @@ for /f %%b in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"
                             "!cpu_max_before!","!cpu_max_during!","!cpu_max_after!", ^
                             "!ram_max_before!","!ram_max_during!","!ram_max_after!" >> %csvfile%
                             
-                            echo ## !T_DATETIME!, TCP, "!HTTP_SCR_PATH!" --------------------------------------
+                            echo ## !T_DATETIME!, %%p, %%s --------------------------------------
                             timeout /t 10
                         )
                     )
