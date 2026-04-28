@@ -53,24 +53,25 @@ echo Packet_Simulator_Start_Time=%StartTime%
 REM TODO(REQ): script and protocol change to array[]
 REM TODO(REQ): 紀錄 CPU, RAM 在執行前中後(執行中要定期取值並取得最大值) (還沒測試)
 
-    REM ===== 執行前（取樣 5 秒）=====
-    for /L %%i in (1,1,5) do (
+    REM ===== 執行前（取樣 20 秒）=====
+    echo 正在進行執行前取樣 20 秒...
+    for /L %%i in (1,1,20) do (
+        set "cpu_int=0"
+        set "ram_mb=0"
 
-        for /f "skip=2 tokens=2 delims=," %%d in ('typeperf "\Process(!target_name!)\%% Processor Time" -sc 1') do (
-            set "cpu=%%d"
-            set "cpu=!cpu:~1,8!"
-            for /f "tokens=1 delims=." %%x in ("!cpu!") do set cpu_int=%%x
+        for /f %%d in ('powershell -NoProfile -Command "$p=Get-CimInstance Win32_PerfFormattedData_PerfProc_Process -Filter \"Name = '!target_name!'\" | Measure-Object -Property PercentProcessorTime -Sum; $cores=(Get-CimInstance Win32_ComputerSystem).NumberOfLogicalProcessors; if($p.Sum){ [int]($p.Sum / $cores) } else { echo 0 }"') do (
+            set "cpu_int=%%d"
         )
-        if !cpu_int! gtr !cpu_max_before! set cpu_max_before=!cpu_int!
+        if !cpu_int! gtr !cpu_max_before! set "cpu_max_before=!cpu_int!"
 
-        for /f "skip=2 tokens=2 delims=," %%e in ('typeperf "\Process(!target_name!)\Working Set - Private" -sc 1') do (
-            set "ram_raw=%%e"
-            set "ram_raw=!ram_raw:~1!"
+        for /f %%e in ('powershell -NoProfile -Command "$p=Get-Process !target_name! -EA 0; if($p){ [int](($p|Measure-Object WorkingSet64 -Sum).Sum/1MB) } else { 0 }"') do (
+            set "ram_mb=%%e"
         )
-        set /a ram_mb=!ram_raw!/1024/1024
+        if !ram_mb! gtr !ram_max_before! set "ram_max_before=!ram_mb!"
 
-        if !ram_mb! gtr !ram_max_before! set ram_max_before=!ram_mb!
-
+        REM 注意：echo 內容不要包含括號，避免 Batch 語法解析錯誤
+        echo 迴圈 %%i : CPU !cpu_int!%% - Max !cpu_max_before!%%, RAM !ram_mb!MB - Max !ram_max_before!MB
+        
         timeout /t 1 >nul
     )
 
@@ -93,45 +94,46 @@ for /f %%b in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"
     REM ===== 執行中（每十秒抓一次）=====
     for /L %%i in (1,1,!loops!) do (
 
+        set "cpu_int=0"
+        set "ram_mb=0"
+
         REM ---- CPU ----
-        for /f "skip=2 tokens=2 delims=," %%d in ('typeperf "\Process(!target_name!)\%% Processor Time" -sc 1') do (
-            set "cpu=%%d"
-            set "cpu=!cpu:~1,8!"
-            for /f "tokens=1 delims=." %%x in ("!cpu!") do set cpu_int=%%x
+        for /f %%d in ('powershell -NoProfile -Command "$p=Get-CimInstance Win32_PerfFormattedData_PerfProc_Process -Filter \"Name = '!target_name!'\" | Measure-Object -Property PercentProcessorTime -Sum; $cores=(Get-CimInstance Win32_ComputerSystem).NumberOfLogicalProcessors; if($p.Sum){ [int]($p.Sum / $cores) } else { echo 0 }"') do (
+            set "cpu_int=%%d"
         )
-        if !cpu_int! gtr !cpu_max_during! set cpu_max_during=!cpu_int!
+        if !cpu_int! gtr !cpu_max_during! set "cpu_max_during=!cpu_int!"
 
         REM ---- RAM ----
-        for /f "skip=2 tokens=2 delims=," %%e in ('typeperf "\Process(!target_name!)\Working Set - Private" -sc 1') do (
-            set "ram_raw=%%e"
-            set "ram_raw=!ram_raw:~1!"
+        for /f %%e in ('powershell -NoProfile -Command "$p=Get-Process !target_name! -EA 0; if($p){ [int](($p|Measure-Object WorkingSet64 -Sum).Sum/1MB) } else { 0 }"') do (
+            set "ram_mb=%%e"
         )
-        set /a ram_mb=!ram_raw!/1024/1024
+        if !ram_mb! gtr !ram_max_during! set "ram_max_during=!ram_mb!"
 
-        if !ram_mb! gtr !ram_max_during! set ram_max_during=!ram_mb!
+        echo 執行中第 %%i 次 : CPU !cpu_int!%% (Max:!cpu_max_during!%%), RAM !ram_mb!MB (Max:!ram_max_during!MB)
 
-        REM ---- 每10秒抓一次 ----
+        REM ---- 每 10 秒抓一次 ----
         timeout /t !interval! >nul
     )
 
     REM ===== 執行後 =====
-    for /L %%i in (1,1,5) do (
+    echo 正在進行執行後取樣 (20秒)...
+    for /L %%i in (1,1,20) do (
+        set "cpu_int=0"
+        set "ram_mb=0"
 
-        for /f "skip=2 tokens=2 delims=," %%d in ('typeperf "\Process(!target_name!)\%% Processor Time" -sc 1') do (
-            set "cpu=%%d"
-            set "cpu=!cpu:~1,8!"
-            for /f "tokens=1 delims=." %%x in ("!cpu!") do set cpu_int=%%x
+        REM ---- CPU ----
+        for /f %%d in ('powershell -NoProfile -Command "$p=Get-CimInstance Win32_PerfFormattedData_PerfProc_Process -Filter \"Name = '!target_name!'\" | Measure-Object -Property PercentProcessorTime -Sum; $cores=(Get-CimInstance Win32_ComputerSystem).NumberOfLogicalProcessors; if($p.Sum){ [int]($p.Sum / $cores) } else { echo 0 }"') do (
+            set "cpu_int=%%d"
         )
-        if !cpu_int! gtr !cpu_max_after! set cpu_max_after=!cpu_int!
+        if !cpu_int! gtr !cpu_max_after! set "cpu_max_after=!cpu_int!"
 
-        for /f "skip=2 tokens=2 delims=," %%e in ('typeperf "\Process(!target_name!)\Working Set - Private" -sc 1') do (
-            set "ram_raw=%%e"
-            set "ram_raw=!ram_raw:~1!"
+        REM ---- RAM  ----
+        for /f %%e in ('powershell -NoProfile -Command "$p=Get-Process !target_name! -EA 0; if($p){ [int](($p|Measure-Object WorkingSet64 -Sum).Sum/1MB) } else { 0 }"') do (
+            set "ram_mb=%%e"
         )
-        set /a ram_mb=!ram_raw!/1024/1024
+        if !ram_mb! gtr !ram_max_after! set "ram_max_after=!ram_mb!"
 
-        if !ram_mb! gtr !ram_max_after! set ram_max_after=!ram_mb!
-
+        echo 執行後第 %%i 次 : CPU !cpu_int!%% (Max:!cpu_max_after!%%), RAM !ram_mb!MB (Max:!ram_max_after!MB)
         timeout /t 1 >nul
     )
 
