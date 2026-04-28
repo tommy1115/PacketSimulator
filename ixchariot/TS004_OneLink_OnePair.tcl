@@ -245,7 +245,7 @@ package require ChariotExt
 ###############################################################################
 proc httptext_test {} {
     global test timestamp currentScript currentProtocol timeout
-    # TODO(REQ): 要測試的 ip 由外部參數傳進來
+    # TODO(REQ): 要測試的 IP 由外部參數傳進來 
     set base_e1 "192.168.99."
     set base_e2 "100.100.100."
     set start_suffix_e1 50
