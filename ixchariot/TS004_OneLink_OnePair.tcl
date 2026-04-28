@@ -246,18 +246,18 @@ package require ChariotExt
 proc httptext_test {} {
     global test timestamp currentScript currentProtocol timeout
     # TODO(REQ): 要測試的 IP 由外部參數傳進來 
-    set base_e1 "192.168.99."
-    set base_e2 "100.100.100."
-    set start_suffix_e1 50
-    set start_suffix_e2 100
-    set total_groups 10
-    set pairs_per_group 16
-    # set base_e1 "192.168.0."
-    # set base_e2 "192.168.0."
-    # set start_suffix_e1 136
-    # set start_suffix_e2 156
-    # set total_groups 1
+    # set base_e1 "192.168.99."
+    # set base_e2 "100.100.100."
+    # set start_suffix_e1 50
+    # set start_suffix_e2 100
+    # set total_groups 10
     # set pairs_per_group 16
+    set base_e1 "192.168.0."
+    set base_e2 "192.168.0."
+    set start_suffix_e1 136
+    set start_suffix_e2 156
+    set total_groups 1
+    set pairs_per_group 16
 
     set allPairs {}
 
