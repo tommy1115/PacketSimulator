@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="StatFilter" baseType="">
+    <help>A filter applied to the statistic.  The source application may define one 
+or more filters you can select from. If you select a filter, only the values for 
+the statistic that pass through that filter are displayed. For example, if you are
+configuring a statistic for packets transmitted and the source application allows
+you to filter for a particular port, such as port 1.1.1, the graph will only display
+the packets transmitted from port 1.1.1. </help>
+    <PropertyString>
+        <name>name</name>
+        <minLength>0</minLength>
+        <maxLength>50</maxLength>
+        <default></default>
+        <description>filter category name</description>
+        <help>The name of a filter category (exampes: communities, networks, ports)</help>
+    </PropertyString>
+    <PropertyStringList>
+        <name>valueList</name>
+        <minLength>0</minLength>
+        <maxLength>128</maxLength>
+        <default></default>
+        <description>list of possible choices in a filter category</description>
+        <help>List of possible choices in a filter category </help>
+    </PropertyStringList>
+</Node>

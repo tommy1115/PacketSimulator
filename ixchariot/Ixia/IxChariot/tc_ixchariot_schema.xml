@@ -1,0 +1,300 @@
+<CsvSchema>
+
+ <Group name="Product Information" displayName="Product Information" layout="vertical">
+  <Label name="Product Type" displayName="Product Type" dataType="String" type="statistic"/>
+  <Label name="Version" displayName="Version" dataType="String" type="statistic"/>
+  <Label name="Build Level" displayName="Build Level" dataType="String" type="statistic"/>
+  <Label name="Export Time" displayName="Export Time" dataType="DateTime" type="statistic"/>
+ </Group>
+
+ <Group name="Summary" displayName="Summary" layout="vertical">
+  <Label name="Filename" displayName="Filename" dataType="String" type="statistic"/>
+  <Label name="Run Start Time" displayName="Run Start Time" dataType="DateTime" type="statistic"/>
+  <Label name="Run End Time" displayName="Run End Time" dataType="DateTime" type="statistic"/>
+  <Label name="Elapsed Time (sec)" displayName="Elapsed Time (sec)" dataType="Number" type="statistic"/>
+  <Label name="How the Test Ended" displayName="How the Test Ended" dataType="String" type="statistic"/>
+  <Label name="Number of Pairs" displayName="Number of Pairs" dataType="Number" type="statistic"/>
+  <Label name="Ixia Configuration" displayName="Ixia Configuration" dataType="String" type="statistic"/>
+ </Group>
+
+ <Group name="Run Options" displayName="Run Options" layout="vertical">
+
+  <Label name="Filename" displayName="Filename" dataType="String" type="statistic"/>
+  <Label name="End Type" displayName="End Type" dataType="String" type="statistic"/>
+  <Label name="Duration" displayName="Duration" dataType="TimeSpan" type="statistic"/>
+  <Label name="Reporting Type" displayName="Reporting Type" dataType="String" type="statistic"/>
+  <Label name="Automatically Poll Endpoints" displayName="Automatically Poll Endpoints" dataType="String" type="statistic"/>
+  <Label name="Polling Interval (minutes)" displayName="Polling Interval (minutes)" dataType="Number" type="statistic"/>
+  <Label name="Stop Run Upon Initialization Failure" displayName="Stop Run Upon Initialization Failure" dataType="String" type="statistic"/>
+  <Label name="Connect Timeout During Test (minutes)" displayName="Connect Timeout During Test (minutes)" dataType="Number" type="statistic"/>
+  <Label name="Stop Test After This Many Running Pairs Fail" displayName="Stop Test After This Many Running Pairs Fail" dataType="Number" type="statistic"/>
+  <Label name="Collect endpoint CPU utilization" displayName="Collect endpoint CPU utilization" dataType="String" type="statistic"/>
+  <Label name="Validate Data Upon Receipt" displayName="Validate Data Upon Receipt" dataType="String" type="statistic"/>
+  <Label name="Use a New Seed for Random Variables on Every Run" displayName="Use a New Seed for Random Variables on Every Run" dataType="String" type="statistic"/>
+  <Label name="Datagram Window Size (bytes)" displayName="Datagram Window Size (bytes)" dataType="Number" type="statistic"/>
+  <Label name="Datagram Retransmission Timeout (ms)" displayName="Datagram Retransmission Timeout (ms)" dataType="Number" type="statistic"/>
+  <Label name="Datagram Number of Retransmits Before Aborting" displayName="Datagram Number of Retransmits Before Aborting" dataType="Number" type="statistic"/>
+  <Label name="Receive Timeout (ms)" displayName="Receive Timeout (ms)" dataType="Number" type="statistic"/>
+  <Label name="Time To Live (hops)" displayName="Time To Live (hops)" dataType="Number" type="statistic"/>
+  <Label name="Enable Ixia hardware timestamps" displayName="Enable Ixia hardware timestamps" dataType="String" type="statistic"/>
+  <Label name="Collect TCP Statistics" displayName="Collect TCP Statistics" dataType="String" type="statistic"/>
+  <Label name="Allow setup pair reinitialization" displayName="Allow setup pair reinitialization" dataType="String" type="statistic"/>
+  <Label name="Maximum number of setup reinitializations" displayName="Maximum number of setup reinitializations" dataType="Number" type="statistic"/>
+  <Label name="Setup reinitialization wait interval (milliseconds)" displayName="Setup reinitialization wait interval (milliseconds)" dataType="Number" type="statistic"/>
+  <Label name="Allow pair runtime reinitialization" displayName="Allow pair runtime reinitialization" dataType="String" type="statistic"/>
+  <Label name="Maximum number of runtime reinitializations" displayName="Maximum number of runtime reinitializations" dataType="Number" type="statistic"/>
+  <Label name="Runtime reinitialization wait interval (milliseconds)" displayName="Runtime reinitialization wait interval (milliseconds)" dataType="Number" type="statistic"/>
+  <Label name="Clock synchronization" displayName="Clock synchronization" dataType="String" type="statistic"/>
+  <Label name="Use RTP extended headers" displayName="Use RTP extended headers" dataType="String" type="statistic"/>
+  <Label name="Console Management Service Quality" displayName="Console Management Service Quality" dataType="String" type="statistic"/>
+  <Label name="Endpoint Management Service Quality" displayName="Endpoint Management Service Quality" dataType="String" type="statistic"/>
+  <Label name="Low sender jitter" displayName="Low sender jitter" dataType="String" type="statistic"/>
+  <Label name="Limit data rate" displayName="Limit data rate" dataType="String" type="statistic"/>
+  <Label name="Data rate limit" displayName="Data rate limit" dataType="String" type="statistic"/>
+  <Label name="Measured Interval (ms)" displayName="Measured Interval (ms)" dataType="String" type="statistic"/>
+
+ </Group>
+
+ <Group name="Endpoint Pair Summary" displayName="Endpoint Pair Summary" layout="vertical">
+
+  <Label name="Filename" displayName="Filename" dataType="String" type="statistic"/>
+  <Label name="Pair" displayName="Pair" dataType="Number" type="dimension"/>
+  <Label name="Timing Records" displayName="Timing Records" dataType="Number" type="statistic"/>
+  <Label name="Network Protocol" displayName="Network Protocol" dataType="String" type="statistic"/>
+  <Label name="From" displayName="From" dataType="String" type="statistic"/>
+  <Label name="To" displayName="To" dataType="String" type="statistic"/>
+  <Label name="Script Name" displayName="Script Name" dataType="String" type="statistic"/>
+  <Label name="Relative Precision" displayName="Relative Precision" dataType="Number" type="statistic"/>
+  <Label name="Measured Time (sec)" displayName="Measured Time (sec)" dataType="Number" type="statistic"/>
+  <Label name="Transaction Count" displayName="Transaction Count" dataType="Number" type="statistic"/>
+  <Label name="Bytes Sent by E1" displayName="Bytes Sent by E1" dataType="Number" type="statistic"/>
+  <Label name="Bytes Rcvd by E1" displayName="Bytes Rcvd by E1" dataType="Number" type="statistic"/>
+  <Label name="Bytes Rcvd by E2 (Streaming)" displayName="Bytes Rcvd by E2 (Streaming)" dataType="Number" type="statistic"/>
+  <Label name="Bytes Lost from E1 to E2" displayName="Bytes Lost from E1 to E2" dataType="Number" type="statistic"/>
+  <Label name="Percent Bytes Lost E1 to E2" displayName="Percent Bytes Lost E1 to E2" dataType="Number" type="statistic"/>
+  <Label name="Throughput 95% Confidence Interval" displayName="Throughput 95% Confidence Interval" dataType="Number" type="statistic"/>
+  <Label name="Throughput Avg.(kbps)" displayName="Throughput Avg.(kbps)" dataType="Number" type="statistic"/>
+  <Label name="Throughput Min.(kbps)" displayName="Throughput Min.(kbps)" dataType="Number" type="statistic"/>
+  <Label name="Throughput Max.(kbps)" displayName="Throughput Max.(kbps)" dataType="Number" type="statistic"/>
+  <Label name="Transaction Rate 95% Confidence Interval" displayName="Transaction Rate 95% Confidence Interval" dataType="Number" type="statistic"/>
+  <Label name="Transaction Rate Avg. (#/sec)" displayName="Transaction Rate Avg. (#/sec)" dataType="Number" type="statistic"/>
+  <Label name="Transaction Rate Min. (#/sec)" displayName="Transaction Rate Min. (#/sec)" dataType="Number" type="statistic"/>
+  <Label name="Transaction Rate Max. (#/sec)" displayName="Transaction Rate Max. (#/sec)" dataType="Number" type="statistic"/>
+  <Label name="Response Time 95% Confidence Interval" displayName="Response Time 95% Confidence Interval" dataType="Number" type="statistic"/>
+  <Label name="Response Time Avg. (sec)" displayName="Response Time Avg. (sec)" dataType="Number" type="statistic"/>
+  <Label name="Response Time Min. (sec)" displayName="Response Time Min. (sec)" dataType="Number" type="statistic"/>
+  <Label name="Response Time Max. (sec)" displayName="Response Time Max. (sec)" dataType="Number" type="statistic"/>
+  <Label name="Total Datagrams Sent by E1" displayName="Total Datagrams Sent by E1" dataType="Number" type="statistic"/>
+  <Label name="Dup. Datagrams Sent by E1" displayName="Dup. Datagrams Sent by E1" dataType="Number" type="statistic"/>
+  <Label name="Total Datagrams Rcvd by E1" displayName="Total Datagrams Rcvd by E1" dataType="Number" type="statistic"/>
+  <Label name="Dup. Datagrams Rcvd by E1" displayName="Dup. Datagrams Rcvd by E1" dataType="Number" type="statistic"/>
+  <Label name="Lost Datagrams, E1 to E2" displayName="Lost Datagrams, E1 to E2" dataType="Number" type="statistic"/>
+  <Label name="Total Datagrams Sent by E2" displayName="Total Datagrams Sent by E2" dataType="Number" type="statistic"/>
+  <Label name="Dup. Datagrams Sent by E2" displayName="Dup. Datagrams Sent by E2" dataType="Number" type="statistic"/>
+  <Label name="Total Datagrams Rcvd by E2" displayName="Total Datagrams Rcvd by E2" dataType="Number" type="statistic"/>
+  <Label name="Dup. Datagrams Rcvd by E2" displayName="Dup. Datagrams Rcvd by E2" dataType="Number" type="statistic"/>
+  <Label name="Lost Datagrams, E2 to E1" displayName="Lost Datagrams, E2 to E1" dataType="Number" type="statistic"/>
+  <Label name="Datagrams Out of Order E1->E2" displayName="Datagrams Out of Order E1->E2" dataType="Number" type="statistic"/>
+  <Label name="RFC 1889 Jitter Average (ms)" displayName="RFC 1889 Jitter Average (ms)" dataType="Number" type="statistic"/>
+  <Label name="RFC 1889 Jitter Minimum (ms)" displayName="RFC 1889 Jitter Minimum (ms)" dataType="Number" type="statistic"/>
+  <Label name="RFC 1889 Jitter Maximum (ms)" displayName="RFC 1889 Jitter Maximum (ms)" dataType="Number" type="statistic"/>
+  <Label name="% CPU Utilization of E1" displayName="% CPU Utilization of E1" dataType="Number" type="statistic"/>
+  <Label name="% CPU Utilization of E2" displayName="% CPU Utilization of E2" dataType="Number" type="statistic"/>
+  <Label name="MOS Average" displayName="MOS Average" dataType="Number" type="statistic"/>
+  <Label name="MOS Minimum" displayName="MOS Minimum" dataType="Number" type="statistic"/>
+  <Label name="MOS Maximum" displayName="MOS Maximum" dataType="Number" type="statistic"/>
+  <Label name="Jitter Buffer Lost Datagrams" displayName="Jitter Buffer Lost Datagrams" dataType="Number" type="statistic"/>
+  <Label name="One-Way Delay Average (ms)" displayName="One-Way Delay Average (ms)" dataType="Number" type="statistic"/>
+  <Label name="One-Way Delay Minimum (ms)" displayName="One-Way Delay Minimum (ms)" dataType="Number" type="statistic"/>
+  <Label name="One-Way Delay Maximum (ms)" displayName="One-Way Delay Maximum (ms)" dataType="Number" type="statistic"/>
+  <Label name="Estimated Clock Error (ms)" displayName="Estimated Clock Error (ms)" dataType="Number" type="statistic"/>
+  <Label name="Maximum Clock Error (ms)" displayName="Maximum Clock Error (ms)" dataType="Number" type="statistic"/>
+  <Label name="Clock Used" displayName="Clock Used" dataType="String" type="statistic"/>
+  <Label name="Jitter (delay variation) Maximum (ms)" displayName="Jitter (delay variation) Maximum (ms)" dataType="Number" type="statistic"/>
+  <Label name="Maximum Consecutive Lost Datagrams" displayName="Maximum Consecutive Lost Datagrams" dataType="Number" type="statistic"/>
+  <Label name="R-value Average" displayName="R-value Average" dataType="Number" type="statistic"/>
+  <Label name="End-to-End Delay Average (ms)" displayName="End-to-End Delay Average (ms)" dataType="Number" type="statistic"/>
+  <Label name="RSSI E1 Avg." displayName="RSSI E1 Avg." dataType="Number" type="statistic"/>
+  <Label name="RSSI E1 Min." displayName="RSSI E1 Min." dataType="Number" type="statistic"/>
+  <Label name="RSSI E1 Max." displayName="RSSI E1 Max." dataType="Number" type="statistic"/>
+  <Label name="RSSI E2 Avg." displayName="RSSI E2 Avg." dataType="Number" type="statistic"/>
+  <Label name="RSSI E2 Min." displayName="RSSI E2 Min." dataType="Number" type="statistic"/>
+  <Label name="RSSI E2 Max." displayName="RSSI E2 Max." dataType="Number" type="statistic"/>
+  <Label name="Number Unique AP" displayName="Number Unique AP" dataType="Number" type="statistic"/>
+  <Label name="MDI Max. (DF Max. - MLR Max.)" displayName="MDI Max. (DF Max. - MLR Max.)" dataType="Number" type="statistic"/>
+  <Label name="DF Avg." displayName="DF Avg." dataType="Number" type="statistic"/>
+  <Label name="DF Min." displayName="DF Min." dataType="Number" type="statistic"/>
+  <Label name="DF Max." displayName="DF Max." dataType="Number" type="statistic"/>
+  <Label name="MLR Avg." displayName="MLR Avg." dataType="Number" type="statistic"/>
+  <Label name="MLR Min." displayName="MLR Min." dataType="Number" type="statistic"/>
+  <Label name="MLR Max." displayName="MLR Max." dataType="Number" type="statistic"/>
+  <Label name="DF 95% Confidence Interval (ms)" displayName="DF 95% Confidence Interval (ms)" dataType="Number" type="statistic"/>
+  <Label name="MLR 95% Confidence Interval (ms)" displayName="MLR 95% Confidence Interval (ms)" dataType="Number" type="statistic"/>
+  <Label name="SYN Sent" displayName="SYN Sent" dataType="Number" type="statistic"/>
+  <Label name="SYN Received" displayName="SYN Received" dataType="Number" type="statistic"/>
+  <Label name="SYN Failed" displayName="SYN Failed" dataType="Number" type="statistic"/>
+  <Label name="Connections established" displayName="Connections established" dataType="Number" type="statistic"/>
+  <Label name="FIN Sent" displayName="FIN Sent" dataType="Number" type="statistic"/>
+  <Label name="FIN Received" displayName="FIN Received" dataType="Number" type="statistic"/>
+  <Label name="ACK to FIN Sent" displayName="ACK to FIN Sent" dataType="Number" type="statistic"/>
+  <Label name="ACK to FIN Received" displayName="ACK to FIN Received" dataType="Number" type="statistic"/>
+  <Label name="RESET Sent" displayName="RESET Sent" dataType="Number" type="statistic"/>
+  <Label name="RESET Received" displayName="RESET Received" dataType="Number" type="statistic"/>
+  <Label name="TCP retransmissions" displayName="TCP retransmissions" dataType="Number" type="statistic"/>
+  <Label name="TCP Timeouts" displayName="TCP Timeouts" dataType="Number" type="statistic"/>
+  <Label name="E1 use encrypted flows" displayName="E1 use encrypted flows" dataType="String" type="statistic"/>
+  <Label name="E2 use encrypted flows" displayName="E2 use encrypted flows" dataType="String" type="statistic"/>
+  <Label name="E1 Address" displayName="E1 Address" dataType="String" type="statistic"/>
+  <Label name="E2 Address" displayName="E2 Address" dataType="String" type="statistic"/>
+  <Label name="E1 Management" displayName="E1 Management" dataType="String" type="statistic"/>
+  <Label name="E2 Management" displayName="E2 Management" dataType="String" type="statistic"/>
+  <Label name="Management Protocol" displayName="Management Protocol" dataType="String" type="statistic"/>
+  <Label name="Test Service Quality" displayName="Test Service Quality" dataType="String" type="statistic"/>
+  <Label name="Pair Comment" displayName="Pair Comment" dataType="String" type="statistic"/>
+  <Label name="UDP compliant with RFC 768" displayName="UDP compliant with RFC 768" dataType="String" type="statistic"/>
+  <Label name="Join/Leave Count." displayName="Join/Leave Count." dataType="Number" type="statistic"/>
+  <Label name="Join Latency Avarage (ms)." displayName="Join Latency Avarage (ms)." dataType="Number" type="statistic"/>
+  <Label name="Join Latency Min (ms)." displayName="Join Latency Min (ms)." dataType="Number" type="statistic"/>
+  <Label name="Join Latency Max (ms)." displayName="Join Latency Max (ms)." dataType="Number" type="statistic"/>
+  <Label name="Leave Latency Avarage (ms)." displayName="Leave Latency Avarage (ms)." dataType="Number" type="statistic"/>
+  <Label name="Leave Latency Min (ms)." displayName="Leave Latency Min (ms)." dataType="Number" type="statistic"/>
+  <Label name="Leave Latency Max (ms)." displayName="Leave Latency Max (ms)." dataType="Number" type="statistic"/>
+  <Label name="Group Comment" displayName="Group Comment" dataType="String" type="statistic"/>
+ </Group>
+
+ <Group name="Endpoint Pair Details" displayName="Endpoint Pair Details" layout="vertical">
+
+  <Label name="Filename" displayName="Filename" dataType="String" type="statistic"/>
+  <Label name="Pair" displayName="Pair" dataType="Number" type="dimension"/>
+  <Label name="Record Number" displayName="Record Number" dataType="Number" type="dimension"/>
+  <Label name="Network Protocol" displayName="Network Protocol" dataType="String" type="statistic"/>
+  <Label name="From" displayName="From" dataType="String" type="statistic"/>
+  <Label name="To" displayName="To" dataType="String" type="statistic"/>
+  <Label name="Script Name" displayName="Script Name" dataType="String" type="statistic"/>
+  <Label name="Elapsed Time (sec)" displayName="Elapsed Time (sec)" dataType="Number" type="statistic"/>
+  <Label name="Measured Time (sec)" displayName="Measured Time (sec)" dataType="Number" type="statistic"/>
+  <Label name="Transaction Count" displayName="Transaction Count" dataType="Number" type="statistic"/>
+  <Label name="Bytes Sent by E1" displayName="Bytes Sent by E1" dataType="Number" type="statistic"/>
+  <Label name="Bytes Rcvd by E1" displayName="Bytes Rcvd by E1" dataType="Number" type="statistic"/>
+  <Label name="Bytes Rcvd by E2 (Streaming)" displayName="Bytes Rcvd by E2 (Streaming)" dataType="Number" type="statistic"/>
+  <Label name="Bytes Lost from E1 to E2" displayName="Bytes Lost from E1 to E2" dataType="Number" type="statistic"/>
+  <Label name="Inactive Time (sec)" displayName="Inactive Time (sec)" dataType="Number" type="statistic"/>
+  <Label name="Throughput (kbps)" displayName="Throughput (kbps)" dataType="Number" type="statistic"/>
+  <Label name="Transaction Rate (#/sec)" displayName="Transaction Rate (#/sec)" dataType="Number" type="statistic"/>
+  <Label name="Response Time (sec)" displayName="Response Time (sec)" dataType="Number" type="statistic"/>
+  <Label name="RFC 1889 Jitter (ms)" displayName="RFC 1889 Jitter (ms)" dataType="Number" type="statistic"/>
+  <Label name="MOS Estimate" displayName="MOS Estimate" dataType="Number" type="statistic"/>
+  <Label name="Jitter Buffer Lost Datagrams" displayName="Jitter Buffer Lost Datagrams" dataType="Number" type="statistic"/>
+  <Label name="One-Way Delay (ms)" displayName="One-Way Delay (ms)" dataType="Number" type="statistic"/>
+  <Label name="Jitter (delay variation) Maximum (ms)" displayName="Jitter (delay variation) Maximum (ms)" dataType="Number" type="statistic"/>
+  <Label name="Jitter (delay variation): 0-10 (ms)" displayName="Jitter (delay variation): 0-10 (ms)" dataType="Number" type="statistic"/>
+  <Label name="Jitter (delay variation): 11-20 (ms)" displayName="Jitter (delay variation): 11-20 (ms)" dataType="Number" type="statistic"/>
+  <Label name="Jitter (delay variation): 21-30 (ms)" displayName="Jitter (delay variation): 21-30 (ms)" dataType="Number" type="statistic"/>
+  <Label name="Jitter (delay variation): 31-50 (ms)" displayName="Jitter (delay variation): 31-50 (ms)" dataType="Number" type="statistic"/>
+  <Label name="Jitter (delay variation): 51+ (ms)" displayName="Jitter (delay variation): 51+ (ms)" dataType="Number" type="statistic"/>
+  <Label name="Maximum Consecutive Lost Datagrams" displayName="Maximum Consecutive Lost Datagrams" dataType="Number" type="statistic"/>
+  <Label name="Consecutive Lost Datagrams: 1" displayName="Consecutive Lost Datagrams: 1" dataType="Number" type="statistic"/>
+  <Label name="Consecutive Lost Datagrams: 2-3" displayName="Consecutive Lost Datagrams: 2-3" dataType="Number" type="statistic"/>
+  <Label name="Consecutive Lost Datagrams: 4-5" displayName="Consecutive Lost Datagrams: 4-5" dataType="Number" type="statistic"/>
+  <Label name="Consecutive Lost Datagrams: 6-10" displayName="Consecutive Lost Datagrams: 6-10" dataType="Number" type="statistic"/>
+  <Label name="Consecutive Lost Datagrams: 11+" displayName="Consecutive Lost Datagrams: 11+" dataType="Number" type="statistic"/>
+  <Label name="R-value" displayName="R-value" dataType="Number" type="statistic"/>
+  <Label name="End-to-End Delay (ms)" displayName="End-to-End Delay (ms)" dataType="Number" type="statistic"/>
+  <Label name="RSSI E1" displayName="RSSI E1" dataType="Number" type="statistic"/>
+  <Label name="BSSID E1" displayName="BSSID E1" dataType="Number" type="statistic"/>
+  <Label name="RSSI E2" displayName="RSSI E2" dataType="Number" type="statistic"/>
+  <Label name="BSSID E2" displayName="BSSID E2" dataType="Number" type="statistic"/>
+  <Label name="MDI (DF-MLR)" displayName="MDI (DF-MLR)" dataType="Number" type="statistic"/>
+  <Label name="SYN Sent" displayName="SYN Sent" dataType="Number" type="statistic"/>
+  <Label name="SYN Received" displayName="SYN Received" dataType="Number" type="statistic"/>
+  <Label name="SYN Failed" displayName="SYN Failed" dataType="Number" type="statistic"/>
+  <Label name="Connections established" displayName="Connections established" dataType="Number" type="statistic"/>
+  <Label name="FIN Sent" displayName="FIN Sent" dataType="Number" type="statistic"/>
+  <Label name="FIN Received" displayName="FIN Received" dataType="Number" type="statistic"/>
+  <Label name="ACK to FIN Sent" displayName="ACK to FIN Sent" dataType="Number" type="statistic"/>
+  <Label name="ACK to FIN Received" displayName="ACK to FIN Received" dataType="Number" type="statistic"/>
+  <Label name="RESET Sent" displayName="RESET Sent" dataType="Number" type="statistic"/>
+  <Label name="RESET Received" displayName="RESET Received" dataType="Number" type="statistic"/>
+  <Label name="TCP retransmissions" displayName="TCP retransmissions" dataType="Number" type="statistic"/>
+  <Label name="TCP Timeouts" displayName="TCP Timeouts" dataType="Number" type="statistic"/>
+  <Label name="Iteration Number" displayName="Iteration Number" dataType="Number" type="statistic"/>
+  <Label name="Join Latency" displayName="Join Latency" dataType="Number" type="statistic"/>
+  <Label name="Leave Latency" displayName="Leave Latency" dataType="Number" type="statistic"/>
+ </Group>
+
+ <Group name="Group averages" displayName="Group averages" layout="vertical">
+
+  <Label name="Filename" displayName="Filename" dataType="String" type="statistic"/>
+  <Label name="Group Name" displayName="Group Name" dataType="String" type="statistic"/>
+  <Label name="Timing Records" displayName="Timing Records" dataType="Number" type="statistic"/>
+  <Label name="Transaction Count" displayName="Transaction Count" dataType="Number" type="statistic"/>
+  <Label name="Bytes Sent by E1" displayName="Bytes Sent by E1" dataType="Number" type="statistic"/>
+  <Label name="Bytes Rcvd by E1" displayName="Bytes Rcvd by E1" dataType="Number" type="statistic"/>
+  <Label name="Bytes Rcvd by E2 (Streaming)" displayName="Bytes Rcvd by E2 (Streaming)" dataType="Number" type="statistic"/>
+  <Label name="Bytes Lost from E1 to E2" displayName="Bytes Lost from E1 to E2" dataType="Number" type="statistic"/>
+  <Label name="Percent Bytes Lost E1 to E2" displayName="Percent Bytes Lost E1 to E2" dataType="Number" type="statistic"/>
+  <Label name="Throughput Avg.(kbps)" displayName="Throughput Avg.(kbps)" dataType="Number" type="statistic"/>
+  <Label name="Throughput Min.(kbps)" displayName="Throughput Min.(kbps)" dataType="Number" type="statistic"/>
+  <Label name="Throughput Max.(kbps)" displayName="Throughput Max.(kbps)" dataType="Number" type="statistic"/>
+  <Label name="Transaction Rate Avg. (#/sec)" displayName="Transaction Rate Avg. (#/sec)" dataType="Number" type="statistic"/>
+  <Label name="Transaction Rate Min. (#/sec)" displayName="Transaction Rate Min. (#/sec)" dataType="Number" type="statistic"/>
+  <Label name="Transaction Rate Max. (#/sec)" displayName="Transaction Rate Max. (#/sec)" dataType="Number" type="statistic"/>
+  <Label name="Response Time Avg. (sec)" displayName="Response Time Avg. (sec)" dataType="Number" type="statistic"/>
+  <Label name="Response Time Min. (sec)" displayName="Response Time Min. (sec)" dataType="Number" type="statistic"/>
+  <Label name="Response Time Max. (sec)" displayName="Response Time Max. (sec)" dataType="Number" type="statistic"/>
+  <Label name="Total Datagrams Sent by E1" displayName="Total Datagrams Sent by E1" dataType="Number" type="statistic"/>
+  <Label name="Dup. Datagrams Sent by E1" displayName="Dup. Datagrams Sent by E1" dataType="Number" type="statistic"/>
+  <Label name="Total Datagrams Rcvd by E1" displayName="Total Datagrams Rcvd by E1" dataType="Number" type="statistic"/>
+  <Label name="Dup. Datagrams Rcvd by E1" displayName="Dup. Datagrams Rcvd by E1" dataType="Number" type="statistic"/>
+  <Label name="Lost Datagrams, E1 to E2" displayName="Lost Datagrams, E1 to E2" dataType="Number" type="statistic"/>
+  <Label name="Total Datagrams Sent by E2" displayName="Total Datagrams Sent by E2" dataType="Number" type="statistic"/>
+  <Label name="Dup. Datagrams Sent by E2" displayName="Dup. Datagrams Sent by E2" dataType="Number" type="statistic"/>
+  <Label name="Total Datagrams Rcvd by E2" displayName="Total Datagrams Rcvd by E2" dataType="Number" type="statistic"/>
+  <Label name="Dup. Datagrams Rcvd by E2" displayName="Dup. Datagrams Rcvd by E2" dataType="Number" type="statistic"/>
+  <Label name="Lost Datagrams, E2 to E1" displayName="Lost Datagrams, E2 to E1" dataType="Number" type="statistic"/>
+  <Label name="Datagrams Out of Order E1->E2" displayName="Datagrams Out of Order E1->E2" dataType="Number" type="statistic"/>
+  <Label name="RFC 1889 Jitter Average (ms)" displayName="RFC 1889 Jitter Average (ms)" dataType="Number" type="statistic"/>
+  <Label name="RFC 1889 Jitter Minimum (ms)" displayName="RFC 1889 Jitter Minimum (ms)" dataType="Number" type="statistic"/>
+  <Label name="RFC 1889 Jitter Maximum (ms)" displayName="RFC 1889 Jitter Maximum (ms)" dataType="Number" type="statistic"/>
+  <Label name="MOS Average" displayName="MOS Average" dataType="Number" type="statistic"/>
+  <Label name="MOS Minimum" displayName="MOS Minimum" dataType="Number" type="statistic"/>
+  <Label name="MOS Maximum" displayName="MOS Maximum" dataType="Number" type="statistic"/>
+  <Label name="Jitter Buffer Lost Datagrams" displayName="Jitter Buffer Lost Datagrams" dataType="Number" type="statistic"/>
+  <Label name="One-Way Delay Average (ms)" displayName="One-Way Delay Average (ms)" dataType="Number" type="statistic"/>
+  <Label name="One-Way Delay Minimum (ms)" displayName="One-Way Delay Minimum (ms)" dataType="Number" type="statistic"/>
+  <Label name="One-Way Delay Maximum (ms)" displayName="One-Way Delay Maximum (ms)" dataType="Number" type="statistic"/>
+  <Label name="Estimated Clock Error (ms)" displayName="Estimated Clock Error (ms)" dataType="Number" type="statistic"/>
+  <Label name="Maximum Clock Error (ms)" displayName="Maximum Clock Error (ms)" dataType="Number" type="statistic"/>
+  <Label name="Jitter (delay variation) Maximum (ms)" displayName="Jitter (delay variation) Maximum (ms)" dataType="Number" type="statistic"/>
+  <Label name="Maximum Consecutive Lost Datagrams" displayName="Maximum Consecutive Lost Datagrams" dataType="Number" type="statistic"/>
+  <Label name="R-value Average" displayName="R-value Average" dataType="Number" type="statistic"/>
+  <Label name="End-to-End Delay Average (ms)" displayName="End-to-End Delay Average (ms)" dataType="Number" type="statistic"/>
+  <Label name="MDI Max. (DF Max. - MLR Max.)" displayName="MDI Max. (DF Max. - MLR Max.)" dataType="Number" type="statistic"/>
+  <Label name="DF Avg." displayName="DF Avg." dataType="Number" type="statistic"/>
+  <Label name="DF Min." displayName="DF Min." dataType="Number" type="statistic"/>
+  <Label name="DF Max." displayName="DF Max." dataType="Number" type="statistic"/>
+  <Label name="MLR Avg." displayName="MLR Avg." dataType="Number" type="statistic"/>
+  <Label name="MLR Min." displayName="MLR Min." dataType="Number" type="statistic"/>
+  <Label name="MLR Max." displayName="MLR Max." dataType="Number" type="statistic"/>
+  <Label name="SYN Sent" displayName="SYN Sent" dataType="Number" type="statistic"/>
+  <Label name="SYN Received" displayName="SYN Received" dataType="Number" type="statistic"/>
+  <Label name="SYN Failed" displayName="SYN Failed" dataType="Number" type="statistic"/>
+  <Label name="Connections established" displayName="Connections established" dataType="Number" type="statistic"/>
+  <Label name="FIN Sent" displayName="FIN Sent" dataType="Number" type="statistic"/>
+  <Label name="FIN Received" displayName="FIN Received" dataType="Number" type="statistic"/>
+  <Label name="ACK to FIN Sent" displayName="ACK to FIN Sent" dataType="Number" type="statistic"/>
+  <Label name="ACK to FIN Received" displayName="ACK to FIN Received" dataType="Number" type="statistic"/>
+  <Label name="RESET Sent" displayName="RESET Sent" dataType="Number" type="statistic"/>
+  <Label name="RESET Received" displayName="RESET Received" dataType="Number" type="statistic"/>
+  <Label name="TCP retransmissions" displayName="TCP retransmissions" dataType="Number" type="statistic"/>
+  <Label name="TCP Timeouts" displayName="TCP Timeouts" dataType="Number" type="statistic"/>
+  <Label name="Join/Leave Count." displayName="Join/Leave Count." dataType="Number" type="statistic"/>
+  <Label name="Join Latency Avarage (ms)." displayName="Join Latency Avarage (ms)." dataType="Number" type="statistic"/>
+  <Label name="Join Latency Min (ms)." displayName="Join Latency Min (ms)." dataType="Number" type="statistic"/>
+  <Label name="Join Latency Max (ms)." displayName="Join Latency Max (ms)." dataType="Number" type="statistic"/>
+  <Label name="Leave Latency Avarage (ms)." displayName="Leave Latency Avarage (ms)." dataType="Number" type="statistic"/>
+  <Label name="Leave Latency Min (ms)." displayName="Leave Latency Min (ms)." dataType="Number" type="statistic"/>
+  <Label name="Leave Latency Max (ms)." displayName="Leave Latency Max (ms)." dataType="Number" type="statistic"/>
+ </Group>
+
+</CsvSchema>

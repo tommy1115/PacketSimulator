@@ -1,0 +1,8 @@
+"TCP","PREDEFINED","G711","GENERIC","","0","","","","","","","",""
+"TCP","PREDEFINED","G723.1","GENERIC","","0","","","","","","","",""
+"TCP","PREDEFINED","G729","GENERIC","","0","","","","","","","",""
+"TCP","PREDEFINED","H261CIF","GENERIC","","0","","","","","","","",""
+"TCP","PREDEFINED","H261QCIF","GENERIC","","0","","","","","","","",""
+"TCP","PREDEFINED","H263CIF","GENERIC","","0","","","","","","","",""
+"TCP","PREDEFINED","H263QCIF","GENERIC","","0","","","","","","","","
+"TCP","","VoIPQoS","IPTOS","","0","","","","","","","","184"

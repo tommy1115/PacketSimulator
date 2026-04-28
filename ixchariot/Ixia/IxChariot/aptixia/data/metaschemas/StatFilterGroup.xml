@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="StatFilterGroup" baseType="">
+    <help>A list of stat fitlers available for a stat source type</help>
+    <PropertyString>
+        <name>caption</name>
+        <help>End user visible tag for StatFilter selection</help>
+    </PropertyString>
+    <PropertyNodeList nodeType="StatFilter">
+        <name>statFilterList</name>
+        <displayName>Filter List</displayName>
+        <help>List of filters</help>
+    </PropertyNodeList>
+</Node>

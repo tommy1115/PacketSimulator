@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node  nodeType="EmulatedRouterPlugin" baseType="StackElementPlugin">
+    <description>Plugin to configure an emulated router</description>
+    <help>EmulatedRouterPlugin plugin configures a single connected interface on the Port CPU 
+    routing traffic from all the unconnected interfaces available on the port CPU, 
+    emulating the function of a router.
+    </help>    
+    
+    <PropertyString>
+		<obsolete>IpV4V6Range list must be used instead. Represents ipType of the first element in IpV4V6Range list</obsolete>
+        <name>ipType</name>
+        <default>IPv4</default>
+        <description>IP Type of the router</description>
+        <choices>
+            <choice value="IPv4" name="IPv4" />
+            <choice value="IPv6" name="IPv6" />
+        </choices>
+    </PropertyString>
+
+    <PropertyString>
+		<obsolete>IpV4V6Range list must be used instead. Represents ipAddress of the first element in IpV4V6Range list</obsolete>
+        <name>ipAddress</name>        
+        <default>10.10.10.2</default>
+        <description>IP address of the router or the connected interface.</description>
+    </PropertyString>
+
+    <PropertyString>
+		<obsolete>IpV4V6Range list must be used instead. Represents incrementBy of the first element in IpV4V6Range list</obsolete>
+        <name>incrementBy</name>
+        <default>0.0.0.1</default>
+        <description>Increment to determine the IP address of the router when the port group has more than one port.</description>
+    </PropertyString>
+    
+    <PropertyString>
+		<obsolete>IpV4V6Range list must be used instead. Represents gatewayAddress of the first element in IpV4V6Range list</obsolete>
+        <name>gatewayAddress</name>
+        <default>10.10.10.1</default>
+        <description>Gateway address of the router</description>
+    </PropertyString>
+    
+    <PropertyInt>
+		<obsolete>IpV4V6Range list must be used instead. Represents prefix of the first element in IpV4V6Range list</obsolete>
+        <name>prefix</name>
+        <default>24</default>
+        <description>The subnet mask of the router.</description>
+    </PropertyInt>
+    
+    <PropertyNode nodeType="Vlan">
+		<obsolete>IpV4V6Range list must be used instead. Represents vlan of the first element in IpV4V6Range list</obsolete>
+        <name>vlan</name>
+        <help>Vlan information for the emulated router.</help>
+    </PropertyNode>    
+    
+    <PropertyNodeList nodeType="IpV4V6Range" type="sync">
+        <name>rangeList</name>
+        <help>List of IpV4V6Range. See IpV4V6Range for more details.</help>
+    </PropertyNodeList>
+   
+</Node>

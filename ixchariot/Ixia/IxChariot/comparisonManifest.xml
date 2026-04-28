@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Framework  xmlns="urn:guiFrameworkManifest-schema">
+	<SplashScreen>
+        <File>splash_screen.bmp</File>
+    </SplashScreen> 
+
+	<ApplicationManifest default="ComparisonDefaultApp.xml" current="Ixia\IxChariot\6.70\ComparisonCurrentApp.xml" />
+</Framework>

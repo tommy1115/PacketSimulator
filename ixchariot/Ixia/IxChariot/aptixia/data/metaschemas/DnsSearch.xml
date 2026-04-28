@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Node nodeType="DnsSearch" baseType="">
+	<help>Describes a search item as to be defined in resolv.conf</help>
+    <PropertyString>
+		<name>search</name>
+		<default>Untitled</default>
+		<description>Search list for host-name lookup</description>
+		<regex>((([A-Za-z][A-Za-z0-9\-]*[A-Za-z0-9])\.?)*([A-Za-z][A-Za-z0-9\-]*[A-Za-z0-9]))</regex>
+		<regexDescription>Must contain letters, numbers, '-' and '.' only. May not be empty. Does not conform to RFC1035 definition.</regexDescription>
+		<help><![CDATA[Search list for host-name lookup.
+The search list is normally determined from the local domain name; by default, it contains only the local domain name.  This may be  changed
+by  listing  the  desired domain search path following the search keyword with spaces or tabs separating the names.  Resolver queries having
+fewer than ndots dots (default is 1) in them will be attempted using each component of the search path in turn until a match is found.   For
+environments  with  multiple subdomains please read options ndots:n below to avoid man-in-the-middle attacks and unnecessary traffic for the
+root-dns-servers.  Note that this process may be slow and will generate a lot of network traffic if the servers for the listed  domains  are
+not local, and that queries will time out if no server is available for one of the domains.
+The search list is currently limited to six domains with a total of 256 characters.]]></help>
+	</PropertyString>
+</Node>

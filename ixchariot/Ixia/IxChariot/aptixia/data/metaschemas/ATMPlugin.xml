@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="ATMPlugin" baseType="SonetATMBasePlugin">
+    <help>ATM Plugin configures ATM settings on ATM ports.</help>
+    
+    <PropertyInt>
+        <obsolete>PvcRange list must be used instead. Represents firstVpi for the first element in PvcRange list</obsolete>
+        <name>firstVpi</name>
+        <default>0</default>
+        <min>0</min>
+        <max>255</max>
+        <description>First ATM VPI value to use.</description>
+    </PropertyInt>
+    
+    <PropertyInt>
+        <obsolete>PvcRange list must be used instead. Represents vpiStep for the first element in PvcRange list</obsolete>
+        <name>vpiStep</name>
+        <default>1</default>
+        <min>0</min>
+        <max>256</max>
+        <description>Step size for VPI increment</description>
+    </PropertyInt>
+    
+    <PropertyInt>
+        <obsolete>PvcRange list must be used instead. Represents vpiCount for the first element in PvcRange list</obsolete>
+        <name>vpiCount</name>
+        <default>1</default>
+        <min>0</min>
+        <max>256</max>
+        <description>Number of VPIs</description>
+    </PropertyInt>
+    
+    <PropertyInt>
+        <obsolete>PvcRange list must be used instead. Represents firstVci for the first element in PvcRange list</obsolete>
+        <name>firstVci</name>
+        <default>32</default>
+        <min>32</min>
+        <max>65535</max>
+        <description>First ATM VCI value to use</description>
+    </PropertyInt>
+    
+    <PropertyInt>
+        <obsolete>PvcRange list must be used instead. Represents vciStep for the first element in PvcRange list</obsolete>
+        <name>vciStep</name>
+        <default>1</default>
+        <min>0</min>
+        <max>65502</max>
+        <description>Step size for VCI increment</description>
+    </PropertyInt>
+    
+    <PropertyInt>
+        <obsolete>PvcRange list must be used instead. Represents vciCount for the first element in PvcRange list</obsolete>
+        <name>vciCount</name>
+        <default>4063</default>
+        <min>0</min>
+        <max>65502</max>
+        <description>Number of VCIs</description>
+    </PropertyInt>
+    
+    <PropertyInt>
+        <obsolete>PvcRange list must be used instead. Represents addressPerVci for the first element in PvcRange list</obsolete>
+        <name>addressPerVci</name>
+        <default>1</default>
+        <min>0</min>
+        <max>65535</max>
+        <description>Increment VCI every 'addressPerVci' addresses</description>
+    </PropertyInt>
+    
+    <PropertyInt>
+        <obsolete>PvcRange list must be used instead. Represents addressPerVpi for the first element in PvcRange list</obsolete>
+        <name>addressPerVpi</name>
+        <default>1</default>
+        <min>0</min>
+        <max>65535</max>
+        <description>Increment VPI every 'addressPerVpi' addresses</description>
+    </PropertyInt>
+    
+    <PropertyInt>
+        <obsolete>PvcRange list must be used instead. Represents atmPvcIncrMode for the first element in PvcRange list</obsolete>
+        <name>atmPvcIncrMode</name>
+        <description>Values can be kAtmPvcIncrVciFirst,kAtmPvcIncrVpiFirst,kAtmPvcIncrBoth</description>
+        <default>2</default>
+        <choices>
+            <choice name="VCI" value="0" />
+            <choice name="VPI" value="1" />
+            <choice name="Both" value="2" />
+        </choices>
+    </PropertyInt>  
+    
+    <PropertyString>
+        <obsolete>AtmRange list must be used instead. Represents encapsulation for the first element in AtmRange list</obsolete>
+        <name>encapsulation</name>
+        <description>The type of ATM transport encapsulation</description>
+        <default>1</default>
+        <choices>
+            <choice name="VC Mux IPv4 Routed" value="1" />
+            <choice name="VC Mux Bridged Ethernet (FCS)" value="2" />
+            <choice name="VC Mux Bridged Ethernet (no FCS)" value="3" />
+            <choice name="VC Mux IPv6 Routed" value="4" />
+            <choice name="LLC Routed AAL5 Snap" value="6" />
+            <choice name="LLC Bridged Ethernet (FCS)" value="7" />
+            <choice name="LLC Bridged Ethernet (no FCS)" value="8" />
+            <choice name="LLC Encap PPP" value="9" />
+            <choice name="VC Mux PPP" value="10" />
+        </choices>
+    </PropertyString> 
+
+    <PropertyString>
+        <obsolete>AtmRange list must be used instead. Represents mac for the first element in AtmRange list</obsolete>
+        <name>mac</name>
+        <default>aa:bb:cc:00:00:00</default>
+        <description>base value used when the plugin creates a mac addresses.</description>
+    </PropertyString>
+    
+    <PropertyString>
+        <obsolete>AtmRange list must be used instead. Represents incrementBy for the first element in AtmRange list</obsolete>
+        <name>incrementBy</name>
+        <default>00:00:00:00:00:01</default>
+        <description>Incrementor used when the plugin creates a range of macs.</description>
+    </PropertyString>
+    
+    <PropertyBoolean>
+        <name>enabled</name>
+        <default>true</default>
+        <description>True enables the plugin, false disables the plugin.</description>
+    </PropertyBoolean>
+    
+    <PropertyString>
+        <name>atmInterfaceType</name>
+        <description>May take the following values: kUNI, kNNI</description>
+        <default>kUNI</default>
+        <choices>
+            <choice value="kUNI" name="UNI" />
+            <choice value="kNNI" name="NNI" />
+        </choices>
+    </PropertyString>  
+    
+    <PropertyBoolean>
+        <name>cosetEnable</name>
+        <default>false</default>
+        <description>Enable Coset(header error correction) if true, disable if false.</description>
+    </PropertyBoolean> 
+     
+    <PropertyString>
+        <name>fillerCell</name>
+        <description>May take the following values: kUnassigned, kIdle</description>
+        <default>kUnassigned</default>
+        <choices>
+            <choice value="kUnassigned" name="Unassigned" />
+            <choice value="kIdle" name="Idle" />
+        </choices>
+    </PropertyString>      
+    
+    <PropertyBoolean>
+        <name>atmPatternMatching</name>
+        <default>true</default>
+        <description>Enable atm Pattern matching if true, disable if false.</description>
+    </PropertyBoolean> 
+    
+    <PropertyInt>
+        <name>reassemblyTimeout</name>
+        <default>10</default>
+        <min>0</min>
+        <max>100</max>
+        <description>Value of reassembly timeout in seconds.</description>
+    </PropertyInt>  
+    
+    <PropertyNodeList nodeType="AtmRange" type="sync">
+        <name>atmRangeList</name>
+        <help>The list of atm ranges. See the AtmRange for details.</help>
+    </PropertyNodeList>
+    
+    <PropertyNodeList nodeType="PvcRange" type="sync">
+        <name>pvcRangeList</name>
+        <help>The list of pvc ranges. See the PvcRange for details.</help>
+    </PropertyNodeList>
+    
+</Node>
+

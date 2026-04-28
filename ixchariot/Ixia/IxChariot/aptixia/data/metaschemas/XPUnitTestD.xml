@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="XPUnitTestD" baseType="XProtocolObject">
+<help>Provides Unit Test facility for object hierarchy</help>
+    <PropertyString>
+        <name>stringVarD</name>
+        <default>dzz</default>
+        <help>string property</help>
+    </PropertyString>
+</Node>

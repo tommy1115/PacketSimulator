@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Node nodeType="DnsPlugin" baseType="GlobalPlugin">
+	<help>Contains the settings from resolv.conf and hosts</help>
+	<PropertyString>
+		<name>domain</name>
+		<default></default>
+		<regex>((([A-Za-z][A-Za-z0-9\-]*[A-Za-z0-9])\.?)*([A-Za-z][A-Za-z0-9\-]*[A-Za-z0-9]))*</regex>
+		<regexDescription>Must contain letters, numbers, '-' and '.' only. Does not conform to RFC1035 definition.</regexDescription>
+		<description>Local domain name</description>
+		<help><![CDATA[Local domain name.
+Most queries for names within this domain can use short names relative to the local domain.  If no domain entry is present,  the  domain  is
+determined  from  the local host name returned by gethostname(); the domain part is taken to be everything after the first `.'.  Finally, if
+the host name does not contain a domain part, the root domain is assumed.]]></help>
+	</PropertyString>
+	<PropertyInt>
+		<name>timeout</name>
+		<min>0</min>
+		<default>5</default>
+		<description>Timeout that resolver will wait for a response from a remote name server, before retrying from another </description>
+		<help><![CDATA[Timeout that resolver will wait for a response from a remote name server, before retrying the query via a different name server.]]></help>
+	</PropertyInt>
+	<PropertyNodeList nodeType="DnsNameServer">
+		<name>nameServerList</name>
+		<description>The list of name servers</description>
+	</PropertyNodeList>
+	<PropertyNodeList nodeType="DnsSearch">
+		<name>searchList</name>
+		<description>The search list for host-name lookup</description>
+	</PropertyNodeList>
+	<PropertyNodeList nodeType="DnsHost">
+		<name>hostList</name>
+		<description>The list of hosts</description>
+	</PropertyNodeList>
+</Node>
+

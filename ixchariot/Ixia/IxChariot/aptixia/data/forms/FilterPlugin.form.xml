@@ -1,0 +1,1151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<element type="aptixia.sm.DataDrivenForm" uuid="05f83b90-bfc2-4b37-a30f-15c4f2f69a67">
+    <ProxyWrapper type="aptixia.sm.CachingProxyWrapper" uuid="8884fc8a-bb49-4afc-b9f0-64bbbc9a7869" />
+    <ControlName type="System.String">DataDrivenForm</ControlName>
+    <AutoScroll type="System.Boolean">true</AutoScroll>
+    <AutoScrollMinSize type="System.Drawing.Size">
+        <Width type="System.Int32">424</Width>
+        <Height type="System.Int32">366</Height>
+    </AutoScrollMinSize>
+    <AllowDrop type="System.Boolean">true</AllowDrop>
+    <Dock type="System.Windows.Forms.DockStyle">5</Dock>
+    <Font type="System.Drawing.Font" size="8.25" style="0">Tahoma</Font>
+    <Name type="System.String">DataDrivenForm</Name>
+    <Size type="System.Drawing.Size">
+        <Width type="System.Int32">576</Width>
+        <Height type="System.Int32">590</Height>
+    </Size>
+    <Controls type="System.Windows.Forms.Control+ControlCollection">
+        <element type="DevExpress.XtraEditors.TextEdit" uuid="837e0289-a5ff-42fa-be11-f1e446ae9794">
+            <Properties type="DevExpress.XtraEditors.Repository.RepositoryItemTextEdit">
+                <DisplayFormat type="DevExpress.Utils.FormatInfo" />
+                <EditFormat type="DevExpress.Utils.FormatInfo" />
+                <AppearanceFocused type="DevExpress.Utils.AppearanceObject">
+                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                    <TextOptions type="DevExpress.Utils.TextOptions">
+                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                    </TextOptions>
+                </AppearanceFocused>
+                <Appearance type="DevExpress.Utils.AppearanceObject">
+                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                    <TextOptions type="DevExpress.Utils.TextOptions">
+                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                    </TextOptions>
+                </Appearance>
+                <AppearanceDisabled type="DevExpress.Utils.AppearanceObject">
+                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                    <TextOptions type="DevExpress.Utils.TextOptions">
+                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                    </TextOptions>
+                </AppearanceDisabled>
+            </Properties>
+            <Properties type="DevExpress.XtraEditors.Repository.RepositoryItemTextEdit" />
+            <EditValue type="System.String" />
+            <ToolTip type="System.String">Specify port number 0-65535, which are allowed. Multiple values can be specified by separating them with a ';'.</ToolTip>
+            <Location type="System.Drawing.Point">
+                <X type="System.Int32">120</X>
+                <Y type="System.Int32">280</Y>
+            </Location>
+            <Name type="System.String">edtUDP</Name>
+            <Size type="System.Drawing.Size">
+                <Width type="System.Int32">243</Width>
+                <Height type="System.Int32">20</Height>
+            </Size>
+            <TabIndex type="System.Int32">15</TabIndex>
+            <Controls type="System.Windows.Forms.Control+ControlCollection">
+                <element type="DevExpress.XtraEditors.TextBoxMaskBox" uuid="8819e6b1-5d73-4f15-9513-fc2a216299eb">
+                    <MaskBoxSelectionStart type="System.Int32">0</MaskBoxSelectionStart>
+                    <MaskBoxSelectionLength type="System.Int32">0</MaskBoxSelectionLength>
+                    <MaskBoxSelectedText type="System.String" />
+                    <Mask type="DevExpress.XtraEditors.Mask.MaskProperties" uuid="cd8a4267-506c-4efd-bdb9-901b972db5c1" />
+                    <EditText type="System.String" />
+                    <EditValue type="System.String" />
+                    <AcceptsReturn type="System.Boolean">false</AcceptsReturn>
+                    <CharacterCasing type="System.Windows.Forms.CharacterCasing">0</CharacterCasing>
+                    <PasswordChar type="System.Char">&#x0;</PasswordChar>
+                    <ScrollBars type="System.Windows.Forms.ScrollBars">0</ScrollBars>
+                    <TextAlign type="System.Windows.Forms.HorizontalAlignment">0</TextAlign>
+                    <AcceptsTab type="System.Boolean">false</AcceptsTab>
+                    <AutoSize type="System.Boolean">false</AutoSize>
+                    <BackColor type="System.Drawing.Color">ffffffff</BackColor>
+                    <BorderStyle type="System.Windows.Forms.BorderStyle">0</BorderStyle>
+                    <ForeColor type="System.Drawing.Color">WindowText</ForeColor>
+                    <HideSelection type="System.Boolean">true</HideSelection>
+                    <MaxLength type="System.Int32">0</MaxLength>
+                    <Multiline type="System.Boolean">false</Multiline>
+                    <ReadOnly type="System.Boolean">false</ReadOnly>
+                    <WordWrap type="System.Boolean">true</WordWrap>
+                    <AccessibleDescription type="null" />
+                    <AccessibleName type="null" />
+                    <AccessibleRole type="System.Windows.Forms.AccessibleRole">-1</AccessibleRole>
+                    <AllowDrop type="System.Boolean">false</AllowDrop>
+                    <Anchor type="System.Windows.Forms.AnchorStyles">5</Anchor>
+                    <CausesValidation type="System.Boolean">true</CausesValidation>
+                    <ContextMenu type="null" />
+                    <Dock type="System.Windows.Forms.DockStyle">0</Dock>
+                    <Enabled type="System.Boolean">true</Enabled>
+                    <Font type="System.Drawing.Font" size="8.25" style="0">Tahoma</Font>
+                    <ImeMode type="System.Windows.Forms.ImeMode">0</ImeMode>
+                    <Location type="System.Drawing.Point">
+                        <X type="System.Int32">3</X>
+                        <Y type="System.Int32">3</Y>
+                    </Location>
+                    <Name type="System.String" />
+                    <RightToLeft type="System.Windows.Forms.RightToLeft">0</RightToLeft>
+                    <Size type="System.Drawing.Size">
+                        <Width type="System.Int32">237</Width>
+                        <Height type="System.Int32">14</Height>
+                    </Size>
+                    <TabIndex type="System.Int32">0</TabIndex>
+                    <TabStop type="System.Boolean">true</TabStop>
+                    <Tag type="null" />
+                    <Controls type="System.Windows.Forms.Control+ControlCollection" />
+                </element>
+            </Controls>
+        </element>
+        <element type="DevExpress.XtraEditors.TextEdit" uuid="bbdb95fc-7fe9-4669-9e73-c804493fd378">
+            <Properties type="DevExpress.XtraEditors.Repository.RepositoryItemTextEdit">
+                <DisplayFormat type="DevExpress.Utils.FormatInfo" />
+                <EditFormat type="DevExpress.Utils.FormatInfo" />
+                <AppearanceFocused type="DevExpress.Utils.AppearanceObject">
+                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                    <TextOptions type="DevExpress.Utils.TextOptions">
+                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                    </TextOptions>
+                </AppearanceFocused>
+                <Appearance type="DevExpress.Utils.AppearanceObject">
+                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                    <TextOptions type="DevExpress.Utils.TextOptions">
+                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                    </TextOptions>
+                </Appearance>
+                <AppearanceDisabled type="DevExpress.Utils.AppearanceObject">
+                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                    <TextOptions type="DevExpress.Utils.TextOptions">
+                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                    </TextOptions>
+                </AppearanceDisabled>
+            </Properties>
+            <Properties type="DevExpress.XtraEditors.Repository.RepositoryItemTextEdit" />
+            <EditValue type="System.String" />
+            <ToolTip type="System.String">Specify port number 0-65535, which are allowed. Multiple values can be specified by separating them with a ';'.</ToolTip>
+            <Location type="System.Drawing.Point">
+                <X type="System.Int32">120</X>
+                <Y type="System.Int32">248</Y>
+            </Location>
+            <Name type="System.String">edtTCP</Name>
+            <Size type="System.Drawing.Size">
+                <Width type="System.Int32">243</Width>
+                <Height type="System.Int32">20</Height>
+            </Size>
+            <TabIndex type="System.Int32">13</TabIndex>
+            <Controls type="System.Windows.Forms.Control+ControlCollection">
+                <element type="DevExpress.XtraEditors.TextBoxMaskBox" uuid="0da79545-284f-456d-966d-d34e27c6cb55">
+                    <MaskBoxSelectionStart type="System.Int32">0</MaskBoxSelectionStart>
+                    <MaskBoxSelectionLength type="System.Int32">0</MaskBoxSelectionLength>
+                    <MaskBoxSelectedText type="System.String" />
+                    <Mask type="DevExpress.XtraEditors.Mask.MaskProperties" ref="cd8a4267-506c-4efd-bdb9-901b972db5c1" />
+                    <EditText type="System.String" />
+                    <EditValue type="System.String" />
+                    <AcceptsReturn type="System.Boolean">false</AcceptsReturn>
+                    <CharacterCasing type="System.Windows.Forms.CharacterCasing">0</CharacterCasing>
+                    <PasswordChar type="System.Char">&#x0;</PasswordChar>
+                    <ScrollBars type="System.Windows.Forms.ScrollBars">0</ScrollBars>
+                    <TextAlign type="System.Windows.Forms.HorizontalAlignment">0</TextAlign>
+                    <AcceptsTab type="System.Boolean">false</AcceptsTab>
+                    <AutoSize type="System.Boolean">false</AutoSize>
+                    <BackColor type="System.Drawing.Color">ffffffff</BackColor>
+                    <BorderStyle type="System.Windows.Forms.BorderStyle">0</BorderStyle>
+                    <ForeColor type="System.Drawing.Color">WindowText</ForeColor>
+                    <HideSelection type="System.Boolean">true</HideSelection>
+                    <MaxLength type="System.Int32">0</MaxLength>
+                    <Multiline type="System.Boolean">false</Multiline>
+                    <ReadOnly type="System.Boolean">false</ReadOnly>
+                    <WordWrap type="System.Boolean">true</WordWrap>
+                    <AccessibleDescription type="null" />
+                    <AccessibleName type="null" />
+                    <AccessibleRole type="System.Windows.Forms.AccessibleRole">-1</AccessibleRole>
+                    <AllowDrop type="System.Boolean">false</AllowDrop>
+                    <Anchor type="System.Windows.Forms.AnchorStyles">5</Anchor>
+                    <CausesValidation type="System.Boolean">true</CausesValidation>
+                    <ContextMenu type="null" />
+                    <Dock type="System.Windows.Forms.DockStyle">0</Dock>
+                    <Enabled type="System.Boolean">true</Enabled>
+                    <Font type="System.Drawing.Font" size="8.25" style="0">Tahoma</Font>
+                    <ImeMode type="System.Windows.Forms.ImeMode">0</ImeMode>
+                    <Location type="System.Drawing.Point">
+                        <X type="System.Int32">3</X>
+                        <Y type="System.Int32">3</Y>
+                    </Location>
+                    <Name type="System.String" />
+                    <RightToLeft type="System.Windows.Forms.RightToLeft">0</RightToLeft>
+                    <Size type="System.Drawing.Size">
+                        <Width type="System.Int32">237</Width>
+                        <Height type="System.Int32">14</Height>
+                    </Size>
+                    <TabIndex type="System.Int32">0</TabIndex>
+                    <TabStop type="System.Boolean">true</TabStop>
+                    <Tag type="null" />
+                    <Controls type="System.Windows.Forms.Control+ControlCollection" />
+                </element>
+            </Controls>
+        </element>
+        <element type="DevExpress.XtraEditors.TextEdit" uuid="93994c19-dcc6-4339-b171-30f58fef3765">
+            <Properties type="DevExpress.XtraEditors.Repository.RepositoryItemTextEdit">
+                <DisplayFormat type="DevExpress.Utils.FormatInfo" />
+                <EditFormat type="DevExpress.Utils.FormatInfo" />
+                <AppearanceFocused type="DevExpress.Utils.AppearanceObject">
+                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                    <TextOptions type="DevExpress.Utils.TextOptions">
+                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                    </TextOptions>
+                </AppearanceFocused>
+                <Appearance type="DevExpress.Utils.AppearanceObject">
+                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                    <TextOptions type="DevExpress.Utils.TextOptions">
+                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                    </TextOptions>
+                </Appearance>
+                <AppearanceDisabled type="DevExpress.Utils.AppearanceObject">
+                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                    <TextOptions type="DevExpress.Utils.TextOptions">
+                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                    </TextOptions>
+                </AppearanceDisabled>
+            </Properties>
+            <Properties type="DevExpress.XtraEditors.Repository.RepositoryItemTextEdit" />
+            <EditValue type="System.String" />
+            <ToolTip type="System.String">Specify integral values in the range 0-255, which represent the ICMP message types that are allowed. Multiple values can be specified by separating them with a ';'.</ToolTip>
+            <Location type="System.Drawing.Point">
+                <X type="System.Int32">120</X>
+                <Y type="System.Int32">216</Y>
+            </Location>
+            <Name type="System.String">edtICMP</Name>
+            <Size type="System.Drawing.Size">
+                <Width type="System.Int32">243</Width>
+                <Height type="System.Int32">20</Height>
+            </Size>
+            <TabIndex type="System.Int32">11</TabIndex>
+            <Controls type="System.Windows.Forms.Control+ControlCollection">
+                <element type="DevExpress.XtraEditors.TextBoxMaskBox" uuid="a551e3b4-a5fc-457b-ad45-d17bb48f12ee">
+                    <MaskBoxSelectionStart type="System.Int32">0</MaskBoxSelectionStart>
+                    <MaskBoxSelectionLength type="System.Int32">0</MaskBoxSelectionLength>
+                    <MaskBoxSelectedText type="System.String" />
+                    <Mask type="DevExpress.XtraEditors.Mask.MaskProperties" ref="cd8a4267-506c-4efd-bdb9-901b972db5c1" />
+                    <EditText type="System.String" />
+                    <EditValue type="System.String" />
+                    <AcceptsReturn type="System.Boolean">false</AcceptsReturn>
+                    <CharacterCasing type="System.Windows.Forms.CharacterCasing">0</CharacterCasing>
+                    <PasswordChar type="System.Char">&#x0;</PasswordChar>
+                    <ScrollBars type="System.Windows.Forms.ScrollBars">0</ScrollBars>
+                    <TextAlign type="System.Windows.Forms.HorizontalAlignment">0</TextAlign>
+                    <AcceptsTab type="System.Boolean">false</AcceptsTab>
+                    <AutoSize type="System.Boolean">false</AutoSize>
+                    <BackColor type="System.Drawing.Color">ffffffff</BackColor>
+                    <BorderStyle type="System.Windows.Forms.BorderStyle">0</BorderStyle>
+                    <ForeColor type="System.Drawing.Color">WindowText</ForeColor>
+                    <HideSelection type="System.Boolean">true</HideSelection>
+                    <MaxLength type="System.Int32">0</MaxLength>
+                    <Multiline type="System.Boolean">false</Multiline>
+                    <ReadOnly type="System.Boolean">false</ReadOnly>
+                    <WordWrap type="System.Boolean">true</WordWrap>
+                    <AccessibleDescription type="null" />
+                    <AccessibleName type="null" />
+                    <AccessibleRole type="System.Windows.Forms.AccessibleRole">-1</AccessibleRole>
+                    <AllowDrop type="System.Boolean">false</AllowDrop>
+                    <Anchor type="System.Windows.Forms.AnchorStyles">5</Anchor>
+                    <CausesValidation type="System.Boolean">true</CausesValidation>
+                    <ContextMenu type="null" />
+                    <Dock type="System.Windows.Forms.DockStyle">0</Dock>
+                    <Enabled type="System.Boolean">true</Enabled>
+                    <Font type="System.Drawing.Font" size="8.25" style="0">Tahoma</Font>
+                    <ImeMode type="System.Windows.Forms.ImeMode">0</ImeMode>
+                    <Location type="System.Drawing.Point">
+                        <X type="System.Int32">3</X>
+                        <Y type="System.Int32">3</Y>
+                    </Location>
+                    <Name type="System.String" />
+                    <RightToLeft type="System.Windows.Forms.RightToLeft">0</RightToLeft>
+                    <Size type="System.Drawing.Size">
+                        <Width type="System.Int32">237</Width>
+                        <Height type="System.Int32">14</Height>
+                    </Size>
+                    <TabIndex type="System.Int32">0</TabIndex>
+                    <TabStop type="System.Boolean">true</TabStop>
+                    <Tag type="null" />
+                    <Controls type="System.Windows.Forms.Control+ControlCollection" />
+                </element>
+            </Controls>
+        </element>
+        <element type="DevExpress.XtraEditors.TextEdit" uuid="32e7ecea-42ed-40ab-b379-b2a36de897a0">
+            <Properties type="DevExpress.XtraEditors.Repository.RepositoryItemTextEdit">
+                <DisplayFormat type="DevExpress.Utils.FormatInfo" />
+                <EditFormat type="DevExpress.Utils.FormatInfo" />
+                <AppearanceFocused type="DevExpress.Utils.AppearanceObject">
+                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                    <TextOptions type="DevExpress.Utils.TextOptions">
+                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                    </TextOptions>
+                </AppearanceFocused>
+                <Appearance type="DevExpress.Utils.AppearanceObject">
+                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                    <TextOptions type="DevExpress.Utils.TextOptions">
+                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                    </TextOptions>
+                </Appearance>
+                <AppearanceDisabled type="DevExpress.Utils.AppearanceObject">
+                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                    <TextOptions type="DevExpress.Utils.TextOptions">
+                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                    </TextOptions>
+                </AppearanceDisabled>
+            </Properties>
+            <Properties type="DevExpress.XtraEditors.Repository.RepositoryItemTextEdit" />
+            <EditValue type="System.String" />
+            <ToolTip type="System.String">Specify integral values in the range 0-255, which represent IP protocol types that are allowed. Multiple values can be specified by separating them with a ';'.</ToolTip>
+            <Location type="System.Drawing.Point">
+                <X type="System.Int32">120</X>
+                <Y type="System.Int32">184</Y>
+            </Location>
+            <Name type="System.String">edtIP</Name>
+            <Size type="System.Drawing.Size">
+                <Width type="System.Int32">243</Width>
+                <Height type="System.Int32">20</Height>
+            </Size>
+            <TabIndex type="System.Int32">9</TabIndex>
+            <Controls type="System.Windows.Forms.Control+ControlCollection">
+                <element type="DevExpress.XtraEditors.TextBoxMaskBox" uuid="ad861836-b490-4d96-b085-17654312307c">
+                    <MaskBoxSelectionStart type="System.Int32">0</MaskBoxSelectionStart>
+                    <MaskBoxSelectionLength type="System.Int32">0</MaskBoxSelectionLength>
+                    <MaskBoxSelectedText type="System.String" />
+                    <Mask type="DevExpress.XtraEditors.Mask.MaskProperties" ref="cd8a4267-506c-4efd-bdb9-901b972db5c1" />
+                    <EditText type="System.String" />
+                    <EditValue type="System.String" />
+                    <AcceptsReturn type="System.Boolean">false</AcceptsReturn>
+                    <CharacterCasing type="System.Windows.Forms.CharacterCasing">0</CharacterCasing>
+                    <PasswordChar type="System.Char">&#x0;</PasswordChar>
+                    <ScrollBars type="System.Windows.Forms.ScrollBars">0</ScrollBars>
+                    <TextAlign type="System.Windows.Forms.HorizontalAlignment">0</TextAlign>
+                    <AcceptsTab type="System.Boolean">false</AcceptsTab>
+                    <AutoSize type="System.Boolean">false</AutoSize>
+                    <BackColor type="System.Drawing.Color">ffffffff</BackColor>
+                    <BorderStyle type="System.Windows.Forms.BorderStyle">0</BorderStyle>
+                    <ForeColor type="System.Drawing.Color">WindowText</ForeColor>
+                    <HideSelection type="System.Boolean">true</HideSelection>
+                    <MaxLength type="System.Int32">0</MaxLength>
+                    <Multiline type="System.Boolean">false</Multiline>
+                    <ReadOnly type="System.Boolean">false</ReadOnly>
+                    <WordWrap type="System.Boolean">true</WordWrap>
+                    <AccessibleDescription type="null" />
+                    <AccessibleName type="null" />
+                    <AccessibleRole type="System.Windows.Forms.AccessibleRole">-1</AccessibleRole>
+                    <AllowDrop type="System.Boolean">false</AllowDrop>
+                    <Anchor type="System.Windows.Forms.AnchorStyles">5</Anchor>
+                    <CausesValidation type="System.Boolean">true</CausesValidation>
+                    <ContextMenu type="null" />
+                    <Dock type="System.Windows.Forms.DockStyle">0</Dock>
+                    <Enabled type="System.Boolean">true</Enabled>
+                    <Font type="System.Drawing.Font" size="8.25" style="0">Tahoma</Font>
+                    <ImeMode type="System.Windows.Forms.ImeMode">0</ImeMode>
+                    <Location type="System.Drawing.Point">
+                        <X type="System.Int32">3</X>
+                        <Y type="System.Int32">3</Y>
+                    </Location>
+                    <Name type="System.String" />
+                    <RightToLeft type="System.Windows.Forms.RightToLeft">0</RightToLeft>
+                    <Size type="System.Drawing.Size">
+                        <Width type="System.Int32">237</Width>
+                        <Height type="System.Int32">14</Height>
+                    </Size>
+                    <TabIndex type="System.Int32">0</TabIndex>
+                    <TabStop type="System.Boolean">true</TabStop>
+                    <Tag type="null" />
+                    <Controls type="System.Windows.Forms.Control+ControlCollection" />
+                </element>
+            </Controls>
+        </element>
+        <element type="DevExpress.XtraEditors.TextEdit" uuid="393c8f67-7628-40e4-9234-31636bc226d0">
+            <Properties type="DevExpress.XtraEditors.Repository.RepositoryItemTextEdit">
+                <DisplayFormat type="DevExpress.Utils.FormatInfo" />
+                <EditFormat type="DevExpress.Utils.FormatInfo" />
+                <AppearanceFocused type="DevExpress.Utils.AppearanceObject">
+                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                    <TextOptions type="DevExpress.Utils.TextOptions">
+                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                    </TextOptions>
+                </AppearanceFocused>
+                <Appearance type="DevExpress.Utils.AppearanceObject">
+                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                    <TextOptions type="DevExpress.Utils.TextOptions">
+                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                    </TextOptions>
+                </Appearance>
+                <AppearanceDisabled type="DevExpress.Utils.AppearanceObject">
+                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                    <TextOptions type="DevExpress.Utils.TextOptions">
+                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                    </TextOptions>
+                </AppearanceDisabled>
+            </Properties>
+            <Properties type="DevExpress.XtraEditors.Repository.RepositoryItemTextEdit" />
+            <EditValue type="System.String" />
+            <ToolTip type="System.String">Specify hexadecimal values upto 0xFFFF, that represent MAC types that are allowed. Multiple values can be specified by separating them with a ';'.</ToolTip>
+            <Location type="System.Drawing.Point">
+                <X type="System.Int32">120</X>
+                <Y type="System.Int32">152</Y>
+            </Location>
+            <Name type="System.String">edtMAC</Name>
+            <Size type="System.Drawing.Size">
+                <Width type="System.Int32">243</Width>
+                <Height type="System.Int32">20</Height>
+            </Size>
+            <TabIndex type="System.Int32">7</TabIndex>
+            <Controls type="System.Windows.Forms.Control+ControlCollection">
+                <element type="DevExpress.XtraEditors.TextBoxMaskBox" uuid="70fbd31b-55cc-4309-8db9-31c26ea63584">
+                    <MaskBoxSelectionStart type="System.Int32">0</MaskBoxSelectionStart>
+                    <MaskBoxSelectionLength type="System.Int32">0</MaskBoxSelectionLength>
+                    <MaskBoxSelectedText type="System.String" />
+                    <Mask type="DevExpress.XtraEditors.Mask.MaskProperties" ref="cd8a4267-506c-4efd-bdb9-901b972db5c1" />
+                    <EditText type="System.String" />
+                    <EditValue type="System.String" />
+                    <AcceptsReturn type="System.Boolean">false</AcceptsReturn>
+                    <CharacterCasing type="System.Windows.Forms.CharacterCasing">0</CharacterCasing>
+                    <PasswordChar type="System.Char">&#x0;</PasswordChar>
+                    <ScrollBars type="System.Windows.Forms.ScrollBars">0</ScrollBars>
+                    <TextAlign type="System.Windows.Forms.HorizontalAlignment">0</TextAlign>
+                    <AcceptsTab type="System.Boolean">false</AcceptsTab>
+                    <AutoSize type="System.Boolean">false</AutoSize>
+                    <BackColor type="System.Drawing.Color">ffffffff</BackColor>
+                    <BorderStyle type="System.Windows.Forms.BorderStyle">0</BorderStyle>
+                    <ForeColor type="System.Drawing.Color">WindowText</ForeColor>
+                    <HideSelection type="System.Boolean">true</HideSelection>
+                    <MaxLength type="System.Int32">0</MaxLength>
+                    <Multiline type="System.Boolean">false</Multiline>
+                    <ReadOnly type="System.Boolean">false</ReadOnly>
+                    <WordWrap type="System.Boolean">true</WordWrap>
+                    <AccessibleDescription type="null" />
+                    <AccessibleName type="null" />
+                    <AccessibleRole type="System.Windows.Forms.AccessibleRole">-1</AccessibleRole>
+                    <AllowDrop type="System.Boolean">false</AllowDrop>
+                    <Anchor type="System.Windows.Forms.AnchorStyles">5</Anchor>
+                    <CausesValidation type="System.Boolean">true</CausesValidation>
+                    <ContextMenu type="null" />
+                    <Dock type="System.Windows.Forms.DockStyle">0</Dock>
+                    <Enabled type="System.Boolean">true</Enabled>
+                    <Font type="System.Drawing.Font" size="8.25" style="0">Tahoma</Font>
+                    <ImeMode type="System.Windows.Forms.ImeMode">0</ImeMode>
+                    <Location type="System.Drawing.Point">
+                        <X type="System.Int32">3</X>
+                        <Y type="System.Int32">3</Y>
+                    </Location>
+                    <Name type="System.String" />
+                    <RightToLeft type="System.Windows.Forms.RightToLeft">0</RightToLeft>
+                    <Size type="System.Drawing.Size">
+                        <Width type="System.Int32">237</Width>
+                        <Height type="System.Int32">14</Height>
+                    </Size>
+                    <TabIndex type="System.Int32">0</TabIndex>
+                    <TabStop type="System.Boolean">true</TabStop>
+                    <Tag type="null" />
+                    <Controls type="System.Windows.Forms.Control+ControlCollection" />
+                </element>
+            </Controls>
+        </element>
+        <element type="DevExpress.XtraEditors.SimpleButton" uuid="889ea778-4eeb-4390-94b7-a4a394238fea">
+            <Text type="System.String">...</Text>
+            <Appearance type="DevExpress.Utils.AppearanceObject">
+                <Options type="DevExpress.Utils.AppearanceOptions" />
+                <TextOptions type="DevExpress.Utils.TextOptions">
+                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                </TextOptions>
+            </Appearance>
+            <ToolTip type="System.String">UDP Port Selector</ToolTip>
+            <Location type="System.Drawing.Point">
+                <X type="System.Int32">376</X>
+                <Y type="System.Int32">280</Y>
+            </Location>
+            <Name type="System.String">btnUDP</Name>
+            <Size type="System.Drawing.Size">
+                <Width type="System.Int32">25</Width>
+                <Height type="System.Int32">22</Height>
+            </Size>
+            <TabIndex type="System.Int32">16</TabIndex>
+        </element>
+        <element type="DevExpress.XtraEditors.SimpleButton" uuid="c4fba44d-c311-4789-933a-944977363a3d">
+            <Text type="System.String">...</Text>
+            <Appearance type="DevExpress.Utils.AppearanceObject">
+                <Options type="DevExpress.Utils.AppearanceOptions" />
+                <TextOptions type="DevExpress.Utils.TextOptions">
+                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                </TextOptions>
+            </Appearance>
+            <ToolTip type="System.String">TCP Port Selector</ToolTip>
+            <Location type="System.Drawing.Point">
+                <X type="System.Int32">376</X>
+                <Y type="System.Int32">248</Y>
+            </Location>
+            <Name type="System.String">btnTCP</Name>
+            <Size type="System.Drawing.Size">
+                <Width type="System.Int32">25</Width>
+                <Height type="System.Int32">22</Height>
+            </Size>
+            <TabIndex type="System.Int32">14</TabIndex>
+        </element>
+        <element type="DevExpress.XtraEditors.SimpleButton" uuid="8a3d3215-0a4c-4ede-a65d-28dba1fd6265">
+            <Text type="System.String">...</Text>
+            <Appearance type="DevExpress.Utils.AppearanceObject">
+                <Options type="DevExpress.Utils.AppearanceOptions" />
+                <TextOptions type="DevExpress.Utils.TextOptions">
+                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                </TextOptions>
+            </Appearance>
+            <ToolTip type="System.String">ICMP Types Selector</ToolTip>
+            <Location type="System.Drawing.Point">
+                <X type="System.Int32">376</X>
+                <Y type="System.Int32">216</Y>
+            </Location>
+            <Name type="System.String">btnICMP</Name>
+            <Size type="System.Drawing.Size">
+                <Width type="System.Int32">25</Width>
+                <Height type="System.Int32">22</Height>
+            </Size>
+            <TabIndex type="System.Int32">12</TabIndex>
+        </element>
+        <element type="DevExpress.XtraEditors.SimpleButton" uuid="b0694ec0-2be3-4922-a977-3a5782dc0f42">
+            <Text type="System.String">...</Text>
+            <Appearance type="DevExpress.Utils.AppearanceObject">
+                <Options type="DevExpress.Utils.AppearanceOptions" />
+                <TextOptions type="DevExpress.Utils.TextOptions">
+                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                </TextOptions>
+            </Appearance>
+            <ToolTip type="System.String">IP Protocols Selector</ToolTip>
+            <Location type="System.Drawing.Point">
+                <X type="System.Int32">376</X>
+                <Y type="System.Int32">184</Y>
+            </Location>
+            <Name type="System.String">btnIP</Name>
+            <Size type="System.Drawing.Size">
+                <Width type="System.Int32">25</Width>
+                <Height type="System.Int32">22</Height>
+            </Size>
+            <TabIndex type="System.Int32">10</TabIndex>
+        </element>
+        <element type="DevExpress.XtraEditors.SimpleButton" uuid="6dd88dd3-402b-4ec7-928f-99ca08a93b40">
+            <Text type="System.String">...</Text>
+            <Appearance type="DevExpress.Utils.AppearanceObject">
+                <Options type="DevExpress.Utils.AppearanceOptions" />
+                <TextOptions type="DevExpress.Utils.TextOptions">
+                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                </TextOptions>
+            </Appearance>
+            <ToolTip type="System.String">MAC Types Selector</ToolTip>
+            <Location type="System.Drawing.Point">
+                <X type="System.Int32">376</X>
+                <Y type="System.Int32">152</Y>
+            </Location>
+            <Name type="System.String">btnMAC</Name>
+            <Size type="System.Drawing.Size">
+                <Width type="System.Int32">25</Width>
+                <Height type="System.Int32">22</Height>
+            </Size>
+            <TabIndex type="System.Int32">8</TabIndex>
+        </element>
+        <element type="DevExpress.XtraEditors.CheckEdit" uuid="f4c80bb0-f8c4-49d1-8e05-09a03ddcfc9e">
+            <Properties type="DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit">
+                <GlyphAlignment type="DevExpress.Utils.HorzAlignment">1</GlyphAlignment>
+                <Caption type="System.String">Enable ISIS</Caption>
+                <DisplayFormat type="DevExpress.Utils.FormatInfo" />
+                <EditFormat type="DevExpress.Utils.FormatInfo" />
+                <AppearanceFocused type="DevExpress.Utils.AppearanceObject">
+                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                    <TextOptions type="DevExpress.Utils.TextOptions">
+                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                    </TextOptions>
+                </AppearanceFocused>
+                <Appearance type="DevExpress.Utils.AppearanceObject">
+                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                    <TextOptions type="DevExpress.Utils.TextOptions">
+                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                    </TextOptions>
+                </Appearance>
+                <AppearanceDisabled type="DevExpress.Utils.AppearanceObject">
+                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                    <TextOptions type="DevExpress.Utils.TextOptions">
+                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                    </TextOptions>
+                </AppearanceDisabled>
+            </Properties>
+            <Properties type="DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit" />
+            <ToolTip type="System.String">Select to allow ISIS packets to pass.</ToolTip>
+            <Location type="System.Drawing.Point">
+                <X type="System.Int32">208</X>
+                <Y type="System.Int32">104</Y>
+            </Location>
+            <Name type="System.String">chkISIS</Name>
+            <Size type="System.Drawing.Size">
+                <Width type="System.Int32">168</Width>
+                <Height type="System.Int32">18</Height>
+            </Size>
+            <TabIndex type="System.Int32">4</TabIndex>
+        </element>
+        <element type="DevExpress.XtraEditors.CheckEdit" uuid="e58283e5-b0f8-4485-a9e7-550a930224da">
+            <Properties type="DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit">
+                <GlyphAlignment type="DevExpress.Utils.HorzAlignment">1</GlyphAlignment>
+                <Caption type="System.String">Enable All</Caption>
+                <DisplayFormat type="DevExpress.Utils.FormatInfo" />
+                <EditFormat type="DevExpress.Utils.FormatInfo" />
+                <AppearanceFocused type="DevExpress.Utils.AppearanceObject">
+                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                    <TextOptions type="DevExpress.Utils.TextOptions">
+                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                    </TextOptions>
+                </AppearanceFocused>
+                <Appearance type="DevExpress.Utils.AppearanceObject">
+                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                    <TextOptions type="DevExpress.Utils.TextOptions">
+                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                    </TextOptions>
+                </Appearance>
+                <AppearanceDisabled type="DevExpress.Utils.AppearanceObject">
+                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                    <TextOptions type="DevExpress.Utils.TextOptions">
+                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                    </TextOptions>
+                </AppearanceDisabled>
+            </Properties>
+            <Properties type="DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit" />
+            <ToolTip type="System.String">Select to allow all packets to pass.</ToolTip>
+            <Location type="System.Drawing.Point">
+                <X type="System.Int32">40</X>
+                <Y type="System.Int32">104</Y>
+            </Location>
+            <Name type="System.String">chkEnableAll</Name>
+            <Size type="System.Drawing.Size">
+                <Width type="System.Int32">168</Width>
+                <Height type="System.Int32">18</Height>
+            </Size>
+            <TabIndex type="System.Int32">3</TabIndex>
+        </element>
+        <element type="System.Windows.Forms.Label" uuid="8422efbb-6409-4d10-b424-daef71ed0f19">
+            <TextAlign type="System.Drawing.ContentAlignment">16</TextAlign>
+            <Font type="System.Drawing.Font" size="8.25" style="0">Tahoma</Font>
+            <Location type="System.Drawing.Point">
+                <X type="System.Int32">40</X>
+                <Y type="System.Int32">280</Y>
+            </Location>
+            <Name type="System.String">lblUDP</Name>
+            <Size type="System.Drawing.Size">
+                <Width type="System.Int32">100</Width>
+                <Height type="System.Int32">20</Height>
+            </Size>
+            <TabIndex type="System.Int32">62</TabIndex>
+            <Text type="System.String">UDP Ports</Text>
+        </element>
+        <element type="System.Windows.Forms.Label" uuid="04e54139-3376-446a-8778-e3d0261497b5">
+            <TextAlign type="System.Drawing.ContentAlignment">16</TextAlign>
+            <Font type="System.Drawing.Font" size="8.25" style="0">Tahoma</Font>
+            <Location type="System.Drawing.Point">
+                <X type="System.Int32">40</X>
+                <Y type="System.Int32">248</Y>
+            </Location>
+            <Name type="System.String">lblTCP</Name>
+            <Size type="System.Drawing.Size">
+                <Width type="System.Int32">100</Width>
+                <Height type="System.Int32">20</Height>
+            </Size>
+            <TabIndex type="System.Int32">61</TabIndex>
+            <Text type="System.String">TCP Ports</Text>
+        </element>
+        <element type="System.Windows.Forms.Label" uuid="459e2d3b-1343-412a-93c1-ca9aa1a70312">
+            <TextAlign type="System.Drawing.ContentAlignment">16</TextAlign>
+            <Font type="System.Drawing.Font" size="8.25" style="0">Tahoma</Font>
+            <Location type="System.Drawing.Point">
+                <X type="System.Int32">40</X>
+                <Y type="System.Int32">216</Y>
+            </Location>
+            <Name type="System.String">lblICMP</Name>
+            <Size type="System.Drawing.Size">
+                <Width type="System.Int32">100</Width>
+                <Height type="System.Int32">20</Height>
+            </Size>
+            <TabIndex type="System.Int32">60</TabIndex>
+            <Text type="System.String">ICMP Types</Text>
+        </element>
+        <element type="System.Windows.Forms.Label" uuid="e8a24fa7-88e2-45ba-89d2-4f4e255245e2">
+            <TextAlign type="System.Drawing.ContentAlignment">16</TextAlign>
+            <Font type="System.Drawing.Font" size="8.25" style="0">Tahoma</Font>
+            <Location type="System.Drawing.Point">
+                <X type="System.Int32">40</X>
+                <Y type="System.Int32">184</Y>
+            </Location>
+            <Name type="System.String">lblIP</Name>
+            <Size type="System.Drawing.Size">
+                <Width type="System.Int32">100</Width>
+                <Height type="System.Int32">20</Height>
+            </Size>
+            <TabIndex type="System.Int32">59</TabIndex>
+            <Text type="System.String">IP Protocols</Text>
+        </element>
+        <element type="System.Windows.Forms.Label" uuid="7b560a31-74f0-4d56-9553-d21a68a6f902">
+            <TextAlign type="System.Drawing.ContentAlignment">16</TextAlign>
+            <Font type="System.Drawing.Font" size="8.25" style="0">Tahoma</Font>
+            <Location type="System.Drawing.Point">
+                <X type="System.Int32">40</X>
+                <Y type="System.Int32">152</Y>
+            </Location>
+            <Name type="System.String">lblMAC</Name>
+            <Size type="System.Drawing.Size">
+                <Width type="System.Int32">100</Width>
+                <Height type="System.Int32">20</Height>
+            </Size>
+            <TabIndex type="System.Int32">58</TabIndex>
+            <Text type="System.String">MAC Types</Text>
+        </element>
+        <element type="aptixia.sm.DDRadioButton" uuid="79f9a23d-b6b3-49e1-846d-5bb48ed45ad1">
+            <ControlName type="System.String">rbMerge</ControlName>
+            <CheckedValue type="System.String">merge</CheckedValue>
+            <Value type="System.String">reset</Value>
+            <ProxyWrapper type="aptixia.sm.CachingProxyWrapper" ref="8884fc8a-bb49-4afc-b9f0-64bbbc9a7869" />
+            <AutoCheck type="System.Boolean">true</AutoCheck>
+            <TabStop type="System.Boolean">false</TabStop>
+            <Font type="System.Drawing.Font" size="8.25" style="0">Tahoma</Font>
+            <Location type="System.Drawing.Point">
+                <X type="System.Int32">40</X>
+                <Y type="System.Int32">63</Y>
+            </Location>
+            <Name type="System.String">rbMerge</Name>
+            <Size type="System.Drawing.Size">
+                <Width type="System.Int32">217</Width>
+                <Height type="System.Int32">24</Height>
+            </Size>
+            <TabIndex type="System.Int32">2</TabIndex>
+            <Text type="System.String">Merge filter with existing settings</Text>
+        </element>
+        <element type="aptixia.sm.DDRadioButton" uuid="26265ddb-8567-4a0f-b5f4-328334add326">
+            <ControlName type="System.String">rbReset</ControlName>
+            <CheckedValue type="System.String">reset</CheckedValue>
+            <Value type="System.String">reset</Value>
+            <ProxyWrapper type="aptixia.sm.CachingProxyWrapper" ref="8884fc8a-bb49-4afc-b9f0-64bbbc9a7869" />
+            <AutoCheck type="System.Boolean">true</AutoCheck>
+            <Checked type="System.Boolean">true</Checked>
+            <Font type="System.Drawing.Font" size="8.25" style="0">Tahoma</Font>
+            <Location type="System.Drawing.Point">
+                <X type="System.Int32">40</X>
+                <Y type="System.Int32">36</Y>
+            </Location>
+            <Name type="System.String">rbReset</Name>
+            <Size type="System.Drawing.Size">
+                <Width type="System.Int32">351</Width>
+                <Height type="System.Int32">24</Height>
+            </Size>
+            <TabIndex type="System.Int32">1</TabIndex>
+            <Text type="System.String">Reset existing filter setting before applying</Text>
+        </element>
+    </Controls>
+    <EventSources type="System.Collections.ArrayList">
+        <Capacity type="System.Int32">32</Capacity>
+        <SyncRoot type="System.Object" />
+        <element type="aptixia.sm.EventCSSource" uuid="0f4113a4-74a0-41a1-9ad7-13b7ed8d5240">
+            <Control type="DevExpress.XtraEditors.SimpleButton" ref="6dd88dd3-402b-4ec7-928f-99ca08a93b40" />
+            <EventName type="System.String">Click</EventName>
+            <CSSource type="System.String">Schema field = m_schema.FindProperty("mac");
+if (field == null)
+  return;
+aptixia.sm.tools.ChoiceListDlg dlg = new aptixia.sm.tools.ChoiceListDlg("mac");
+dlg.Text = "Port CPU Filters (MAC Types)";
+dlg.SetChoiceList(field.Choices);
+dlg.SelectedChoices=mac;
+if (dlg.ShowDialog(m_root) == DialogResult.OK)
+{
+      mac=dlg.SelectedChoices;
+      CallSetters();
+}
+</CSSource>
+        </element>
+        <element type="aptixia.sm.EventCSSource" uuid="6872cfb6-3baa-4af1-93dc-609491cf43ed">
+            <Control type="DevExpress.XtraEditors.SimpleButton" ref="b0694ec0-2be3-4922-a977-3a5782dc0f42" />
+            <EventName type="System.String">Click</EventName>
+            <CSSource type="System.String">Schema field = m_schema.FindProperty("ip");
+if (field == null)
+  return;
+aptixia.sm.tools.ChoiceListDlg dlg = new aptixia.sm.tools.ChoiceListDlg("ip");
+dlg.Text = "Port CPU Filters (IP Protocols)";
+dlg.SetChoiceList(field.Choices);
+dlg.SelectedChoices=ip;
+if (dlg.ShowDialog(m_root) == DialogResult.OK)
+{
+      ip=dlg.SelectedChoices;
+      CallSetters();
+}
+</CSSource>
+        </element>
+        <element type="aptixia.sm.EventCSSource" uuid="64f66eec-7e66-4550-92ef-8a1bd8c50b0b">
+            <Control type="DevExpress.XtraEditors.SimpleButton" ref="8a3d3215-0a4c-4ede-a65d-28dba1fd6265" />
+            <EventName type="System.String">Click</EventName>
+            <CSSource type="System.String">Schema field = m_schema.FindProperty("icmp");
+if (field == null)
+  return;
+aptixia.sm.tools.ChoiceListDlg dlg = new aptixia.sm.tools.ChoiceListDlg("icmp");
+dlg.Text = "Port CPU Filters (ICMP Types)";
+dlg.SetChoiceList(field.Choices);
+dlg.SelectedChoices=icmp;
+if (dlg.ShowDialog(m_root) == DialogResult.OK)
+{
+      icmp=dlg.SelectedChoices;
+      CallSetters();
+}
+</CSSource>
+        </element>
+        <element type="aptixia.sm.EventCSSource" uuid="353f3d32-9679-4faa-b92e-75ca972eacf2">
+            <Control type="DevExpress.XtraEditors.SimpleButton" ref="c4fba44d-c311-4789-933a-944977363a3d" />
+            <EventName type="System.String">Click</EventName>
+            <CSSource type="System.String">Schema field = m_schema.FindProperty("tcp");
+if (field == null)
+  return;
+aptixia.sm.tools.ChoiceListDlg dlg = new aptixia.sm.tools.ChoiceListDlg("tcp");
+dlg.Text = "Port CPU Filters (TCP Ports)";
+dlg.SetChoiceList(field.Choices);
+dlg.SelectedChoices=tcp;
+if (dlg.ShowDialog(m_root) == DialogResult.OK)
+{
+      tcp=dlg.SelectedChoices;
+      CallSetters();
+}
+</CSSource>
+        </element>
+        <element type="aptixia.sm.EventCSSource" uuid="9a1620ca-29fc-452c-91f4-002c6b32ccdb">
+            <Control type="DevExpress.XtraEditors.SimpleButton" ref="889ea778-4eeb-4390-94b7-a4a394238fea" />
+            <EventName type="System.String">Click</EventName>
+            <CSSource type="System.String">Schema field = m_schema.FindProperty("udp");
+if (field == null)
+  return;
+aptixia.sm.tools.ChoiceListDlg dlg = new aptixia.sm.tools.ChoiceListDlg("udp");
+dlg.Text = "Port CPU Filters (UDP Ports)";
+dlg.SetChoiceList(field.Choices);
+dlg.SelectedChoices=udp;
+if (dlg.ShowDialog(m_root) == DialogResult.OK)
+{
+      udp=dlg.SelectedChoices;
+      CallSetters();
+}
+</CSSource>
+        </element>
+        <element type="aptixia.sm.EventCSSource" uuid="b9f819ea-6f16-45b1-a34b-7b8d87524aa2">
+            <Control type="DevExpress.XtraEditors.TextEdit" ref="393c8f67-7628-40e4-9234-31636bc226d0" />
+            <EventName type="System.String">Validating</EventName>
+            <CSSource type="System.String">string pname = "mac";
+long min = 0;
+long max = 0xFFFF;
+Control ctrl = (Control) i_arg0;
+string pvalue = ctrl.Text;
+
+Schema schema = Schema.GetMetaSchema("FilterPlugin." + pname);
+string error = Verifier.VerifyMultipleChoicesAndIntegerRanges(schema, pvalue, min, max);
+            
+if (error != null)
+{
+    error = "Incorrect values:" + error;
+}
+
+m_root.ErrorProvider.SetError(ctrl, error);
+</CSSource>
+        </element>
+        <element type="aptixia.sm.EventCSSource" uuid="b9032124-4fd7-4709-912a-f9d7ca2984e9">
+            <Control type="DevExpress.XtraEditors.TextEdit" ref="32e7ecea-42ed-40ab-b379-b2a36de897a0" />
+            <EventName type="System.String">Validating</EventName>
+            <CSSource type="System.String">string pname = "ip";
+long min = 0;
+long max = 255;
+Control ctrl = (Control) i_arg0;
+string pvalue = ctrl.Text;
+
+Schema schema = Schema.GetMetaSchema("FilterPlugin." + pname);
+string error = Verifier.VerifyMultipleChoicesAndIntegerRanges(schema, pvalue, min, max);
+            
+if (error != null)
+{
+    error = "Incorrect values:" + error;
+}
+
+m_root.ErrorProvider.SetError(ctrl, error);
+</CSSource>
+        </element>
+        <element type="aptixia.sm.EventCSSource" uuid="3b88069d-23d1-4802-afb5-ad2f22f2b965">
+            <Control type="DevExpress.XtraEditors.TextEdit" ref="93994c19-dcc6-4339-b171-30f58fef3765" />
+            <EventName type="System.String">Validating</EventName>
+            <CSSource type="System.String">string pname = "icmp";
+long min = 0;
+long max = 255;
+Control ctrl = (Control) i_arg0;
+string pvalue = ctrl.Text;
+
+Schema schema = Schema.GetMetaSchema("FilterPlugin." + pname);
+string error = Verifier.VerifyMultipleChoicesAndIntegerRanges(schema, pvalue, min, max);
+            
+if (error != null)
+{
+    error = "Incorrect values:" + error;
+}
+
+m_root.ErrorProvider.SetError(ctrl, error);
+</CSSource>
+        </element>
+        <element type="aptixia.sm.EventCSSource" uuid="758126a2-9682-4168-8f3d-0cf004d74e17">
+            <Control type="DevExpress.XtraEditors.TextEdit" ref="bbdb95fc-7fe9-4669-9e73-c804493fd378" />
+            <EventName type="System.String">Validating</EventName>
+            <CSSource type="System.String">string pname = "tcp";
+long min = 0;
+long max = 65535;
+Control ctrl = (Control) i_arg0;
+string pvalue = ctrl.Text;
+
+Schema schema = Schema.GetMetaSchema("FilterPlugin." + pname);
+string error = Verifier.VerifyMultipleChoicesAndIntegerRanges(schema, pvalue, min, max);
+            
+if (error != null)
+{
+    error = "Incorrect values:" + error;
+}
+
+m_root.ErrorProvider.SetError(ctrl, error);
+</CSSource>
+        </element>
+        <element type="aptixia.sm.EventCSSource" uuid="b598bd7f-7596-4ea5-9d78-29668bf4398f">
+            <Control type="DevExpress.XtraEditors.TextEdit" ref="837e0289-a5ff-42fa-be11-f1e446ae9794" />
+            <EventName type="System.String">Validating</EventName>
+            <CSSource type="System.String">string pname = "udp";
+long min = 0;
+long max = 65535;
+Control ctrl = (Control) i_arg0;
+string pvalue = ctrl.Text;
+
+Schema schema = Schema.GetMetaSchema("FilterPlugin." + pname);
+string error = Verifier.VerifyMultipleChoicesAndIntegerRanges(schema, pvalue, min, max);
+            
+if (error != null)
+{
+    error = "Incorrect values:" + error;
+}
+
+m_root.ErrorProvider.SetError(ctrl, error);
+</CSSource>
+        </element>
+    </EventSources>
+    <BindingSources type="System.Collections.ArrayList">
+        <Capacity type="System.Int32">64</Capacity>
+        <SyncRoot type="System.Object" />
+        <element type="aptixia.sm.BindingCSSource" uuid="e59efba7-235f-4118-a027-7e532c4cade2">
+            <Control type="DevExpress.XtraEditors.CheckEdit" ref="e58283e5-b0f8-4485-a9e7-550a930224da" />
+            <PropertyName type="System.String">Checked</PropertyName>
+            <ToControlCSSource type="System.String">all</ToControlCSSource>
+            <FromControlCSSource type="System.String">all</FromControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="1387d0f7-61e0-4644-a8c5-586df332f02b">
+            <Control type="DevExpress.XtraEditors.CheckEdit" ref="f4c80bb0-f8c4-49d1-8e05-09a03ddcfc9e" />
+            <PropertyName type="System.String">Checked</PropertyName>
+            <ToControlCSSource type="System.String">isis</ToControlCSSource>
+            <FromControlCSSource type="System.String">isis</FromControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="ef6b77b6-3dd5-48ba-931f-acbd244f7372">
+            <Control type="DevExpress.XtraEditors.CheckEdit" ref="f4c80bb0-f8c4-49d1-8e05-09a03ddcfc9e" />
+            <PropertyName type="System.String">Enabled</PropertyName>
+            <ToControlCSSource type="System.String">!all</ToControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="cd7020a6-5059-4b5d-89c8-503297e64674">
+            <Control type="System.Windows.Forms.Label" ref="8422efbb-6409-4d10-b424-daef71ed0f19" />
+            <PropertyName type="System.String">Enabled</PropertyName>
+            <ToControlCSSource type="System.String">!all</ToControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="d4107d14-5221-4074-a827-5759c655dbce">
+            <Control type="System.Windows.Forms.Label" ref="04e54139-3376-446a-8778-e3d0261497b5" />
+            <PropertyName type="System.String">Enabled</PropertyName>
+            <ToControlCSSource type="System.String">!all</ToControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="1376c6d5-2f41-48f2-baf0-72570b35fe35">
+            <Control type="System.Windows.Forms.Label" ref="459e2d3b-1343-412a-93c1-ca9aa1a70312" />
+            <PropertyName type="System.String">Enabled</PropertyName>
+            <ToControlCSSource type="System.String">!all</ToControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="9f96f516-b243-4f3a-900b-faec2cb10253">
+            <Control type="System.Windows.Forms.Label" ref="e8a24fa7-88e2-45ba-89d2-4f4e255245e2" />
+            <PropertyName type="System.String">Enabled</PropertyName>
+            <ToControlCSSource type="System.String">!all</ToControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="1f4714e3-342a-4def-ac52-67e2d297898f">
+            <Control type="System.Windows.Forms.Label" ref="7b560a31-74f0-4d56-9553-d21a68a6f902" />
+            <PropertyName type="System.String">Enabled</PropertyName>
+            <ToControlCSSource type="System.String">!all</ToControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="e21147b2-67c7-4e2a-8fe7-610af3bb11b1">
+            <Control type="aptixia.sm.DDRadioButton" ref="79f9a23d-b6b3-49e1-846d-5bb48ed45ad1" />
+            <PropertyName type="System.String">Value</PropertyName>
+            <ToControlCSSource type="System.String">initialAction</ToControlCSSource>
+            <FromControlCSSource type="System.String">initialAction</FromControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="6d5ddcda-ed9e-47c0-9105-10cd10eaa776">
+            <Control type="aptixia.sm.DDRadioButton" ref="26265ddb-8567-4a0f-b5f4-328334add326" />
+            <PropertyName type="System.String">Value</PropertyName>
+            <ToControlCSSource type="System.String">initialAction</ToControlCSSource>
+            <FromControlCSSource type="System.String">initialAction</FromControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="8c7d2c18-495c-4cbe-ba85-34c70d6ed5db">
+            <Control type="DevExpress.XtraEditors.TextEdit" ref="393c8f67-7628-40e4-9234-31636bc226d0" />
+            <PropertyName type="System.String">Text</PropertyName>
+            <ToControlCSSource type="System.String">mac</ToControlCSSource>
+            <FromControlCSSource type="System.String">mac</FromControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="9b99d7b5-8f41-4913-ad03-af9537d4202a">
+            <Control type="DevExpress.XtraEditors.TextEdit" ref="32e7ecea-42ed-40ab-b379-b2a36de897a0" />
+            <PropertyName type="System.String">Text</PropertyName>
+            <ToControlCSSource type="System.String">ip</ToControlCSSource>
+            <FromControlCSSource type="System.String">ip</FromControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="c7215210-9dcb-45cf-beb6-7b6886458d7d">
+            <Control type="DevExpress.XtraEditors.TextEdit" ref="93994c19-dcc6-4339-b171-30f58fef3765" />
+            <PropertyName type="System.String">Text</PropertyName>
+            <ToControlCSSource type="System.String">icmp</ToControlCSSource>
+            <FromControlCSSource type="System.String">icmp</FromControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="ffc9cb2f-9028-435e-84f5-99303b6ca6de">
+            <Control type="DevExpress.XtraEditors.TextEdit" ref="bbdb95fc-7fe9-4669-9e73-c804493fd378" />
+            <PropertyName type="System.String">Text</PropertyName>
+            <ToControlCSSource type="System.String">tcp</ToControlCSSource>
+            <FromControlCSSource type="System.String">tcp</FromControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="3bf0dab8-fc3f-4e14-b5c7-e09f92a5c479">
+            <Control type="DevExpress.XtraEditors.TextEdit" ref="837e0289-a5ff-42fa-be11-f1e446ae9794" />
+            <PropertyName type="System.String">Text</PropertyName>
+            <ToControlCSSource type="System.String">udp</ToControlCSSource>
+            <FromControlCSSource type="System.String">udp</FromControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="f8031e74-8e8a-45a3-8bcf-2d50d34b075e">
+            <Control type="DevExpress.XtraEditors.TextEdit" ref="393c8f67-7628-40e4-9234-31636bc226d0" />
+            <PropertyName type="System.String">Enabled</PropertyName>
+            <ToControlCSSource type="System.String">!all</ToControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="d1a8e9f7-a6d3-4a6e-b4a1-dc87382ac629">
+            <Control type="DevExpress.XtraEditors.TextEdit" ref="32e7ecea-42ed-40ab-b379-b2a36de897a0" />
+            <PropertyName type="System.String">Enabled</PropertyName>
+            <ToControlCSSource type="System.String">!all</ToControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="c95e10b9-3cf3-4717-a8c5-1193398a1568">
+            <Control type="DevExpress.XtraEditors.TextEdit" ref="93994c19-dcc6-4339-b171-30f58fef3765" />
+            <PropertyName type="System.String">Enabled</PropertyName>
+            <ToControlCSSource type="System.String">!all</ToControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="2a86a49c-f30c-48a8-80ff-5083da518a10">
+            <Control type="DevExpress.XtraEditors.TextEdit" ref="bbdb95fc-7fe9-4669-9e73-c804493fd378" />
+            <PropertyName type="System.String">Enabled</PropertyName>
+            <ToControlCSSource type="System.String">!all</ToControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="07b7d873-d680-4171-93a8-4af5c2a90cc8">
+            <Control type="DevExpress.XtraEditors.TextEdit" ref="837e0289-a5ff-42fa-be11-f1e446ae9794" />
+            <PropertyName type="System.String">Enabled</PropertyName>
+            <ToControlCSSource type="System.String">!all</ToControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="fbb8b294-5f9b-44c1-a4c2-8749295eb31f">
+            <Control type="DevExpress.XtraEditors.SimpleButton" ref="6dd88dd3-402b-4ec7-928f-99ca08a93b40" />
+            <PropertyName type="System.String">Enabled</PropertyName>
+            <ToControlCSSource type="System.String">!all</ToControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="31660bf7-1e5d-49d0-8e53-e905f9715abd">
+            <Control type="DevExpress.XtraEditors.SimpleButton" ref="b0694ec0-2be3-4922-a977-3a5782dc0f42" />
+            <PropertyName type="System.String">Enabled</PropertyName>
+            <ToControlCSSource type="System.String">!all</ToControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="e53ce7e3-743d-4cd8-8f22-55fb37002fb2">
+            <Control type="DevExpress.XtraEditors.SimpleButton" ref="8a3d3215-0a4c-4ede-a65d-28dba1fd6265" />
+            <PropertyName type="System.String">Enabled</PropertyName>
+            <ToControlCSSource type="System.String">!all</ToControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="3d247d9e-f574-4b57-a6e1-70586c98605d">
+            <Control type="DevExpress.XtraEditors.SimpleButton" ref="c4fba44d-c311-4789-933a-944977363a3d" />
+            <PropertyName type="System.String">Enabled</PropertyName>
+            <ToControlCSSource type="System.String">!all</ToControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="a75050ca-85d6-47a6-b7fd-1498618c8296">
+            <Control type="DevExpress.XtraEditors.SimpleButton" ref="889ea778-4eeb-4390-94b7-a4a394238fea" />
+            <PropertyName type="System.String">Enabled</PropertyName>
+            <ToControlCSSource type="System.String">!all</ToControlCSSource>
+        </element>
+    </BindingSources>
+</element>

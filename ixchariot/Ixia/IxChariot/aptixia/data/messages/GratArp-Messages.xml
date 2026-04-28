@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ixia_message_file>
+	<status>
+		<id_string>Aptixia.GratArp.ARP4Error</id_string>
+		<text>Error when sending gratuitous ARP. %1%.</text>
+		<description>
+		This error is encountered when the GratArp executed on IPv4 interfaces.
+		</description>
+	</status>
+	<status>
+		<id_string>Aptixia.GratArp.ARP6Error</id_string>
+		<text>Error when sending echo requests. %1%.</text>
+		<description>
+		This error is encountered when the GratArp executed on IPv6 interfaces.
+		</description>
+	</status>
+	<status>
+		<id_string>Aptixia.GratArp.InvalidPointer</id_string>
+		<text>Invalid Pointer. %1%.</text>
+		<description></description>
+	</status>
+</ixia_message_file>
+

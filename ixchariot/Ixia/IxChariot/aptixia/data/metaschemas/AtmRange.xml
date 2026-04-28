@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="AtmRange" baseType="">
+    <help>Range of multiple ATM settings for fine grained configuration</help>
+
+    <PropertyString>
+	<name>name</name>
+	<default>atm-</default>
+	<description>Unique name of the range</description>
+	<help>Unique name of the range</help>
+    </PropertyString>
+
+    <!-- Atm Range info  -->
+    <PropertyString>
+        <name>encapsulation</name>
+        <description>The type of ATM transport encapsulation.</description>
+        <default>1</default>
+        <choices>
+            <choice name="VC Mux IPv4 Routed" value="1" />
+            <choice name="VC Mux Bridged Ethernet (FCS)" value="2" />
+            <choice name="VC Mux Bridged Ethernet (no FCS)" value="3" />
+            <choice name="VC Mux IPv6 Routed" value="4" />
+            <choice name="LLC Routed AAL5 Snap" value="6" />
+            <choice name="LLC Bridged Ethernet (FCS)" value="7" />
+            <choice name="LLC Bridged Ethernet (no FCS)" value="8" />
+            <choice name="LLC Encap PPP" value="9" />
+            <choice name="VC Mux PPP" value="10" />
+        </choices>
+    </PropertyString>
+
+    <PropertyString>
+        <name>mac</name>
+        <default>aa:bb:cc:00:00:00</default>
+        <regex>^\s*([0-9a-fA-F]{1,2}:){5}[0-9a-fA-F]{1,2}\s*$</regex>
+        <regexDescription>This is not a correct MAC address.</regexDescription>
+        <description>Base value used when as first MAC address in the range.</description>
+    </PropertyString>
+
+    <PropertyString>
+        <name>incrementBy</name>
+        <default>00:00:00:00:00:01</default>
+        <regex>^\s*([0-9a-fA-F]{1,2}:){5}[0-9a-fA-F]{1,2}\s*$</regex>
+        <regexDescription>The value must have the same form as the MAC address.</regexDescription>
+        <description>Incrementor used to generate intermediary MAC addresses for a range.</description>
+    </PropertyString>
+
+    <PropertyInt>
+        <name>mtu</name>
+        <default>1500</default>
+        <min>500</min>
+        <max>9500</max>
+        <help>Maximum Transmission Unit.
+        The largest packet that a given network medium can carry.
+        Ethernet, for example, has a fixed MTU of 1500 bytes, ATM has a fixed MTU of 48 bytes,
+        and PPP has a negotiated MTU that is usually between 500 and 2000 bytes.</help>
+    </PropertyInt>
+
+</Node>

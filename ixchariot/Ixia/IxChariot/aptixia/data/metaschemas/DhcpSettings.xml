@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Node nodeType="DhcpSettings" baseType="">
+    <help>Node to represent dhcp settings</help>
+    <PropertyString>
+        <name>dhcpServerIp</name>
+        <default>0.0.0.0</default>
+        <regex>^\s*(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\s*$</regex>
+		<regexDescription>This is not a valid IP address.</regexDescription>
+        <description>Server identifier from which DHCP responses should be honored.</description>
+    </PropertyString>
+    <PropertyInt>
+        <name>timeOut</name>
+        <default>10</default>
+        <min>1</min>
+        <help>Time out value per range</help>
+    </PropertyInt>
+    <PropertyString>
+        <name>iaType</name>
+        <default>IANA</default>
+        <choices>
+            <choice value='IANA' name='Permanent' description='Permanent'></choice>
+            <choice value='IATA' name='Temporary' description='Temporary'></choice>
+            <choice value='IAPD' name='Prefix Delegation' description='Prefix Delegation'></choice>
+        </choices>
+        <description>Specify the ia-type which is only valid for DHCPv6</description>
+    </PropertyString>
+</Node>

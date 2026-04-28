@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="urn:guiFrameworkApp-schema" layoutRef="config">
+
+<TreeControl supported="0"></TreeControl>
+<Plugins> 
+    <Plugin>
+  	  <Name>IxChariot Test Plugin</Name>
+	  <Description></Description>
+	  <File>TestPlugin.dll</File>
+ 	  <Types>
+	    <Type value="ixc.test.TestPlugin">
+		    <Param name="InstanceId" value="ixc.test"  />
+		</Type>
+	  </Types> 
+	</Plugin>
+
+     <Plugin>
+		<Name>IxChariot Designer Plugin</Name>
+		<Description></Description>
+		<File>DesignerPlugin.dll</File>
+		<Types>
+			<Type value="ixc.designer.DesignerPlugin" >
+				<Param name="InstanceId" value="ixc.designer"  />
+			</Type>
+		</Types>
+	</Plugin>
+
+    <Plugin>
+		<Name>Test Wrapper</Name>
+		<Description></Description>
+		<File>CppModule.dll</File>
+		<Types>
+			<Type value="guiFramework.CppModule.CppWrapper">
+				<Param name="importModule" value="ixchariot.dll"/>
+			</Type>
+		</Types>
+	</Plugin>
+
+</Plugins>
+
+<GlobalSetting>
+	<LookAndFeel>
+        <PaintStyle name="WindowsXP"/>
+	</LookAndFeel>
+	<StartPosition style="Manual" x="0" y="0" width="700" height="700" />
+	<MinimumSize width="400" height="420" />
+</GlobalSetting>
+
+<Layout id="config">
+    <Bars>
+      <Toolbar ref="IxChariot.Toolbar.Standard" dock="Top" row="1" col="0" caption="Standard" />
+      <Toolbar ref="IxChariot.Toolbar.Test" dock="Top" row="1" col="1" caption="Test" />
+      <Toolbar ref="IxChariot.Toolbar.Help" dock="Top" row="1" col="2"  caption="Help" />
+      <Toolbar ref="IxChariot.Toolbar.Ixia" dock="Top" row="2" col="0" caption="Ixia" />
+      <Toolbar ref="IxChariot.Toolbar.ApplicationGroup" dock="Top" row="2" col="1" caption="ApplicationGroup" />
+      <StatusBar>
+          <CommandStatic ref="Test.BarStaticItem.PairCount"/>
+          <CommandStatic ref="Test.BarStaticItem.Status"/>
+          <CommandStatic ref="Test.BarStaticItem.AptixiaConfName"/>
+          <CommandStatic ref="Test.BarStaticItem.Elapse"/>
+          <CommandStatic ref="Test.BarStaticItem.Remaining"/>
+          <CommandStatic ref="Test.BarStaticItem.HowEnd"/>
+       </StatusBar>
+       <MenuBar>
+            <CommandGroup ref="Global.CommandGroup.File" text="&amp;File"> <!-- MainMenu.File -->
+                <Command ref="21002" beginGroup="1"/>       <!-- File.New -->
+                <Command ref="21003"/>                                  <!-- File.Open -->
+                <Command ref="10001" beginGroup="1"/>       <!-- File.Save -->
+                <Command ref="10002"/>                                  <!-- File.SaveAs -->
+                <CommandGroup ref="10005">              <!-- File.Export -->
+                    <Command ref="10009"/>                      <!-- File.ExportHtml -->
+                    <Command ref="10010"/>                      <!-- File.ExportText -->
+                    <Command ref="10008"/>                      <!-- File.ExportCSV  -->
+                </CommandGroup>
+                <Command ref="10003"  beginGroup="1"/>      <!-- File.Print -->
+                <Command ref="10011"/>                      <!-- File.ClearResults -->
+                <CommandGroup ref="10013">                  <!-- File.ApplicationGroup -->
+                    <Command ref="10014"/>                      <!-- File.Import -->
+                    <Command ref="10015"/>                      <!-- File.Export -->
+                </CommandGroup>
+                <Command ref="Framework.Command.Exit"  beginGroup="1"/>      <!-- File.Exit --> 
+                <CommandContainer ref="IxChariot.FileMRU.Container" beginGroup="1" /> <!-- File.MRU --> 
+            </CommandGroup>
+            <CommandGroup ref="Global.CommandGroup.Edit" text="&amp;Edit">
+            </CommandGroup>
+            <CommandGroup ref="IxChariot.CommandGroup.View" text="&amp;View">
+<!--
+                <CommandGroup ref="IxChariot.CommandGroup.Style" text="St&amp;yle">
+                    <CommandGroup ref="Framework.CommandGroup.PaintStyle"/>
+                    <CommandGroup ref="Framework.CommandGroup.SkinStyle"/>
+                </CommandGroup>
+-->
+            </CommandGroup>
+            <CommandGroup ref="IxChariot.CommandGroup.Run" text="&amp;Run">
+            </CommandGroup>
+            <CommandGroup ref="IxChariot.CommandGroup.Tools" text="&amp;Tools">
+            </CommandGroup>
+            <CommandGroup ref="Global.CommandGroup.Window" text="&amp;Window">
+            </CommandGroup>
+            <CommandGroup ref="IxChariot.CommandGroup.Help" text="&amp;Help">
+            </CommandGroup>
+       </MenuBar>
+    </Bars>
+    <RegionsLayout>
+         <Panel ref="IxChariot.Panel.Main" />  
+       <!--    <DockRegion> </DockRegion> -->
+    </RegionsLayout>
+</Layout>
+  	 
+
+</Application>

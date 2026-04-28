@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="NodeTestB" baseType="NodeTestA">
+    <help>NodeTestB is used to test CORBA access to TestServer.</help>
+    <PropertyString>
+        <name>stringVarB</name>
+        <minLength>0</minLength>
+        <maxLength>20</maxLength>
+        <default>default string</default>
+        <description>this is a test string</description>
+        <help>this is a lengthier help text</help>
+    </PropertyString>
+</Node>

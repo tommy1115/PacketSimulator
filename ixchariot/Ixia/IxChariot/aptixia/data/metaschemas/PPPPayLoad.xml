@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="PPPPayLoad" baseType="POSPayLoad">	
+	<PropertyBoolean>
+        <name>enablePPP</name>
+        <default>false</default>
+        <description>Enable the PPP Protocol.</description>
+    </PropertyBoolean>
+    <PropertyInt>
+		<name>transmitUnit</name>
+		<description>The value of the desired maximum transmit unit to be used for link control protocol.</description>
+		<default>65535</default>
+		<min>26</min>
+		<max>65535</max>
+    </PropertyInt> 
+    <PropertyInt>
+		<name>receiveUnit</name>
+		<description>The value of the desired maximum receive unit to be used for link control protocol.</description>
+		<default>65535</default>
+		<min>26</min>
+		<max>65535</max>
+    </PropertyInt>
+    <PropertyInt>
+		<name>configurationRetries</name>
+		<description>The number of retries for configuration.</description>
+		<default>9</default>
+		<min>2</min>
+		<max>10</max>
+    </PropertyInt>
+    <PropertyInt>
+		<name>terminationRetries</name>
+		<description>The number of retires for termination.</description>
+		<default>8</default>
+		<min>2</min>
+		<max>10</max>		
+    </PropertyInt>
+    <PropertyInt>
+		<name>retryTimeout</name>
+		<description>Value of time out in seconds for retry.</description>
+		<default>8</default>
+		<min>2</min>
+		<max>10</max>
+    </PropertyInt>
+    <PropertyBoolean>
+		<name>useMagicNumber</name>
+		<default>false</default>
+		<description>enable use of the magic number.</description>
+    </PropertyBoolean>
+    <PropertyBoolean>
+		<name>enableACCM</name>
+		<default>false</default>
+		<description>enable ACCM.</description>
+    </PropertyBoolean>
+    <PropertyBoolean>
+		<name>linkQualityMonitoring</name>
+		<default>false</default>
+		<description>Enable link quality monitoring.</description>
+    </PropertyBoolean>
+    <PropertyInt>
+		<name>lqmReceiveInterval</name>
+		<description>Receive internval for link quality monitoring.</description>
+		<default>10</default>
+		<min>0</min>
+		<max>86400</max>
+    </PropertyInt>
+    <PropertyBoolean>
+		<name>ip</name>
+		<default>false</default>
+		<description>Enable the ip network control protocol.</description>
+    </PropertyBoolean>
+    <PropertyString>
+        <name>localIPAddress</name>
+        <default>0.0.0.1</default>  
+        <description>Local IP address</description>      
+    </PropertyString>
+    <PropertyBoolean>
+		<name>ipv6</name>
+		<description>Enable the ipv6 network control protocol.</description>
+		<default>false</default>
+    </PropertyBoolean>
+    <PropertyString>
+        <name>localNegotiationMode</name>
+        <description>Mode to be used for local negotiation.</description>
+        <default>kLocalMay</default> 
+        <choices>
+            <choice value="kLocalMay" name="Local May" />
+            <choice value="kLocalMust" name="Local Must" />
+            <choice value="kPeerMust" name="Peer Must" />
+        </choices>       
+    </PropertyString>
+    <PropertyString>
+        <name>localIdType</name>
+        <default>kRandom</default> 
+        <choices>
+            <choice value="kLastNegotiated" name="Last Negotiated" />
+            <choice value="kMACBased" name="MAC Based" />
+            <choice value="kIPv6" name="IPv6" />
+            <choice value="kRandom" name="Random" />
+        </choices>  
+        <description>Type of the local ID to negotiate.</description>     
+    </PropertyString>
+    <PropertyString>
+        <name>localMACInterfaceId</name>
+        <default>00 00 00 00 00 00</default> 
+        <description>Id of the local MAC interface</description>       
+    </PropertyString>
+    <PropertyString>
+        <name>localIPv6InterfaceId</name>
+        <default>00 00 00 00 00 00 00 00</default> 
+        <description>ID of the local Ipv6 interface.</description>          
+    </PropertyString>
+    <PropertyString>
+        <name>peerNegotiationMode</name>
+        <default>kPeerMay</default>
+        <choices>
+            <choice value="kPeerMay" name="Peer May" />
+            <choice value="kPeerMust" name="Peer Must" />
+            <choice value="kLocalMust" name="Local Must" />
+        </choices> 
+        <description>Mode for the Peer negotiation.</description>       
+    </PropertyString>
+    <PropertyString>
+        <name>peerIdType</name>
+        <default>kRandom</default> 
+        <choices>
+            <choice value="kLastNegotiated" name="Last Negotiated" />
+            <choice value="kMACBased" name="MAC Based" />
+            <choice value="kIPv6" name="IPv6" />
+            <choice value="kRandom" name="Random" />
+        </choices> 
+        <description>Type of the peer ID.</description>       
+    </PropertyString>
+    <PropertyString>
+        <name>peerMACInterfaceId</name>
+        <default>00 00 00 00 00 00</default> 
+        <description>ID of the peer mac interface.</description>          
+    </PropertyString>
+    <PropertyString>
+        <name>peerIPv6InterfaceId</name>
+        <default>00 00 00 00 00 00 00 00</default>
+        <description>Id of the peer IPV6 interface.</description>           
+    </PropertyString>
+    <description></description>
+    <PropertyBoolean>
+		<name>osi</name>
+		<default>false</default>
+		<description>Enable osi network control protocol.</description>
+    </PropertyBoolean>
+    <PropertyInt>
+		<name>transmitAlignment</name>
+		<description>Value of the desired transmit alignment to be used for OSI.</description>
+		<default>0</default>
+		<min>0</min>
+		<max>255</max>
+    </PropertyInt>
+    <PropertyInt>
+		<name>receiveAlignment</name>
+		<description>Value of the desired receive alignment to be used for OSI.</description>
+		<default>0</default>
+		<min>0</min>
+		<max>255</max>
+    </PropertyInt>
+    <PropertyBoolean>
+		<name>mpls</name>
+		<default>false</default>
+		<description>Enable mpls network control protocol</description>
+    </PropertyBoolean>
+</Node>
+

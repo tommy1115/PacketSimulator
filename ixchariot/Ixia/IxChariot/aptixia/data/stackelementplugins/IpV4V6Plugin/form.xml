@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<GUIDescription>
+  <Form size="771,563" scrollsize="770,560">
+    <Control editor="aptixia.sm.DDTabControl" location="-3,5" size="779,562" tabIndex="69" anchor="Top, Bottom, Left, Right">
+      <tabpages>
+        <tabpage formFilename="IPMain.xml" name="IP Settings" />
+        <tabpage formFilename="dhcp.xml" name="DHCP Settings" />
+      </tabpages>
+    </Control>
+  </Form>
+</GUIDescription>

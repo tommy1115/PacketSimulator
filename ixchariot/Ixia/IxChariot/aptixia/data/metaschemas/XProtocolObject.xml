@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="XProtocolObject" baseType="" namespace="aptixia.ct">
+    <help>
+        Implicit base class for all objects driven through the x-protocol infrastructure.
+    </help>
+
+    <List name="ObjectIdList" type="int64">
+        <help>A list of object ids</help>
+    </List>
+
+    <List name="XmlList" type="string">
+        <help>A list of xml documents</help>
+    </List>
+
+    <Enum name="eSerializationDepth">
+        <help>
+            Serialization options: Shallow returns just the basic members, but not lists. 
+            Node returns members including lists. Deep returns all data under a node.
+            Prefetch returns member nodes and list of nodes as ids.</help>
+        <Choices>
+            <Choice symbol="kShallow" value="0" />
+            <Choice symbol="kNode" value="1" />
+            <Choice symbol="kDeep" value="2" />
+            <Choice symbol="kPrefetch" value="3" />
+            <Choice symbol="kIdOnly" value="4" />
+            <Choice symbol="kInterfaceManager" value="5" />
+            
+        </Choices>
+    </Enum>
+
+    <Enum name="eValidateMode">
+        <help>Validation mode</help>
+        <Choices>
+            <Choice symbol="kDefaultValidation" value="100" />
+        </Choices>
+    </Enum>
+
+    <Method2 name="_GetXml">
+        <help>Get xml representation of the object</help>
+        <Argument name="depth" direction="in" type="XProtocolObject.eSerializationDepth">
+            <help>Flag indicating the serialization depth</help>
+        </Argument>
+        <Argument name="forPersistentStorage" direction="in" type="bool">
+            <help>
+                Flag indicating if the xml is going to be used as persistent storage. If set, it
+                removes ephemeral information such as IORs.
+            </help>
+        </Argument>
+        <Argument name="xml" direction="out" type="string">
+            <help>The xml representation of the object</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_SetXml">
+        <help>Deserialize xml representation of object into object</help>
+        <Argument name="xml" direction="in" type="string">
+            <help>The xml representation of the object</help>
+        </Argument>
+        <Argument name="merge" direction="in" type="bool">
+            <help>Whether to clean the object prior to serialization or merge data</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="_ImportXml">
+        <help>
+            Deserialize xml representation of object into object and deal
+            with backward compatibility issues.
+        </help>
+        <Argument name="xml" direction="in" type="string">
+            <help>The xml representation of the object</help>
+        </Argument>
+        <Argument name="merge" direction="in" type="bool">
+            <help>Whether to clean the object prior to serialization or merge data</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="_Disposed">
+        <help>
+            Client API must calls this method to indicate object is not used by client any more
+        </help>
+    </Method2>
+    
+    
+
+    <Method2 name="_GetObjectListXml">
+        <help>
+            Get xml representation of a list of objects
+        </help>
+        <Argument name="listName" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+        <Argument name="depth" direction="in" type="XProtocolObject.eSerializationDepth">
+            <help>The serialization depth</help>
+        </Argument>
+        <Argument name="forPersistentStorage" direction="in" type="bool">
+            <help>
+                Flag indicating if the xml is going to be used as persistent storage. If set, it
+                removes ephemeral information such as IORs.
+            </help>
+        </Argument>
+        <Argument name="xml" direction="out" type="string">
+            <help>The xml representation of the object list</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_SetObjectListXml">
+        <help>
+            Set a list of objects using its xml representation
+        </help>
+        <Argument name="listName" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+        <Argument name="xml" direction="in" type="string">
+            <help>The xml representation of the object list</help>
+        </Argument>
+        <Argument name="merge" direction="in" type="bool">
+            <help>Whether to clean the object prior to serialization or merge data</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_GetManagedDataXml">
+        <help>Get xml representation of the object. Wrapper for _GetXml.</help>
+        <Argument name="isDeep" direction="in" type="bool">
+            <help>Whether the depth is kDeed or kPrefetch</help>
+        </Argument>
+        <Argument name="xml" direction="out" type="string">
+            <help>The xml representation of the object</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_SetManagedDataXml" type="sync">
+        <help>Set object data using xml representation of the object. Wrapper for _SetXml.</help>
+        <Argument name="xml" direction="in" type="string">
+            <help>The xml representation of the object</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_GetInstantiationXml" type="static"> 
+        <help>Get xml representation of a freshly created instance of a particular type (internal use only)</help>
+        <Argument name="typeName" direction="in" type="string">
+            <help>The name of the class</help>
+        </Argument>
+        <Argument name="xml" direction="out" type="string">
+            <help>The xml representation of the object</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_AppendListMember" type="sync">
+        <help>Append new object to object list (internal use only)</help>
+        <Argument name="listName" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+        <Argument name="objecType" direction="in" type="string">
+            <help>The type of the object being added</help>
+        </Argument>
+        <Argument name="clientObjectId" direction="in" type="int64">
+            <help>The client side assigned object id of the new object</help>
+        </Argument>
+        <Argument name="xml" direction="in" type="string">
+            <help>The xml representation of the object</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_DeleteListMember" type="sync">
+        <help>Delete object from object list (internal use only)</help>
+        <Argument name="listName" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+        <Argument name="id" direction="in" type="int64">
+            <help>The id of the object being deleted</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PrefetchListMembers">
+        <help>Get xml representation of list contents (internal use only)</help>
+        <Argument name="listName" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+        <Argument name="idList" direction="in" type="XProtocolObject.ObjectIdList">
+            <help>List of ids of objects to be retrieved</help>
+        </Argument>
+        <Argument name="xmlList" direction="out" type="XProtocolObject.XmlList">
+            <help>Xml representation of the objects being retrieved.</help>
+        </Argument>
+    </Method2>
+
+    <Struct name="ClassVersion" version="1">
+        <help>Structure representing a class (internal use only)</help>
+        <Member name="name" type="string" default="" version="1">
+            <help>The name of the class</help>
+        </Member>
+        <Member name="version" type="int32" default="1" version="1">
+            <help>The version code of the class</help>
+        </Member>
+        <Member name="serverInstantiate" type="bool" default="1" version="1">
+            <help>Whether this class must he instantiated on the server</help>
+        </Member>
+    </Struct>
+
+    <List name="ClassVersionList" type="XProtocolObject.ClassVersion">
+        <help>List of class information structures (internal use only)</help>
+    </List>
+
+    <Method2 name="_GetClassVersionList" type="static">
+        <help>Get list of class information structures (internal use only)</help>
+        <Argument name="versionList" direction="out" type="XProtocolObject.ClassVersionList">
+            <help>The returned list</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_GetNewObjectIdRange" type="static">
+        <help>Reserve range of ids for client side instantiation (internal use only)</help>
+        <Argument name="start" direction="out" type="int64">
+            <help>The beginning of the range</help>
+        </Argument>
+        <Argument name="count" direction="out" type="int64">
+            <help>The number of ids in the range</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_GetCorbaIor">
+        <help>Get CORBA IOR for this object (internal use only)</help>
+        <Argument name="ior" direction="out" type="string">
+            <help>String form of the IOR for this object</help>
+        </Argument>
+    </Method2>
+
+
+    <Method2 name="_Validate">
+        <help>Validate this object (internal use only)</help>
+        <Argument name="mode" type="XProtocolObject.eValidateMode">
+            <help>Validation mode</help>
+        </Argument>
+    </Method2>
+
+    <!-- ************************************************************  -->
+    <!-- File transfer methods  -->
+    <Method2 name="_CreateFileTransferContext" type="static">
+        <help>Create context for sending file to server (internal use only)</help>
+        <Argument name="id" direction="out" type="int64">
+            <help>The ID of the transfer context</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="_WriteFileBlock" type="sync">
+        <help>Write to transfer file (internal use only)</help>
+        <Argument name="id" direction="in" type="int64">
+            <help>The ID of the transfer context</help>
+        </Argument>
+        <Argument name="data" direction="in" type="octets">
+            <help>Data to write</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_ReadFileBlock" type="static">
+        <help>Read from transfer file (internal use only)</help>
+        <Argument name="id" direction="in" type="int64">
+            <help>The ID of the transfer context</help>
+        </Argument>
+        <Argument name="maxBytes" direction="in" type="int32">
+            <help>Maximum number of bytes to read</help>
+        </Argument>
+        <Argument name="data" direction="out" type="octets">
+            <help>Data read</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_CloseFileTransferContext" type="static">
+        <help>Close file transfer context (internal use only)</help>
+        <Argument name="id" direction="in" type="int64">
+            <help>The ID of the transfer context</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="_WriteLock">
+        <help>locks object for modification</help>
+        <Argument name="timeout" direction="in" type="int32">
+            <help>Timeout in milliseconds.</help>
+        </Argument>
+    </Method2>
+    
+
+    <!-- ************************************************************  -->
+
+    <!-- *******************  -->
+    <Method2 name="_GetThisId">
+        <help>Get ID of this object (internal use only)</help>
+        <Argument name="id" direction="out" type="int64">
+            <help>The ID of the object</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_GetPropertyObjectId">
+        <help>Get ID of child object (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the child object</help>
+        </Argument>
+        <Argument name="id" direction="out" type="int64">
+            <help>The ID of the object</help>
+        </Argument>
+    </Method2>
+    <Method2 name="_GetPropertyObjectIdAndType">
+        <help>Get ID and type of child object (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the child object</help>
+        </Argument>
+        <Argument name="id" direction="out" type="int64">
+            <help>The ID of the object</help>
+        </Argument>
+        <Argument name="type" direction="out" type="string">
+            <help>The type of the object</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyNodeInstantiate">
+        <help>Instantiate child object (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the child object</help>
+        </Argument>
+        <Argument name="type" direction="in" type="string">
+            <help>The type of the new object</help>
+        </Argument>
+        <Argument name="id" direction="out" type="int64">
+            <help>The id of the child object</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyNodeBind">
+        <help>Bind child object (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the child object</help>
+        </Argument>
+        <Argument name="id" direction="in" type="int64">
+            <help>The id of the src object being bound to _name_</help>
+        </Argument>
+        <Argument name="type" direction="out" type="string">
+            <help>The type of the newly bound object</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyNodeCharacterizationData">
+        <help>Get type and ID of a child object (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the child object</help>
+        </Argument>
+        <Argument name="type" direction="out" type="string">
+            <help>The type of the new object</help>
+        </Argument>
+        <Argument name="id" direction="out" type="int64">
+            <help>The id of the child object</help>
+        </Argument>
+    </Method2>
+
+    <!-- *******************  -->
+
+    <!-- *******************  -->
+
+    <!-- **** PropertyNodeList ****  -->
+    <Method2 name="_PropertyNodeListEmpty">
+        <help>Clear node list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the node list</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyNodeListSize">
+        <help>Get size of node list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the node list</help>
+        </Argument>
+        <Argument name="size" direction="out" type="int32">
+            <help>The size of the node list</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyNodeListDelete">
+        <help>Delete entry in node list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the node list</help>
+        </Argument>
+        <Argument name="index" direction="in" type="int32">
+            <help>Index of entry to be deleted</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyNodeListPopHead">
+        <help>Delete first entry in node list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the node list</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyNodeListPopTail">
+        <help>Delete last entry in node list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the node list</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyNodeListAddHead">
+        <help>Add entry in node list in first position (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the node list</help>
+        </Argument>
+        <Argument name="type" direction="in" type="string">
+            <help>The type of object to add</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyNodeListAddTail">
+        <help>Add entry in node list in last position (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the node list</help>
+        </Argument>
+        <Argument name="type" direction="in" type="string">
+            <help>The type of object to add</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyNodeListGet">
+        <help>Get type and ID for node list entry (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the node list</help>
+        </Argument>
+        <Argument name="index" direction="in" type="int32">
+            <help>The index of the entry</help>
+        </Argument>
+        <Argument name="type" direction="out" type="string">
+            <help>The type of the entry</help>
+        </Argument>
+        <Argument name="id" direction="out" type="int64">
+            <help>The id of the entry</help>
+        </Argument>
+    </Method2>
+
+
+    <!-- *******************  -->
+    <Method2 name="_PropertyIntSet">
+        <help>Set value of int property (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the property</help>
+        </Argument>
+        <Argument name="value" direction="in" type="int64">
+            <help>The value to set the property to</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyIntGet">
+        <help>Get value of int property (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the property</help>
+        </Argument>
+        <Argument name="value" direction="out" type="int64">
+            <help>The value of the property</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyDoubleSet">
+        <help>Set value of int property (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the property</help>
+        </Argument>
+        <Argument name="value" direction="in" type="double">
+            <help>The value to set the property to</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyDoubleGet">
+        <help>Get value of double property (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the property</help>
+        </Argument>
+        <Argument name="value" direction="out" type="double">
+            <help>The value of the property</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyStringSet">
+        <help>Set value of string property (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the property</help>
+        </Argument>
+        <Argument name="value" direction="in" type="string">
+            <help>The value to set the property to</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyStringGet">
+        <help>Get value of string property (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the property</help>
+        </Argument>
+        <Argument name="value" direction="out" type="string">
+            <help>The value of the property</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyBooleanSet">
+        <help>Set value of bool property (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the property</help>
+        </Argument>
+        <Argument name="value" direction="in" type="bool">
+            <help>The value to set the property to</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyBooleanGet">
+        <help>Get value of bool property (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the property</help>
+        </Argument>
+        <Argument name="value" direction="out" type="bool">
+            <help>The value of the property</help>
+        </Argument>
+    </Method2>
+
+    <!-- *******************  -->
+    <!-- **** IntList ****  -->
+    <Method2 name="_PropertyIntListEmpty">
+        <help>Clear int list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyIntListSize">
+        <help>Get size of int list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+        <Argument name="size" direction="out" type="int32">
+            <help>The size of the list</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyIntListGet">
+        <help>Get entry in int list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+        <Argument name="index" direction="in" type="int32">
+            <help>The index of the entry to get</help>
+        </Argument>
+        <Argument name="value" direction="out" type="int64">
+            <help>The value of the entry</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyIntListSet">
+        <help>Set entry in int list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+        <Argument name="index" direction="in" type="int32">
+            <help>The index of the entry to set</help>
+        </Argument>
+        <Argument name="value" direction="in" type="int64">
+            <help>The new value of the entry</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyIntListDelete">
+        <help>Delete entry in int list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+        <Argument name="index" direction="in" type="int32">
+            <help>The index of the entry to delete</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyIntListAddHead">
+        <help>Add entry at head of int list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+        <Argument name="value" direction="in" type="int64">
+            <help>The value to add</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyIntListAddTail">
+        <help>Add entry at tail of int list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+        <Argument name="value" direction="in" type="int64">
+            <help>The value to add</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyIntListPopHead">
+        <help>Remove entry from head of int list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="_PropertyIntListPopTail">
+        <help>Remove entry from tail of int list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+    </Method2>
+
+    <!-- **** DoubleList ****  -->
+    <Method2 name="_PropertyDoubleListEmpty">
+        <help>Clear double list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="_PropertyDoubleListSize">
+        <help>Get size of double list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+        <Argument name="size" direction="out" type="int32">
+            <help>The size of the list</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="_PropertyDoubleListGet">
+        <help>Get entry in double list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+        <Argument name="index" direction="in" type="int32">
+            <help>The index of the entry to get</help>
+        </Argument>
+        <Argument name="value" direction="out" type="double">
+            <help>The value of the entry</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="_PropertyDoubleListSet">
+        <help>Set entry in double list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+        <Argument name="index" direction="in" type="int32">
+            <help>The index of the entry to set</help>
+        </Argument>
+        <Argument name="value" direction="in" type="double">
+            <help>The new value of the entry</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="_PropertyDoubleListDelete">
+        <help>Delete entry in double list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+        <Argument name="index" direction="in" type="int32">
+            <help>The index of the entry to delete</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="_PropertyDoubleListAddHead">
+        <help>Add entry at head of double list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+        <Argument name="value" direction="in" type="double">
+            <help>The value to add</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="_PropertyDoubleListAddTail">
+        <help>Add entry at head of double list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+        <Argument name="value" direction="in" type="double">
+            <help>The value to add</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="_PropertyDoubleListPopHead">
+        <help>Remove entry from head of double list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="_PropertyDoubleListPopTail">
+        <help>Remove entry from tail of double list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+    </Method2>
+
+    <!-- **** StringList ****  -->
+    <Method2 name="_PropertyStringListEmpty">
+        <help>Clear string list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="_PropertyStringListSize">
+        <help>Get size of string list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+        <Argument name="size" direction="out" type="int32">
+            <help>The size of the list</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="_PropertyStringListGet">
+        <help>Get entry in string list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+        <Argument name="index" direction="in" type="int32">
+            <help>The index of the entry to get</help>
+        </Argument>
+        <Argument name="value" direction="out" type="string">
+            <help>The value of the entry</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="_PropertyStringListSet">
+        <help>Set entry in string list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+        <Argument name="index" direction="in" type="int32">
+            <help>The index of the entry to set</help>
+        </Argument>
+        <Argument name="value" direction="in" type="string">
+            <help>The new value of the entry</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="_PropertyStringListDelete">
+        <help>Delete entry in string list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+        <Argument name="index" direction="in" type="int32">
+            <help>The index of the entry to delete</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="_PropertyStringListAddHead">
+        <help>Add entry at head of string list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+        <Argument name="value" direction="in" type="string">
+            <help>The value to add</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="_PropertyStringListAddTail">
+        <help>Add entry at tail of string list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+        <Argument name="value" direction="in" type="string">
+            <help>The value to add</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="_PropertyStringListPopHead">
+        <help>Remove entry from head of string list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="_PropertyStringListPopTail">
+        <help>Remove entry from tail of string list (internal use only)</help>
+        <Argument name="name" direction="in" type="string">
+            <help>The name of the list</help>
+        </Argument>
+    </Method2>
+
+    <!-- ********  -->
+
+    <!-- ************************************************************  -->
+</Node> 
+

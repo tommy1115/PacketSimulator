@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="XPUnitTestC" baseType="XPUnitTestA">
+<help>Provides Unit Test facility for object hierarchy</help>
+    <PropertyString>
+        <name>stringVarC</name>
+        <default>qrt</default>
+        <help>string property</help>
+    </PropertyString>
+
+    <Method2 name="GetTestStringC">
+         <Argument name="v" direction="out" type="string">
+        <help>Returns a string</help>
+         </Argument>
+        <help>Test method</help>
+    </Method2>
+</Node>
+    

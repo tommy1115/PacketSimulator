@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="TestServerUnitTestNode" baseType="">
+    <help>This class is used for regression only</help>
+    <PropertyNode nodeType="StackElementPlugin" polymorphic="1">
+        <name>stackElementPlugin</name>
+        <help>This member object is used for regression only</help>        
+    </PropertyNode>    
+</Node>

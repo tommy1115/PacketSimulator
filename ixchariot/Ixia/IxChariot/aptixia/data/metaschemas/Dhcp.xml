@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Node nodeType="Dhcp" baseType="">
+    <help>DHCP object which handles configure, deconfigure and IP address retrieval</help>
+</Node>

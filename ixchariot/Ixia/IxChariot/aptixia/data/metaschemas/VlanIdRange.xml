@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="VlanIdRange" baseType="">
+	<description>Range of multiple VLANs for fine grained configuration</description>
+
+	<PropertyString>
+	    <name>name</name>
+	    <default>VLAN-</default>
+	    <description>The unique name by which a range can be referred from other forms.
+	    When a range is created this field has an automatically generated value and can be changed by user.
+	    Currently a VLAN range can be referred by Emulated Router and IP ranges.</description>
+	</PropertyString>
+
+	<!-- outer VLAN info -->
+
+    <PropertyBoolean>
+        <name>enable</name>
+        <default>false</default>
+        <description>Enable the outer VLAN.</description>
+    </PropertyBoolean>
+
+    <PropertyInt>
+        <name>firstId</name>
+        <default>1</default>
+        <min>0</min>
+        <max>4094</max>
+        <description>The first ID to be used for the outer VLAN tag.</description>
+    </PropertyInt>
+
+	<PropertyInt>
+        <name>incrementStep</name>
+        <default>1</default>
+        <min>0</min>
+        <max>1000000000</max>
+        <description>Frequency of outer VLAN ID increment. E.g., value of 10 means increment VLAN ID once for every 10 IP addresse.</description>
+    </PropertyInt>
+
+	<PropertyInt>
+        <name>increment</name>
+        <default>1</default>
+        <min>0</min>
+        <max>4093</max>
+        <description>Amount of increment per increment step for outer VLAN. E.g. increment step = 10 and increment = 2 means increment VLAN ID by 2 for every 10 Ips</description>
+    </PropertyInt>
+
+    <PropertyInt>
+        <name>uniqueCount</name>
+        <default>4094</default>
+        <min>1</min>
+        <max>4094</max>
+        <description>Number of unique outer VLAN IDs to use.</description>
+    </PropertyInt>
+
+	<PropertyInt>
+        <name>priority</name>
+        <default>1</default>
+        <min>0</min>
+        <max>7</max>
+        <description>The 802.1Q priority to be used for the outer VLAN tag.</description>
+    </PropertyInt>
+
+	<!-- inner VLAN info -->
+
+    <PropertyBoolean>
+        <name>innerEnable</name>
+        <default>false</default>
+        <description>Enable the inner VLAN.</description>
+    </PropertyBoolean>
+
+    <PropertyInt>
+        <name>innerFirstId</name>
+        <default>1</default>
+        <min>0</min>
+        <max>4094</max>
+        <description>The first ID to be used for the inner VLAN tag.</description>
+    </PropertyInt>
+
+	<PropertyInt>
+        <name>innerIncrementStep</name>
+        <default>1</default>
+        <min>0</min>
+        <max>1000000000</max>
+        <description>Frequency of inner VLAN ID increment. E.g., value of 10 means increment VLAN ID once for every 10 IP addresse.</description>
+    </PropertyInt>
+
+	<PropertyInt>
+        <name>innerIncrement</name>
+        <default>1</default>
+        <min>0</min>
+        <max>4093</max>
+        <description>Amount of increment per increment step for Inner VLAN. E.g. increment step = 10 and increment = 2 means increment VLAN ID by 2 for every 10 Ips</description>
+    </PropertyInt>
+
+    <PropertyInt>
+        <name>innerUniqueCount</name>
+        <default>4094</default>
+        <min>1</min>
+        <max>4094</max>
+        <description>Number of unique inner VLAN IDs to use.</description>
+    </PropertyInt>
+
+	<PropertyInt>
+        <name>innerPriority</name>
+        <default>1</default>
+        <min>0</min>
+        <max>7</max>
+        <description>The 802.1Q priority to be used for the inner VLAN tag.</description>
+    </PropertyInt>
+
+    <!-- common options -->
+    <!-- common options -->
+
+    <PropertyInt>
+        <name>idIncrMode</name>
+        <default>2</default>
+        <choices>
+            <choice name="Outer First" value="0" />
+            <choice name="Inner First" value="1" />
+            <choice name="Both" value="2" />
+        </choices>
+        <description>Method used to increment VLAN IDs.
+        May take the following values: 0 (Outer VLAN first), 1 (Inner VLAN first), 2 (Both).</description>
+    </PropertyInt>
+
+    <PropertyString>
+        <name>etherType</name>
+        <default>0x8100</default>
+        <choices>
+            <choice name="EAPS (0x8100)" value="0x8100" />
+            <choice name="802.1AD (0x88A8)" value="0x88A8" />
+            <choice name="VLAN TAG (0x9100)" value="0x9100" />
+            <choice name="VLAN TAG (0x9200)" value="0x9200" />
+        </choices>
+        <description>The Ethernet Type value in the VLAN Tag.</description>
+    </PropertyString>
+
+</Node>

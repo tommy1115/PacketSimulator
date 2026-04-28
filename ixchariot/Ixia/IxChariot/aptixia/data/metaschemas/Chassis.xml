@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="Chassis" baseType="">
+    <description>Chassis information to add a chassis to a chassis chain.</description>
+    <PropertyString>
+        <name>dns</name>
+        <description>name/ip address of the chassis</description>
+        <default>UNDEFINED-CHASSIS-NAME</default>
+    </PropertyString>
+    <PropertyDouble>
+        <name>cableLength</name>
+        <description>Length of the cable from the current chassis to the next chassis downstream.
+                     Valid values are 0.0, 3.0, 6.0, 9.0, 12.0, 15.0, 18.0, 21.0, 24.0</description>
+        <default>0.0</default>
+    </PropertyDouble>
+    <PropertyBoolean>
+        <name>physicalChain</name>
+        <description>true if  this chassis part of a physical chain, false otherwise.</description>
+    	<default>false</default>
+    </PropertyBoolean>
+    <PropertyString>
+        <name>masterChassis</name>
+        <description>ip address of the master chassis if this chassis is a slave</description>
+        <default>UNDEFINED-CHASSIS-NAME</default>
+    </PropertyString>
+    <PropertyString>
+        <name>managementIP</name>
+        <description>Management ip address of the chassis.</description>
+        <default>0.0.0.0</default>
+    </PropertyString>
+    <PropertyString>
+        <name>chassisType</name>
+        <description>type of the chassis</description>
+    </PropertyString>
+    <PropertyNodeList nodeType="ChassisCard">
+        <name>cardList</name>
+        <description>The list of card info to be shown in the GUI when the chassis is not accessible</description>
+    </PropertyNodeList>
+</Node>

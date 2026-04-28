@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ixia_message_file>
+    <status>
+            <id_string>Aptixia.ClientLibrary.FailedToCreateSemaphore</id_string>
+            <text>Client library failed to create semaphore. This is an internal error.</text>
+            <description>
+                    This is an internal error. Please contact Ixia technical support.
+            </description>		
+    </status>
+    <status>
+            <id_string>Aptixia.ClientLibrary.FailedToCreatePipe</id_string>
+            <text>Client library failed to create pipe. This is an internal error.</text>
+            <description>
+                    This is an internal error. Please contact Ixia technical support.
+            </description>		
+    </status>
+    <status>
+            <id_string>Aptixia.ClientLibrary.NoPendingAction</id_string>
+            <text>A synchronization function was called but there was no pending action. This is an internal error.</text>
+            <description>
+                    This is an internal error. Please contact Ixia technical support.
+            </description>		
+    </status>
+    <status>
+            <id_string>Aptixia.ClientLibrary.PipeReadFailed</id_string>
+            <text>Failed to read from pipe. This is an internal error.</text>
+            <description>
+                    This is an internal error. Please contact Ixia technical support.
+            </description>		
+    </status>
+
+    <status>
+    <id_string>Aptixia.ClientLibrary.FailedToLaunchProcess</id_string>
+    <text>Failed to launch process %1%/%2%. This is an internal error.</text>
+    <description>
+    On occasion,  the ixia client library launches additional processes
+    in addition to the main client application. If the process launch
+    fails this error is presented along with the name of the executable
+    that could not be launched.
+
+    This is an internal error. Please contact Ixia technical support.
+    and include the error details from the error.
+    </description>		
+    </status>    
+
+    <status>
+            <id_string>Aptixia.ClientLibrary.DodFileCannotOpenForRead</id_string>
+            <text>The file %1% could not opened for reading.</text>
+            <description>
+                     Please check if the file exists and is so check the file permissions for reading.
+            </description>		
+    </status>
+
+    <status>
+            <id_string>Aptixia.XProtocol.CantResolveHostname</id_string>
+            <text>Unable to resolve hostname %1%.</text>
+            <description>
+                     Unable to resolve hostname. Please check spelling and network connectivity.
+            </description>		
+    </status>
+
+    <status>
+            <id_string>Aptixia.XProtocol.FailedToConnect</id_string>
+            <text>Cannot connect to Test Server on host '%1%', port %2%, please check User Settings and make sure Test Server process is running.</text>
+            <description>
+                    Unable to connect to Test Server.Make sure testserver.exe is running and check your configuration.
+            </description>		
+    </status>
+
+    <status>
+            <id_string>Aptixia.XProtocol.SocketError</id_string>
+            <text>TCP connection lost.</text>
+            <description>
+                TCP connection lost. Please check network connectivity.
+            </description>		
+    </status>
+
+    <status>
+            <id_string>Aptixia.ClientLibrary.IndexOutOfRange</id_string>
+            <text>Index out of range.</text>
+            <description>
+                The index used to access an array is out of bounds.
+            </description>		
+    </status>
+    <status>
+            <id_string>Aptixia.XProtocol.IdMismatch</id_string>
+            <text>There was an error parsing an Xml message. The received object id didn't match.</text>
+            <description>
+                    This is an internal error. Please contact Ixia technical support.
+            </description>		
+    </status>
+    <status>
+            <id_string>Aptixia.XProtocol.BadTopElement</id_string>
+            <text>The document element was not correct.</text>
+            <description>
+                    This is an internal error. Please contact Ixia technical support.
+            </description>		
+    </status>
+
+    <status>
+      <id_string>Aptixia.XProtocol.XmlResponseParseError</id_string>
+      <text>Cannot parse xml response:
+------------------------------------------------------
+{{{%1%}}}
+------------------------------------------------------
+
+Parser error details:
+------------------------------------------------------
+%2%
+------------------------------------------------------
+      </text>
+      <description>
+      The Response xml received from the test server was malfored in some way
+      and could not be parsed by the client side xml parser
+      </description>		
+    </status>
+
+    <status>
+            <id_string>Aptixia.ClientLibrary.PropertyNotFound</id_string>
+            <text>The specified property '%1%'does not exist in this objct.</text>
+            <description>
+                   The specified property does not exist in this objct. This is an internal error
+                   if it occurred in an application.
+            </description>		
+    </status>
+    <status>
+            <id_string>Aptixia.ClientLibrary.PropertyWrongType</id_string>
+            <text>The specified property has the wrong type.</text>
+            <description>
+                   The specified property has an unexpected type. This is an internal error
+                   if it occurred in an application.
+            </description>		
+    </status>
+    <status>
+            <id_string>Aptixia.ClientLibrary.UnsupportedByServer</id_string>
+            <text>The server does not support this feature.</text>
+            <description>
+                   The server this client is connected to does not support this feature. The
+                   client is newer than the server.
+            </description>		
+    </status>
+    <status>
+            <id_string>Aptixia.ClientLibrary.WinSockError</id_string>
+            <text>Failed to initialize winsock.</text>
+            <description>
+                   Failed to initialize winsock.
+            </description>		
+    </status>
+    <status>
+            <id_string>Aptixia.ClientLibrary.CreateSocket</id_string>
+            <text>Failed to create socket.</text>
+            <description>
+                    This is an internal error. Please contact Ixia technical support.
+            </description>		
+    </status>
+    <status>
+            <id_string>Aptixia.ClientLibrary.SetSockOpt</id_string>
+            <text>Failed to set socket option.</text>
+            <description>
+                    This is an internal error. Please contact Ixia technical support.
+            </description>		
+    </status>
+    <status>
+            <id_string>Aptixia.ClientLibrary.OutOfNewObjectIds</id_string>
+            <text>Ran out of new object ids.</text>
+            <description>
+                    This is an internal error. Please contact Ixia technical support.
+            </description>		
+    </status>
+    <status>
+            <id_string>Aptixia.ClientLibrary.ObjectDeleted</id_string>
+            <text>Object deleted.</text>
+            <description>
+                    The accessed object has been previously deleted.
+            </description>		
+    </status>
+    <status>
+            <id_string>Aptixia.ClientLibrary.InvalidDynamicCast</id_string>
+            <text>The assignment is invalid.</text>
+            <description>
+                 The assignment is invalid because the source object has no
+                 ancestors of the target type.
+            </description>		
+    </status>
+    <status>
+            <id_string>Aptixia.ClientLibrary.BadMessageFileFormat</id_string>
+            <text>The message file format of file %1% is wrong. This is an internal error.</text>
+            <description>
+                    This is an internal error. Please contact Ixia technical support.
+            </description>		
+    </status>
+    <status>
+            <id_string>Aptixia.ClientLibrary.InternalError</id_string>
+            <text>An unspecific internal error has occurred.</text>
+            <description>
+                    This is an internal error. Please contact Ixia technical support.
+            </description>		
+    </status>
+    <status>
+            <id_string>Aptixia.ClientLibrary.DeadlockCondition</id_string>
+            <text>Deadlock condition detected.</text>
+            <description>
+                    Deadlock condition detected. Attempted to call sync method from communication thread.
+            </description>		
+    </status>
+    <status>
+            <id_string>Aptixia.ClientLibrary.NotImplemented</id_string>
+            <text>This method has not been implemented.</text>
+            <description>
+                    This is an internal error. Please contact Ixia technical support.
+            </description>		
+    </status>
+    <status>
+            <id_string>Aptixia.ClientLibrary.Timeout</id_string>
+            <text>Timeout.</text>
+            <description>
+                    This is an internal error. Please contact Ixia technical support.
+            </description>		
+    </status>
+</ixia_message_file>

@@ -1,0 +1,142 @@
+<?xml-stylesheet type="text/xsl" href="xdr-schema.xsl"?>
+<Schema name="AsdSchema.xml"
+        xmlns="urn:schemas-microsoft-com:xml-data"
+        xmlns:dt="urn:schemas-microsoft-com:datatypes">
+
+<description>
+    Ixia Application Stream Definition version 1.0 XML schema using using MSXML-DR.
+
+    $Id: //ral_depot/products/IxChariot6.70.27/ase/source/ase/AsdSchema.xml#1 $
+
+    Copyright (c) 2004 Ixia
+    All Rights Reserved.
+</description>
+
+<!-- ASD Type -->
+<AttributeType name="plugin_id" required="yes" dt:type="uuid"/>
+<AttributeType name="sub_id" required="yes" dt:type="ui4"/>
+<AttributeType name="display_name" required="yes"/>
+<ElementType name="AsdType" content="empty" order="seq" model="closed">
+    <attribute type="plugin_id"/>
+    <attribute type="sub_id"/>
+    <attribute type="display_name"/>
+</ElementType>
+
+<!-- Codec payload of RTP -->
+<AttributeType name="Size" required="yes" dt:type="ui4"/>
+<ElementType name="Codec" content="empty" model="closed">
+    <attribute type="Size"/>
+</ElementType>
+
+<!-- RTP -->
+<AttributeType name="PayloadType" required="yes" 
+               dt:type="enumeration" dt:values="Pcmu G726 Gsm G723 Pcma G729"/>
+<AttributeType name="TimestampIncrement" required="yes" dt:type="ui4"/>
+<AttributeType name="RandomSeed" required="no" dt:type="ui4"/>
+<ElementType name="Rtp" content="eltOnly" order="seq" model="closed">
+    <attribute type="PayloadType"/>
+    <attribute type="TimestampIncrement"/>
+    <attribute type="RandomSeed"/>
+    <group order="one">
+        <element type="Codec"/>
+    </group>
+</ElementType>
+
+<!-- UDP -->
+<AttributeType name="SourcePort" required="yes" dt:type="ui2"/>
+<AttributeType name="DestinationPort" required="yes" dt:type="ui2"/>
+<AttributeType name="ChecksumMode" required="yes"
+               dt:type="enumeration" dt:values="Fixed Calculated"/>
+<AttributeType name="Checksum" required="yes" dt:type="ui2"/>
+<ElementType name="Udp" content="eltOnly" order="seq" model="closed">
+    <attribute type="SourcePort"/>
+    <attribute type="DestinationPort"/>
+    <attribute type="ChecksumMode"/>
+    <attribute type="Checksum"/>
+    <group order="one">
+        <element type="Rtp"/>
+    </group>
+</ElementType>
+
+<!-- IP -->
+<AttributeType name="TypeOfService" required="yes" dt:type="ui1"/>
+<AttributeType name="DontFragment" required="yes"
+               dt:type="enumeration" dt:values="0 1"/>
+<AttributeType name="TimeToLive" required="yes" dt:type="ui1"/>
+<AttributeType name="Protocol" required="yes" dt:type="ui1"/>
+<AttributeType name="SourceAddress" required="yes"/>
+<AttributeType name="DestinationAddress" required="yes"/>
+<ElementType name="Ip" content="eltOnly" order="seq" model="closed">
+    <attribute type="TypeOfService"/>
+    <attribute type="DontFragment"/>
+    <attribute type="TimeToLive"/>
+    <attribute type="Protocol"/>
+    <attribute type="SourceAddress"/>
+    <attribute type="DestinationAddress"/>
+    <group order="one">
+        <element type="Udp"/>
+    </group>
+</ElementType>
+
+<!-- IPv6 -->
+<AttributeType name="FlowLabel" required="yes" dt:type="ui4"/>
+<AttributeType name="TrafficClass" required="yes" dt:type="ui1"/>
+<ElementType name="Ipv6" content="eltOnly" order="seq" model="closed">
+    <attribute type="TrafficClass"/>
+    <attribute type="FlowLabel"/>
+    <attribute type="SourceAddress"/>
+    <attribute type="DestinationAddress"/>
+    <group order="one">
+        <element type="Udp"/>
+    </group>
+</ElementType>
+
+<!-- Ethernet -->
+<AttributeType name="Preamble" required="yes" dt:type="ui4"/>
+<!-- Note: reuse SourceAddress and Destination address from above -->
+<AttributeType name="FrameType" required="yes" dt:type="ui2"/>
+<ElementType name="Ethernet" content="eltOnly" order="seq" model="closed">
+    <attribute type="Preamble"/>
+    <attribute type="SourceAddress"/>
+    <attribute type="DestinationAddress"/>
+    <attribute type="FrameType"/>
+    <group order="one">
+        <element type="Ip"/>
+        <element type="Ipv6"/>
+    </group>
+</ElementType>
+
+<!-- L1 -->
+<ElementType name="L1" content="eltOnly" order="seq" model="closed">
+    <group order="one">
+        <element type="Ethernet"/>
+    </group>
+</ElementType>
+
+<!-- Stream -->
+<AttributeType name="Description" required="yes"/>
+<AttributeType name="Endpoint" required="yes" 
+               dt:type="enumeration" dt:values="1 2"/>
+<AttributeType name="MinGap" required="yes" dt:type="ui4"/>
+<AttributeType name="RateType" required="yes"
+               dt:type="enumeration" dt:values="Frame Bandwidth Line"/>
+<AttributeType name="Rate" required="yes" dt:type="ui4"/>
+<ElementType name="Stream" content="eltOnly" order="seq" model="closed">
+    <attribute type="Description"/>
+    <attribute type="Endpoint"/>
+    <attribute type="MinGap"/>
+    <attribute type="RateType"/>
+    <attribute type="Rate"/>
+    <element type="L1"/>
+</ElementType>
+
+<!-- The ASD -->
+<AttributeType name="asd_version" required="yes"
+               dt:type="enumeration" dt:values="1.0"/>
+<ElementType name="ASD" content="eltOnly" order="many">
+    <attribute type="asd_version"/>
+    <element type="AsdType" minOccurs="1" maxOccurs="1"/>
+    <element type="Stream" minOccurs="1" maxOccurs="*"/>
+</ElementType>
+
+</Schema>

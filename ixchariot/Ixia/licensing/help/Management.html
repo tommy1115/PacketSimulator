@@ -1,0 +1,1846 @@
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="GENERATOR" content="Microsoft FrontPage 4.0" />
+    <meta name="TEMPLATEBASE" content="Dynamic HTML" />
+    <meta name="LASTUPDATED" content="09/23/08 21:28:07" />
+    <title>Chapter 6: Managing Licenses  </title>
+    <link rel="StyleSheet" href="ixia_user_doc.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
+<link rel="index" title="Index" href="IX.html" />
+<link rel="first" title="First" href="TOC.html" />
+<link rel="last" title="Last" href="IX.html" />
+<link rel="previous" title="Previous" href="Temporary.html" />
+<link rel="next" title="Next" href="PlanningGuide.html" />
+
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/seealso.js"></script>
+
+    <script type="text/javascript" language="JavaScript1.2">
+     <!--
+      var  WebWorksSeeAlso = new WebWorksSeeAlso_Object();
+     // -->
+    </script>
+  </head>
+
+  <body>
+
+   <table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="left" width="281"><a href="http://www.ixiacom.com"><img border="0" src="images/ixialogo.gif"></a>
+    </td>
+    <td align="center" width="95"><a href="Management.fm.pdf">
+    <img src="images/pdf.gif" width="28" height="31"
+             border="0" alt="PDF version of this section"></a></td>
+    <td align="center" width="94"><a href="LicenseManagement.pdf"><img src="images/pdf.gif" width="28" height="31"
+      border="0" alt="PDF version of entire manual"> </a>
+    <td align="center" width="180">
+      <p align="right">
+  </tr>
+  <tr>
+    <td width="281" align="left"><b><i><font size="3" face="Arial" color="#000000"></font></i></b></td>
+    <td width="95" align="center">Get this&nbsp;<br>
+      section in PDF</td>
+    <td width="94" align="center">Get entire&nbsp;<br>
+      manual in PDF</td>
+    <td width="190" align="center">
+      <p align="right"><a accesskey="4" href="Temporary.html"><img id="LongDescNotReq1" src="images/prev.gif" border="0" alt="Previous" /></a><a accesskey="5" href="PlanningGuide.html"><img id="LongDescNotReq2" src="images/next.gif" border="0" alt="Next" /></a><a accesskey="2" href="IX.html"><img id="LongDescNotReq3" src="images/index.gif" border="0" alt="Index" /></a>
+    </td>
+  </tr>
+</table>
+
+<hr align="left" color="#C80000">
+
+<blockquote>
+<a name="wp1085592"> </a><h2 class="pTitle">
+Chapter 6: Managing Licenses<br /><br />
+</h2>
+<hr color="#C00000" noshade>
+<a name="wp1090295"> </a><h2 class="pHeading1">
+Introduction
+</h2>
+<a name="wp1096637"> </a><p class="pBody">
+The Ixia Registration Utility (IRU) provides a means for monitoring and managing the various installed licenses on a per chassis or workstation basis. Before starting the license management process, it is helpful to have the following information available:
+</p>
+<div class="pSmartList1"><ol type="1" class="pSmartList1">
+<a name="wp1096638"> </a><div class="pSmartList1"><li>Registration Number and password for the license &#150; this comes as an e-mail from Ixia to the Lab Manager and should have been forwarded to the person in charge of the installation. The password is necessary for operations performed on licenses from the License Management dialog.</li></div>
+<a name="wp1096639"> </a><div class="pSmartList1"><li>Workstation or Ixia Chassis &#150; this is the name or IP address of the computer or chassis that requires the license. This should also be provided by the Lab Manager. </li></div>
+<a name="wp1098133"> </a><div class="pSmartList1"><li>License Server &#150; <span style="font-weight: bold">if</span> the lab will use a central License Server, the Lab manager should have provided its name or IP address.</li></div>
+</ol></div>
+<a name="wp1103184"> </a><p class="pBody">
+License configuration options are also supported via a text file. 
+</p>
+<a name="wp1103188"> </a><p class="pBody">
+The following topics are covered in this chapter:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1103189"> </a><div class="pSmartList2"><li><a href="Management.html#wp1098134"><span style="font-style: italic">License Management</span> on page 6-2</a></li></div>
+<a name="wp1103194"> </a><div class="pSmartList2"><li><a href="Management.html#wp1100765"><span style="font-style: italic">Floating License Configuration Options</span> on page 6-17</a></li></div>
+</ul></div>
+</ul></div>
+<a name="wp1098134"> </a><h2 class="pHeading1">
+License <a name="LMU"> </a>
+Management
+</h2>
+<a name="wp1098135"> </a><p class="pBody">
+License management can be done after the IRU is installed and running, and is able reach the various computers, chassis, and/or License Servers in the test environment. Make sure the network connectivity requirements discussed in <span style="font-style: italic">Installation Scenarios</span> are understood, and that the necessary information discussed above in <a href="Management.html#wp1090295"><span style="font-style: italic">Introduction</span></a> is available.
+</p>
+<a name="wp1096701"> </a><p class="pBody">
+The following sections explain how to start and operate license management:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1096702"> </a><div class="pSmartList2"><li><a href="Management.html#wp1096679"><span style="font-style: italic">Opening the Ixia Registration Utility</span></a></li></div>
+<a name="wp1096706"> </a><div class="pSmartList2"><li><a href="Management.html#wp1096273"><span style="font-style: italic">License Management Dialog</span></a></li></div>
+<a name="wp1096707"> </a><div class="pSmartList2"><li><a href="Management.html#wp1096589"><span style="font-style: italic">License Menu Options</span></a></li></div>
+<a name="wp1099587"> </a><div class="pSmartList2"><li><a href="Management.html#wp1096634"><span style="font-style: italic">Adding Licenses</span></a></li></div>
+<a name="wp1099245"> </a><div class="pSmartList2"><li><a href="Management.html#wp1099572"><span style="font-style: italic">Moving Licenses</span></a></li></div>
+<a name="wp1101241"> </a><div class="pSmartList2"><li><a href="Management.html#wp1096628"><span style="font-style: italic">Tools Menu Options</span></a></li></div>
+</ul></div>
+</ul></div>
+<a name="wp1096679"> </a><h2 class="pHeading2">
+Opening the Ixia Registration Utility
+</h2>
+<a name="wp1093891"> </a><p class="pBody">
+License management is started by opening the IRU. When the IRU is opened, the screen shown in <a href="Management.html#wp1096189">Figure 6-1</a> is displayed. This is the main IRU screen that allows the user to select various registration operations. To open the IRU, select <span style="font-style: italic">Start &gt; Programs &gt; Ixia &gt; Licensing &gt; IRU</span> from the Start menu.
+</p>
+<a name="wp1096189"> </a><p class="pFigure">
+Figure 6-1.	Ixia Registration Utility Main Dialog</p>
+<div align="left"><img src="images/Manage1.jpg" id="wp1096195" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1096863"> </a><div class="pSmartList2"><li>Select the <span style="font-style: italic">Manage Licenses </span>radio button.</li></div>
+<a name="wp1096864"> </a><div class="pSmartList2"><li>Select the <span style="font-style: italic">Start</span> button.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1096872"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1096886"> </a><div class="pCellBody">
+The other radio button operations are described in the following chapters:
+</div>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp1096890"> </a><div class="pSmartList1"><li>Registration &#150; Chapter 2, Registering Licenses</li></div>
+<a name="wp1096894"> </a><div class="pSmartList1"><li>De-registration &#150; Chapter 3, De-registering Licenses.</li></div>
+<a name="wp1096898"> </a><div class="pSmartList1"><li>Update &#150; Chapter 4, Updating Licenses.</li></div>
+</ul></div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<a name="wp1096273"> </a><h2 class="pHeading2">
+License Management Dialog
+</h2>
+<a name="wp1096794"> </a><p class="pBody">
+The main tool for managing local and remote licenses (such as those on a License Server) is the License Management dialog, shown in <a href="Management.html#wp1096475">Figure 6-2</a>.
+</p>
+<a name="wp1096475"> </a><p class="pFigure">
+Figure 6-2.	Ixia Licence Management Utility Dialog</p>
+<div align="left"><img src="images/managementih.jpg" id="wp1096473" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<a name="wp1105514"> </a><p class="pBody">
+<a href="Management.html#wp1096479">Table 6-1</a> describes the fields in the <span style="font-style: italic">Ixia License Management </span>dialog.
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#C80000" bordercolordark="#FFFFFF">
+
+  <caption><a name="wp1096479"> </a><div class="pTableTitle">
+Table 6-1.	Field Explanations
+</div>
+</caption>
+  <tr bgcolor="#FFFFFF">
+      <th style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000;">
+               <a name="wp1096485"> </a><div class="pCellHeading">
+Section
+</div>
+</th>
+    <th style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000;">
+               <a name="wp1096487"> </a><div class="pCellHeading">
+Field
+</div>
+</th>
+    <th style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000;">
+               <a name="wp1096489"> </a><div class="pCellHeading">
+Description
+</div>
+</th>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096491"> </a><div class="pCellBody">
+Top of Dialog
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096493"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096495"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096497"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096499"> </a><div class="pCellBody">
+License Menu Option
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096501"> </a><div class="pCellBody">
+A menu list of registrations options for a selected license. These options are grayed out until a license is selected. The options in this menu are described in <a href="Management.html#wp1096589"><span style="font-style: italic">License Menu Options</span> on page 6-6</a>.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096506"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096508"> </a><div class="pCellBody">
+Location of license files
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096510"> </a><div class="pCellBody">
+A pull down menu of the chassis or workstations that have been accessed by this particular IRU. Selecting a chassis or workstation from the list displays installed and available licenses. 
+</div>
+<a name="wp1096511"> </a><div class="pCellBody">
+The chassis or workstation selected must be accessible from the local machine. The local machine is referred to in this list as &quot;localhost&quot;.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096513"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096515"> </a><div class="pCellBody">
+Node ID
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096517"> </a><div class="pCellBody">
+The assigned Node ID for the selected chassis or workstation. This number is assigned to the chassis or workstation by the IRU during the registration process to differentiate it from other nodes (chassis or workstations).
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1105056"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1105058"> </a><div class="pCellBody">
+Show All Status
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1105060"> </a><div class="pCellBody">
+Selecting this checkbox shows all the licenses on the specified Node, and their current status (either valid or expired).
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096519"> </a><div class="pCellBody">
+Licenses Available
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096521"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096523"> </a><div class="pCellBody">
+Displays the installed licenses for the selected chassis or workstation.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096525"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096527"> </a><div class="pCellBody">
+License ID
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096529"> </a><div class="pCellBody">
+The license filename (without the extension) of the selected license file.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096531"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096533"> </a><div class="pCellBody">
+Registration Number
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096535"> </a><div class="pCellBody">
+The registration number for the selected license. This number is provided by Ixia, along with its accompanying password, as described in <span style="font-style: italic">What is License Management?</span>
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096540"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096542"> </a><div class="pCellBody">
+Product
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096544"> </a><div class="pCellBody">
+The product for which the license allows use.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096546"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096548"> </a><div class="pCellBody">
+Version
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096550"> </a><div class="pCellBody">
+The version of the licensed product. This field is valid mostly for licenses issued before Licensing 2.40. Either this field or the <span style="font-style: italic">Maintenance End Date</span> field has information for the current license.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1105463"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1102750"> </a><div class="pCellBody">
+Maintenance End Date
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1102752"> </a><div class="pCellBody">
+The expiration date of the of the product maintenance. Once this date is passed, a new license is required. The end date is the same as the last day of the product&#39;s service contract.
+</div>
+<a name="wp1102866"> </a><div class="pCellBody">
+This field is valid mostly for licenses issued after Licensing 2.40. Either this field or the <span style="font-style: italic">Version</span> field has information for the current license.
+</div>
+<a name="wp1105458"> </a><div class="pCellBody">
+Note that an existing date-based license that has expired can sometimes interfere with a valid evaluation license.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096552"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096554"> </a><div class="pCellBody">
+License Type
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096556"> </a><div class="pCellBody">
+Whether the license is <span style="font-style: italic">node-locked</span> or <span style="font-style: italic">Floating</span>. Node-locked licenses only work for a single chassis or workstation (known as a &quot;node&quot;). Floating licenses can be used by any chassis or workstation in a test environment, up to a certain number.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1102754"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1102756"> </a><div class="pCellBody">
+Status
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1102758"> </a><div class="pCellBody">
+The status of the license. Valid or Expired.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1104562"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1104564"> </a><div class="pCellBody">
+For This Node
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1104566"> </a><div class="pCellBody">
+Indicates if the license is for a product that is on the node being viewed.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096558"> </a><div class="pCellBody">
+Product Features
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096560"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096562"> </a><div class="pCellBody">
+Displays what features are available with the selected license.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096564"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096566"> </a><div class="pCellBody">
+Feature
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096568"> </a><div class="pCellBody">
+The name of the Ixia product that is licensed for use on the selected chassis or workstation.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096570"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096572"> </a><div class="pCellBody">
+Description
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096574"> </a><div class="pCellBody">
+A brief description of the product features.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096576"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096578"> </a><div class="pCellBody">
+Expiration
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1096580"> </a><div class="pCellBody">
+When, if at all, the license for this product expires. If there is no expiration, this field reads <span style="font-style: italic">Permanent</span>.
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</p>
+<a name="wp1096589"> </a><h2 class="pHeading2">
+License Menu Options
+</h2>
+<a name="wp1096171"> </a><p class="pBody">
+The <span style="font-style: italic">License</span> menu in the <span style="font-style: italic">Ixia License Management </span>dialog allows for more streamlined licensing operations. Using the options in this menu allow the user to skip the step of entering the Registration Number and Password. 
+</p>
+<a name="wp1096605"> </a><p class="pBody">
+The options in the <span style="font-style: italic">License</span> menu are:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1096172"> </a><div class="pSmartList2"><li>De-register &#150; Allows for de-registering the license. Selecting this option starts the de-registration process which is described in Chapter 3, De-registering Licenses. </li></div>
+<a name="wp1096176"> </a><div class="pSmartList2"><li>Update &#150; Allows for updating a selected license. Selecting this option starts the update process, which is described in Chapter 4, Updating Licenses.</li></div>
+<a name="wp1096941"> </a><div class="pSmartList2"><li>Add License &#150; Allows for adding a previously registered license to its workstation, chassis, or server. Selecting this option starts the add license process, which is described in <a href="Management.html#wp1096634"><span style="font-style: italic">Adding Licenses</span> on page 6-7</a>.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1096764"> </a><p class="pBody">
+The de-register and update operations require the password provided with the registration number, as described in <a href="Management.html#wp1090295"><span style="font-style: italic">Introduction</span></a> above. Once one of these operations is selected, the <span style="font-style: italic">Password Input</span> dialog is displayed, as shown in <a href="Management.html#wp1093988">Figure 6-3</a>.
+</p>
+<a name="wp1093988"> </a><p class="pFigure">
+Figure 6-3.	Password Input Dialog</p>
+<div align="left"><img src="images/passInput.jpg" id="wp1093993" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<a name="wp1099779"> </a><p class="pBody">
+The process for adding a license is described in <a href="Management.html#wp1096634"><span style="font-style: italic">Adding Licenses</span> on page 6-7</a> below.
+</p>
+<a name="wp1096634"> </a><h2 class="pHeading2">
+Adding <a name="AddLicenseTask_EnterRegNum_OnLine"> </a>
+Licenses
+</h2>
+<a name="wp1099573"> </a><p class="pBody">
+One of the features in the LMU <span style="font-style: italic">License</span> menu is <span style="font-style: italic">Add License</span>. A license can be added to a workstation or chassis after it has been downloaded from the Ixia&#39;s Registration Server, but for some reason was not installed. Most times this occurs when during offline registration, the user closes the Ixia Registration Utility (IRU) before completing <span style="font-style: italic">Step 8: Online &#150; Save the License File</span>.
+</p>
+<div class="pSmartList1"><ol type="1" class="pSmartList1">
+<a name="wp1099626"> </a><div class="pSmartList1"><li>From the LMU <span style="font-style: italic">License</span> menu, select <span style="font-style: italic">Add License</span>, or press the <span style="font-style: italic">Ctrl + A</span> keys. The dialog shown in <a href="Management.html#wp1099685">Figure 6-4</a> is displayed.</li></div>
+<a name="wp1099685"> </a><p class="pFigure">
+Figure 6-4.	Add License &#150; Step 1<br />
+<img src="images/AddLicenseStep1.jpg" id="wp1099689" border="0" hspace="0" vspace="3"/><br />
+
+</p>
+<a name="wp1099630"> </a><p class="pBodyRelative">
+Enter the Registration Number and Password for the license being added, then select the <span style="font-style: italic">Next</span> button.
+</p>
+<a name="wp1099638"> </a><div class="pSmartList1"><li><a name="AddLicenseTask_InstallLic_OnLine"> </a>
+The next dialog displayed is shown in <a href="Management.html#wp1099885">Figure 6-5</a>.</li></div>
+<a name="wp1099885"> </a><p class="pFigure">
+Figure 6-5.	Add License &#150; Step 2<br />
+<img src="images/AddLicenseStep2.jpg" id="wp1099892" border="0" hspace="0" vspace="3"/><br />
+
+</p>
+<a name="wp1099887"> </a><p class="pBodyRelative">
+Enter the file license file name in the field provided, or use the Browse button to locate it. Once selected, the path to the license should display in the field. Press the <span style="font-style: italic">Next</span> button.
+</p>
+</ol></div>
+<a name="wp1099947"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1099957"> </a><div class="pCellBody">
+<span style="font-weight: bold">Note</span>. The machine running the add license operation must be connected to the chassis or workstation to which the license has been assigned.
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<div class="pSmartList1"><ol type="1" class="pSmartList1">
+<a name="wp1099888"> </a><div class="pSmartList1"><li>The process should install the license the license to the correct chassis or workstation. When it is finished the dialog shown in <a href="Management.html#wp1099976">Figure 6-6</a> is displayed.</li></div>
+<a name="wp1099976"> </a><p class="pFigure">
+Figure 6-6.	Add License &#150; Step 3<br />
+<img src="images/AddLicenseStep3.jpg" id="wp1099980" border="0" hspace="0" vspace="3"/><br />
+
+</p>
+<a name="wp1099993"> </a><p class="pBodyRelative">
+To save the receipt to disk, press the <span style="font-style: italic">Save Receipt...</span> button and designate a file. To make a printout of the receipt, press the <span style="font-style: italic">Print Receipt...</span> button and select a printer. 
+</p>
+<a name="wp1100013"> </a><p class="pBodyRelative">
+Press <span style="font-style: italic">Finish</span> to exit the Add License process.
+</p>
+</ol></div>
+<a name="wp1099572"> </a><h2 class="pHeading2">
+Moving Licenses
+</h2>
+<a name="wp1099259"> </a><p class="pBody">
+Licenses can be moved between chassis, workstations, and License Servers. To move a license from one machine to another:
+</p>
+<div class="pSmartList1"><ol type="1" class="pSmartList1">
+<a name="wp1099297"> </a><div class="pSmartList1"><li>De-register the license from the original chassis or workstation, as described in Chapter 3, De-registering Licenses.</li></div>
+<a name="wp1099304"> </a><div class="pSmartList1"><li>Register the license to the new machine, as described in Chapter 2, <span style="font-style: italic">Registering Licenses</span>.</li></div>
+</ol></div>
+<a name="wp1096628"> </a><h2 class="pHeading2">
+Tools Menu Options
+</h2>
+<a name="wp1101333"> </a><p class="pBody">
+The <span style="font-style: italic">Tools</span> menu options are listed below:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1101337"> </a><div class="pSmartList2"><li><a href="Management.html#wp1101339"><span style="font-style: italic">Setting</span></a></li></div>
+<a name="wp1101345"> </a><div class="pSmartList2"><li><a href="Management.html#wp1101408"><span style="font-style: italic">Using the Diagnostic Utility</span></a></li></div>
+<a name="wp1105031"> </a><div class="pSmartList2"><li><a href="Management.html#wp1105035"><span style="font-style: italic">IxiaLM Port Configuration</span></a></li></div>
+<a name="wp1105561"> </a><div class="pSmartList2"><li><a href="Management.html#wp1105564"><span style="font-style: italic">Floating License Traffic Statistics</span></a></li></div>
+</ul></div>
+</ul></div>
+<a name="wp1101339"> </a><h3 class="pHeading3">
+Setting 
+</h3>
+<a name="wp1101427"> </a><p class="pBody">
+The <span style="font-style: italic">Setting</span> control allows the user to specify a proxy server registration and to force the IRU to use offline registration. To use the <span style="font-style: italic">Setting</span> control, select <span style="font-style: italic">Tools&gt; Setting</span> in the menu bar, as shown in <a href="Management.html#wp1101433">Figure 6-7 on page 6-10</a>.
+</p>
+<a name="wp1101433"> </a><p class="pFigure">
+Figure 6-7.	Open the Setting Dialog</p>
+<div align="left"><img src="images/LmuDiag2.jpg" id="wp1101455" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<a name="wp1101437"> </a><p class="pBody">
+There are two tab options in the <span style="font-style: italic">Setting</span> dialog:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1102369"> </a><div class="pSmartList2"><li><a href="Management.html#wp1102382"><span style="font-style: italic">Proxy</span> on page 6-11</a></li></div>
+<a name="wp1102373"> </a><div class="pSmartList2"><li><a href="Management.html#wp1102390"><span style="font-style: italic">Force Off-Line</span> on page 6-12</a></li></div>
+</ul></div>
+</ul></div>
+<a name="wp1102382"> </a><h4 class="pHeading4">
+Proxy
+</h4>
+<a name="wp1102438"> </a><p class="pBody">
+The <span style="font-style: italic">Proxy</span> tab page controls the use of proxy server in license registration. If a proxy server is used in the network from which the registration is being performed, it is necessary to set the name and port of the proxy server.
+</p>
+<a name="wp1102909"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1102917"> </a><div class="pCellBody">
+<span style="font-weight: bold">Note</span>. Normal Internet Explorer proxy settings are recognized by Licensing, without setting the proxy options.
+</div>
+<a name="wp1104427"> </a><div class="pCellBody">
+If there is a problem with Licensing due to proxy settings that cannot be remedied using these controls, it is best to use offline registration.
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<a name="wp1102568"> </a><p class="pBody">
+The <span style="font-style: italic">Proxy</span> tab page is show in <a href="Management.html#wp1102413">Figure 6-8 on page 6-11</a>.
+</p>
+<a name="wp1102413"> </a><p class="pFigure">
+Figure 6-8.	Proxy Tab</p>
+<div align="left"><img src="images/IruSettingProxy.jpg" id="wp1102410" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<a name="wp1102389"> </a><p class="pBody">
+<a href="Management.html#wp1102505">Table 6-2 on page 6-11</a> describes the functionality of the <span style="font-style: italic">Proxy</span> tab page.
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#C80000" bordercolordark="#FFFFFF">
+
+  <caption><a name="wp1102505"> </a><div class="pTableTitle">
+Table 6-2.	Proxy Tab Page Configuration
+</div>
+</caption>
+  <tr bgcolor="#FFFFFF">
+      <th style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000;">
+               <a name="wp1102509"> </a><div class="pCellHeading">
+Control
+</div>
+</th>
+    <th style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000;">
+               <a name="wp1102511"> </a><div class="pCellHeading">
+Description
+</div>
+</th>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1104397"> </a><div class="pCellBody">
+No Proxy
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1104399"> </a><div class="pCellBody">
+No proxy server is used to connect to the Internet. This is the default setting.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1104401"> </a><div class="pCellBody">
+Use IE Proxy
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1104403"> </a><div class="pCellBody">
+Selecting this checkbox enables use of the Internet Explorer proxy settings.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1102526"> </a><div class="pCellBody">
+Use Proxy
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1102528"> </a><div class="pCellBody">
+Selecting this checkbox enables the proxy server settings. The IRU will look for the specified proxy machine on the specified port. 
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1102530"> </a><div class="pCellBody">
+Proxy Host
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1102532"> </a><div class="pCellBody">
+Enter the Host Name of the proxy server.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1102513"> </a><div class="pCellBody">
+Proxy Port
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1102515"> </a><div class="pCellBody">
+Enter the UDP port number of the proxy server.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1102542"> </a><div class="pCellBody">
+Authenticate
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1102544"> </a><div class="pCellBody">
+Selecting this checkbox enables proxy server user authentication settings.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1102546"> </a><div class="pCellBody">
+User Name
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1102548"> </a><div class="pCellBody">
+The authorized user for the proxy server.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1102517"> </a><div class="pCellBody">
+Password
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1102519"> </a><div class="pCellBody">
+The authorized user&#39;s proxy server password.
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</p>
+<a name="wp1102390"> </a><h4 class="pHeading4">
+Force Off-Line
+</h4>
+<a name="wp1102405"> </a><p class="pBody">
+The <span style="font-style: italic">Force Off-Line</span> tab page controls whether the IRU forces an off-line registration or not. 
+</p>
+<a name="wp1102632"> </a><p class="pBody">
+<a href="Management.html#wp1101560">Figure 6-9 on page 6-12</a> shows the <span style="font-style: italic">Force Off-Line</span> tab page.
+</p>
+<a name="wp1101560"> </a><p class="pFigure">
+Figure 6-9.	Forced Off-Line Tab</p>
+<div align="left"><img src="images/IruSettingForce.jpg" id="wp1101568" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<a name="wp1101440"> </a><p class="pBody">
+Select the <span style="font-style: italic">Force Off Line</span> checkbox to force the IRU to register licenses offline.
+</p>
+<a name="wp1101408"> </a><h3 class="pHeading3">
+Using the Diagnostic Utility
+</h3>
+<a name="wp1101251"> </a><p class="pBody">
+The diagnostic utility helps the user to troubleshoot and understand licensing installation and registration problems. To open this utility, select <span style="font-style: italic">Tools &gt; Diagnostic</span> in the menu bar, as shown in <a href="Management.html#wp1100784">Figure 6-10 on page 6-13</a>:
+</p>
+<a name="wp1100784"> </a><p class="pFigure">
+Figure 6-10.	Open the Diagnostic Utility</p>
+<div align="left"><img src="images/LmuDiag.jpg" id="wp1100788" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<a name="wp1100764"> </a><p class="pBody">
+The diagnostic utility main window appears as in <a href="Management.html#wp1100811">Figure 6-11 on page 6-13</a>:
+</p>
+<a name="wp1100811"> </a><p class="pFigure">
+Figure 6-11.	Diagnostic Utility</p>
+<div align="left"><img src="images/diagnosticTool.jpg" id="wp1100815" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<a name="wp1100813"> </a><p class="pBody">
+For specific information on using this utility, see Appendix C, Licensing Diagnostic Utility.
+</p>
+<a name="wp1105035"> </a><h3 class="pHeading3">
+IxiaLM Port Configuration
+</h3>
+<a name="wp1105382"> </a><p class="pBody">
+If the license server and the licensed node are separated by a firewall, the license server may have problems validating the node for licensed use. In this situation it may be necessary to specify a TCP port that works with the firewall setup on the localhost for the license
+</p>
+<a name="wp1105383"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1105396"> </a><div class="pCellBody">
+<span style="font-weight: bold">Note</span>. This feature only affects the licenses on the localhost.
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+.
+</div>
+<a name="wp1105384"> </a><p class="pBody">
+To open this utility, select <span style="font-style: italic">Tools &gt; IxiaLM Port Configuration </span>in the menu bar, as shown in <a href="Management.html#wp1105158">Figure 6-12 on page 6-14</a>:
+</p>
+<a name="wp1105158"> </a><p class="pFigure">
+Figure 6-12.	Open IxiaLM Port Configuration</p>
+<div align="left"><img src="images/LmuDiag3.jpg" id="wp1105163" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<a name="wp1105309"> </a><p class="pBody">
+The IxiaLM Port Configuration dialog appears as in <a href="Management.html#wp1105183">Figure 6-13 on page 6-14</a>:
+</p>
+<a name="wp1105183"> </a><p class="pFigure">
+Figure 6-13.	IxiaLM Port Configuration Dialog</p>
+<div align="left"><img src="images/lmPortConfig.jpg" id="wp1105190" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<a name="wp1105184"> </a><p class="pBody">
+<a href="Management.html#wp1105201">Table 6-3</a> explains the options in the IxiaLM Port Configuration dialog.
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#C80000" bordercolordark="#FFFFFF">
+
+  <caption><a name="wp1105201"> </a><div class="pTableTitle">
+Table 6-3.	Port Configuration Controls
+</div>
+</caption>
+  <tr bgcolor="#FFFFFF">
+      <th style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000;">
+               <a name="wp1105205"> </a><div class="pCellHeading">
+Control
+</div>
+</th>
+    <th style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000;">
+               <a name="wp1105207"> </a><div class="pCellHeading">
+Description
+</div>
+</th>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1105209"> </a><div class="pCellBody">
+Default
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1105211"> </a><div class="pCellBody">
+(default) Selecting this radio button causes the licensing service to use the first available TCP port for node validation.
+</div>
+<a name="wp1105246"> </a><div class="pCellBody">
+This option overrides any previously configured port setting.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1105213"> </a><div class="pCellBody">
+Use Port
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1105215"> </a><div class="pCellBody">
+Selecting this radio button cause the licensing service to use the specified TCP port for node validation. Valid TCP ports are 1024 through 49151.
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</p>
+<h4 class="Heading3Split">
+  <a name="1105564"> </a>Floating <a name="FloatingLicenseStatsDialog"> </a>
+License Traffic Statistics
+</h4>
+<a name="wp1105593"> </a><p class="pBody">
+The Floating License Traffic Statistics feature provides a way for users to examine floating license statistics such as the total license token count, available token count, users that have checked out license tokens, and the number of license tokens each user has checked out.
+</p>
+<a name="wp1106168"> </a><p class="pBody">
+To open this utility, select <span style="font-style: italic">Tools &gt; Floating License Stats </span>in the menu bar, as shown in <a href="Management.html#wp1106022">Figure 6-14 on page 6-15</a>:
+</p>
+<a name="wp1106022"> </a><p class="pFigure">
+Figure 6-14.	Open Floating License Stats</p>
+<div align="left"><img src="images/LmuDiag4.jpg" id="wp1106020" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<a name="wp1106117"> </a><p class="pBody">
+The Floating License Statistics dialog appears as in <a href="Management.html#wp1106122">Figure 6-15 on page 6-16</a>:
+</p>
+<a name="wp1106122"> </a><p class="pFigure">
+Figure 6-15.	Floating License Statistics Dialog</p>
+<div align="left"><img src="images/floatingStatsDiag.jpg" id="wp1106120" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<a name="wp1106332"> </a><p class="pBody">
+<a href="Management.html#wp1106316">Table 6-4</a> explains the options in the Floating License Statistics dialog.
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#C80000" bordercolordark="#FFFFFF">
+
+  <caption><a name="wp1106316"> </a><div class="pTableTitle">
+Table 6-4.	Floating License Statistics Fields
+</div>
+</caption>
+  <tr bgcolor="#FFFFFF">
+      <th style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000;">
+               <a name="wp1106320"> </a><div class="pCellHeading">
+Field
+</div>
+</th>
+    <th style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000;">
+               <a name="wp1106322"> </a><div class="pCellHeading">
+Description
+</div>
+</th>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1106340"> </a><div class="pCellBody">
+Feature
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1106342"> </a><div class="pCellBody">
+Describes the license feature.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1106344"> </a><div class="pCellBody">
+Maintenance Until
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1106346"> </a><div class="pCellBody">
+Shows the end maintenance date of the license.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1106348"> </a><div class="pCellBody">
+Borrowable
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1106350"> </a><div class="pCellBody">
+Shows if the license can be borrowed.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1106352"> </a><div class="pCellBody">
+Available
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1106354"> </a><div class="pCellBody">
+Shows the number of users that can access the license at the same time.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1106356"> </a><div class="pCellBody">
+User
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1106358"> </a><div class="pCellBody">
+The user that has the license checked out.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1106360"> </a><div class="pCellBody">
+Count Taken
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1106362"> </a><div class="pCellBody">
+Shows the number of ???
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1106364"> </a><div class="pCellBody">
+Borrowed
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1106366"> </a><div class="pCellBody">
+Shows whether the license is borrowed or not. Borrowed licenses are checked out for a specific amount of time.
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1106368"> </a><div class="pCellBody">
+Duration
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1106370"> </a><div class="pCellBody">
+If the license is borrowed, the length of time the license will be checked out.
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</p>
+<a name="wp1105606"> </a><p class="pBody">
+
+</p>
+<a name="wp1100765"> </a><h2 class="pHeading1">
+Floating License Configuration Options
+</h2>
+<a name="wp1103174"> </a><p class="pBody">
+Ixia&#39;s licensing system supports configurable options for floating licenses by installing an option file, called <code class="cCode">ixialm.opt</code>, with the software. 
+</p>
+<a name="wp1103251"> </a><p class="pBody">
+A floating license server administrator can control license usage based on user, host, domain, or other criteria, introducing a option file on the floating license server with some predefined option syntax. The administrator can modify the sample options syntax to achieve better administrative control on the floating license server.
+</p>
+<a name="wp1103350"> </a><p class="pBody">
+The following options are supported:. 
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1103208"> </a><div class="pSmartList2"><li>Allow the use of features</li></div>
+<a name="wp1103209"> </a><div class="pSmartList2"><li>Deny the use of features</li></div>
+<a name="wp1103210"> </a><div class="pSmartList2"><li>Reserve licenses</li></div>
+<a name="wp1103211"> </a><div class="pSmartList2"><li>Restrict the number of licenses available</li></div>
+<a name="wp1103212"> </a><div class="pSmartList2"><li>Control the amount of information logged about license usage</li></div>
+<a name="wp1103213"> </a><div class="pSmartList2"><li>Enable a report log file</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1103150"> </a><p class="pBody">
+Initially, all options are disabled. 
+</p>
+<a name="wp1103427"> </a><h2 class="pHeading2">
+Syntax
+</h2>
+<a name="wp1103344"> </a><p class="pBody">
+The following sections detail the file options syntax and how they are used. The syntax is used in the ixialm.opt file, and is modified with any text editor. In the following command syntax:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1103488"> </a><div class="pSmartList2"><li>Text in capital letters is required, exactly as shown</li></div>
+<a name="wp1103489"> </a><div class="pSmartList2"><li>Text surrounded by open and closed carrot symbols (&lt; and &gt;) is optional</li></div>
+<a name="wp1103490"> </a><div class="pSmartList2"><li>Italicized text denotes a variable and must be replaced with some meaningful value.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1103269"> </a><h3 class="pHeading3">
+BORROW_LOWWATER
+</h3>
+<div class="pPreformatted"><pre class="pPreformatted">
+BORROW_LOWWATER <span style="font-style: italic">ixia_feature</span> <span style="font-style: italic">integer</span><a name="wp1103270"> </a>
+</pre></div>
+<a name="wp1103434"> </a><p class="pBody">
+Sets the number of BORROW licenses that cannot be borrowed. This number sets the minimum number of free licenses. For example, if this variable is set to 10, and a server has twenty licenses, only 10 can be borrowed at any one time.
+</p>
+<a name="wp1103433"> </a><p class="pBody">
+Example: 
+</p>
+<div class="pPreformatted"><pre class="pPreformatted">
+BORROW_LOWWATER IXNETWORK_5.30 10<a name="wp1103450"> </a>
+</pre></div>
+<a name="wp1103271"> </a><h3 class="pHeading3">
+DEBUGLOG
+</h3>
+<div class="pPreformatted"><pre class="pPreformatted">
+DEBUGLOG &lt;+&gt; <span style="font-style: italic">filename</span><a name="wp1103454"> </a>
+</pre></div>
+<a name="wp1103459"> </a><p class="pBody">
+Writes debug log information for this vendor daemon to the specified file. The addition of a plus sign (+) before the logfile name appends the log. If no plus sign is used, restarting the license server service overwrites the previous log.
+</p>
+<a name="wp1103494"> </a><p class="pBody">
+Example:
+</p>
+<div class="pPreformatted"><pre class="pPreformatted">
+DEBUGLOG + myixlmlog.log<a name="wp1103498"> </a>
+DEBUGLOG newixlmlog.log<a name="wp1103506"> </a>
+</pre></div>
+<a name="wp1103651"> </a><h3 class="pHeading3">
+EXCLUDE
+</h3>
+<div class="pPreformatted"><pre class="pPreformatted">
+EXCLUDE <span style="font-style: italic">ixia_feature</span> <span style="font-style: italic">exclude_level</span> <span style="font-style: italic">value</span><a name="wp1103652"> </a>
+</pre></div>
+<a name="wp1103653"> </a><p class="pBody">
+Deny a user or users access to a feature, based on specified parameters. The exclusions parameter is one of the following:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1104803"> </a><div class="pSmartList2"><li>USER &#150; reserves for a specific user. User names are case sensitive.</li></div>
+<a name="wp1104804"> </a><div class="pSmartList2"><li>HOST &#150; reserves for a specific host machine. Host names are case sensitive.</li></div>
+<a name="wp1104805"> </a><div class="pSmartList2"><li>DISPLAY &#150; includes the display machine. On UNIX, DISPLAY is /dev/ttyxx (which is always /dev/tty when an application is run in thebackground) or the X-Display name. On Windows, it is the system name or, in the case of a terminal server environment, the terminal server client name. Display names are case sensitive.</li></div>
+<a name="wp1104806"> </a><div class="pSmartList2"><li>INTERNET &#150; reserves for a specific IP address or IP subnet. Wildcard characters can be used in the IP address.</li></div>
+<a name="wp1104809"> </a><div class="pSmartList2"><li>GROUP &#150; reserves for a pre-defined group of users (see <a href="Management.html#wp1103281"><span style="font-style: italic">GROUP</span> on page 6-20</a> for more information on defining a user group). Group names are case sensitive.</li></div>
+<a name="wp1104811"> </a><div class="pSmartList2"><li>HOST_GROUP &#150; reserves for a pre-defined group of hosts (see <a href="Management.html#wp1103285"><span style="font-style: italic">HOST_GROUP</span> on page 6-21</a> for more information on defining a host group). Host group names are case sensitive.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1103667"> </a><p class="pBody">
+Examples:
+</p>
+<div class="pPreformatted"><pre class="pPreformatted">
+EXCLUDE IXNETWORK_5.30 USER michael<a name="wp1103668"> </a>
+EXCLUDE IXNETWORK_5.30 HOST MICHAEL-PC1<a name="wp1103669"> </a>
+EXCLUDE IXNETWORK_5.30 DISPLAY MICHAEL-PC1<a name="wp1103670"> </a>
+EXCLUDE IXNETWORK_5.30 INTERNET 10.205.20.67<a name="wp1103671"> </a>
+EXCLUDE IXNETWORK_5.30 INTERNET 10.205.20.*<a name="wp1103672"> </a>
+EXCLUDE IXNETWORK_5.30 GROUP WRITERS<a name="wp1103673"> </a>
+EXCLUDE IXNETWORK_5.30 HOST_GROUP WRITERS-PCS<a name="wp1103674"> </a>
+</pre></div>
+<a name="wp1103675"> </a><h3 class="pHeading3">
+EXCLUDE_BORROW
+</h3>
+<div class="pPreformatted"><pre class="pPreformatted">
+EXCLUDE_BORROW <span style="font-style: italic">ixia_feature</span> <span style="font-style: italic">exclude_level</span> <span style="font-style: italic">value</span><a name="wp1103679"> </a>
+</pre></div>
+<a name="wp1103680"> </a><p class="pBody">
+Deny a user or users the ability to borrow BORROW licenses, based on specified parameters. The exclusions parameter is one of the following:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1104820"> </a><div class="pSmartList2"><li>USER &#150; reserves for a specific user. User names are case sensitive.</li></div>
+<a name="wp1104821"> </a><div class="pSmartList2"><li>HOST &#150; reserves for a specific host machine. Host names are case sensitive.</li></div>
+<a name="wp1104822"> </a><div class="pSmartList2"><li>DISPLAY &#150; includes the display machine. On UNIX, DISPLAY is /dev/ttyxx (which is always /dev/tty when an application is run in thebackground) or the X-Display name. On Windows, it is the system name or, in the case of a terminal server environment, the terminal server client name. Display names are case sensitive.</li></div>
+<a name="wp1104823"> </a><div class="pSmartList2"><li>INTERNET &#150; reserves for a specific IP address or IP subnet. Wildcard characters can be used in the IP address.</li></div>
+<a name="wp1104826"> </a><div class="pSmartList2"><li>GROUP &#150; reserves for a pre-defined group of users (see <a href="Management.html#wp1103281"><span style="font-style: italic">GROUP</span> on page 6-20</a> for more information on defining a user group). Group names are case sensitive.</li></div>
+<a name="wp1104828"> </a><div class="pSmartList2"><li>HOST_GROUP &#150; reserves for a pre-defined group of hosts (see <a href="Management.html#wp1103285"><span style="font-style: italic">HOST_GROUP</span> on page 6-21</a> for more information on defining a host group). Host group names are case sensitive.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1103694"> </a><p class="pBody">
+Examples:
+</p>
+<div class="pPreformatted"><pre class="pPreformatted">
+EXCLUDE_BORROW IXNETWORK_5.30 USER michael<a name="wp1103695"> </a>
+EXCLUDE_BORROW IXNETWORK_5.30 HOST MICHAEL-PC1<a name="wp1103696"> </a>
+EXCLUDE_BORROW IXNETWORK_5.30 DISPLAY MICHAEL-PC1<a name="wp1103697"> </a>
+EXCLUDE_BORROW IXNETWORK_5.30 INTERNET 10.205.20.67<a name="wp1103698"> </a>
+EXCLUDE_BORROW IXNETWORK_5.30 INTERNET 10.205.20.*<a name="wp1103699"> </a>
+EXCLUDE_BORROW IXNETWORK_5.30 GROUP WRITERS<a name="wp1103700"> </a>
+EXCLUDE_BORROW IXNETWORK_5.30 HOST_GROUP WRITERS-PCS<a name="wp1103701"> </a>
+</pre></div>
+<a name="wp1103277"> </a><h3 class="pHeading3">
+EXCLUDEALL
+</h3>
+<div class="pPreformatted"><pre class="pPreformatted">
+EXCLUDEALL <span style="font-style: italic">ixia_feature</span> <span style="font-style: italic">exclude_level</span> <span style="font-style: italic">value</span><a name="wp1103776"> </a>
+</pre></div>
+<a name="wp1103752"> </a><p class="pBody">
+Deny a user or users to all features, based on specified parameters. The exclusions parameter is one of the following:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1104837"> </a><div class="pSmartList2"><li>USER &#150; reserves for a specific user. User names are case sensitive.</li></div>
+<a name="wp1104838"> </a><div class="pSmartList2"><li>HOST &#150; reserves for a specific host machine. Host names are case sensitive.</li></div>
+<a name="wp1104839"> </a><div class="pSmartList2"><li>DISPLAY &#150; includes the display machine. On UNIX, DISPLAY is /dev/ttyxx (which is always /dev/tty when an application is run in thebackground) or the X-Display name. On Windows, it is the system name or, in the case of a terminal server environment, the terminal server client name. Display names are case sensitive.</li></div>
+<a name="wp1104840"> </a><div class="pSmartList2"><li>INTERNET &#150; reserves for a specific IP address or IP subnet. Wildcard characters can be used in the IP address.</li></div>
+<a name="wp1104843"> </a><div class="pSmartList2"><li>GROUP &#150; reserves for a pre-defined group of users (see <a href="Management.html#wp1103281"><span style="font-style: italic">GROUP</span> on page 6-20</a> for more information on defining a user group). Group names are case sensitive.</li></div>
+<a name="wp1104845"> </a><div class="pSmartList2"><li>HOST_GROUP &#150; reserves for a pre-defined group of hosts (see <a href="Management.html#wp1103285"><span style="font-style: italic">HOST_GROUP</span> on page 6-21</a> for more information on defining a host group). Host group names are case sensitive.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1103784"> </a><p class="pBody">
+Examples:
+</p>
+<div class="pPreformatted"><pre class="pPreformatted">
+EXCLUDEALL IXNETWORK_5.30 USER michael<a name="wp1103785"> </a>
+EXCLUDEALL IXNETWORK_5.30 HOST MICHAEL-PC1<a name="wp1103786"> </a>
+EXCLUDEALL IXNETWORK_5.30 DISPLAY MICHAEL-PC1<a name="wp1103787"> </a>
+EXCLUDEALL IXNETWORK_5.30 INTERNET 10.205.20.67<a name="wp1103788"> </a>
+EXCLUDEALL IXNETWORK_5.30 INTERNET 10.205.20.*<a name="wp1103789"> </a>
+EXCLUDEALL IXNETWORK_5.30 GROUP WRITERS<a name="wp1103790"> </a>
+EXCLUDEALL IXNETWORK_5.30 HOST_GROUP WRITERS-PCS<a name="wp1103791"> </a>
+</pre></div>
+<a name="wp1103281"> </a><h3 class="pHeading3">
+GROUP
+</h3>
+<div class="pPreformatted"><pre class="pPreformatted">
+GROUP MYGRP <span style="font-style: italic">user1</span> <span style="font-style: italic">&lt;user2&gt;</span>...<span style="font-style: italic">&lt;userN&gt;</span> <a name="wp1103830"> </a>
+</pre></div>
+<a name="wp1103282"> </a><p class="pBody">
+Defines a group of users for use with the options statements.
+</p>
+<a name="wp1103847"> </a><p class="pBody">
+Example:
+</p>
+<div class="pPreformatted"><pre class="pPreformatted">
+GROUP MYGRP john michael doug<a name="wp1103848"> </a>
+</pre></div>
+<a name="wp1103283"> </a><h3 class="pHeading3">
+GROUPCASEINSENSITIVE
+</h3>
+<div class="pPreformatted"><pre class="pPreformatted">
+GROUPCASEINSENSITIVE ON<a name="wp1103856"> </a>
+</pre></div>
+<a name="wp1103284"> </a><p class="pBody">
+Turns off case sensitivity for user and host lists specified in GROUP and HOST_GROUP keywords. By default, the license server is case sensitive.
+</p>
+<a name="wp1103864"> </a><p class="pBody">
+Example:
+</p>
+<div class="pPreformatted"><pre class="pPreformatted">
+GROUPCASEINSENSITIVE ON<a name="wp1103869"> </a>
+</pre></div>
+<a name="wp1103285"> </a><h3 class="pHeading3">
+HOST_GROUP
+</h3>
+<div class="pPreformatted"><pre class="pPreformatted">
+HOST_GROUP MYHGRP <span style="font-style: italic">host1</span> <span style="font-style: italic">&lt;host2&gt;</span>...<span style="font-style: italic">&lt;hostN&gt;</span> <a name="wp1103879"> </a>
+</pre></div>
+<a name="wp1103880"> </a><p class="pBody">
+Defines a group of hosts for use with the options statements.
+</p>
+<a name="wp1103881"> </a><p class="pBody">
+Example:
+</p>
+<div class="pPreformatted"><pre class="pPreformatted">
+HOST_GROUP MYHGRP MICHAEL-LAP2 MICHAEL-PC2 JOHN-WORK-PC<a name="wp1103882"> </a>
+</pre></div>
+<a name="wp1103287"> </a><h3 class="pHeading3">
+INCLUDE
+</h3>
+<div class="pPreformatted"><pre class="pPreformatted">
+INCLUDE <span style="font-style: italic">ixia_feature</span> <span style="font-style: italic">include_level</span> <span style="font-style: italic">value</span><a name="wp1103908"> </a>
+</pre></div>
+<a name="wp1103909"> </a><p class="pBody">
+Allow a user or users access to a feature, based on specified parameters. The inclusion parameter is one of the following:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1104854"> </a><div class="pSmartList2"><li>USER &#150; reserves for a specific user. User names are case sensitive.</li></div>
+<a name="wp1104855"> </a><div class="pSmartList2"><li>HOST &#150; reserves for a specific host machine. Host names are case sensitive.</li></div>
+<a name="wp1104856"> </a><div class="pSmartList2"><li>DISPLAY &#150; includes the display machine. On UNIX, DISPLAY is /dev/ttyxx (which is always /dev/tty when an application is run in thebackground) or the X-Display name. On Windows, it is the system name or, in the case of a terminal server environment, the terminal server client name. Display names are case sensitive.</li></div>
+<a name="wp1104857"> </a><div class="pSmartList2"><li>INTERNET &#150; reserves for a specific IP address or IP subnet. Wildcard characters can be used in the IP address.</li></div>
+<a name="wp1104860"> </a><div class="pSmartList2"><li>GROUP &#150; reserves for a pre-defined group of users (see <a href="Management.html#wp1103281"><span style="font-style: italic">GROUP</span> on page 6-20</a> for more information on defining a user group). Group names are case sensitive.</li></div>
+<a name="wp1104862"> </a><div class="pSmartList2"><li>HOST_GROUP &#150; reserves for a pre-defined group of hosts (see <a href="Management.html#wp1103285"><span style="font-style: italic">HOST_GROUP</span> on page 6-21</a> for more information on defining a host group). Host group names are case sensitive.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1103923"> </a><p class="pBody">
+Examples:
+</p>
+<div class="pPreformatted"><pre class="pPreformatted">
+INCLUDE IXNETWORK_5.30 USER michael<a name="wp1103924"> </a>
+INCLUDE IXNETWORK_5.30 HOST MICHAEL-PC1<a name="wp1103925"> </a>
+INCLUDE IXNETWORK_5.30 DISPLAY MICHAEL-PC1<a name="wp1103926"> </a>
+INCLUDE IXNETWORK_5.30 INTERNET 10.205.20.67<a name="wp1103927"> </a>
+INCLUDE IXNETWORK_5.30 INTERNET 10.205.20.*<a name="wp1103928"> </a>
+INCLUDE IXNETWORK_5.30 GROUP WRITERS<a name="wp1103929"> </a>
+INCLUDE IXNETWORK_5.30 HOST_GROUP WRITERS-PCS<a name="wp1103930"> </a>
+</pre></div>
+<a name="wp1103289"> </a><h3 class="pHeading3">
+INCLUDE_BORROW
+</h3>
+<div class="pPreformatted"><pre class="pPreformatted">
+INCLUDE_BORROW <span style="font-style: italic">ixia_feature</span> <span style="font-style: italic">include_level</span> <span style="font-style: italic">value</span><a name="wp1103987"> </a>
+</pre></div>
+<a name="wp1103988"> </a><p class="pBody">
+Allow a user or users access to borrow a feature, based on specified parameters. The inclusion parameter is one of the following:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1104871"> </a><div class="pSmartList2"><li>USER &#150; reserves for a specific user. User names are case sensitive.</li></div>
+<a name="wp1104872"> </a><div class="pSmartList2"><li>HOST &#150; reserves for a specific host machine. Host names are case sensitive.</li></div>
+<a name="wp1104873"> </a><div class="pSmartList2"><li>DISPLAY &#150; includes the display machine. On UNIX, DISPLAY is /dev/ttyxx (which is always /dev/tty when an application is run in thebackground) or the X-Display name. On Windows, it is the system name or, in the case of a terminal server environment, the terminal server client name. Display names are case sensitive.</li></div>
+<a name="wp1104874"> </a><div class="pSmartList2"><li>INTERNET &#150; reserves for a specific IP address or IP subnet. Wildcard characters can be used in the IP address.</li></div>
+<a name="wp1104877"> </a><div class="pSmartList2"><li>GROUP &#150; reserves for a pre-defined group of users (see <a href="Management.html#wp1103281"><span style="font-style: italic">GROUP</span> on page 6-20</a> for more information on defining a user group). Group names are case sensitive.</li></div>
+<a name="wp1104879"> </a><div class="pSmartList2"><li>HOST_GROUP &#150; reserves for a pre-defined group of hosts (see <a href="Management.html#wp1103285"><span style="font-style: italic">HOST_GROUP</span> on page 6-21</a> for more information on defining a host group). Host group names are case sensitive.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1104002"> </a><p class="pBody">
+Examples:
+</p>
+<div class="pPreformatted"><pre class="pPreformatted">
+INCLUDE_BORROW IXNETWORK_5.30 USER michael<a name="wp1104003"> </a>
+INCLUDE_BORROW IXNETWORK_5.30 HOST MICHAEL-PC1<a name="wp1104004"> </a>
+INCLUDE_BORROW IXNETWORK_5.30 DISPLAY MICHAEL-PC1<a name="wp1104005"> </a>
+INCLUDE_BORROW IXNETWORK_5.30 INTERNET 10.205.20.67<a name="wp1104006"> </a>
+INCLUDE_BORROW IXNETWORK_5.30 INTERNET 10.205.20.*<a name="wp1104007"> </a>
+INCLUDE_BORROW IXNETWORK_5.30 GROUP WRITERS<a name="wp1104008"> </a>
+INCLUDE_BORROW IXNETWORK_5.30 HOST_GROUP WRITERS-PCS<a name="wp1104009"> </a>
+</pre></div>
+<a name="wp1103291"> </a><h3 class="pHeading3">
+INCLUDEALL
+</h3>
+<div class="pPreformatted"><pre class="pPreformatted">
+INCLUDEALL <span style="font-style: italic">ixia_feature</span> <span style="font-style: italic">include_level</span> <span style="font-style: italic">value</span><a name="wp1104041"> </a>
+</pre></div>
+<a name="wp1104042"> </a><p class="pBody">
+Allow a user or users access to all features, based on specified parameters. The inclusion parameter is one of the following:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1104888"> </a><div class="pSmartList2"><li>USER &#150; reserves for a specific user. User names are case sensitive.</li></div>
+<a name="wp1104889"> </a><div class="pSmartList2"><li>HOST &#150; reserves for a specific host machine. Host names are case sensitive.</li></div>
+<a name="wp1104890"> </a><div class="pSmartList2"><li>DISPLAY &#150; includes the display machine. On UNIX, DISPLAY is /dev/ttyxx (which is always /dev/tty when an application is run in thebackground) or the X-Display name. On Windows, it is the system name or, in the case of a terminal server environment, the terminal server client name. Display names are case sensitive.</li></div>
+<a name="wp1104891"> </a><div class="pSmartList2"><li>INTERNET &#150; reserves for a specific IP address or IP subnet. Wildcard characters can be used in the IP address.</li></div>
+<a name="wp1104894"> </a><div class="pSmartList2"><li>GROUP &#150; reserves for a pre-defined group of users (see <a href="Management.html#wp1103281"><span style="font-style: italic">GROUP</span> on page 6-20</a> for more information on defining a user group). Group names are case sensitive.</li></div>
+<a name="wp1104896"> </a><div class="pSmartList2"><li>HOST_GROUP &#150; reserves for a pre-defined group of hosts (see <a href="Management.html#wp1103285"><span style="font-style: italic">HOST_GROUP</span> on page 6-21</a> for more information on defining a host group). Host group names are case sensitive.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1104056"> </a><p class="pBody">
+Examples:
+</p>
+<div class="pPreformatted"><pre class="pPreformatted">
+INCLUDEALL IXNETWORK_5.30 USER michael<a name="wp1104057"> </a>
+INCLUDEALL IXNETWORK_5.30 HOST MICHAEL-PC1<a name="wp1104058"> </a>
+INCLUDEALL IXNETWORK_5.30 DISPLAY MICHAEL-PC1<a name="wp1104059"> </a>
+INCLUDEALL IXNETWORK_5.30 INTERNET 10.205.20.67<a name="wp1104060"> </a>
+INCLUDEALL IXNETWORK_5.30 INTERNET 10.205.20.*<a name="wp1104061"> </a>
+INCLUDEALL IXNETWORK_5.30 GROUP WRITERS<a name="wp1104062"> </a>
+INCLUDEALL IXNETWORK_5.30 HOST_GROUP WRITERS-PCS<a name="wp1104063"> </a>
+</pre></div>
+<a name="wp1103295"> </a><h3 class="pHeading3">
+MAX
+</h3>
+<div class="pPreformatted"><pre class="pPreformatted">
+MAX <span style="font-style: italic">max_users ixia_feature</span> <span style="font-style: italic">include_level</span> <span style="font-style: italic">value</span><a name="wp1104627"> </a>
+</pre></div>
+<a name="wp1104594"> </a><p class="pBody">
+Limit usage for a particular feature/group-prioritizes usage among users. The inclusion parameter is one of the following:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1104905"> </a><div class="pSmartList2"><li>USER &#150; reserves for a specific user. User names are case sensitive.</li></div>
+<a name="wp1104906"> </a><div class="pSmartList2"><li>HOST &#150; reserves for a specific host machine. Host names are case sensitive.</li></div>
+<a name="wp1104907"> </a><div class="pSmartList2"><li>DISPLAY &#150; includes the display machine. On UNIX, DISPLAY is /dev/ttyxx (which is always /dev/tty when an application is run in thebackground) or the X-Display name. On Windows, it is the system name or, in the case of a terminal server environment, the terminal server client name. Display names are case sensitive.</li></div>
+<a name="wp1104908"> </a><div class="pSmartList2"><li>INTERNET &#150; reserves for a specific IP address or IP subnet. Wildcard characters can be used in the IP address.</li></div>
+<a name="wp1104911"> </a><div class="pSmartList2"><li>GROUP &#150; reserves for a pre-defined group of users (see <a href="Management.html#wp1103281"><span style="font-style: italic">GROUP</span> on page 6-20</a> for more information on defining a user group). Group names are case sensitive.</li></div>
+<a name="wp1104913"> </a><div class="pSmartList2"><li>HOST_GROUP &#150; reserves for a pre-defined group of hosts (see <a href="Management.html#wp1103285"><span style="font-style: italic">HOST_GROUP</span> on page 6-21</a> for more information on defining a host group). Host group names are case sensitive.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1104615"> </a><p class="pBody">
+Examples:
+</p>
+<div class="pPreformatted"><pre class="pPreformatted">
+MAX 5 IXIA_FEATURE1 USER michael<a name="wp1104629"> </a>
+MAX 5 IXIA_FEATURE1 HOST MICHAEL-PC1<a name="wp1104631"> </a>
+MAX 5 IXIA_FEATURE1 DISPLAY MICHAEL-PC1<a name="wp1104633"> </a>
+MAX 5 IXIA_FEATURE1 INTERNET 10.205.20.67<a name="wp1104635"> </a>
+MAX 5 IXIA_FEATURE1 INTERNET 10.205.20.*<a name="wp1104637"> </a>
+MAX 5 IXIA_FEATURE1 GROUP MYGRP<a name="wp1104678"> </a>
+MAX 5 IXIA_FEATURE1 HOST_GROUP MYHGRP<a name="wp1104686"> </a>
+</pre></div>
+<a name="wp1103297"> </a><h3 class="pHeading3">
+MAX_BORROW_HOURS
+</h3>
+<div class="pPreformatted"><pre class="pPreformatted">
+MAX_BORROW_HOURS <span style="font-style: italic">ixia_feature</span> <span style="font-style: italic">value</span><a name="wp1104116"> </a>
+</pre></div>
+<a name="wp1104139"> </a><p class="pBody">
+Changes the maximum borrow period for the specified feature.
+</p>
+<a name="wp1104140"> </a><p class="pBody">
+Example:
+</p>
+<div class="pPreformatted"><pre class="pPreformatted">
+MAX_BORROW_HOURS IXNETWORK_5.30 36<a name="wp1104141"> </a>
+</pre></div>
+<a name="wp1103301"> </a><h3 class="pHeading3">
+NOLOG
+</h3>
+<div class="pPreformatted"><pre class="pPreformatted">
+NOLOG <span style="font-style: italic">value</span><a name="wp1104148"> </a>
+</pre></div>
+<a name="wp1103302"> </a><p class="pBody">
+Turns off logging of certain items in the debug log file. The options are:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1104618"> </a><div class="pSmartList2"><li>IN &#150; log in</li></div>
+<a name="wp1104622"> </a><div class="pSmartList2"><li>OUT &#150; log out</li></div>
+<a name="wp1104626"> </a><div class="pSmartList2"><li>DENIED &#150; denied log in</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1104162"> </a><p class="pBody">
+Example:
+</p>
+<div class="pPreformatted"><pre class="pPreformatted">
+NOLOG IN<a name="wp1104163"> </a>
+NOLOG OUT<a name="wp1104167"> </a>
+NOLOG DENIED<a name="wp1104168"> </a>
+</pre></div>
+<a name="wp1103303"> </a><h3 class="pHeading3">
+REPORTLOG
+</h3>
+<a name="wp1103304"> </a><p class="pBody">
+Specify that a report log file suitable for use by the FLEXnet Manager license usage reporting tool be written.
+</p>
+<a name="wp1103305"> </a><h3 class="pHeading3">
+RESERVE
+</h3>
+<div class="pPreformatted"><pre class="pPreformatted">
+RESERVE <span style="font-style: italic">ixia_feature</span> <span style="font-style: italic">include_level</span> <span style="font-style: italic">value</span><a name="wp1104169"> </a>
+</pre></div>
+<a name="wp1103306"> </a><p class="pBody">
+Reserves licenses for a user or group of users/hosts. The reserve parameter is one of the following:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1104188"> </a><div class="pSmartList2"><li>USER &#150; reserves for a specific user. User names are case sensitive.</li></div>
+<a name="wp1104189"> </a><div class="pSmartList2"><li>HOST &#150; reserves for a specific host machine. Host names are case sensitive.</li></div>
+<a name="wp1104777"> </a><div class="pSmartList2"><li>DISPLAY &#150; includes the display machine. On UNIX, DISPLAY is /dev/ttyxx (which is always /dev/tty when an application is run in thebackground) or the X-Display name. On Windows, it is the system name or, in the case of a terminal server environment, the terminal server client name. Display names are case sensitive.</li></div>
+<a name="wp1104786"> </a><div class="pSmartList2"><li>INTERNET &#150; reserves for a specific IP address or IP subnet. Wildcard characters can be used in the IP address.</li></div>
+<a name="wp1104781"> </a><div class="pSmartList2"><li>GROUP &#150; reserves for a pre-defined group of users (see <a href="Management.html#wp1103281"><span style="font-style: italic">GROUP</span> on page 6-20</a> for more information on defining a user group). Group names are case sensitive.</li></div>
+<a name="wp1104197"> </a><div class="pSmartList2"><li>HOST_GROUP &#150; reserves for a pre-defined group of hosts (see <a href="Management.html#wp1103285"><span style="font-style: italic">HOST_GROUP</span> on page 6-21</a> for more information on defining a host group). Host group names are case sensitive.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1104201"> </a><p class="pBody">
+Examples:
+</p>
+<div class="pPreformatted"><pre class="pPreformatted">
+RESERVE IXNETWORK_5.30 USER michael<a name="wp1104202"> </a>
+RESERVE IXNETWORK_5.30 HOST MICHAEL-PC1<a name="wp1104203"> </a>
+RESERVE IXNETWORK_5.30 DISPLAY MICHAEL-PC1<a name="wp1104204"> </a>
+RESERVE IXNETWORK_5.30 INTERNET 10.205.20.67<a name="wp1104205"> </a>
+RESERVE IXNETWORK_5.30 INTERNET 10.205.20.*<a name="wp1104206"> </a>
+RESERVE IXNETWORK_5.30 GROUP WRITERS<a name="wp1104207"> </a>
+RESERVE IXNETWORK_5.30 HOST_GROUP WRITERS-PCS<a name="wp1104208"> </a>
+</pre></div>
+<a name="wp1103307"> </a><h3 class="pHeading3">
+TIMEOUT
+</h3>
+<div class="pPreformatted"><pre class="pPreformatted">
+TIMEOUT <span style="font-style: italic">ixia_feature</span> <span style="font-style: italic">value</span><a name="wp1104302"> </a>
+</pre></div>
+<a name="wp1103308"> </a><p class="pBody">
+Specifies the idle timeout for a feature. After the set amount of time passes without activity on the license, it is returned to the free pool for use by another user.
+</p>
+<a name="wp1104309"> </a><p class="pBody">
+Example:
+</p>
+<div class="pPreformatted"><pre class="pPreformatted">
+TIMEOUT IXIA_FEATURE1 3600<a name="wp1104313"> </a>
+</pre></div>
+<a name="wp1103309"> </a><h3 class="pHeading3">
+TIMEOUTALL
+</h3>
+<div class="pPreformatted"><pre class="pPreformatted">
+TIMEOUTALL <span style="font-style: italic">value</span><a name="wp1104321"> </a>
+</pre></div>
+<a name="wp1104331"> </a><p class="pBody">
+Set timeout on all features. If this is set below 900, the timeout is 900 seconds.
+</p>
+<a name="wp1104325"> </a><p class="pBody">
+Example:
+</p>
+<div class="pPreformatted"><pre class="pPreformatted">
+TIMEOUTALL 3600<a name="wp1104326"> </a>
+</pre></div>
+<a name="wp1103261"> </a><p class="pBody">
+
+</p>
+</blockquote>
+
+<hr color="#C80000">
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top" width="190">
+      <p align="left">
+<a accesskey="4" href="Temporary.html"><img id="LongDescNotReq4" src="images/prev.gif" border="0" alt="Previous" /></a><a accesskey="5" href="PlanningGuide.html"><img id="LongDescNotReq5" src="images/next.gif" border="0" alt="Next" /></a><a accesskey="2" href="IX.html"><img id="LongDescNotReq6" src="images/index.gif" border="0" alt="Index" /></a>
+    </td>
+    <td valign="top" width="516" align="center">Did this document&nbsp;<br>
+ answer your question?
+      <p align="center"><A HREF="mailto:TechPubs@Ixiacom.com%20?subject=Question%20on%20,%20Release 2.70,%20Management%20section"><img border="0" src="images/email.gif" width="55" height="40"></a>
+      <p>If not, let us know!</p>
+    </td>
+    <td valign="top" width="132" align="center">
+      <p align="right">
+    <span style="font-size: 10px">
+    <a href="http://www.ixiacom.com">
+    <img src="images/ixialogo.gif" width="128" height="38" border="0"></a><br>
+    Voice: (818) 871-1800<br>
+    Fax: (818) 871-1805<br>
+    <a href="mailto:info@ixiacom.com">info@ixiacom.com</a>
+    </span>
+    </td>
+  </tr>
+</table>
+</html>

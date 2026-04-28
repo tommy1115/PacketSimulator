@@ -1,0 +1,210 @@
+ 
+##########################################
+# 
+# 	Registration
+# 
+##########################################
+
+ 
+#----------------------------------------- 
+#       Case 1. online  
+#----------------------------------------- 
+ 
+#-----Common
+Register_EnterRegNum_OnLine		=	Registration.html#Register_EnterRegNum_OnLine
+
+#-----NodedLocked
+Register_NodeLockedNode_OnLine		=	Registration.html#Register_NodeLockedNode_OnLine
+Register_NodeLockedLic_OnLine		=	Registration.html#Register_NodeLockedLic_OnLine
+
+#-----Floating
+Register_FloatLic_OnLine		=	Registration.html#Register_NodedLockedLic_OnLine
+
+#-----Common
+Register_OnlineReg_OnLine		=	Registration.html#Register_OnlineReg_OnLine
+Register_PrintReg_OnLine		=	Registration.html#Register_PrintReg_OnLine
+
+#----------------------------------------- 
+#       Case 2. offline 
+#----------------------------------------- 
+
+#-----Common
+Register_OfflineMessage_OffLine		=	Registration.html#Register_OfflineMessage
+Register_EnterRegNum_OffLine		=	Registration.html#Register_EnterRegNum_OffLine
+
+#-----NodedLocked
+Register_NodeLockedNode_OffLine		=	Registration.html#Register_NodeLockedNode_OffLine
+Register_NodeLockedLic_OffLine		=	Registration.html#Register_NodeLockedLic_OffLine
+ 
+
+#-----Floating
+Register_FloatLic_OffLine		=	Registration.html#Register_NodeLockedLic_OffLine
+ 
+#-----Common
+Register_PrintReg_OffLine		=	Registration.html#Register_PrintReg_OffLine
+Register_InstallLic_OffLine		=	Registration.html#Register_InstallLic_OffLine
+
+
+##########################################
+# 
+# 	DeRegister
+# 
+##########################################
+
+#----------------------------------------- 
+#       Case 1. online  
+#----------------------------------------- 
+
+#-----Common
+DeRegister_EnterRegNum_OnLine		=	Deregistration.html#DeRegister_EnterRegNum_OnLine
+
+#-----NodedLocked 
+DeRegister_SelectHost_OnLine		=	Deregistration.html#Deregister_NodeLockedNode_OnLine
+DeRegister_SelectLicServer_OnLine	=	Deregistration.html#DeRegister_SelectLicServer_OnLine
+
+#-----Floating
+DeRegister_SelectLicServerFloat_OnLine	=	Deregistration.html#DeRegister_SelectLicServer_OnLine
+
+#-----Common
+DeRegister_OnLineDereg_OnLine		=	Deregistration.html#DeRegister_OnlineDereg_OnLine
+DeRegister_PrintReg_OnLine		=	Deregistration.html#DeRegister_PrintReg_OnLine
+
+#----------------------------------------- 
+#       Case 2. offline 
+#-----------------------------------------
+
+#-----Common 
+DeRegister_OfflineMessage_OffLine	=	Deregistration.html#DeRegister_OfflineMessage
+DeRegister_EnterRegNum_OffLine		=	Deregistration.html#DeRegister_EnterRegNum_OffLine
+
+#-----NodedLocked	
+DeRegister_NodeLockedNode_OffLine	=	Deregistration.html#Deregister_NodeLockedNode_OffLine	
+
+#										
+DeRegister_SelectHost_OffLine 		=	Deregistration.html#Deregister_NodeLockedNode_OffLine	
+DeRegister_SelectLicServer_OffLine   	=	Deregistration.html#DeRegister_SelectServerFloat_OffLine
+
+#-----Floating
+DeRegister_SelectServerFloat_OffLine	=	Deregistration.html#DeRegister_SelectServerFloat_OffLine
+
+#-----Common
+#							
+DeRegister_OfflineDereg_OffLine		=	Deregistration.html#DeRegister_OfflineDereg_OffLine		
+DeRegister_PrintReg_OffLine		=	Deregistration.html#DeRegister_PrintReg_OffLine  
+ 
+ 
+##########################################
+# 
+# 	Update
+# 
+##########################################
+
+
+#----------------------------------------- 
+#       Case 1. online  
+#-----------------------------------------
+
+#-----Common
+Update_EnterRegNum_OnLine		=	Updating.html#Update_EnterRegNum_OnLine
+
+#-----NodedLocked
+Update_SelectHost_OnLine		=	Updating.html#Update_NodeLockedNode_OnLine
+Update_SelectLicServerFloat_Online	=	Updating.html#Update_SelectLicServerFloat_OnLine
+
+#-----Floating
+Update_SelectLicServerFloat_OnLine	=	Updating.html#Update_SelectLicServerFloat_OnLine
+
+#-----Common
+Update_OnlineReReg_OnLine		=	Updating.html#Update_OnlineReReg_Online
+
+#----------------------------------------- 
+#       Case 2. offline 
+#-----------------------------------------
+
+#-----Common
+Update_OfflineMessage_OffLine 		=	Updating.html#Update_OfflineMessage 
+Update_EnterRegNum_OffLine		=	Updating.html#Update_EnterRegNum_OffLine
+
+#-----NodedLocked                               
+Update_SelectLicServer_OffLine		=	Updating.html#Update_SelectLicSeverFloat_OffLine
+Update_SelectHost_OffLine  		=       Updating.html#Update_NodeLockedNode_OffLine
+
+#-----Floating
+Update_SelectLicSeverFloat_OffLine	=	Updating.html#Update_SelectLicSeverFloat_OffLine
+
+#-----Common                                    
+Update_OfflineDereg_OffLine		=	Updating.html#Update_OfflineDereg_OffLine			
+Update_PrintReg_OffLine			=	Updating.html#Update_PrintReg_OffLine				
+Update_InstallLic_OffLine		=	Updating.html#Update_InstallLic_OffLine
+
+##########################################
+# 
+# 	LMU
+# 
+##########################################
+
+LMU					=	Management.html#LMU
+
+##########################################
+# 
+# 	Add License
+# 
+##########################################
+
+AddLicenseTask_EnterRegNum_OnLine	=	Management.html#AddLicenseTask_EnterRegNum_OnLine
+AddLicenseTask_InstallLic_OnLine	=	Management.html#AddLicenseTask_InstallLic_OnLine
+AddLicenseTask_InstallLic_OnLine	=	Management.html#AddLicenseTask_InstallLic_OnLine
+
+
+##########################################
+# 
+# 	LMU License Functions
+# 
+##########################################
+
+
+#--Dereg Online
+
+LicenseDeRegister_OnLineDereg_OnLine        =      DeRegistration.html#DeRegister_OnlineDereg_OnLine
+LicenseDeRegister_OnLineDereg_OnLine        =      DeRegistration.html#DeRegister_OnlineDereg_OnLine
+
+#-- Dereg OffLine
+LicenseDeRegister_OfflineMessage_OffLine    =      DeRegistration.html#DeRegister_OfflineMessage
+LicenseDeRegister_OfflineDereg_OffLine      =      DeRegistration.html#DeRegister_OfflineDereg_OffLine
+LicenseDeRegister_PrintReg_OffLine          =      DeRegistration.html#DeRegister_PrintReg_OffLine
+LicenseDeRegister_PrintReg_OffLine          =      DeRegistration.html#DeRegister_PrintReg_OffLine
+
+
+#-- Update Online
+LicenseUpdate_OnlineReReg_OnLine            =      Updating.html#Update_OnlineReReg_Online
+LicenseUpdate_OnlineReReg_OnLine            =      Updating.html#Update_OnlineReReg_Online
+
+
+#-- Update Online
+LicenseUpdate_OfflineMessage_OffLine        =      Updating.html#Update_OfflineMessage
+LicenseUpdate_OfflineDereg_OffLine          =      Updating.html#Update_OfflineDereg_OffLine
+LicenseUpdate_PrintReg_OffLine              =      Updating.html#Update_PrintReg_OffLine
+LicenseUpdate_InstallLic_OffLine            =      Updating.html#Update_InstallLic_OffLine
+LicenseUpdate_InstallLic_OffLine            =      Updating.html#Update_InstallLic_OffLine
+
+
+##########################################
+# 
+# Temporary License Help Mapping
+# 
+##########################################
+
+
+# -- Online
+
+TemporaryLicense_TempEnterUserInfo_OnLine		=	Temporary.html#TemporaryLicense_TempEnterUserInfo_OnLine
+TemporaryLicense_TempInstallLicenseOnline_OnLine	=	Temporary.html#TemporaryLicense_TempInstallLicenseOnline_OnLine
+
+
+
+# -- Offline
+
+TemporaryLicense_TempOfflineMessage_OffLine		=	Temporary.html#TemporaryLicense_TempOfflineMessage_OffLine
+TemporaryLicense_TempEnterUserInfo_OffLine		=	Temporary.html#TemporaryLicense_TempEnterUserInfo_OffLine
+TemporaryLicense_PrintReg_OffLine			=	Temporary.html#TemporaryLicense_PrintReg_OffLine
+

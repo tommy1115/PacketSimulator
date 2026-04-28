@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+
+<Node nodeType="ImpairmentPlugin" serverInstantiate="1" baseType="StackElementPlugin">
+<description>Plugin to configure impairment and filter specifications</description>
+<help>Impairment plugin configures interfaces on the Port CPU to impair selected outgoing traffic. 
+Impairment configuration specifies the type of impairment and the filter configuration specifies the selection criteria.</help>
+	<PropertyBoolean>
+		<name>addDelay</name>
+		<default>true</default>
+		<description>This flag must be set to add latency</description>
+	</PropertyBoolean>
+	<PropertyBoolean>
+		<name>addReorder</name>
+		<default>false</default>
+		<description>This flag must be set to add packet reordering</description>
+	</PropertyBoolean>
+	<PropertyBoolean>
+		<name>addDrop</name>
+		<default>false</default>
+		<description>This flag must be set to add packet loss</description>
+	</PropertyBoolean>
+	<PropertyBoolean>
+		<name>addDuplicate</name>
+		<default>false</default>
+		<description>This flag must be set to add packet duplication</description>
+	</PropertyBoolean>
+	<PropertyBoolean>
+		<name>addBandwidth</name>
+		<default>false</default>
+		<description>This flag must be set to limit the rate of traffic</description>
+	</PropertyBoolean>
+	<PropertyBoolean>
+	    <name>randomizeSeed</name>
+	    <default>false</default>
+	    <description>Select this to randomize seed for impairment</description>
+	</PropertyBoolean>
+	<PropertyInt>
+		<name>delay</name>
+		<default>1</default>
+		<min>1</min>
+		<max>1000</max>
+		<description>Delay(ms) to be added to each packet</description>
+	</PropertyInt>
+	<PropertyInt>
+		<name>reorder</name>
+		<default>1</default>
+		<min>1</min>
+		<max>1000</max>
+		<description>Delay(ms) to be added to each packet selected to be re-ordered</description>
+	</PropertyInt>
+	<PropertyInt>
+		<name>reorderLength</name>
+		<default>1</default>
+		<min>1</min>
+		<max>10000</max>
+		<description>Number of consecutive packets to re-order.</description>
+	</PropertyInt>
+	<PropertyString>
+		<name>destinationIp</name>
+		<default>any</default>
+		<description>IP address or subnet. Impairment is applied to only those packets destined to this address/subnet</description>
+	</PropertyString>
+	<PropertyInt>
+		<name>sourcePort</name>
+		<default>0</default>
+		<min>0</min>
+		<max>65535</max>
+		<description>Source port number. Impairment is applied to only those packets which have this source port number</description>
+	</PropertyInt>
+	<PropertyInt>
+		<name>destinationPort</name>
+		<default>0</default>
+		<min>0</min>
+		<max>65535</max>
+		<description>Destination port number. Impairment is applied to only those packets which have this destination port number</description>
+	</PropertyInt>
+	<PropertyString>
+		<name>protocol</name>
+		<default>any</default>
+		<choices>
+			<choice value="any" name="any" />
+			<choice value="1" name="ICMP" />
+			<choice value="6" name="TCP" />
+			<choice value="17" name="UDP" />
+			<choice value="41" name="IPv6" />
+			<choice value="58" name="ICMPv6" />
+		</choices>
+		<description>Protocol name. Impairment is applied to only those packets which use this protocol.</description>
+	</PropertyString>
+	<PropertyString>
+		<name>typeOfService</name>
+		<default>any</default>
+		<choices>
+			<choice value="any" name="any" />
+			<choice value="0x02" name="Minimum Cost (0x02)" />
+			<choice value="0x04" name="Maximum Reliability (0x04)" />
+			<choice value="0x08" name="Maximum Throughput (0x08)" />
+			<choice value="0x10" name="Minimum Delay (0x10)" />
+		</choices>
+		<description>Type of service bits. Impairment is applied to only those packets which belong to this TOS</description>
+	</PropertyString>
+	<PropertyString>
+		<name>bandwidthUnits</name>
+		<default>kbps</default>
+		<choices>
+			<choice value="kbps" name="kBps" />
+			<choice value="kbit" name="kbps" />
+			<choice value="mbps" name="mBps" />
+			<choice value="mbit" name="mbps" />
+		</choices>
+		<description>Bandwidth unit used for traffic limitation.</description>
+	</PropertyString>
+	<PropertyInt>
+		<name>drop</name>
+		<default>1</default>
+		<min>1</min>
+		<max>100</max>
+		<description>Percentage of packets to be dropped.</description>
+	</PropertyInt>
+	<PropertyInt>
+		<name>duplicate</name>
+		<default>1</default>
+		<min>1</min>
+		<max>100</max>
+		<description>Percentage of packets to be duplicated</description>
+	</PropertyInt>
+	<PropertyInt>
+		<name>jitter</name>
+		<default>0</default>
+		<min>0</min>
+		<max>1000</max>
+		<description>Jitter(ms) specifies the amount of variation in delay</description>
+	</PropertyInt>
+	<PropertyInt>
+		<name>gap</name>
+		<default>1</default>
+		<min>1</min>
+		<max>1000</max>
+		<description>Specifies the number of packets to pass through before reordering a packet</description>
+	</PropertyInt>
+	<PropertyInt>
+		<name>bandwidth</name>
+		<default>1</default>
+		<min>1</min>
+		<max>1000</max>
+		<description>Rate(kBps). Specifies the maximum allowable rate per interface</description>
+	</PropertyInt>
+	<PropertyInt>
+		<name>seed</name>
+		<default>1</default>
+		<description>Seed</description>
+	</PropertyInt>
+	<PropertyBoolean>
+	    <obsolete>global is obsoleted, please use impairGlobal instead</obsolete>
+  		<name>global</name>
+  		<default>true</default>
+  		<description>This is set to add impairment to every interface in the underlying ethernet layer bound to an IP address existing in the IP layer above the impairment layer</description>
+  	</PropertyBoolean>
+    <PropertyBoolean>
+  		<name>impairGlobal</name>
+  		<default>true</default>
+  		<description>This is set to add impairment to every interface in the underlying ethernet layer bound to an IP address existing in the IP layer above the impairment layer</description>
+  	</PropertyBoolean>
+	<PropertyBoolean>
+		<name>addDropSequence</name>
+		<default>false</default>
+		<description>This flag must be set to add drop packet sequence</description>
+	</PropertyBoolean>
+	<PropertyInt>
+		<name>dropSequenceSkip</name>
+		<default>1</default>
+		<min>1</min>
+		<max>10000</max>
+		<description>Number of packets to leave unaffected between drop operations.</description>
+	</PropertyInt>
+	<PropertyInt>
+		<name>dropSequenceLength</name>
+		<default>1</default>
+		<min>1</min>
+		<max>10000</max>
+		<description>Number of consecutive packets to drop.</description>
+	</PropertyInt>
+	<PropertyBoolean>
+		<name>addReorderPI</name>
+		<default>false</default>
+		<description>This flag must be set to add fixed packet interval delay.</description>
+	</PropertyBoolean>
+	<PropertyInt>
+		<name>reorderPISkip</name>
+		<default>1</default>
+		<min>1</min>
+		<max>10000</max>
+		<description>Number of packets to leave unaffected between re-order operations.</description>
+	</PropertyInt>
+	<PropertyInt>
+		<name>reorderPILength</name>
+		<default>1</default>
+		<min>1</min>
+		<max>10000</max>
+		<description>Number of consecutive packets to re-order.</description>
+	</PropertyInt>
+	<PropertyInt>
+		<name>reorderPIInterval</name>
+		<default>1</default>
+		<min>1</min>
+		<max>10000</max>
+		<description>Number of packets to skip until delayed packets to be transmited.</description>
+	</PropertyInt>
+	<PropertyInt>
+		<name>reorderPITimeout</name>
+		<default>1000</default>
+		<min>1</min>
+		<max>100000</max>
+		<description>Maximum time to keep packets delayed.</description>
+	</PropertyInt>
+	<PropertyStringList>
+		<name>operationOrder</name>
+		<Choices>
+            <Choice symbol="kDelay" value="kDelay"/>
+            <Choice symbol="kDrop" value="kDrop"/>
+            <Choice symbol="kDropSequence" value="kDropSequence"/>
+            <Choice symbol="kReorder" value="kReorder"/>
+            <Choice symbol="kReorderPI" value="kReorderPI"/>
+            <Choice symbol="kDuplicate" value="kDuplicate"/>
+            <Choice symbol="kBandwidth" value="kBandwidth"/>
+        </Choices>
+        <description>The order in which the impairment operations will be applied.
+        Each item represents the name of an operation.
+        The first item represents the first operation to be applied.
+        The default operation order is: kDelay, kDrop, kDropSequence, kReorder, kReorderPI,
+        kDuplicate, kBandwidth.</description>
+	</PropertyStringList>
+</Node>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Node nodeType="GenericStatSource" baseType="DataDrivenFormBase">
+    <help>Base interface for all additional Stat Sources used by GenericTestModel</help>
+    <Method2 name="Configure">
+    <help></help>
+    </Method2>
+    <Method2 name="Start">
+    <help></help>
+    </Method2>
+    <Method2 name="Stop">
+    <help></help>
+    </Method2>
+    <Method2 name="Deconfigure">
+    <help></help>
+    </Method2>
+</Node>
+

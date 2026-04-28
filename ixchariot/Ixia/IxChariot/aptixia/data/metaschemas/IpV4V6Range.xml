@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="IpV4V6Range" baseType="">
+
+    <help>
+    Manages a range of IP addresses within a IpV4V6 stack element plugin.
+    </help>
+    
+    <PropertyString>
+        <name>name</name>
+        <default>ip-</default>
+        <description>Unique name of the range.</description>
+        <help>Unique name of the range.</help>
+    </PropertyString>
+
+    <PropertyNode nodeType="Vlan">
+        <obsolete>use ethernet instead</obsolete> 
+        <name>vlan</name>
+        <help>not implemented</help>
+    </PropertyNode>	
+
+    <PropertyNode nodeType="MacRange"  polymorphic="1">
+        <help>The MAC range from the Ethernet plugin used to associate the interfaces from. 
+        See MacRange for more details.</help>
+        <name>macRange</name>
+    </PropertyNode>
+
+    <PropertyNode nodeType="VlanIdRange"  polymorphic="1">
+        <help>The VlanId range from the Ethernet plugin used to associate the Vlan info from. 
+        See VlanIdRange for more details.</help>
+        <name>vlanRange</name>
+    </PropertyNode>
+    
+    <PropertyNode nodeType="AtmRange"  polymorphic="1">
+        <help>The ATM range from the ATM plugin used to associate the ATM info from. 
+        See AtmRange for more details.</help>
+        <name>atmRange</name>
+    </PropertyNode>
+    
+    <PropertyNode nodeType="PvcRange"  polymorphic="1">
+        <help>The PVC range from the ATM plugin used to associate the PVC info from. 
+        See PvcRange for more details.</help>
+        <name>pvcRange</name>
+    </PropertyNode>
+
+    <Method2 name="AutoGenerateMacRange">
+         <help>Generate or remove a MAC range on demand.</help>
+         <Argument name="generate" direction="in" type="bool">
+            <help>
+            If this field is true generate a new mac range. If the value is set to false
+            the mac range associated is deleted.</help>
+         </Argument>
+         <Argument name="success" direction="out" type="bool">
+            <help>Return value is true if the range was generated.</help>
+         </Argument>
+    </Method2>
+    
+    <Method2 name="AutoGenerateAtmRange">
+         <help>Generate or remove an ATM range on demand.</help>
+         <Argument name="success" direction="out" type="bool">
+            <help>Return value is true if the range was generated.</help>
+         </Argument>
+    </Method2>
+    
+    <Method2 name="AutoGeneratePvcRange">
+         <help>Generate or remove a PVC range on demand.</help>
+         <Argument name="success" direction="out" type="bool">
+            <help>Return value is true if the range was generated.</help>
+         </Argument>
+    </Method2>
+   
+    <PropertyBoolean>
+        <name>generateStatistics</name>
+        <default>false</default>
+        <help>
+        If this value is true, statistics will be generated for this range.
+        </help>
+    </PropertyBoolean>
+
+    <PropertyBoolean>
+        <name>enabled</name>
+        <default>true</default>
+        <help>
+        If this value is false, the range is not included in the
+        configuration.
+        </help>
+    </PropertyBoolean>
+    
+    <PropertyString>
+        <name>ipType</name>
+        <default>IPv4</default>
+        <choices>
+            <choice value="IPv4" name="IPv4" />
+            <choice value="IPv6" name="IPv6" />
+        </choices>
+        <help>
+        Defines the version of IP address style to be 
+        used for describing the range.
+        </help>
+    </PropertyString>
+    
+    <PropertyString>
+        <name>ipAddress</name>
+        <default>10.10.10.2</default>
+        <help>
+        Defines the base address to be used for enumerating all the addresses
+        in the range.
+        </help>
+    </PropertyString>
+
+    <PropertyString>
+        <name>incrementBy</name>
+        <default>0.0.0.1</default>
+        <help>
+        Defines the increment to be used for enumerating all the addresses
+        in the range.
+        </help>
+    </PropertyString>
+    
+    <PropertyString>
+        <name>gatewayAddress</name>
+        <default>10.10.10.1</default>
+        <help>
+        Defines the gateway to be associated with all the addresses
+        created in the range.
+        </help>
+    </PropertyString>
+
+    <PropertyInt>
+        <name>prefix</name>
+        <default>24</default>
+        <min>0</min>
+        <max>128</max>
+        <help>
+        Defines the length (in bits) of the mask to be used 
+        in conjunction with all the addresses created in the range.
+        e.g., a prefix of 24 = 255.255.255.0 for IPv4.
+        </help>
+    </PropertyInt>
+
+    <PropertyInt>
+        <name>count</name>
+        <default>1</default>
+        <min>1</min>
+        <help>
+        The total number of addresses to be created for the range.
+        </help>
+    </PropertyInt>
+    
+    <PropertyInt>
+        <name>mss</name>
+        <default>1460</default>
+        <min>0</min>
+        <max>65495</max>
+        <help>
+        The Maximum Segment Size, defines the maximum length of the data.
+        TCP MSS = MTU - TCP header size - IP header size.
+        Theoretically, this value can be as large as 65495, but such a large value is never used
+        For Ethernet the maximum value for MSS is 1460 = 1500-40.
+        </help>
+    </PropertyInt>
+   
+    <PropertyNode nodeType="DhcpSettings" polymorphic="1">
+        <name>dhcpSettings</name>
+        <help>
+        Object representing properties used by DHCP.
+        </help>
+    </PropertyNode>
+    
+    <PropertyString type="sync">
+        <name>addressAllocationMechanism</name>
+        <default>static</default>
+        <choices>
+            <choice value="static" name="static" />
+            <choice value="dhcp" name="dhcp" />
+        </choices>
+        <help>
+        How the addresses are assigned.
+        </help>
+    </PropertyString>
+
+	<PropertyBoolean>
+		<name>autoMacGeneration</name>
+		<default>0</default>
+		<description>If set, MAC addresses will be auto-generated based on IP</description>
+	</PropertyBoolean>
+	
+</Node>

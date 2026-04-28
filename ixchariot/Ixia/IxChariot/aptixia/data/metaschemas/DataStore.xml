@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>   
+ 
+<Node nodeType="DataStore" baseType="TreeNode">
+    <description>Object represents the Datastore.</description>
+	<help>This object exposes global configuration properties and methods for Datastore operations.</help>
+	
+    <Struct name="ArchiveTimeOfDay" version="1">
+    <help>Time of the day when automated archiving is attempted.</help>
+        <Member name="hour" type="int16" default="-1" version="1">
+            <help>Hour of the day for automated archiving, using 24hr clock (13 means 1PM).</help>
+        </Member>
+        <Member name="minute" type="int16" default="-1" version="1">
+            <help>Minute of the day for automated archiving.</help>        
+        </Member>
+    </Struct>
+    
+    <List name="TestResultIdList" type="int32" />        
+    
+    <Method2 name="ArchiveTestResults">
+    <help>This command archives data for the specified TestResults.</help>        
+        <Argument name="idList" type="DataStore.TestResultIdList" direction="in">
+            <help>List of Ids of TestResult to archive.</help>            
+        </Argument>
+    </Method2> 
+    
+    <Method2 name="ArchiveTestResult"> 
+    <help>This command archives data for the specified TestResult.</help>       
+        <Argument name="testResultId" type="int32" direction="in">
+            <help>Id of the TestResult to archive.</help>            
+        </Argument>        
+    </Method2> 
+    
+    <Method2 name="GetArchiveTimeOfDay"> 
+    <help>Gets the configured time of the day for automated archiving.</help>       
+        <Argument name="timeOfDay" type="DataStore.ArchiveTimeOfDay" direction="out">
+            <help>Configured time of the day for automated archiving.</help>            
+        </Argument>        
+    </Method2> 
+    
+    <Method2 name="SetArchiveTimeOfDay">
+    <help>Configures time of the day for automated archiving.</help>        
+        <Argument name="timeOfDay" type="DataStore.ArchiveTimeOfDay" direction="in">
+            <help>Time of the day for automated archiving, using ArchiveTimeOfDay struct.</help>            
+        </Argument>        
+    </Method2>            
+
+    <Method2 name="GetMaxSize">
+    <help>Gets configured maximum database size. When database size goes over this limit automated archiving kicks in.</help>        
+        <Argument name="maxSize" type="int32" direction="out">
+            <help>Maximum database size in MB.</help>            
+        </Argument>        
+    </Method2> 
+    
+    <Method2 name="SetMaxSize">
+    <help>Configures maximum database size. When database size goes over this limit automated archiving kicks in.</help>        
+        <Argument name="maxSize" type="int32" direction="in">
+            <help>Maximum database size in MB.</help>                        
+        </Argument>        
+    </Method2> 
+    
+    <Method2 name="GetReporterDSN">
+    <help>Returns a connection string for the reporter to be used when requesting data from this Datastore.</help>        
+        <Argument name="reporterDsn" type="string" direction="out">
+            <help>Pass this string to the reporter command line argument named -udl.</help>            
+        </Argument>        
+    </Method2>
+    
+</Node>

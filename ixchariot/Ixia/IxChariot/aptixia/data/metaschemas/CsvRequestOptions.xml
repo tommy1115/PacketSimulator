@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="CsvRequestOptions" baseType="">
+    <description>Object represents csv generation options that can be specified for each statview.</description>
+	<help>Any statview can be output to a csv file during test run. These options allows api users to specify, among other things, wether the csv file is to be generated.</help>
+    <PropertyBoolean permission="h">
+		<name>outputCsv</name>
+        <displayName>OutputCsv</displayName>
+		<default>0</default>
+		<category>CsvGenerator</category>
+        <description>Set this flag to true, if csv should be generated for the parent StatView.</description>   
+    </PropertyBoolean>
+    <PropertyBoolean permission="h">
+		<name>outputFileHeader</name>
+        <displayName>OutputFileHeader</displayName>
+		<default>0</default>
+		<category>CsvGenerator</category>
+        <description>If true, a list of name value pairs specified in CsvHeaderFieldList will be written at the top in the generated csv file.</description>   
+    </PropertyBoolean>
+    <PropertyBoolean permission="h">
+		<name>outputColumnHeader</name>
+        <displayName>OutputColumnHeader</displayName>
+		<default>0</default>
+		<category>CsvGenerator</category>
+        <description>Use this to specify if the Column Headers should be written in the generated csv file.</description>   
+    </PropertyBoolean>
+    <PropertyBoolean permission="h">
+		<name>outputFunctionHeader</name>
+        <displayName>OutputFunctionHeader</displayName>
+		<default>0</default>
+		<category>CsvGenerator</category>
+        <description>Use this to specify if the aggregation Function Labels should be written in the generated csv file. The Function Labels are specified in the StatSpec property named CsvFunctionLabel.</description>   
+    </PropertyBoolean>
+    <PropertyBoolean permission="h">
+		<name>outputLabelHeader</name>
+        <displayName>OutputLabelHeader</displayName>
+		<default>0</default>
+		<category>CsvGenerator</category>
+        <description>Use this to specify if the internal Stat Labels should be written in the generated csv file. The Stat Labels are specified in the StatSpec property named CsvStatLabel.</description>      
+    </PropertyBoolean>                         
+</Node> 

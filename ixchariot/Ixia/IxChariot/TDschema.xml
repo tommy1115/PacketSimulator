@@ -1,0 +1,227 @@
+
+<?xml-stylesheet type="text/xsl" href="xdr-schema.xsl"?>
+<Schema name="TDschema.xml"
+        xmlns="urn:schemas-microsoft-com:xml-data"
+        xmlns:dt="urn:schemas-microsoft-com:datatypes">
+
+<description>
+    Chariot Test Designer Version 1.2 XML schema using MSXML-DR.
+
+    Copyright (c) NetIQ Corporation 2000-2003, Ixia 2003-2006
+    All Rights Reserved.
+</description>
+
+
+<AttributeType name="configurationName" required="no"/>
+<AttributeType name="blobData" required="no"/>
+
+<ElementType name="ConfigurationData" content="empty" model="closed">
+    <attribute type="blobData"/>
+</ElementType>
+
+<ElementType name="NetworkHardware" content="eltOnly" model="closed" order="many" >
+    <attribute type="configurationName"/>
+    <element type="ConfigurationData" />
+</ElementType>
+
+
+<AttributeType name="mesh" required="no"/>
+
+<AttributeType name="name" required="yes"/>
+
+<AttributeType name="singleAddress" required="yes"/>
+
+<AttributeType name="consoleAddress" required="yes"/>
+
+<AttributeType name="useTestAddress" required="no" default="1"/>
+
+<AttributeType name="isNetworkHardware" required="no" default="0"/>
+
+<AttributeType name="x" required="no" dt:type="int"/>
+
+<AttributeType name="y" required="no" dt:type="int"/>
+
+<ElementType name="Display" content="empty">
+    <attribute type="x"/>
+    <attribute type="y"/>
+</ElementType>
+
+<AttributeType name="from" required="yes"/>
+
+<AttributeType name="to" required="yes"/>
+
+<AttributeType name="increment" required="no" default="1.1.1.1"/>
+
+<ElementType name="AddressRange" content="empty">
+    <attribute type="from"/>
+    <attribute type="to"/>
+    <attribute type="increment"/>
+</ElementType>
+
+<ElementType name="Endpoint" content="eltOnly" model="closed">
+    <attribute type="name"/>
+    <attribute type="singleAddress"/>
+    <attribute type="consoleAddress"/>
+    <attribute type="useTestAddress"/>
+    <attribute type="isNetworkHardware"/>
+    <element type="Display" minOccurs="0" maxOccurs="1"/>
+    <element type="AddressRange" minOccurs="0" maxOccurs="1"/>
+</ElementType>
+
+<ElementType name="Hpp" content="eltOnly" model="closed">
+    <attribute type="name"/>
+    <attribute type="singleAddress"/>
+    <attribute type="consoleAddress"/>
+    <attribute type="useTestAddress"/>
+    <element type="Display" minOccurs="0" maxOccurs="1"/>
+    <element type="AddressRange" minOccurs="0" maxOccurs="1"/>
+</ElementType>
+
+<ElementType name="Connectable" content="empty">
+    <attribute type="name"/>
+</ElementType>
+
+<ElementType name="EndpointGroup" content="eltOnly" model="closed">
+    <attribute type="name"/>
+    <attribute type="isNetworkHardware"/>
+    <element type="Display" minOccurs="0" maxOccurs="1"/>
+    <element type="Connectable" minOccurs="0" maxOccurs="*" />
+</ElementType>
+
+<AttributeType name="protocol" required="no" default="TCP"
+               dt:type="enumeration" dt:values="RTP TCP UDP RTP-IPv6 TCP-IPv6 UDP-IPv6 HPP"/>
+
+<AttributeType name="managementProtocol" required="no" default="TCP"
+               dt:type="enumeration" dt:values="APPC SPX TCP TCP-IPv6"/>
+
+<AttributeType name="qos" required="no"/>
+
+<AttributeType name="script" required="yes"/>
+
+<AttributeType name="comment" required="no"/>
+
+<AttributeType name="count" default="1" />
+
+<AttributeType name="overridelinerate" required="no"/>
+
+<AttributeType name="linerate" required="no"/>
+
+<AttributeType name="measurestatistics" required="no"/>
+
+
+<AttributeType name="codec" required="yes"/>
+
+<AttributeType name="silencesuppression" required="no"/>
+
+<AttributeType name="plcEnabled" required="no"/>
+
+<AttributeType name="activityrate" required="no"/>
+
+<AttributeType name="overridedelay" required="no"/>
+
+<AttributeType name="delay" required="no"/>
+
+<AttributeType name="timingrecduration" required="no"/>
+
+
+
+
+<AttributeType name="pin" required="yes" dt:type="enumeration"
+               dt:values="N NE E SE S SW W NW CENTER" />
+
+<AttributeType name="connectable" required="yes"/>
+
+<ElementType name="From" content="empty" model="closed">
+    <attribute type="connectable"/>
+    <attribute type="pin"/>
+</ElementType>
+
+<ElementType name="To" content="empty" model="closed">
+    <attribute type="connectable"/>
+    <attribute type="pin"/>
+</ElementType>
+
+<AttributeType name="multicastAddress" required="yes"/>
+
+<AttributeType name="multicastPort" required="yes" dt:type="int"/>
+
+<ElementType name="MulticastConnector" content="eltOnly" model="closed">
+    <attribute type="script"/>
+    <attribute type="comment"/>
+    <attribute type="count"/>
+    <attribute type="multicastAddress"/>
+    <attribute type="multicastPort"/>
+    <attribute type="protocol"/>
+    <attribute type="managementProtocol"/>
+    <attribute type="qos"/>
+    <attribute type="mesh"/>
+    <element type="From"/>
+    <element type="To"/>
+</ElementType>
+
+<ElementType name="Connector" content="eltOnly" model="closed">
+    <attribute type="script"/>
+    <attribute type="comment"/>
+    <attribute type="count"/>
+    <attribute type="protocol"/>
+    <attribute type="managementProtocol"/>
+    <attribute type="qos"/>
+    <attribute type="mesh"/>
+    <attribute type="overridelinerate"/>
+    <attribute type="linerate"/>
+    <attribute type="measurestatistics"/>
+    <element type="From"/>
+    <element type="To"/>
+</ElementType>
+
+
+
+<ElementType name="VoIPConnector" content="eltOnly" model="closed">
+    <attribute type="comment"/>
+    <attribute type="count"/>
+    <attribute type="qos"/>
+    <attribute type="mesh"/>
+    <attribute type="codec"/>
+    <attribute type="silencesuppression"/>
+    <attribute type="plcEnabled"/>
+    <attribute type="activityrate"/>
+    <attribute type="overridedelay"/>
+    <attribute type="delay"/>
+    <attribute type="timingrecduration"/>
+    <attribute type="protocol"/>
+    <attribute type="managementProtocol"/>
+    <element type="From"/>
+    <element type="To"/>
+</ElementType>
+
+<ElementType name="Connectables" content="eltOnly" model="closed" order="many" >
+    <element type="Endpoint" />
+    <element type="Hpp" />
+    <element type="EndpointGroup" />
+</ElementType>
+
+<ElementType name="Connectors" content="eltOnly" model="closed" order="many" >
+    <element type="Connector" />
+    <element type="MulticastConnector" />
+</ElementType>
+
+<ElementType name="VoIPConnectors" content="eltOnly" model="closed" order="many" >
+    <element type="VoIPConnector" />
+</ElementType>
+
+<ElementType name="Test" content="eltOnly" model="closed" order="seq">
+    <element type="NetworkHardware" minOccurs="0"/>
+    <element type="Connectables" minOccurs="0"/>
+    <element type="Connectors" minOccurs="0"/>
+    <element type="VoIPConnectors" minOccurs="0"/>
+</ElementType>
+
+<AttributeType name="version" required="yes"/>
+
+<ElementType name="TestDesigner" content="eltOnly" model="closed" order="one">
+    <attribute type="version"/>
+    <element type="Test"/>
+</ElementType>
+
+</Schema>
+

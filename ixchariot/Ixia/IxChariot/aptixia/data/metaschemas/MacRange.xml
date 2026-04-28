@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="MacRange" baseType="">
+    <help>Range of multiple MAC addresses for fine grained configuration</help>
+
+    <PropertyString>
+        <name>name</name>
+        <default>mac-</default>
+        <description>Unique name of the range.</description>
+        <help>Unique name of the range.</help>
+    </PropertyString>
+
+    <!-- Ethernet Range info  -->
+    <PropertyString>
+        <name>mac</name>
+        <default>aa:bb:cc:00:00:00</default>
+        <description>base value used when the plugin creates a mac addresses.</description>
+        <help>
+        When a range of multiple MACs are created with this plugin, this value
+        is the base value used to create the addresses in the range,
+        this property is used in conjunction with 'incrementBy' as an incrementor.
+        </help>
+    </PropertyString>
+
+    <PropertyString>
+        <name>incrementBy</name>
+        <default>00:00:00:00:00:01</default>
+        <description>Incrementor used when the plugin creates a range of MACs.</description>
+        <help>
+        When a range of multiple macs are created with this plugin, this value
+        is the incrementor used to create the addresses in the range,
+        this property is used in conjunction with 'mac' as a base value.
+        </help>
+    </PropertyString>
+
+    <PropertyInt>
+        <name>mtu</name>
+        <default>1500</default>
+        <min>500</min>
+        <max>9500</max>
+        <help>Maximum Transmission Unit.
+        The largest packet that a given network medium can carry.
+        Ethernet, for example, has a fixed MTU of 1500 bytes, ATM has a fixed MTU of 48 bytes,
+        and PPP has a negotiated MTU that is usually between 500 and 2000 bytes.</help>
+    </PropertyInt>
+
+</Node>

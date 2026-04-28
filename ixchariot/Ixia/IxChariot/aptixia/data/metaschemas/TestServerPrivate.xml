@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="TestServerPrivate" baseType="TestServer">
+    <help>
+        This is the actual class being used to instantiate TestServer. It
+        contains administrative and regression functions not available
+        to the "normal" user.
+    </help>
+    <Method2 name="CreateTestObject">
+        <help>Create an XPBootstrap regression object</help>
+        <Argument name="bootstrap" direction="out" type="XPBootstrap">
+            <help>The returned regression object</help>
+        </Argument>
+    </Method2>
+
+</Node>

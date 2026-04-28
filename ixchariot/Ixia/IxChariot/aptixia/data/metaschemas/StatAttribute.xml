@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="StatAttribute" baseType="">
+    <help>Attributes of Statistics, such as Color</help>  
+    <PropertyString permission="rw" >
+		<name>color</name>
+		<category>Appearance</category>
+		<displayName>Color</displayName>
+		<description>Color used to display statistic on charts. Select a color from the list.</description>  
+		<help>Color used to display statistic on charts</help>  
+    </PropertyString>
+</Node>

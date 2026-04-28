@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="DataDrivenFormBase" baseType=""  namespace="aptixia.ct">
+    <description>Base class for objects usable by Aptixia's data driven GUI.</description>
+    <help>
+        This is the base class for configurable objects that are to be used 
+        by Aptixia's data driven GUI system. It has no data members, but
+        provides methods for setting and getting the layout of the form
+        used to render the form for this object. Note that the files need
+        to be checked out from source control to set them.
+    </help>
+
+    <Method2 name="GetFormLayout">
+        <Argument name="filename" type="string">
+        <help>File name</help>
+        </Argument>
+        <Argument name="xml" type="string" direction="out">
+        <help>XML layout from given XML file</help>
+        </Argument>
+        <help>Returns XML layout from given XML file</help>
+    </Method2>
+
+    <Method2 name="SetFormLayout">
+        <Argument name="filename" type="string">
+        <help>File name</help>
+        </Argument>
+        <Argument name="xml" type="string">
+        <help>XML layout to save</help>
+        </Argument>
+        <help>Saves XML layout to the given XML file</help>
+    </Method2>
+
+</Node>

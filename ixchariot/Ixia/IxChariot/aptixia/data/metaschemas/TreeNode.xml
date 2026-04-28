@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="TreeNode" baseType="">
+    <help>Base class for managed objects used in tree controls</help>
+    <PropertyBoolean permission="h">
+        <name>expanded</name>
+        <help>Expansion state of tree nodes</help>
+    </PropertyBoolean>
+</Node>

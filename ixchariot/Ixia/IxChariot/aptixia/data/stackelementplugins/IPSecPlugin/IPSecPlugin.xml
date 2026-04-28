@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+
+<Node nodeType="IPSecPlugin" baseType="StackElementPlugin">
+<description>Plugin to configure IPSec interfaces and create IKE based IPSec tunnels</description>
+<help>IPSec plugin configured IPSec tunnels between given end points and exposed the date end points for upper layer to run 
+traffic with negotiated IPSec policies.</help>
+    <PropertyNodeList nodeType="IPSecNetwork">
+        <name>ipsecNetwork</name>
+    </PropertyNodeList>
+    <PropertyNode nodeType="IPSecPhase1">
+        <name>ipsecPhase1</name>
+    </PropertyNode>
+    <PropertyNode nodeType="IPSecPhase2">
+        <name>ipsecPhase2</name>
+    </PropertyNode>
+    <PropertyNode nodeType="IPSecTunnelSetup">
+        <name>ipsecTunnelSetup</name>
+    </PropertyNode>
+
+</Node>

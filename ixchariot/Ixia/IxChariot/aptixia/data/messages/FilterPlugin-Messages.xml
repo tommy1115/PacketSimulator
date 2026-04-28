@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ixia_message_file>
+  <status>
+    <id_string>Aptixia.FilterPlugin.ResetException</id_string>
+    <text>Filter plugin at %1% failed with message : %2%</text>
+    <description>
+        Not able to reset filter settings.
+    </description>
+  </status>
+  <status>
+    <id_string>Aptixia.FilterPlugin.FlagException</id_string>
+    <text>Filter plugin at %1% failed with message : %2%</text>
+    <description>
+        Unable to set filter flags.
+    </description>
+  </status>
+  <status>
+    <id_string>Aptixia.FilterPlugin.ArgumentParseError</id_string>
+    <text>Filter plugin at %1% failed with message : %2%</text>
+    <description>
+        Unable to map string name to value. Try using the value instead of the name.
+    </description>
+  </status>
+  <status>
+    <id_string>Aptixia.FilterPlugin.FieldException</id_string>
+    <text>Filter plugin at %1% failed with message : %2%</text>
+    <description>
+        Unable to set value for the specified field. 
+    </description>
+  </status>
+</ixia_message_file>
+

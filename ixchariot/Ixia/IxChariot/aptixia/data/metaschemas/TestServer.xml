@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="TestServer" baseType="XProtocolObject">
+    <help>This singleton represents the TestServer process. It is used to 
+        manage sessions and help in regression testing.
+    </help>
+    <Event name="InvalidateObjectEvent">
+        <Argument name="objectId" type="int64" />
+        <help>Event indicates what object was changed on the server side</help>
+	</Event>        
+    
+
+    <Method2 name="GetClassMetaSchema">
+        <help>
+        Return the metaschema definition for the requested object class.
+        </help>
+
+        <Argument name="type" direction="in" type="string">
+            <help>
+            The object class type to return the metaschema definition for.
+            </help>
+        </Argument>
+
+        <Argument name="metaschema" direction="out" type="string">
+            <help>The requested metaschema (xml) definition</help>
+        </Argument>
+
+    </Method2>
+    
+     <Method2 name="GetVersion">
+        <help>Returns the version of Aptixia</help>
+        <Argument name="version" direction="out" type="string">
+            <help>Aptixia version</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="Ping">
+        <help>An empty method used for basic communications testing</help>
+    </Method2>
+
+    <Method2 name="OpenSession" type="sync">
+        <help>
+            Create a session. Sessions contain, configure and run a test. Sessions
+            can be viewed by more than one client, but edited only by one client.
+        </help>
+        <Argument name="userName" type="string">
+            <help>The user name</help>
+        </Argument>
+        <Argument name="sessionName" type="string">
+            <help>The name of the session to remind the user what the session is for.</help>
+        </Argument>
+
+        <Argument name="inactivityTimeout" type="int32">
+            <help>Zero for no timeout, otherwise a value in ms. [Not implemented]</help>
+        </Argument>
+        <Argument name="session" direction="out" type="Session">
+            <help>A reference to the created session.</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="OpenSession"  type="sync">
+        <help>
+            Create a session. Sessions contain, configure and run a test. Sessions
+            can be viewed by more than one client, but edited only by one client.
+        </help>
+        <Argument name="appName" type="string">
+            <help>The name of the application. This argument is used to keep 
+                  save files of different applications in different places.
+            </help>
+        </Argument>
+        <Argument name="userName" type="string">
+            <help>The user name</help>
+        </Argument>
+        <Argument name="sessionName" type="string">
+            <help>The name of the session to remind the user what the session is for.</help>
+        </Argument>
+
+        <Argument name="inactivityTimeout" type="int32">
+            <help>Zero for no timeout, otherwise a value in ms. [Not implemented]</help>
+        </Argument>
+        <Argument name="session" direction="out" type="Session">
+            <help>A reference to the created session.</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="Shutdown">
+        <help>Shuts down the TestServer process</help>
+    </Method2>
+</Node>

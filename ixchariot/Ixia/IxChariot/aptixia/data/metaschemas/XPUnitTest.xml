@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="XPUnitTest" baseType="XProtocolObject">
+<help>Provides Unit Test facility for the all types of data used in the meta-schemas</help>
+
+    <Enum name="eUnitTestEnum">
+    <help>Test enum</help>
+        <Choices>
+            <Choice symbol="kSymbol1" value="5"/>
+            <Choice symbol="kSymbol2" value="6"/>
+            <Choice symbol="kSymbol3" value="9"/>
+        </Choices>
+    </Enum>
+
+    <Struct name="UnitTestStruct" version="2">
+    <help>Simplest user defined structure</help>
+        <Member name="anInt8" type="int8" default="3" version="1">
+        <help>an integer field</help>
+        </Member>
+    </Struct>
+
+    <List name="UnitTestList" type="int8">
+    <help>Simple list of integers</help>
+    </List>
+
+    <PropertyString>
+        <name>stringVar</name>
+        <default>default string</default>
+        <help>Test string property and default value</help>
+    </PropertyString>
+    
+    <PropertyInt>
+        <name>intVar</name>
+        <help>Test integer property</help>
+    </PropertyInt>
+    
+    <PropertyBoolean>
+        <name>boolVar</name>
+        <help>Test boolean property</help>
+    </PropertyBoolean>
+    
+    <PropertyDouble>
+        <name>doubleVar</name>
+        <help>Test double property</help>
+    </PropertyDouble>
+
+    <PropertyIntList>
+        <name>intList</name>
+        <help>Test list of integers property</help>
+    </PropertyIntList>
+
+    <PropertyStringList>
+        <name>stringList</name>
+        <help>Test list of strings property</help>
+    </PropertyStringList>
+
+
+    <PropertyDoubleList>
+        <name>doubleList</name>
+        <help>Test list of doubles property</help>
+    </PropertyDoubleList>
+
+    <PropertyNode nodeType="XPUnitTestA">
+        <name>subNode</name>
+        <help>Test non-polymorthic embedded object</help>
+    </PropertyNode>
+
+    <PropertyNode nodeType="XPUnitTestA" polymorphic="1">
+        <name>polymorphicSubNode</name>
+        <help>Test polymorthic embedded object</help>
+    </PropertyNode>
+
+    <PropertyNodeList nodeType="XPUnitTestA" polymorphic="1">
+        <name>polymorphicSubNodeList</name>
+        <help>Test non-polymorthic list of objects</help>
+    </PropertyNodeList>
+
+    <PropertyNodeList nodeType="XPUnitTestC">
+        <name>subNodeList</name>
+        <help>Test polymorthic list of objects</help>
+    </PropertyNodeList>
+    
+    <PropertyNodeList nodeType="XPUnitTestD" polymorphic="0">
+        <name>subNodeListD</name>
+        <help>Test multi-referenced objects</help>
+    </PropertyNodeList>
+    
+
+    <Method2 name="GetTestString">
+        <Argument name="v" direction="out" type="string">
+        <help>Returns a string</help>
+        </Argument>
+        <help>Tests out string method call</help>
+    </Method2>
+
+    <Method2 name="SetTestString">
+         <Argument name="v" direction="in" type="string">
+         <help>Sets a string</help>
+         </Argument>
+        <help>Tests in string method call</help>
+    </Method2>
+
+    <Method2 name="GetTestInt">
+         <Argument name="v" direction="out" type="int64">
+         <help>Returns a integer</help>
+         </Argument> 
+         <help>Tests out integer method call</help>
+    </Method2>
+
+    <Method2 name="GetTestBool">
+         <Argument name="v" direction="out" type="bool">
+         <help>Returns a boolean</help>
+         </Argument>
+         <help>Tests out boolean method call</help>
+    </Method2>
+
+    <Method2 name="GetTestDouble">
+         <Argument name="v" direction="out" type="double">
+         <help>Returns a double value</help>
+         </Argument>
+         <help>Tests out double method call</help>
+    </Method2>
+
+    <!-- ============ for testing obsolete tag =========================== -->
+
+    <PropertyStringList>
+      <obsolete>obsolete string list</obsolete>
+      <name>obsoleteStringList</name>
+      <help>internal use. unit test item for exercising obsolete tags</help>
+    </PropertyStringList>
+    <PropertyStringList>
+      <name>stringListBehindObsoleteStringList</name>
+      <help>internal use. unit test item for exercising obsolete tags</help>
+    </PropertyStringList>
+
+    <PropertyString>
+      <obsolete>obsolete string</obsolete>
+      <name>obsoleteString</name>
+      <help>internal use. unit test item for exercising obsolete tags</help>
+    </PropertyString>
+
+    <PropertyNode nodeType="XPUnitTestO">
+        <obsolete>obsolete node</obsolete>
+        <name>obsoleteSubNode</name>
+        <help>internal use. unit test item for exercising obsolete tags</help>
+    </PropertyNode>
+
+
+    <PropertyNodeList nodeType="XPUnitTestO">
+      <obsolete>obsolete PropertyNode of type XPUnitTestO</obsolete>
+      <name>obsoleteSubNodeList</name>
+      <help>internal use. unit test item for exercising obsolete tags</help>
+    </PropertyNodeList>
+
+    <!-- ================================================================= -->
+
+    <Event name="MySimpleEvent">
+        <Argument name="aString" type="string">
+        <help>string argument</help>
+        </Argument>
+    </Event>
+    <Method2 name="TestSimpleEvent">
+        <Argument name="aString" type="string">
+        <help>string argument to send into event</help>
+        </Argument>
+    </Method2>
+
+    <Event name="MyEvent">
+        <Argument name="anInt8" type="int8">
+			<help>int8 argument</help>
+        </Argument>
+        <Argument name="anInt16" type="int16">
+			<help>int16 argument</help>
+        </Argument>
+        <Argument name="anInt32" type="int32">
+			<help>int32 argument</help>
+        </Argument>
+        <Argument name="anInt64" type="int64">
+			<help>int64 argument</help>
+        </Argument>
+        <Argument name="aBool" type="bool">
+			<help>bool argument</help>
+        </Argument>
+        <Argument name="aDouble" type="double">
+			<help>double argument</help>
+        </Argument>
+        <Argument name="aString" type="string">
+			<help>string argument</help>
+        </Argument>
+        <Argument name="anOctets" type="octets">
+			<help>octets argument</help>
+        </Argument>
+        <Argument name="anEnum" type="XPUnitTest.eUnitTestEnum">
+			<help>XPUnitTest.eUnitTestEnum argument</help>
+        </Argument>
+        <Argument name="aStruct" type="XPUnitTest.UnitTestStruct">
+			<help>XPUnitTest.UnitTestStruct argument</help>
+        </Argument>
+        <Argument name="aList" type="XPUnitTest.UnitTestList">
+			<help>XPUnitTest.UnitTestList argument</help>
+        </Argument>
+			<help>Tests event mechanism</help>
+    </Event>
+
+    <Method2 name="TestEventNoArgs">
+        <help>Triggers MyEvent - event</help>
+    </Method2>
+
+    <Method2 name="TestEvent">
+        <Argument name="anInt8" type="int8">
+            <help>int8 argument to send into event</help>
+		</Argument>
+        <Argument name="anInt16" type="int16">
+			<help>int16 argument to send into event</help>
+        </Argument>
+        <Argument name="anInt32" type="int32">
+			<help>int32 argument to send into event</help>
+        </Argument>
+        <Argument name="anInt64" type="int64">
+			<help>int64 argument to send into event</help>
+        </Argument>
+        <Argument name="aBool" type="bool">
+    		<help>bool argument to send into event</help>
+		</Argument>
+        <Argument name="aDouble" type="double">
+			<help>double argument to send into event</help>
+        </Argument>
+        <Argument name="aString" type="string">
+			<help>string argument to send into event</help>
+        </Argument>
+        <Argument name="anOctets" type="octets">
+    		<help>octets argument to send into event</help>
+		</Argument>
+        <Argument name="anEnum" type="XPUnitTest.eUnitTestEnum">
+    		<help>XPUnitTest.eUnitTestEnum argument to send into event</help>
+		</Argument>
+        <Argument name="aStruct" type="XPUnitTest.UnitTestStruct">
+			<help>XPUnitTest.UnitTestStruct argument to send into event</help>
+        </Argument>
+        <Argument name="aList" type="XPUnitTest.UnitTestList">
+			<help>XPUnitTest.UnitTestList argument to send into event</help>
+        </Argument>
+        <help>Triggers MyEvent - event</help>
+    </Method2>
+</Node>
+    

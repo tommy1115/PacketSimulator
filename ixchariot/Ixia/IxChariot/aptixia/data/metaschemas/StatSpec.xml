@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="StatSpec" baseType="TreeNode">
+    <help>Description of stat for a stat consumer</help>
+	
+	<PropertyBoolean permission="rw">
+        <name>enabled</name>
+        <displayName>Enabled</displayName>
+        <category> Statistic</category>  
+        <description>Enable or disable a statistic. Use this option to hide statistics in views that you do not currently want to see, but do not want to delete. 
+True means that StatViewer will display this statistic. 
+False means that StatViewer will not display this statistic.</description>
+        <default>1</default>
+        <help>Enable or disable a statistic. Use this option to hide statistics in views that you do not currently want to see, but do not want to delete.</help>      
+    </PropertyBoolean>
+	
+	<PropertyBoolean permission="h">
+        <name>removed</name>
+        <displayName>Removed</displayName>
+        <category>Source</category>  
+        <description></description>
+        <default>0</default>
+        <help>Mark a stat as removed.</help>      
+    </PropertyBoolean>
+
+	<PropertyString permission="rw">
+		<name>caption</name>
+		<displayName>Caption</displayName>
+		<category>Appearance</category>
+		<description>Text identifying the statistic in the chart legend.</description>  
+		<default>Stat1</default>
+		<minLength>1</minLength>
+		<maxLength>256</maxLength>
+		<help>Text identifying the statistic in the chart legend</help>  
+	</PropertyString>
+	
+	<PropertyString permission="rroc"> 
+		<name>statSourceType</name>
+		<displayName>1. Source Type</displayName>
+		<category>Source</category>
+		<description>The available sources of statistics.  Select a Source from the drop-down list.</description>  
+		<default>(Select)</default>
+		<minLength>1</minLength>
+		<maxLength>256</maxLength>
+     	<help>The available sources of statistics</help>  
+	</PropertyString>
+	
+	<PropertyString permission="rroc">
+		<name>statName</name>
+		<displayName>2. Name</displayName>
+		<category>Source</category>
+		<description>The available statistics for the selected Source.  Select from the drop-down list.</description>  
+		<default>(Select)</default>
+		<minLength>1</minLength>
+		<maxLength>256</maxLength>
+		<help>The available statistics for the selected Source</help>  
+	</PropertyString>
+	
+	<PropertyInt permission="rroc">
+		<name>aggregationType</name>
+		<displayName>3. Aggregation</displayName>
+		<category>Source</category>
+  		<description>Mathematical operation applied to the source data before displaying the statistic. You can select from the following operations: 
+Sum is the result of adding all values for all time samples together, the total count.
+Max is the largest value since the beginning of a test.
+Min is the smallest value since the beginning of a test. 
+Average is the statistical mean, the sum of all values divided by the number of time samples.
+Rate is the count divided by the time unit, count per second. 
+MaxRate is the largest rate since the beginning of a test.
+MinRate is the smallest rate since the beginning of a test.
+AverageRate is the statistical mean rate, the sum of all rates divided by the number of time samples.</description>  
+		<default>(Select)</default>
+		<help>Enumeration of the mathematical operation applied to the source data before displaying the statistic</help> 
+	</PropertyInt>
+	
+	<PropertyBoolean permission="rroc">
+        <name>enumerated</name>
+        <displayName>5. Enumerated</displayName>
+        <category>Source</category>  
+        <description>Determines whether the statistic is displayed as a sinlge aggregated value or enumerate all the individual values. </description>
+        <default>0</default>      
+        <help>Determines whether the statistic is displayed as a sinlge aggregated value or enumerate all the individual values</help>
+    </PropertyBoolean>
+	
+	<PropertyBoolean permission="h">
+		<name>interpolated</name>
+		<displayName>Interpolated</displayName>
+		<category>Source</category>
+		<description>Whether or not interpolate the stat value</description>  		
+		<default>1</default>
+        <help>Enables interpolatation the stat value</help>
+	</PropertyBoolean>	
+
+    <PropertyInt permission="rroc">
+		<name>index</name>
+		<displayName>First Index</displayName>
+		<category>Source</category>
+		<description></description>  
+		<default>0</default>
+        <help>First index of array stats range</help>
+	</PropertyInt>
+	
+    <PropertyInt permission="rroc">
+		<name>indexLast</name>
+		<displayName>Last Index</displayName>
+		<category>Source</category>
+		<description></description>  
+		<default>0</default>
+        <help>Last index of array stats range</help>
+	</PropertyInt>
+
+	<PropertyInt permission="h">
+		<name>statType</name>
+		<displayName>statType</displayName>
+		<category>Source</category>
+		<description></description>  
+		<default>0</default>
+        <help>Default or array stat</help>
+	</PropertyInt>
+	
+	<PropertyString permission="h">
+		<name>yAxisRange</name>
+		<displayName>Range</displayName>
+		<category>YAxis</category>
+		<description></description>  
+		<default>Main</default>
+        <help>Deprecated</help>
+	</PropertyString>
+
+	<PropertyString permission="h">
+		<name>csvStatLabel</name>
+		<displayName>CsvStatLabel</displayName>
+		<category>CsvGenerator</category>
+		<description>CsvStatLabel</description>  		
+		<minLength>0</minLength>
+		<maxLength>255</maxLength>
+		<help>The label of a new stat for a csv log</help>
+	</PropertyString>
+	
+	<PropertyString permission="h">
+		<name>csvFunctionLabel</name>
+		<displayName>CsvFunctionLabel</displayName>
+		<category>CsvGenerator</category>
+		<description>CsvFunctionLabel</description>  		
+		<minLength>0</minLength>
+		<maxLength>255</maxLength>
+		<help>The label of the aggregation function for csv log</help>
+	</PropertyString>	
+	
+    <Enum name="eAggregationTypeEnum">
+        <help>Enumeration of aggregation types</help>
+        <Choices>
+            <Choice symbol="kSum" value="0"/>
+            <Choice symbol="kMax" value="1"/>
+            <Choice symbol="kMin" value="2"/>
+            <Choice symbol="kAverage" value="3"/>
+            <Choice symbol="kWeightedAverage" value="4"/>
+            <Choice symbol="kRate" value="5"/>                             
+            <Choice symbol="kMaxRate" value="6"/>
+            <Choice symbol="kMinRate" value="7"/>
+            <Choice symbol="kAverageRate" value="8"/>
+            <Choice symbol="kNone" value="9"/>
+            <Choice symbol="kRunStateAgg" value="10"/>
+            <Choice symbol="kRunStateAggIgnoreRamp" value="11"/>
+        </Choices>
+    </Enum>
+
+    <Enum name="eStatTypeEnum">
+        <help>Enumeration of stat types</help>
+        <Choices>
+            <Choice symbol="kDefault" value="0"/>
+            <Choice symbol="kArray" value="1"/>
+        </Choices>
+    </Enum>
+	
+</Node>

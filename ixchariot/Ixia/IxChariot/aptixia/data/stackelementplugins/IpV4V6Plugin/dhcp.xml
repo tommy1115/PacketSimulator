@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-16"?>
+<GUIDescription>
+  <Form size="975,518" scrollsize="750,390">
+    <Control ref="rangeList.dhcpSettings.dhcpServerIp" enable="rangeList.addressAllocationMechanism == &quot;dhcp&quot; &amp;&amp; rangeList.ipType == &quot;IPv4&quot; " editor="aptixia.sm.DDIPEdit" location="84,34" size="100,20" tabIndex="72" />
+    <Control editor="aptixia.sm.DDLabel" location="20,34" size="100,23" tabIndex="71" text="Server IP" />
+  </Form>
+</GUIDescription>

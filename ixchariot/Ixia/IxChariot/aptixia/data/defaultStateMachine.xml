@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StateTransitions>
+    <State stateName="ConfigUpdated">
+        <Event eventName="CloneTest">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="aptixia.tscs.stateMachine.ConfigUpdatedState">CloneTest</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.TestClonedState"></NextState>
+            <NextEvent>None</NextEvent>
+        </Event>
+        <Event eventName="Validate">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="aptixia.tscs.stateMachine.ConfigUpdatedState">Validate</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.UnconfiguredState"></NextState>
+            <NextEvent>None</NextEvent>
+        </Event>
+        <Event eventName="Configure">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="aptixia.tscs.stateMachine.ConfigUpdatedState">Validate</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.UnconfiguredState"></NextState>
+            <NextEvent>Configure</NextEvent>
+        </Event>
+        <Event eventName="Deconfigure">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="">None</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.UnconfiguredState"></NextState>
+            <NextEvent>None</NextEvent>
+        </Event>
+    </State>
+    <State stateName="TestCloned">
+        <Event eventName="ConfigChange">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="">None</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.ConfigUpdatedState"></NextState>
+            <NextEvent>None</NextEvent>
+        </Event>
+    </State>
+    <State stateName="Unconfigured">
+        <Event eventName="Configure">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="aptixia.tscs.stateMachine.UnconfiguredState">TakeOwnership</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.ConfigValidState"></NextState>
+            <NextEvent>Configure</NextEvent>
+        </Event>
+        <Event eventName="ConfigChange">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="aptixia.tscs.stateMachine.UnconfiguredState">CopyTest</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.ConfigUpdatedState"></NextState>
+            <NextEvent>None</NextEvent>
+        </Event>
+        <Event eventName="Reboot">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="aptixia.tscs.stateMachine.State">Reboot</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.UnconfiguredState"></NextState>
+            <NextEvent>None</NextEvent>
+        </Event>
+        <Event eventName="MangledConfig">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="">None</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.UnconfiguredState"></NextState>
+            <NextEvent>None</NextEvent>
+        </Event>
+    </State>
+    <State stateName="ConfigValid">
+        <Event eventName="Configure">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="aptixia.tscs.stateMachine.ConfigValidState">DODPackages</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.DODCompleteState"></NextState>
+            <NextEvent>Configure</NextEvent>
+        </Event>
+        <Event eventName="Deconfigure">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="aptixia.tscs.stateMachine.ConfigValidState">ReleaseOwnership</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.UnconfiguredState"></NextState>
+            <NextEvent>None</NextEvent>
+        </Event>
+        <Event eventName="Reboot">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="aptixia.tscs.stateMachine.State">Reboot</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.UnconfiguredState"></NextState>
+            <NextEvent>None</NextEvent>
+        </Event>
+        <Event eventName="MangledConfig">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="">None</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.UnconfiguredState"></NextState>
+            <NextEvent>None</NextEvent>
+        </Event>
+    </State>
+    <State stateName="DODComplete">
+        <Event eventName="Configure">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="aptixia.tscs.stateMachine.DODCompleteState">ConfigPhysical</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.ConfigPhysicalState"></NextState>
+            <NextEvent>Configure</NextEvent>
+        </Event>
+        <Event eventName="Deconfigure">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="aptixia.tscs.stateMachine.DODCompleteState">UnloadPackages</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.ConfigValidState"></NextState>
+            <NextEvent>Deconfigure</NextEvent>
+        </Event>
+        <Event eventName="Reboot">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="aptixia.tscs.stateMachine.State">Reboot</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.UnconfiguredState"></NextState>
+            <NextEvent>None</NextEvent>
+        </Event>
+        <Event eventName="MangledConfig">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="">None</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.UnconfiguredState"></NextState>
+            <NextEvent>None</NextEvent>
+        </Event>
+    </State>
+    <State stateName="ConfigPhysical">
+        <Event eventName="Configure">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="aptixia.tscs.stateMachine.ConfigPhysicalState">ApplyConfig</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.ConfigAppliedState"></NextState>
+            <NextEvent>Configure</NextEvent>
+        </Event>
+        <Event eventName="Deconfigure">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="aptixia.tscs.stateMachine.ConfigPhysicalState">RemovePhysicalConfig</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.DODCompleteState"></NextState>
+            <NextEvent>Deconfigure</NextEvent>
+        </Event>
+        <Event eventName="Reboot">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="aptixia.tscs.stateMachine.State">Reboot</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.UnconfiguredState"></NextState>
+            <NextEvent>None</NextEvent>
+        </Event>
+        <Event eventName="MangledConfig">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="">None</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.UnconfiguredState"></NextState>
+            <NextEvent>None</NextEvent>
+        </Event>
+    </State>
+    <State stateName="ConfigApplied">
+        <Event eventName="Configure">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="aptixia.tscs.stateMachine.ConfigAppliedState">Wait</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.ReadyState"></NextState>
+            <NextEvent>None</NextEvent>
+        </Event>
+        <Event eventName="Deconfigure">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="aptixia.tscs.stateMachine.ConfigAppliedState">RemoveConfig</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.ConfigPhysicalState"></NextState>
+            <NextEvent>Deconfigure</NextEvent>
+        </Event>
+        <Event eventName="Reboot">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="aptixia.tscs.stateMachine.State">Reboot</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.UnconfiguredState"></NextState>
+            <NextEvent>None</NextEvent>
+        </Event>
+        <Event eventName="MangledConfig">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="">None</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.UnconfiguredState"></NextState>
+            <NextEvent>None</NextEvent>
+        </Event>
+    </State>
+    <State stateName="Ready">
+        <Event eventName="Start">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="aptixia.tscs.stateMachine.ReadyState">StartConfig</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.RunningState"></NextState>
+            <NextEvent>None</NextEvent>
+        </Event>
+        <Event eventName="Deconfigure">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="">None</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.ConfigAppliedState"></NextState>
+            <NextEvent>Deconfigure</NextEvent>
+        </Event>
+        <Event eventName="Reboot">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="aptixia.tscs.stateMachine.State">Reboot</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.UnconfiguredState"></NextState>
+            <NextEvent>None</NextEvent>
+        </Event>
+        <Event eventName="MangledConfig">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="">None</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.UnconfiguredState"></NextState>
+            <NextEvent>None</NextEvent>
+        </Event>
+    </State>
+    <State stateName="Running">
+        <Event eventName="Deconfigure">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="aptixia.tscs.stateMachine.RunningState">StopConfig</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.ReadyState"></NextState>
+            <NextEvent>Deconfigure</NextEvent>
+        </Event>
+        <Event eventName="Stop">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="aptixia.tscs.stateMachine.RunningState">StopConfig</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.ReadyState"></NextState>
+            <NextEvent>None</NextEvent>
+        </Event>
+        <Event eventName="Reboot">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="aptixia.tscs.stateMachine.State">Reboot</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.UnconfiguredState"></NextState>
+            <NextEvent>None</NextEvent>
+        </Event>
+        <Event eventName="MangledConfig">
+            <PreAction fullType="">None</PreAction>
+            <PostAction fullType="">None</PostAction>
+            <NextState fullType="aptixia.tscs.stateMachine.UnconfiguredState"></NextState>
+            <NextEvent>None</NextEvent>
+        </Event>
+    </State>
+</StateTransitions> 

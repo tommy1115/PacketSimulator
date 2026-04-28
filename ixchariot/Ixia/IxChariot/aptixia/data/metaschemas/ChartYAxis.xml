@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="ChartYAxis" baseType="ChartAxis">
+     <help>X Axis Properties for StatViewer Charts</help>
+     
+     <PropertyInt permission="h">
+        <name>yAxisExtent</name>
+        <category>YAxis</category>
+        <description></description>
+        <default>85</default>
+        <min>0</min>
+        <max>500</max>
+        <visible>type==YAxis</visible>
+        <help>Deprecated</help>
+    </PropertyInt>
+    
+    <PropertyString permission="rw">
+        <name>yAxisRange</name>
+        <displayName>Range</displayName>
+        <category>YAxis</category>
+        <description></description>
+        <default>Auto</default>
+        <visible>type==YAxis</visible>
+        <help>Y Axis Range options: Auto, Fixed, or Normalize</help>
+    </PropertyString>
+    
+    <PropertyInt permission="rw">
+        <name>yAxisRangeMax</name>
+        <displayName>Range Max</displayName>
+        <category>YAxis</category>
+        <description></description>
+        <default>100</default>
+        <visible>type==YAxis</visible>
+        <help>Y Axis maximum value for fixed range</help>
+    </PropertyInt>
+
+    <PropertyInt permission="rw">
+        <name>yAxisRangeMin</name>
+        <displayName>Range Min</displayName>
+        <category>YAxis</category>
+        <description></description>
+        <default>0</default>
+        <visible>type==YAxis</visible>
+        <help>Y Axis minimum value for fixed range</help>
+    </PropertyInt>
+
+    <PropertyBoolean permission="h">
+        <name>autoScale</name>
+        <visible>type==YAxis</visible>
+        <help>Deprecated</help>
+    </PropertyBoolean>
+
+    <PropertyBoolean permission="h">
+        <name>logScale</name>
+        <visible>type==YAxis</visible>
+        <help>Deprecated</help>
+    </PropertyBoolean>
+
+    <PropertyBoolean permission="h">
+        <name>yAxisScrollScale</name>
+        <displayName>Enable Scroll Scale</displayName>
+        <category>YAxis</category>
+        <default>true</default>
+        <description>Enable Scaling Scrollbar on Y-Axis.</description>
+        <visible>type==YAxis</visible>
+        <help>Deprecated</help>
+    </PropertyBoolean>
+
+</Node>

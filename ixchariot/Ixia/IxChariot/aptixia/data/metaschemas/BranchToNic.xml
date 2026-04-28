@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Node nodeType="BranchToNic" baseType="">
+        <help>Stores the mapping between brach and nic addresses</help>
+        <PropertyString>
+            <name>firstPluginId</name>
+            <default></default>
+            <description>Internal stackelement plugin id of the first plugin</description>
+        </PropertyString>
+        <PropertyString>
+            <name>nicId</name>
+            <default></default>
+            <description>Nic id</description>
+        </PropertyString>
+        <PropertyString>
+            <name>uniquePortId</name>
+            <default></default>
+            <description>Unique port id</description>
+        </PropertyString>
+</Node>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="ActivityModelInstance" baseType="XProtocolObject">
+    <help>
+    Container that associates a list of traffic generating
+    Activities with a PortGroup network configuration.
+    </help>
+
+    <PropertyString>
+        <name>portGroupId</name>
+        <help>The portGroup name to use for this test model</help>
+    </PropertyString>
+    
+    <PropertyString>
+        <name>activityModelId</name>
+        <help>The activityModel name to use for this test model</help>
+    </PropertyString>
+
+    <PropertyNodeList nodeType="ActivityInstance">
+        <help>
+        The list of traffic generating activities associated with this
+        ActivityModel. See ActivityInstance object for more info.
+        </help>
+        <name>activities</name>
+    </PropertyNodeList>
+
+</Node> 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="GlobalPlugin" baseType="StackElementPlugin"  namespace="aptixia.ct">
+    <help>This is a abstract object that serves a base for global 
+    stack element plugins. The FilterPlugin is one example of a plugin
+    based on GlobalPlugin.
+    </help>
+</Node>

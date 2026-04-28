@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="StatWatch" baseType="StatConsumer">
+    <help>Deprecated</help>
+    <PropertyString>
+        <name>name</name>
+        <description>Stat watch name</description>
+        <help>Deprecated</help>
+    </PropertyString>
+    <PropertyDouble>
+        <name>frequency</name>
+        <description>stat refresh period in seconds</description>
+        <default>1</default>
+        <help>Deprecated</help>
+    </PropertyDouble>
+    <PropertyNodeList nodeType="AggregatedStat" polymorphic="0">
+        <name>aggregatedStatList</name>
+        <help>Deprecated</help>
+    </PropertyNodeList>
+
+</Node>
+ 

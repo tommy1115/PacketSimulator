@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="urn:guiFrameworkApp-schema" layoutRef="config">
+
+<TreeControl supported="0"></TreeControl>
+<Plugins> 
+
+   <Plugin>
+		<Name>IxChariot Test Plugin</Name>
+		<Description></Description>
+		<File>ComparisonPlugin.dll</File>
+		<Types>
+			<Type value="ixc.comparison.ComparisonPlugin" >
+				<Param name="InstanceId" value="ixc.comparison"  />
+			</Type>
+		</Types>
+	</Plugin>
+
+	<Plugin>
+		<Name>Test Wrapper</Name>
+		<Description></Description>
+		<File>CppModule.dll</File>
+		<Types>
+			<Type value="guiFramework.CppModule.CppWrapper">
+				<Param name="importModule" value="ixchariot.dll"/>
+			</Type>
+		</Types>
+	</Plugin>
+
+</Plugins>
+
+<GlobalSetting>
+	<LookAndFeel>
+        <PaintStyle name="WindowsXP" />
+	</LookAndFeel>
+	<StartPosition style="Manual" x="0" y="0" width="700" height="700" />
+	<MinimumSize width="400" height="420" />
+</GlobalSetting>
+
+<Layout id="config">
+    <Bars>
+       <Toolbar ref="IxChariot.Toolbar.Standard" dock="Top" row="1" col="0" caption="Standard" />
+       <Toolbar ref="IxChariot.Toolbar.Help" dock="Top" row="1" col="2"  caption="Help" />
+      <StatusBar></StatusBar>
+      <MenuBar>
+          <CommandGroup ref="Global.CommandGroup.File" text="&amp;File"> <!-- MainMenu.File -->
+              <Command ref="10201" beginGroup="1"/>          <!-- File.OpenComparison -->
+              <Command ref="10001" />                                    <!-- File.SaveComparison -->
+              <Command ref="10002" />                                    <!-- File.SaveComparisonAs -->
+              <Command ref="21003" />                                    <!-- File.OpenTest -->
+              <Command ref="10003" beginGroup="1"/>           <!-- File.Print -->
+              <CommandGroup ref="10005" beginGroup="1">  <!-- File.Export -->
+                  <Command ref="10009"/>                                    <!-- File.ExportHtml -->
+                  <Command ref="10010"/>                                    <!-- File.ExportText -->
+                  <Command ref="10008"/>                                    <!-- File.ExportCSV  -->
+              </CommandGroup>             
+              <Command ref="Framework.Command.Exit"  beginGroup="1"/>      <!-- File.Exit --> 
+              <CommandContainer ref="IxChariot.FileMRU.Container" beginGroup="1" /> <!-- File.MRU --> 
+          </CommandGroup>
+          <CommandGroup ref="Global.CommandGroup.Edit" text="&amp;Edit">
+          </CommandGroup>
+          <CommandGroup ref="IxChariot.CommandGroup.View" text="&amp;View">
+<!--
+              <CommandGroup ref="IxChariot.CommandGroup.Style" text="St&amp;yle">
+                  <CommandGroup ref="Framework.CommandGroup.PaintStyle"/>
+                  <CommandGroup ref="Framework.CommandGroup.SkinStyle"/>
+              </CommandGroup>
+-->
+          </CommandGroup>
+          <CommandGroup ref="Global.CommandGroup.Window" text="&amp;Window">
+          </CommandGroup>
+          <CommandGroup ref="IxChariot.CommandGroup.Help" text="&amp;Help">
+          </CommandGroup>
+      </MenuBar>
+    </Bars>
+    <RegionsLayout>
+         <Panel ref="IxChariot.Panel.Main" />  
+    </RegionsLayout>
+</Layout>
+  	 
+
+</Application>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="ChassisCard" baseType="">
+    <description>Card information used to be shown in the GUI when the chassis cannot be connected.</description>
+    <PropertyInt>
+		<name>cardId</name>
+		<description>Identifier of the card.</description>
+    </PropertyInt>
+    <PropertyString>
+        <name>cardType</name>
+        <description>type of the card</description>
+    </PropertyString>
+</Node>

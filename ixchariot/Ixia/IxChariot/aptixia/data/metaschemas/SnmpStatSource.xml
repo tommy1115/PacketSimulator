@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Node nodeType="SnmpStatSource" baseType="">
+	<PropertyString>
+		<name>name</name>
+		<displayName>Name</displayName>
+		<help>Name of SNMP Stat Source</help>
+	</PropertyString>
+	<PropertyString>
+		<name>description</name>
+		<displayName>Description</displayName>
+		<default></default>
+		<help>Description of SNMP Stat Source</help>
+	</PropertyString>
+	<PropertyString>
+		<name>snmpHost</name>
+		<displayName>SNMP Host</displayName>
+		<default></default>
+		<help>Target Host Name or IP address of SNMP enabled Device</help>
+	</PropertyString>
+	<PropertyInt>
+		<name>snmpPort</name>
+		<displayName>SNMP Port</displayName>
+		<default>161</default>
+		<help>port of SNMP enabled Device</help>
+	</PropertyInt>
+	<PropertyInt>
+		<name>snmpVersion</name>
+		<displayName>SNMP Version</displayName>
+		<default>-1</default>
+		<min>-1</min>
+		<max>1</max>
+		<help>Version of SNMP protocol</help>
+	</PropertyInt>
+	<PropertyString>
+		<name>community</name>
+		<displayName>Community</displayName>
+		<default>public</default>
+		<help>SNMP Community string</help>
+	</PropertyString>
+	<PropertyString>
+		<name>ysePort</name>
+		<displayName>YSE Port</displayName>
+		<default></default>
+		<help>Internal use only</help>
+	</PropertyString>
+	<PropertyString>
+		<name>destination</name>
+		<displayName>Destination</displayName>
+		<default></default>
+		<help>YSE Destination for internal use only</help>
+	</PropertyString>
+	<PropertyNodeList nodeType="SnmpStatVariable">
+		<name>snmpVariables</name>
+		<displayName>SNMP Variables</displayName>
+		<minListLength>1</minListLength> 
+		<description>Configured for stat data collection SNMP Variables</description>
+		<help>Configured for stat data collection SNMP Variables</help>
+	</PropertyNodeList>
+</Node>
+

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ixia_message_file>
+    <status>
+        <id_string>Aptixia.Property.NodeIdNotFound</id_string>
+        <text>Node with id '%1%' could not be found</text>
+        <description>
+        The application attempt to find or operate on a Node an id
+        that could not be found.
+        </description>		
+    </status>
+
+    <status>
+        <id_string>Aptixia.Property.NodeDoesNotExist</id_string>
+        <text>Node Does Not Exist</text>
+        <description>Node Does Not Exist</description>
+    </status>
+
+    <status>
+        <id_string>Aptixia.Property.NodeIsInStaticLocation</id_string>
+        <text>Operation cannot be done on a node in static location '%1%'</text>
+        <description>
+        Operation cannot be done on node in static location
+        </description>		
+    </status>
+
+
+    <status>
+        <id_string>Aptixia.Property.Invalid</id_string>
+        <text>Invalid value '%2%' for %1%: %3%.</text>
+        <description>
+        The application tried to set a 
+        property within a test server configuration object to an value
+        that is not valid for the particualr property.
+
+        The text portion of the error describes:
+
+        - The name of the property that is invalid, e.g. 'ipAddress'
+        - The invalid value, e.g. '1000.2000.3000.4000'
+        - Extra runtime specific text that describes why the value is
+        invalid.
+
+        </description>		
+    </status>
+    
+    <status>
+        <id_string>Aptixia.Property.PortListEmpty</id_string>
+        <text>Please assign a Port for the Port Group '%1%'</text>
+        <description>
+        Port Group does not contain any port. 
+        Use Assign Port(s) button to select port for the port group.
+        </description>		
+    </status>
+    
+
+    <!-- -->
+    <status>
+        <id_string>Aptixia.Property.Invalid.IpV4V6Address</id_string>
+        <text>Invalid IP v4/v6 Address '%2%' for property '%1%'. %3%</text>
+        <description>
+        The application tried to apply an invalid ip v4/v6address 
+        to an aptixia property
+        </description>		
+    </status>
+
+    <status>
+        <id_string>Aptixia.Property.Invalid.MacAddress</id_string>
+        <text>Invalid MAC Address '%2%' for property '%1%'. %3%</text>
+        <description>
+        The application tried to apply an invalid mac address 
+        to an aptixia property
+        </description>		
+    </status>
+    
+    <status>
+        <id_string>Aptixia.Invalid.MacAddress</id_string>
+        <text>Invalid MAC Address '%2%'.</text>
+        <description>
+        The application tried to apply an invalid mac address 
+        to an aptixia property
+        </description>		
+    </status>
+    
+    <status>
+        <id_string>Aptixia.Property.Invalid.Vlan.Priority</id_string>
+        <text>Invalid VLAN Priority '%2%' for property '%1%'. %3%</text>
+        <description>
+        The application tried to apply an invalid vlan priority value
+        to an aptixia property
+        </description>		
+    </status>
+    <status>
+        <id_string>Aptixia.Property.Invalid.Vlan.Id</id_string>
+        <text>Invalid VLAN Priority '%2%' for property '%1%'. %3%</text>
+        <description>
+        The application tried to apply an invalid vlan priority id
+        to an aptixia property
+        </description>		
+    </status>
+</ixia_message_file>

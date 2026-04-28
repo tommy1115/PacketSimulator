@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Node nodeType="PppL2tp" baseType="">
+
+<PropertyInt>
+    <name>lcpTimeout</name>
+    <default>15</default>
+    <min>1</min>
+    <max>2147483647</max> <!-- max signed int32 -->
+
+    <help>Timeout for LCP phase, in seconds</help>
+    <description>Timeout for LCP phase, in seconds</description>
+</PropertyInt>
+
+<PropertyInt>
+    <name>lcpRetries</name>
+    <default>5</default>
+    <min>1</min>
+    <max>2147483647</max> <!-- max signed int32 -->
+
+    <help>Number of retries for LCP phase</help>
+    <description>Number of retries for LCP phase</description>
+</PropertyInt>
+
+<PropertyInt>
+    <name>mtu</name>
+    <default>1492</default>
+    <max>1500</max>
+    <min>32</min>
+
+    <help>Max Transmit Unit for PPP</help>
+    <description>Max Transmit Unit for PPP</description>
+</PropertyInt>
+
+<PropertyString>
+    <name>ncpType</name>
+    <default>IPv4</default>
+    <choices>
+        <choice value="IPv4" name="IPv4" />
+        <choice value="IPv6" name="IPv6" />
+    </choices>
+
+    <help>IP address type (IPv4 or IPv6) for Network Control Protocol</help>
+    <description>IP type (IPv4/IPv6) for Network Control Protocol</description>
+</PropertyString>
+
+<PropertyString>
+    <name>clientBaseIp</name>
+    <default>99.99.0.1</default>
+
+    <help>
+    The base IP address to be used when creating PPP client addresses.
+    This property is used as an incrementor for the 'clientIpIncr'
+    property
+    </help>
+    <description>Base for IPV4 PPP client address creation</description>
+</PropertyString>
+
+<PropertyString>
+    <name>clientIpIncr</name>
+    <default>0.0.0.1</default>
+
+    <help>
+    The incrementor for the clientBaseIp property
+    address when multiple PPP addresses are created.
+    </help>
+    <description>Incrementor for IPV4 PPP client address creation</description>
+</PropertyString>
+
+<PropertyString>
+    <name>serverBaseIp</name>
+    <default>99.98.0.1</default>
+
+    <help>
+    The base IP address to be used when create PPP server addresses.
+    This property is used in conjunction with the 'serverIpIncr'
+    property.
+    </help>
+    <description>Base for IPV4 PPP server address creation</description>
+</PropertyString>
+
+<PropertyString>
+    <name>serverIpIncr</name>
+    <default>0.0.0.0</default>
+    <help>
+    ** For internal use only **.
+    For PPP server IP v4 server plugins exactly one server address
+    is used. As a result, 0.0.0.0 is the only legal value for this property.
+    </help>
+</PropertyString>
+
+<PropertyString>
+    <name>clientBaseIID</name>
+    <default>00:11:11:11:00:00:00:01</default>
+    <help>
+       The base Link Local Identifier for the PPP client.
+       Used in conjunction with 'clientIIDIncr' as it's incrementor.
+       Valid for IPv6 only
+    </help>
+    <description>Base for IPV6 PPP client address creation</description>
+</PropertyString>
+
+<PropertyInt>
+    <name>clientIIDIncr</name>
+    <default>1</default>
+    <min>1</min>
+    <max>2147483647</max> <!-- max signed int32 -->
+
+    <help>
+        Client link local identifier increment, used in conjuction with the baseidentifier
+    </help>
+    <description>Link local Identitfier increment for IPV6 PPP client address creation</description>
+</PropertyInt>
+
+<PropertyString>
+    <name>serverBaseIID</name>
+    <default>00:11:22:11:00:00:00:01</default>
+
+    <help>
+       The base Link Local Identifier for the PPP server. Used in
+       conjunction with 'serverIIDIncr' as incrementor. Valid for
+       IPv6 only
+    </help>
+    <description>Base for IPV6 PPP server address creation</description>
+</PropertyString>
+
+<PropertyInt>
+    <name>serverIIDIncr</name>
+    <default>1</default>
+    <max>1</max>
+    <min>1</min>
+    <help>
+    ** For Internal use only **
+    Server link local identifier increment, used in conjuction
+    with the base identifier.  Note: for PPP server Plugin side one
+    exactly one server IID per client IID is created.
+    </help>
+</PropertyInt>
+
+<PropertyString>
+    <name>ipv6PoolPrefix</name>
+    <default>1:1:1::</default>
+
+    <help>Pool prefix for the IPv6 IP pool.</help>
+    <description>Pool prefix for the IPv6 IP pool.</description>
+</PropertyString>
+
+<PropertyInt>
+    <name>ipv6PoolPrefixLen</name>
+    <default>48</default>
+    <min>1</min>
+    <max>2147483647</max> <!-- max signed int32 -->
+    <help>
+    Pool prefix length. The difference between the address and pool prefix
+    lengths determine the size of the IPv6 IP pool
+    </help>
+    <description>IPV6 Pool Prefix Length</description>
+</PropertyInt>
+
+<PropertyInt>
+    <name>ipv6AddrPrefixLen</name>
+    <default>64</default>
+    <min>1</min>
+    <max>2147483647</max> <!-- max signed int32 -->
+    <help>
+    Address prefix length. The difference between the address and pool prefix
+    lengths determine the size of the IPv6 IP pool
+    </help>
+    <description>IPV6 Address Prefix Length</description>
+</PropertyInt>
+
+<PropertyString>
+    <name>authType</name>
+    <default>none</default>
+    <choices>
+    <choice value="none"      name="none" />
+    <choice value="pap"       name="pap" />
+    <choice value="chap"      name="chap" />
+    <choice value="papOrChap" name="pap or chap" />
+    </choices>
+</PropertyString>
+
+<PropertyString>
+    <name>papUser</name>
+    <default>user</default>
+    <maxLength>32</maxLength>
+
+    <help>User name when PAP Authentication is is being used</help>
+    <description>User name when PAP Authentication is is being used</description>
+</PropertyString>
+
+<PropertyString>
+    <name>papPassword</name>
+    <default>password</default>
+    <maxLength>32</maxLength>
+
+    <help>Password when PAP Authentication is being used</help>
+    <description>Password when PAP Authentication is being used</description>
+</PropertyString>
+
+<PropertyString>
+    <name>chapName</name>
+    <default>user</default>
+    <maxLength>32</maxLength>
+
+    <help>User name when CHAP Authentication is being used</help>
+    <description>User name when CHAP Authentication is being used</description>
+</PropertyString>
+
+<PropertyString>
+    <name>chapSecret</name>
+    <default>secret</default>
+    <maxLength>32</maxLength>
+
+    <help>Secret when CHAP Authentication is being used</help>
+    <description>Secret when CHAP Authentication is being used</description>
+</PropertyString>
+
+<PropertyInt>
+    <name>lcpTermTimeout</name>
+    <default>15</default>
+    <min>1</min>
+    <max>2147483647</max> <!-- max signed int32 -->
+
+    <help>Timeout for LCP termination, in seconds.</help>
+    <description>Timeout for LCP termination, in seconds.</description>
+</PropertyInt>
+
+<PropertyInt>
+    <name>lcpTermRetries</name>
+    <default>5</default>
+    <min>1</min>
+    <max>2147483647</max> <!-- max signed int32 -->
+
+    <help>Number of LCP Termination Retries.</help>
+    <description>Number of LCP Termination Retries.</description>
+</PropertyInt>
+
+<PropertyBoolean>
+    <name>useMagic</name>
+    <default>true</default>
+
+    <help>???</help>
+    <description>use magic</description>
+</PropertyBoolean>
+
+<PropertyBoolean>
+    <name>enableEchoRsp</name>
+    <default>true</default>
+
+    <help>???</help>
+    <description>Enable Echo replies</description>
+</PropertyBoolean>
+
+<PropertyBoolean>
+    <name>enableEchoReq</name>
+    <default>false</default>
+
+    <help>???</help>
+    <description>Enable Echo requests</description>
+</PropertyBoolean>
+
+<PropertyInt>
+    <name>echoReqInterval</name>
+    <default>60</default>
+    <min>1</min>
+    <max>2147483647</max> <!-- max signed int32 -->
+
+    <help>???</help>
+    <description>Echo Request Interval</description>
+</PropertyInt>
+
+<PropertyInt>
+    <name>ncpTimeout</name>
+    <default>15</default>
+    <min>1</min>
+    <max>2147483647</max> <!-- max signed int32 -->
+
+    <help>Timeout for NCP phase, in seconds.</help>
+    <description>Timeout for NCP phase, in seconds.</description>
+</PropertyInt>
+
+<PropertyInt>
+    <name>ncpRetries</name>
+    <default>5</default>
+    <min>1</min>
+    <max>2147483647</max> <!-- max signed int32 -->
+
+    <help>Number of NCP retries.</help>
+    <description>Number of NCP retries.</description>
+</PropertyInt>
+
+<PropertyInt>
+    <name>authTimeout</name>
+    <default>15</default>
+    <min>1</min>
+    <max>2147483647</max> <!-- max signed int32 -->
+
+    <help>Timeout for PPP authentication, in seconds.</help>
+    <description>Timeout for PPP authentication, in seconds.</description>
+</PropertyInt>
+
+<PropertyInt>
+    <name>authRetries</name>
+    <default>5</default>
+    <min>1</min>
+    <max>2147483647</max> <!-- max signed int32 -->
+
+    <help>Number of PPP authentication retries.</help>
+    <description>Number of PPP authentication retries.</description>
+</PropertyInt>
+</Node>

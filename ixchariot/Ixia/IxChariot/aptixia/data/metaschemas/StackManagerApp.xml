@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="StackManagerApp" baseType="ServiceExtension">
+
+  <description>
+  Interface for setting and getting various application driven properties
+  for the stack manager.
+  </description>
+
+  <PropertyString>
+    <name>defaultImportExportDirectory</name>
+    <default></default>
+    <description>
+      Name of the default directory to use when importing or
+      exporting stack manager configuration files
+    </description>
+  </PropertyString>
+
+</Node>

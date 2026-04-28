@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+    Generally, this should only contain information needed before a
+    plugin is loaded. Any other information should most likely gained
+    by instrospection of the plug-in object
+
+-->
+
+<Plugin>
+    <!-- ================================================================  -->
+
+    <!-- 
+        Version string for the plugin. For now, restrict yourself to
+        a sequence of dotted numbers (in string form). E.g. "1.0.5.2"
+    -->
+    <Version>1.0.0.0</Version>
+
+    <!-- 
+        A dotted keyword string that uniquely identifies the plugin 
+    <Type>Aptixia.StackElement.Global.ImpairmentPlugin</Type>
+    -->
+    <Type>ImpairmentPlugin</Type>
+
+    <!-- 
+        An arbitrary string used for "captioning" the plugin 
+    -->
+    <Name>Impairment</Name>
+    <!-- temporary, this is going away -->
+    <Class>Transparent</Class>
+
+
+    <!-- ================================================================  -->
+
+    <!-- ================================================================  -->
+    <!-- 
+    'canProvideBaseStyles' is a comma seperated list of base-stacking-styles
+    this plugin can support. 
+    
+    When another plugin tries to stack onto this plugin,
+    it cross checks the other plugin's 'canUseBaseStyles' list against it's own 
+    'canProvideBaseStyles' list
+        
+    If the cross check finds an intersection between the other
+    plugin's 'canUseBaseStyles' and this plugin's 'canProvideBaseStyles',
+    then the other plugin is allowed to stack on top of this plugin
+
+    Note: This plugin's 'Type' value is provided as a built-in 
+    base-stacking-style In addition to the styles defined
+    in 'canProvideBaseStyle' below
+    -->
+    <canProvideBaseStyles>ImpairmentIPBase</canProvideBaseStyles>
+
+    <!-- 
+    'canUseBaseStyles' is a comma seprated list of base-stacking-styles
+    this plugin is able stack on top of.
+
+    When this plugin tries to stack on top of another plugin,
+    it cross checks it own 'canUseBaseStyles' against other plugin's
+    'canProvideBaseStyles'.
+
+    If the cross check finds an intersection between the other
+    plugin's 'canProvideBaseStyles' and this plugin's 'canUseBaseStyles',
+    then this plugin is allowed to stack on top of other plugin
+
+    Note: "Root" is a special value for 'canUseBaseStyles' which means 
+    that this plugin can be used as the root of a stacking tree 
+    (it needs no base below it)
+    -->
+    <canUseBaseStyles>HardwareIPBase</canUseBaseStyles>
+
+    <!-- ================================================================  -->
+
+</Plugin>

@@ -1,0 +1,369 @@
+====================
+= Questions 
+====================
+
+1) are choices strict i.e. does it check that ok iff it's one of the
+choice lists if not, then all <choices> specifications need to be
+re-reviewed. i suggest by default choices should be a strict enumeration
+and of other behavior is needed then add modifiers to choice
+
+====================
+= Comment Legend
+====================
+
+DONE Before the .xml file name
+name means it's incomplete
+
+## = Property Validator comment
+## = needs a property validator i.e. a Validate_PROPNAME method in the node
+that contained the property OR the metaschema element needs options to enforce
+a valid value
+
+##?? = needs a property validator i.e. a Validate_PROPNAME method in the node
+that contained the property. TBD what exactly the checking should be
+
+#! = Node Verifier comment. 
+a Verifier override is needed in the PropertyNode(list)
+for pre-test validation of the node. cross checking is done here 
+or in a ancestor node Verifier when needed
+
+#None = no work needed
+
+#Cannot-determine = needs to be reviewed by another (expert) on the node
+
+====================
+MetaSchema Verification Items
+====================
+
+1) all node with choices *must* have a default defined and it should
+be one of the choices - (may not need to check for that since failures
+might occur when you try to set a value out of the choice list)
+or it should auto define the default as the first chioce value
+
+2) all properties should be leading lowercase/camelcase
+
+=============================================================================
+= Property / Property Node validation tasks
+=============================================================================
+
+**GLOBAL** :
+    all <PropertyBoolean>'s should be reviewed for proper <default> settings
+
+ATMCardPlugin.xml
+        #None
+
+ATMGeneric.xml
+        <name>atmInterfaceType</name>
+        <name>packetDecodeMode</name>
+        <name>reassemblyTimeout</name> ## just add metacheme defaults
+
+ATMPlugin.xml
+        <name>mac</name> ## std mac address Validate
+        <name>incrementBy</name> ## std mac address Validate
+        <name>reassemblyTimeout</name> ## int range checking
+
+AggregatedStat.xml
+        #None
+
+BasicEthernetGeneric.xml
+        #None primarily a container class
+CardPlugin.xml
+        #None primarily a container class
+
+ChartAxis.xml
+        #Cannot-determine
+ChartXAxis.xml
+        #Cannot-determine
+ChartYAxis.xml
+        #Cannot-determine
+
+Chassis.xml
+    <name>dns</name> ## standard dns/ip address checker
+                     ## this is a lousy name for this property
+
+    <name>cableLength</name> ## needs metaschema range defns
+
+ChassisConfig.xml
+    <name>OTHER<name>   ## needs further review
+    <name>chassisChain</name> #! needs verifier ??
+
+DDGTest.xml
+    #Cannot-determine - a unit test object
+
+DataDrivenFormBase.xml
+    #Cannot-determine 
+    ## Checking for FormLayout needed ?
+
+DnsHost.xml
+    <name>HostIP</name> ## std ipv4v6 address validator
+    <name>HostName</name> ## std DNS name validator (ip not legal)
+
+    <name>Alias1</name> ## std DNS name validator (ip not legal)
+    <name>Alias2</name> ## std DNS name validator (ip not legal)
+                        ## these are lousy names. should be an AliasList
+
+DnsPlugin.xml
+    <name>domain</name> ## ??
+    <name>nameserver</name> ## std ipv4v6 address validator 
+                            ## are host/dns names allowed??
+
+    <name>search</name> ## ?? 
+                        ## should this be a string list not a string ??
+
+    <name>host</name> ## this is a NodeList of DnsHosts, 
+                      ## needs to have a name
+                      ## like hosts or hostList
+                      #! needs to check for duplicate entries
+
+DodUnitTestPlugin.xml
+    #None - unit test plugin
+
+DualPhyPlugin.xml
+    #None - just a single choice element
+        
+EmulatedRouterPlugin.xml
+    #! check ipaddress, incrementby against iptype
+
+    <name>iptype</name> ## !!! needs to be ipType
+    <name>gatewayaddress</name> ## std ipv4v6 address string (no hostname)
+
+    <name>ipaddress</name> ## std ipv4v6 address string (no hostname)
+    <name>ipaddress</name> ## !!! needs to be ipAddress
+    <name>incrementby</name> ## !!! needs to be incrementBy not incrementby
+    <name>incrementby</name> ## std ipv4v6 addr string (no hostname)
+        
+EthernetCardPlugin.xml
+    #None - primarily a container
+
+EthernetDualPhy.xml
+    <name>medium</name> ## needs a <choice> description of "copper","fiber"
+
+EthernetELM.xml
+    <name>negotiationType</name> ## needs a choice description of "master","slave"
+
+EthernetELMPlugin.xml
+    #None - looks ok 
+
+EthernetFiber.xml
+    #None - container
+
+EthernetGeneric.xml
+    <name>speed</name> ## needs a <choices> or a special validator
+                       ## for enumeration 
+                       ## kAuto,k10FD, k10HD, k100FD, k100HD, k10000, etc...
+
+
+EthernetPlugin.xml
+    <name>mac</name> ## std mac address validator
+    <name>incrementBy</name> ## std ipv4v6 address (txt host not allowed)
+
+FiberGeneric.xml
+    <name>interfaceType</name> ## needs choices or validator 
+                               ## see <description>
+
+    <name>c2Transmit</name> ## needs <choices> or validator
+                            ## see <description>
+
+    <name>c2Expected</name> ## needs <choices> or validator
+                            ## see <description>
+
+    <name>transmitClocking</name> ## needs <choices> or validator
+                                 ## see <description>
+
+FilterPlugin.xml
+    <name>pppoecontrol</name> ## should be pppoeControl
+    <name>pppoenetwork</name> ## should be pppoeNetwork
+    <name>ip</name> ## <default>null</default> should be empty string ?
+                    ## not null ?
+    <name>ip</name> ## choices seems to be not a strict enum
+                    ## unsure of solution maybe <multichoices> ?
+    <name>ip</name> ## not a good/descriptive name
+                    ## maybe ipProtocolType(s) ??
+
+    <name>tcp</name> ## bad name ?  suggest tcpPorts ?
+                     ## should be a List or have or Validator
+                     ## for a positive integer list in string form
+
+    <name>udp</name> ## same as <name>tcp</name>
+
+    <name>mac</name> ## bad name ? maybe macTypes ?
+                     ## custom Validate_ needed
+    <name>icmp</name> ## bad name ? maybe icmpProtocolTypes
+                     ## custom Validate_ needed
+
+GenericStatSource.xml
+    #None (no properties)
+    #! may need a verifier
+
+GenericTestModel.xml
+    <name>portGroupList</name> #! see portGroup
+    <name>chassisConfig</name> #! details Unknown -- see uma
+    <name>statSourcesList</name> #! details Unknown -- ray
+
+GigabitEthernetGeneric.xml
+    <name>clockType</name> ## needs strict <choices> or validator
+                           ## see <description>
+
+GigabitEthernetXAUI.xml
+    #None - OK (all bools)
+
+GigabitEthernetXenopak.xml
+    #None - OK (all bools)
+
+GlobalPlugin.xml
+    #None - Container
+
+HardwarePlugin.xml
+    <name>card</name> #! Make sure matches with port assigned to portgroup
+                      #! may need to go in a higher level Verifier ??
+
+ImpairmentPlugin.xml
+    #! unknown - source vs destination ports checking ??
+
+    <name>destinationIp</name> ## std ip address Validator
+    <name>sourcePort</name> ## std ip port validator or add <max> value
+    <name>destinationPort</name> ## same as sourcePort
+
+InterfaceManagerHelper.xml
+    #! needed - specifics unknown 
+
+IpPlugin.xml
+    #None
+
+IpV4V6Plugin.xml
+    #! needed - specifics unknown 
+    <name>rangeList</name> ## ???
+
+IpV4V6Range.xml
+    #! needed - specifics unknown 
+    #! check address against iptype
+    #! check incrementBy against iptype
+
+    <name>iptype</name> ## should be ipType
+    <name>address</name> #! ipv4 xor v6 address check depending on 
+                         #! <name>iptype</name>
+
+    <name>incrementBy</name> #! ipv4 or v6 address 
+    <name>address</name> #! ipv4 or v6 address 
+    <name>gatewayaddress</name> ## std ipv4v6 address validator (no text host)
+
+    <name>prefix</name> #! range check depending on <name>iptype</name>
+    <name>count</name> ## range check
+    <name>Vlan</name> ## TBD
+    <name>Vlan</name> #! TBD
+
+
+Layer1Generic.xml
+    #None - just a single bool
+
+NodeTest.xml
+    #None - unit test node
+
+NodeTestA.xml
+    #None - unit test node
+
+NodeTestB.xml
+    #None - unit test node
+
+PortGroup.xml
+    <name>portList</name> #! ???
+
+    #! chassis memebership check -in place
+    #! duplicate ip check - in place
+    #! duplicate ports in port group 
+
+    <name>stack</name> #!! need ConstructStack 
+                       #!! to do upper edge / lower edge checking
+
+    <name>globalPluginList</name> #!! ConstructGlobalPluginList 
+                                  #!! allow only globals
+                                  #!! global plugins to be stacked
+
+    dodpackagelist #! dod package list checking ??
+                   #! check that file exists, etc..
+
+ServiceExtension.xml
+    #Cannot-determine  (mark)
+ServiceExtensionsWrapper.xml
+    #Cannot-determine  (mark)
+    #! should properly delegate to subobjects (may do it already)
+
+SnmpPlugin.xml
+    <name>SnmpStatSources</name> #Cannot-determine  (alex)
+SnmpStatSource.xml
+    #Cannot-determine  (alex)
+    #whole node needs re-review. uninfoirmed suggestions:
+    <name>SnmpHost</name> ## std ipv4v6/dns host name ?? validator
+    <name>SnmpPort</name> ## needs min 0 max ? or std tcp port validator
+    <name>Yse_Port</name> ## ??
+
+SnmpStatVariable.xml
+    #Cannot-determine  (alex)
+
+SonetATMBasePlugin.xml
+
+   <name>c2Transmit</name> ## range check
+   <name>c2Expected</name> ## range check
+
+StackElementPlugin.xml
+    ## none - container
+    #! ??? 
+
+StatAttribute.xml
+    #Cannot-determine  (ray)
+StatAttributeList.xml
+    #Cannot-determine  (ray)
+StatCatalogItem.xml
+    #Cannot-determine  (ray)
+StatCatalogStat.xml
+    #Cannot-determine  (ray)
+StatConsumer.xml
+    #Cannot-determine  (ray)
+StatFilter.xml
+    #Cannot-determine  (ray)
+StatFilterGroup.xml
+    #Cannot-determine  (ray)
+StatManager.xml
+    #Cannot-determine  (ray)
+StatSpec.xml
+    #Cannot-determine  (ray)
+StatView.xml
+    #Cannot-determine  (ray)
+StatViewTemplate.xml
+    #Cannot-determine  (ray)
+StatViewer.xml
+    #Cannot-determine  (ray)
+StatWatch.xml
+    #Cannot-determine  (ray)
+
+TCPPlugin.xml
+    ## all PropertyInts need range checks
+    ## some have them some don't
+
+Test.xml
+    <name>name</name> #! ?? check the another test w/ same name is not already running ?
+
+TestServerUnitTestNode.xml
+    #None - unit test node
+
+TreeNode.xml
+    #None - container
+
+TunnelPlugin.xml
+    #None - not used currently
+Vlan.xml
+    ## ??
+    #! ??
+
+XPBootstrap.xml
+    #Cannot-determine (jan)
+XPUnitTest.xml
+    #None - unit test node
+XPUnitTestA.xml
+    #None - unit test node
+XPUnitTestB.xml
+    #None - unit test node
+XPUnitTestC.xml
+    #None - unit test node
+XProtocolObject.xml
+    #Cannot-determine (jan)

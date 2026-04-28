@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Node nodeType="TCPPlugin" baseType="GlobalPlugin">
+	<help>For setting all the TCP options on the port</help>
+    <PropertyBoolean>
+        <name>tcp_abort_on_overflow</name>
+        <default>false</default>
+        <description>Enable resetting connections if the listening service is too slow and unable to keep up and accept them</description>
+        <help><![CDATA[Enable  resetting  connections  if  the listening service is too
+slow and unable to keep up and accept them.  It is  not  enabled
+by  default.  It means that if overflow occurred due to a burst,
+the connection will recover.  Enable this option _only_  if  you
+are  really  sure  that  the listening daemon cannot be tuned to
+accept connections faster.  Enabling this option  can  harm  the
+clients of your server.]]></help>
+    </PropertyBoolean>
+    <PropertyInt>
+        <name>tcp_adv_win_scale</name>
+        <default>2</default>
+        <description>Count buffering overhead</description>
+        <help><![CDATA[Count buffering overhead]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_app_win</name>
+        <default>31</default>
+        <min>0</min>
+        <description>Bytes of the TCP window reserved for buffering overhead</description>
+        <help><![CDATA[This variable defines how many  bytes  of  the  TCP  window  are
+reserved for buffering overhead.
+A maximum of (window/2^tcp_app_win, mss) bytes in the window are
+reserved for the application buffer.  A value of 0 implies  that
+no amount is reserved.  The default value is 31.]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_bic</name>
+        <default>0</default>
+        <description>Enable BIC TCP congestion control algorithm</description>
+        <help><![CDATA[BIC-TCP is a sender-side only change that ensures a linear RTT
+fairness under large windows while offering both scalability and
+bounded TCP-friendliness. The protocol combines two schemes
+called additive increase and binary search increase. When the
+congestion window is large, additive increase with a large
+increment ensures linear RTT fairness as well as good
+scalability. Under small congestion windows, binary search
+increase provides TCP friendliness.
+Default: 0]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_bic_fast_convergence</name>
+        <default>1</default>
+        <description>Forces BIC TCP to more quickly respond to changes in congestion window</description>
+        <help><![CDATA[Forces BIC TCP to more quickly respond to changes in congestion
+window. Allows two flows sharing the same connection to converge
+more rapidly.
+Default: 1]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_bic_low_window</name>
+        <default>14</default>
+        <description>Sets the threshold window (in packets) where BIC TCP starts to adjust the congestion window</description>
+        <help><![CDATA[Sets the threshold window (in packets) where BIC TCP starts to
+adjust the congestion window. Below this threshold BIC TCP behaves
+the same as the default TCP Reno.
+Default: 14]]></help>
+    </PropertyInt>
+    <PropertyBoolean>
+        <name>tcp_dsack</name>
+        <default>true</default>
+        <description>Enable  RFC2883  TCP  Duplicate  SACK support</description>
+        <help><![CDATA[Enable  RFC2883  TCP  Duplicate  SACK support.  It is enabled by
+default.]]></help>
+    </PropertyBoolean>
+    <PropertyBoolean>
+        <name>tcp_ecn</name>
+        <default>false</default>
+        <description>Enable RFC2884 Explicit  Congestion  Notification</description>
+        <help><![CDATA[Enable RFC2884 Explicit  Congestion  Notification.   It  is  not
+enabled by default.  When enabled, connectivity to some destina-
+tions could be affected due to older, misbehaving routers  along
+the path causing connections to be dropped.]]></help>
+    </PropertyBoolean>
+    <PropertyBoolean>
+        <name>tcp_fack</name>
+        <default>true</default>
+        <description>Enable  TCP  Forward  Acknowledgement support</description>
+        <help><![CDATA[Enable  TCP  Forward  Acknowledgement support.  It is enabled by
+default.]]></help>
+    </PropertyBoolean>
+    <PropertyInt>
+        <name>tcp_fin_timeout</name>
+        <default>60</default>
+        <min>1</min>
+        <max>86400</max>
+        <description>Seconds to wait for a final FIN packet before the socket is forcibly closed</description>
+        <help><![CDATA[How many seconds to wait for  a  final  FIN  packet  before  the
+socket  is forcibly closed.  This is strictly a violation of the
+TCP specification, but  required  to  prevent  denial-of-service
+(DoS)  attacks.   The  default  value in 2.4 kernels is 60, down
+from 180 in 2.2.]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_frto</name>
+        <default>0</default>
+        <description>Enables F-RTO, an enhanced recovery algorithm for TCP retransmission timeouts</description>
+        <help><![CDATA[Enables F-RTO, an enhanced recovery algorithm for TCP retransmission
+timeouts.  It is particularly beneficial in wireless environments
+where packet loss is typically due to random radio interference
+rather than intermediate router congestion.]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_keepalive_intvl</name>
+        <default>75</default>
+        <min>1</min>
+        <max>86400</max>
+        <description>Seconds between TCP keep-alive probes</description>
+        <help><![CDATA[The number  of  seconds  between  TCP  keep-alive  probes.   The
+default value is 75 seconds.]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_keepalive_probes</name>
+        <default>9</default>
+        <min>1</min>
+        <max>255</max>
+        <description>Maximum number of TCP keep-alive probes to send before giving up</description>
+        <help><![CDATA[The  maximum number of TCP keep-alive probes to send before giv-
+ing up and killing the connection if  no  response  is  obtained
+from the other end.  The default value is 9.]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_keepalive_time</name>
+        <default>7200</default>
+        <min>1</min>
+        <max>86400</max>
+        <description>Connection idle seconds before TCP begins sending out keep-alive probes</description>
+        <help><![CDATA[The  number  of seconds a connection needs to be idle before TCP
+begins sending out keep-alive probes.  Keep-alives are only sent
+when  the  SO_KEEPALIVE  socket  option is enabled.  The default
+value is 7200 seconds (2 hours).  An idle connection  is  termi-
+nated  after approximately an additional 11 minutes (9 probes an
+interval of 75 seconds apart) when keep-alive is enabled.
+Note that underlying connection tracking mechanisms and applica-
+tion timeouts may be much shorter.]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_low_latency</name>
+        <default>0</default>
+        <description>If set, the TCP stack makes decisions that prefer lower latency as opposed to higher throughput</description>
+        <help><![CDATA[If set, the TCP stack makes decisions that prefer lower
+latency as opposed to higher throughput.  By default, this
+option is not set meaning that higher throughput is preferred.
+An example of an application where this default should be
+changed would be a Beowulf compute cluster.
+Default: 0]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_max_orphans</name>
+        <default>8192</default>
+        <min>0</min>
+        <description>Maximum not attached to any user file handle</description>
+        <help><![CDATA[The  maximum  number  of orphaned (not attached to any user file
+handle) TCP sockets allowed in the system.  When this number  is
+exceeded,  the  orphaned  connection  is  reset and a warning is
+printed.  This limit exists only to prevent simple DoS  attacks.
+Lowering this limit is not recommended. Network conditions might
+require you to increase the number of orphans allowed, but  note
+that  each orphan can eat up to ~64K of unswappable memory.  The
+default initial value is  set  equal  to  the  kernel  parameter
+NR_FILE.  This initial default is adjusted depending on the mem-
+ory in the system.]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_max_syn_backlog</name>
+        <default>256</default>
+        <min>0</min>
+        <description>Maximum queued connection requests with no acknowledgement from the connecting client</description>
+        <help><![CDATA[The maximum number of  queued  connection  requests  which  have
+still  not  received  an  acknowledgement  from  the  connecting
+client.  If this number is exceeded, the kernel will begin drop-
+ping  requests.   The  default value of 256 is increased to 1024
+when the memory present in the system is adequate or greater (>=
+128Mb),  and reduced to 128 for those systems with very low mem-
+ory (<= 32Mb).  It is recommended  that  if  this  needs  to  be
+increased  above  1024,  TCP_SYNQ_HSIZE  in include/net/tcp.h be
+modified to keep TCP_SYNQ_HSIZE*16<=tcp_max_syn_backlog, and the
+kernel be recompiled.]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_max_tw_buckets</name>
+        <default>16384</default>
+        <min>0</min>
+        <description>Maximum number of sockets in TIME_WAIT state</description>
+        <help><![CDATA[The  maximum number of sockets in TIME_WAIT state allowed in the
+system.  This limit exists only to prevent simple  DoS  attacks.
+The default value of NR_FILE*2 is adjusted depending on the mem-
+ory in the system.  If this number is exceeded,  the  socket  is
+closed and a warning is printed.]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_mem_low</name>
+        <default>6144</default>
+        <min>0</min>
+        <description></description>
+        <help><![CDATA[TCP doesn't regulate its memory allocation when the number
+of pages it has allocated globally is below this number.]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_mem_pressure</name>
+        <default>8192</default>
+        <min>0</min>
+        <description></description>
+        <help><![CDATA[when  the amount of memory allocated by TCP exceeds
+this number of pages,  TCP  moderates  its  memory  consumption.
+This  memory  pressure  state is exited once the number of pages
+allocated falls below the low mark.]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_mem_high</name>
+        <default>12288</default>
+        <min>0</min>
+        <description></description>
+        <help><![CDATA[the maximum number of  pages,  globally,  that  TCP  will
+allocate.   This value overrides any other limits imposed by the
+kernel.]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_moderate_rcvbuf</name>
+        <default>0</default>
+        <min>0</min>
+        <description>Turns on/off receive buffer auto-tuning</description>
+        <help><![CDATA[Turns on/off receive buffer auto-tuning]]></help>
+    </PropertyInt>
+    <PropertyBoolean>
+        <name>tcp_no_metrics_save</name>
+        <default>false</default>
+        <description></description>
+        <help><![CDATA[tcp_no_metrics_save]]></help>
+    </PropertyBoolean>
+    <PropertyInt>
+        <name>tcp_orphan_retries</name>
+        <default>0</default>
+        <min>0</min>
+        <description>Maximum attempts to probe the other end of a connection which has been closed by our end</description>
+        <help><![CDATA[The maximum number of attempts made to probe the other end of  a
+connection  which has been closed by our end.  The default value
+is 8.]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_reordering</name>
+        <default>3</default>
+        <min>0</min>
+        <max>255</max>
+        <description></description>
+        <help><![CDATA[The maximum a packet can be reordered in  a  TCP  packet  stream
+without TCP assuming packet loss and going into slow start.  The
+default is 3.  It is not advisable to change this number.   This
+is  a  packet  reordering  detection metric designed to minimize
+unnecessary back off and retransmits provoked by  reordering  of
+packets on a connection.]]></help>
+    </PropertyInt>
+    <PropertyBoolean>
+        <name>tcp_retrans_collapse</name>
+        <default>true</default>
+        <description>Try to send full-sized packets during retransmit</description>
+        <help><![CDATA[Try  to  send  full-sized  packets  during  retransmit.  This is
+enabled by default.]]></help>
+    </PropertyBoolean>
+    <PropertyInt>
+        <name>tcp_retries1</name>
+        <default>3</default>
+        <min>1</min>
+        <max>255</max>
+        <description>Number of times TCP will attempt to retransmit a packet on an established connection normally</description>
+        <help><![CDATA[The number of times TCP will attempt to retransmit a  packet  on
+an  established connection normally, without the extra effort of
+getting the network layers involved.  Once we exceed this number
+of retransmits, we first have the network layer update the route
+if possible before each new retransmit.  The default is the  RFC
+specified minimum of 3.]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_retries2</name>
+        <default>15</default>
+        <min>1</min>
+        <max>1048576</max>
+        <description>Maximum number of times a TCP packet is retransmitted in established state before giving up</description>
+        <help><![CDATA[The  maximum  number  of  times a TCP packet is retransmitted in
+established state before giving up.  The default  value  is  15,
+which  corresponds  to a duration of approximately between 13 to
+30  minutes,  depending  on  the  retransmission  timeout.   The
+RFC1122  specified  minimum  limit  of  100 seconds is typically
+deemed too short.]]></help>
+    </PropertyInt>
+    <PropertyBoolean>
+        <name>tcp_rfc1337</name>
+        <default>false</default>
+        <description>Enable TCP behaviour conformant with RFC 1337</description>
+        <help><![CDATA[Enable TCP behaviour conformant with  RFC  1337.   This  is  not
+enabled  by  default.  When not enabled, if a RST is received in
+TIME_WAIT state, we close the socket immediately without waiting
+for the end of the TIME_WAIT period.]]></help>
+    </PropertyBoolean>
+    <PropertyInt>
+        <name>tcp_rmem_min</name>
+        <default>4096</default>
+        <min>1</min>
+        <max>1048576</max>
+        <description>Minimum size of the receive buffer used by each TCP socket</description>
+        <help><![CDATA[minimum  size  of  the  receive  buffer used by each TCP
+socket.  The default value is 4K, and is  lowered  to  PAGE_SIZE
+bytes  in low memory systems.  This value is used to ensure that
+in memory pressure mode, allocations below this size will  still
+succeed.   This  is  not  used  to bound the size of the receive
+buffer declared using SO_RCVBUF on a socket.]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_rmem_default</name>
+        <default>32768</default>
+        <min>1</min>
+        <max>1048576</max>
+        <description>Default size of the receive buffer for a TCP socket</description>
+        <help><![CDATA[the default size of  the  receive  buffer  for  a  TCP
+socket.   This  value overwrites the initial default buffer size
+from the generic global net.core.rmem_default  defined  for  all
+protocols.   The default value is 87380 bytes, and is lowered to
+43689 in low memory systems.  If larger receive buffer sizes are
+desired, this value should be increased (to affect all sockets).
+To employ large  TCP  windows,  the  net.ipv4.tcp_window_scaling
+must be enabled (default).]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_rmem_max</name>
+        <default>174760</default>
+        <min>1</min>
+        <max>1048576</max>
+        <description>Maximum size of the receive buffer used by each TCP socket</description>
+        <help><![CDATA[the  maximum size of the receive buffer used by each TCP
+socket.    This   value   does   not   override    the    global
+net.core.rmem_max.   This  is  not used to limit the size of the
+receive buffer  declared  using  SO_RCVBUF  on  a  socket.   The
+default value of 87380*2 bytes is lowered to 87380 in low memory
+systems.]]></help>
+    </PropertyInt>
+    <PropertyBoolean>
+        <name>tcp_sack</name>
+        <default>true</default>
+        <description>Enable RFC2018 TCP Selective Acknowledgements</description>
+        <help><![CDATA[Enable RFC2018 TCP Selective Acknowledgements.  It is enabled by
+default.]]></help>
+    </PropertyBoolean>
+    <PropertyBoolean>
+        <name>tcp_stdurg</name>
+        <default>false</default>
+        <description>Enable the strict RFC793 interpretation of the TCP urgent pointer field</description>
+        <help><![CDATA[Enable  the  strict  RFC793  interpretation  of  the TCP urgent-
+pointer field.  The default is to use the BSD-compatible  inter-
+pretation  of  the  urgent-pointer,  pointing  to the first byte
+after the urgent data.  The RFC793 interpretation is to have  it
+point to the last byte of urgent data.  Enabling this option may
+lead to interoperatibility problems.]]></help>
+    </PropertyBoolean>
+    <PropertyInt>
+        <name>tcp_synack_retries</name>
+        <default>5</default>
+        <min>1</min>
+        <max>255</max>
+        <description>Maximum number of times a SYN/ACK segment for a passive TCP connection will be retransmitted</description>
+        <help><![CDATA[The maximum number of times a SYN/ACK segment for a passive  TCP
+connection  will  be  retransmitted.   This number should not be
+higher than 255. The default value is 5.]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_syn_retries</name>
+        <default>5</default>
+        <min>1</min>
+        <max>255</max>
+        <description>Maximum number of times initial SYNs for an active TCP connection attempt will be retransmitted</description>
+        <help><![CDATA[The maximum number of times initial SYNs for an active TCP  con-
+nection attempt will be retransmitted.  This value should not be
+higher than 255.  The default value is 5, which  corresponds  to
+approximately 180 seconds.]]></help>
+    </PropertyInt>
+    <PropertyBoolean>
+        <name>tcp_timestamps</name>
+        <default>true</default>
+        <description>Enable RFC1323 TCP timestamps</description>
+        <help><![CDATA[Enable RFC1323 TCP timestamps.  This is enabled by default.]]></help>
+    </PropertyBoolean>
+    <PropertyBoolean>
+        <name>tcp_tw_recycle</name>
+        <default>false</default>
+        <description>Enable fast recycling of TIME-WAIT sockets</description>
+        <help><![CDATA[Enable  fast  recycling of TIME-WAIT sockets.  It is not enabled
+by default.  Enabling this option is not recommended since  this
+causes  problems when working with NAT (Network Address Transla-
+tion).]]></help>
+    </PropertyBoolean>
+    <PropertyBoolean>
+        <name>tcp_tw_reuse</name>
+        <default>false</default>
+        <description>Allow to reuse TIME-WAIT sockets for new connections when it is safe from protocol viewpoint</description>
+        <help><![CDATA[Allow to reuse TIME-WAIT sockets for new connections when it is
+safe from protocol viewpoint. Default value is 0.
+It should not be changed without advice/request of technical
+experts.]]></help>
+    </PropertyBoolean>
+    <PropertyInt>
+        <name>tcp_vegas_alpha</name>
+        <default>2</default>
+        <min>0</min>
+        <description></description>
+        <help><![CDATA[tcp_vegas_alpha]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_vegas_beta</name>
+        <default>6</default>
+        <min>0</min>
+        <description></description>
+        <help><![CDATA[tcp_vegas_beta]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_vegas_cong_avoid</name>
+        <default>0</default>
+        <min>0</min>
+        <description>Enable TCP Vegas congestion avoidance algorithm</description>
+        <help><![CDATA[Enable TCP Vegas congestion avoidance algorithm.
+TCP Vegas is a sender-side only change to TCP that anticipates
+the onset of congestion by estimating the bandwidth. TCP Vegas
+adjusts the sending rate by modifying the congestion
+window. TCP Vegas should provide less packet loss, but it is
+not as aggressive as TCP Reno.
+Default:0]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_vegas_gamma</name>
+        <default>2</default>
+        <min>0</min>
+        <description></description>
+        <help><![CDATA[tcp_vegas_gamma]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_westwood</name>
+        <default>0</default>
+        <min>0</min>
+        <description>Enable TCP Westwood+ congestion control algorithm</description>
+        <help><![CDATA[Enable TCP Westwood+ congestion control algorithm.
+TCP Westwood+ is a sender-side only modification of the TCP Reno
+protocol stack that optimizes the performance of TCP congestion
+control. It is based on end-to-end bandwidth estimation to set
+congestion window and slow start threshold after a congestion
+episode. Using this estimation, TCP Westwood+ adaptively sets a
+slow start threshold and a congestion window which takes into
+account the bandwidth used  at the time congestion is experienced.
+TCP Westwood+ significantly increases fairness wrt TCP Reno in
+wired networks and throughput over wireless links.
+Default: 0]]></help>
+    </PropertyInt>
+    <PropertyBoolean>
+        <name>tcp_window_scaling</name>
+        <default>true</default>
+        <description>Enable RFC1323 TCP window scaling</description>
+        <help><![CDATA[Enable RFC1323 TCP window scaling.  It is  enabled  by  default.
+This  feature  allows the use of a large window (> 64K) on a TCP
+connection, should the other end support it.  Normally,  the  16
+bit window length field in the TCP header limits the window size
+to less than 64K bytes.  If larger windows are desired, applica-
+tions can increase the size of their socket buffers and the win-
+dow scaling option will be employed.  If  tcp_window_scaling  is
+disabled,  TCP will not negotiate the use of window scaling with
+the other end during connection setup.]]></help>
+    </PropertyBoolean>
+    <PropertyInt>
+        <name>tcp_wmem_min</name>
+        <default>4096</default>
+        <min>1</min>
+        <max>1048576</max>
+        <description>Minimum size of the send buffer used by each TCP socket</description>
+        <help><![CDATA[minimum size of the send buffer used by each  TCP  socket.
+The  default  value  is  4K bytes.  This value is used to ensure
+that in memory pressure mode, allocations below this  size  will
+still  succeed.   This is not used to bound the size of the send
+buffer declared using SO_SNDBUF on a socket.]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_wmem_default</name>
+        <default>16384</default>
+        <min>1</min>
+        <max>1048576</max>
+        <description>The default size of the send buffer for a TCP socket</description>
+        <help><![CDATA[the default size of the send buffer for a TCP  socket.
+This  value  overwrites the initial default buffer size from the
+generic global net.core.wmem_default defined for all  protocols.
+The default value is 16K bytes.  If larger send buffer sizes are
+desired, this value should be increased (to affect all sockets).
+To    employ    large   TCP   windows,   the   sysctl   variable
+net.ipv4.tcp_window_scaling must be enabled (default).]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_wmem_max</name>
+        <default>131072</default>
+        <min>1</min>
+        <max>1048576</max>
+        <description>Maximum size of the send buffer used by each TCP socket</description>
+        <help><![CDATA[the maximum size of the  send  buffer  used  by  each  TCP
+socket.     This    value   does   not   override   the   global
+net.core.wmem_max.  This is not used to limit the  size  of  the
+send  buffer  declared using SO_SNDBUF on a socket.  The default
+value is 128K bytes.  It is lowered to 64K depending on the mem-
+ory available in the system.]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_ipfrag_time</name>
+        <default>30</default>
+        <min>1</min>
+        <max>255</max>
+        <description>Time in seconds to keep an IP fragment in memory</description>
+        <help><![CDATA[The number of seconds the kernel should keep IP fragments before discarding 
+them. Thirty seconds is usually a good time. Decrease this if attackers are 
+forging fragments and you'll be better able to service legitimate connections]]>
+        </help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_port_min</name>
+        <default>32770</default>
+        <min>1024</min>
+        <max>65535</max>
+        <description>First local port allowed for TCP and UDP to use for client connection</description>
+        <help><![CDATA[The ip_local_port_range variable consists of two integers which tells the 
+kernel which ports to use for client connections. This means, all connections 
+going from our box to some other box and where we are the client. The first port 
+is the lower bound and the second one is the upper bound.
+The default value in this variable depends on how much memory you have. If 
+you have more than 128 megabytes of physical memory, the lower bound will be 
+32768 and the upper bound will be 61000. If the computer has less than 128 
+megabytes of physical memory, the lower bound will be 1024 and the upper bound 
+will be 4999, or even less. 
+This number defines the possible active connections which this system can 
+issue simultaneously (ie, at the same time) to other systems that does not 
+support the TCP extension timestamps. 
+If you have tcp_tw_recycle enabled (the default behaviour) range 1024-4999 is 
+enough to issue up to 2000 connections per second to systems supporting 
+timestamps. In other words, this should be more than enough for most of us. ]]>
+        </help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>tcp_port_max</name>
+        <default>61000</default>
+        <min>1024</min>
+        <max>65535</max>
+        <description>Last local port allowed for TCP and UDP to use for client connection</description>
+        <help><![CDATA[Last local port allowed for TCP and UDP to use for client connection]]></help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>rmem_max</name>
+        <default>2621440</default>
+        <min>4096</min>
+        <max>16777216</max>
+        <description>Maximum TCP receive window when using SO_RCVBUF</description>
+        <help><![CDATA[Contains the maximum socket receive buffer size in bytes which a user may
+        set by using the SO_RCVBUF socket option.]]></help>
+    </PropertyInt>  
+   <PropertyInt>
+        <name>wmem_max</name>
+        <default>112640</default>
+        <min>4096</min>
+        <max>16777216</max>
+        <description>Maximum TCP send window when using SO_SNDBUF</description>
+        <help><![CDATA[Contains the maximum socket send buffer size in bytes which a user may
+        set by using the SO_SNDBUF socket option.]]></help>
+    </PropertyInt>
+    
+</Node>
+

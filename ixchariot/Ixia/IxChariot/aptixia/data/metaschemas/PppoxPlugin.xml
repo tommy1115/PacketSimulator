@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="PppoxPlugin" baseType="StackElementPlugin">
+<PropertyBoolean>
+    <name>enabled</name>
+    <default>true</default>
+
+    <description>Enabled / Disable plugin in it's entirety</description>
+</PropertyBoolean>
+
+<PropertyString>
+    <name>role</name>
+    <default>client</default>
+    <choices>
+    <choice value="client" name="Client Role" />
+    <choice value="server" name="Server Role" />
+    </choices>
+
+    <help>Indicates if the protocol stack runs a PPP client or PPP server
+    </help>
+    <description>Functional Role for protocol stack, client or server
+    </description>
+</PropertyString>
+
+<PropertyInt>
+    <name>numSessions</name>
+    <default>1</default>
+    <min>1</min>
+    <max>32000</max>
+    <help>Number of PPP sessions to establish</help>
+    <description>No. of PPP sessions to establish</description>
+</PropertyInt>
+
+<PropertyInt>
+    <name>setupRate</name>
+    <default>100</default>
+    <min>1</min>
+    <max>100</max>
+    <help>Number of PPP sessions to setup, per second</help>
+    <description>No. of PPP sessions to setup, per second</description>
+</PropertyInt>
+
+<PropertyBoolean>
+    <name>enableThrottling</name>
+    <default>true</default>
+    <help>
+    If checked, the setup of PPP sessions is throttled once the number of sessions
+    outstanding, reaches 'maxOutstandingSession'
+    </help>
+    <description>
+    Throttle session creation when 'maxOutstandingSession' is reached
+    </description>
+</PropertyBoolean>
+
+<PropertyInt>
+    <name>maxOutstandingSessions</name>
+    <default>1000</default>
+    <min>1</min>
+    <max>32000</max>
+
+    <help>
+    The maximum number of PPP sessions that be in outstanding state at any given time.
+    </help>
+    <description>Max. number of PPP sessions allowed in outstanding state</description>
+</PropertyInt>
+
+<PropertyInt>
+    <name>teardownRate</name>
+    <default>100</default>
+    <min>1</min>
+    <max>100</max>
+    <help>Number of PPP sessions to teardown, per second</help>
+    <description>Number of PPP sessions to teardown, per second</description>
+</PropertyInt>
+
+<PropertyNode nodeType="AtmRange"  polymorphic="1">
+    <help>See atmRange object.</help>
+    <name>atmRange</name>
+
+    <description>ATM Range to use from underlying Hardware plugin</description>
+</PropertyNode>
+
+<PropertyNode nodeType="MacRange"  polymorphic="1">
+    <help>See macRange object.</help>
+    <name>macRange</name>
+
+    <description>MAC Range to use from underlying Hardware plugin. [Auto generated] option will select the first MAC address in the list.</description>
+</PropertyNode>
+
+<PropertyNode nodeType="VlanIdRange"  polymorphic="1">
+    <help>See VlanIdRange object for more info.</help>
+    <name>vlanRange</name>
+
+    <description>VLAN Range to use from underlying Hardware plugin</description>
+</PropertyNode>
+
+<PropertyNode nodeType="PvcRange"  polymorphic="1">
+    <help>See PvcRange object.</help>
+    <name>pvcRange</name>
+
+    <description>PVC Range to use from underlying Hardware plugin</description>
+</PropertyNode>
+
+<PropertyNode nodeType="Pppoe">
+    <name>pppoe</name>
+
+    <description>Object that configure PPPoe specific properties</description>
+</PropertyNode>
+
+<PropertyNode nodeType="Ppp">
+    <name>ppp</name>
+
+    <description>Object that configure PPP specific properties</description>
+</PropertyNode>
+
+<!-- GUI HELPERS -->
+<Method2 name="GetTestMode">
+  <help>
+  Return basic mode of test, e.g. pppoe, pppoa, etc..
+  (NOTE: for internal use only)
+  </help>
+  <Argument name="testMode" direction="out" type="string">
+    <help>
+    Basic mode of test, e.g. pppoe, pppoa, etc..
+    (NOTE: for internal use only)
+    </help>
+  </Argument>
+</Method2>
+
+</Node>

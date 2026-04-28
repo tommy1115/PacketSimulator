@@ -1,0 +1,50 @@
+ 7:24:46 (lmgrd) -----------------------------------------------
+ 7:24:46 (lmgrd)   Please Note:
+ 7:24:46 (lmgrd) 
+ 7:24:46 (lmgrd)   This log is intended for debug purposes only.
+ 7:24:46 (lmgrd)   In order to capture accurate license
+ 7:24:46 (lmgrd)   usage data into an organized repository,
+ 7:24:46 (lmgrd)   please enable report logging. Use Macrovision's
+ 7:24:46 (lmgrd)   software license administration  solution,
+ 7:24:46 (lmgrd)   FLEXnet Manager, to  readily gain visibility
+ 7:24:46 (lmgrd)   into license usage data and to create
+ 7:24:46 (lmgrd)   insightful reports on critical information like
+ 7:24:46 (lmgrd)   license availability and usage. FLEXnet Manager
+ 7:24:46 (lmgrd)   can be fully automated to run these reports on
+ 7:24:46 (lmgrd)   schedule and can be used to track license
+ 7:24:46 (lmgrd)   servers and usage across a heterogeneous
+ 7:24:46 (lmgrd)   network of servers including Windows NT, Linux
+ 7:24:46 (lmgrd)   and UNIX. Contact Macrovision at
+ 7:24:46 (lmgrd)   www.macrovision.com for more details on how to
+ 7:24:46 (lmgrd)   obtain an evaluation copy of FLEXnet Manager
+ 7:24:46 (lmgrd)   for your enterprise.
+ 7:24:46 (lmgrd) 
+ 7:24:46 (lmgrd) -----------------------------------------------
+ 7:24:46 (lmgrd) 
+ 7:24:46 (lmgrd) 
+ 7:24:46 (lmgrd) pid 6468
+ 7:24:46 (lmgrd) Detecting other license server manager (lmgrd) processes...
+ 7:24:46 (lmgrd) Done rereading
+ 7:24:46 (lmgrd) FLEXnet Licensing (v11.5.0.0 build 56285 i86_n3) started on TEST (IBM PC) (4/7/2024)
+ 7:24:46 (lmgrd) Copyright (c) 1988-2007 Macrovision Europe Ltd. and/or Macrovision Corporation. All Rights Reserved.
+ 7:24:46 (lmgrd) US Patents 5,390,297 and 5,671,412.
+ 7:24:46 (lmgrd) World Wide Web:  http://www.macrovision.com
+ 7:24:46 (lmgrd) License file(s): C:\Program Files (x86)\Ixia\licensing\licenses\Ixia.lic
+ 7:24:46 (lmgrd) lmgrd tcp-port 27000
+ 7:24:46 (lmgrd) Starting vendor daemons ... 
+ 7:24:46 (lmgrd) Started ixialm (pid 6820)
+ 7:24:46 (ixialm) FLEXnet Licensing version v11.5.0.0 build 56285 i86_n3
+ 7:24:46 (ixialm) Using options file: "C:\Program Files (x86)\Ixia\licensing\licenses\ixialm.opt"
+ 7:24:46 (ixialm) Server started on TEST for:	IXFEATURE	
+ 7:24:46 (ixialm) EXTERNAL FILTERS are OFF
+ 7:24:46 (lmgrd) ixialm using TCP-port 49688
+13:24:50 (lmgrd) TIMESTAMP 4/7/2024
+19:24:50 (lmgrd) TIMESTAMP 4/7/2024
+ 0:00:35 (ixialm) ERROR: Non-activation-capable daemon activation invoked with non-client-request event type
+ 1:24:50 (lmgrd) TIMESTAMP 4/8/2024
+ 7:24:50 (lmgrd) TIMESTAMP 4/8/2024
+13:24:54 (lmgrd) TIMESTAMP 4/8/2024
+19:24:58 (lmgrd) TIMESTAMP 4/8/2024
+ 0:00:59 (ixialm) ERROR: Non-activation-capable daemon activation invoked with non-client-request event type
+ 1:25:02 (lmgrd) TIMESTAMP 4/9/2024
+ 7:25:06 (lmgrd) TIMESTAMP 4/9/2024

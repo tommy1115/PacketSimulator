@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="IPSecNetwork" baseType="">
+    <PropertyString>
+        <name>testType</name>
+        <default>p2d</default>
+        <choices>
+            <choice value="p2d" name="Port to DUT" />
+            <choice value="p2p" name="Port to Port" />
+        </choices>
+        <help>
+        Defines the type test, user is configuring. If it just a back to back test, select port to port option.
+        </help>
+    </PropertyString>
+    
+    <PropertyString>
+        <name>role</name>
+        <default>Initiator</default>
+        <choices>
+            <choice value="Initiator" name="Initiator" />
+            <choice value="Responder" name="Responder" />
+        </choices>
+        <help>
+        Defines the role this port group is going to play: If initiator, then p2p/p2d responder only for p2p cases.
+        </help>
+    </PropertyString>
+
+    <PropertyString>
+        <name>emulatedSubnetIpType</name>
+        <default>IPv4</default>
+        <choices>
+            <choice value="IPv4" name="IPv4" />   
+            <choice value="IPv6" name="IPv6" />
+        </choices>
+        <help>
+        Defines the version of ip address style to be 
+        used for describing the range.
+        </help>
+    </PropertyString>
+
+    <PropertyInt>
+        <name>numEHCount</name>
+        <default>1</default>
+        <min>1</min>
+        <max>253</max>
+        <help>
+        The total number of hosts to be created for the for each emulated subnets
+        </help>
+    </PropertyInt>
+
+    <PropertyString>
+        <name>emulatedSubnet</name>
+        <default>40.0.0.0</default>
+        <help>
+        Defines the base address to be used for enumerating all the emulated subnets
+        in the range
+        </help>
+    </PropertyString>
+
+    <PropertyString>
+        <name>protectedSubnet</name>
+        <default>70.0.0.0</default>
+        <help>
+        Defines the base address to be used for enumerating all the protected subnets
+        in the range
+        </help>
+    </PropertyString>
+
+    <PropertyInt>
+        <name>emulatedSubnetSuffix</name>
+        <default>24</default>
+        <help>
+        Defines the length (in bits) of the mask to be used 
+        in conjunction with all the addresses created in the range.
+        e.g., a prefix of 24 = 255.255.255.0 for ipv4
+        </help>
+    </PropertyInt>
+
+    <PropertyInt>
+        <name>protectedSubnetSuffix</name>
+        <default>24</default>
+        <help>
+        Defines the length (in bits) of the mask to be used 
+        in conjunction with all the addresses created in the range.
+        e.g., a prefix of 24 = 255.255.255.0 for ipv4
+        </help>
+    </PropertyInt>
+
+    <PropertyString>
+        <name>esnIncrementBy</name>
+        <default>0.0.1.0</default>
+        <help>
+        Defines the increment to be used for enumerating all the emulated subnets
+        in the range.
+        </help>
+    </PropertyString>
+
+	<PropertyString>
+        <name>psnIncrementBy</name>
+        <default>0.0.1.0</default>
+        <help>
+        Defines the increment to be used for enumerating all the protected subnets
+        in the range.
+        </help>
+    </PropertyString>
+    
+    <PropertyString>
+        <name>peerName</name>
+        <default></default>
+        <help>
+        Name of the peer for tunnel creation.
+        </help>
+    </PropertyString>
+
+    <PropertyString>
+        <name>peerPublicIPType</name>
+        <default>IPv4</default>
+        <choices>
+            <choice value="IPv4" name="IPv4" />
+            <choice value="IPv6" name="IPv6" />
+        </choices>
+        <help>
+        Defines the version of ip address style to be 
+        used for describing the range.
+        </help>
+    </PropertyString>
+
+    <PropertyString>
+        <name>peerPublicIP</name>
+        <default></default>
+        <help>
+        Public IP address of the peer.
+        </help>
+    </PropertyString>
+    
+    <PropertyBoolean>
+		<name>singlePH</name>
+		<default>false</default>
+		<help>
+		Single protected host on responder side.
+		</help>
+    </PropertyBoolean>
+    
+    <PropertyNode nodeType="IpV4V6Range"  polymorphic="1">
+        <help>See IpV4V6Range object.</help>
+        <name>egRange</name>
+    </PropertyNode>
+</Node>

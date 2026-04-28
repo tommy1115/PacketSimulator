@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>   
+ 
+<Node nodeType="StatManager" baseType="TreeNode">
+    <help>Manages the stat catalog and stat views</help>
+    <PropertyNodeList nodeType="StatCatalogItem">
+        <name>statCatalog</name>
+        <help>List of stats available for the current test</help>
+    </PropertyNodeList>
+    <PropertyNode nodeType="StatViewer">
+        <name>statViewer</name>
+        <help>List of views selected for the current test</help>
+    </PropertyNode>
+	<PropertyBoolean permission="h">
+        <name>dbLogging</name>
+        <description>Whether or not logging stat results to Database.</description> 
+        <default>0</default>      
+        <help>Enable logging of stat results to a DataStore</help>
+    </PropertyBoolean>
+
+    <PropertyNodeList nodeType="StatWatch">
+        <name>statWatchList</name>
+        <help>Deprecated</help>
+    </PropertyNodeList>
+    
+    <List name="StatPathList" type="string" />
+
+    <Struct name="ResolvedStat" version="1">
+        <help>Stat with the stat engine path resolved</help>
+        <Member name="tag" type="string" default="" version="1" >
+            <help>ID in string format to distinguish a specific stat to resolve</help>
+        </Member>
+        <Member name="statPathList" type="StatManager.StatPathList" version="1"  >
+            <help>List of possible choices in a filter category</help>
+        </Member>
+    </Struct>
+    
+    <List name="ResolvedStatList" type="StatManager.ResolvedStat" />
+    
+    <List name="ValueList" type="string" />
+
+    <Struct name="StatFilter" version="1">
+    <help>A filter applied to the statistic.  The source application may define one 
+or more filters you can select from. If you select a filter, only the values for 
+the statistic that pass through that filter are displayed. For example, if you are
+configuring a statistic for packets transmitted and the source application allows
+you to filter for a particular port, such as port 1.1.1, the graph will only display
+the packets transmitted from port 1.1.1. </help>
+        <Member name="name" type="string" default="" version="1" >
+            <help>The name of a filter category (exampes: communities, networks, ports)</help>
+        </Member>
+        <Member name="valueList" type="StatManager.ValueList" version="1" >
+            <help>List of possible choices in a filter category</help>
+        </Member>
+    </Struct>
+    
+    <List name="StatFilterList" type="StatManager.StatFilter" />
+    
+    <Struct name="AggregatedStat" version="1">
+        <help>A specific stat being aggregated with StatSpec and StatFilter selection</help>
+        <Member name="tag" type="string" default="" version="1">
+            <help>ID in string format to distinguish a unique stat to resolve the StatEngine paths</help>
+        </Member>
+        <Member name="statSourceType" type="string" default="" version="1">
+            <help>Stat source type of the aggregated stat</help>
+        </Member>
+        <Member name="statName" type="string" default="" version="1">
+            <help>Stat name of the aggregated stat</help>
+        </Member>
+        <Member name="filters" type="StatManager.StatFilterList" version="1" >
+            <help>Selected filters of the aggregated stat</help>        
+        </Member>
+    </Struct>
+    
+    <List name="AggregatedStatList" type="StatManager.AggregatedStat" />
+           
+    <Struct name="AggregatedStatInfo" version="1">
+        <help>A specific stat being aggregated with StatSpec and StatFilter selection with array stat</help>    
+        <Member name="tag" type="string" default="" version="1">
+            <help>ID in string format to distinguish a unique stat to resolve the StatEngine paths</help>
+        </Member>
+        <Member name="statSourceType" type="string" default="" version="1">
+            <help>Stat source type in the StatCatalog</help>
+        </Member>
+        <Member name="statName" type="string" default="" version="1">
+            <help>Stat name in the StatCatalog</help>
+        </Member>
+        <Member name="statType" type="int64" default="0" version="1">
+            <help>The type of stat, array or not array</help>
+        </Member>       
+        <Member name="index" type="int64" default="0" version="1">
+            <help>First index of array stats</help>
+        </Member>
+        <Member name="indexLast" type="int64" default="0" version="1">
+            <help>Last index of array stats</help>
+        </Member>
+        <Member name="filters" type="StatManager.StatFilterList" version="1">
+            <help>StatFilter selection fo rthis particular stat</help>
+        </Member>
+    </Struct>
+
+    <List name="AggregatedStatInfoList" type="StatManager.AggregatedStatInfo" /> 
+    
+    <Method2 name="ElapsedTime">
+         <help>Returns the elapsed time since start of Test.</help>
+         <Argument name="elapsedTime" direction="out" type="int64">
+            <help>The elapsed time since start of Test.</help>
+         </Argument>
+    </Method2>
+    
+    <Method2 name="CommitCatalog">
+         <help>Select view templates to match statistic sources in the catalog.</help>
+    </Method2>
+    
+    <Method2 name="RegisterStatEnginePaths">
+         <help>Register stat engine paths resolved by a client application from the aggregated stat list</help>
+         <Argument name="resolvedStatList" direction="in" type="StatManager.ResolvedStatList">
+             <help>The resolved stat engine paths to register</help>
+         </Argument>
+    </Method2>
+    
+    <Method2 name="GetRegisteredStatEnginePaths">
+         <help>Get the registered stat engine paths that were resolved by a client application</help>
+         <Argument name="resolvedStatList" direction="out" type="StatManager.ResolvedStatList">
+            <help>The list of resolved stat engine paths</help>
+         </Argument>
+    </Method2>
+    
+    <Method2 name="GetAggregatedStatList">
+         <help>Get the aggregated stat descriptions for stat engine path resolution by a client application</help>
+         <Argument name="aggregatedStatList" direction="out" type="StatManager.AggregatedStatList">
+            <help>The list of aggregated stat descriptions for stat engine path resolution by a client application</help>
+         </Argument>
+    </Method2>
+    
+    <Method2 name="GetAggregatedStatInfoList">
+         <help>Get the aggregated stat descriptions with array support for stat engine path resolution by a client application</help>
+         <Argument name="aggregatedStatInfoList" direction="out" type="StatManager.AggregatedStatInfoList">
+            <help>The list of aggregated stat with array support descriptions for stat engine path resolution by a client application</help>
+         </Argument>
+    </Method2>
+
+    <Struct name="PgidRange" version="1">
+        <help>Range of Packet Group IDs from IxOS hardware</help>
+        <Member name="firstIndex" type="int32" default="-1" version="1" >
+            <help>First index of range of Packet Group IDs from IxOS hardware</help>
+        </Member>
+        <Member name="lastIndex" type="int32" default="-1" version="1" >
+            <help>Last index of range of Packet Group IDs from IxOS hardware</help>
+        </Member>
+    </Struct>
+
+    <List name="PgidRangeList" type="StatManager.PgidRange" />
+    <List name="PortList" type="string" /> 
+    <Struct name="StreamInfo" version="1">
+		<help>Describe a stream with PGID and tx/Rx ports</help>                 
+        <Member name="id" type="int32" default="-1" version="1" >
+        		<help>Unique ID within a particular port</help>                 
+        </Member>
+        <Member name="lineRate" type="double" default="0" version="1" >
+        		<help>Line speed rate frames per second</help>                 
+        </Member>
+        <Member name="txPort" type="string" default="" version="1" >
+        		<help>Physical Tx port</help>                 
+        </Member>
+        <Member name="rxPortList" type="StatManager.PortList" default="" version="1" >
+        		<help>List of physical Rx ports used by this stream</help>                 
+        </Member>
+        <Member name="pgidRangeList" type="StatManager.PgidRangeList" default="" version="1"  >
+        		<help>List of PGIDs used by this stream</help>                 
+        </Member>
+    </Struct>
+    
+    <List name="StreamInfoList" type="StatManager.StreamInfo" />     
+
+    <Struct name="FlowInfo" version="1">
+		<help>Flow name and PGID mapping</help>             
+        <Member name="pgid" type="int32" default="-1" version="1" >
+			<help>Packet Group ID</help>         
+         </Member>			
+        <Member name="name" type="string" default="" version="1"  >
+			<help>Flow Name</help>         
+        </Member>			
+    </Struct>
+
+    <List name="FlowInfoList" type="StatManager.FlowInfo" /> 
+    
+    <Method2 name="SetStreamFlowInfo">
+         <help>Set stream table and PGID label map for a publisher</help>
+         <Argument name="publisher" direction="in" type="string">
+			<help>Name of the application that is setting the stream info</help>         
+         </Argument>			
+         <Argument name="streamTable" direction="in" type="StatManager.StreamInfoList">
+			<help>List of streams</help>         
+         </Argument>			
+         <Argument name="flowTable" direction="in" type="StatManager.FlowInfoList">>
+			<help>List of flows</help>         
+         </Argument>			                  
+    </Method2>
+
+    <Method2 name="RegisterStatPublisher">
+         <help>Add a remote StatPublisher</help>
+         <Argument name="name" direction="in" type="string">
+            <help>The name of a remote StatPublisher to register</help>
+         </Argument>
+    </Method2>
+
+    <Method2 name="DeregisterStatPublisher">
+         <help>Remove a remote StatPublisher</help>
+         <Argument name="name" direction="in" type="string">
+             <help>The name of a remote StatPublisher to deregister</help>
+         </Argument>
+    </Method2>
+
+    <Method2 name="UpdateStatCatalog">
+         <help>Notify StatManager that particular StatPublisher has finished the catalog updating</help>
+         <Argument name="eventId" direction="in" type="int32">
+             <help>Event ID that has been sent out by StatManager to request the StatCatalog updating or a negative vlaue indicates the application ahs updated the StatCatalog spontaniously</help>
+         </Argument>
+	     <Argument name="publisher" direction="in" type="string">
+             <help>name of the paplication that has updated the StatCatalog</help>
+         </Argument>
+         <Argument name="success" direction="in" type="bool">         
+             <help>Whether the updating is successful</help>
+         </Argument>
+    </Method2>
+
+    <Method2 name="ResolveAggregatedStat">
+         <help>Resolve StatEngine paths for a aggregated stat</help>
+         <Argument name="eventId" direction="in" type="int32">    
+			<help>The event ID originally sent by Statmanager to resolve this StatEngine path</help>             
+         </Argument>			
+         <Argument name="publisher" direction="in" type="string">
+			<help>The name of the StatPublisher that has resolved this stat</help>             
+         </Argument>			
+         <Argument name="resolvedStat" direction="in" type="StatManager.ResolvedStat">>
+			<help>The resolved StatEngine paths</help>             
+         </Argument>			         
+    </Method2>
+
+    <Event name="CatalogUpdateEvent">
+	    <help>Event to request applications to populate StatCatalog</help>	    
+		<Argument name="id" type="int32">        
+	         <help>Event ID used by applciation to send out completion notification</help>	
+        </Argument>	         
+        <Argument name="publisher" type="string"> 
+	         <help>Name of the StatPublisher that will be responsible to publish the catalog</help>	        
+        </Argument>	         
+    </Event>
+
+    <Event name="PathResolutionEvent">>        
+         <help>Event to request applications to resolve StatEngine paths</help>			
+		<Argument name="id" type="int32">        
+	         <help>Event ID used by applciation to send out completion notification</help>			
+        </Argument>	         
+	    <Argument name="publisher" type="string"> 	    
+	         <help>Name of the StatPublisher that will be responsible to resolve the path</help>	        	    
+        </Argument>	         
+        <Argument name="aggregatedStat" type="StatManager.AggregatedStatInfo">   
+	         <help>The stat that needs to be resolved. It includes StatPec and StatFilterGroup information</help>	        	                 
+        </Argument>	         
+    </Event>
+
+    <Method2 name="ConfigBuildInPublisher">
+         <help>Configure build in StatPublisher</help>
+         <Argument name="name" direction="in" type="string">
+	         <help>The name of the buildin StatPublisher</help>	        	                          
+         </Argument>	         
+         <Argument name="enable" direction="in" type="bool">
+	         <help>Enable or Disable request</help>	        
+         </Argument>	         	                                   
+    </Method2>
+
+    <Event name="LogStatsEvent">
+	    <help>Event sent to StatViewer to log stats</help>	        	                                          		        
+        <Argument name="name" type="string"> 	    
+	         <help>The name of the StatView</help>	        	                                  
+        </Argument>	         
+        <Argument name="statSetList" type="StatConsumer.StatSetList">     
+	         <help>A list of stat value updates and changes</help>	
+        </Argument>	                 	                                          
+    </Event>
+
+    <Event name="ClearStatsEvent">
+	    <help>Event sent to StatViewer to clear stats</help>	        	                                          		        
+        <Argument name="name" type="string"> 	    
+	         <help>The name of the StatView</help>	        	                                  
+        </Argument>	         
+    </Event>
+
+    <Event name="CatalogChangeEvent">
+	    <help>Event to noftify clients that StatCatalog has been modified</help>	        	                                          		    
+		<Argument name="id" type="int32">       
+	         <help>Event ID used by appilcation to track the changing</help>	        	                                          		
+        </Argument>	         
+    </Event>
+
+    <Enum name="eViewChangeActionEnum">
+        <help>Enumeration of view change actions</help>
+        <Choices>
+            <Choice symbol="kAdd" value="0"/>
+            <Choice symbol="kRemove" value="1"/>
+            <Choice symbol="kEnable" value="2"/>
+            <Choice symbol="kDisable" value="3"/>
+            <Choice symbol="kUpdate" value="4"/>                        
+        </Choices>
+    </Enum>
+
+    <Struct name="ViewChange" version="1">
+        <help>Change to a StatView</help>
+        <Member name="caption" type="string" default="" version="1" >
+            <help>StatView caption</help>
+        </Member>
+        <Member name="action" type="int32" default="0"  version="1"  >
+            <help>StatView change action</help>
+        </Member>
+    </Struct>
+    
+    <List name="ViewChangeList" type="StatManager.ViewChange" />
+
+    <Method2 name="CommitViewChange">
+         <help>Notify StatManager that particular StatPublisher has modified StatView list</help>
+		<Argument name="changeList" type="StatManager.ViewChangeList">       
+	         <help>A list of StatView change actions</help>	        	                                          		
+        </Argument>	         
+    </Method2>
+
+    <Event name="ViewChangeEvent">
+	    <help>Event to noftify clients that StatView list has been modified</help>	        	                                          		    
+		<Argument name="id" type="int32">       
+	         <help>Event ID used by appilcation to track the changing</help>	        	                                          		
+        </Argument>	         
+		<Argument name="changeList" type="StatManager.ViewChangeList">       
+	         <help>A list of StatView change actions</help>	        	                                          		
+        </Argument>	         
+    </Event>
+
+</Node>

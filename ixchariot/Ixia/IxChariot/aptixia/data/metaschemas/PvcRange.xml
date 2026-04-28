@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="PvcRange" baseType="">
+    <help>Range of multiple PVCs for fine grained configuration</help>
+    
+    <PropertyString>
+	    <name>name</name>
+	    <default>pvc-</default>
+	    <description>Unique name of the range</description>
+	    <help>Unique name of the range</help>
+    </PropertyString>
+    
+    <!-- VPI info -->
+
+    <PropertyInt>
+        <name>vpiFirstId</name>
+        <default>0</default>
+        <min>0</min>
+        <max>255</max>
+        <description>First ATM VPI value to use.</description>
+    </PropertyInt>
+    
+    <PropertyInt>
+        <name>vpiIncrementStep</name>
+        <default>1</default>
+        <min>0</min>
+        <max>65535</max>
+        <description>Increment VPI every 'vpiIncrementStep' addresses</description>
+    </PropertyInt>
+    
+    <PropertyInt>
+        <name>vpiIncrement</name>
+        <default>1</default>
+        <min>0</min>
+        <max>255</max>
+        <description>Step size for VPI increment</description>
+    </PropertyInt>
+    
+    <PropertyInt>
+        <name>vpiUniqueCount</name>
+        <default>1</default>
+        <min>1</min>
+        <max>256</max>
+        <description>Number of VPIs</description>
+    </PropertyInt>
+    
+    <!-- VCI info -->
+    
+    <PropertyInt>
+        <name>vciFirstId</name>
+        <default>32</default>
+        <min>32</min>
+        <max>65535</max>
+        <description>First ATM VCI value to use</description>
+    </PropertyInt>
+    
+    <PropertyInt>
+        <name>vciIncrementStep</name>
+        <default>1</default>
+        <min>0</min>
+        <max>65535</max>
+        <description>Increment VCI every 'vciIncrementStep' addresses</description>
+    </PropertyInt>
+    
+    <PropertyInt>
+        <name>vciIncrement</name>
+        <default>1</default>
+        <min>0</min>
+        <max>65503</max>
+        <description>Step size for VCI increment</description>
+    </PropertyInt>
+    
+    <PropertyInt>
+        <name>vciUniqueCount</name>
+        <default>4063</default>
+        <min>1</min>
+        <max>65504</max>
+        <description>Number of VCIs</description>
+    </PropertyInt>
+    
+    <PropertyInt>
+        <name>incrementMode</name>
+        <description>May take the following values: 0 (VCI first), 1 (VPI first), 2 (Both)</description>
+        <default>2</default>
+        <choices>
+            <choice name="VCI First" value="0" />
+            <choice name="VPI First" value="1" />
+            <choice name="Both" value="2" />
+        </choices>
+    </PropertyInt>
+    
+</Node>    

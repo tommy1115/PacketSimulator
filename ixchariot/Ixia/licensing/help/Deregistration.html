@@ -1,0 +1,804 @@
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="GENERATOR" content="Microsoft FrontPage 4.0" />
+    <meta name="TEMPLATEBASE" content="Dynamic HTML" />
+    <meta name="LASTUPDATED" content="09/23/08 21:26:37" />
+    <title>Chapter 3: De-registering Licenses  </title>
+    <link rel="StyleSheet" href="ixia_user_doc.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
+<link rel="index" title="Index" href="IX.html" />
+<link rel="first" title="First" href="TOC.html" />
+<link rel="last" title="Last" href="IX.html" />
+<link rel="previous" title="Previous" href="Registration.html" />
+<link rel="next" title="Next" href="Updating.html" />
+
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/seealso.js"></script>
+
+    <script type="text/javascript" language="JavaScript1.2">
+     <!--
+      var  WebWorksSeeAlso = new WebWorksSeeAlso_Object();
+     // -->
+    </script>
+  </head>
+
+  <body>
+
+   <table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="left" width="281"><a href="http://www.ixiacom.com"><img border="0" src="images/ixialogo.gif"></a>
+    </td>
+    <td align="center" width="95"><a href="Deregistration.fm.pdf">
+    <img src="images/pdf.gif" width="28" height="31"
+             border="0" alt="PDF version of this section"></a></td>
+    <td align="center" width="94"><a href="LicenseManagement.pdf"><img src="images/pdf.gif" width="28" height="31"
+      border="0" alt="PDF version of entire manual"> </a>
+    <td align="center" width="180">
+      <p align="right">
+  </tr>
+  <tr>
+    <td width="281" align="left"><b><i><font size="3" face="Arial" color="#000000"></font></i></b></td>
+    <td width="95" align="center">Get this&nbsp;<br>
+      section in PDF</td>
+    <td width="94" align="center">Get entire&nbsp;<br>
+      manual in PDF</td>
+    <td width="190" align="center">
+      <p align="right"><a accesskey="4" href="Registration.html"><img id="LongDescNotReq1" src="images/prev.gif" border="0" alt="Previous" /></a><a accesskey="5" href="Updating.html"><img id="LongDescNotReq2" src="images/next.gif" border="0" alt="Next" /></a><a accesskey="2" href="IX.html"><img id="LongDescNotReq3" src="images/index.gif" border="0" alt="Index" /></a>
+    </td>
+  </tr>
+</table>
+
+<hr align="left" color="#C80000">
+
+<blockquote>
+<a name="wp1085592"> </a><h2 class="pTitle">
+Chapter 3: De-registering Licenses<br /><br />
+</h2>
+<hr color="#C00000" noshade>
+<a name="wp1090295"> </a><h2 class="pHeading1">
+Introduction
+</h2>
+<a name="wp1090340"> </a><p class="pBody">
+A license, once installed, is said to be <span style="font-style: italic">node-locked</span> to the Ixia chassis or workstation (including a License Server) specified during the installation process. It may only be used on that particular chassis or workstation. 
+</p>
+<a name="wp1092306"> </a><p class="pBody">
+A license can be de-registered, including all of its features, at any time. 
+</p>
+<a name="wp1092337"> </a><p class="pBody">
+If a license needs to be split up and some of its features moved to another chassis or workstation, then Ixia&#39;s assistance is required. The process involves:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1092374"> </a><div class="pSmartList2"><li>De-registering the license &#150; this removes the license from its current chassis/workstation. This is covered in <a href="Deregistration.html#wp1097955"><span style="font-style: italic">Online License De-registration &#150; Step by Step</span> on page 3-3</a> or <a href="Deregistration.html#wp1102881"><span style="font-style: italic">Offline License De-registration &#150; Step by Step</span> on page 3-10</a>.</li></div>
+<a name="wp1092375"> </a><div class="pSmartList2"><li>Contact Ixia at the appropriate support center or <a href="mailto:registrations@ixiacom.com">registrations@ixiacom.com</a> and ask to split the license, or have several licenses recombined. Ixia will cancel the previous license(s) and issue new ones.</li></div>
+<a name="wp1092389"> </a><div class="pSmartList2"><li>Installing the license(s) &#150; as in the initial license installation. This is covered in <a href="Registration.html">Chapter 2, Registering Licenses</a>.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1092285"> </a><p class="pBody">
+Before starting the de-registration process, make sure that the following information is available:
+</p>
+<div class="pSmartList1"><ol type="1" class="pSmartList1">
+<a name="wp1090342"> </a><div class="pSmartList1"><li>Registration Number and password for the license to be de-registered.</li></div>
+<a name="wp1090346"> </a><div class="pSmartList1"><li>Workstation or Ixia Chassis name &#150; this is the name of the machine that currently uses the licensed software.</li></div>
+<a name="wp1108475"> </a><div class="pSmartList1"><li>License Server name &#150; <span style="font-weight: bold">if</span> the Test Lab will use a central License Server.</li></div>
+</ol></div>
+<a name="wp1108635"> </a><p class="pBody">
+An example of the Ixia registration e-mail is shown below, with the Registration number and Password <span style="text-decoration: underline">underlined</span>:
+</p>
+<div class="pPreformatted"><pre class="pPreformatted">
+Dear Customer,<a name="wp1128105"> </a>
+This release of IXVPN uses software licensing. Ixia 
+software licenses are backward compatible, which means 
+that the registration number and password below will work 
+with any prior release of the application that included 
+Ixia software licensing. Please find the necessary 
+information to download the application, and to keep your 
+product up-to-date and under maintenance. Contact your 
+authorized Ixia Representative should you have any 
+questions.<a name="wp1128106"> </a>
+License Key Information<a name="wp1128107"> </a>
+When you first start IXVPN, you will need to register 
+your IXVPN license. When connected to the Internet, you 
+can directly register your copy of IXVPN by simply 
+running the IRU utility provided by Ixia. For offline 
+registration,the IRU will guide you through the 
+registration process.  You will need to use a web browser 
+on a machine connected to the internet.<a name="wp1128108"> </a>
+Please make sure to record the registration number and 
+password shown below.<a name="wp1128109"> </a>
+    Product: IXVPN<a name="wp1128110"> </a>
+    Features: <a name="wp1128111"> </a>
+        * IxVPN, Software Option, Advanced Protocol<a name="wp1128112"> </a>
+        * IxVPN, IPSec Test Application<a name="wp1128113"> </a>
+        * Juniper custom IKE for IxVPN<a name="wp1128114"> </a>
+        * Manual IKE for IxVPN<a name="wp1128115"> </a>
+    Version: 3.00<a name="wp1128116"> </a>
+    <span style="text-decoration: underline">Registration Number: 500008392NC</span><a name="wp1128117"> </a>
+    <span style="text-decoration: underline">Password: yqXcih</span><a name="wp1128118"> </a>
+...<a name="wp1108656"> </a>
+</pre></div>
+<a name="wp1113481"> </a><p class="pBody">
+For an example of the entire text of the e-mail, see <a href="Registration.html">Chapter 2, Registering Licenses</a>.
+</p>
+<a name="wp1097955"> </a><h2 class="pHeading1">
+Online License De-registration &#150; Step by Step
+</h2>
+<a name="wp1090420"> </a><p class="pBody">
+An online de-registration is performed if the Installation Host is connected to the Internet (and to the lab network as well). The steps in the online de-registration process are:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1090428"> </a><div class="pSmartList2"><li><a href="Deregistration.html#wp1097670"><span style="font-style: italic">Open the Ixia Registration Utility</span></a></li></div>
+<a name="wp1097745"> </a><div class="pSmartList2"><li><a href="Deregistration.html#wp1090385"><span style="font-style: italic">Step 1: Enter Registration Number and Password</span></a></li></div>
+<a name="wp1090724"> </a><div class="pSmartList2"><li><a href="Deregistration.html#wp1090481"><span style="font-style: italic">Step 2: Enter a Chassis or Workstation Name</span></a></li></div>
+<a name="wp1090749"> </a><div class="pSmartList2"><li><a href="Deregistration.html#wp1090566"><span style="font-style: italic">Step 3: Enter License Server Name</span></a></li></div>
+<a name="wp1090767"> </a><div class="pSmartList2"><li><a href="Deregistration.html#wp1093003"><span style="font-style: italic">Step 4: Uninstall the License</span></a></li></div>
+</ul></div>
+</ul></div>
+<a name="wp1101041"> </a><p class="pBody">
+License de-registration is initiated by running the IRU utility. 
+</p>
+<a name="wp1101047"> </a><p class="pBody">
+Make sure the network connectivity requirements discussed in <a href="Introduction.html#wp1092027"><span style="font-style: italic">Installation Scenarios</span></a> are reviewed and understood.
+</p>
+<a name="wp1090784"> </a><p class="pBody">
+If the Installation Host is not attached to the Internet, then follow the instructions in <a href="Deregistration.html#wp1102881"><span style="font-style: italic">Offline License De-registration &#150; Step by Step</span></a>.
+</p>
+<a name="wp1110384"> </a><p class="pBody">
+<a href="Deregistration.html#wp1110389">Figure 3-1</a> will help keep track of the steps in the online de-registration process. It is repeated at each step with the current operation highlighted.
+</p>
+<a name="wp1110389"> </a><p class="pFigure">
+Figure 3-1.	Online De-registration</p>
+<div align="left"><img src="images/Deregistration-01.jpg" height="67" width="435" id="wp1110387" border="0" hspace="0" vspace="0"/></div><p class="pFigure">
+
+</p>
+<a name="wp1128347"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1128346"> </a><div class="pCellBody">
+<span style="font-weight: bold">Note</span>. Depending on whether the license is being installed to a computer or a chassis, the wording in the IRU dialogs is slightly different. 
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<a name="wp1110379"> </a><p class="pBody">
+
+</p>
+<a name="wp1097670"> </a><h2 class="pHeading2">
+Open the Ixia Registration Utility
+</h2>
+<a name="wp1110562"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Deregistration-02.jpg" height="66" width="433" id="wp1110560" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1097674"> </a><p class="pBody">
+To open the IRU, select <span style="font-style: italic">Start &gt; Programs &gt; Ixia &gt; Licensing &gt; IRU</span> from the Start menu. When the IRU is opened, the screen shown in <a href="Deregistration.html#wp1097681">Figure 3-2</a> is displayed. This is the main IRU screen that allows the user to select various registration operations. 
+</p>
+<a name="wp1097681"> </a><p class="pFigure">
+Figure 3-2.	Ixia Registration Utility Main Dialog</p>
+<div align="left"><img src="images/DeregisterStep0.jpg" id="wp1097679" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1099584"> </a><div class="pSmartList2"><li>Select the <span style="font-style: italic">De-register </span>radio button.</li></div>
+<a name="wp1099585"> </a><div class="pSmartList2"><li>Select the <span style="font-style: italic">Start</span> button.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1101876"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1101896"> </a><div class="pCellBody">
+Note. The other radio button operations are described in the following chapters:
+</div>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp1101900"> </a><div class="pSmartList1"><li>Registration &#150; <a href="Registration.html">Chapter 2, Registering Licenses</a>.</li></div>
+<a name="wp1101904"> </a><div class="pSmartList1"><li>Update &#150; <a href="Updating.html">Chapter 4, Updating Licenses</a>.</li></div>
+<a name="wp1101908"> </a><div class="pSmartList1"><li>Manage Licenses &#150; <a href="Management.html">Chapter 6, Managing Licenses</a>.</li></div>
+</ul></div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<a name="wp1090385"> </a><h2 class="pHeading2">
+Step 1: Enter <a name="DeRegister_EnterRegNum_OnLine"> </a>
+Registration Number and Password
+</h2>
+<a name="wp1110588"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Deregistration-04.jpg" height="65" width="433" id="wp1110586" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1090392"> </a><p class="pBody">
+The first screen displayed is shown in <a href="Deregistration.html#wp1090394">Figure 3-3</a>. If the Installation Host is not attached to the Internet, the screen shown in <a href="Deregistration.html#wp1090838">Figure 3-9</a> is displayed. Follow the instructions in <a href="Deregistration.html#wp1102881"><span style="font-style: italic">Offline License De-registration &#150; Step by Step</span></a>. 
+</p>
+<a name="wp1090394"> </a><p class="pFigure">
+Figure 3-3.	De-registration Step 1 &#150; Registration Number</p>
+<div align="left"><img src="images/DeregisterStep1.jpg" id="wp1090398" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1099628"> </a><div class="pSmartList2"><li>Enter the <span style="font-style: italic">Registration Number</span> and <span style="font-style: italic">Password</span>, as specified in the Ixia generated e-mail. The source and contents of this e-mail are discussed in <a href="Deregistration.html#wp1090295"><span style="font-style: normal">Introduction</span></a> and in <a href="Introduction.html#wp1093168"><span style="font-style: normal">What is License Management?</span></a>.</li></div>
+<a name="wp1099629"> </a><div class="pSmartList2"><li>Press the <span style="font-style: italic">Next </span>button.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1090481"> </a><h2 class="pHeading2">
+Step 2: Enter a Chassis or <a name="Deregister_NodeLockedNode_OnLine"> </a>
+Workstation Name
+</h2>
+<a name="wp1110623"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Deregistration-06.jpg" height="67" width="433" id="wp1110621" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1112299"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1122891"> </a><div class="pCellBody">
+<span style="font-weight: bold">Notes</span>. This screen will not appear if a floating license is being de-registered, as floating licenses are located on a stand-alone License Servers. The process immediately jumps to <a href="Deregistration.html#wp1090566"><span style="font-style: italic">Step 3: Enter License Server Name</span></a> instead. 
+</div>
+<a name="wp1122895"> </a><div class="pCellBody">
+If the license being de-registered is on the current computer (the Installation Host), then this step is skipped. The de-registration process has automatically found the correct license file. The process immediately jumps to <a href="Deregistration.html#wp1093003"><span style="font-style: italic">Step 4: Uninstall the License</span></a>.
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<a name="wp1092793"> </a><p class="pBody">
+If the license is associated with a different chassis/workstation, then the screen shown in <a href="Deregistration.html#wp1090541">Figure 3-4</a> is displayed. The registration number entered in the previous step internally specifies whether the license applies to an Ixia chassis or workstation. The text within the dialog will include the words <span style="font-style: italic">Ixia Chassis</span>&#160;or <span style="font-style: italic">workstation</span> as appropriate.
+</p>
+<a name="wp1090541"> </a><p class="pFigure">
+Figure 3-4.	De-registration Step 2 &#150; Ixia Chassis or Workstation Name</p>
+<div align="left"><img src="images/DeregisterStep3.jpg" id="wp1090548" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1099660"> </a><div class="pSmartList2"><li>Enter the host name or IP address of the Ixia chassis or workstation that is is associated with the license being de-registered. <span style="font-style: italic">Localhost</span> is the default and refers to the Installation Host.</li></div>
+<a name="wp1099661"> </a><div class="pSmartList2"><li>Look at the <span style="font-style: italic">Product Features</span> box and verify that the features listed correspond to the license being de-registered.</li></div>
+<a name="wp1099662"> </a><div class="pSmartList2"><li>Press the <span style="font-style: italic">Next </span>button.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1090566"> </a><h2 class="pHeading2">
+Step 3: Enter <a name="DeRegister_SelectLicServer_OnLine"> </a>
+License Server Name
+</h2>
+<a name="wp1121031"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Deregistration-08.jpg" height="65" width="434" id="wp1121029" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1121072"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1121070"> </a><div class="pCellBody">
+<span style="font-weight: bold">Notes</span>. This step immediately follows <a href="Deregistration.html#wp1090385"><span style="font-style: italic">Step 1: Enter Registration Number and Password</span></a> if a floating license is being de-registered.
+</div>
+<a name="wp1122031"> </a><div class="pCellBody">
+If the license for the product is found on the chassis or workstation specified in <a href="Deregistration.html#wp1090481"><span style="font-style: italic">Step 2: Enter a Chassis or Workstation Name</span></a>, then this step is skipped.
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<a name="wp1121039"> </a><p class="pBody">
+The dialog shown in <a href="Deregistration.html#wp1093001">Figure 3-5</a> is displayed. The above screen should only appear if a License Server is used (and the chassis or workstation entered in <a href="Deregistration.html#wp1090481"><span style="font-style: italic">Step 2: Enter a Chassis or Workstation Name</span></a> did not contain the license being de-registered). 
+</p>
+<a name="wp1093001"> </a><p class="pFigure">
+Figure 3-5.	De-registration Step 3 &#150; License Server</p>
+<div align="left"><img src="images/DeregisterStep6.jpg" id="wp1092999" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1114231"> </a><div class="pSmartList2"><li>If a License Server is not being used, and this screen appears, press the <span style="font-style: italic">Back </span>button and specify the correct chassis or workstation.</li></div>
+<a name="wp1099771"> </a><div class="pSmartList2"><li>If a License Server is used in the Test Lab, enter its name in the <span style="font-style: italic">Server name or IP address</span> field.</li></div>
+<a name="wp1099772"> </a><div class="pSmartList2"><li>Press the <span style="font-style: italic">Next </span>button.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1093003"> </a><h2 class="pHeading2">
+Step 4: Uninstall the <a name="DeRegister_OnlineDereg_OnLine"> </a>
+License
+</h2>
+<a name="wp1110710"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Deregistration-10.jpg" height="69" width="434" id="wp1110708" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1122089"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1122084"> </a><div class="pCellBody">
+<span style="font-weight: bold">Note</span>. This step may immediately follow <a href="Deregistration.html#wp1090385"><span style="font-style: italic">Step 1: Enter Registration Number and Password</span></a> or <a href="Deregistration.html#wp1090481"><span style="font-style: italic">Step 2: Enter a Chassis or Workstation Name</span></a>, depending on the configuration of the test environment.
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<a name="wp1090633"> </a><p class="pBody">
+All the necessary information has been entered. A screen similar to the one shown in <a href="Deregistration.html#wp1090640">Figure 3-6</a> is displayed. 
+</p>
+<a name="wp1090640"> </a><p class="pFigure">
+Figure 3-6.	De-registration Step 4 &#150; Uninstall License</p>
+<div align="left"><img src="images/DeregisterStep2.jpg" id="wp1090647" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1099812"> </a><div class="pSmartList2"><li>Verify the information shown.</li></div>
+<a name="wp1099813"> </a><div class="pSmartList2"><li>Press the <span style="font-style: italic">Next </span>button to uninstall the license.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1098674"> </a><p class="pBody">
+After the license has been de-registered a <span style="font-style: italic">Receipt</span> similar to the one in <a href="Deregistration.html#wp1102876">Figure 3-7</a> is displayed. This is a record of the license&#39;s de-registration. Save this information as a file or a make a printout. 
+</p>
+<a name="wp1102876"> </a><p class="pFigure">
+Figure 3-7.	De-registration Step 5 &#150; Receipt</p>
+<div align="left"><img src="images/DeregisterStep5b.jpg" id="wp1102874" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1102877"> </a><div class="pSmartList2"><li>To save the receipt to disk, press the <span style="font-style: italic">Save Receipt...</span> button and designate a file.</li></div>
+<a name="wp1102878"> </a><div class="pSmartList2"><li>To make a printout of the receipt, press the <span style="font-style: italic">Print Receipt...</span> button and select a printer.</li></div>
+<a name="wp1102879"> </a><div class="pSmartList2"><li>Press <span style="font-style: italic">Finish</span> to exit the de-registration process.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1102890"> </a><p class="pBody">
+The license is now removed from the chassis or workstation. All product and software privileges pertaining to the license are revoked.
+</p>
+<a name="wp1102881"> </a><h2 class="pHeading1">
+Offline License De-registration &#150; Step by Step
+</h2>
+<a name="wp1090802"> </a><p class="pBody">
+The steps in the offline de-registration process are:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1090806"> </a><div class="pSmartList2"><li><a href="Deregistration.html#wp1090821"><span style="font-style: italic">Step 1: Start Offline De-registration</span></a></li></div>
+<a name="wp1121446"> </a><div class="pSmartList2"><li><a href="Deregistration.html#wp1093229"><span style="font-style: italic">Step 2: Enter Registration Number and Password</span></a></li></div>
+<a name="wp1090810"> </a><div class="pSmartList2"><li><a href="Deregistration.html#wp1093245"><span style="font-style: italic">Step 3: Enter a Chassis or Workstation Name</span></a></li></div>
+<a name="wp1090814"> </a><div class="pSmartList2"><li><a href="Deregistration.html#wp1093260"><span style="font-style: italic">Step 4: Enter License Server Name</span></a></li></div>
+<a name="wp1090818"> </a><div class="pSmartList2"><li><a href="Deregistration.html#wp1119529"><span style="font-style: italic">Step 5: De-register the License</span></a></li></div>
+<a name="wp1119626"> </a><div class="pSmartList2"><li><a href="Deregistration.html#wp1119573"><span style="font-style: italic">Step 6: Move to the Online Host</span></a></li></div>
+<a name="wp1092020"> </a><div class="pSmartList2"><li><a href="Deregistration.html#wp1091387"><span style="font-style: italic">Step 7: Online &#150; Connect to the Ixia Registration Website</span></a></li></div>
+<a name="wp1092031"> </a><div class="pSmartList2"><li><a href="Deregistration.html#wp1098857"><span style="font-style: italic">Step 8: Online &#150; Enter the De-registration Code</span></a></li></div>
+<a name="wp1099206"> </a><div class="pSmartList2"><li><a href="Deregistration.html#wp1091424"><span style="font-style: italic">Step 9: Online &#150; Confirm the De-registration</span></a></li></div>
+</ul></div>
+</ul></div>
+<a name="wp1090819"> </a><p class="pBody">
+If the de-registration machine is attached to the Internet, follow the instructions in <a href="Deregistration.html#wp1097955"><span style="font-style: italic">Online License De-registration &#150; Step by Step</span></a>.
+</p>
+<a name="wp1111022"> </a><p class="pBody">
+<a href="Deregistration.html#wp1111027">Figure 3-8</a> will help keep track of the steps in the offline registration process. It is repeated at each step with the current operation highlighted.
+</p>
+<a name="wp1111027"> </a><p class="pFigure">
+Figure 3-8.	Offline De-registration</p>
+<div align="left"><img src="images/Deregistration-13.jpg" height="130" width="435" id="wp1111025" border="0" hspace="0" vspace="0"/></div><p class="pFigure">
+
+</p>
+<a name="wp1128370"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1128369"> </a><div class="pCellBody">
+<span style="font-weight: bold">Note</span>. Depending on whether the license is being installed to a computer or a chassis, the wording in the IRU dialogs is slightly different. 
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<a name="wp1111017"> </a><p class="pBody">
+
+</p>
+<a name="wp1090821"> </a><h2 class="pHeading2">
+Step 1: Start Offline <a name="DeRegister_OfflineMessage"> </a>
+De-registration
+</h2>
+<a name="wp1111049"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Deregistration-14.jpg" height="131" width="433" id="wp1111047" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1090825"> </a><p class="pBody">
+Open the IRU as described in <a href="Deregistration.html#wp1097670"><span style="font-style: italic">Open the Ixia Registration Utility</span></a>. The first screen that displayed is shown in <a href="Deregistration.html#wp1090838">Figure 3-9</a>. This message indicates the Installation Host cannot reach the Ixia web-site via the Internet. If the Installation Host is connected, use the following steps to diagnose the problem. 
+</p>
+<a name="wp1091035"> </a><h3 class="pHeading3">
+If the Installation Host should be attached to the Internet
+</h3>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1092067"> </a><div class="pSmartList2"><li>Use a browser to go to any non-Ixia Internet page. If this fails, then there is a problem within the network.</li></div>
+<a name="wp1092069"> </a><div class="pSmartList2"><li>Use a browser to access Ixia&#39;s registration server at <a href="http://licensing.ixiacom.com">http://licensing.ixiacom.com. </a>If this fails, then it might be the case that Ixia&#39;s server is down. Contact Ixia at the appropriate support center to confirm.</li></div>
+<a name="wp1103732"> </a><div class="pSmartList2"><li>If Ixia&#39;s registration server&#39;s web page is displayed, and the screen shown in <a href="Deregistration.html#wp1090838">Figure 3-9</a> still appears after restarting the license de-registration process, then either proceed with the steps in this section, or contact Ixia at the appropriate support center for assistance.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1103736"> </a><h3 class="pHeading3">
+To proceed with offline license de-registration
+</h3>
+<a name="wp1111085"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Deregistration-15.jpg" height="133" width="431" id="wp1111083" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1103740"> </a><p class="pBody">
+The dialog shown in <a href="Deregistration.html#wp1090838">Figure 3-9</a> is displayed when the Installation Host is not connected to the internet.
+</p>
+<a name="wp1090838"> </a><p class="pFigure">
+Figure 3-9.	Offline De-registration Step 1</p>
+<div align="left"><img src="images/OfflineDeregisterStep1.jpg" id="wp1090836" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+ &#150; Offline Notice
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1100028"> </a><div class="pSmartList2"><li>Find an Online Host that is connected to the Internet. It is necessary to transfer small amounts of data between the Online Host and the chassis or workstation where the license is being de-registered (the Installation Host). A removable USB drive will work, or a common e-mail system.</li></div>
+<a name="wp1100029"> </a><div class="pSmartList2"><li>Press the <span style="font-style: italic">Next </span>button.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1093229"> </a><h2 class="pHeading2">
+Step 2: Enter <a name="DeRegister_EnterRegNum_OffLine"> </a>
+Registration Number and Password
+</h2>
+<a name="wp1111117"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Deregistration-17.jpg" height="131" width="432" id="wp1111115" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1093233"> </a><p class="pBody">
+The next screen displayed is shown in <a href="Deregistration.html#wp1093243">Figure 3-10</a>. 
+</p>
+<a name="wp1093243"> </a><p class="pFigure">
+Figure 3-10.	Offline De-registration Step 2 &#150; Registration Number</p>
+<div align="left"><img src="images/OfflineDeregisterStep2.jpg" id="wp1093241" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1100083"> </a><div class="pSmartList2"><li>Enter the <span style="font-style: italic">Registration Number</span> and <span style="font-style: italic">Password</span>, as specified in the Ixia generated e-mail. The source and contents of this e-mail are discussed in <a href="Deregistration.html#wp1090295"><span style="font-style: normal">Introduction</span></a> and in <a href="Introduction.html#wp1093168"><span style="font-style: normal">What is License Management?</span></a></li></div>
+<a name="wp1100084"> </a><div class="pSmartList2"><li>Press the <span style="font-style: italic">Next </span>button.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1093245"> </a><h2 class="pHeading2">
+Step 3: Enter a Chassis or <a name="Deregister_NodeLockedNode_OffLine"> </a>
+Workstation Name
+</h2>
+<a name="wp1111148"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Deregistration-19.jpg" height="132" width="432" id="wp1111146" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1121686"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1121755"> </a><div class="pCellBody">
+<span style="font-weight: bold">Notes</span>. This screen will not appear if a floating license is being de-registered, as floating licenses are located on a stand-alone License Servers. The process immediately jumps to <a href="Deregistration.html#wp1093260"><span style="font-style: italic">Step 4: Enter License Server Name</span></a> instead. 
+</div>
+<a name="wp1121677"> </a><div class="pCellBody">
+If the license being de-registered is on the Installation Host, then this step is skipped. The de-registration process has automatically found the license file. Proceed to <a href="Deregistration.html#wp1119529"><span style="font-style: italic">Step 5: De-register the License</span></a>.
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<a name="wp1115104"> </a><p class="pBody">
+If the license is associated with a different chassis/workstation, then the next screen is shown in <a href="Deregistration.html#wp1107655">Figure 3-11</a>.
+</p>
+<a name="wp1107655"> </a><p class="pFigure">
+Figure 3-11.	Offline De-registration Step 3 &#150; Ixia Chassis or Workstation Name</p>
+<div align="left"><img src="images/OfflineDeregisterStep3.jpg" id="wp1107653" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1101462"> </a><div class="pSmartList2"><li>Enter the host name or IP address of the Ixia chassis or workstation that is associated with the license being de-registered. <span style="font-style: italic">Localhost</span> is the default and refers to the Installation Host.</li></div>
+<a name="wp1101463"> </a><div class="pSmartList2"><li>Look at the <span style="font-style: italic">Product Features</span> box and verify that the features listed correspond to the software or license being de-registered.</li></div>
+<a name="wp1101464"> </a><div class="pSmartList2"><li>Press the <span style="font-style: italic">Next </span>button.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1093260"> </a><h2 class="pHeading2">
+Step 4: Enter <a name="DeRegister_SelectServerFloat_OffLine"> </a>
+License Server Name
+</h2>
+<a name="wp1121470"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Deregistration-21.jpg" height="131" width="432" id="wp1121468" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1121473"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1121514"> </a><div class="pCellBody">
+<span style="font-weight: bold">Notes</span>. This step immediately follows <a href="Deregistration.html#wp1093229"><span style="font-style: italic">Step 2: Enter Registration Number and Password</span></a> if a floating license is being de-registered.
+</div>
+<a name="wp1121569"> </a><div class="pCellBody">
+If the license for the product is found on the chassis/workstation specified in <a href="Deregistration.html#wp1093245"><span style="font-style: italic">Step 3: Enter a Chassis or Workstation Name</span></a>, then this step is skipped (proceed to <a href="Deregistration.html#wp1119529"><span style="font-style: italic">Step 5: De-register the License</span></a>). 
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<a name="wp1101481"> </a><p class="pBody">
+A dialog similar to the one shown in <a href="Deregistration.html#wp1093001">Figure 3-5</a> is displayed. The screen should only appear if a License Server is used (and the chassis or workstation entered in <a href="Deregistration.html#wp1093245"><span style="font-style: italic">Step 3: Enter a Chassis or Workstation Name</span></a> did not contain the license being de-registered).
+</p>
+<a name="wp1093275"> </a><p class="pFigure">
+Figure 3-12.	Offline De-registration Step 4 &#150; License Server </p>
+<div align="left"><img src="images/OfflineDeregisterStep4.jpg" id="wp1093273" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1115284"> </a><div class="pSmartList2"><li>If a License Server is not being used, and this screen appears, press the <span style="font-style: italic">Back </span>button and specify the correct chassis or workstation.</li></div>
+<a name="wp1100308"> </a><div class="pSmartList2"><li>If a License Server is used in the Test Lab, enter its name in the <span style="font-style: italic">Server name or IP address</span> field.</li></div>
+<a name="wp1100309"> </a><div class="pSmartList2"><li>Press the <span style="font-style: italic">Next </span>button.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1119529"> </a><h2 class="pHeading2">
+Step 5: De-register the <a name="DeRegister_OfflineDereg_OffLine"> </a>
+License
+</h2>
+<a name="wp1119534"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Deregistration-23.jpg" height="133" width="432" id="wp1119532" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1121323"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1121318"> </a><div class="pCellBody">
+<span style="font-weight: bold">Notes</span>. This step may immediately follow <a href="Deregistration.html#wp1093229"><span style="font-style: italic">Step 2: Enter Registration Number and Password</span></a> or <a href="Deregistration.html#wp1093245"><span style="font-style: italic">Step 3: Enter a Chassis or Workstation Name</span></a>, depending on the configuration of the test environment.
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<a name="wp1117385"> </a><p class="pBody">
+The screen shown in <a href="Deregistration.html#wp1117531">Figure 3-13</a> is displayed. Review the license information for accuracy. 
+</p>
+<a name="wp1117531"> </a><p class="pFigure">
+Figure 3-13.	Offline De-registration Step 5 &#150; De-register</p>
+<div align="left"><img src="images/OfflineDeregisterStep4a.jpg" id="wp1117541" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1119570"> </a><div class="pSmartList2"><li>Select <span style="font-style: italic">Next</span> to remove the license from the chassis or workstation. </li></div>
+</ul></div>
+</ul></div>
+<a name="wp1119573"> </a><h2 class="pHeading2">
+Step 6: Move to the <a name="DeRegister_PrintReg_OffLine"> </a>
+Online Host
+</h2>
+<a name="wp1119577"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Deregistration-25.jpg" height="133" width="432" id="wp1119575" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1091388"> </a><p class="pBody">
+At this point, a screen similar to that shown in <a href="Deregistration.html#wp1091406">Figure 3-14</a> is displayed.
+</p>
+<a name="wp1091406"> </a><p class="pFigure">
+Figure 3-14.	Offline De-registration Step 6 &#150; Move to Online Host</p>
+<div align="left"><img src="images/OfflineDeregisterStep5.jpg" id="wp1091410" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1100371"> </a><div class="pSmartList2"><li>The information on the screen is necessary to complete the de-registration on the Online Host. Either:</li></div>
+<div class="pSmartList3"><ul class="pSmartList3">
+<a name="wp1100372"> </a><div class="pSmartList3"><li>Print it out using the <span style="font-style: italic">Print...</span> button, or</li></div>
+<a name="wp1100373"> </a><div class="pSmartList3"><li>Save it to disk using the <span style="font-style: italic">Save... </span>button. This file can be copied to a removable USB drive or e-mailed to the Online Host.</li></div>
+</ul></div>
+<a name="wp1100374"> </a><div class="pSmartList2"><li>Move to the Online Host, start a browser and enter <a href="http://licensing.ixiacom.com">http://licensing.ixiacom.com</a>.</li></div>
+<a name="wp1100375"> </a><div class="pSmartList2"><li>Follow the instructions in:</li></div>
+<div class="pSmartList3"><ul class="pSmartList3">
+<a name="wp1100379"> </a><div class="pSmartList3"><li><a href="Deregistration.html#wp1091387"><span style="font-style: italic">Step 7: Online &#150; Connect to the Ixia Registration Website</span></a></li></div>
+<a name="wp1100495"> </a><div class="pSmartList3"><li><a href="Deregistration.html#wp1098857"><span style="font-style: italic">Step 8: Online &#150; Enter the De-registration Code</span></a></li></div>
+<a name="wp1100383"> </a><div class="pSmartList3"><li><a href="Deregistration.html#wp1091424"><span style="font-style: italic">Step 9: Online &#150; Confirm the De-registration</span></a></li></div>
+</ul></div>
+<a name="wp1100384"> </a><div class="pSmartList2"><li>Do not press the <span style="font-style: italic">Next</span>&#160;button in this dialog yet.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1091387"> </a><h2 class="pHeading2">
+Step 7: Online &#150; Connect to the Ixia Registration Website
+</h2>
+<a name="wp1111322"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Deregistration-27.jpg" height="130" width="432" id="wp1111320" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1091472"> </a><p class="pBody">
+Enter the address for the Ixia registration website. <a href="Deregistration.html#wp1099321">Figure 3-15</a> is displayed.
+</p>
+<a name="wp1099321"> </a><p class="pFigure">
+Figure 3-15.	Offline De-registration Step 7 &#150; Ixia Registration Website</p>
+<div align="left"><img src="images/offlineUpdateRegWeb0a.jpg" id="wp1099340" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1100423"> </a><div class="pSmartList2"><li>Select the appropriate Ixia product. A web page similar to the one in <a href="Deregistration.html#wp1099359">Figure 3-16</a> is displayed.</li></div>
+<a name="wp1099359"> </a><p class="pFigure">
+Figure 3-16.	Offline De-registration Step 7 &#150; Select Action<br />
+<img src="images/offlineUpdateRegWeb0.jpg" height="419" width="602" id="wp1099363" border="0" hspace="0" vspace="0"/><br />
+
+</p>
+<a name="wp1100511"> </a><div class="pSmartList2"><li>Select the <span style="font-style: italic">De-register</span> option. </li></div>
+</ul></div>
+</ul></div>
+<a name="wp1098857"> </a><h2 class="pHeading2">
+Step 8: Online &#150; Enter the De-registration Code
+</h2>
+<a name="wp1111381"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Deregistration-30.jpg" height="130" width="432" id="wp1111379" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1098863"> </a><p class="pBody">
+After selecting the de-register options, a webpage similar to the one in <a href="Deregistration.html#wp1091485">Figure 3-17</a> is displayed.
+</p>
+<a name="wp1091485"> </a><p class="pFigure">
+Figure 3-17.	Offline De-registration Step 8 &#150; De-registration Code</p>
+<div align="left"><img src="images/OfflineDeregisterStep6.jpg" height="555" width="802" id="wp1091483" border="0" hspace="0" vspace="0"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1110198"> </a><div class="pSmartList2"><li>Enter the <span style="font-style: italic">De-registration Code </span>exactly as shown in <a href="Deregistration.html#wp1091406">Figure 3-14</a> (it is displayed directly above the Node ID). In the example above, the code is <span style="font-style: italic">AaQ+96/5UrKBQ|OU3EGPAQ==</span>.</li></div>
+<a name="wp1100549"> </a><div class="pSmartList2"><li>Press the <span style="font-style: italic">Go </span>button.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1091424"> </a><h2 class="pHeading2">
+Step 9: Online &#150; Confirm the De-registration
+</h2>
+<a name="wp1111445"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Deregistration-32.jpg" height="133" width="432" id="wp1111443" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1091638"> </a><p class="pBody">
+The screen shown in <a href="Deregistration.html#wp1095277">Figure 3-18</a> displays information about the license.
+</p>
+<a name="wp1095277"> </a><p class="pFigure">
+Figure 3-18.	Offline De-registration Step 9 &#150; Enter Node ID</p>
+<div align="left"><img src="images/OfflineDeregisterStep7.jpg" height="659" width="645" id="wp1095275" border="0" hspace="0" vspace="0"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1100566"> </a><div class="pSmartList2"><li>Verify the <span style="font-style: italic">Registered To</span> and <span style="font-style: italic">Product/Features</span> fields to ensure that this is the license is the correct one to de-register.</li></div>
+<a name="wp1100567"> </a><div class="pSmartList2"><li>Press the <span style="font-style: italic">De-register</span> button. A message appears on the webpage confirming that the license has been de-registered.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1095280"> </a><p class="pBody">
+Return to the Installation Host. 
+</p>
+<a name="wp1120093"> </a><p class="pBody">
+Press the <span style="font-style: italic">Next </span>button<span style="font-style: italic">. </span>After the license has been de-registered, a <span style="font-style: italic">Receipt</span> is shown, for example as in <a href="Deregistration.html#wp1090886">Figure 3-19</a>. This is a record of the license&#39;s de-registration. Save this information as a file or make a printout.
+</p>
+<a name="wp1090886"> </a><p class="pFigure">
+Figure 3-19.	Offline De-registration Step 10 &#150; Print Receipt</p>
+<div align="left"><img src="images/OfflineDeregisterStep8.jpg" id="wp1090884" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1100622"> </a><div class="pSmartList2"><li>To save the receipt to disk, press the <span style="font-style: italic">Save Receipt...</span>&#160;button and designate a file.</li></div>
+<a name="wp1100623"> </a><div class="pSmartList2"><li>To make a printout of the receipt, press the <span style="font-style: italic">Print Receipt...</span> button and select a printer.</li></div>
+<a name="wp1100624"> </a><div class="pSmartList2"><li>Press <span style="font-style: italic">Finish</span>&#160;to exit the de-registration process.</li></div>
+</ul></div>
+</ul></div>
+</blockquote>
+
+<hr color="#C80000">
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top" width="190">
+      <p align="left">
+<a accesskey="4" href="Registration.html"><img id="LongDescNotReq4" src="images/prev.gif" border="0" alt="Previous" /></a><a accesskey="5" href="Updating.html"><img id="LongDescNotReq5" src="images/next.gif" border="0" alt="Next" /></a><a accesskey="2" href="IX.html"><img id="LongDescNotReq6" src="images/index.gif" border="0" alt="Index" /></a>
+    </td>
+    <td valign="top" width="516" align="center">Did this document&nbsp;<br>
+ answer your question?
+      <p align="center"><A HREF="mailto:TechPubs@Ixiacom.com%20?subject=Question%20on%20,%20Release 2.70,%20Deregistration%20section"><img border="0" src="images/email.gif" width="55" height="40"></a>
+      <p>If not, let us know!</p>
+    </td>
+    <td valign="top" width="132" align="center">
+      <p align="right">
+    <span style="font-size: 10px">
+    <a href="http://www.ixiacom.com">
+    <img src="images/ixialogo.gif" width="128" height="38" border="0"></a><br>
+    Voice: (818) 871-1800<br>
+    Fax: (818) 871-1805<br>
+    <a href="mailto:info@ixiacom.com">info@ixiacom.com</a>
+    </span>
+    </td>
+  </tr>
+</table>
+</html>

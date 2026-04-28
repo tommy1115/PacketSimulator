@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<Node nodeType="EthernetPlugin" baseType="HardwarePlugin">
+	<help>Configures Ethernet interfaces on Ethernet ports.</help>
+	
+    <PropertyString>
+        <obsolete>MacRange list must be used instead. Represents mac for the first element in MacRange list</obsolete>
+        <name>mac</name>
+        <default>aa:bb:cc:00:00:00</default>
+        <description>base value used when the plugin creates a mac addresses.
+        </description>
+        <help>
+        When a range of multiple macs are created with this plugin, this value
+        is the base value used to create the addresses in the range, 
+        this property is used in conjunction with 'incrementBy' as an incrementor.
+        </help>
+    </PropertyString>
+
+    <PropertyString>
+        <obsolete>MacRange list must be used instead. Represents incrementBy for the first element in MacRange list</obsolete>
+        <name>incrementBy</name>
+        <default>00:00:00:00:00:01</default>
+        <description>Incrementor used when the plugin creates a range of macs.
+        </description>
+        <help>
+        When a range of multiple macs are created with this plugin, this value
+        is the incrementor used to create the addresses in the range, 
+        this property is used in conjunction with 'mac' as a base value.
+        </help>
+    </PropertyString> 
+
+    <PropertyNodeList nodeType="MacRange" type="sync">
+        <name>macRangeList</name>
+        <help>The list of MAC ranges. See MacRange for more details.</help>
+    </PropertyNodeList>
+    
+    <PropertyNodeList nodeType="VlanIdRange" type="sync">
+        <name>vlanRangeList</name>
+        <help>The list of vlan ranges. See VlanIdRange for more details.</help>
+    </PropertyNodeList>
+
+    <PropertyBoolean>
+        <name>enabled</name>
+        <default>true</default>
+        <description>True enables the plugin, false disables the plugin.
+        </description>
+    </PropertyBoolean>
+
+<!--
+    <PropertyInt>
+        <name>mtu</name>
+        <default>1500</default>
+        <min>1500</min>
+        <max>1000</max>
+    </PropertyInt>
+-->
+    <PropertyBoolean>
+        <name>autoNegotiate</name>
+        <default>1</default>
+        <help>If is set then autonegotiation is activated.
+        The purpose of autonegotiation is to find a way for two NICs that share a link to communicate with each other,
+        regardless of whether they both implemented the same Ethernet version or option set.</help>
+    </PropertyBoolean>
+    
+    <PropertyString>
+        <name>speed</name>
+        <default>k100FD</default>        
+        <choices>
+        	<choice value="k10FD" name="10Mbit Full Duplex" />
+        	<choice value="k10HD" name="10Mbit Half Duplex" />
+        	<choice value="k100FD" name="100Mbit Full Duplex" />
+        	<choice value="k100HD" name="100Mbit Half Duplex" />
+        	<choice value="k1000"  name="1000Mbit" />
+        	<choice value="k10000" name="10Gbit" />
+        </choices>
+        <help>The communication speed at witch the physical layer will be set.</help>
+    </PropertyString>
+    
+    <PropertyBoolean>
+        <name>advertise10Half</name>
+        <default>1</default>
+    </PropertyBoolean>
+    
+    <PropertyBoolean>
+        <name>advertise10Full</name>
+        <default>1</default>
+    </PropertyBoolean>
+    
+    <PropertyBoolean>
+        <name>advertise100Half</name>
+        <default>1</default>
+    </PropertyBoolean>
+    
+    <PropertyBoolean>
+        <name>advertise100Full</name>
+        <default>1</default>
+    </PropertyBoolean>
+    
+    <PropertyBoolean>
+        <name>advertise1000Full</name>
+        <default>1</default>
+    </PropertyBoolean>   
+</Node>

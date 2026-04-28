@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<Node nodeType="Session" baseType="XProtocolObject">
+    <help>
+        Session is a platform for manipulating tests. Multiple users can connect
+        to the same session. Tests are created, loaded and saved from here.
+    </help>
+    <PropertyNode nodeType="Test" polymorphic="1">
+        <name>runningTest</name>
+        <help>The currently running test configuration. Do not edit.</help>
+    </PropertyNode>
+    
+    <PropertyNode nodeType="Test" polymorphic="1">
+        <name>editableTest</name>
+        <help>The test currently being edited.</help>
+    </PropertyNode>
+    
+    <PropertyBoolean>
+    <name>doWaitLinkUp</name>
+    <default>false</default>
+    <description>
+    Wait for links to come up after applying configuration
+    </description>
+  </PropertyBoolean>
+  
+  <PropertyBoolean>
+    <name>doGratArp</name>
+    <default>false</default>
+    <description>
+    Do grat arp after applying configuration and the links are up
+    </description>
+  </PropertyBoolean>
+  
+  <PropertyBoolean>
+    <name>doInterfaceCheck</name>
+    <default>false</default>
+    <description>
+    After applying the configuration check that interfaces are ready for use
+    </description>
+  </PropertyBoolean>
+
+    <Method2 name="SetErrorInjectionTags">
+        <help>
+        Hook for enabling various error injection modes. Used for internal 
+        unit testing of various failure conditions
+        </help>
+        <Argument name="i_errorTags" direction="in" type="string">
+            <help>list of error tags to be injected</help>
+        </Argument>
+    </Method2>
+    
+    <PropertyNodeList nodeType="ServiceExtension" polymorphic="1">
+        <help>List of ServiceExtension nodes</help>
+        <name>serviceExtensionList</name>
+        <maxListLength>128</maxListLength>
+    </PropertyNodeList>
+ 
+
+    <List name="SupportedCardList" type="string"/>
+    <Method2 name="SetCardsSupportedByApplication">
+      <Argument name="supportedCardList" 
+       direction="in" type="Session.SupportedCardList">
+        <help>A list of card description strings E.g. '10/100/1000 ALM T8'
+        </help>
+      </Argument>
+
+      <help>
+      The application can constrain the available card types 
+      by calling this function after creating a TestServer Session object.
+      If the card is not in the supplied list, the card it is not made available
+      for use.
+      </help>
+    </Method2>
+
+    <List name="SupportedPluginList" type="string"/>
+    <Method2 name="SetPluginsSupportedByApplication">
+      <Argument name="supportedPluginList" 
+       direction="in" type="Session.SupportedPluginList">
+        <help>A list of plugin description strings E.g. 'EthernetPlugin'
+        </help>
+      </Argument>
+
+      <help>
+      The application can constrain the plugin types by calling this 
+      function after creating a TestServer Session object.
+      If the plugin is not in the supplied the list, it is not made available
+      for use.
+      </help>
+    </Method2>
+    
+    <Method2 name="ClearHardwareTimeStamp">
+        <help>Clears the hardware timestamp</help>
+    </Method2>
+    
+    <PropertyBoolean>
+ 		<name>waitForLinkUp</name>
+ 		<default>false</default>
+ 		<description>This flag should be set if links are to be checked after configuration</description>
+ 	</PropertyBoolean>
+    
+    <Method2 name="ConfigureTest" returnType="delayed">
+        <help>
+            Applies the configuration to the ports.
+        </help>
+    </Method2>
+    
+    <Method2 name="DeconfigureTest" returnType="delayed">
+        <help>
+            Removes the previously applied configuration.
+        </help>
+    </Method2>
+    
+    <Method2 name="StartTest" returnType="delayed">
+        <help>
+            Starts the configuration. Should be called before the application starts using the configuration. 
+        </help>
+    </Method2>
+    
+    <Method2 name="StopTest" returnType="delayed">
+        <help>
+            Stops the configuration. Is called by the application to stop the configuration. 
+        </help>
+    </Method2>
+    
+    <Method2 name="CancelTest" returnType="delayed">
+        <help>
+            Cancels the state machine action and empties the event queue. 
+        </help>
+    </Method2>
+       
+    <Method2 name="CloseTest">
+        <help>
+            Closes the test object.
+        </help>
+    </Method2>
+    
+    <Struct name="TestInfo" version="1">
+        <help>
+            This structure holds information about a test.
+        </help>
+        <Member name="id" type="int32" default="0" version="1">
+            <help>
+                Unique ID of the test.
+            </help>
+        </Member> 
+        <Member name="testName" type="string" default="" version="1">
+            <help>
+                Name of the test.
+            </help>
+        </Member> 
+        <Member name="userName" type="string" default="" version="1">
+            <help>
+                The username associated with the test.
+            </help>
+        </Member> 
+        <Member name="dateTime" type="int64" default="0" version="1">
+            <help>
+                Time the test ran/was saved.
+            </help>
+        </Member> 
+    </Struct>
+
+    <List name="TestInfoList" type="Session.TestInfo" />
+
+    <Method2 name="Ping">
+        <help>
+            Trivial method for checking connectivity.
+        </help>
+    </Method2>
+
+    <Method2 name="Close">
+        <help>
+            Close this session. Discards all associated data.
+        </help>
+    </Method2>
+
+    <Method2 name="CreateTest">
+        <help>
+            Create a new test under this session. Displaces any test already in the session.
+        </help>
+        <Argument name="test" direction="out" type="Test">
+            <help>
+                Reference to the new test.
+            </help>
+        </Argument>
+    </Method2>
+
+
+    <Method2 name="DeleteTest">
+        <help>
+            Delete a test in the database.
+        </help>
+        <Argument name="testId" direction="in" type="int32">
+            <help>
+                Unique id of the test.
+            </help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="RenameTest">
+        <help>
+            Rename a test in the database.
+        </help>
+        <Argument name="testId" direction="in" type="int32">
+            <help>
+                Unique id of the test.
+            </help>
+        </Argument>
+        <Argument name="name" direction="in" type="string">
+            <help>
+                New name of the test.
+            </help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="OpenTest">
+        <help>
+            Open a test from the database. This will displace a pre-existing test in the session.
+        </help>
+        <Argument name="testId" direction="in" type="int32">
+            <help>
+                Unique id of the test.
+            </help>
+        </Argument>
+        <Argument name="test" direction="out" type="Test">
+            <help>
+                Reference to the opened test.
+            </help>
+        </Argument>
+    </Method2>
+
+
+    <Method2 name="OpenTestByName">
+        <help>
+            Open a test from the database. This will displace a pre-existing test in the session.
+        </help>
+        <Argument name="filename" direction="in" type="string">
+            <help>
+                File name of the test.
+            </help>
+        </Argument>
+        <Argument name="test" direction="out" type="Test">
+            <help>
+                Reference to the opened test.
+            </help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="OpenTestResult">
+        <help>
+            Open a test result from the database. This will displace a pre-existing test in the session.
+        </help>
+        <Argument name="testResultId" direction="in" type="int32">
+            <help>
+                Unique id of the test result.
+            </help>
+        </Argument>
+        <Argument name="test" direction="out" type="Test">
+            <help>
+                Reference to the opened test.
+            </help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="OpenTestResultByName">
+        <help>
+            Open a test result from the database by file name. This will displace a pre-existing test in the session.
+        </help>
+        <Argument name="filename" direction="in" type="string">
+            <help>
+                File name of the test result.
+            </help>
+        </Argument>
+        <Argument name="test" direction="out" type="Test">
+            <help>
+                Reference to the opened test.
+            </help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="GetTestList">
+        <help>
+            Retrieve a list of tests from the database.
+        </help>
+        <Argument name="testName" direction="in" type="string">
+            <help>
+                Name of the test or empty string. [?]
+            </help>
+        </Argument>
+        <Argument name="userName" direction="in" type="string">
+            <help>
+                User name or empty string. [?]
+            </help>
+        </Argument>
+        <Argument name="dateTimeBegin" direction="in" type="int64">
+            <help>
+                Beginning of search period. [Units???]
+            </help>
+        </Argument>
+        <Argument name="dateTimeEnd" direction="in" type="int64">
+            <help>
+                End of search period. [Units???]
+            </help>
+        </Argument>
+        <Argument name="testInfoList" direction="out" type="Session.TestInfoList">
+            <help>
+                Returned list of test information structures.
+            </help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="GetTestResultList">
+        <help>
+            Retrieve a list of test results from the database.
+        </help>
+        <Argument name="testName" direction="in" type="string">
+            <help>
+                Name of the test or empty string. [?]
+            </help>
+        </Argument>
+        <Argument name="userName" direction="in" type="string">
+            <help>
+                User name or empty string. [?]
+            </help>
+        </Argument>
+        <Argument name="dateTimeBegin" direction="in" type="int64">
+            <help>
+                Beginning of search period. [Units???]
+            </help>
+        </Argument>
+        <Argument name="dateTimeEnd" direction="in" type="int64">
+            <help>
+                Beginning of search period. [Units???]
+            </help>
+        </Argument>
+        <Argument name="testInfoList" direction="out" type="Session.TestInfoList">
+            <help>
+                Returned list of test information structures.
+            </help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="GetAppName">
+        <help>
+            Retrieve the name of the application the session was created for.
+        </help>
+        <Argument name="name" direction="out" type="string">
+            <help>
+                Name of the application.
+            </help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="GetTestXml">
+        <help>
+            Retrieve XML representation of a test in the database.
+        </help>
+        <Argument name="testId " direction="in" type="int32">
+            <help>
+                Unique ID of the test.
+            </help>
+        </Argument>
+        <Argument name="xml" direction="out" type="string">
+            <help>
+                XML representation of the test.
+            </help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="GetTestResultXml">
+        <help>
+            Retrieve XML representation of a test result in the database.
+        </help>
+        <Argument name="testId " direction="in" type="int32">
+            <help>
+                Unique ID of the test.
+            </help>
+        </Argument>
+        <Argument name="xml" direction="out" type="string">
+            <help>
+                XML representation of the test result.
+            </help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="SetPortGroupDefault">
+        <help>Set the xml used to initialize new port groups</help>
+        <Argument name="xml" direction="in" type="string">
+            <help>The xml used to initialize new port groups</help>
+        </Argument>
+    </Method2>
+    
+    <Enum name="eEventType">
+        <help>The list of events being reported by SystemEvent</help>
+        <Choices>
+            <Choice symbol="kFsmEnteredStateUnconfigured" value="0"/>
+            <Choice symbol="kFsmEnteredStateRebootPorts" value="1"/>
+            <Choice symbol="kFsmEnteredStateTakeOwnership" value="2"/>
+            <Choice symbol="kFsmEnteredStateReset" value="3"/>
+            <Choice symbol="kFsmEnteredStateDodPackagesLoadStack" value="4"/>
+            <Choice symbol="kFsmEnteredStateDodPackagesUnloadStack" value="5"/>
+            <Choice symbol="kFsmEnteredStateConfigured" value="6"/>
+            <Choice symbol="kFsmEnteredStateConfigStack" value="7"/>
+            <Choice symbol="kFsmEnteredStatePostConfigStack" value="8"/>
+            <Choice symbol="kFsmEnteredStateDeconfigStack" value="9"/>
+            <Choice symbol="kFsmEnteredStateReleaseOwnership" value="10"/>
+            <Choice symbol="kFsmEnteredStateOther" value="11"/>
+            <Choice symbol="kFsmEnteredStateResetStack" value="12"/>
+            <Choice symbol="kFsmEnteredRunStateGratArp" value="13"/>
+            <Choice symbol="kFsmEnteredRunStateWaitLinkUp" value="14"/>
+            <Choice symbol="kFsmEnteredRunStateConfigured" value="15"/>
+            <Choice symbol="kUnconfigured" value="16"/>
+            <Choice symbol="kConfigured" value="17"/>
+            <Choice symbol="kTakeOwnership" value="18"/>
+            <Choice symbol="kReleaseOwnership" value="19"/>
+            <Choice symbol="kReset" value="20"/>
+            <Choice symbol="kDodPackagesLoad" value="21"/>
+            <Choice symbol="kDodPackagesUnload" value="22"/>
+            <Choice symbol="kConfiguredPhysical" value="23"/>
+            <Choice symbol="kRunning" value="24"/>
+            <Choice symbol="kReady" value="25"/>
+            <Choice symbol="kValidate" value="26"/>
+            <Choice symbol="kRemovedConfig" value="27"/>
+            <Choice symbol="kPluginInfo" value="28"/>
+            <Choice symbol="kPluginError" value="29"/>
+        </Choices>
+    </Enum>
+    
+    <Event name="PostConfigError">
+        <help>This error is thrown if something goes wrong after configure</help>
+        <Argument name="errorMessage" type="string">
+            <help>This event is triggered by post configure errors. The errorMessage explains the error</help>
+        </Argument>
+    </Event>
+
+    <Struct name="EventData" version="1" >
+        <help>Structure containing argument data for SystemEvents</help>
+        <Member name="eventType" type="Session.eEventType" version="1">
+            <help>The type of event being reported</help>
+        </Member>
+        <Member name="eventMessage" type="string" version="1">
+            <help>Message related to the event</help>
+        </Member>
+    </Struct>
+
+    <Event name="SystemEvent">
+        <help>Event object reporting Test events</help>
+        <Argument name="eventData" type="Session.EventData">
+             <help>The type of event being reported</help>    
+        </Argument>
+    </Event>
+
+    <Method2 name="SetUserName">
+        <help>(Re)set the user name for apply this session object</help>
+        <Argument name="userName" direction="in" type="string">
+        <help>New User name to apply to this session object</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="SetActivityModels">
+        <help>Method to set the activity model</help>
+        <Argument name="activityModels" direction="in" type="ActivityConfig.ActivityModelVector">
+            <help>List of avtivity models to set</help>
+        </Argument>
+    </Method2>
+	
+    <Method2 name="GetActivityModels">
+        <help>Method to get the list of activity models</help>
+        <Argument name="activityModels" direction="out" type="ActivityConfig.ActivityModelVector">
+            <help>List of activity models</help>
+        </Argument>
+    </Method2>
+    
+    <Method2	  name="CreateTestServerUnitTestNode">
+        <help>For internal unit test only</help>
+        <Argument name="unitTestNode" direction="out" type="TestServerUnitTestNode">
+        <help>returns unit test object</help>
+        </Argument>
+    </Method2>
+    
+    <Method2	  name="AddLicense">
+        <help>Activates licensed plug-in. For Ixia applications use only.</help>
+        <Argument name="featureId" direction="in" type="string">
+        <help>License Id of plug-in to enable.</help>
+        </Argument>
+    </Method2>
+
+    <!-- ********************************************************* -->
+    <Method2 name="Internal_EnableActionBehaviorMessages">
+      <help>
+        Note: This is an internal Unit test method.
+        Turn on or off ActionBehaviorMessage collection
+      </help>
+      <Argument name="enable" direction="in" type="bool">
+        <help>The enabler parameter for the call</help>
+      </Argument>
+    </Method2>
+    <Method2 name="Internal_GetActionBehaviorMessages">
+      <help>
+        Note: This is an internal Unit test method.
+        Get all action behavior internal log messages.
+      </help>
+      <Argument name="clear" direction="in" type="bool">
+        <help>clear messages after getting them</help>
+      </Argument>
+      <Argument name="messagelist" direction="out"
+        type="GenericTestModel.StringVector">
+        <help>Requested message (string) list</help>
+      </Argument>
+    </Method2>
+    <!-- ********************************************************* -->
+	
+</Node>

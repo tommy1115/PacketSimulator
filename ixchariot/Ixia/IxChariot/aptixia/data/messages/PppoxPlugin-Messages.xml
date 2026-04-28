@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ixia_message_file>
+  <status>
+    <id_string>Aptixia.PppoxPlugin.ConfigureTimeout</id_string>
+    <text>PPPoX plugin %1%: lcp phase timeout (%2% seconds) exceeded while configuring sessions</text>
+    <description></description>
+  </status>
+  <status>
+    <id_string>Aptixia.PppoxPlugin.DeconfigureTimeout</id_string>
+    <text>PPPoX plugin %1%: lcp term phase timeout (%2% seconds) exceeded while deconfiguring sessions</text>
+    <description></description>
+  </status>
+  <status>
+    <id_string>Aptixia.PppoxPlugin.AuthenticationFailed</id_string>
+    <text>PPPoX plugin %1%: Authentication failed while configuring sessions.</text>
+    <description></description>
+  </status>
+  <status>
+    <id_string>Aptixia.PppoxPlugin.PADITimedOut</id_string>
+    <text>PPPoX plugin %1%: Authentication failed while configuring sessions.</text>
+    <description></description>
+  </status>
+</ixia_message_file>

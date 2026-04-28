@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-16"?>
+<GUIDescription>
+  <Form size="987,592">
+    <Control ref="vlanRangeList" editor="aptixia.sm.DDListAddButton" location="21,326" size="22,23" tabIndex="21" text="" />
+    <Control ref="vlanRangeList" editor="aptixia.sm.DDListDeleteButton" location="51,326" size="22,23" tabIndex="22" text="" />
+    <Control ref="vlanRangeList" editor="aptixia.sm.DDGridCtrl" location="21,357" size="940,202" tabIndex="20" viewoptions="54">
+      <columns>
+        <column name="Primary Key" databinding="vlanPrimaryKey" visible="True" width="100" type="kIntEdit" />
+        <column name="Enable Vlan" databinding="enableVlan" visible="True" width="70" type="kCheckBox" />
+        <column name="ID" databinding="vlanId" visible="True" width="100" type="kIntEdit" />
+        <column name="Increment Every" databinding="vlanStepSize" visible="True" width="100" type="kIntEdit" />
+        <column name="Increment By" databinding="vlanIncrementBy" visible="True" width="100" type="kIntEdit" />
+        <column name="Priority" databinding="vlanPriority" visible="True" width="60" type="kIntEdit" />
+        <column name="Enable Stacked Vlan" databinding="enableStackedVlan" visible="True" width="130" type="kCheckBox" />
+        <column name="Stacked ID" databinding="stackedVlanId" visible="True" width="100" type="kIntEdit" />
+        <column name="Stacked Increment Every" databinding="stackedVlanStepSize" visible="True" width="130" type="kIntEdit" />
+        <column name="Stacked Increment By" databinding="stackedVlanIncrementBy" visible="True" width="130" type="kIntEdit" />
+        <column name="Stacked Priority" databinding="stackedVlanPriority" visible="True" width="100" type="kIntEdit" />
+      </columns>
+    </Control>
+    <Control editor="aptixia.sm.DDGroupBox" location="12,293" size="957,276" tabIndex="88" text="VLAN Configuration" />
+    <Control ref="macRangeList" editor="aptixia.sm.DDListDeleteButton" location="64,56" size="22,23" tabIndex="18" text="" />
+    <Control ref="macRangeList" editor="aptixia.sm.DDListAddButton" location="36,55" size="22,23" tabIndex="17" text="" />
+    <Control ref="autoMacGeneration" editor="aptixia.sm.DDRadioButton" location="23,33" size="197,24" tabIndex="86" text="Configure MAC addresses manually" checkedValue="False" tabstop="True" />
+    <Control ref="macRangeList" enable="!autoMacGeneration" editor="aptixia.sm.DDGridCtrl" location="23,86" size="317,168" tabIndex="16" anchor="Top, Left, Right" viewoptions="54">
+      <columns>
+        <column name="MAC" databinding="mac" visible="True" width="100" type="kStringEdit" />
+        <column name="Increment By" databinding="incrementBy" visible="True" width="100" type="kStringEdit" />
+        <column name="Primary Key" databinding="macPrimaryKey" visible="True" width="100" type="kIntEdit" />
+      </columns>
+    </Control>
+    <Control editor="aptixia.sm.DDGroupBox" location="12,38" size="336,229" tabIndex="84" text="" />
+    <Control ref="autoMacGeneration" editor="aptixia.sm.DDRadioButton" location="23,10" size="203,24" tabIndex="9" text="Assign MAC addresses automatically" checkedValue="True" tabstop="True" />
+  </Form>
+</GUIDescription>

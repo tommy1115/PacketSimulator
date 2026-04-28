@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="ServiceExtensionsWrapper" baseType="">
+    <help>Access to the service extensions list</help>
+    <PropertyNodeList nodeType="ServiceExtension" polymorphic="1">
+        <name>serviceExtensions</name>
+        <help>Service Extensions to TestServer for access to features outside of the Test classes, such as StatViewer ViewTemplates</help>
+    </PropertyNodeList>
+</Node>

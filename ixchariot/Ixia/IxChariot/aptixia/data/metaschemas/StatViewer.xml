@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="StatViewer" baseType="StatConsumer">
+   <help>List of stat views for a test</help> 
+   <Enum name="eMode">
+        <help>Enumeration of the modes of the StatViewer GUI</help> 
+        <Choices>
+            <Choice symbol="kModeDesign" value="0"/>
+            <Choice symbol="kModeRun" value="1"/>
+            <Choice symbol="kModeResult" value="2"/>
+        </Choices>
+    </Enum>
+
+   <Enum name="eNotify">
+        <help>Enumeration of notification types of the StatViewer GUI</help> 
+        <Choices>
+            <Choice symbol="kViewDataChanged" value="0"/>
+        </Choices>
+    </Enum>
+ 
+   <Enum name="eWindowState">
+        <help>Deprecated</help> 
+        <Choices>
+            <Choice symbol="kNormal" value="0"/>
+            <Choice symbol="kMaximized" value="1"/>
+            <Choice symbol="kMinimized" value="2"/>
+        </Choices>
+    </Enum>
+
+    <PropertyNodeList nodeType="StatView" polymorphic="0">
+        <name>statViewList</name>
+        <maxListLength>500</maxListLength>
+        <help>List of stat views for a test</help> 
+    </PropertyNodeList>
+    
+    <PropertyString>
+        <name>windowPositions</name>
+        <description>global stat viewer window position</description>
+        <help>Deprecated</help>
+    </PropertyString>
+    
+    
+    <Method2 name="ViewExists">
+        <help>Check if a view exists in the list for this test</help>
+        <Argument name="name" direction="in" type="string">
+            <help>Name of the view to check for</help>
+        </Argument>   
+        <Argument name="exists" direction="out" type="bool">
+            <help>Result of the check</help>        
+        </Argument>
+    </Method2>
+    
+</Node>
+ 

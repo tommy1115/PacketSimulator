@@ -1,0 +1,5 @@
+anchor('ixos_linux_sdk', '4.00.200.28')
+anchor('ixos_linux_sdk', '4.10.250.13')
+anchor('ixos_linux_sdk_5.00', '5.00.300.55')
+anchor('ixos_linux_sdk_5.10', '5.10.351.236')
+anchor('ixos_linux_sdk_5.20', '5.20.0.542')

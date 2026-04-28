@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ixia_message_file>
+
+<status>
+  <id_string>Aptixia.StackElementPlugin.OperationNotSupported</id_string>
+  <text>Plugin %1%: Stack Element Plugin Operation '%2%' is not supported</text>
+  <description></description>
+</status>
+<status>
+  <id_string>Aptixia.StackElementPlugin.HelpGenerator</id_string>
+  <text>Help generator will crash if only one status defined in the message XML file</text>
+  <description></description>
+</status>
+
+<status>
+  <id_string>Aptixia.IMMonitor.Error</id_string>
+  <text>IMMonitor error %1%</text>
+  <description></description>
+</status>
+
+
+<status>
+  <id_string>Aptixia.StackElementPlugin.StackingOperationNotAllowed</id_string>
+  <text>Stacking Operation Not Allowed: %1%</text>
+  <description></description>
+</status>
+
+<status>
+  <id_string>Aptixia.StackElementPlugin.CardNotSupported</id_string>
+  <text>
+Plugin of type '%1%' does not support card type '%2%'
+on the target port '%3%'.
+
+The plugin Supports the following card types:
+
+%4%
+
+  </text>
+  <description></description>
+</status>
+
+<status>
+  <id_string>Aptixia.StackElementPlugin.CardNotSupportedByApplication</id_string>
+  <text>
+Application does not support card type '%2%' for plugin '%1%'
+on the target port '%3%'.
+
+The Application Supports the following card types:
+
+%4%
+
+  </text>
+  <description></description>
+</status>
+
+<status>
+  <id_string>Aptixia.StackElementPlugin.PluginNotSupportedByApplication</id_string>
+  <text>
+Application does not support plugins of type '%1%'
+The Application supports the following plugin types:
+
+%2%
+
+  </text>
+  <description></description>
+</status>
+
+
+<status>
+  <id_string>Aptixia.StackElementPlugin.CannotFindPluginInfo</id_string>
+  <text>Cannot find plugin information for plugin of type '%1%'.</text> 
+  <description>
+  General plugin run time inforamtion could not be found for 
+  a particular plugin type. This is usually because the requested 
+  plugin type does not exist or is not available on the current 
+  aptixia installation.
+  </description>
+</status>
+<status>
+  <id_string>Aptixia.StackElementPlugin.ImproperStackParentage</id_string>
+  <text>The Plugin '%1%' 
+  has stack ancestor elements that are of an improper type or were 
+  improperly constructed.
+  </text> 
+
+  <description>
+  The Plugin has stack ancestor elements that are of an improper type or
+  were improperly constructed. This may be because some of the ancestor
+  stack elements of this stack element were constructed with an 
+  improper parent objects.
+  </description>
+
+</status>
+
+<status>
+  <id_string>Aptixia.Dhcp.CannotResolveIps</id_string>
+  <text>IP addresses cannot be resolved in the specified amount of time. Please increase the timeout value and check the status of the DHCP server. 
+  %1% dhcp clients were able to get IP addresses</text>
+  <description>IP addresses cannot be resolved in the specified amount of time</description>
+</status>
+
+<status>
+  <id_string>Aptixia.Dhcp.LeaseExpired</id_string>
+  <text>Unable to renew lease for on a configured interface</text>
+  <description>Lease for an IP address cannot be renewed</description>
+</status>
+
+<status>
+  <id_string>Aptixia.Dhcp.ProtocolNotSupported</id_string>
+  <text>One of the required protocols is not supported for atleast one of the selected ports</text>
+  <description>Most likely the test is trying to run DHCPv6 on a Chassis with an older version of IxOS. DHCPv6 is supported from 4.10 onwards</description>
+</status>
+
+<status>
+  <id_string>Aptixia.Dhcp.ConfigError</id_string>
+  <text>Dhcp does not works above Emulated Router</text>
+  <description>Dhcp does not works above Emulated Router</description>
+</status>
+
+
+<status>
+  <id_string>Aptixia.GlobalPlugin.MultiplePluginsNotAllowedForType</id_string>
+  <text>Multiple instances of '%1%' Global Plugins are not allowed in a port group</text>
+  <description></description>
+</status>
+
+<status>
+  <id_string>Aptixia.GlobalPlugin.NotAGlobalPlugin</id_string>
+  <text>An Operation that requires a Global stack element plugin 
+  was attempted using an object of type '%1%'.</text>
+  <description>
+  One common occurence of this error is when trying to add a non global
+  plugin to a port group's global plugin list.
+  </description>
+</status>
+
+<status>
+ <id_string>Aptixia.ImpairmentPlugin.ConfigurationException</id_string>
+ <text>Impairment plugin was not able to apply impairment %1%. %2%</text>
+ <description>
+ Impairment plugin module in the interface manager threw an exception.
+ </description>
+</status>
+
+<status>
+ <id_string>Aptixia.ImpairmentPlugin.UpperLayerError</id_string>
+ <text>There has to be only one layer above %1%</text>
+ <description>
+ Impairment plugin requires a layer stacked above which generates IP addresses
+ </description>
+</status>
+
+<status>
+ <id_string>Aptixia.ImpairmentPlugin.JitterParamError</id_string>
+ <text>Jitter must be lower than delay.</text>
+ <description>Jitter must be lower than delay when latancy is enabled.</description>
+</status>
+
+<status>
+ <id_string>Aptixia.DNSPlugin.ServerListError</id_string>
+ <text>For plugin %1% too many elements for Name Server list: %2%. Maximum number of elements allowed for Name Server list is 3</text>
+ <description>
+ Server list size is exceeded
+ </description>
+</status>
+
+<status>
+ <id_string>Aptixia.DNSPlugin.SearchListError</id_string>
+ <text>For plugin %1% too many elements for Search list: %2%. Maximum number of elements allowed for Search list is 6</text>
+ <description>
+ Search list size is exceeded
+ </description>
+</status>
+
+<status>
+ <id_string>Aptixia.DNSPlugin.TotalCharacters</id_string>
+ <text>For plugin %1% total 256 characters from the maximum 6 entry Search list excedded:%2%</text>
+ <description>
+ Total characters exceeded
+ </description>
+</status>
+
+<status>
+ <id_string>Aptixia.EmulatedRouterPlugin.VerificationError</id_string>
+ <text>For EmulatedRouter %1% verification failed for %2% with the following msg: %3%</text>
+ <description>
+ Verification error in emulated router plugin
+ </description>
+</status>
+
+<status>
+ <id_string>Aptixia.RoutesPlugin.MaskError</id_string>
+ <text>Destination for %1% does not meet Mask specification</text>
+ <description>
+ Mask specification error
+ </description>
+</status>
+
+<status>
+ <id_string>Aptixia.StackElementPlugin.IllegalInternalStackElementId</id_string>
+ <text>Attempted to set Illegal value '%1%' for InternalStackElementId</text>
+ <description>
+ Mask specification error
+ </description>
+</status>
+
+
+
+</ixia_message_file>

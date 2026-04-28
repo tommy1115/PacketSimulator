@@ -1,0 +1,1491 @@
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="GENERATOR" content="Microsoft FrontPage 4.0" />
+    <meta name="TEMPLATEBASE" content="Dynamic HTML" />
+    <meta name="LASTUPDATED" content="12/20/04 15:52:33" />
+    <title>StatViewer  </title>
+    <link rel="StyleSheet" href="ixia_user_doc.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
+<link rel="index" title="Index" href="IX.html" />
+<link rel="first" title="First" href="TOC.html" />
+<link rel="last" title="Last" href="IX.html" />
+<link rel="next" title="Next" href="IX.html" />
+
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/seealso.js"></script>
+
+    <script type="text/javascript" language="JavaScript1.2">
+     <!--
+      var  WebWorksSeeAlso = new WebWorksSeeAlso_Object();
+     // -->
+    </script>
+  </head>
+
+  <body>
+
+   <table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="left" width="281"><a href="http://www.ixiacom.com"><img border="0" src="images/ixialogo.gif"></a>
+    </td>
+    <td align="center" width="95"></td>
+    <td align="center" width="94"><a href="appStatViewer.fm.pdf">
+    <img src="images/pdf.gif" width="28" height="31"
+             border="0" alt="PDF version of this section"></a>
+    <td align="center" width="180">
+      <p align="right">
+  </tr>
+  <tr>
+    <td width="281" align="left"><b><i><font size="3" face="Arial" color="#000000"></font></i></b></td>
+    <td width="95" align="center"></td>
+    <td width="94" align="center">Display<br>
+ PDF version</td>
+    <td width="190" align="center">
+      <p align="right"><a accesskey="2" href="IX.html"><img id="LongDescNotReq1" src="images/index.gif" border="0" alt="Index" /></a>
+    </td>
+  </tr>
+</table>
+
+<hr align="left" color="#C80000">
+
+<blockquote>
+<a name="wp1093900"> </a><h2 class="pTitle">
+StatViewer<br /><br />
+</h2>
+<hr color="#C00000" noshade>
+<a name="wp1098597"> </a><p class="pBody">
+StatViewer is Ixia&#39;s cross-application statistics display application. StatViewer is extensively customizable, allowing you to tailor it to your particular needs. Because it works with statistics from various Ixia applications, StatViewer provides a single consistent and familiar method for working with statistics from multiple applications.
+</p>
+<a name="wp1098552"> </a><p class="pFigure">
+Figure A-1.	StatViewer</p>
+<div align="left"><img src="images/main_window_runMode.jpg" id="wp1098877" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<a name="wp1102874"> </a><h2 class="pHeading1">
+About Views
+</h2>
+<a name="wp1103504"> </a><p class="pBody">
+In StatViewer, a <span style="font-style: italic">view</span> is a tab that displays a statistics graph in the StatViewer main window. Each view has one or more statistics defined for it. Each view also includes items such as a title that identifies it, a legend that lists the color used for each statistic, and for the graphs, controls that allow you to change the scales on the x- and y-axes. The views available, the statistics defined for them, and their properties are stored in the applications&#39; repositories (<a href="appStatViewer.html#wp1120674">Figure A-2</a>). 
+</p>
+<a name="wp1120674"> </a><p class="pFigure">
+Figure A-2.	StatViewer and application repository </p>
+<div align="left"><img src="images/statviewer_repository.jpg" height="279" width="435" id="wp1121021" border="0" hspace="0" vspace="0"/></div><p class="pFigure">
+
+</p>
+<a name="wp1103551"> </a><p class="pBody">
+To display a view, you can:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp1108239"> </a><div class="pSmartList1"><li>Click on its tab.</li></div>
+<a name="wp1108240"> </a><div class="pSmartList1"><li>Click Window on the menubar and select it from the list of windows. </li></div>
+<a name="wp1108243"> </a><div class="pSmartList1"><li>In Design view, select it from the View tree.</li></div>
+</ul></div>
+<a name="wp1103421"> </a><p class="pBody">
+Every application that uses StatViewer defines its own set of views and statistics. You cannot change the properties of those pre-defined views or add or remove statistics from them. The only option available for pre-defined views is controlling whether they are active or not, which is controlled by the Enabled property in the View category of the Properties list. If you set View Enabled to false, the view displays in the main window but does not graph any statistics. If <span style="font-weight: bold">Locked by app</span> displays at the top of the Properties pane, that indicates that you cannot change the view&#39;s properties, other than to make it active or inactive.
+</p>
+<a name="wp1103422"> </a><p class="pBody">
+You can create your own views, and define the statistics they display. For views you create and their statistics, you can set all the available properties, such as background color, line style, title, and so on.
+</p>
+<a name="wp1108518"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1108517"> </a><div class="pCellBody">
+<span style="font-weight: bold">Note:</span> Although the figures in this section show statistics from Ixia&#39;s IxLoad application, the StatViewer features and procedures apply to using StatViewer from any application that uses it.
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<a name="wp1098531"> </a><h2 class="pHeading2">
+Run mode vs. Design mode
+</h2>
+<a name="wp1098959"> </a><p class="pBody">
+StatViewer has two modes: Run mode and Design mode.
+</p>
+<a name="wp1098964"> </a><p class="pBodyRelative">
+Run mode (<a href="appStatViewer.html#wp1098552">Figure A-1</a>) is the mode you use to display and manipulate statistics generated by the application. In Run mode, you can click on the various tabs to view the different statistics groups defined for the application, you can change the X- and Y-axes to increase or decrease the scales shown on graphs, and you can move the cursor over the lines, bars, or pie-view slices to display detailed information about the statistics the specific point underneath the cursor. 
+</p>
+<a name="wp1099000"> </a><p class="pBodyRelative">
+Design mode (<a href="appStatViewer.html#wp1099123">Figure A-4</a>) is the mode you use to change the properties of existing statistics or define the properties of new statistics. If StatViewer is in Design mode and you begin a test, the testing application automatically switches StatViewer into Run mode.
+</p>
+<a name="wp1103036"> </a><h3 class="pHeading3">
+Run mode
+</h3>
+<a name="wp1103068"> </a><p class="pFigure">
+Figure A-3.	StatViewer (Run mode)</p>
+<div align="left"><img src="images/main_window_runModea.jpg" height="690" width="867" id="wp1103039" border="0" hspace="0" vspace="0"/></div><p class="pFigure">
+
+</p>
+<a name="wp1103095"> </a><h3 class="pHeading3">
+Design mode
+</h3>
+<a name="wp1099123"> </a><p class="pFigure">
+Figure A-4.	StatViewer (Design mode, with design controls shown)</p>
+<div align="left"><img src="images/main_window_editMode.jpg" height="732" width="1002" id="wp1099121" border="0" hspace="0" vspace="0"/></div><p class="pFigure">
+
+</p>
+<a name="wp1102993"> </a><p class="pBody">
+
+</p>
+<a name="wp1099545"> </a><h2 class="pHeading1">
+View Types
+</h2>
+<a name="wp1099567"> </a><p class="pBody">
+StatViewer can display statistics in seven types of views: line, area, bar, pie (<a href="appStatViewer.html#wp1099595">Figure A-5</a>), spline, spline area, and grid (<a href="appStatViewer.html#wp1116943">Figure A-6</a>). To change the type of view, click one of the View Type buttons in the toolbar (<a href="appStatViewer.html#wp1099699">Figure A-7</a>) or change the View Type property (see <a href="appStatViewer.html#wp1102656"><span style="font-style: italic">Editing a View</span> on page A-23</a>).
+</p>
+<a name="wp1099595"> </a><p class="pFigure">
+Figure A-5.	View Types</p>
+<div align="left"><img src="images/appStatViewer-05.jpg" height="595" width="650" id="wp1099597" border="0" hspace="0" vspace="0"/></div><p class="pFigure">
+
+</p>
+<a name="wp1116943"> </a><p class="pFigure">
+Figure A-6.	View Types (continued)</p>
+<div align="left"><img src="images/appStatViewer-06.jpg" height="626" width="650" id="wp1116930" border="0" hspace="0" vspace="0"/></div><p class="pFigure">
+
+</p>
+<a name="wp1099699"> </a><p class="pFigure">
+Figure A-7.	View Type buttons on menubar </p>
+<div align="left"><img src="images/toolbar.jpg" height="144" width="429" id="wp1099907" border="0" hspace="0" vspace="0"/></div><p class="pFigure">
+
+</p>
+<a name="wp1099532"> </a><h2 class="pHeading1">
+Using the Scale Controls
+</h2>
+<a name="wp1099533"> </a><p class="pBody">
+On all the views except for the pie and the grid, you can increase or decrease the magnification of the scales and pan the scales up and down (y-axis) or left and right (x-axis) through the data. Changing the magnification of the scales increases or decreases the range of values shown on the scales. Panning enables you to move the scale over the entire range of data.
+</p>
+<a name="wp1102146"> </a><p class="pFigure">
+Figure A-8.	Scale controls</p>
+<div align="left"><img src="images/area_scale_controls.jpg" height="624" width="851" id="wp1102114" border="0" hspace="0" vspace="0"/></div><p class="pFigure">
+
+</p>
+<a name="wp1100382"> </a><p class="pBody">
+Magnifying the scales spreads the number of scale divisions over a wider area, making it easier to see small changes in data. Decreasing the scales shrinks the scale divisions into a smaller area, displaying the statistics in a smaller space, making it easier to view a large amount of data all at once, for a `big-picture&#39; view of the statistics. 
+</p>
+<a name="wp1100397"> </a><p class="pBody">
+For example, in the upper view in <a href="appStatViewer.html#wp1101338">Figure A-9</a>, the vertical scale spans the entire length of the tallest blue bar. In the lower view, the magnification of the scale has been reduced so that it only spans approximately one-quarter of the data. Note how much more space there is between the scale divisions. To view all the data using this magnified scale, you would click on the arrows to move (pan) the scale over the entire amount of statistical data.
+</p>
+<a name="wp1102172"> </a><p class="pBody">
+To increase the magnification of a scale, click the plus (<span style="font-weight: bold">+</span>) icon. To decrease the magnification of a scale, click the minus (<span style="font-weight: bold">-</span>) icon. 
+</p>
+<a name="wp1100383"> </a><p class="pBody">
+Panning is useful when the window is too small to display all the data on the scales and you do not want to reduce the scales. 
+</p>
+<a name="wp1102212"> </a><p class="pBody">
+To pan through the statistics, click one of the vertical arrows to move the scale through the data on the x-axis or one of the horizontal arrows to move the scale through the data on the y-axis.
+</p>
+<a name="wp1101338"> </a><p class="pFigure">
+Figure A-9.	Increasing scale magnification </p>
+<div align="left"><img src="images/appStatViewer-09.jpg" height="822" width="896" id="wp1101885" border="0" hspace="0" vspace="0"/></div><p class="pFigure">
+
+</p>
+<a name="wp1101299"> </a><h2 class="pHeading1">
+Mouse-over
+</h2>
+<a name="wp1100671"> </a><p class="pBody">
+When you move the cursor over any point of graphed data in a view, StatViewer highlights the line, bar, area, or slice (pie) beneath the cursor and displays a caption that identifies the source of the statistic and a numerical value. 
+</p>
+<a name="wp1100762"> </a><p class="pBody">
+On views that graph totals (number of users, number of pages, and so on), the caption indicates the total for that statistic.
+</p>
+<a name="wp1100771"> </a><p class="pBody">
+On views that graph rates (bytes per second, connections per user, and so on), the caption indicates the rate at the point on the graph underneath the cursor.
+</p>
+<a name="wp1100631"> </a><p class="pFigure">
+Figure A-10.	Caption showing highlighted statistic and value</p>
+<div align="left"><img src="images/main_window_runModeb.jpg" height="566" width="859" id="wp1100599" border="0" hspace="0" vspace="0"/></div><p class="pFigure">
+
+</p>
+<a name="wp1098551"> </a><h2 class="pHeading1">
+Dragging and Docking Views
+</h2>
+<a name="wp1101052"> </a><p class="pBody">
+<span style="font-style: italic">Dragging</span> and <span style="font-style: italic">docking </span>refer to moving (dragging) a view from StatViewer&#39;s main window or tabs and either establishing it in its own window or re-aligning it along one of the main window borders (docking). 
+</p>
+<a name="wp1101183"> </a><h2 class="pHeading2">
+Dragging a View to a Separate Window
+</h2>
+<a name="wp1101162"> </a><p class="pBody">
+To drag a view into a separate window, you can either:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp1101164"> </a><div class="pSmartList1"><li>place the cursor on the view tab, hold down the right mouse button, and drag the view away from the main window</li></div>
+<a name="wp1101172"> </a><div class="pSmartList1"><li>place the cursor anywhere in the view, then double-click the right mouse button</li></div>
+<a name="wp1101089"> </a><p class="pFigure">
+Figure A-11.	Dragging a view to a separate window <br />
+<img src="images/appStatViewer-11.jpg" height="779" width="1020" id="wp1109929" border="0" hspace="0" vspace="0"/><br />
+
+</p>
+</ul></div>
+<a name="wp1101191"> </a><h2 class="pHeading2">
+Returning a View to the Main Window
+</h2>
+<a name="wp1101192"> </a><p class="pBody">
+To return a view from a separate window to the main window, place the cursor in the view window&#39;s title bar, hold down the right mouse button, then drag the view into the StatViewer main window.
+</p>
+<a name="wp1101208"> </a><p class="pFigure">
+Figure A-12.	Returning a view to the main window </p>
+<div align="left"><img src="images/appStatViewer-12.jpg" height="779" width="1019" id="wp1112458" border="0" hspace="0" vspace="0"/></div><p class="pFigure">
+
+</p>
+<a name="wp1119461"> </a><h2 class="pHeading2">
+Docking a View Along the Left or Right Border
+</h2>
+<a name="wp1119462"> </a><p class="pBody">
+To dock a view along the left or right border of the main window:
+</p>
+<div class="pSmartList1"><ol type="1" class="pSmartList1">
+<a name="wp1119602"> </a><div class="pSmartList1"><li>Place the cursor on the view&#39;s title bar, hold down the right mouse button and drag the view towards the border you want to align the views along (<a href="appStatViewer.html#wp1110051">Figure A-13</a>).</li></div>
+<a name="wp1119440"> </a><div class="pSmartList1"><li>When the cursor is above the left or right border, the release the mouse button.</li></div>
+<a name="wp1119666"> </a><div class="pSmartList1"><li>To dock additional windows, drag them to the same border.</li></div>
+<a name="wp1119707"> </a><div class="pSmartList1"><li>To return a view to its original position, drag the title bar back to its original position (<a href="appStatViewer.html#wp1112578">Figure A-14</a>).</li></div>
+<a name="wp1110051"> </a><p class="pFigure">
+Figure A-13.	Docking a view along the right border <br />
+<img src="images/appStatViewer-13.jpg" height="1095" width="940" id="wp1110547" border="0" hspace="0" vspace="0"/><br />
+
+</p>
+<a name="wp1112578"> </a><p class="pFigure">
+Figure A-14.	View docked along the right border <br />
+<img src="images/dragging_side_3.jpg" height="681" width="957" id="wp1112565" border="0" hspace="0" vspace="0"/><br />
+
+</p>
+</ol></div>
+<a name="wp1119887"> </a><h2 class="pHeading2">
+Docking a View Along the Bottom Border
+</h2>
+<a name="wp1119901"> </a><p class="pBody">
+To dock a view along the bottom border:
+</p>
+<div class="pSmartList1"><ol type="1" class="pSmartList1">
+<a name="wp1119908"> </a><div class="pSmartList1"><li>Place the cursor on the view&#39;s title bar, hold down the right mouse button and drag the view towards the bottom of the main window (<a href="appStatViewer.html#wp1114102">Figure A-15</a>).</li></div>
+<a name="wp1119928"> </a><div class="pSmartList1"><li>When the cursor is above the bottom border, release the mouse button.</li></div>
+<a name="wp1119970"> </a><div class="pSmartList1"><li>To dock additional windows, drag them to the same border (<a href="appStatViewer.html#wp1114117">Figure A-16</a>).</li></div>
+<a name="wp1119988"> </a><div class="pSmartList1"><li>To return the view to its original position, drag the title bar back to its original position.</li></div>
+<a name="wp1114102"> </a><p class="pFigure">
+Figure A-15.	Docking a view along the right border <br />
+<img src="images/appStatViewer-15.jpg" height="1219" width="940" id="wp1114089" border="0" hspace="0" vspace="0"/><br />
+
+</p>
+<a name="wp1114117"> </a><p class="pFigure">
+Figure A-16.	View docked along the bottom border <br />
+<img src="images/dragging_bottom_3.jpg" height="573" width="904" id="wp1114104" border="0" hspace="0" vspace="0"/><br />
+
+</p>
+</ol></div>
+<a name="wp1114118"> </a><p class="pBody">
+
+</p>
+<a name="wp1121719"> </a><p class="pBody">
+
+</p>
+<a name="wp1121720"> </a><h2 class="pHeading1">
+Designing Views
+</h2>
+<a name="wp1121721"> </a><p class="pBody">
+StatViewer contains all the controls you need to create or edit views. When StatViewer is in Run mode (meaning that it is receiving statistics from an application and graphing them), you can edit some of the cosmetic properties of views, such as line styles, colors, and other similar properties. The application sending statistics to StatViewer automatically places it into Run mode before it begins sending statistics. When it is finished sending statistics, it switches StatViewer back into Design mode.
+</p>
+<a name="wp1114534"> </a><p class="pBody">
+When StatViewer is in Design mode, you can change all the properties of existing views you have created (and their statistics) and add new views. To add or modify views, you use StatViewer&#39;s design controls. The design controls display in two additional panes to the left of the main window (<a href="appStatViewer.html#wp1102412">Figure A-17</a>). The Views pane lists the views defined, and the statistics defined for them. The Properties pane lists the properties of the selected view or statistic.
+</p>
+<a name="wp1102627"> </a><p class="pBody">
+Every applications that uses StatViewer defines its own set of pre-configured views and statistics. You cannot change the properties of the pre-configured views or their statistics, or add or remove statistics from them. If <span style="font-weight: bold">Locked by app</span> displays at the top of the Properties pane, that indicates that you cannot change the view&#39;s or statistic&#39;s properties, other than to make it active (graphing incoming statistics) or inactive. The View Enabled property controls whether a view is active or inactive.
+</p>
+<a name="wp1102614"> </a><p class="pBody">
+For views you create and the statistics you add to them, you can set all the available properties, such as background color, line style, title, and so on.
+</p>
+<a name="wp1120570"> </a><p class="pBody">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1120590"> </a><div class="pCellBody">
+<span style="font-weight: bold">Note:</span> Because StatViewer saves its data in an application&#39;s repository, make sure that the application is running when you add or modify views for it. If you close an application and then add or modify views in StatViewer, your changes will not be saved.
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</p>
+<a name="wp1120585"> </a><p class="pBody">
+
+</p>
+<a name="wp1102412"> </a><p class="pFigure">
+Figure A-17.	StatViewer Design Controls </p>
+<div align="left"><img src="images/design_mode.jpg" height="628" width="1019" id="wp1102410" border="0" hspace="0" vspace="0"/></div><p class="pFigure">
+
+</p>
+<a name="wp1102360"> </a><h2 class="pHeading2">
+Displaying the Design Controls
+</h2>
+<a name="wp1121740"> </a><p class="pBody">
+The design controls are the controls that you use to create or edit views and their statistics. To display the design controls, choose View | Design from the menubar.
+</p>
+<a name="wp1121741"> </a><h2 class="pHeading2">
+Adding a View
+</h2>
+<a name="wp1121742"> </a><p class="pBody">
+If you want to create a graph that shows a specific set of statistics, add a view. When you add a view, you:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp1102682"> </a><div class="pSmartList1"><li>Set the properties of the view, such as background color, title, and so on. </li></div>
+<a name="wp1102683"> </a><div class="pSmartList1"><li>Select the statistics that the view will display.</li></div>
+</ul></div>
+<a name="wp1102684"> </a><p class="pBody">
+To add a view:
+</p>
+<div class="pSmartList1"><ol type="1" class="pSmartList1">
+<a name="wp1102685"> </a><div class="pSmartList1"><li>If the design controls are not already displayed, choose View | Design from the menubar.</li></div>
+<a name="wp1103694"> </a><div class="pSmartList1"><li>In the title bar, click the Add View button. </li></div>
+<a name="wp1103742"> </a><p class="pFigure">
+Figure A-18.	Add View button <br />
+<img src="images/toolbara.jpg" height="112" width="429" id="wp1103720" border="0" hspace="0" vspace="0"/><br />
+
+</p>
+</ol></div>
+<a name="wp1102686"> </a><p class="pBody">
+StatViewer adds a new view to the bottom of the View tree with a default set of properties. The graph shows how it will appear using the default properties.
+</p>
+<div class="pSmartList1"><ol type="1" class="pSmartList1">
+<a name="wp1104404"> </a><div class="pSmartList1"><li>Configure the view&#39;s properties. <a href="appStatViewer.html#wp1115722">Table A-1</a> describes the parameters.</li></div>
+<a name="wp1104405"> </a><div class="pSmartList1"><li>Once you have configured the view&#39;s properties, add statistics to it. See <a href="appStatViewer.html#wp1104419"><span style="font-style: italic">Adding a Statistic</span> on page A-24</a>.</li></div>
+<a name="wp1103759"> </a><p class="pFigure">
+Figure A-19.	New View Added<br />
+<img src="images/view_added.jpg" id="wp1103757" border="0" hspace="0" vspace="3"/><br />
+
+</p>
+</ol></div>
+<a name="wp1103885"> </a><p class="pBody">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#C80000" bordercolordark="#FFFFFF">
+
+  <caption><a name="wp1115722"> </a><div class="pTableTitle">
+Table A-1.	View Properties
+</div>
+</caption>
+  <tr bgcolor="#FFFFFF">
+      <th style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000;">
+               <a name="wp1115728"> </a><div class="pCellHeading">
+Property
+</div>
+</th>
+    <th style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000;">
+               <a name="wp1115730"> </a><div class="pCellHeading">
+Description
+</div>
+</th>
+    <th style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000;">
+               <a name="wp1115732"> </a><div class="pCellHeading">
+Editable Modes
+</div>
+</th>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115734"> </a><div class="pCellHeading">
+View properties
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115736"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115738"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115740"> </a><div class="pCellBody">
+Caption
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115742"> </a><div class="pCellBody">
+Title of the view. The title displays above the graph and on the view&#39;s tab.
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115745"> </a><div class="pCellBody">
+Design
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115747"> </a><div class="pCellBody">
+Enabled
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115749"> </a><div class="pCellBody">
+Determines whether the view is displayed or hidden. Use this option to hide views that you do not currently want to see, but do not want to delete.
+</div>
+<a name="wp1115750"> </a><div class="pCellBody">
+<span style="font-weight: bold">True</span> means that StatViewer will display this view.
+</div>
+<a name="wp1115751"> </a><div class="pCellBody">
+<span style="font-weight: bold">False</span> means that StatViewer will not display this view.
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115754"> </a><div class="pCellBody">
+Design
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115756"> </a><div class="pCellBody">
+View Type
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115758"> </a><div class="pCellBody">
+Default type of view used to display data.
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115761"> </a><div class="pCellBody">
+Design, Run
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000;"
+               colspan="2" 
+               rowspan="1">
+               <a name="wp1115763"> </a><div class="pCellHeading">
+Appearance properties
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115767"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115769"> </a><div class="pCellBody">
+Background color
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115771"> </a><div class="pCellBody">
+Color used for background of graph. Select a color from the drop-down list.
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115774"> </a><div class="pCellBody">
+Design, Run
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115776"> </a><div class="pCellBody">
+Font color
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115778"> </a><div class="pCellBody">
+Color used for foreground elements of graph such as the title, scales, scale divisions, and legend text. Select a color from the drop-down list.
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115781"> </a><div class="pCellBody">
+Design, Run
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115783"> </a><div class="pCellBody">
+Gray Scale
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115785"> </a><div class="pCellBody">
+Displays foreground, background, and graph data in shades of gray.
+</div>
+<a name="wp1115786"> </a><div class="pCellBody">
+<span style="font-weight: bold">True</span> means that StatViewer displays this view in grayscale.
+</div>
+<a name="wp1115787"> </a><div class="pCellBody">
+<span style="font-weight: bold">False</span> means that StatViewer displays this view full color.
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115790"> </a><div class="pCellBody">
+Design, Run
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115792"> </a><div class="pCellBody">
+Line Style
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115794"> </a><div class="pCellBody">
+Determines type of line used to draw the lines showing the scale divisions on graphs. Select a line style from the drop-down list.
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115797"> </a><div class="pCellBody">
+Design, Run
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115799"> </a><div class="pCellBody">
+Show Grid Lines
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115801"> </a><div class="pCellBody">
+Enables or disables display of the scale division lines on graphs.
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115804"> </a><div class="pCellBody">
+Design, Run
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115806"> </a><div class="pCellBody">
+Show Title
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115808"> </a><div class="pCellBody">
+Enables or disables display of the title on graphs.
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115811"> </a><div class="pCellBody">
+Design, Run
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115819"> </a><div class="pCellHeading">
+Data properties
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115821"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115823"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115825"> </a><div class="pCellBody">
+Frequency
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115827"> </a><div class="pCellBody">
+Interval, in seconds, at which the view is updated with new statistics. You can specify intervals from 1 to 60 seconds.
+</div>
+<a name="wp1121153"> </a><div class="pCellBody">
+Choose a value for this parameter according to the degree of resolution you want to achieve; to acheive a high degree of resolution, choose a shorter interval. To acheive a lower resolution, choose a longer interval.
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115829"> </a><div class="pCellBody">
+Design
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115831"> </a><div class="pCellBody">
+Time Samples
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115833"> </a><div class="pCellBody">
+Number of data points shown on each view. You can specify between 1 and 1000 samples.
+</div>
+<a name="wp1121135"> </a><div class="pCellBody">
+Increasing the number of time samples increases the amount of RAM required by StatViewer. 
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115835"> </a><div class="pCellBody">
+Design
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115837"> </a><div class="pCellHeading">
+Legend properties
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115839"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115841"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115843"> </a><div class="pCellBody">
+Legend Enabled
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115845"> </a><div class="pCellBody">
+Determines whether the graph legend is displayed or hidden. 
+</div>
+<a name="wp1115846"> </a><div class="pCellBody">
+<span style="font-weight: bold">True</span> means that the legend displays.
+</div>
+<a name="wp1115847"> </a><div class="pCellBody">
+<span style="font-weight: bold">False</span> means that the legend does not display.
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115849"> </a><div class="pCellBody">
+Design, Run
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115851"> </a><div class="pCellBody">
+Legend Position
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115853"> </a><div class="pCellBody">
+Location where the graph legend displays.
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115855"> </a><div class="pCellBody">
+Design, Run
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115857"> </a><div class="pCellBody">
+Legend Span Percent
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115859"> </a><div class="pCellBody">
+Amount of the view window&#39;s area occupied by the legend. 
+</div>
+<a name="wp1115860"> </a><div class="pCellBody">
+For example, if the legend displays to the left or right of the graph and you set this property to 10, the legend occupies 10 percent of the horizontal space on the window. 
+</div>
+<a name="wp1115861"> </a><div class="pCellBody">
+If the legend displays above or below the graph and you set this property to 10, the legend occupies 10 percent of the vertical space on the window. 
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115863"> </a><div class="pCellBody">
+Design, Run
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115865"> </a><div class="pCellHeading">
+YAxis
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115867"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115869"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115871"> </a><div class="pCellBody">
+yAxisExtent
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115873"> </a><div class="pCellBody">
+Height of the y-axis, expressed as a percentage of the length of the x-axis.
+</div>
+<a name="wp1115874"> </a><div class="pCellBody">
+For example, if you set this property to 50, StatViewer sets the height of the y-axis to 50% of the length of the x-axis.
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1115876"> </a><div class="pCellBody">
+Design, Run
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</p>
+<a name="wp1102656"> </a><h2 class="pHeading2">
+Editing a View
+</h2>
+<a name="wp1102430"> </a><p class="pBody">
+When you edit a view, you can:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp1102469"> </a><div class="pSmartList1"><li>Change some (Run mode) or all (Design mode) of the properties of the existing statistics defined for the view.</li></div>
+<a name="wp1102470"> </a><div class="pSmartList1"><li>Add additional statistics to the view (Design mode only).</li></div>
+</ul></div>
+<a name="wp1104251"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1104259"> </a><div class="pCellBody">
+<span style="font-weight: bold">Note</span>: You cannot change the properties an application&#39;s views or add or remove statistic from them. If <span style="font-weight: bold">Locked by app</span> displays at the top of the Properties pane, that indicates that you cannot change the view&#39;s properties, other than to enable or disable its display.
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<a name="wp1102468"> </a><p class="pBody">
+To edit a view:
+</p>
+<div class="pSmartList1"><ol type="1" class="pSmartList1">
+<a name="wp1116085"> </a><div class="pSmartList1"><li>If the design controls are not already displayed, choose View | Design from the menubar.</li></div>
+<a name="wp1102475"> </a><div class="pSmartList1"><li>In the Views tree, select the view you want to edit.</li></div>
+<a name="wp1102510"> </a><p class="pBodyRelative">
+In the Properties pane, StatViewer displays the properties for the view (<a href="appStatViewer.html#wp1102511">Figure A-20</a>).
+</p>
+<a name="wp1104294"> </a><div class="pSmartList1"><li>Configure the view&#39;s properties. <a href="appStatViewer.html#wp1115722">Table A-1</a> describes the parameters.</li></div>
+<a name="wp1102511"> </a><p class="pFigure">
+Figure A-20.	View selected in Properties pane <br />
+<img src="images/properties.jpg" id="wp1102520" border="0" hspace="0" vspace="3"/><br />
+
+</p>
+</ol></div>
+<a name="wp1098542"> </a><h2 class="pHeading2">
+Deleting a view
+</h2>
+<div class="pSmartList1"><ol type="1" class="pSmartList1">
+<a name="wp1116095"> </a><div class="pSmartList1"><li>If the design controls are not already displayed, choose View | Design from the menubar.</li></div>
+<a name="wp1104344"> </a><div class="pSmartList1"><li>Select the view you want to delete.</li></div>
+<a name="wp1104325"> </a><div class="pSmartList1"><li>In the title bar, click the Delete View button. </li></div>
+<a name="wp1104334"> </a><p class="pFigure">
+Figure A-21.	Delete View button <br />
+<img src="images/toolbarb.jpg" height="112" width="429" id="wp1104327" border="0" hspace="0" vspace="0"/><br />
+
+</p>
+</ol></div>
+<a name="wp1104419"> </a><h2 class="pHeading2">
+Adding a Statistic
+</h2>
+<a name="wp1104420"> </a><p class="pBody">
+After you have added a new view, you must add statistics to it. You can also add new statistics to existing views.
+</p>
+<a name="wp1104474"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1104473"> </a><div class="pCellBody">
+<span style="font-weight: bold">Note</span>: You cannot add or change the statistics on the pre-defined views installed with applications. If <span style="font-weight: bold">Locked by app</span> displays at the top of the Properties pane, that indicates that you cannot change the statistics defined in that view.
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<a name="wp1104423"> </a><p class="pBody">
+To add a statistic:
+</p>
+<div class="pSmartList1"><ol type="1" class="pSmartList1">
+<a name="wp1116101"> </a><div class="pSmartList1"><li>If the design controls are not already displayed, choose View | Design from the menubar.</li></div>
+<a name="wp1104496"> </a><div class="pSmartList1"><li>Select the view you want to add the statistic to.</li></div>
+<a name="wp1104425"> </a><div class="pSmartList1"><li>In the title bar, click the Add Statistic button. </li></div>
+<a name="wp1104434"> </a><p class="pFigure">
+Figure A-22.	Add Statistic button <br />
+<img src="images/toolbarc.jpg" height="112" width="429" id="wp1104427" border="0" hspace="0" vspace="0"/><br />
+
+</p>
+<a name="wp1104435"> </a><p class="pBodyRelative">
+StatViewer adds a new statistic to the View with default properties. 
+</p>
+<a name="wp1104439"> </a><div class="pSmartList1"><li>Configure the statistic&#39;s properties. <a href="appStatViewer.html#wp1115722">Table A-1</a> describes the parameters.</li></div>
+<a name="wp1104639"> </a><p class="pFigure">
+Figure A-23.	Statistic added to view <br />
+<img src="images/statistic_added.jpg" id="wp1104637" border="0" hspace="0" vspace="3"/><br />
+
+</p>
+</ol></div>
+<a name="wp1104617"> </a><p class="pBody">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#C80000" bordercolordark="#FFFFFF">
+
+  <caption><a name="wp1104515"> </a><div class="pTableTitle">
+Table A-2.	Statistic Properties
+</div>
+</caption>
+  <tr bgcolor="#FFFFFF">
+      <th style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000;">
+               <a name="wp1104519"> </a><div class="pCellHeading">
+Property
+</div>
+</th>
+    <th style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000;">
+               <a name="wp1104521"> </a><div class="pCellHeading">
+Description
+</div>
+</th>
+    <th style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000;">
+               <a name="wp1116160"> </a><div class="pCellHeading">
+Editable Modes
+</div>
+</th>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1104523"> </a><div class="pCellHeading">
+Statistic properties
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1104525"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1116162"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1104527"> </a><div class="pCellBody">
+Caption
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1104529"> </a><div class="pCellBody">
+Text identifying the statistic in the graph legend.
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1116164"> </a><div class="pCellBody">
+Design, Run
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1104531"> </a><div class="pCellBody">
+Stat Source Type
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1104535"> </a><div class="pCellBody">
+Source of the statistic. The sources you can select from are defined by the application that generates the statistics.
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1116166"> </a><div class="pCellBody">
+Design
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1104537"> </a><div class="pCellBody">
+Stat Name
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1104539"> </a><div class="pCellBody">
+Name of the statistic, as it is defined in the source application. 
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1116168"> </a><div class="pCellBody">
+Design
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1104563"> </a><div class="pCellBody">
+Stat Filters
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1104565"> </a><div class="pCellBody">
+Filter applied to the statistic. 
+</div>
+<a name="wp1104720"> </a><div class="pCellBody">
+The source application may define one or more filters you can select from. If you select a filter, only the values for the statistic that pass through that filter are displayed.
+</div>
+<a name="wp1104715"> </a><div class="pCellBody">
+For example, if you are configuring a statistic for packets transmitted and the source application allows you to filter for a particular port, such as port 1.1.1, the graph will only display the packets transmitted from port 1.1.1. 
+</div>
+<a name="wp1104762"> </a><div class="pCellBody">
+To select a filter: 
+</div>
+<div class="pSmartList1"><ol type="1" class="pSmartList1">
+<a name="wp1104771"> </a><div class="pSmartList1"><li>Click the button in the Stat Filters field. </li></div>
+<a name="wp1104773"> </a><p class="pBodyRelative">
+StatViewer displays the Filter List window (<a href="appStatViewer.html#wp1104417">Figure A-24</a>).
+</p>
+<a name="wp1104772"> </a><div class="pSmartList1"><li>Select a filter in the Available pane, then click the &gt;&gt; button to move it to the Selected pane.</li></div>
+<a name="wp1104800"> </a><div class="pSmartList1"><li>To remove a filter, select it in the Selected pane, then click the &lt;&lt; button to move it back to the Available pane.</li></div>
+<a name="wp1104785"> </a><div class="pSmartList1"><li>Click OK when you have finished selecting filters.</li></div>
+</ol></div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1116170"> </a><div class="pCellBody">
+Design
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000;"
+               colspan="2" 
+               rowspan="1">
+               <a name="wp1104567"> </a><div class="pCellHeading">
+Appearance properties
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1116172"> </a><div class="pCellBody">
+&#160;
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1104581"> </a><div class="pCellBody">
+Color
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1104583"> </a><div class="pCellBody">
+Color used to display statistic on graphs. Select a color from the list.
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1116174"> </a><div class="pCellBody">
+Design, Run
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000;"
+               colspan="2" 
+               rowspan="1">
+               <a name="wp1104585"> </a><div class="pCellHeading">
+Data properties
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1116176"> </a><div class="pCellHeading">
+&#160;
+</div>
+</td>
+  </tr>
+  <tr>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1104613"> </a><div class="pCellBody">
+Aggregation
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1104616"> </a><div class="pCellBody">
+Mathematical operation applied to the source data before displaying the statistic. You can select from the following operations:
+</div>
+<a name="wp1104826"> </a><div class="pCellBody">
+<span style="font-weight: bold">Sum</span> continually adds new data to the previous data to create a running total.
+</div>
+<a name="wp1104827"> </a><div class="pCellBody">
+<span style="font-weight: bold">Max</span> seeks out the largest value in the data to find the maximum value.
+</div>
+<a name="wp1104828"> </a><div class="pCellBody">
+<span style="font-weight: bold">Min</span> seeks out the smallest value in the data to find the minimum value.
+</div>
+<a name="wp1104829"> </a><div class="pCellBody">
+<span style="font-weight: bold">Average</span> finds the mean average in the data.
+</div>
+<a name="wp1104830"> </a><div class="pCellBody">
+<span style="font-weight: bold">Rate</span> compares the data with another quantity such as time and plots the result.
+</div>
+<a name="wp1104831"> </a><div class="pCellBody">
+<span style="font-weight: bold">MaxRate</span> compares the data with another quality and searches it to plot the largest value.
+</div>
+<a name="wp1104832"> </a><div class="pCellBody">
+<span style="font-weight: bold">MinRate</span> compares the data with another quality and searches it to plot the smallest value.
+</div>
+<a name="wp1104833"> </a><div class="pCellBody">
+<span style="font-weight: bold">AverageRate</span> compares the data with another quality and plots the mean average.
+</div>
+</td>
+    <td style="border-left: 0 solid #C80000; 
+               border-right: 1 solid #C80000 ; 
+               border-top: 0;
+               border-bottom: 1 solid #C80000">
+               <a name="wp1116178"> </a><div class="pCellBody">
+Design
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</p>
+<a name="wp1104417"> </a><p class="pFigure">
+Figure A-24.	Filter List window</p>
+<div align="left"><img src="images/filter_list.jpg" id="wp1104745" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<a name="wp1098539"> </a><h2 class="pHeading1">
+Event Log
+</h2>
+<a name="wp1104977"> </a><p class="pBody">
+The event log (<a href="appStatViewer.html#wp1104971">Figure A-25</a>) displays messages related to StatViewer&#39;s operation. The event log can be a useful diagnostic tool in the event you encounter a problem using StatViewer.
+</p>
+<a name="wp1105123"> </a><p class="pBody">
+To display the event log, select Tools | Event Log from the menubar.
+</p>
+<a name="wp1104999"> </a><h2 class="pHeading2">
+Setting the Logging Level
+</h2>
+<a name="wp1105000"> </a><p class="pBody">
+You can set the severity of messages that the event log stores. Each logging level also records the more-severe messages from the levels beneath it. The levels are:
+</p>
+<a name="wp1105027"> </a><p class="pBodyRelative">
+None disables event logging; no messages will be stored in the event log.
+</p>
+<a name="wp1105040"> </a><p class="pBodyRelative">
+Errors records events that may cause data to be lost, corrupted, or not retrieved. This setting will normally record the smallest number of messages.
+</p>
+<a name="wp1105041"> </a><p class="pBodyRelative">
+Warnings records events that may impair StatViewer&#39;s operation but not affect the statistics it displays. This setting also records Errors.
+</p>
+<a name="wp1105075"> </a><p class="pBodyRelative">
+Information records normal events that occur during StatViewer operation. This setting also records Errors and Warnings.
+</p>
+<a name="wp1105073"> </a><h2 class="pHeading2">
+Exporting the Event Log
+</h2>
+<a name="wp1105138"> </a><p class="pBody">
+You can export the contents of the event log as either text or comma-separated values (CSV). To export the log file, click the Export button, then select a file name and format.
+</p>
+<a name="wp1104971"> </a><p class="pFigure">
+Figure A-25.	Event Log </p>
+<div align="left"><img src="images/event_log.jpg" id="wp1104985" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<a name="wp1105146"> </a><h2 class="pHeading2">
+Clearing the Event Log
+</h2>
+<a name="wp1105147"> </a><p class="pBody">
+To purge the messages currently stored in the event log, click the Clear button.
+</p>
+<a name="wp1105169"> </a><h2 class="pHeading2">
+Refreshing the Event Log
+</h2>
+<a name="wp1105170"> </a><p class="pBody">
+When you open the event log, it displays the messages it contains at the time you open it. While you are viewing the event log, new messages may be added to the event log file; these new messages are not displayed in the event log window. To see any new messages that have arrived after you opened the event log, click the Refresh button.
+</p>
+<a name="wp1116446"> </a><h2 class="pHeading2">
+Setting the Event Log Properties
+</h2>
+<a name="wp1116447"> </a><p class="pBody">
+StatViewer&#39;s event log runs as a Windows event viewer. To configure its properties such as its maximum size and how often it overwrites its oldest messages, you use the same procedures as for the standard Windows event viewers. 
+</p>
+<a name="wp1116461"> </a><p class="pBody">
+To configure the event log&#39;s properties:
+</p>
+<div class="pSmartList1"><ol type="1" class="pSmartList1">
+<a name="wp1116491"> </a><div class="pSmartList1"><li>Open Windows&#39; Control Panel, then double-click Administrative Tools to open it.</li></div>
+<a name="wp1116502"> </a><div class="pSmartList1"><li>Double-click the Event Viewer, to open it.</li></div>
+<a name="wp1116558"> </a><p class="pBodyRelative">
+StatViewer displays in the list of event viewers.
+</p>
+<a name="wp1116601"> </a><p class="pFigure">
+Figure A-26.	StatViewer in list of Windows Event Viewers<br />
+<img src="images/eventViewers.jpg" id="wp1116603" border="0" hspace="0" vspace="3"/><br />
+
+</p>
+<a name="wp1116568"> </a><div class="pSmartList1"><li>Select StatViewer, then right-click and select Properties.</li></div>
+<a name="wp1116610"> </a><p class="pBodyRelative">
+Windows displays the list of properties available for StatViewer&#39;s event log.
+</p>
+<a name="wp1116611"> </a><div class="pSmartList1"><li>Configure the StatViewer event log&#39;s properties.</li></div>
+<a name="wp1116621"> </a><p class="pFigure">
+Figure A-27.	StatViewer event log properties<br />
+<img src="images/event_log_properties.jpg" id="wp1116619" border="0" hspace="0" vspace="3"/><br />
+
+</p>
+</ol></div>
+<a name="wp1096155"> </a><p class="pBody">
+
+</p>
+</blockquote>
+
+<hr color="#C80000">
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top" width="190">
+      <p align="left">
+<a accesskey="2" href="IX.html"><img id="LongDescNotReq2" src="images/index.gif" border="0" alt="Index" /></a>
+    </td>
+    <td valign="top" width="516" align="center">Did this document&nbsp;<br>
+ answer your question?
+      <p align="center"><A HREF="mailto:TechPubs@Ixiacom.com%20?subject=Question%20on%20,%20,%20appStatViewer%20section"><img border="0" src="images/email.gif" width="55" height="40"></a>
+      <p>If not, let us know!</p>
+    </td>
+    <td valign="top" width="132" align="center">
+      <p align="right">
+    <span style="font-size: 10px">
+    <a href="http://www.ixiacom.com">
+    <img src="images/ixialogo.gif" width="128" height="38" border="0"></a><br>
+    Voice: (818) 871-1800<br>
+    Fax: (818) 871-1805<br>
+    <a href="mailto:info@ixiacom.com">info@ixiacom.com</a>
+    </span>
+    </td>
+  </tr>
+</table>
+</html>

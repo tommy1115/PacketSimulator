@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="SonetATMBasePlugin" baseType="HardwarePlugin">
+	<PropertyString>
+        <name>interfaceType</name>
+        <description>Values can be kOC3, kOC12, KSTM1, kSTM4 </description>
+        <default>kOC12</default>
+        <choices>
+        	<choice value="kOC3" name="OC3" />
+        	<choice value="kOC12" name="OC12" />
+        	<choice value="kOC48" name="OC48" />
+        	<choice value="kOC192" name="OC192" />
+        	<choice value="kSTM1" name="STM1" />
+        	<choice value="kSTM4" name="STM4" />
+        	<choice value="kSTM16" name="STM16" />
+        	<choice value="kSTM64" name="STM64" />
+        </choices>
+    </PropertyString>
+    <PropertyInt>
+		<name>c2Transmit</name>
+		<default>19</default>
+		<min>0</min>
+        <max>255</max>
+        <description>Value of Path signal label(C2 byte) to transmit.</description>
+    </PropertyInt>  
+    <PropertyInt>
+		<name>c2Expected</name>
+		<default>19</default>
+		<min>0</min>
+        <max>255</max>
+        <description>Value of Path signal label(C2 byte) expected.</description>
+    </PropertyInt>   
+    <PropertyString>
+		<name>transmitClocking</name>
+		<description>values are "internal" or "recovered" or "external"</description>
+		<default>internal</default>
+        <choices>
+        	<choice value="internal" name="Internal" />
+        	<choice value="recovered" name="Recovered" />
+        	<choice value="external"  name="External" />
+        </choices>
+    </PropertyString>
+    <PropertyString>
+		<name>crc</name>
+		<description>Values are crc16, crc32</description>
+		<default>crc16</default>
+        <choices>
+        	<choice value="kcrc16" name="CRC-16" />
+        	<choice value="kcrc32" name="CRC-32" />
+        </choices>
+    </PropertyString>
+    <PropertyBoolean>
+		<name>dataScrambling</name>
+		<description>Enable data scrambling. </description>
+		<default>false</default>		
+    </PropertyBoolean>
+</Node>

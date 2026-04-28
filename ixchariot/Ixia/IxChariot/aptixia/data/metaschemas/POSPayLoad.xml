@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="POSPayLoad" baseType="DataDrivenFormBase">
+<description>Parent class for subtype POS Payload plugins of the various hardware plugins</description>
+<help>This plugin exists as a polymorphic node in POS plugin.</help>
+</Node>

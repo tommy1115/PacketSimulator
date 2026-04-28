@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="TrafficShape" baseType="XProtocolObject">
+	<PropertyInt>
+		<name>standbyDuration</name>
+		<description>The duration to wait prior to run the activity relative to start of test (in seconds)</description>
+		<minValue>0</minValue>
+		<maxValue>3600000</maxValue>
+		<default>0</default>
+	</PropertyInt>
+
+	<PropertyInt>
+		<name>sustainDuration</name>
+		<description>The duration to run traffic (seconds)</description>
+		<minValue>10</minValue>
+		<maxValue>3600000</maxValue>
+		<default>20</default>
+	</PropertyInt>
+	
+	<PropertyInt>
+		<name>offlineDuration</name>
+		<description>The duration to stay offline prior to next iteration (in seconds)</description>
+		<minValue>0</minValue>
+		<maxValue>3600000</maxValue>
+		<default>0</default>
+	</PropertyInt>
+	
+</Node> 

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="POSPlugin" baseType="SonetATMBasePlugin">
+    <description>Plugin to set values of POS specific paramters.</description>
+	<PropertyString>
+	<name>eui</name>
+	<default>00:01:02:03:00:00:00:00</default>
+	<description>64 bit Base value of EUI for IPv6 addresses. Used to creat link local address.
+	             RFC 2373 Appendix A has more information.</description>
+	</PropertyString>
+	<PropertyString>
+		<name>incrementBy</name>
+		<default>00:00:00:00:00:00:00:01</default>
+		<description>64 bit Increment used to add upto the base value to get EUI for a given IP address.
+		             The nth IP address wil have baseEUI + n*incrementBy as value.</description>
+	</PropertyString>
+	<PropertyString>
+        <name>payLoadType</name>
+        <default>kCISCOHDLC</default>       
+        <choices>
+			<choice value="kPPP" name="PPP" />
+			<choice value="kCISCOHDLC" name="Cisco HDLC" />
+			<choice value="kFrameRelay" name="Frame Relay(RFC 2427)" />
+			<choice value="kCiscoFrameRelay" name="Cisco Frame Relay" />
+			<choice value="kOther" name="Other" />
+        </choices>
+        <description>The type of payload to use. PPP payload needs additional paramters to configure.</description>
+    </PropertyString>  
+    <PropertyString>
+		<name>address</name>
+		<default>FF</default>
+		<description>Address(hexadecimal) for the payLoad. Used only when payload type is "kOther".</description>
+    </PropertyString>   
+    <PropertyString>
+		<name>control</name>
+		<default>03</default>
+		<description>Control(hexadecimal) for the payLoad. Used only when payload type is "kOther".</description>
+    </PropertyString>   
+    <PropertyNode nodeType="POSPayLoad" polymorphic="1">
+		<name>payLoad</name>
+		<default>null</default>
+		<description>The node to be used for PayLoad. Value is null for all except PPP.
+		PPP will use PPPPayLoad.</description>
+    </PropertyNode> 
+</Node>

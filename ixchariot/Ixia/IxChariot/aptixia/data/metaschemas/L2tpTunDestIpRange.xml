@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="L2tpTunDestIpRange" baseType="">
+    
+    <PropertyBoolean>
+        <name>enabled</name>
+        <default>true</default>
+        <help>
+        If this value is false, the range is not included in the
+        configuration
+        </help>
+    </PropertyBoolean>
+
+    <PropertyNode nodeType="IpV4V6Range" polymorphic="1">
+        <name>sourceIpRange</name>
+        <default></default>
+        <help>
+        Source ip address range in the underlying ip plugin to use
+        for source address allocation when creating a L2TP tunnel
+        </help>
+    </PropertyNode>
+
+    <PropertyString>
+        <name>baseTunDestIp</name>
+        <default>10.10.10.2</default>
+        <help>
+        Defines the base address to be used L2TP tunnel destination
+        in the range
+        </help>
+    </PropertyString>
+
+    <PropertyString>
+        <name>incrementBy</name>
+        <default>0.0.0.1</default>
+        <help>
+        Defines the increment to be used for enumerating all the addresses
+        in the range.
+        </help>
+    </PropertyString>
+
+</Node>

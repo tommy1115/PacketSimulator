@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="TrafficShapeServer" baseType="XProtocolObject">
+	<PropertyInt>
+		<name>matchMode</name>
+		<description>Either kMatchNone or kMatchLongestClient</description>
+		<minValue>0</minValue>
+		<maxValue>1</maxValue>
+		<default>1</default>
+	</PropertyInt>
+
+</Node> 

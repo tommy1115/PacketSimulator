@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GUIDescription>
+  <Form size="601,421">
+    <Control editor="aptixia.sm.DDSubFormHardware" location="8,122" size="348,172" tabIndex="12" />
+    <Control enable="!autoNegotiate" editor="aptixia.sm.DDLabel" location="28,67" size="39,15" tabIndex="10" text="Speed" />
+    <Control ref="speed" enable="!autoNegotiate" editor="aptixia.sm.DDComboBox" location="112,63" size="134,20" tabIndex="9" dropdownstyle="DisableTextEditor" />
+    <Control ref="autoNegotiate" editor="aptixia.sm.DDCheckBox" location="28,36" size="104,18" tabIndex="8" text="Auto Negotiate" />
+    <Control editor="aptixia.sm.DDGroupBox" location="8,13" size="347,101" tabIndex="7" text="Layer 1" />
+  </Form>
+</GUIDescription>

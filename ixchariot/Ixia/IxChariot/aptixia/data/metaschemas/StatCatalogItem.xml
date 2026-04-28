@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="StatCatalogItem" baseType="">
+    <help>Item in the StatCatalog</help>  
+    <PropertyString>
+        <name>statSourceType</name>
+        <displayName>StatSourceType</displayName>                                                                          
+        <minLength>0</minLength>
+        <maxLength>50</maxLength>
+        <default></default>
+        <description>stat source type</description>
+        <help>The stat source type describes a set of stats with a common source</help>
+    </PropertyString>
+    <PropertyInt>
+        <name>id</name>
+        <displayName>ID</displayName>                                                                  
+        <default>0</default>
+        <help>A unique ID for any CatalogItem that has been defined. Currently only used by IxOS stats</help>
+    </PropertyInt>
+    <PropertyString>
+        <name>statPublisher</name>
+        <displayName>StatPublisher</displayName>                                                                          
+        <minLength>0</minLength>
+        <maxLength>50</maxLength>
+        <default></default>
+        <description>The name of StatPublisher</description>
+        <help>If an application is publishing stats into catalog remotely, it should put a unique name on all the StatCatalogItems that are created by this application</help>
+    </PropertyString>
+    <PropertyNodeList nodeType="StatCatalogStat">
+        <name>statList</name>
+        <displayName>StatList</displayName>                                                          
+        <help>List of the properties of the stats available from the stat source</help>
+    </PropertyNodeList>
+    <PropertyNodeList nodeType="StatFilter">
+        <name>statFilterList</name>
+        <displayName>StatFilterList</displayName>                                                  
+        <help>List of the filters available from the stat source</help>
+    </PropertyNodeList>
+    <PropertyString>
+        <name>description</name>
+        <displayName>Description</displayName>                                                  
+        <default>SourceType</default>
+        <help>Description of the StatCatalogItem</help>
+    </PropertyString>
+</Node>

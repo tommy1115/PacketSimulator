@@ -1,0 +1,2226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<element type="aptixia.sm.DataDrivenForm" uuid="d57542d5-ca96-4a50-bbab-7f01867c22ab">
+    <ProxyWrapper type="aptixia.sm.CachingProxyWrapper" uuid="9aea287f-71ed-4586-b0d9-984db5122b7a" />
+    <ControlName type="System.String">DataDrivenForm1</ControlName>
+    <AutoScroll type="System.Boolean">true</AutoScroll>
+    <AutoScrollMinSize type="System.Drawing.Size">
+        <Width type="System.Int32">450</Width>
+        <Height type="System.Int32">400</Height>
+    </AutoScrollMinSize>
+    <AllowDrop type="System.Boolean">true</AllowDrop>
+    <Dock type="System.Windows.Forms.DockStyle">5</Dock>
+    <Font type="System.Drawing.Font" size="8.25" style="0">Tahoma</Font>
+    <Name type="System.String">DataDrivenForm1</Name>
+    <Size type="System.Drawing.Size">
+        <Width type="System.Int32">576</Width>
+        <Height type="System.Int32">430</Height>
+    </Size>
+    <Controls type="System.Windows.Forms.Control+ControlCollection">
+        <element type="System.Windows.Forms.GroupBox" uuid="77b6cee8-1224-4ec9-81a6-3043f9a779dd">
+            <FlatStyle type="System.Windows.Forms.FlatStyle">3</FlatStyle>
+            <Text type="System.String">Host Names</Text>
+            <Anchor type="System.Windows.Forms.AnchorStyles">15</Anchor>
+            <Font type="System.Drawing.Font" size="8.25" style="0">Tahoma</Font>
+            <Location type="System.Drawing.Point">
+                <X type="System.Int32">8</X>
+                <Y type="System.Int32">248</Y>
+            </Location>
+            <Name type="System.String">grpHostNames</Name>
+            <Size type="System.Drawing.Size">
+                <Width type="System.Int32">552</Width>
+                <Height type="System.Int32">168</Height>
+            </Size>
+            <TabIndex type="System.Int32">64</TabIndex>
+            <Controls type="System.Windows.Forms.Control+ControlCollection">
+                <element type="aptixia.sm.DynamicGridControl" uuid="0d151e48-6003-47cf-b17c-93fb0934128a">
+                    <UseEmbeddedNavigator type="System.Boolean">true</UseEmbeddedNavigator>
+                    <LevelTree type="DevExpress.XtraGrid.GridLevelTree">
+                        <Nodes type="DevExpress.XtraGrid.GridLevelNodeCollection">
+                            <OwnerNode type="DevExpress.XtraGrid.GridLevelTree" />
+                        </Nodes>
+                    </LevelTree>
+                    <MainView type="DevExpress.XtraGrid.Views.Grid.GridView" uuid="24f8b59d-b0e9-4683-a362-704d4c077ff4">
+                        <AppearancePrint type="DevExpress.XtraGrid.Views.Grid.GridViewPrintAppearances">
+                            <HeaderPanel type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </HeaderPanel>
+                            <FooterPanel type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </FooterPanel>
+                            <Row type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </Row>
+                            <OddRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </OddRow>
+                            <EvenRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </EvenRow>
+                            <GroupRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </GroupRow>
+                            <Lines type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </Lines>
+                            <Preview type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </Preview>
+                            <GroupFooter type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </GroupFooter>
+                            <FilterPanel type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </FilterPanel>
+                        </AppearancePrint>
+                        <Appearance type="DevExpress.XtraGrid.Views.Grid.GridViewAppearances">
+                            <HeaderPanel type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions">
+                                    <UseTextOptions type="System.Boolean">true</UseTextOptions>
+                                </Options>
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">2</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">2</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </HeaderPanel>
+                            <GroupPanel type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </GroupPanel>
+                            <FooterPanel type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </FooterPanel>
+                            <Row type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </Row>
+                            <TopNewRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </TopNewRow>
+                            <RowSeparator type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </RowSeparator>
+                            <GroupRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </GroupRow>
+                            <EvenRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </EvenRow>
+                            <OddRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </OddRow>
+                            <HorzLine type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </HorzLine>
+                            <VertLine type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </VertLine>
+                            <Preview type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </Preview>
+                            <FocusedRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </FocusedRow>
+                            <FocusedCell type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </FocusedCell>
+                            <GroupButton type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </GroupButton>
+                            <DetailTip type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </DetailTip>
+                            <GroupFooter type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </GroupFooter>
+                            <Empty type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </Empty>
+                            <SelectedRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </SelectedRow>
+                            <HideSelectionRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </HideSelectionRow>
+                            <ColumnFilterButton type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </ColumnFilterButton>
+                            <ColumnFilterButtonActive type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </ColumnFilterButtonActive>
+                            <FixedLine type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </FixedLine>
+                            <FilterCloseButton type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </FilterCloseButton>
+                            <FilterPanel type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </FilterPanel>
+                        </Appearance>
+                        <OptionsBehavior type="DevExpress.XtraGrid.Views.Grid.GridOptionsBehavior" />
+                        <OptionsHint type="DevExpress.XtraGrid.Views.Grid.GridOptionsHint" />
+                        <OptionsDetail type="DevExpress.XtraGrid.Views.Grid.GridOptionsDetail" />
+                        <OptionsCustomization type="DevExpress.XtraGrid.Views.Grid.GridOptionsCustomization">
+                            <AllowFilter type="System.Boolean">false</AllowFilter>
+                        </OptionsCustomization>
+                        <OptionsNavigation type="DevExpress.XtraGrid.Views.Grid.GridOptionsNavigation" />
+                        <OptionsSelection type="DevExpress.XtraGrid.Views.Grid.GridOptionsSelection">
+                            <MultiSelect type="System.Boolean">true</MultiSelect>
+                        </OptionsSelection>
+                        <OptionsView type="DevExpress.XtraGrid.Views.Grid.GridOptionsView">
+                            <ColumnAutoWidth type="System.Boolean">false</ColumnAutoWidth>
+                            <ShowGroupPanel type="System.Boolean">false</ShowGroupPanel>
+                        </OptionsView>
+                        <OptionsMenu type="DevExpress.XtraGrid.Views.Grid.GridOptionsMenu" />
+                        <OptionsPrint type="DevExpress.XtraGrid.Views.Grid.GridOptionsPrint" />
+                        <ViewStyles type="DevExpress.Utils.ViewStyles">
+                            <Keys type="System.Collections.Hashtable+KeyCollection">
+                                <SyncRoot type="System.Collections.Hashtable">
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">Preview</Key>
+                                        <Value type="System.String">Preview</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">FooterPanel</Key>
+                                        <Value type="System.String">FooterPanel</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">GroupButton</Key>
+                                        <Value type="System.String">GroupButton</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">FixedLine</Key>
+                                        <Value type="System.String">FixedLine</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">HeaderPanel</Key>
+                                        <Value type="System.String">HeaderPanel</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">HideSelectionRow</Key>
+                                        <Value type="System.String">HideSelectionRow</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">GroupPanel</Key>
+                                        <Value type="System.String">GroupPanel</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">Row</Key>
+                                        <Value type="System.String">Row</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">GroupFooter</Key>
+                                        <Value type="System.String">GroupFooter</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">FilterCloseButton</Key>
+                                        <Value type="System.String">FilterCloseButton</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">GroupRow</Key>
+                                        <Value type="System.String">GroupRow</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">ColumnFilterButton</Key>
+                                        <Value type="System.String">ColumnFilterButton</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">Empty</Key>
+                                        <Value type="System.String">Empty</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">VertLine</Key>
+                                        <Value type="System.String">VertLine</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">EvenRow</Key>
+                                        <Value type="System.String">EvenRow</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">FocusedCell</Key>
+                                        <Value type="System.String">FocusedCell</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">OddRow</Key>
+                                        <Value type="System.String">OddRow</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">SelectedRow</Key>
+                                        <Value type="System.String">SelectedRow</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">FocusedRow</Key>
+                                        <Value type="System.String">FocusedRow</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">HorzLine</Key>
+                                        <Value type="System.String">HorzLine</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">FilterPanel</Key>
+                                        <Value type="System.String">FilterPanel</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">RowSeparator</Key>
+                                        <Value type="System.String">RowSeparator</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">ColumnFilterButtonActive</Key>
+                                        <Value type="System.String">ColumnFilterButtonActive</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">DetailTip</Key>
+                                        <Value type="System.String">DetailTip</Value>
+                                    </element>
+                                </SyncRoot>
+                            </Keys>
+                        </ViewStyles>
+                        <OptionsView type="DevExpress.XtraGrid.Views.Grid.GridOptionsView" />
+                        <OptionsLayout type="DevExpress.Utils.OptionsLayoutGrid">
+                            <Columns type="DevExpress.Utils.OptionsColumnLayout" />
+                        </OptionsLayout>
+                        <OptionsSelection type="DevExpress.XtraGrid.Views.Grid.GridOptionsSelection" />
+                        <OptionsBehavior type="DevExpress.XtraGrid.Views.Grid.GridOptionsBehavior" />
+                        <OptionsFilter type="DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter" />
+                        <AppearancePrint type="DevExpress.XtraGrid.Views.Grid.GridViewPrintAppearances" />
+                        <Appearance type="DevExpress.XtraGrid.Views.Grid.GridViewAppearances" />
+                        <OptionsLayout type="DevExpress.Utils.OptionsLayoutGrid" />
+                        <Name type="System.String">GridView1</Name>
+                        <ActiveFilter type="DevExpress.XtraGrid.Views.Base.ViewFilter" />
+                        <MRUFilters type="DevExpress.XtraGrid.Views.Base.MRUViewFilterCollection" />
+                        <Columns type="DevExpress.XtraGrid.Columns.GridColumnCollection">
+                            <element type="DevExpress.XtraGrid.Columns.GridColumn" uuid="3eae11b8-29a5-4a8c-9284-5a7462bcfb00">
+                                <OptionsColumn type="DevExpress.XtraGrid.Columns.OptionsColumn" />
+                                <OptionsFilter type="DevExpress.XtraGrid.Columns.OptionsColumnFilter" />
+                                <ToolTip type="System.String">The IP associated with the host name</ToolTip>
+                                <Caption type="System.String">Host IP</Caption>
+                                <FieldName type="System.String">hostIP</FieldName>
+                                <VisibleIndex type="System.Int32">0</VisibleIndex>
+                                <Visible type="System.Boolean">true</Visible>
+                                <AppearanceCell type="DevExpress.Utils.AppearanceObjectEx">
+                                    <Options type="DevExpress.Utils.AppearanceOptionsEx" />
+                                    <Options type="DevExpress.Utils.AppearanceOptionsEx" />
+                                    <TextOptions type="DevExpress.Utils.TextOptions">
+                                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                    </TextOptions>
+                                </AppearanceCell>
+                                <AppearanceHeader type="DevExpress.Utils.AppearanceObject">
+                                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                                    <TextOptions type="DevExpress.Utils.TextOptions">
+                                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                    </TextOptions>
+                                </AppearanceHeader>
+                                <DisplayFormat type="DevExpress.XtraGrid.Columns.GridColumnFormatInfo" />
+                                <GroupFormat type="DevExpress.XtraGrid.Columns.GridColumnFormatInfo" />
+                            </element>
+                            <element type="DevExpress.XtraGrid.Columns.GridColumn" uuid="a5e134bd-3a44-4e13-a7be-3d9c77572f55">
+                                <OptionsColumn type="DevExpress.XtraGrid.Columns.OptionsColumn" />
+                                <OptionsFilter type="DevExpress.XtraGrid.Columns.OptionsColumnFilter" />
+                                <ToolTip type="System.String">The host name</ToolTip>
+                                <Caption type="System.String">Host Name</Caption>
+                                <FieldName type="System.String">hostName</FieldName>
+                                <VisibleIndex type="System.Int32">1</VisibleIndex>
+                                <Visible type="System.Boolean">true</Visible>
+                                <AppearanceCell type="DevExpress.Utils.AppearanceObjectEx">
+                                    <Options type="DevExpress.Utils.AppearanceOptionsEx" />
+                                    <Options type="DevExpress.Utils.AppearanceOptionsEx" />
+                                    <TextOptions type="DevExpress.Utils.TextOptions">
+                                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                    </TextOptions>
+                                </AppearanceCell>
+                                <AppearanceHeader type="DevExpress.Utils.AppearanceObject">
+                                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                                    <TextOptions type="DevExpress.Utils.TextOptions">
+                                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                    </TextOptions>
+                                </AppearanceHeader>
+                                <DisplayFormat type="DevExpress.XtraGrid.Columns.GridColumnFormatInfo" />
+                                <GroupFormat type="DevExpress.XtraGrid.Columns.GridColumnFormatInfo" />
+                            </element>
+                            <element type="DevExpress.XtraGrid.Columns.GridColumn" uuid="ff807791-70d4-4221-86c5-04a2f95cc6e8">
+                                <OptionsColumn type="DevExpress.XtraGrid.Columns.OptionsColumn" />
+                                <OptionsFilter type="DevExpress.XtraGrid.Columns.OptionsColumnFilter" />
+                                <ToolTip type="System.String">Alias for name</ToolTip>
+                                <Caption type="System.String">Alias #1</Caption>
+                                <FieldName type="System.String">alias1</FieldName>
+                                <VisibleIndex type="System.Int32">2</VisibleIndex>
+                                <Visible type="System.Boolean">true</Visible>
+                                <AppearanceCell type="DevExpress.Utils.AppearanceObjectEx">
+                                    <Options type="DevExpress.Utils.AppearanceOptionsEx" />
+                                    <Options type="DevExpress.Utils.AppearanceOptionsEx" />
+                                    <TextOptions type="DevExpress.Utils.TextOptions">
+                                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                    </TextOptions>
+                                </AppearanceCell>
+                                <AppearanceHeader type="DevExpress.Utils.AppearanceObject">
+                                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                                    <TextOptions type="DevExpress.Utils.TextOptions">
+                                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                    </TextOptions>
+                                </AppearanceHeader>
+                                <DisplayFormat type="DevExpress.XtraGrid.Columns.GridColumnFormatInfo" />
+                                <GroupFormat type="DevExpress.XtraGrid.Columns.GridColumnFormatInfo" />
+                            </element>
+                            <element type="DevExpress.XtraGrid.Columns.GridColumn" uuid="0d63934c-4781-4c95-bfc5-a6963c355f9e">
+                                <OptionsColumn type="DevExpress.XtraGrid.Columns.OptionsColumn" />
+                                <OptionsFilter type="DevExpress.XtraGrid.Columns.OptionsColumnFilter" />
+                                <ToolTip type="System.String">Second alias for name</ToolTip>
+                                <Caption type="System.String">Alias #2</Caption>
+                                <FieldName type="System.String">alias2</FieldName>
+                                <VisibleIndex type="System.Int32">3</VisibleIndex>
+                                <Visible type="System.Boolean">true</Visible>
+                                <AppearanceCell type="DevExpress.Utils.AppearanceObjectEx">
+                                    <Options type="DevExpress.Utils.AppearanceOptionsEx" />
+                                    <Options type="DevExpress.Utils.AppearanceOptionsEx" />
+                                    <TextOptions type="DevExpress.Utils.TextOptions">
+                                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                    </TextOptions>
+                                </AppearanceCell>
+                                <AppearanceHeader type="DevExpress.Utils.AppearanceObject">
+                                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                                    <TextOptions type="DevExpress.Utils.TextOptions">
+                                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                    </TextOptions>
+                                </AppearanceHeader>
+                                <DisplayFormat type="DevExpress.XtraGrid.Columns.GridColumnFormatInfo" />
+                                <GroupFormat type="DevExpress.XtraGrid.Columns.GridColumnFormatInfo" />
+                            </element>
+                        </Columns>
+                        <SortInfo type="DevExpress.XtraGrid.Columns.GridColumnSortInfoCollection">
+                            <View type="DevExpress.XtraGrid.Views.Grid.GridView" />
+                        </SortInfo>
+                    </MainView>
+                    <Styles type="DevExpress.XtraGrid.GridViewStyleHashtable">
+                        <Values type="System.Collections.Hashtable+ValueCollection">
+                            <SyncRoot type="System.Collections.Hashtable">
+                                <element type="System.Collections.DictionaryEntry">
+                                    <Key type="System.String">errorValue</Key>
+                                    <Value type="DevExpress.Utils.ViewStyleEx" uuid="cad4e087-888d-4f46-b01a-a5236dbbf69e">
+                                        <BackColor2 type="System.Drawing.Color">Red</BackColor2>
+                                        <GradientMode type="System.Drawing.Drawing2D.LinearGradientMode">2</GradientMode>
+                                        <BackColor type="System.Drawing.Color">LightCoral</BackColor>
+                                        <ForeColor type="System.Drawing.Color">White</ForeColor>
+                                    </Value>
+                                </element>
+                            </SyncRoot>
+                        </Values>
+                        <Keys type="System.Collections.Hashtable+KeyCollection">
+                            <SyncRoot type="System.Collections.Hashtable" ref="ee330c69-0d93-4d99-b5ec-6db7f4815a2f" />
+                        </Keys>
+                    </Styles>
+                    <ExternalRepository type="DevExpress.XtraEditors.Repository.PersistentRepository" uuid="deace834-37fb-4c70-9fba-f524e6250a38">
+                        <Items type="DevExpress.XtraEditors.Repository.RepositoryItemCollection" />
+                    </ExternalRepository>
+                    <Dock type="System.Windows.Forms.DockStyle">5</Dock>
+                    <Font type="System.Drawing.Font" size="8.25" style="0">Tahoma</Font>
+                    <Location type="System.Drawing.Point">
+                        <X type="System.Int32">3</X>
+                        <Y type="System.Int32">17</Y>
+                    </Location>
+                    <Name type="System.String">grdHostList</Name>
+                    <Size type="System.Drawing.Size">
+                        <Width type="System.Int32">546</Width>
+                        <Height type="System.Int32">148</Height>
+                    </Size>
+                    <TabIndex type="System.Int32">9</TabIndex>
+                    <ViewCollection type="DevExpress.XtraGrid.Repository.ViewRepositoryCollection">
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="24f8b59d-b0e9-4683-a362-704d4c077ff4" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="24f8b59d-b0e9-4683-a362-704d4c077ff4" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="24f8b59d-b0e9-4683-a362-704d4c077ff4" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="24f8b59d-b0e9-4683-a362-704d4c077ff4" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="24f8b59d-b0e9-4683-a362-704d4c077ff4" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="24f8b59d-b0e9-4683-a362-704d4c077ff4" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="24f8b59d-b0e9-4683-a362-704d4c077ff4" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="24f8b59d-b0e9-4683-a362-704d4c077ff4" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="24f8b59d-b0e9-4683-a362-704d4c077ff4" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="24f8b59d-b0e9-4683-a362-704d4c077ff4" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="24f8b59d-b0e9-4683-a362-704d4c077ff4" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="24f8b59d-b0e9-4683-a362-704d4c077ff4" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="24f8b59d-b0e9-4683-a362-704d4c077ff4" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="24f8b59d-b0e9-4683-a362-704d4c077ff4" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="24f8b59d-b0e9-4683-a362-704d4c077ff4" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="24f8b59d-b0e9-4683-a362-704d4c077ff4" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="24f8b59d-b0e9-4683-a362-704d4c077ff4" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="24f8b59d-b0e9-4683-a362-704d4c077ff4" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="24f8b59d-b0e9-4683-a362-704d4c077ff4" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="24f8b59d-b0e9-4683-a362-704d4c077ff4" />
+                    </ViewCollection>
+                    <RepositoryItems type="DevExpress.XtraEditors.Repository.RepositoryItemCollection" />
+                </element>
+            </Controls>
+        </element>
+        <element type="System.Windows.Forms.GroupBox" uuid="e7bbc792-a196-4e57-b814-03afce3c0585">
+            <FlatStyle type="System.Windows.Forms.FlatStyle">3</FlatStyle>
+            <Text type="System.String">DNS settings</Text>
+            <Anchor type="System.Windows.Forms.AnchorStyles">13</Anchor>
+            <Font type="System.Drawing.Font" size="8.25" style="0">Tahoma</Font>
+            <Location type="System.Drawing.Point">
+                <X type="System.Int32">8</X>
+                <Y type="System.Int32">8</Y>
+            </Location>
+            <Name type="System.String">grpDNS</Name>
+            <Size type="System.Drawing.Size">
+                <Width type="System.Int32">552</Width>
+                <Height type="System.Int32">232</Height>
+            </Size>
+            <TabIndex type="System.Int32">63</TabIndex>
+            <Controls type="System.Windows.Forms.Control+ControlCollection">
+                <element type="DevExpress.XtraEditors.SimpleButton" uuid="e7cec814-2bef-4332-973d-8dca2b3c63d5">
+                    <Text type="System.String">-</Text>
+                    <Appearance type="DevExpress.Utils.AppearanceObject">
+                        <Options type="DevExpress.Utils.AppearanceOptions" />
+                        <TextOptions type="DevExpress.Utils.TextOptions">
+                            <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                            <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                            <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                            <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                        </TextOptions>
+                    </Appearance>
+                    <ToolTip type="System.String">Delete from search list</ToolTip>
+                    <Enabled type="System.Boolean">false</Enabled>
+                    <Location type="System.Drawing.Point">
+                        <X type="System.Int32">304</X>
+                        <Y type="System.Int32">64</Y>
+                    </Location>
+                    <Name type="System.String">btnDeleteSearch</Name>
+                    <Size type="System.Drawing.Size">
+                        <Width type="System.Int32">20</Width>
+                        <Height type="System.Int32">20</Height>
+                    </Size>
+                    <TabIndex type="System.Int32">7</TabIndex>
+                </element>
+                <element type="DevExpress.XtraEditors.SimpleButton" uuid="04abc0e8-db40-4676-973a-29b374b4a26b">
+                    <Text type="System.String">+</Text>
+                    <Appearance type="DevExpress.Utils.AppearanceObject">
+                        <Options type="DevExpress.Utils.AppearanceOptions" />
+                        <TextOptions type="DevExpress.Utils.TextOptions">
+                            <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                            <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                            <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                            <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                        </TextOptions>
+                    </Appearance>
+                    <ToolTip type="System.String">Add to search list</ToolTip>
+                    <Location type="System.Drawing.Point">
+                        <X type="System.Int32">280</X>
+                        <Y type="System.Int32">64</Y>
+                    </Location>
+                    <Name type="System.String">btnAddSearch</Name>
+                    <Size type="System.Drawing.Size">
+                        <Width type="System.Int32">20</Width>
+                        <Height type="System.Int32">20</Height>
+                    </Size>
+                    <TabIndex type="System.Int32">6</TabIndex>
+                </element>
+                <element type="DevExpress.XtraEditors.SimpleButton" uuid="8ae0cd31-6636-4b1a-a73e-da627b616c51">
+                    <Text type="System.String">-</Text>
+                    <Appearance type="DevExpress.Utils.AppearanceObject">
+                        <Options type="DevExpress.Utils.AppearanceOptions" />
+                        <TextOptions type="DevExpress.Utils.TextOptions">
+                            <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                            <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                            <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                            <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                        </TextOptions>
+                    </Appearance>
+                    <ToolTip type="System.String">Delete name server</ToolTip>
+                    <Enabled type="System.Boolean">false</Enabled>
+                    <Location type="System.Drawing.Point">
+                        <X type="System.Int32">32</X>
+                        <Y type="System.Int32">64</Y>
+                    </Location>
+                    <Name type="System.String">btnDeleteName</Name>
+                    <Size type="System.Drawing.Size">
+                        <Width type="System.Int32">20</Width>
+                        <Height type="System.Int32">20</Height>
+                    </Size>
+                    <TabIndex type="System.Int32">4</TabIndex>
+                </element>
+                <element type="DevExpress.XtraEditors.SimpleButton" uuid="c09f8d1d-398e-45e9-a180-5c0607a9a34f">
+                    <Text type="System.String">+</Text>
+                    <Appearance type="DevExpress.Utils.AppearanceObject">
+                        <Options type="DevExpress.Utils.AppearanceOptions" />
+                        <TextOptions type="DevExpress.Utils.TextOptions">
+                            <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                            <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                            <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                            <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                        </TextOptions>
+                    </Appearance>
+                    <ToolTip type="System.String">Add name server</ToolTip>
+                    <Location type="System.Drawing.Point">
+                        <X type="System.Int32">8</X>
+                        <Y type="System.Int32">64</Y>
+                    </Location>
+                    <Name type="System.String">btnAddName</Name>
+                    <Size type="System.Drawing.Size">
+                        <Width type="System.Int32">20</Width>
+                        <Height type="System.Int32">20</Height>
+                    </Size>
+                    <TabIndex type="System.Int32">3</TabIndex>
+                </element>
+                <element type="aptixia.sm.DevExSpinEdit" uuid="7c877730-a5ce-4e06-8192-ce59b2caadd4">
+                    <Maximum type="System.Decimal">9999999</Maximum>
+                    <Properties type="DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit">
+                        <MaxValue type="System.Decimal">9999999</MaxValue>
+                        <Increment type="System.Decimal">2</Increment>
+                        <IsFloatValue type="System.Boolean">false</IsFloatValue>
+                        <UseCtrlIncrement type="System.Boolean">false</UseCtrlIncrement>
+                        <Mask type="DevExpress.XtraEditors.Mask.NumericMaskProperties">
+                            <EditMask type="System.String">d</EditMask>
+                        </Mask>
+                        <DisplayFormat type="DevExpress.Utils.FormatInfo" />
+                        <EditFormat type="DevExpress.Utils.FormatInfo" />
+                        <AppearanceFocused type="DevExpress.Utils.AppearanceObject">
+                            <Options type="DevExpress.Utils.AppearanceOptions" />
+                            <TextOptions type="DevExpress.Utils.TextOptions">
+                                <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                            </TextOptions>
+                        </AppearanceFocused>
+                        <Appearance type="DevExpress.Utils.AppearanceObject">
+                            <Options type="DevExpress.Utils.AppearanceOptions" />
+                            <TextOptions type="DevExpress.Utils.TextOptions">
+                                <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                            </TextOptions>
+                        </Appearance>
+                        <AppearanceDisabled type="DevExpress.Utils.AppearanceObject">
+                            <Options type="DevExpress.Utils.AppearanceOptions" />
+                            <TextOptions type="DevExpress.Utils.TextOptions">
+                                <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                            </TextOptions>
+                        </AppearanceDisabled>
+                        <Buttons type="DevExpress.XtraEditors.Controls.EditorButtonCollection">
+                            <element type="DevExpress.XtraEditors.Controls.EditorButton" uuid="e49d2222-0033-4e25-9ce8-5a19f7ec29dd">
+                                <Appearance type="DevExpress.Utils.SerializableAppearanceObject">
+                                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                                    <TextOptions type="DevExpress.Utils.TextOptions">
+                                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                    </TextOptions>
+                                </Appearance>
+                                <Collection type="DevExpress.XtraEditors.Controls.EditorButtonCollection" />
+                            </element>
+                        </Buttons>
+                    </Properties>
+                    <Properties type="DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit" />
+                    <Properties type="DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit" />
+                    <Properties type="DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit" />
+                    <Properties type="DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit" />
+                    <ToolTip type="System.String">Timeout that resolver will wait for a response from a remote name server, before retrying from another</ToolTip>
+                    <Location type="System.Drawing.Point">
+                        <X type="System.Int32">368</X>
+                        <Y type="System.Int32">32</Y>
+                    </Location>
+                    <Name type="System.String">edtTimeout</Name>
+                    <Size type="System.Drawing.Size">
+                        <Width type="System.Int32">72</Width>
+                        <Height type="System.Int32">20</Height>
+                    </Size>
+                    <TabIndex type="System.Int32">2</TabIndex>
+                    <Controls type="System.Windows.Forms.Control+ControlCollection">
+                        <element type="DevExpress.XtraEditors.TextBoxMaskBox" uuid="633434ba-2173-47e9-92ad-4dae16316850">
+                            <MaskBoxSelectionStart type="System.Int32">0</MaskBoxSelectionStart>
+                            <MaskBoxSelectionLength type="System.Int32">0</MaskBoxSelectionLength>
+                            <MaskBoxSelectedText type="System.String" />
+                            <Mask type="DevExpress.XtraEditors.Mask.MaskProperties" ref="71f15d62-efc2-4012-bb5c-3609bc4a7032" />
+                            <EditText type="System.String">5</EditText>
+                            <EditValue type="System.Decimal">5</EditValue>
+                            <AcceptsReturn type="System.Boolean">false</AcceptsReturn>
+                            <CharacterCasing type="System.Windows.Forms.CharacterCasing">0</CharacterCasing>
+                            <PasswordChar type="System.Char">&#x0;</PasswordChar>
+                            <ScrollBars type="System.Windows.Forms.ScrollBars">0</ScrollBars>
+                            <TextAlign type="System.Windows.Forms.HorizontalAlignment">1</TextAlign>
+                            <AcceptsTab type="System.Boolean">false</AcceptsTab>
+                            <AutoSize type="System.Boolean">false</AutoSize>
+                            <BackColor type="System.Drawing.Color">ffffffff</BackColor>
+                            <BorderStyle type="System.Windows.Forms.BorderStyle">0</BorderStyle>
+                            <ForeColor type="System.Drawing.Color">WindowText</ForeColor>
+                            <HideSelection type="System.Boolean">true</HideSelection>
+                            <MaxLength type="System.Int32">0</MaxLength>
+                            <Multiline type="System.Boolean">false</Multiline>
+                            <ReadOnly type="System.Boolean">false</ReadOnly>
+                            <WordWrap type="System.Boolean">true</WordWrap>
+                            <AccessibleDescription type="null" />
+                            <AccessibleName type="null" />
+                            <AccessibleRole type="System.Windows.Forms.AccessibleRole">-1</AccessibleRole>
+                            <AllowDrop type="System.Boolean">false</AllowDrop>
+                            <Anchor type="System.Windows.Forms.AnchorStyles">5</Anchor>
+                            <CausesValidation type="System.Boolean">true</CausesValidation>
+                            <ContextMenu type="null" />
+                            <Dock type="System.Windows.Forms.DockStyle">0</Dock>
+                            <Enabled type="System.Boolean">true</Enabled>
+                            <Font type="System.Drawing.Font" size="8.25" style="0">Tahoma</Font>
+                            <ImeMode type="System.Windows.Forms.ImeMode">0</ImeMode>
+                            <Location type="System.Drawing.Point">
+                                <X type="System.Int32">3</X>
+                                <Y type="System.Int32">3</Y>
+                            </Location>
+                            <Name type="System.String" />
+                            <RightToLeft type="System.Windows.Forms.RightToLeft">0</RightToLeft>
+                            <Size type="System.Drawing.Size">
+                                <Width type="System.Int32">51</Width>
+                                <Height type="System.Int32">14</Height>
+                            </Size>
+                            <TabIndex type="System.Int32">0</TabIndex>
+                            <TabStop type="System.Boolean">true</TabStop>
+                            <Tag type="null" />
+                            <Controls type="System.Windows.Forms.Control+ControlCollection" />
+                        </element>
+                    </Controls>
+                </element>
+                <element type="aptixia.sm.DynamicGridControl" uuid="30c40be2-1778-4228-8404-3ee96cbbfa1e">
+                    <LevelTree type="DevExpress.XtraGrid.GridLevelTree">
+                        <Nodes type="DevExpress.XtraGrid.GridLevelNodeCollection">
+                            <OwnerNode type="DevExpress.XtraGrid.GridLevelTree" />
+                        </Nodes>
+                    </LevelTree>
+                    <MainView type="DevExpress.XtraGrid.Views.Grid.GridView" uuid="ab1ed3fa-51a8-4860-a88e-d74f0bf04b39">
+                        <AppearancePrint type="DevExpress.XtraGrid.Views.Grid.GridViewPrintAppearances">
+                            <HeaderPanel type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </HeaderPanel>
+                            <FooterPanel type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </FooterPanel>
+                            <Row type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </Row>
+                            <OddRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </OddRow>
+                            <EvenRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </EvenRow>
+                            <GroupRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </GroupRow>
+                            <Lines type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </Lines>
+                            <Preview type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </Preview>
+                            <GroupFooter type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </GroupFooter>
+                            <FilterPanel type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </FilterPanel>
+                        </AppearancePrint>
+                        <Appearance type="DevExpress.XtraGrid.Views.Grid.GridViewAppearances">
+                            <HeaderPanel type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </HeaderPanel>
+                            <GroupPanel type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </GroupPanel>
+                            <FooterPanel type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </FooterPanel>
+                            <Row type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </Row>
+                            <TopNewRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </TopNewRow>
+                            <RowSeparator type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </RowSeparator>
+                            <GroupRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </GroupRow>
+                            <EvenRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </EvenRow>
+                            <OddRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </OddRow>
+                            <HorzLine type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </HorzLine>
+                            <VertLine type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </VertLine>
+                            <Preview type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </Preview>
+                            <FocusedRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </FocusedRow>
+                            <FocusedCell type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </FocusedCell>
+                            <GroupButton type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </GroupButton>
+                            <DetailTip type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </DetailTip>
+                            <GroupFooter type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </GroupFooter>
+                            <Empty type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </Empty>
+                            <SelectedRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </SelectedRow>
+                            <HideSelectionRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </HideSelectionRow>
+                            <ColumnFilterButton type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </ColumnFilterButton>
+                            <ColumnFilterButtonActive type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </ColumnFilterButtonActive>
+                            <FixedLine type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </FixedLine>
+                            <FilterCloseButton type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </FilterCloseButton>
+                            <FilterPanel type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </FilterPanel>
+                        </Appearance>
+                        <OptionsBehavior type="DevExpress.XtraGrid.Views.Grid.GridOptionsBehavior" />
+                        <OptionsHint type="DevExpress.XtraGrid.Views.Grid.GridOptionsHint" />
+                        <OptionsDetail type="DevExpress.XtraGrid.Views.Grid.GridOptionsDetail" />
+                        <OptionsCustomization type="DevExpress.XtraGrid.Views.Grid.GridOptionsCustomization" />
+                        <OptionsNavigation type="DevExpress.XtraGrid.Views.Grid.GridOptionsNavigation" />
+                        <OptionsSelection type="DevExpress.XtraGrid.Views.Grid.GridOptionsSelection">
+                            <MultiSelect type="System.Boolean">true</MultiSelect>
+                        </OptionsSelection>
+                        <OptionsView type="DevExpress.XtraGrid.Views.Grid.GridOptionsView">
+                            <ShowGroupPanel type="System.Boolean">false</ShowGroupPanel>
+                            <ShowIndicator type="System.Boolean">false</ShowIndicator>
+                        </OptionsView>
+                        <OptionsMenu type="DevExpress.XtraGrid.Views.Grid.GridOptionsMenu" />
+                        <OptionsPrint type="DevExpress.XtraGrid.Views.Grid.GridOptionsPrint" />
+                        <ViewStyles type="DevExpress.Utils.ViewStyles">
+                            <Keys type="System.Collections.Hashtable+KeyCollection">
+                                <SyncRoot type="System.Collections.Hashtable">
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">Preview</Key>
+                                        <Value type="System.String">Preview</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">FooterPanel</Key>
+                                        <Value type="System.String">FooterPanel</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">GroupButton</Key>
+                                        <Value type="System.String">GroupButton</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">FixedLine</Key>
+                                        <Value type="System.String">FixedLine</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">HeaderPanel</Key>
+                                        <Value type="System.String">HeaderPanel</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">HideSelectionRow</Key>
+                                        <Value type="System.String">HideSelectionRow</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">GroupPanel</Key>
+                                        <Value type="System.String">GroupPanel</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">Row</Key>
+                                        <Value type="System.String">Row</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">GroupFooter</Key>
+                                        <Value type="System.String">GroupFooter</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">FilterCloseButton</Key>
+                                        <Value type="System.String">FilterCloseButton</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">GroupRow</Key>
+                                        <Value type="System.String">GroupRow</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">ColumnFilterButton</Key>
+                                        <Value type="System.String">ColumnFilterButton</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">Empty</Key>
+                                        <Value type="System.String">Empty</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">VertLine</Key>
+                                        <Value type="System.String">VertLine</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">EvenRow</Key>
+                                        <Value type="System.String">EvenRow</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">FocusedCell</Key>
+                                        <Value type="System.String">FocusedCell</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">OddRow</Key>
+                                        <Value type="System.String">OddRow</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">SelectedRow</Key>
+                                        <Value type="System.String">SelectedRow</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">FocusedRow</Key>
+                                        <Value type="System.String">FocusedRow</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">HorzLine</Key>
+                                        <Value type="System.String">HorzLine</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">FilterPanel</Key>
+                                        <Value type="System.String">FilterPanel</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">RowSeparator</Key>
+                                        <Value type="System.String">RowSeparator</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">ColumnFilterButtonActive</Key>
+                                        <Value type="System.String">ColumnFilterButtonActive</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">DetailTip</Key>
+                                        <Value type="System.String">DetailTip</Value>
+                                    </element>
+                                </SyncRoot>
+                            </Keys>
+                        </ViewStyles>
+                        <OptionsView type="DevExpress.XtraGrid.Views.Grid.GridOptionsView" />
+                        <OptionsLayout type="DevExpress.Utils.OptionsLayoutGrid">
+                            <Columns type="DevExpress.Utils.OptionsColumnLayout" />
+                        </OptionsLayout>
+                        <OptionsSelection type="DevExpress.XtraGrid.Views.Grid.GridOptionsSelection" />
+                        <OptionsBehavior type="DevExpress.XtraGrid.Views.Grid.GridOptionsBehavior" />
+                        <OptionsFilter type="DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter" />
+                        <AppearancePrint type="DevExpress.XtraGrid.Views.Grid.GridViewPrintAppearances" />
+                        <Appearance type="DevExpress.XtraGrid.Views.Grid.GridViewAppearances" />
+                        <OptionsLayout type="DevExpress.Utils.OptionsLayoutGrid" />
+                        <Name type="System.String">GridView2</Name>
+                        <ActiveFilter type="DevExpress.XtraGrid.Views.Base.ViewFilter" />
+                        <MRUFilters type="DevExpress.XtraGrid.Views.Base.MRUViewFilterCollection" />
+                        <Columns type="DevExpress.XtraGrid.Columns.GridColumnCollection">
+                            <element type="DevExpress.XtraGrid.Columns.GridColumn" uuid="ca0882e7-602f-4afb-8403-896cca71d19a">
+                                <OptionsColumn type="DevExpress.XtraGrid.Columns.OptionsColumn" />
+                                <OptionsFilter type="DevExpress.XtraGrid.Columns.OptionsColumnFilter" />
+                                <ToolTip type="System.String">Search list for host-name lookup</ToolTip>
+                                <Caption type="System.String">Suffix List</Caption>
+                                <FieldName type="System.String">search</FieldName>
+                                <VisibleIndex type="System.Int32">0</VisibleIndex>
+                                <Visible type="System.Boolean">true</Visible>
+                                <AppearanceCell type="DevExpress.Utils.AppearanceObjectEx">
+                                    <Options type="DevExpress.Utils.AppearanceOptionsEx" />
+                                    <Options type="DevExpress.Utils.AppearanceOptionsEx" />
+                                    <TextOptions type="DevExpress.Utils.TextOptions">
+                                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                    </TextOptions>
+                                </AppearanceCell>
+                                <AppearanceHeader type="DevExpress.Utils.AppearanceObject">
+                                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                                    <TextOptions type="DevExpress.Utils.TextOptions">
+                                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                    </TextOptions>
+                                </AppearanceHeader>
+                                <DisplayFormat type="DevExpress.XtraGrid.Columns.GridColumnFormatInfo" />
+                                <GroupFormat type="DevExpress.XtraGrid.Columns.GridColumnFormatInfo" />
+                            </element>
+                        </Columns>
+                        <SortInfo type="DevExpress.XtraGrid.Columns.GridColumnSortInfoCollection">
+                            <View type="DevExpress.XtraGrid.Views.Grid.GridView" />
+                        </SortInfo>
+                    </MainView>
+                    <Styles type="DevExpress.XtraGrid.GridViewStyleHashtable">
+                        <Values type="System.Collections.Hashtable+ValueCollection">
+                            <SyncRoot type="System.Collections.Hashtable">
+                                <element type="System.Collections.DictionaryEntry">
+                                    <Key type="System.String">errorValue</Key>
+                                    <Value type="DevExpress.Utils.ViewStyleEx" uuid="e9cdf4c7-046f-4af2-8820-603c52b644f8">
+                                        <BackColor2 type="System.Drawing.Color">Red</BackColor2>
+                                        <GradientMode type="System.Drawing.Drawing2D.LinearGradientMode">2</GradientMode>
+                                        <BackColor type="System.Drawing.Color">LightCoral</BackColor>
+                                        <ForeColor type="System.Drawing.Color">White</ForeColor>
+                                    </Value>
+                                </element>
+                            </SyncRoot>
+                        </Values>
+                        <Keys type="System.Collections.Hashtable+KeyCollection">
+                            <SyncRoot type="System.Collections.Hashtable" ref="27a1572d-e115-45ae-88a4-1bdffe86e1fd" />
+                        </Keys>
+                    </Styles>
+                    <ExternalRepository type="DevExpress.XtraEditors.Repository.PersistentRepository" uuid="ba26a495-d32e-4a77-b94c-133d93cb43ea">
+                        <Items type="DevExpress.XtraEditors.Repository.RepositoryItemCollection" />
+                    </ExternalRepository>
+                    <Anchor type="System.Windows.Forms.AnchorStyles">13</Anchor>
+                    <Font type="System.Drawing.Font" size="8.25" style="0">Tahoma</Font>
+                    <Location type="System.Drawing.Point">
+                        <X type="System.Int32">280</X>
+                        <Y type="System.Int32">88</Y>
+                    </Location>
+                    <Name type="System.String">grdSearchList</Name>
+                    <Size type="System.Drawing.Size">
+                        <Width type="System.Int32">264</Width>
+                        <Height type="System.Int32">136</Height>
+                    </Size>
+                    <TabIndex type="System.Int32">8</TabIndex>
+                    <ViewCollection type="DevExpress.XtraGrid.Repository.ViewRepositoryCollection">
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="ab1ed3fa-51a8-4860-a88e-d74f0bf04b39" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="ab1ed3fa-51a8-4860-a88e-d74f0bf04b39" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="ab1ed3fa-51a8-4860-a88e-d74f0bf04b39" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="ab1ed3fa-51a8-4860-a88e-d74f0bf04b39" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="ab1ed3fa-51a8-4860-a88e-d74f0bf04b39" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="ab1ed3fa-51a8-4860-a88e-d74f0bf04b39" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="ab1ed3fa-51a8-4860-a88e-d74f0bf04b39" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="ab1ed3fa-51a8-4860-a88e-d74f0bf04b39" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="ab1ed3fa-51a8-4860-a88e-d74f0bf04b39" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="ab1ed3fa-51a8-4860-a88e-d74f0bf04b39" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="ab1ed3fa-51a8-4860-a88e-d74f0bf04b39" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="ab1ed3fa-51a8-4860-a88e-d74f0bf04b39" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="ab1ed3fa-51a8-4860-a88e-d74f0bf04b39" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="ab1ed3fa-51a8-4860-a88e-d74f0bf04b39" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="ab1ed3fa-51a8-4860-a88e-d74f0bf04b39" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="ab1ed3fa-51a8-4860-a88e-d74f0bf04b39" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="ab1ed3fa-51a8-4860-a88e-d74f0bf04b39" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="ab1ed3fa-51a8-4860-a88e-d74f0bf04b39" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="ab1ed3fa-51a8-4860-a88e-d74f0bf04b39" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="ab1ed3fa-51a8-4860-a88e-d74f0bf04b39" />
+                    </ViewCollection>
+                    <RepositoryItems type="DevExpress.XtraEditors.Repository.RepositoryItemCollection" />
+                </element>
+                <element type="aptixia.sm.DynamicGridControl" uuid="f13adeb7-581d-46bc-af1f-1da646799a28">
+                    <LevelTree type="DevExpress.XtraGrid.GridLevelTree">
+                        <Nodes type="DevExpress.XtraGrid.GridLevelNodeCollection">
+                            <OwnerNode type="DevExpress.XtraGrid.GridLevelTree" />
+                        </Nodes>
+                    </LevelTree>
+                    <MainView type="DevExpress.XtraGrid.Views.Grid.GridView" uuid="cb449c19-78e6-4eee-b1d0-9a53ebe245dc">
+                        <AppearancePrint type="DevExpress.XtraGrid.Views.Grid.GridViewPrintAppearances">
+                            <HeaderPanel type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </HeaderPanel>
+                            <FooterPanel type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </FooterPanel>
+                            <Row type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </Row>
+                            <OddRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </OddRow>
+                            <EvenRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </EvenRow>
+                            <GroupRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </GroupRow>
+                            <Lines type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </Lines>
+                            <Preview type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </Preview>
+                            <GroupFooter type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </GroupFooter>
+                            <FilterPanel type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </FilterPanel>
+                        </AppearancePrint>
+                        <Appearance type="DevExpress.XtraGrid.Views.Grid.GridViewAppearances">
+                            <HeaderPanel type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </HeaderPanel>
+                            <GroupPanel type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </GroupPanel>
+                            <FooterPanel type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </FooterPanel>
+                            <Row type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </Row>
+                            <TopNewRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </TopNewRow>
+                            <RowSeparator type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </RowSeparator>
+                            <GroupRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </GroupRow>
+                            <EvenRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </EvenRow>
+                            <OddRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </OddRow>
+                            <HorzLine type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </HorzLine>
+                            <VertLine type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </VertLine>
+                            <Preview type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </Preview>
+                            <FocusedRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </FocusedRow>
+                            <FocusedCell type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </FocusedCell>
+                            <GroupButton type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </GroupButton>
+                            <DetailTip type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </DetailTip>
+                            <GroupFooter type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </GroupFooter>
+                            <Empty type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </Empty>
+                            <SelectedRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </SelectedRow>
+                            <HideSelectionRow type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </HideSelectionRow>
+                            <ColumnFilterButton type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </ColumnFilterButton>
+                            <ColumnFilterButtonActive type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </ColumnFilterButtonActive>
+                            <FixedLine type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </FixedLine>
+                            <FilterCloseButton type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </FilterCloseButton>
+                            <FilterPanel type="DevExpress.Utils.AppearanceObject">
+                                <Options type="DevExpress.Utils.AppearanceOptions" />
+                                <TextOptions type="DevExpress.Utils.TextOptions">
+                                    <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                    <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                    <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                    <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                </TextOptions>
+                            </FilterPanel>
+                        </Appearance>
+                        <OptionsBehavior type="DevExpress.XtraGrid.Views.Grid.GridOptionsBehavior" />
+                        <OptionsHint type="DevExpress.XtraGrid.Views.Grid.GridOptionsHint" />
+                        <OptionsDetail type="DevExpress.XtraGrid.Views.Grid.GridOptionsDetail" />
+                        <OptionsCustomization type="DevExpress.XtraGrid.Views.Grid.GridOptionsCustomization" />
+                        <OptionsNavigation type="DevExpress.XtraGrid.Views.Grid.GridOptionsNavigation" />
+                        <OptionsSelection type="DevExpress.XtraGrid.Views.Grid.GridOptionsSelection">
+                            <MultiSelect type="System.Boolean">true</MultiSelect>
+                        </OptionsSelection>
+                        <OptionsView type="DevExpress.XtraGrid.Views.Grid.GridOptionsView">
+                            <ShowGroupPanel type="System.Boolean">false</ShowGroupPanel>
+                            <ShowIndicator type="System.Boolean">false</ShowIndicator>
+                        </OptionsView>
+                        <OptionsMenu type="DevExpress.XtraGrid.Views.Grid.GridOptionsMenu" />
+                        <OptionsPrint type="DevExpress.XtraGrid.Views.Grid.GridOptionsPrint" />
+                        <ViewStyles type="DevExpress.Utils.ViewStyles">
+                            <Keys type="System.Collections.Hashtable+KeyCollection">
+                                <SyncRoot type="System.Collections.Hashtable">
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">Preview</Key>
+                                        <Value type="System.String">Preview</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">FooterPanel</Key>
+                                        <Value type="System.String">FooterPanel</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">GroupButton</Key>
+                                        <Value type="System.String">GroupButton</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">FixedLine</Key>
+                                        <Value type="System.String">FixedLine</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">HeaderPanel</Key>
+                                        <Value type="System.String">HeaderPanel</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">HideSelectionRow</Key>
+                                        <Value type="System.String">HideSelectionRow</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">GroupPanel</Key>
+                                        <Value type="System.String">GroupPanel</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">Row</Key>
+                                        <Value type="System.String">Row</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">GroupFooter</Key>
+                                        <Value type="System.String">GroupFooter</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">FilterCloseButton</Key>
+                                        <Value type="System.String">FilterCloseButton</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">GroupRow</Key>
+                                        <Value type="System.String">GroupRow</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">ColumnFilterButton</Key>
+                                        <Value type="System.String">ColumnFilterButton</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">Empty</Key>
+                                        <Value type="System.String">Empty</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">VertLine</Key>
+                                        <Value type="System.String">VertLine</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">EvenRow</Key>
+                                        <Value type="System.String">EvenRow</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">FocusedCell</Key>
+                                        <Value type="System.String">FocusedCell</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">OddRow</Key>
+                                        <Value type="System.String">OddRow</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">SelectedRow</Key>
+                                        <Value type="System.String">SelectedRow</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">FocusedRow</Key>
+                                        <Value type="System.String">FocusedRow</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">HorzLine</Key>
+                                        <Value type="System.String">HorzLine</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">FilterPanel</Key>
+                                        <Value type="System.String">FilterPanel</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">RowSeparator</Key>
+                                        <Value type="System.String">RowSeparator</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">ColumnFilterButtonActive</Key>
+                                        <Value type="System.String">ColumnFilterButtonActive</Value>
+                                    </element>
+                                    <element type="System.Collections.DictionaryEntry">
+                                        <Key type="System.String">DetailTip</Key>
+                                        <Value type="System.String">DetailTip</Value>
+                                    </element>
+                                </SyncRoot>
+                            </Keys>
+                        </ViewStyles>
+                        <OptionsView type="DevExpress.XtraGrid.Views.Grid.GridOptionsView" />
+                        <OptionsLayout type="DevExpress.Utils.OptionsLayoutGrid">
+                            <Columns type="DevExpress.Utils.OptionsColumnLayout" />
+                        </OptionsLayout>
+                        <OptionsSelection type="DevExpress.XtraGrid.Views.Grid.GridOptionsSelection" />
+                        <OptionsBehavior type="DevExpress.XtraGrid.Views.Grid.GridOptionsBehavior" />
+                        <OptionsFilter type="DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter" />
+                        <AppearancePrint type="DevExpress.XtraGrid.Views.Grid.GridViewPrintAppearances" />
+                        <Appearance type="DevExpress.XtraGrid.Views.Grid.GridViewAppearances" />
+                        <OptionsLayout type="DevExpress.Utils.OptionsLayoutGrid" />
+                        <Name type="System.String">GridView1</Name>
+                        <ActiveFilter type="DevExpress.XtraGrid.Views.Base.ViewFilter" />
+                        <MRUFilters type="DevExpress.XtraGrid.Views.Base.MRUViewFilterCollection" />
+                        <Columns type="DevExpress.XtraGrid.Columns.GridColumnCollection">
+                            <element type="DevExpress.XtraGrid.Columns.GridColumn" uuid="1e40b2bf-f079-4b0e-99e6-e62ad5630541">
+                                <OptionsColumn type="DevExpress.XtraGrid.Columns.OptionsColumn" />
+                                <OptionsFilter type="DevExpress.XtraGrid.Columns.OptionsColumnFilter" />
+                                <ToolTip type="System.String">Name server IP address</ToolTip>
+                                <Caption type="System.String">Server List</Caption>
+                                <FieldName type="System.String">nameServer</FieldName>
+                                <VisibleIndex type="System.Int32">0</VisibleIndex>
+                                <Visible type="System.Boolean">true</Visible>
+                                <AppearanceCell type="DevExpress.Utils.AppearanceObjectEx">
+                                    <Options type="DevExpress.Utils.AppearanceOptionsEx" />
+                                    <Options type="DevExpress.Utils.AppearanceOptionsEx" />
+                                    <TextOptions type="DevExpress.Utils.TextOptions">
+                                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                    </TextOptions>
+                                </AppearanceCell>
+                                <AppearanceHeader type="DevExpress.Utils.AppearanceObject">
+                                    <Options type="DevExpress.Utils.AppearanceOptions" />
+                                    <TextOptions type="DevExpress.Utils.TextOptions">
+                                        <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                        <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                        <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                        <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                                    </TextOptions>
+                                </AppearanceHeader>
+                                <DisplayFormat type="DevExpress.XtraGrid.Columns.GridColumnFormatInfo" />
+                                <GroupFormat type="DevExpress.XtraGrid.Columns.GridColumnFormatInfo" />
+                            </element>
+                        </Columns>
+                        <SortInfo type="DevExpress.XtraGrid.Columns.GridColumnSortInfoCollection">
+                            <View type="DevExpress.XtraGrid.Views.Grid.GridView" />
+                        </SortInfo>
+                    </MainView>
+                    <Styles type="DevExpress.XtraGrid.GridViewStyleHashtable">
+                        <Values type="System.Collections.Hashtable+ValueCollection">
+                            <SyncRoot type="System.Collections.Hashtable">
+                                <element type="System.Collections.DictionaryEntry">
+                                    <Key type="System.String">errorValue</Key>
+                                    <Value type="DevExpress.Utils.ViewStyleEx" uuid="d09be50d-e2fd-412e-9796-7bf369253c1b">
+                                        <BackColor2 type="System.Drawing.Color">Red</BackColor2>
+                                        <GradientMode type="System.Drawing.Drawing2D.LinearGradientMode">2</GradientMode>
+                                        <BackColor type="System.Drawing.Color">LightCoral</BackColor>
+                                        <ForeColor type="System.Drawing.Color">White</ForeColor>
+                                    </Value>
+                                </element>
+                            </SyncRoot>
+                        </Values>
+                        <Keys type="System.Collections.Hashtable+KeyCollection">
+                            <SyncRoot type="System.Collections.Hashtable" ref="0ff85235-0d8a-492b-addc-351c569ceee8" />
+                        </Keys>
+                    </Styles>
+                    <ExternalRepository type="DevExpress.XtraEditors.Repository.PersistentRepository" uuid="4f5837d6-341b-4038-8853-adb584e97ea3">
+                        <Items type="DevExpress.XtraEditors.Repository.RepositoryItemCollection" />
+                    </ExternalRepository>
+                    <Font type="System.Drawing.Font" size="8.25" style="0">Tahoma</Font>
+                    <Location type="System.Drawing.Point">
+                        <X type="System.Int32">8</X>
+                        <Y type="System.Int32">88</Y>
+                    </Location>
+                    <Name type="System.String">grdNameServerList</Name>
+                    <Size type="System.Drawing.Size">
+                        <Width type="System.Int32">264</Width>
+                        <Height type="System.Int32">136</Height>
+                    </Size>
+                    <TabIndex type="System.Int32">5</TabIndex>
+                    <ViewCollection type="DevExpress.XtraGrid.Repository.ViewRepositoryCollection">
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="cb449c19-78e6-4eee-b1d0-9a53ebe245dc" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="cb449c19-78e6-4eee-b1d0-9a53ebe245dc" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="cb449c19-78e6-4eee-b1d0-9a53ebe245dc" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="cb449c19-78e6-4eee-b1d0-9a53ebe245dc" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="cb449c19-78e6-4eee-b1d0-9a53ebe245dc" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="cb449c19-78e6-4eee-b1d0-9a53ebe245dc" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="cb449c19-78e6-4eee-b1d0-9a53ebe245dc" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="cb449c19-78e6-4eee-b1d0-9a53ebe245dc" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="cb449c19-78e6-4eee-b1d0-9a53ebe245dc" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="cb449c19-78e6-4eee-b1d0-9a53ebe245dc" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="cb449c19-78e6-4eee-b1d0-9a53ebe245dc" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="cb449c19-78e6-4eee-b1d0-9a53ebe245dc" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="cb449c19-78e6-4eee-b1d0-9a53ebe245dc" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="cb449c19-78e6-4eee-b1d0-9a53ebe245dc" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="cb449c19-78e6-4eee-b1d0-9a53ebe245dc" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="cb449c19-78e6-4eee-b1d0-9a53ebe245dc" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="cb449c19-78e6-4eee-b1d0-9a53ebe245dc" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="cb449c19-78e6-4eee-b1d0-9a53ebe245dc" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="cb449c19-78e6-4eee-b1d0-9a53ebe245dc" />
+                        <element type="DevExpress.XtraGrid.Views.Grid.GridView" ref="cb449c19-78e6-4eee-b1d0-9a53ebe245dc" />
+                    </ViewCollection>
+                    <RepositoryItems type="DevExpress.XtraEditors.Repository.RepositoryItemCollection" />
+                </element>
+                <element type="DevExpress.XtraEditors.TextEdit" uuid="a4759247-cfaa-4606-9546-f328d37ba9d9">
+                    <Properties type="DevExpress.XtraEditors.Repository.RepositoryItemTextEdit">
+                        <DisplayFormat type="DevExpress.Utils.FormatInfo" />
+                        <EditFormat type="DevExpress.Utils.FormatInfo" />
+                        <AppearanceFocused type="DevExpress.Utils.AppearanceObject">
+                            <Options type="DevExpress.Utils.AppearanceOptions" />
+                            <TextOptions type="DevExpress.Utils.TextOptions">
+                                <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                            </TextOptions>
+                        </AppearanceFocused>
+                        <Appearance type="DevExpress.Utils.AppearanceObject">
+                            <Options type="DevExpress.Utils.AppearanceOptions" />
+                            <TextOptions type="DevExpress.Utils.TextOptions">
+                                <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                            </TextOptions>
+                        </Appearance>
+                        <AppearanceDisabled type="DevExpress.Utils.AppearanceObject">
+                            <Options type="DevExpress.Utils.AppearanceOptions" />
+                            <TextOptions type="DevExpress.Utils.TextOptions">
+                                <WordWrap type="DevExpress.Utils.WordWrap">0</WordWrap>
+                                <HAlignment type="DevExpress.Utils.HorzAlignment">0</HAlignment>
+                                <VAlignment type="DevExpress.Utils.VertAlignment">0</VAlignment>
+                                <Trimming type="DevExpress.Utils.Trimming">0</Trimming>
+                            </TextOptions>
+                        </AppearanceDisabled>
+                    </Properties>
+                    <Properties type="DevExpress.XtraEditors.Repository.RepositoryItemTextEdit" />
+                    <EditValue type="System.String" />
+                    <ToolTip type="System.String">Local domain name</ToolTip>
+                    <Location type="System.Drawing.Point">
+                        <X type="System.Int32">64</X>
+                        <Y type="System.Int32">32</Y>
+                    </Location>
+                    <Name type="System.String">edtDomain</Name>
+                    <Size type="System.Drawing.Size">
+                        <Width type="System.Int32">152</Width>
+                        <Height type="System.Int32">20</Height>
+                    </Size>
+                    <TabIndex type="System.Int32">1</TabIndex>
+                    <Controls type="System.Windows.Forms.Control+ControlCollection">
+                        <element type="DevExpress.XtraEditors.TextBoxMaskBox" uuid="dce85974-d7bd-4a49-8b7b-6eb1bf0f77bc">
+                            <MaskBoxSelectionStart type="System.Int32">0</MaskBoxSelectionStart>
+                            <MaskBoxSelectionLength type="System.Int32">0</MaskBoxSelectionLength>
+                            <MaskBoxSelectedText type="System.String" />
+                            <Mask type="DevExpress.XtraEditors.Mask.MaskProperties" uuid="53724fe6-f662-4868-95f9-8db03f50a307" />
+                            <EditText type="System.String" />
+                            <EditValue type="System.String" />
+                            <AcceptsReturn type="System.Boolean">false</AcceptsReturn>
+                            <CharacterCasing type="System.Windows.Forms.CharacterCasing">0</CharacterCasing>
+                            <PasswordChar type="System.Char">&#x0;</PasswordChar>
+                            <ScrollBars type="System.Windows.Forms.ScrollBars">0</ScrollBars>
+                            <TextAlign type="System.Windows.Forms.HorizontalAlignment">0</TextAlign>
+                            <AcceptsTab type="System.Boolean">false</AcceptsTab>
+                            <AutoSize type="System.Boolean">false</AutoSize>
+                            <BackColor type="System.Drawing.Color">ffffffff</BackColor>
+                            <BorderStyle type="System.Windows.Forms.BorderStyle">0</BorderStyle>
+                            <ForeColor type="System.Drawing.Color">WindowText</ForeColor>
+                            <HideSelection type="System.Boolean">true</HideSelection>
+                            <MaxLength type="System.Int32">0</MaxLength>
+                            <Multiline type="System.Boolean">false</Multiline>
+                            <ReadOnly type="System.Boolean">false</ReadOnly>
+                            <WordWrap type="System.Boolean">true</WordWrap>
+                            <AccessibleDescription type="null" />
+                            <AccessibleName type="null" />
+                            <AccessibleRole type="System.Windows.Forms.AccessibleRole">-1</AccessibleRole>
+                            <AllowDrop type="System.Boolean">false</AllowDrop>
+                            <Anchor type="System.Windows.Forms.AnchorStyles">5</Anchor>
+                            <CausesValidation type="System.Boolean">true</CausesValidation>
+                            <ContextMenu type="null" />
+                            <Dock type="System.Windows.Forms.DockStyle">0</Dock>
+                            <Enabled type="System.Boolean">true</Enabled>
+                            <Font type="System.Drawing.Font" size="8.25" style="0">Tahoma</Font>
+                            <ImeMode type="System.Windows.Forms.ImeMode">0</ImeMode>
+                            <Location type="System.Drawing.Point">
+                                <X type="System.Int32">3</X>
+                                <Y type="System.Int32">3</Y>
+                            </Location>
+                            <Name type="System.String" />
+                            <RightToLeft type="System.Windows.Forms.RightToLeft">0</RightToLeft>
+                            <Size type="System.Drawing.Size">
+                                <Width type="System.Int32">146</Width>
+                                <Height type="System.Int32">14</Height>
+                            </Size>
+                            <TabIndex type="System.Int32">0</TabIndex>
+                            <TabStop type="System.Boolean">true</TabStop>
+                            <Tag type="null" />
+                            <Controls type="System.Windows.Forms.Control+ControlCollection" />
+                        </element>
+                    </Controls>
+                </element>
+                <element type="System.Windows.Forms.Label" uuid="1d87049b-d825-481a-9795-0e6163f0a7f2">
+                    <TextAlign type="System.Drawing.ContentAlignment">16</TextAlign>
+                    <Font type="System.Drawing.Font" size="8.25" style="0">Tahoma</Font>
+                    <Location type="System.Drawing.Point">
+                        <X type="System.Int32">280</X>
+                        <Y type="System.Int32">32</Y>
+                    </Location>
+                    <Name type="System.String">lblCache</Name>
+                    <Size type="System.Drawing.Size">
+                        <Width type="System.Int32">128</Width>
+                        <Height type="System.Int32">21</Height>
+                    </Size>
+                    <TabIndex type="System.Int32">1</TabIndex>
+                    <Text type="System.String">Cache Timeout:</Text>
+                </element>
+                <element type="System.Windows.Forms.Label" uuid="4059e9c2-6ea6-42dc-becd-218aead964d7">
+                    <TextAlign type="System.Drawing.ContentAlignment">16</TextAlign>
+                    <Font type="System.Drawing.Font" size="8.25" style="0">Tahoma</Font>
+                    <Location type="System.Drawing.Point">
+                        <X type="System.Int32">8</X>
+                        <Y type="System.Int32">32</Y>
+                    </Location>
+                    <Name type="System.String">lblDomain</Name>
+                    <Size type="System.Drawing.Size">
+                        <Width type="System.Int32">72</Width>
+                        <Height type="System.Int32">20</Height>
+                    </Size>
+                    <TabIndex type="System.Int32">7</TabIndex>
+                    <Text type="System.String">Domain:</Text>
+                </element>
+            </Controls>
+        </element>
+    </Controls>
+    <EventSources type="System.Collections.ArrayList">
+        <SyncRoot type="System.Object" />
+        <element type="aptixia.sm.EventCSSource" uuid="198b360e-d221-4323-9744-eb954241217e">
+            <Control type="aptixia.sm.DynamicGridControl" ref="f13adeb7-581d-46bc-af1f-1da646799a28" />
+            <EventName type="System.String">SelectedRowChanged</EventName>
+            <CSSource type="System.String">CallSetters();</CSSource>
+        </element>
+        <element type="aptixia.sm.EventCSSource" uuid="fe6282e0-3605-48f5-8f5e-d463199c2e60">
+            <Control type="aptixia.sm.DynamicGridControl" ref="30c40be2-1778-4228-8404-3ee96cbbfa1e" />
+            <EventName type="System.String">SelectedIndexChanged</EventName>
+            <CSSource type="System.String">CallSetters();</CSSource>
+        </element>
+        <element type="aptixia.sm.EventCSSource" uuid="c5b9edae-a294-4e86-8459-154229c91938">
+            <Control type="DevExpress.XtraEditors.TextEdit" ref="a4759247-cfaa-4606-9546-f328d37ba9d9" />
+            <EventName type="System.String">Validating</EventName>
+            <CSSource type="System.String">string error=Schema.GetValidationError("DnsPlugin.domain",m_form.edtDomain.Text);
+m_root.ErrorProvider.SetError(m_form.edtDomain,error);
+i_arg1.Cancel=error.Length!=0;
+</CSSource>
+        </element>
+        <element type="aptixia.sm.EventCSSource" uuid="f1459c21-fb41-4a9b-981a-00320f7a21f4">
+            <Control type="aptixia.sm.DevExSpinEdit" ref="7c877730-a5ce-4e06-8192-ce59b2caadd4" />
+            <EventName type="System.String">Validating</EventName>
+            <CSSource type="System.String">string error=Schema.GetValidationError("DnsPlugin.timeout",m_form.edtTimeout.Value);
+m_root.ErrorProvider.SetError(m_form.edtTimeout,error);
+i_arg1.Cancel=error.Length!=0;
+</CSSource>
+        </element>
+        <element type="aptixia.sm.EventCSSource" uuid="b6e070f5-96af-4d16-8c8a-3e62eb1b7980">
+            <Control type="DevExpress.XtraEditors.SimpleButton" ref="c09f8d1d-398e-45e9-a180-5c0607a9a34f" />
+            <EventName type="System.String">Click</EventName>
+            <CSSource type="System.String">nameServerList.Add();</CSSource>
+        </element>
+        <element type="aptixia.sm.EventCSSource" uuid="8dc743bd-e596-4454-b807-1a51fbcf2393">
+            <Control type="DevExpress.XtraEditors.SimpleButton" ref="8ae0cd31-6636-4b1a-a73e-da627b616c51" />
+            <EventName type="System.String">Click</EventName>
+            <CSSource type="System.String">if (m_form.grdNameServerList.SelectedIndex&gt;=0)
+   nameServerList.RemoveAt(m_form.grdNameServerList.SelectedIndex);
+</CSSource>
+        </element>
+        <element type="aptixia.sm.EventCSSource" uuid="122b70de-d96a-4af0-acd9-d310eb3dffcd">
+            <Control type="DevExpress.XtraEditors.SimpleButton" ref="e7cec814-2bef-4332-973d-8dca2b3c63d5" />
+            <EventName type="System.String">Click</EventName>
+            <CSSource type="System.String">if (m_form.grdSearchList.SelectedIndex&gt;=0)
+   searchList.RemoveAt(m_form.grdSearchList.SelectedIndex);</CSSource>
+        </element>
+        <element type="aptixia.sm.EventCSSource" uuid="f9bab26b-93c3-47bb-b874-b3bd70547224">
+            <Control type="DevExpress.XtraEditors.SimpleButton" ref="04abc0e8-db40-4676-973a-29b374b4a26b" />
+            <EventName type="System.String">Click</EventName>
+            <CSSource type="System.String">searchList.Add();</CSSource>
+        </element>
+    </EventSources>
+    <BindingSources type="System.Collections.ArrayList">
+        <SyncRoot type="System.Object" />
+        <element type="aptixia.sm.BindingCSSource" uuid="577a3958-1136-4f23-92e8-65676b8cc35c">
+            <Control type="DevExpress.XtraEditors.TextEdit" ref="a4759247-cfaa-4606-9546-f328d37ba9d9" />
+            <PropertyName type="System.String">Text</PropertyName>
+            <ToControlCSSource type="System.String">domain</ToControlCSSource>
+            <FromControlCSSource type="System.String">domain</FromControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="a048896f-24d1-4080-be1e-f22b3435847a">
+            <Control type="aptixia.sm.DynamicGridControl" ref="f13adeb7-581d-46bc-af1f-1da646799a28" />
+            <PropertyName type="System.String">Collection</PropertyName>
+            <ToControlCSSource type="System.String">nameServerList</ToControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="5debf867-049f-4c5d-9567-a17ddd8d6d6e">
+            <Control type="aptixia.sm.DynamicGridControl" ref="30c40be2-1778-4228-8404-3ee96cbbfa1e" />
+            <PropertyName type="System.String">Collection</PropertyName>
+            <ToControlCSSource type="System.String">searchList</ToControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="1546b923-4cf3-43c3-9a08-61f3cbb532bd">
+            <Control type="aptixia.sm.DynamicGridControl" ref="0d151e48-6003-47cf-b17c-93fb0934128a" />
+            <PropertyName type="System.String">Collection</PropertyName>
+            <ToControlCSSource type="System.String">hostList</ToControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="45c7c837-2afe-4d0a-a8d6-fac6943ee34b">
+            <Control type="aptixia.sm.DevExSpinEdit" ref="7c877730-a5ce-4e06-8192-ce59b2caadd4" />
+            <PropertyName type="System.String">Value</PropertyName>
+            <ToControlCSSource type="System.String">timeout</ToControlCSSource>
+            <FromControlCSSource type="System.String">timeout=Convert.ToInt64(value);</FromControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="2713648e-e828-42a6-849e-dae136b050c3">
+            <Control type="DevExpress.XtraEditors.SimpleButton" ref="8ae0cd31-6636-4b1a-a73e-da627b616c51" />
+            <PropertyName type="System.String">Enabled</PropertyName>
+            <ToControlCSSource type="System.String">m_form.grdNameServerList.SelectedIndex&gt;=0</ToControlCSSource>
+        </element>
+        <element type="aptixia.sm.BindingCSSource" uuid="d7692f2d-78fb-46a2-bb63-719fff580d5f">
+            <Control type="DevExpress.XtraEditors.SimpleButton" ref="e7cec814-2bef-4332-973d-8dca2b3c63d5" />
+            <PropertyName type="System.String">Enabled</PropertyName>
+            <ToControlCSSource type="System.String">m_form.grdSearchList.SelectedIndex&gt;=0</ToControlCSSource>
+        </element>
+    </BindingSources>
+</element>

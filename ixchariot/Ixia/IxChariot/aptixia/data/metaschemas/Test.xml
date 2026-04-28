@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="Test" baseType="TreeNode">
+    <help>The base class for test configurations</help>
+    
+    <Enum name="eMode">
+    <help>Mode of operation</help>
+        <Choices>
+            <Choice symbol="kMonitor" value="0"/>
+            <Choice symbol="kTest" value="1"/>
+        </Choices>
+    </Enum>
+
+    <PropertyInt permission="rro">
+        <name>mode</name>
+        <displayName>Mode</displayName>
+        <default>0</default>
+        <help>Testing mode</help>
+    </PropertyInt>
+
+    <PropertyNode nodeType="StatManager">
+        <name>statManager</name>
+        <help>StatManager registers for statistics and reports the to StatViewer</help>
+    </PropertyNode>
+    
+    <PropertyString permission="rro">
+        <name>name</name>
+        <displayName>Name</displayName>
+        <default>Test1</default>
+        <minLength>1</minLength>
+        <maxLength>256</maxLength>
+        <help>The name of this test</help>
+    </PropertyString>
+    
+    <PropertyString permission="rro">
+        <name>userName</name>
+        <displayName>UserName</displayName>
+        <default>User</default>
+        <minLength>1</minLength>
+        <maxLength>256</maxLength>
+        <help>The user name used when creating this Test</help>
+    </PropertyString>
+    
+    <PropertyString permission="rro">
+        <name>resultsFolderPath</name>
+        <displayName>ResultsFolderPath</displayName>
+    </PropertyString>    
+    
+    <Method2 name="Ping">
+        <help>Empty method used to test basic connectivity</help>
+    </Method2>
+
+    <Method2 name="Start">
+        <help>Start a test run</help>
+    </Method2>
+
+    <Method2 name="Stop">
+        <help>Stop a test run</help>
+    </Method2>
+
+    <Method2 name="Save">
+        <help>Save this test configuration along with application data</help>
+        <Argument name="appXml" type="string">
+            <help>The application data to save with the test</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="SaveAs">
+        <help>Save this test configuration under a different name</help>
+        <Argument name="name" type="string">
+            <help>The name to save this test under</help>
+        </Argument>
+        <Argument name="appXml" type="string">
+            <help>The application data to save with the test</help>
+        </Argument>
+        <Argument name="id" type="int32" direction="out">
+            <help>The id the test was saved under</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="Close">
+        <help>Close this test and release all resources associated with it</help>
+    </Method2>
+
+    <Method2 name="GetAppXml">
+        <help>Get the application data associated with a particular test</help>
+        <Argument name="id" type="int32">
+            <help>The id of the test to retrieve the associated data for</help>
+        </Argument>
+        <Argument name="appXml" type="string" direction="out">
+            <help>The associated data</help>
+        </Argument>
+     </Method2>
+     <Method2 name="GetReporterXmd">
+         <help>Get the reporter xmd xml associated with a particular test result</help>
+         <Argument name="reporterXmd" type="string" direction="out">
+             <help>associated xml string</help>
+         </Argument>
+     </Method2>  
+     <Method2 name="SetReporterXmd">
+         <help>Set the reporter xmd xml associated with a particular test result</help>
+         <Argument name="reporterXmd" type="string" direction="in">
+             <help>associated xml string</help>
+         </Argument>
+     </Method2> 
+</Node>

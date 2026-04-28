@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="NodeTest" baseType="">
+    <help>
+        NodeTest is one of the unit test classes. It is used for testing
+        CORBA access to TestServer.
+    </help>
+    <PropertyInt>
+        <name>intVar</name>
+        <min>0</min>
+        <max>900</max>
+        <default>5</default>
+        <description>this is a test int</description>
+        <help>this is a lengthier help text</help>
+    </PropertyInt>
+    <PropertyInt>
+	<name>intVarNoLimits</name>
+        <default>5</default>
+        <description>this is a test int</description>
+        <help>this is a lengthier help text</help>
+    </PropertyInt>
+    <PropertyBoolean>
+        <name>booleanVar</name>
+        <default>0</default>
+        <description>this is a test boolean</description>
+        <help>this is a lengthier help text</help>
+    </PropertyBoolean>
+    <PropertyDouble>
+        <name>doubleVar</name>
+        <min>5.9</min>
+        <max>700.9</max>
+        <default>300.5</default>
+        <description>this is a test double</description>
+        <help>this is a lengthier double help text</help>
+    </PropertyDouble>
+    <PropertyDouble>
+	<name>doubleVarNoLimits</name>
+        <default>300.5</default>
+        <description>this is a test double</description>
+        <help>this is a lengthier double help text</help>
+    </PropertyDouble>
+    <PropertyString>
+        <name>stringVar</name>
+        <minLength>1</minLength>
+        <maxLength>20</maxLength>
+        <default>default string</default>
+        <description>this is a test string</description>
+        <help>this is a lengthier help text</help>
+    </PropertyString>
+    <PropertyIntList>
+        <name>intListVar</name>
+        <min>0</min>
+        <max>900</max>
+	<minListLength>0</minListLength>
+	<maxListLength>5</maxListLength>
+        <default>5</default>
+        <description>this is a test int</description>
+        <help>this is a lengthier help text</help>
+    </PropertyIntList>
+    <PropertyDoubleList>
+        <name>doubleListVar</name>
+        <min>5.9</min>
+        <max>700.9</max>
+	<minListLength>0</minListLength>
+	<maxListLength>5</maxListLength>
+        <default>300.5</default>
+        <description>this is a test double</description>
+        <help>this is a lengthier double help text</help>
+    </PropertyDoubleList>
+    <PropertyStringList>
+        <name>stringListVar</name>
+        <minLength>1</minLength>
+        <maxLength>20</maxLength>
+	<minListLength>0</minListLength>
+	<maxListLength>5</maxListLength>
+        <default>default string</default>
+        <description>this is a test string</description>
+        <help>this is a lengthier help text</help>
+    </PropertyStringList>
+    <PropertyNode nodeType="NodeTestB">
+        <name>subNode</name>
+        <help>A member object</help>
+    </PropertyNode>
+    <PropertyNodeList nodeType="NodeTestB">
+        <name>subNodeList</name>
+	<minListLength>0</minListLength>
+	<maxListLength>5</maxListLength>
+        <help>A list of child objects</help>
+    </PropertyNodeList>
+    <PropertyNode nodeType="NodeTestA" polymorphic="1">
+        <name>subNodePolymorphic</name>
+        <help>A polymorphic member object</help>
+    </PropertyNode>
+</Node>

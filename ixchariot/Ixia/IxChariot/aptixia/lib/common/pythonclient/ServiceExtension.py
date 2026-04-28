@@ -1,0 +1,18 @@
+import string, threading
+import Aptixia, Aptixia_prv
+import XProtocolObject
+
+
+class ServiceExtension( XProtocolObject.XProtocolObject ):
+	""" Service Extension class (currently empty) """
+	# Constructor
+	def __init__( self, parent, objectId=None, transactionContext=None, preFetch=False):
+		super( ServiceExtension, self ).__init__(parent, objectId, transactionContext, preFetch)
+
+	# Type identifier (used internally)
+	def getType( self ):
+		"""Returns the type of the object as a string"""
+		return "ServiceExtension"
+
+		pass
+

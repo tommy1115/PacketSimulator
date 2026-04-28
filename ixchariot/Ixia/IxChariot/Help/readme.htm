@@ -1,0 +1,701 @@
+
+<HTML>
+<TITLE>
+        Ixia Software Release Notes
+    : 
+        IxChariot 6.70 EA
+     : 
+        October 2008
+    </TITLE>
+<BODY>
+
+<CENTER>
+<H1>
+        Ixia Software Release Notes
+    <BR>
+        IxChariot 6.70 EA
+    <BR>
+        October 2008
+    </H1>
+</CENTER>
+<UL>
+<LI>
+<A HREF="#About this Release">About this Release</A>
+</LI>
+<LI>
+<A HREF="#What's New in IxChariot">What's New in IxChariot</A>
+</LI>
+<LI>
+<A HREF="#Installation Notes">Installation Notes</A>
+</LI>
+<LI>
+<A HREF="#Resolved Defects List">Resolved Defects List</A>
+</LI>
+<LI>
+<A HREF="#Known Issues">Known Issues</A>
+</LI>
+<LI>
+<A HREF="#Advice for Using IxChariot">Advice for Using IxChariot</A>
+</LI>
+<LI>
+<A HREF="#Notices">Notices</A>
+</LI>
+<LI>
+<A HREF="#Contacting Ixia">Contacting Ixia</A>
+</LI>
+</UL>
+<BR>
+<HR>
+   
+
+
+<H2>
+<A NAME="About this Release">About this Release</A>
+</H2>
+<PRE>
+IxChariot 6.70 EA is an "early adopter" release. This version of the product 
+is now compatible with the Microsoft Windows Vista operating system.
+ 
+Please read the Installation Notes below for some important information on 
+upgrading to IxChariot 6.70 EA from previous versions.
+
+<B>Ixia Application Compatibility</B>
+IxChariot 6.70 EA is compatible with the following Ixia application releases:
+  
+    - IxAccess 2.40 EA Patch1
+    - IxANVL 7.45 EA
+    - IxAutomate 6.40 GA
+    - IxLoad 3.60 EA
+    - IxNetwork 5.30 EA SP2 Patch2
+    - IxOS 5.10 GA and IxOS 5.20 EA SP2
+    - IxProfile 1.15 GA
+    - IxVPN 3.00 GA SP3
+    - Licensing 2.70 EA 
+    - Test Conductor 1.10 GA Patch3
+      
+For additional product compatibility information please refer to the following 
+online utility. An Ixia website account is required before accessing.
+  
+      <A HREF=" http://www.ixiacom.com/support/product_compatibility_matrix">http://www.ixiacom.com/support/product_compatibility_matrix</A>
+                
+<B>Ixia Licensing</B>
+IxChariot utilizes Ixia Licensing 2.70 EA.
+</PRE>
+<HR>
+
+   
+
+
+
+
+<H2>
+<A NAME="Installation Notes">Installation Notes</A>
+</H2>
+<PRE>
+    
+<B>Upgrades from Previous Versions of IxChariot</B>
+Please use a machine that is within specifications given in the documentation 
+for the console.
+ 
+Please remember that the Ixia floating license server should not be co-located 
+with the IxChariot console.
+
+<B>General Installation Instructions</B>
+NOTE: The user is required to have administrator privileges on the machine on 
+      which he or she is attempting to install or operate IxChariot.
+
+If you have an engineering build (EB) of IxChariot or one of its components, you
+must de-install it before installing IxChariot 6.70 EA.
+
+NOTE: Running or installing the IxChariot console on an Ixia chassis is not 
+      recommended and may cause interoperability issues with other Ixia 
+      applications using common application components.
+
+ 
+<B>Terminal Services - Before installation</B>
+To install on a Win2K / Win2K3 Server with Terminal Services the following 
+command should be entered in a command window: 'change user /install'.  
+
+To return the setting back to the default, the user executes the following 
+command in a command window: 'change user /execute'.
+
+ 
+<B>Former NetIQ Chariot Customers - After Installation</B>
+Please note that the installation creates an "IxChariot" Program folder. If you 
+are installing this version of IxChariot over a previous version of NetIQ's 
+Chariot, the installation program detects the older version and uses the same 
+Program folder. You can change the destination folder during the installation 
+process. 
+
+Also, tests and script default directories can be changed in the Console 
+(Options->Change User Settings->Directories).
+
+</PRE>
+<HR> 
+
+
+<H2>
+<A NAME="Additional Documentation">Additional Documentation</A>
+</H2>
+<PRE>
+Please refer to our website at <A HREF="http://www.ixiacom.com/library">http://www.ixiacom.com/library</A>. PDF and HTML 
+versions of all documentation are available there.
+
+You will be required to provide a login and password to enter this section of 
+the web site. If you do not have the username and password, please forward your 
+request to <A HREF="mailto:support@ixiacom.com">mailto:support@ixiacom.com</A>.
+</PRE>
+<HR>
+ 
+    
+        
+<H2>
+<A NAME="What's New in IxChariot">What's New in IxChariot</A>
+</H2>       
+
+
+
+<H2>6.70 EA Features</H2>
+
+
+
+
+<TABLE WIDTH="90%" BORDER="2" CELLPADDING="3" CELLSPACING="4">
+
+
+<TR BGCOLOR="#99CCFF">
+<TH>AFD-1 Support</TH>
+</TR>
+
+
+
+
+
+
+<TR>
+<TD>IxChariot now supports the Ixia AFD-1 GPS clock-synchronization device for highly-accurate latency testing between remote Ixia chassis.</TD>
+</TR>
+
+
+
+
+
+
+</TABLE>
+
+
+<TABLE WIDTH="90%" BORDER="2" CELLPADDING="3" CELLSPACING="4">
+
+
+<TR BGCOLOR="#99CCFF">
+<TH>Floating License Status Console</TH>
+</TR>
+
+
+
+
+
+
+<TR>
+<TD>The Ixia Registration Utility (IRU), now includes a utility which will display the status of licenses on a floating license server.  This information includes the number of used and free licenses as well as information about which users are currently using floating licenses.</TD>
+</TR>
+
+
+
+
+
+
+</TABLE>
+
+
+<TABLE WIDTH="90%" BORDER="2" CELLPADDING="3" CELLSPACING="4">
+
+
+<TR BGCOLOR="#99CCFF">
+<TH>Low-Jitter Streaming</TH>
+</TR>
+
+
+
+
+
+
+<TR>
+<TD>A new option is available on Windows-based endpoints that allows users to generate highly-accurate low-jitter streams.  This is extremely useful for validating QoS configurations for voice and video traffic.</TD>
+</TR>
+
+
+
+
+
+
+</TABLE>
+
+
+
+
+<HR>
+
+
+    
+<HR>
+
+    
+        
+<H2>
+<A NAME="Resolved Defects List">Resolved Defects List</A>
+</H2>
+
+
+
+<H3>Endpoints</H3>
+
+
+<TABLE WIDTH="90%" BORDER="2" CELLPADDING="3" CELLSPACING="4">
+
+
+
+
+<TR BGCOLOR="#99CCCC">
+
+
+<TH WIDTH="75" ALIGN="CENTER">Bug Number</TH>
+
+<TH ALIGN="CENTER">Notes</TH>
+
+
+</TR>
+
+
+
+
+
+
+<TR>
+
+
+<TD WIDTH="75" VALIGN="MIDDLE"><TT>435752</TT></TD>
+
+<TD><TT>IxChariot doesn't support IPv6 QoS on Linux from responder to initiator.  Resolved using new feature available in Linux 2.6.14+.
+</TT></TD>
+
+
+</TR>
+
+
+<TR>
+
+
+<TD WIDTH="75" VALIGN="MIDDLE"><TT>450746</TT></TD>
+
+<TD><TT>Some endpoints exhibit jumps or step-ladder behavior in the one-way delay values during streaming tests.
+</TT></TD>
+
+
+</TR>
+
+
+
+
+</TABLE>
+
+
+
+
+
+
+<H3>IxChariot Console</H3>
+
+
+<TABLE WIDTH="90%" BORDER="2" CELLPADDING="3" CELLSPACING="4">
+
+
+
+
+<TR BGCOLOR="#99CCCC">
+
+
+<TH WIDTH="75" ALIGN="CENTER">Bug Number</TH>
+
+<TH ALIGN="CENTER">Notes</TH>
+
+
+</TR>
+
+
+
+
+
+
+<TR>
+
+
+<TD WIDTH="75" VALIGN="MIDDLE"><TT>438003</TT></TD>
+
+<TD><TT>The 'Edit Video Pair' dialog does not contain an option to set the number of timing records.
+</TT></TD>
+
+
+</TR>
+
+
+<TR>
+
+
+<TD WIDTH="75" VALIGN="MIDDLE"><TT>450330</TT></TD>
+
+<TD><TT>When using video pairs with Ixia hardware timestamps, results were calculated in microseconds, but displayed as milliseconds.  Displayed results were off by 1000.
+</TT></TD>
+
+
+</TR>
+
+
+
+
+</TABLE>
+
+
+
+
+
+
+<H3>IxChariot-API</H3>
+
+
+<TABLE WIDTH="90%" BORDER="2" CELLPADDING="3" CELLSPACING="4">
+
+
+
+
+<TR BGCOLOR="#99CCCC">
+
+
+<TH WIDTH="75" ALIGN="CENTER">Bug Number</TH>
+
+<TH ALIGN="CENTER">Notes</TH>
+
+
+</TR>
+
+
+
+
+
+
+<TR>
+
+
+<TD WIDTH="75" VALIGN="MIDDLE"><TT>435760</TT></TD>
+
+<TD><TT>A number of IxChariot functions are unavailable from the IxChariot API.  These include items such as pair enable/disable, application group setup and IPTV commands.
+</TT></TD>
+
+
+</TR>
+
+
+
+
+</TABLE>
+
+
+
+
+
+
+<H3>StackManager</H3>
+
+
+<TABLE WIDTH="90%" BORDER="2" CELLPADDING="3" CELLSPACING="4">
+
+
+
+
+<TR BGCOLOR="#99CCCC">
+
+
+<TH WIDTH="75" ALIGN="CENTER">Bug Number</TH>
+
+<TH ALIGN="CENTER">Notes</TH>
+
+
+</TR>
+
+
+
+
+
+
+<TR>
+
+
+<TD WIDTH="75" VALIGN="MIDDLE"><TT>437116</TT></TD>
+
+<TD><TT>When testing using an Ixia AFD-1 as the external clock source, the user must manually reset the hardware timestamps using IxExplorer.  To do this, open IxExplorer and add all chassis to a chassis chain.  After this is complete, right-click on the root of the chassis chain and select "Clear Timestamps".
+</TT></TD>
+
+
+</TR>
+
+
+
+
+</TABLE>
+
+
+
+
+
+
+<H3>Test Scheduler</H3>
+
+
+<TABLE WIDTH="90%" BORDER="2" CELLPADDING="3" CELLSPACING="4">
+
+
+
+
+<TR BGCOLOR="#99CCCC">
+
+
+<TH WIDTH="75" ALIGN="CENTER">Bug Number</TH>
+
+<TH ALIGN="CENTER">Notes</TH>
+
+
+</TR>
+
+
+
+
+
+
+<TR>
+
+
+<TD WIDTH="75" VALIGN="MIDDLE"><TT>449473</TT></TD>
+
+<TD><TT>After restarting Test Scheduler, tests fail to run and return error CHR0424.
+</TT></TD>
+
+
+</TR>
+
+
+
+
+</TABLE>
+
+
+
+
+    
+<P>
+<HR>
+</P>
+    
+
+
+
+<H2>
+<A NAME="Known Issues">Known Issues</A>
+</H2>
+<PRE>
+Please visit the <A HREF="http://www.ixiacom.com/support/downloads_and_updates/ixchariot.php">IxChariot support web page</A> for more information on known issues related to this release.
+An Ixia website account is required before accessing.
+</PRE>
+<HR>
+    
+    
+
+<H2>
+<A NAME="Advice for Using IxChariot">Advice for Using IxChariot</A>
+</H2>
+<PRE>
+<B>IxChariot Runtime</B>
+The IxChariot Runtime Console is designed with the needs of a field service or 
+manufacturing organization in mind. Tests are designed on a centralized 
+fully-featured IxChariot Console.  IxChariot Runtime can be used to run 
+existing tests again after modifying the addresses of the Ixia Performance 
+Endpoints of the pairs. Its functionality is very similar to that of the 
+IxChariot Console, with a few limitations.
+
+
+Main restrictions in IxChariot Runtime: 
+    - Tests cannot be created, only read and repeated 
+    - Pairs cannot be added or deleted 
+    - Script files are not provided, nor can the scripts used in previous 
+      tests be modified.
+
+For detailed information about IxChariot Runtime, refer to the printed User Guide 
+for IxChariot Runtime. 
+
+
+<B>IxChariot Test Viewer Capabilities</B>
+The IxChariot Test Viewer is a free utility that enhances the IxChariot Console. 
+It is designed to allow you to view existing IxChariot test results when you are 
+away from the IxChariot Console computer. With the IxChariot Test Viewer, you can 
+review and print results, as well as make modifications to the way IxChariot test 
+data is displayed. You can also modify the sorting and grouping options for 
+endpoint pairs to analyze and view the data from different perspectives. 
+
+In addition to calling up results of previous tests, the Viewer has the following 
+capabilities: 
+    - IxChariot's Compare Tests feature is enabled in the Test Viewer. 
+    - Results can be saved in different formats, for different versions of 
+      IxChariot. 
+    - Results can be exported to any of several formats. 
+    - Unlike the IxChariot Console, the IxChariot Test Viewer is not designed to 
+      configure or execute tests. 
+
+Main restrictions of the IxChariot Test Viewer: 
+    - Tests cannot be created or run. 
+    - Pairs cannot be added. 
+    - The Viewer cannot be installed on the same computer as the IxChariot 
+      Console. 
+    - Script files are not provided, nor can test scripts used in previous tests 
+      be edited. 
+    - The IxChariot Application Programming Interface is not supported. 
+    - The Viewer only reads previously saved test files. 
+    
+<B>Additional Information</B>
+- Comparing real-time and batch reporting
+  Under some conditions, you can run the same test using real-time and batch 
+  reporting and get numbers that say the transaction rate and throughput are 
+  poorer with real-time than with batch reporting. This is because real-time 
+  reporting is much more disruptive, generating more network traffic than batch
+  reporting. This condition can occur because you are generating far too many 
+  timing records; - the port's CPU spends more time generating timing records 
+  than doing the work inside the scripts. Because of queuing effects, a script 
+  can appear to run faster with real-time reporting than with batch reporting. 
+  This behavior can also occur when you are running a large number of endpoint 
+  pairs in a network or on a single computer. For reliable performance results,
+  always use batch reporting. In addition, Ixia always recommends using batch 
+  reporting when running tests on an Ixia chassis.
+
+- One-way (network) delay measurement is currently supported on IxOS, Windows, 
+  Linux, and Solaris platforms.
+  In addition, the accuracy with which endpoints can measure one-way delay 
+  depends on the accuracy of the high-performance timers on these platforms. The 
+  timers on Windows 2000, Windows NT, and Sun ULTRA platforms provide the best 
+  performance, while timers on Windows 98, Windows Me, Sun x86, and pre-ULTRA 
+  SPARCs are less accurate; they report generally higher estimated and maximum 
+  clock errors on IxChariot's One-Way Delay tab. For the most precise, 
+  high-resolution one-way delay measurements on high-speed LANs, test with 
+  endpoints running on IxOS, Windows XP, Windows 2000, Windows NT, and Sun ULTRA 
+  platforms. A hardware bug on some PCs occasionally causes the high-performance 
+  timer to leap ahead unexpectedly. IxChariot detects this problem if it occurs 
+  during a test, and fails the involved pair(s) with error CHR0359. For more 
+  information about this bug and a list of affected hardware, see 
+  http://msdn.microsoft.com/bugs, article Q274323.
+
+- Disable your screen saver
+  Screen savers in Windows can significantly lower the throughput that is measured 
+  by an endpoint. We recommend disabling your screen saver on endpoint computers 
+  while running tests.
+
+- Script support
+  Ixia ships a wide variety of application scripts with IxChariot to help you 
+  emulate most popular applications. Our IxProfile 1.15 is the best way to get 
+  custom scripts of other applications in your network.
+
+ 
+
+*IxChariot is a registered trademark of Ixia.  United States Patent Numbers 
+5,838,919, 5,881,237, 5,937,165, and 6,061,725. Other patents pending. 
+</PRE>
+<HR>
+
+<H2>
+<A NAME="Notices">Notices</A>
+</H2>
+<PRE>
+*IxChariot is a registered trademark of Ixia.  United States Patent Numbers 
+ 5,838,919, 5,881,237, 5,937,165, and 6,061,725. Other patents pending. 
+
+CONTAINS
+IBM VisualAge for C++ for Windows, Version 3.5
+Runtime Modules
+Copyright IBM Corporation 1996
+All Rights Reserved
+
+Software written and copyrighted by Henry Spencer:
+Copyright 1992 Henry Spencer.
+Copyright 1992, 1993
+
+The Regents of the University of California.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this    
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, 
+   this list of conditions and the following disclaimer in the documentation 
+   and/or other materials provided with the distribution.
+
+3. All advertising materials mentioning features or use of this software must 
+   display the following acknowledgement: This product includes software 
+   developed by the University of California, Berkeley and its contributors.
+
+4. Neither the name of the University nor the names of its contributors may be 
+   used to endorse or promote products derived from this software without 
+   specific prior written permission.
+
+ 
+THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS "AS IS" AND ANY 
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE 
+DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY 
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES 
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; 
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON 
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT 
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</PRE>
+<HR>   
+
+<H2>
+<A NAME="Contacting Ixia">Contacting Ixia</A>
+</H2>
+<PRE>
+Ixia
+26601 W. Agoura Road
+Calabasas, CA 91302 U.S.A.
+Web: www.ixiacom.com
+<A HREF="http://www.ixiacom.com">www.ixiacom.com</A>
+Phone: +1 818 871-1800 or + 1 877 FOR IXIA
+Fax: +1 818 871 1805
+
+General information:
+Email: <A HREF="mailto:info@ixiacom.com">info@ixiacom.com</A>
+
+IxChariot Technical support:
+Email: <A HREF="mailto:support@ixiacom.com">support@ixiacom.com</A>
+
+Ixia support hours are 6:00AM PST to 6:00PM PST. 
+ 
+For technical assistance, including product repairs/RMA's, please email us at: 
+<A HREF="mailto:support@ixiacom.com">support@ixiacom.com</A> or phone us at (877) 367-4942. Outside the United States 
+phone us at 1-818-871-1800 (Option 1). 
+ 
+For technical assistance in Europe, Middle East, and Africa, please email us at: 
+<A HREF="mailto:eurosupport@ixiacom.com">eurosupport@ixiacom.com</A> or phone us at +44 (0) 1628 405797. 
+ 
+For technical assistance in India, please email us at: <A HREF="mailto:support-india@ixiacom.com">support-india@ixiacom.com</A> 
+or phone us at +91-80-32918500.
+
+For technical assistance in Asia Pacific, please email us at: 
+<A HREF="mailto:Support-Field-Asia-Pacific@ixiacom.com">Support-Field-Asia-Pacific@ixiacom.com</A> or phone us at: +65-6332-0126 or Fax at: 
++65-6332-0127.
+</PRE>
+<HR>
+
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="DualPhyPlugin" baseType="CardPlugin">
+<description>DualPhy Ethernet card</description>
+	<PropertyString>
+		<name>medium</name>
+		<default>copper</default>
+        <choices>
+        	<choice value="copper" name="Copper mode" />
+        	<choice value="fiber" name="Fiber mode" />
+        	<choice value="auto" name="Auto mode" />
+        </choices>
+        <description>Medium</description>
+        <help>Card's physical medium can be copper or fiber that can be configured by the user.</help>
+	</PropertyString>
+</Node>

@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="PortGroup" baseType="" serverInstantiate="1"  version="2">
+<help>PortGroup represents the concept of a stack of layers which are to be configured on a group of ports.</help>
+    <PropertyString permission="rw">
+        <name>name</name>
+        <description>Name of the PortGroup</description>
+    </PropertyString>
+    <PropertyString version="2">
+        <name>category</name>
+        <description>Category of port group. Used be IxLoad to separate 'Client Network Configuration'
+        from 'Server Network Configuration'. Contains category Id like 'Network.Config.Client'. 
+        Hidden from user. Automatically assigned by Stack Manager application based on sub-tree selection.</description>
+        <default></default>
+    </PropertyString>
+    <PropertyNode nodeType="StackElementPlugin" polymorphic="1">
+        <name>stack</name>
+        <description>Reference to the stack of layers</description>
+    </PropertyNode>
+    <PropertyNodeList nodeType="StackElementPlugin" polymorphic="1">
+        <name>globalPluginList</name>
+        <description>Reference to the list of global plugins</description>
+    </PropertyNodeList>
+    <PropertyStringList>
+        <name>portList</name>
+        <description>List of port ids belonging to the group</description>
+    </PropertyStringList>
+    
+    <PropertyNode nodeType="PortController" polymorphic="0">
+        <name>portController</name>
+    </PropertyNode>
+    
+    <PropertyBoolean>
+        <name>doAutoGratArpForIPv4</name>
+        <default>true</default>
+        <description>Advertise all IPv4 addresses to all neighbors</description>
+    </PropertyBoolean>
+    <PropertyBoolean>
+        <name>doAutoGratArpForIPv6</name>
+        <default>true</default>
+        <description>Advertise all IPv6 addresses to all neighbors</description>
+    </PropertyBoolean>
+    <PropertyStringList>
+        <name>neighborTargetList</name>
+        <description>List of IPv6 neighbor to which neighbor solicitations will be sent for advertising purpose.
+        Set doAutoGratArpForIPv6 to false if you want to advertise to specific targets only.</description>
+    </PropertyStringList>
+
+    <List name="StringVector" type="string" />
+
+    <Method2 name="DodBeginDownLoad">
+         <help>DOD start download</help>
+         <Argument name="name" type="string">
+            <help>Name of the file to download</help>
+         </Argument>
+         <Argument name="timeOut" type="int32">
+            <help>Time out limit</help>
+         </Argument>
+         <Argument name="sessionId" direction="out" type="int32">
+            <help>Session id</help>
+         </Argument>
+    </Method2>
+        
+    <Method2 name="DodUpLoadFileSegment">
+         <help>Uploads a file</help>
+         <Argument name="sessionID" type="int32">
+            <help>Session id</help>
+         </Argument>
+         <Argument name="segment" type="octets">
+            <help>Segment name to upload</help>
+         </Argument>
+    </Method2>
+
+    <Method2 name="DodEndDownLoad">
+         <help>End download</help>
+         <Argument name="sessionID" type="int32">
+            <help>Session id</help>
+         </Argument>
+    </Method2>
+
+    <Struct name="Port" version="1">
+        <help>Structure representing a port</help>
+        <Member name="chassis" type="string" default="" version="1">
+            <help>Chassis identifier</help>
+        </Member>
+        <Member name="card" type="int32" default="0" version="1">
+            <help>Card number</help>
+        </Member>
+        <Member name="port" type="int32" default="0" version="1">
+            <help>Port number</help>
+        </Member>
+        <Member name="managementIp" type="string" default="" version="1">
+            <help>Management ip</help>
+        </Member>
+    </Struct>
+    
+    <PropertyNodeList nodeType="BranchToNic" polimorphic="1">
+        <name>branchToNicMap</name>
+        <description>Branch ids to nic address map</description>
+    </PropertyNodeList>
+    
+    <Struct name="VlanInfo" version="1">
+        <help>Structure representing an VLAN tag.</help>
+        <Member name="vlanId" type="int64" default="1" version="1">
+            <help>Vlan id</help>
+        </Member>
+        <Member name="vlanPriority" type="int64" default="1" version="1">
+            <help>Vlan priority</help>
+        </Member>
+    </Struct>
+    
+    <List name="VlanInfoList" type="PortGroup.VlanInfo" />
+    
+    <Struct name="InterfaceInfo" version="1">
+        <help>Structure representing an interface</help>
+        <Member name="ipAddress" type="string" default="" version="1">
+            <help>IP address of the interface</help>
+        </Member>
+        <Member name="prefix" type="string" default="" version="1">
+            <help>Subnet prefix</help>
+        </Member>
+        <Member name="macAddress" type="string" default="" version="1">
+            <help>MAC address of the interface</help>
+        </Member>
+        <Member name="isConnectedInterface" type="bool" default="1" version="1">
+            <help>State of the interface</help>
+        </Member>
+         <Member name="vlanList" type="PortGroup.VlanInfoList" default="" version="1">
+            <help>The VLAN tags used for this interface.</help>
+        </Member>
+    </Struct>
+    
+    <Struct name="IpRangeInfo" version="1">
+        <help>Structure to represent ip range information</help>
+        <Member name="startingIp" type="string" default="" version="1">
+            <help>Starting ip for the range</help>
+        </Member>
+        <Member name="incrementIpBy" type="string" default="" version="1">
+            <help>Increment ip by</help>
+        </Member>
+        <Member name="count" type="int32" default="" version="1">
+            <help>Number of ips</help>
+        </Member>
+        <Member name="ipType" type="string" default="" version="1">
+            <help>Whether Ipv4 or Ipv6</help>
+        </Member>
+    </Struct>
+    
+    <Struct name="MacRangeInfo" version="1">
+        <help>Structure to represent mac range information</help>
+        <Member name="startingMac" type="string" default="" version="1">
+            <help>Starting mac</help>
+        </Member>
+        <Member name="incrementMacBy" type="string" default="" version="1">
+            <help>Increment for mac</help>
+        </Member>
+        <Member name="startingInterfaceId" type="int32" default="" version="1">
+            <help>Starting interface id</help>
+        </Member>
+        <Member name="incrementInterfaceIdBy" type="int32" default="" version="1">
+            <help>Increment for interface id</help>
+        </Member>
+        <Member name="isConnected" type="bool" default="" version="1">
+            <help>Whether the interface is connected or not</help>
+        </Member>
+    </Struct>
+    
+    <Struct name="VlanRangeInfo" version="1">
+        <help>Structure to represent vlan range information</help>
+        <Member name="enable" type="bool" default="" version="1">
+            <help>Enable the outer VLAN.</help>
+        </Member>
+        <Member name="firstId" type="int32" default="" version="1">
+            <help>The first ID to be used for the outer VLAN tag.</help>
+        </Member>
+        <Member name="incrementStep" type="int32" default="" version="1">
+            <help>Frequency with which the outer VLAN ID is to be incremented.</help>
+        </Member>
+        <Member name="increment" type="int32" default="" version="1">
+            <help>Amount if increase between outer VLAN IDs.</help>
+        </Member>
+        <Member name="uniqueCount" type="int32" default="" version="1">
+            <help>Number of unique outer VLAN IDs to use.</help>
+        </Member>
+        <Member name="priority" type="int32" default="" version="1">
+            <help>The 802.1Q priority to be used for the outer VLAN tag.</help>
+        </Member>
+        <Member name="innerEnable" type="bool" default="" version="1">
+            <help>Enable the inner VLAN.</help>
+        </Member>
+        <Member name="innerFirstId" type="int32" default="" version="1">
+            <help>The first ID to be used for the inner VLAN tag.</help>
+        </Member>
+        <Member name="innerIncrementStep" type="int32" default="" version="1">
+            <help>Frequency with which the inner VLAN ID is to be incremented.</help>
+        </Member>
+        <Member name="innerIncrement" type="int32" default="" version="1">
+            <help>Amount if increase between inner VLAN IDs.</help>
+        </Member>
+        <Member name="innerUniqueCount" type="int32" default="" version="1">
+            <help>Number of unique inner VLAN IDs to use.</help>
+        </Member>
+        <Member name="innerPriority" type="int32" default="" version="1">
+            <help>The 802.1Q priority to be used for the inner VLAN tag.</help>
+        </Member>
+        <Member name="idIncrMode" type="int32" default="" version="1">
+            <help>Method used to increment VLAN IDs.
+            May take the following values: 0 (Outer VLAN first), 1 (Inner VLAN first), 2 (Both).</help>
+        </Member>
+        <Member name="etherType" type="string" default="0x8100" version="1">
+            <help>The Ethernet Type value in the VLAN Tag.</help>
+        </Member>
+    </Struct>
+    
+    <Struct name="RangeInformation" version="1">
+        <help>Structure to represent the range information for Ip, Vlan and Mac</help>
+        <Member name="ipRangeInfo" type="PortGroup.IpRangeInfo" default="" version="1">
+            <help>Ip range information</help>
+        </Member>
+        <Member name="macRangeInfo" type="PortGroup.MacRangeInfo" default="" version="1">
+            <help>Mac range information</help>
+        </Member>
+        <Member name="vlanRangeInfo" type="PortGroup.VlanRangeInfo" default="" version="1">
+            <help>Vlan range information</help>
+        </Member>
+        <Member name="port" type="PortGroup.Port" default="" version="1">
+            <help>Port on which these are created</help>
+        </Member>
+    </Struct>
+    
+    <List name="RangeInformationList" type="PortGroup.RangeInformation"/>
+
+    <List name="PortList" type="PortGroup.Port" />
+    
+    <List name="InterfaceInfoList" type="PortGroup.InterfaceInfo" />
+
+    <Struct name="IPort" version="1">
+        <help>Represents a port</help>
+        <Member name="chassis" type="string" default="" version="1">
+            <help>Chassis identifier</help>
+        </Member>
+        <Member name="card" type="int32" default="0" version="1">
+            <help>Card number</help>
+        </Member>
+        <Member name="port" type="int32" default="0" version="1">
+            <help>Port number</help>
+        </Member>
+        <Member name="managementIp" type="string" default="" version="1">
+            <help>Management ip</help>
+        </Member>
+    </Struct>
+    
+    <Enum name="ePluginType">
+        <help>List of plugin types</help>
+        <Choices>
+            <Choice symbol="kIpSec" value="0"/>
+            <Choice symbol="kIp" value="1"/>
+            <Choice symbol="kEmulatedRouter" value="1"/>
+            <Choice symbol="kPpp" value="1"/>
+        </Choices>
+    </Enum>
+    
+    <Enum name="eIpAllocationMechanism">
+        <help>List of ways to get an ip address</help>
+        <Choices>
+            <Choice symbol="kStatic" value="0"/>
+            <Choice symbol="kDynamic" value="1"/>
+            <Choice symbol="kAll" value="2"/>
+        </Choices>
+    </Enum>
+    
+    <Enum name="eProtocol">
+        <help>List of protocols</help>
+        <Choices>
+            <Choice symbol="kIpv4" value="0"/>
+            <Choice symbol="kIpv6" value="1"/>
+            <Choice symbol="kAll" value="2"/>
+        </Choices>
+    </Enum>
+    
+    <Struct name="IpPairInfo" version="1">
+        <help>Represents an IP pair with information about the plugin</help>
+        <Member name="ip1" type="string" default="" version="1">
+            <help>IP address that will be created as part of this PortGroup</help>
+        </Member>
+        <Member name="ip2" type="string" default="" version="1">
+            <help>Represents the partner ip. This can be 'null' to signify an absence of a pair.</help>
+        </Member>
+        <Member name="pluginType" type="PortGroup.ePluginType" default="" version="1">
+            <help>The plugin type that is going to create IP1</help>
+        </Member>
+    </Struct>
+    
+    <List name="IpPairInfoList" type="PortGroup.IpPairInfo"/>
+    
+    <Method2 name="GetIps">
+         <help>Returns the IpPairInfo list.</help>
+         <Argument name="allocationMechanism" direction="in" type="PortGroup.eIpAllocationMechanism">
+            <help>IP address allocation mechanism</help>
+         </Argument>
+         <Argument name="protocol" direction="in" type="PortGroup.eProtocol">
+            <help>Protocol type</help>
+         </Argument>
+         <Argument name="count" direction="in" type="int32">
+            <help>The number if ips that should be returned in the list</help>
+         </Argument>
+         <Argument name="pairInfoList" direction="out" type="PortGroup.IpPairInfoList">
+            <help>List of IpPairInfo</help>
+         </Argument>
+    </Method2>
+    
+    <Method2 name="HasDynamicIps">
+         <help>Returns true if dynamic ips are to be created, false otherwise</help>
+         <Argument name="hasDynamicIps" direction="out" type="bool">
+            <help>true if dynamic ips are present, false otherwise</help>
+         </Argument>
+    </Method2>
+    
+    <Method2 name="GetIpCount">
+         <help>Returns the number if ips in the PortGroup</help>
+         <Argument name="ipCount" direction="out" type="int32">
+            <help>IP count</help>
+         </Argument>
+    </Method2>
+    
+    <Method2 name="GetIpCount">
+         <help>Returns the number of ips satisfying the filter parameters</help>
+         <Argument name="allocationMechanism" direction="in" type="PortGroup.eIpAllocationMechanism">
+            <help>IP address allocation mechanism</help>
+         </Argument>
+         <Argument name="protocol" direction="in" type="PortGroup.eProtocol">
+            <help>Protocol type</help>
+         </Argument>
+         <Argument name="ipCount" direction="out" type="int32">
+            <help>IP count</help>
+         </Argument>
+    </Method2>
+    
+    <Method2 name="GetRangeInformationList">
+         <help>Returns the range information list</help>
+         <Argument name="rangeInformationList" direction="out" type="PortGroup.RangeInformationList">
+            <help>List of range information structures</help>
+         </Argument>
+    </Method2>
+
+    <Method2 name="GetPorts">
+         <help>Returns an array of IPort objects containing description of every port in the port group. All exceptions are passed to the caller</help>
+         <Argument name="portList" direction="out" type="PortGroup.PortList">
+            <help>List of ports</help>
+         </Argument>
+    </Method2>
+
+    <List name="IpAddressList" type="string" />
+
+    <Method2 name="GetTestIpAddresses">
+         <help>Returns an IpAddressList(an array of strings) containg ips mapped to ports in the portList. All exceptions are passed to the caller </help>
+         <Argument name="portList" direction="in" type="PortGroup.PortList">
+            <help>A list of port description objects (IPort)</help>
+         </Argument>
+         <Argument name="ipAddressList" direction="out" type="PortGroup.IpAddressList">
+            <help>List of ip addresses</help>
+         </Argument>
+    </Method2>
+
+    <Method2 name="GetTestIpAddresses">
+         <help>Returns an IpAddressList(a list of InterfaceInfo) containg ips and Vlan informations mapped to ports in the portList. All exceptions are passed to the caller </help>
+         <Argument name="portList" direction="in" type="PortGroup.PortList">
+            <help>A list of port description objects (IPort)</help>
+         </Argument>
+         <Argument name="ipAddressList" direction="out" type="PortGroup.InterfaceInfoList">
+            <help>List of informations</help>
+         </Argument>
+    </Method2>
+    
+    <Method2 name="GetTestIpAddresses">
+         <help>Returns the IpAddressList.</help>
+         <Argument name="portList" direction="in" type="PortGroup.PortList">
+            <help>A list of port description objects (IPort)</help>
+         </Argument>
+         <Argument name="allocationMechanism" direction="in" type="PortGroup.eIpAllocationMechanism">
+            <help>IP address allocation mechanism</help>
+         </Argument>
+         <Argument name="protocol" direction="in" type="PortGroup.eProtocol">
+            <help>Protocol type</help>
+         </Argument>
+         <Argument name="ipAddressList" direction="out" type="PortGroup.IpAddressList">
+            <help>List of ip addresses</help>
+         </Argument>
+    </Method2>
+    
+    <Method2 name="GetShortForm">
+         <help>Returns an IpAddressList(an array of strings) containg ips in the short form </help>
+         <Argument name="ipAddresses" direction="in" type="PortGroup.IpAddressList">
+            <help>A list of ip addresses</help>
+         </Argument>
+         <Argument name="shortIpAddresses" direction="out" type="PortGroup.IpAddressList">
+            <help>List of ip addresses</help>
+         </Argument>
+    </Method2>
+    
+    <Method2 name="GetAllIpAddresses">
+         <help>Returns an IpAddressList(an array of strings) containg all the ips. All exceptions are passed to the caller </help>
+         <Argument name="ipAddressList" direction="out" type="PortGroup.IpAddressList">
+            <help>List of ip addresses</help>
+         </Argument>
+    </Method2>
+
+    <Method2 name="GetIpAddressInfo">
+         <help>Returns a list of port description objects for the corresponding Ip addresses in the ipAddressList. If an ip address does not exists then the corresponding port description object contains empty strings. All exceptions are passed to the caller</help>
+         <Argument name="ipAddressList" direction="in" type="PortGroup.IpAddressList">
+            <help>List of IP addresses</help>
+         </Argument>
+         <Argument name="portList" direction="out" type="PortGroup.PortList">
+            <help>List of ports</help>
+         </Argument>
+    </Method2>
+    
+    <Method2 name="GetInterfaceInfoForIps">
+         <help>Returns a list of Interface Info structs for the corresponding ips given. All exceptions are passed to the caller </help>
+         <Argument name="ipAddressList" direction="in" type="PortGroup.IpAddressList">
+            <help>List of ip addresses</help>
+         </Argument>
+         <Argument name="interfaceInfoList" direction="out" type="PortGroup.InterfaceInfoList">
+            <help>List of interfaces</help>
+         </Argument>
+    </Method2>
+
+
+
+    <Method2 name="StackElementPluginInfo">
+         <help>Returns the information for a plugin</help>
+         <Argument name="retval" direction="out" type="StackElementPlugin.PluginInfoList">
+            <help>Plugin information list</help>
+         </Argument>
+    </Method2>
+
+    <List name="StackElementPluginList" type="StackElementPlugin" />
+
+    <Method2 name="CandidateStackPointRefs">
+         <help>Returns a list of candidates</help>
+         <Argument name="pluginType" direction="in" type="string">
+            <help>Type of plugin</help>
+         </Argument>
+         <Argument name="candidateList" direction="out" type="PortGroup.StackElementPluginList">
+            <help>List of candidates</help>
+         </Argument>
+    </Method2>
+    
+    <Method2 name="DodPackageToPortGroup">
+        <Argument name="packageName" type="PortGroup.StringVector" direction="in" >
+            <help>Name of the package</help>
+         </Argument>
+        <help>Downloads the specified package to the ports in the port group</help>
+    </Method2>
+    
+    <Method2 name="SetArpForGateway">
+        <help>Sets arp for gateway</help>
+		<Argument name="ipAddress" direction="in" type="string">
+            <help>IP address</help>
+         </Argument>
+        <Argument name="val"   direction="in" type="bool">
+            <help>If true arp is set</help>
+         </Argument>
+    </Method2>
+
+    <Method2 name="GetGatewayMacForIp">
+         <help>Retrieves the gateway's MAC address for a given IP address</help>
+         <Argument name="ipAddress"   direction="in" type="string">
+            <help>IP address</help>
+         </Argument>
+         <Argument name="gatewayMac"  direction="out" type="string">
+            <help>MAC address for the gateway</help>
+         </Argument>
+    </Method2>
+    
+    <Method2 name="ForceARPCacheRefresh">
+         <help>Refresh the ARP cache so that every new test run starts with clean ARP information</help>
+    </Method2>
+
+    <Struct name="IpV4V6RangeInfo" version="1">
+		<help>Represents an IP range information</help>
+        <Member name="ipType" type="string" default="" version="1">
+			<help>"IPv4" or "IPv6"</help>
+        </Member>
+        <Member name="startingIp" type="string" default="" version="1">
+			<help>The first IP address of the range</help>
+        </Member>
+        <Member name="incrementBy" type="string" default="" version="1">
+			<help>The increment string for obtaining a new IP address from the previous</help>
+        </Member>
+        <Member name="count" type="int32" default="0" version="1">
+			<help>number of IPs in the range</help>
+        </Member>
+    </Struct>
+    
+    <List name="IpV4V6RangeInfoList" type="PortGroup.IpV4V6RangeInfo" />
+    
+    <Method2 name="GetIpV4V6RangeList">
+		 <help>returns the ip ranges for the specified port</help>
+         <Argument name="port"   direction="in" type="string">
+			<help>Port descriptor in [chassis];[card];[port] format</help>
+         </Argument>
+         <Argument name="ipRangeList"  direction="out" type="PortGroup.IpV4V6RangeInfoList">
+			<help>A list of ip range info structures for the specified port</help>
+         </Argument>
+    </Method2>
+
+    <Method2 name="GetStackConfigurationsPerformed">
+        <Argument name="count" direction="out" type="int32">
+        <help>This is an internal function. Not intended for general use</help>
+        </Argument>
+    </Method2>
+    
+     <Method2 name="RunScript">
+        <help>Runs the specified script on all ports in the port group</help>
+        <Argument name="scriptFile" type="file">
+            <help>The name of the script file to run on the ports</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="RunScriptOnPort">
+        <help>Runs the specified script on the specified port</help>
+        <Argument name="uniquePortId" type="string">
+            <help>Unique id of the port</help>
+        </Argument>
+        <Argument name="scriptFile" type="file">
+            <help>The name of the script file to run on the port</help>
+        </Argument>
+    </Method2>
+    
+</Node>

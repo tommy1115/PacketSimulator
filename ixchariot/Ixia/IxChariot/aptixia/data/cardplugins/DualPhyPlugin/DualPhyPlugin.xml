@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<GUIDescription>
+  <Form size="340,117">
+    <Control ref="medium" editor="aptixia.sm.DDRadioButton" enable="" show="" location="170,17" size="59,24" tabIndex="7" text="Auto" checkedValue="auto" tabstop="True" />
+    <Control ref="medium" editor="aptixia.sm.DDRadioButton" enable="" show="" location="97,17" size="59,24" tabIndex="5" text="Fiber" checkedValue="fiber" tabstop="True" />
+    <Control ref="medium" editor="aptixia.sm.DDRadioButton" enable="" show="" location="14,17" size="59,24" tabIndex="3" text="Copper" checkedValue="copper" tabstop="True" />
+  </Form>
+</GUIDescription>

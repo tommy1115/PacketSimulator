@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ixia_message_file>
+  <status>
+    <id_string>Aptixia.RoutesPlugin.ExecuteError</id_string>
+    <text>Routes plugin at %1% could not execute command: %2%</text>
+    <description></description>
+  </status>
+  <status>
+    <id_string>Aptixia.RoutesPlugin.InvalidParameter</id_string>
+    <text>Routes plugin at %1% failed with message : %2%</text>
+    <description></description>
+  </status>
+  <status>
+    <id_string>Aptixia.RoutesPlugin.OutOfMemoryException</id_string>
+    <text>Routes plugin at %1% failed.</text>
+    <description></description>
+  </status>
+  <status>
+    <id_string>Aptixia.RoutesPlugin.ParameterNotValid</id_string>
+    <text>Invalid '%1%' value for %2%. %3%</text>
+    <description></description>
+  </status>
+  <status>
+    <id_string>Aptixia.RoutesPlugin.InvalidRoute</id_string>
+    <text>%1%</text>
+    <description></description>
+  </status>
+</ixia_message_file>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="Pppoe" baseType="">
+
+<PropertyInt>
+    <name>padiTimeout</name>
+    <default>10</default>
+    <min>1</min>
+    <max>65535</max> <!-- max signed int32 -->
+
+    <help>Timeout for PADI no response, in seconds</help>
+    <description>Timeout for PADI no response, in seconds</description>
+</PropertyInt>
+
+<PropertyInt>
+    <name>padiRetries</name>
+    <default>3</default>
+    <min>1</min>
+    <max>65535</max> <!-- max signed int32 -->
+
+    <help>Number of PADI Retries</help>
+    <description>Number of PADI Retries</description>
+</PropertyInt>
+
+<PropertyInt>
+    <name>padrTimeout</name>
+    <default>10</default>
+    <min>1</min>
+    <max>65535</max> <!-- max signed int32 -->
+
+    <help>Timeout for PADR no response, in seconds</help>
+    <description>Timeout for PADR no response, in seconds</description>
+</PropertyInt>
+
+<PropertyInt>
+    <name>padrRetries</name>
+    <default>3</default>
+    <min>1</min>
+    <max>65535</max> <!-- max signed int32 -->
+
+    <help>Number of PADR Retries</help>
+    <description>Number of PADR Retries</description>
+</PropertyInt>
+
+<PropertyString>
+    <name>serviceName</name>
+    <minLength>0</minLength>
+    <maxLength>32</maxLength>
+
+    <help>Access Concentrator Service Name</help>
+    <description>Access Concentrator Service Name</description>
+</PropertyString>
+
+<PropertyString>
+    <name>acName</name>
+    <minLength>0</minLength>
+    <maxLength>32</maxLength>
+
+    <help>Access Concentrator Name</help>
+    <description>Access Concentrator Name</description>
+</PropertyString>
+
+<PropertyBoolean>
+    <name>enableRedial</name>
+    <default>false</default>
+
+    <help>If checked, PPPoE redial is enabled</help>
+    <description>Enable/disable PPPoE redial</description>
+</PropertyBoolean>
+
+<PropertyInt>
+    <name>redialTimeout</name>
+    <default>10</default>
+    <min>1</min>
+    <max>65535</max> <!-- max signed int32 -->
+
+    <help>PPPoE redial timeout, in seconds</help>
+    <description>PPPoE redial timeout, in seconds</description>
+</PropertyInt>
+
+<PropertyInt>
+    <name>redialMax</name>
+    <default>20</default>
+    <min>1</min>
+    <max>65535</max> <!-- max signed int32 -->
+
+    <help>Maximum number of PPPoE redials</help>
+    <description>Maximum number of PPPoE redials</description>
+</PropertyInt>
+
+</Node>

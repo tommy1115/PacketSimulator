@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="TrafficShapeClient" baseType="TrafficShape">
+
+	<PropertyInt>
+		<name>rampUpType</name>
+		<description>Either kRampUpLinear or kRampUpAdaptive</description>
+		<minValue>0</minValue>
+		<maxValue>1000000</maxValue>
+		<default>0</default>
+	</PropertyInt>
+	
+	<PropertyInt>
+		<name>rampUpValue</name>
+		<description>Only applicable when kRampUpAdaptive</description>
+		<minValue>1</minValue>
+		<maxValue>1000000</maxValue>
+		<default>100</default>
+	</PropertyInt>
+	
+	<PropertyInt>
+		<name>rampDownDuration</name>
+		<description>The duration during which traffic will ramp-down (in seconds)</description>
+		<minValue>0</minValue>
+		<maxValue>5184000</maxValue>
+		<default>20</default>
+	</PropertyInt>
+	
+	
+</Node> 

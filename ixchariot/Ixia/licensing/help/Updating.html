@@ -1,0 +1,869 @@
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="GENERATOR" content="Microsoft FrontPage 4.0" />
+    <meta name="TEMPLATEBASE" content="Dynamic HTML" />
+    <meta name="LASTUPDATED" content="09/23/08 21:27:05" />
+    <title>Chapter 4: Updating Licenses  </title>
+    <link rel="StyleSheet" href="ixia_user_doc.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="catalog.css" type="text/css" media="all" />
+<link rel="index" title="Index" href="IX.html" />
+<link rel="first" title="First" href="TOC.html" />
+<link rel="last" title="Last" href="IX.html" />
+<link rel="previous" title="Previous" href="Deregistration.html" />
+<link rel="next" title="Next" href="Temporary.html" />
+
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/seealso.js"></script>
+
+    <script type="text/javascript" language="JavaScript1.2">
+     <!--
+      var  WebWorksSeeAlso = new WebWorksSeeAlso_Object();
+     // -->
+    </script>
+  </head>
+
+  <body>
+
+   <table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="left" width="281"><a href="http://www.ixiacom.com"><img border="0" src="images/ixialogo.gif"></a>
+    </td>
+    <td align="center" width="95"><a href="Updating.fm.pdf">
+    <img src="images/pdf.gif" width="28" height="31"
+             border="0" alt="PDF version of this section"></a></td>
+    <td align="center" width="94"><a href="LicenseManagement.pdf"><img src="images/pdf.gif" width="28" height="31"
+      border="0" alt="PDF version of entire manual"> </a>
+    <td align="center" width="180">
+      <p align="right">
+  </tr>
+  <tr>
+    <td width="281" align="left"><b><i><font size="3" face="Arial" color="#000000"></font></i></b></td>
+    <td width="95" align="center">Get this&nbsp;<br>
+      section in PDF</td>
+    <td width="94" align="center">Get entire&nbsp;<br>
+      manual in PDF</td>
+    <td width="190" align="center">
+      <p align="right"><a accesskey="4" href="Deregistration.html"><img id="LongDescNotReq1" src="images/prev.gif" border="0" alt="Previous" /></a><a accesskey="5" href="Temporary.html"><img id="LongDescNotReq2" src="images/next.gif" border="0" alt="Next" /></a><a accesskey="2" href="IX.html"><img id="LongDescNotReq3" src="images/index.gif" border="0" alt="Index" /></a>
+    </td>
+  </tr>
+</table>
+
+<hr align="left" color="#C80000">
+
+<blockquote>
+<a name="wp1132773"> </a><h2 class="pTitle">
+Chapter 4: Updating Licenses<br /><br />
+</h2>
+<hr color="#C00000" noshade>
+<a name="wp1090295"> </a><h2 class="pHeading1">
+Introduction
+</h2>
+<a name="wp1094146"> </a><p class="pBody">
+Ixia&#39;s products are tied to their maintenance contracts. A product can be updated without updating it&#39;s license as long as it&#39;s maintenance contract is active. Once the maintenance contract is renewed, then the product license must be updated in order to update the product to a new version.
+</p>
+<a name="wp1094542"> </a><p class="pBody">
+Before starting the license update process, make sure that the following information is available:
+</p>
+<div class="pSmartList1"><ol type="1" class="pSmartList1">
+<a name="wp1094550"> </a><div class="pSmartList1"><li>Registration number and password for the license &#150; this comes as an e-mail from Ixia to the Lab Manager and should have been forwarded to the person in charge of the installation. The source of this e-mail and its contents are described in <a href="Registration.html#wp1090295"><span style="font-style: italic">Before Starting Registration</span> on page 2-1</a>.</li></div>
+<a name="wp1116038"> </a><div class="pSmartList1"><li>Workstation or Ixia Chassis name &#150; this is the name of the computer that uses the license. </li></div>
+<a name="wp1094552"> </a><div class="pSmartList1"><li>License Server name &#150; <span style="font-weight: bold">if</span> the lab will use a central License Server, the Lab manager should have provided its name or IP address.</li></div>
+</ol></div>
+<a name="wp1135589"> </a><p class="pBody">
+An example of the Ixia registration e-mail is shown below, with the Registration number and Password <span style="text-decoration: underline">underlined</span>:
+</p>
+<div class="pPreformatted"><pre class="pPreformatted">
+Dear Customer,<a name="wp1135736"> </a>
+This release of IXVPN uses software licensing. Ixia 
+software licenses are backward compatible, which means 
+that the registration number and password below will work 
+with any prior release of the application that included 
+Ixia software licensing. Please find the necessary 
+information to download the application, and to keep your 
+product up-to-date and under maintenance. Contact your 
+authorized Ixia Representative should you have any 
+questions.<a name="wp1135737"> </a>
+License Key Information<a name="wp1135738"> </a>
+When you first start IXVPN, you will need to register 
+your IXVPN license. When connected to the Internet, you 
+can directly register your copy of IXVPN by simply 
+running the IRU utility provided by Ixia. For offline 
+registration,the IRU will guide you through the 
+registration process.  You will need to use a web browser 
+on a machine connected to the internet.<a name="wp1135739"> </a>
+Please make sure to record the registration number and 
+password shown below.<a name="wp1135740"> </a>
+    Product: IXVPN<a name="wp1135741"> </a>
+    Features: <a name="wp1135742"> </a>
+        * IxVPN, Software Option, Advanced Protocol<a name="wp1135743"> </a>
+        * IxVPN, IPSec Test Application<a name="wp1135744"> </a>
+        * Juniper custom IKE for IxVPN<a name="wp1135745"> </a>
+        * Manual IKE for IxVPN<a name="wp1135746"> </a>
+    <span style="text-decoration: underline">Registration Number: 500008392NC</span><a name="wp1135748"> </a>
+<span style="text-decoration: none">    </span>Password: yqXcih<a name="wp1135749"> </a>
+...<a name="wp1135601"> </a>
+</pre></div>
+<a name="wp1120799"> </a><p class="pBody">
+For an example of the entire text of the e-mail, see <a href="Registration.html">Chapter 2, Registering Licenses</a>.
+</p>
+<a name="wp1090377"> </a><h2 class="pHeading1">
+Online License Update &#150; Step by Step
+</h2>
+<a name="wp1102231"> </a><p class="pBody">
+Make sure the network connectivity requirements discussed in <a href="Introduction.html#wp1092027"><span style="font-style: italic">Installation Scenarios</span></a> are understood, and that the necessary information discussed above in <a href="Updating.html#wp1090295"><span style="font-style: italic">Introduction</span></a> is available.
+</p>
+<a name="wp1094472"> </a><p class="pBody">
+If the Installation Host is connected to the Internet (and to the lab network as well), an online update can be performed. The steps in the online update process are:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1094479"> </a><div class="pSmartList2"><li><a href="Updating.html#wp1094209"><span style="font-style: italic">Open the Ixia Registration Utility</span></a></li></div>
+<a name="wp1094492"> </a><div class="pSmartList2"><li><a href="Updating.html#wp1094274"><span style="font-style: italic">Step 1: Enter Registration Number and Password</span></a></li></div>
+<a name="wp1104223"> </a><div class="pSmartList2"><li><a href="Updating.html#wp1104004"><span style="font-style: italic">Step 2: Enter a Chassis or Workstation Name</span></a></li></div>
+<a name="wp1104224"> </a><div class="pSmartList2"><li><a href="Updating.html#wp1103992"><span style="font-style: italic">Step 3: Enter License Server Name</span></a></li></div>
+<a name="wp1094496"> </a><div class="pSmartList2"><li><a href="Updating.html#wp1125347"><span style="font-style: italic">Step 4: Save the License</span></a></li></div>
+</ul></div>
+</ul></div>
+<a name="wp1094502"> </a><p class="pBody">
+If the Installation Host is not attached to the Internet, follow the instructions in <a href="Updating.html#wp1093928"><span style="font-style: italic">Offline License Update &#150; Step by Step</span></a>.
+</p>
+<a name="wp1103064"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1103072"> </a><div class="pCellBody">
+<span style="font-weight: bold">Note</span>. The license update process can also be initiated from the License Management dialog, as described in <a href="Management.html">Chapter 6, Managing Licenses</a>.
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<a name="wp1117567"> </a><p class="pBody">
+<a href="Updating.html#wp1117572">Figure 4-1</a> will help keep track of the steps in the online registration process. It is repeated at each step with the current operation highlighted.
+</p>
+<a name="wp1117572"> </a><p class="pFigure">
+Figure 4-1.	Online Update</p>
+<div align="left"><img src="images/Updating-01.jpg" height="65" width="435" id="wp1117570" border="0" hspace="0" vspace="0"/></div><p class="pFigure">
+
+</p>
+<a name="wp1136020"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1136019"> </a><div class="pCellBody">
+<span style="font-weight: bold">Note</span>. Depending on whether the license is being installed to a computer or a chassis, the wording in the IRU dialogs is slightly different. 
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<a name="wp1136015"> </a><p class="pBody">
+
+</p>
+<a name="wp1094209"> </a><h2 class="pHeading2">
+Open the Ixia Registration Utility
+</h2>
+<a name="wp1117629"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Updating-02.jpg" height="64" width="432" id="wp1117627" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1116368"> </a><p class="pBody">
+When the IRU is opened, the screen shown in <a href="Updating.html#wp1094213">Figure 4-2</a> is displayed. The IRU allows the user to select various registration operations. 
+</p>
+<a name="wp1119756"> </a><p class="pBody">
+To open the IRU manually, select <span style="font-style: italic">Start &gt; Programs &gt; Ixia &gt; Licensing &gt; IRU</span> from the Start menu.
+</p>
+<a name="wp1094213"> </a><p class="pFigure">
+Figure 4-2.	Ixia Registration Utility Main Dialog</p>
+<div align="left"><img src="images/updateStep0.jpg" id="wp1107138" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1107141"> </a><div class="pSmartList2"><li>Select the <span style="font-style: italic">Update</span> radio button.</li></div>
+<a name="wp1107142"> </a><div class="pSmartList2"><li>Select the <span style="font-style: italic">Start</span> button.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1107158"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1107145"> </a><div class="pCellBody">
+<span style="font-weight: bold">Note</span>. The other radio button operations are described in the following chapters:
+</div>
+<div class="pSmartList1"><ul class="pSmartList1">
+<a name="wp1107149"> </a><div class="pSmartList1"><li>Registration &#150; <a href="Registration.html">Chapter 2, Registering Licenses</a></li></div>
+<a name="wp1107153"> </a><div class="pSmartList1"><li>De-registration &#150; <a href="Deregistration.html">Chapter 3, De-registering Licenses</a>.</li></div>
+<a name="wp1107157"> </a><div class="pSmartList1"><li>Manage Licenses &#150; <a href="Management.html">Chapter 6, Managing Licenses</a>.</li></div>
+</ul></div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<a name="wp1094274"> </a><h2 class="pHeading2">
+Step 1: Enter <a name="Update_EnterRegNum_OnLine"> </a>
+Registration Number and Password
+</h2>
+<a name="wp1117676"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Updating-04.jpg" height="65" width="433" id="wp1117674" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1094275"> </a><p class="pBody">
+After selecting the <span style="font-style: italic">Update</span> radio button and then selecting <span style="font-style: italic">Start</span>, the first screen displayed is shown in <a href="Updating.html#wp1093882">Figure 4-3</a>. If the Installation Host is not attached to the Internet, the screen shown in <a href="Updating.html#wp1093935">Figure 4-9</a> is displayed. Follow the instructions in <a href="Updating.html#wp1093928"><span style="font-style: italic">Offline License Update &#150; Step by Step</span></a>. 
+</p>
+<a name="wp1093882"> </a><p class="pFigure">
+Figure 4-3.	Online Update Step 1 &#150; </p>
+<div align="left"><img src="images/updateStep1.jpg" id="wp1093886" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+Registration Number
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1102346"> </a><div class="pSmartList2"><li>Enter the <span style="font-style: italic">Registration Number</span> and <span style="font-style: italic">Password</span> exactly as specified in the Ixia generated e-mail. The source and contents of this e-mail are discussed in <a href="Updating.html#wp1090295"><span style="font-style: normal">Introduction</span></a> and in <a href="Introduction.html#wp1093168"><span style="font-style: normal">What is License Management?</span></a>.</li></div>
+<a name="wp1102353"> </a><div class="pSmartList2"><li>Press the <span style="font-style: italic">Next </span>button.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1104004"> </a><h2 class="pHeading2">
+Step 2: Enter a Chassis or <a name="Update_NodeLockedNode_OnLine"> </a>
+Workstation Name
+</h2>
+<a name="wp1121781"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Updating-06.jpg" height="65" width="432" id="wp1121779" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1121782"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1127276"> </a><div class="pCellBody">
+<span style="font-weight: bold">Notes</span>. This screen will not appear if a floating license is being updated, as floating licenses are located on a stand-alone License Servers. The process immediately jumps to <a href="Updating.html#wp1103992"><span style="font-style: italic">Step 3: Enter License Server Name</span></a> instead.
+</div>
+<a name="wp1127267"> </a><div class="pCellBody">
+If the license being updated is on the Installation Host, then this step is skipped. The update process has automatically found the license file. Proceed to <a href="Updating.html#wp1125347"><span style="font-style: italic">Step 4: Save the License</span> on page 4-8</a>.
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<a name="wp1105342"> </a><p class="pBody">
+If the license is associated with a different chassis/workstation, then a screen similar to <a href="Updating.html#wp1104039">Figure 4-4</a> is displayed.
+</p>
+<a name="wp1104039"> </a><p class="pFigure">
+Figure 4-4.	Online Update Step 2 &#150; Ixia Chassis or Workstation Name</p>
+<div align="left"><img src="images/UpdateStepA.jpg" id="wp1104048" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1104473"> </a><div class="pSmartList2"><li>Enter the host name or IP address of the Ixia chassis or workstation that will use the licensed software. <span style="font-style: italic">Localhost</span> is the default and refers to the Installation Host.</li></div>
+<a name="wp1104480"> </a><div class="pSmartList2"><li>Look at the <span style="font-style: italic">Product Features</span> box and verify that the features listed correspond to the software or license being updated.</li></div>
+<a name="wp1104481"> </a><div class="pSmartList2"><li>Press the <span style="font-style: italic">Next </span>button.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1103992"> </a><h2 class="pHeading2">
+Step 3: Enter <a name="Update_SelectLicServerFloat_OnLine"> </a>
+License Server Name
+</h2>
+<a name="wp1117784"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Updating-08.jpg" height="65" width="433" id="wp1117782" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1127356"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1127347"> </a><div class="pCellBody">
+<span style="font-weight: bold">Notes</span>. If a License Server is used, the Lab Manager should provide its name. The use of a License Server is discussed in more detail in <a href="PlanningGuide.html">Appendix A, License Management Planning Guide</a>. 
+</div>
+<a name="wp1127375"> </a><div class="pCellBody">
+If the license for the product is found on the chassis or workstation specified in <a href="Updating.html#wp1104004"><span style="font-style: italic">Step 2: Enter a Chassis or Workstation Name</span></a>, then this step is skipped (proceed to <a href="Updating.html#wp1125347"><span style="font-style: italic">Step 4: Save the License</span></a>).
+</div>
+<a name="wp1127355"> </a><div class="pCellBody">
+This step immediately follows <a href="Updating.html#wp1094274"><span style="font-style: italic">Step 1: Enter Registration Number and Password</span></a> if a floating license is being updated.
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<a name="wp1127429"> </a><p class="pBody">
+A License Server is an optional computer used to manage licenses in a lab. <a href="Updating.html#wp1104001">Figure 4-5</a> displays the dialog where the License Server is specified.
+</p>
+<a name="wp1104001"> </a><p class="pFigure">
+Figure 4-5.	Online Update Step 3 &#150; License Server</p>
+<div align="left"><img src="images/updateStepB.jpg" id="wp1104266" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1122375"> </a><div class="pSmartList2"><li>The above screen should only appear if a License Server is used (and the chassis or workstation entered in <a href="Updating.html#wp1104004"><span style="font-style: italic">Step 2: Enter a Chassis or Workstation Name</span></a> did not contain the license being updated). If a License Server is not being used, and this screen appears, press the <span style="font-style: italic">Back </span>button and specify the correct chassis or workstation.</li></div>
+<a name="wp1105486"> </a><div class="pSmartList2"><li>Enter the name of the License Server in the <span style="font-style: italic">Server name or IP address</span> field.</li></div>
+<a name="wp1105487"> </a><div class="pSmartList2"><li>Press the <span style="font-style: italic">Next </span>button.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1125347"> </a><h2 class="pHeading2">
+Step 4: Save the <a name="Update_OnlineReReg_Online"> </a>
+License
+</h2>
+<a name="wp1125352"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Updating-10.jpg" height="64" width="434" id="wp1125350" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1127629"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1127624"> </a><div class="pCellBody">
+<span style="font-weight: bold">Note</span>. This step may immediately follow <a href="Updating.html#wp1094274"><span style="font-style: italic">Step 1: Enter Registration Number and Password</span></a> or <a href="Updating.html#wp1104004"><span style="font-style: italic">Step 2: Enter a Chassis or Workstation Name</span></a>, depending on the configuration of the test environment.
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<a name="wp1125318"> </a><p class="pBody">
+All the necessary information has been entered. A screen similar to the one shown in <a href="Updating.html#wp1125326">Figure 4-6</a> is displayed. 
+</p>
+<a name="wp1125326"> </a><p class="pFigure">
+Figure 4-6.	Online Update Step 4 &#150; </p>
+<div align="left"><img src="images/updateStep2.jpg" id="wp1125324" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+Reregister License File
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1102379"> </a><div class="pSmartList2"><li>Verify the information shown.</li></div>
+<a name="wp1102380"> </a><div class="pSmartList2"><li>Press the <span style="font-style: italic">Next </span>button to update the license.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1096458"> </a><p class="pBody">
+After the license has been updated, a <span style="font-style: italic">Receipt</span> is displayed, similar to the one shown <a href="Updating.html#wp1107265">Figure 4-7</a>. This is a record of the license&#39;s update. Save the information as a file or a make a printout.
+</p>
+<a name="wp1107265"> </a><p class="pFigure">
+Figure 4-7.	Online Update Step 5 &#150; Print Receipt</p>
+<div align="left"><img src="images/updateStep3.jpg" id="wp1107263" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1107266"> </a><div class="pSmartList2"><li>To save the receipt to disk, press the <span style="font-style: italic">Save Receipt...</span> button and designate a file.</li></div>
+<a name="wp1107267"> </a><div class="pSmartList2"><li>To make a printout of the receipt, press the <span style="font-style: italic">Print Receipt...</span> button and select a printer.</li></div>
+<a name="wp1107268"> </a><div class="pSmartList2"><li>Press <span style="font-style: italic">Finish</span> to exit the update process.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1107269"> </a><p class="pBody">
+The updated license is now available for use on the chassis or workstation. If it is a single node-locked license, it can only be used on that particular chassis or workstation.
+</p>
+<a name="wp1107249"> </a><p class="pBody">
+
+</p>
+<a name="wp1093928"> </a><h2 class="pHeading1">
+Offline License Update &#150; Step by Step
+</h2>
+<a name="wp1107291"> </a><p class="pBody">
+The steps in the offline installation process are:
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1107295"> </a><div class="pSmartList2"><li><a href="Updating.html#wp1094837"><span style="font-style: italic">Step 1: Start Offline Update</span></a></li></div>
+<a name="wp1107299"> </a><div class="pSmartList2"><li><a href="Updating.html#wp1094882"><span style="font-style: italic">Step 2: Enter Registration Number and Password</span></a></li></div>
+<a name="wp1107303"> </a><div class="pSmartList2"><li><a href="Updating.html#wp1104112"><span style="font-style: italic">Step 3: Enter a Chassis or Workstation Name</span></a></li></div>
+<a name="wp1107307"> </a><div class="pSmartList2"><li><a href="Updating.html#wp1104107"><span style="font-style: italic">Step 4: Enter License Server Name</span></a></li></div>
+<a name="wp1107311"> </a><div class="pSmartList2"><li><a href="Updating.html#wp1093972"><span style="font-style: italic">Step 5: Uninstall the License</span></a></li></div>
+<a name="wp1107315"> </a><div class="pSmartList2"><li><a href="Updating.html#wp1094980"><span style="font-style: italic">Step 6: Move to the Online Host</span></a></li></div>
+<a name="wp1107319"> </a><div class="pSmartList2"><li><a href="Updating.html#wp1102675"><span style="font-style: italic">Step 7: Online &#150; Connect to the Ixia Registration Website</span></a></li></div>
+<a name="wp1107323"> </a><div class="pSmartList2"><li><a href="Updating.html#wp1095397"><span style="font-style: italic">Step 8: Online &#150; Enter De-registration Code</span></a></li></div>
+<a name="wp1107327"> </a><div class="pSmartList2"><li><a href="Updating.html#wp1098299"><span style="font-style: italic">Step 9: Online &#150; Select Product Version</span></a></li></div>
+<a name="wp1117970"> </a><div class="pSmartList2"><li><a href="Updating.html#wp1118583"><span style="font-style: italic">Step 10: Online &#150; Save the License File</span></a></li></div>
+<a name="wp1107331"> </a><div class="pSmartList2"><li><a href="Updating.html#wp1095630"><span style="font-style: italic">Step 11: Install the License File</span></a></li></div>
+</ul></div>
+</ul></div>
+<a name="wp1107336"> </a><p class="pBody">
+Note that during a license update, the license is first de-registered, then reregistered with current product and workstation/chassis information. 
+</p>
+<a name="wp1118014"> </a><p class="pBody">
+<a href="Updating.html#wp1118019">Figure 4-8</a> will help keep track of the steps in the offline registration process. It is repeated at each step with the current operation highlighted.
+</p>
+<a name="wp1118019"> </a><p class="pFigure">
+Figure 4-8.	Offline Update</p>
+<div align="left"><img src="images/Updating-13.jpg" height="127" width="435" id="wp1118017" border="0" hspace="0" vspace="0"/></div><p class="pFigure">
+
+</p>
+<a name="wp1136043"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1136042"> </a><div class="pCellBody">
+<span style="font-weight: bold">Note</span>. Depending on whether the license is being installed to a computer or a chassis, the wording in the IRU dialogs is slightly different. 
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<a name="wp1118009"> </a><p class="pBody">
+
+</p>
+<a name="wp1094837"> </a><h2 class="pHeading2">
+Step 1: Start Offline <a name="Update_OfflineMessage"> </a>
+Update
+</h2>
+<a name="wp1118064"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Updating-14.jpg" height="127" width="433" id="wp1118062" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1094838"> </a><p class="pBody">
+Open the IRU as described in <a href="Updating.html#wp1094209"><span style="font-style: italic">Open the Ixia Registration Utility</span></a>. The first screen displayed is shown in <a href="Updating.html#wp1093935">Figure 4-9</a>. This message indicates that the Installation Host cannot reach the Ixia web-site via the Internet. If the Installation Host should be<span style="font-weight: bold"> </span>connected, use the following steps to diagnose the problem. 
+</p>
+<a name="wp1094845"> </a><h3 class="pHeading3">
+If the Installation Host should be attached to the Internet
+</h3>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1094846"> </a><div class="pSmartList2"><li>Use a browser to go to any non-Ixia Internet page. If this fails, then there is a problem within the Installation Host.</li></div>
+<a name="wp1094848"> </a><div class="pSmartList2"><li>Use the browser to access Ixia&#39;s registration server at <a href="http://licensing.ixiacom.com">http://licensing.ixiacom.com. </a>If this fails, then it might be the case that Ixia&#39;s server is down. Contact Ixia at the appropriate support center to confirm.</li></div>
+<a name="wp1094849"> </a><div class="pSmartList2"><li>If the Installation Host can access Ixia&#39;s registration server&#39;s web page, and the screen shown in <a href="Updating.html#wp1093935">Figure 4-9</a> still appears after restarting the license installation process, then either proceed with the steps in this section, or contact Ixia at the appropriate support center for assistance.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1094853"> </a><h3 class="pHeading3">
+To proceed with offline license update
+</h3>
+<a name="wp1106870"> </a><p class="pBody">
+The dialog shown in <a href="Updating.html#wp1093935">Figure 4-9</a> is displayed when the Installation Host is not connected to the internet.
+</p>
+<a name="wp1118109"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Updating-15.jpg" height="125" width="431" id="wp1118107" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1093935"> </a><p class="pFigure">
+Figure 4-9.	Offline Update Step 1 &#150; Notice for Offline Registration</p>
+<div align="left"><img src="images/offlineUpdateStep1.jpg" id="wp1093940" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1106855"> </a><div class="pSmartList2"><li>Find an additional computer that is connected to the Internet (the Online Host). It is necessary to transfer small amounts of data between the Online Host and the Installation Host (this machine). A removable USB drive or a common e-mail system are two options.</li></div>
+<a name="wp1106856"> </a><div class="pSmartList2"><li>Press the <span style="font-style: italic">Next </span>button.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1094882"> </a><h2 class="pHeading2">
+Step 2: Enter <a name="Update_EnterRegNum_OffLine"> </a>
+Registration Number and Password
+</h2>
+<a name="wp1118152"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Updating-17.jpg" height="128" width="432" id="wp1118150" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1094886"> </a><p class="pBody">
+The next screen displayed is shown in <a href="Updating.html#wp1093971">Figure 4-10</a>. 
+</p>
+<a name="wp1093971"> </a><p class="pFigure">
+Figure 4-10.	Offline Update Step 2 &#150; Registration Number</p>
+<div align="left"><img src="images/offlineUpdateStep2.jpg" id="wp1093976" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1116881"> </a><div class="pSmartList2"><li>Enter the <span style="font-style: italic">Registration Number</span> and <span style="font-style: italic">Password</span> exactly as specified in the Ixia generated e-mail. The source and contents of this e-mail is discussed above in <a href="Updating.html#wp1090295">Introduction on page 4-1</a> and in <a href="Introduction.html#wp1093168">What is License Management? on page 1-2</a>.</li></div>
+<a name="wp1102535"> </a><div class="pSmartList2"><li>Press the <span style="font-style: italic">Next </span>button.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1104112"> </a><h2 class="pHeading2">
+Step 3: Enter a Chassis or <a name="Update_NodeLockedNode_OffLine"> </a>
+Workstation Name
+</h2>
+<a name="wp1118186"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Updating-19.jpg" height="124" width="432" id="wp1118184" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1128023"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1128015"> </a><div class="pCellBody">
+<span style="font-weight: bold">Notes</span>. This screen will not appear if a floating license is being updated, as floating licenses are located on a stand-alone License Servers. The process immediately jumps to <a href="Updating.html#wp1104107"><span style="font-style: italic">Step 4: Enter License Server Name</span></a> instead.
+</div>
+<a name="wp1128019"> </a><div class="pCellBody">
+If the license being updated is on the Installation Host, then this step is skipped. The update process has automatically found the license file. Proceed to <a href="Updating.html#wp1093972"><span style="font-style: italic">Step 5: Uninstall the License</span></a>.
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<a name="wp1105626"> </a><p class="pBody">
+If the license is associated with a different chassis or workstation, then the next screen is shown in <a href="Updating.html#wp1104122">Figure 4-11</a>.
+</p>
+<a name="wp1104122"> </a><p class="pFigure">
+Figure 4-11.	Offline Update Step 3 &#150; Ixia Chassis or Workstation Name</p>
+<div align="left"><img src="images/OfflineUpdateStepA.jpg" id="wp1104364" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1116954"> </a><div class="pSmartList2"><li>Enter the host name or IP address of the Ixia chassis or workstation that will be used with the licensed software. <span style="font-style: italic">Localhost</span> is the default and refers to the Installation Host.</li></div>
+<a name="wp1105693"> </a><div class="pSmartList2"><li>Look at the <span style="font-style: italic">Product Features</span> box and verify that the features listed correspond to the software or license being updated.</li></div>
+<a name="wp1105694"> </a><div class="pSmartList2"><li>Press the <span style="font-style: italic">Next </span>button.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1104107"> </a><h2 class="pHeading2">
+Step 4: Enter <a name="Update_SelectLicSeverFloat_OffLine"> </a>
+License Server Name
+</h2>
+<a name="wp1118249"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Updating-21.jpg" height="124" width="432" id="wp1118247" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1128140"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1128132"> </a><div class="pCellBody">
+<span style="font-weight: bold">Note</span>. If the license for the product is found on the chassis/workstation specified in <a href="Updating.html#wp1104112"><span style="font-style: italic">Step 3: Enter a Chassis or Workstation Name</span></a>, then this step is skipped (proceed to <a href="Updating.html#wp1094980"><span style="font-style: italic">Step 6: Move to the Online Host</span></a>).
+</div>
+<a name="wp1128139"> </a><div class="pCellBody">
+This step immediately follows <a href="Updating.html#wp1104112"><span style="font-style: italic">Step 3: Enter a Chassis or Workstation Name</span></a> if a floating license is being updated.
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<a name="wp1128240"> </a><p class="pBody">
+A License Server is an optional computer used to manage licenses in a lab. <a href="Updating.html#wp1104123">Figure 4-12</a> displays the dialog where the License Server is specified.
+</p>
+<a name="wp1104123"> </a><p class="pFigure">
+Figure 4-12.	Offline Update Step 4 &#150; License Server</p>
+<div align="left"><img src="images/OfflineUpdateStepB.jpg" id="wp1104405" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1122409"> </a><div class="pSmartList2"><li>The above screen should only appear if a License Server is used (and the chassis or workstation entered in <a href="Updating.html#wp1104112"><span style="font-style: italic">Step 3: Enter a Chassis or Workstation Name</span></a> did not contain the license being updated). If a License Server is not being used, and this screen appears, press the <span style="font-style: italic">Back </span>button and specify the correct chassis or workstation.</li></div>
+<a name="wp1105840"> </a><div class="pSmartList2"><li>If a License Server is used in the Test Lab, enter its name in the <span style="font-style: italic">Server name or IP address</span> field.</li></div>
+<a name="wp1105841"> </a><div class="pSmartList2"><li>Press the <span style="font-style: italic">Next </span>button.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1093972"> </a><h2 class="pHeading2">
+Step 5: Uninstall the <a name="Update_OfflineDereg_OffLine"> </a>
+License
+</h2>
+<a name="wp1118314"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Updating-23.jpg" height="128" width="432" id="wp1118312" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1128334"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+
+<table border="1" cellpadding="5" cellspacing="0"
+       bordercolorlight="#FF0000" bordercolordark="#C80000">
+
+  <caption></caption>
+  <tr>
+    <td><a name="wp1128329"> </a><div class="pCellBody">
+<span style="font-weight: bold">Notes</span>. This step may immediately follow <a href="Updating.html#wp1094882"><span style="font-style: italic">Step 2: Enter Registration Number and Password</span></a> or <a href="Updating.html#wp1104112"><span style="font-style: italic">Step 3: Enter a Chassis or Workstation Name</span></a>, depending on the configuration of the test environment.
+</div>
+</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+<a name="wp1105997"> </a><p class="pBody">
+All the necessary information has been entered. A screen similar to the one shown in <a href="Updating.html#wp1093985">Figure 4-13</a> is displayed. 
+</p>
+<a name="wp1093985"> </a><p class="pFigure">
+Figure 4-13.	Offline Update Step 5 &#150; De-register License File</p>
+<div align="left"><img src="images/offlineUpdateStep3.jpg" id="wp1093990" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1106011"> </a><div class="pSmartList2"><li>Verify the information shown.</li></div>
+<a name="wp1106012"> </a><div class="pSmartList2"><li>Press the <span style="font-style: italic">Next </span>button to uninstall the license.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1094980"> </a><h2 class="pHeading2">
+Step 6: Move to the Online <a name="Update_PrintReg_OffLine"> </a>
+Host
+</h2>
+<a name="wp1118353"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Updating-25.jpg" height="128" width="432" id="wp1118351" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1125497"> </a><p class="pBody">
+At this point, a screen similar to that shown in <a href="Updating.html#wp1125502">Figure 4-14</a> is displayed. 
+</p>
+<a name="wp1125502"> </a><p class="pFigure">
+Figure 4-14.	Offline Update Step 6 &#150; Move to Online Host</p>
+<div align="left"><img src="images/offlineUpdateStep4.jpg" id="wp1125500" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1102711"> </a><div class="pSmartList2"><li>The information on the screen is necessary to complete the update from the Online Host. Either:</li></div>
+<div class="pSmartList3"><ul class="pSmartList3">
+<a name="wp1102712"> </a><div class="pSmartList3"><li>Print it out using the <span style="font-style: italic">Print...</span> button, or</li></div>
+<a name="wp1102713"> </a><div class="pSmartList3"><li>Save it to disk using the <span style="font-style: italic">Save... </span>button. This file can be copied to a removable USB drive or e-mailed to the Online Host.</li></div>
+</ul></div>
+<a name="wp1102714"> </a><div class="pSmartList2"><li>Move to the Online Host, start a browser and enter<a href="http://licensing.ixiacom.com"> http://licensing.ixiacom.com</a>.</li></div>
+<a name="wp1102715"> </a><div class="pSmartList2"><li>Follow the instructions in:</li></div>
+<div class="pSmartList3"><ul class="pSmartList3">
+<a name="wp1102719"> </a><div class="pSmartList3"><li><a href="Updating.html#wp1102675"><span style="font-style: italic">Step 7: Online &#150; Connect to the Ixia Registration Website</span></a></li></div>
+<a name="wp1102723"> </a><div class="pSmartList3"><li><a href="Updating.html#wp1095397"><span style="font-style: italic">Step 8: Online &#150; Enter De-registration Code</span></a></li></div>
+<a name="wp1102727"> </a><div class="pSmartList3"><li><a href="Updating.html#wp1098299"><span style="font-style: italic">Step 9: Online &#150; Select Product Version</span></a></li></div>
+<a name="wp1102731"> </a><div class="pSmartList3"><li><a href="Updating.html#wp1095630"><span style="font-style: italic">Step 11: Install the License File</span></a></li></div>
+</ul></div>
+<a name="wp1102732"> </a><div class="pSmartList2"><li>Do not press the <span style="font-style: italic">Next</span>&#160;button in this dialog yet.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1102675"> </a><h2 class="pHeading2">
+Step 7: Online &#150; Connect to the Ixia Registration Website
+</h2>
+<a name="wp1118412"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Updating-27.jpg" height="130" width="432" id="wp1118410" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1095229"> </a><p class="pBody">
+The first online screen displayed is shown in <a href="Updating.html#wp1095304">Figure 4-15</a>.
+</p>
+<a name="wp1095304"> </a><p class="pFigure">
+Figure 4-15.	Offline Update Step 7 &#150; Ixia Registration Website</p>
+<div align="left"><img src="images/offlineUpdateRegWeb0a.jpg" id="wp1095310" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1102761"> </a><div class="pSmartList2"><li>Select the appropriate option. The links redirects the browser to a the screen shown in <a href="Updating.html#wp1094052">Figure 4-16</a>.</li></div>
+<a name="wp1094052"> </a><p class="pFigure">
+Figure 4-16.	Offline Update Step 7 &#150; Select Action<br />
+<img src="images/offlineUpdateRegWeb0qd.jpg" height="557" width="802" id="wp1094056" border="0" hspace="0" vspace="0"/><br />
+
+</p>
+<a name="wp1102781"> </a><div class="pSmartList2"><li>Select the <span style="font-style: italic">Update</span> option.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1095397"> </a><h2 class="pHeading2">
+Step 8: Online &#150; Enter De-registration Code
+</h2>
+<a name="wp1118474"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Updating-30.jpg" height="128" width="432" id="wp1118472" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1095401"> </a><p class="pBody">
+A webpage similar to the one shown in <a href="Updating.html#wp1094036">Figure 4-17</a> is displayed.
+</p>
+<a name="wp1094036"> </a><p class="pFigure">
+Figure 4-17.	Offline Update Step 8 &#150; Enter De-registration Code</p>
+<div align="left"><img src="images/offlineUpdateRegWeb1.jpg" height="412" width="600" id="wp1094046" border="0" hspace="0" vspace="0"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1117346"> </a><div class="pSmartList2"><li>Enter the <span style="font-style: italic">De-registration Code </span>exactly as shown in <a href="Updating.html#wp1125502">Figure 4-14</a>. It is listed directly above the Node ID. In this example, it is <span style="font-style: italic">jmPBBysyxeBQIOU3EGPAQ==</span>.</li></div>
+<a name="wp1102853"> </a><div class="pSmartList2"><li>Press the <span style="font-style: italic">Go </span>button.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1098299"> </a><h2 class="pHeading2">
+Step 9: Online &#150; Select Product Version
+</h2>
+<a name="wp1118512"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Updating-32.jpg" height="128" width="432" id="wp1118510" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1098303"> </a><p class="pBody">
+The screen shown in <a href="Updating.html#wp1098317">Figure 4-18</a> displays the registration information and the possible version numbers of the product being licensed.
+</p>
+<a name="wp1098317"> </a><p class="pFigure">
+Figure 4-18.	Offline Update Step 9 &#150; Product Version </p>
+<div align="left"><img src="images/offlineUpdateRegWeb0b.jpg" height="671" width="814" id="wp1098315" border="0" hspace="0" vspace="0"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1102891"> </a><div class="pSmartList2"><li>Verify the <span style="font-style: italic">Registered To</span> and <span style="font-style: italic">Product/Features</span> fields to ensure that this is the correct license.</li></div>
+<a name="wp1102895"> </a><div class="pSmartList2"><li>Select the version number that matches the upgraded software or product. If necessary, the <span style="font-style: italic">Keep Current License</span> button can be selected to abort the update.</li></div>
+<a name="wp1102896"> </a><div class="pSmartList2"><li>Press the <span style="font-style: italic">Get License File</span> button.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1118583"> </a><h2 class="pHeading2">
+Step 10: Online &#150; Save the License File
+</h2>
+<a name="wp1118596"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Updating-34.jpg" height="127" width="432" id="wp1118594" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1118584"> </a><p class="pBody">
+At this point, the actual Ixia license is downloaded to the computer connected to the internet. A dialog similar to that shown in <a href="Updating.html#wp1098330">Figure 4-19</a> is displayed.
+</p>
+<a name="wp1098330"> </a><p class="pFigure">
+Figure 4-19.	Offline Update Step 10 &#150; Download License File</p>
+<div align="left"><img src="images/OfflineLicenseStep8.jpg" id="wp1098328" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1102931"> </a><div class="pSmartList2"><li>Press the <span style="font-style: italic">Save</span> button and select a place to save the license file. </li></div>
+<a name="wp1122914"> </a><div class="pSmartList2"><li>Transfer this saved file over to the Installation Host via a removable USB drive or e-mail (if the Installation Host has e-mail capabilities). </li></div>
+<a name="wp1123999"> </a><p class="pBodyRelative">
+If a License Server is being used, remember to save the file to the License Server (if it is a different chassis or workstation than the Installation Host). The recommended directory is <span style="font-style: italic">C:\Program Files\Ixia\licensing\licenses</span>.
+</p>
+</ul></div>
+</ul></div>
+<a name="wp1095630"> </a><h2 class="pHeading2">
+Step 11: Install the <a name="Update_InstallLic_OffLine"> </a>
+License File
+</h2>
+<a name="wp1118614"> </a><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+</div>
+<div align="left"><img src="images/Updating-36.jpg" height="128" width="432" id="wp1118612" border="0" hspace="0" vspace="0"/></div><div style="color: #000000; font-size: 7pt; font-style: normal; font-variant: normal; font-weight: normal; margin-bottom: 0pt; margin-left: 0pt; margin-right: 0pt; margin-top: 0pt; text-align: left; text-decoration: none; text-indent: 0pt; text-transform: none">
+
+</div>
+<a name="wp1095631"> </a><p class="pBody">
+Return to the Installation Host.
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1098467"> </a><div class="pSmartList2"><li>Press the <span style="font-style: italic">Next </span>button<span style="font-style: italic">. </span>A screen similar to the one shown in <a href="Updating.html#wp1094019">Figure 4-20</a> is displayed.</li></div>
+<a name="wp1094019"> </a><p class="pFigure">
+Figure 4-20.	Offline Update Step 11 &#150; Select License File<br />
+<img src="images/offlineUpdateStep5.jpg" id="wp1094025" border="0" hspace="0" vspace="3"/><br />
+
+</p>
+<a name="wp1102955"> </a><div class="pSmartList2"><li>Enter the filename of the license file copied from the Online Host. The recommended default location is<span style="font-style: italic"> C:\Program Files\Ixia\licensing\licenses</span>. This was the last step in <a href="Updating.html#wp1118583"><span style="font-style: italic">Step 10: Online &#150; Save the License File</span></a>. Use the <span style="font-style: italic">Browse...</span>&#160;button to help locate the file.</li></div>
+<a name="wp1102959"> </a><div class="pSmartList2"><li>Press the <span style="font-style: italic">Next </span>button to install the license.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1095731"> </a><p class="pBody">
+After the license has been updated, a <span style="font-style: italic">Receipt</span> is shown, for example as in <a href="Updating.html#wp1107616">Figure 4-21</a>. This is a record of the license&#39;s update. Save the information as a file or a make a printout.
+</p>
+<a name="wp1107616"> </a><p class="pFigure">
+Figure 4-21.	Offline Update Step 12 &#150; Receipt</p>
+<div align="left"><img src="images/offlineUpdateStep10.jpg" id="wp1107614" border="0" hspace="0" vspace="3"/></div><p class="pFigure">
+
+</p>
+<div class="pSmartList1"><ul class="pSmartList1">
+<div class="pSmartList2"><ul class="pSmartList2">
+<a name="wp1107617"> </a><div class="pSmartList2"><li>To save the receipt to disk, press the <span style="font-style: italic">Save Receipt...</span>&#160;button and designate a file.</li></div>
+<a name="wp1107618"> </a><div class="pSmartList2"><li>To make a printout of the receipt, press the <span style="font-style: italic">Print Receipt...</span> button and select a printer.</li></div>
+<a name="wp1107619"> </a><div class="pSmartList2"><li>Press <span style="font-style: italic">Finish</span>&#160;to exit the update process.</li></div>
+</ul></div>
+</ul></div>
+<a name="wp1107697"> </a><p class="pBody">
+The updated license is now available for use on the chassis or workstation. If it is a single node-locked license, it can only be used on that particular chassis or workstation.
+</p>
+</blockquote>
+
+<hr color="#C80000">
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top" width="190">
+      <p align="left">
+<a accesskey="4" href="Deregistration.html"><img id="LongDescNotReq4" src="images/prev.gif" border="0" alt="Previous" /></a><a accesskey="5" href="Temporary.html"><img id="LongDescNotReq5" src="images/next.gif" border="0" alt="Next" /></a><a accesskey="2" href="IX.html"><img id="LongDescNotReq6" src="images/index.gif" border="0" alt="Index" /></a>
+    </td>
+    <td valign="top" width="516" align="center">Did this document&nbsp;<br>
+ answer your question?
+      <p align="center"><A HREF="mailto:TechPubs@Ixiacom.com%20?subject=Question%20on%20,%20Release 2.70,%20Updating%20section"><img border="0" src="images/email.gif" width="55" height="40"></a>
+      <p>If not, let us know!</p>
+    </td>
+    <td valign="top" width="132" align="center">
+      <p align="right">
+    <span style="font-size: 10px">
+    <a href="http://www.ixiacom.com">
+    <img src="images/ixialogo.gif" width="128" height="38" border="0"></a><br>
+    Voice: (818) 871-1800<br>
+    Fax: (818) 871-1805<br>
+    <a href="mailto:info@ixiacom.com">info@ixiacom.com</a>
+    </span>
+    </td>
+  </tr>
+</table>
+</html>

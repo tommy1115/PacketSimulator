@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<GUIDescription>
+  <Form size="340,117">
+    <Control ref="negotiationType" enable="negotiateMasterSlave == 0" editor="aptixia.sm.DDRadioButton" location="83,57" size="58,24" tabIndex="6" text="Slave" checkedValue="slave" tabstop="True" />
+    <Control ref="negotiationType" enable="negotiateMasterSlave == 0" editor="aptixia.sm.DDRadioButton" location="17,55" size="59,24" tabIndex="4" text="Master" checkedValue="master" tabstop="True" />
+    <Control ref="negotiateMasterSlave" editor="aptixia.sm.DDCheckBox" location="16,15" size="104,24" tabIndex="3" text="Auto Negotiate Master/Slave" />
+  </Form>
+</GUIDescription>

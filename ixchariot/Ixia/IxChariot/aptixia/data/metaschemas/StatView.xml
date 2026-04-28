@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="StatView" baseType="TreeNode">
+    <help>A container for a group of stats</help>
+    <PropertyString permission="rro">
+        <name>caption</name>
+        <displayName>Caption</displayName>
+        <category>Appearance</category>
+        <description>Title of the view. The title displays above the chart and on the view's tab.</description>
+        <default>View</default>
+        <minLength>1</minLength>
+        <maxLength>5000</maxLength>
+        <help>Title of the view. The title displays above the chart and on the view's tab.</help>
+    </PropertyString>
+ 
+    <PropertyBoolean permission="rroaue">
+        <name>enabled</name>
+        <displayName>Enabled</displayName>
+        <category> View</category>  
+        <description>Determines whether the view is displayed or hidden. Use this option to hide views that you do not currently want to see, but do not want to delete. 
+True means that StatViewer will display this view. 
+False means that StatViewer will not display this view. </description>
+        <default>1</default>      
+        <help>Determines whether the view is displayed or hidden. Use this option to hide views that you do not currently want to see, but do not want to delete.</help>
+    </PropertyBoolean>
+ 
+    <PropertyBoolean permission="rroaue">
+        <name>useCaption</name>
+        <displayName>Use stats captions</displayName>
+        <category> View</category>  
+        <description>Determine how the stat is going to appear in the grid view. </description>
+        <default>1</default>      
+        <help>Determine how the stat is going to appear in the grid view. If useCaption is set to true then in the grid will show up the stat caption, otherwise will show up stat name and stat source type.</help>
+    </PropertyBoolean>
+    
+    <PropertyBoolean permission="rroaue">
+        <name>autoColumnWidth</name>
+        <displayName>Auto column width</displayName>
+        <category> View</category>  
+        <description>Determine if the column in the grid view will auto calculate width to fit the caption. </description>
+        <default>1</default>      
+        <help>Determine if the column in the grid view will auto calculate width to fit the caption.</help>
+    </PropertyBoolean>
+
+    <PropertyString permission="h">
+        <name>windowPosition</name>
+        <help>Deprecated</help>
+    </PropertyString>
+ 
+    <PropertyBoolean permission="h">
+        <name>allowUserEdit</name>
+        <default>1</default>
+        <help>Allow user edit of a stat view</help>
+    </PropertyBoolean>
+ 
+    <PropertyDouble permission="rro">
+        <name>frequency</name>
+        <displayName>Frequency</displayName>
+        <category>Data Display</category>
+        <description>Interval, in seconds, at which the view is updated with new statistics. Specify intervals from 1 to 60 seconds. Choose a value for this parameter according to the degree of resolution you want to achieve; to acheive a high degree of resolution, choose a shorter interval. To acheive a lower resolution, choose a longer interval.</description>
+        <default>2</default>
+        <min>1</min>
+        <max>60</max>
+        <help>Interval, in seconds, at which the view is updated with new statistics. Specify intervals from 1 to 60 seconds. Choose a value for this parameter according to the degree of resolution you want to achieve; to acheive a high degree of resolution, choose a shorter interval. To acheive a lower resolution, choose a longer interval.</help>
+    </PropertyDouble>
+
+    <PropertyInt permission="h">
+		<name>timeSamples</name>
+        <displayName>Time Samples</displayName>
+		<category>Data</category>
+		<description>Number of time samples buffered into each view. Specify between 1 and 32,000,000 samples.  Increasing the number of time samples increases the amount of RAM required by StatViewer.  Additional time samples are saved in the TestServer data store.</description>  
+		<default>3600</default>
+		<min>1</min>
+        <max>32000000</max>
+        <visible>type==TimeSeries</visible> 
+		<help>Number of time samples buffered into each view. Specify between 1 and 32,000,000 samples.  Increasing the number of time samples increases the amount of RAM required by StatViewer.  Additional time samples are saved in the TestServer data store.</help>  
+    </PropertyInt>
+ 
+    <PropertyString permission="rw">
+        <name>viewType</name>
+        <displayName>Type</displayName>
+        <category> View</category>
+        <description>The visual display of data, represented as a chart (Line, Bar, Pie, etc) or a grid (rows and columns).</description>  
+        <default>Line</default>
+        <help>The visual display of data, represented as a chart (Line, Bar, Pie, etc) or a grid (rows and columns).</help>  
+    </PropertyString>
+ 
+    <PropertyBoolean permission="rw">
+		<name>showGridLines</name>
+        <displayName>Show Grid Lines</displayName>
+		<default>1</default>
+		<category>Appearance</category>
+        <description>Enables or disables display of the scale division lines on charts.</description>   
+        <visible>type!=Pie</visible>    
+        <help>Enables or disables display of the scale division lines on charts.</help>   
+    </PropertyBoolean>
+
+    <PropertyBoolean permission="h">
+		<name>grayScale</name>
+        <displayName>Gray Scale</displayName>
+		<default>0</default>
+		<category>Appearance</category>
+        <description></description>   
+        <visible>type!=Grid</visible> 
+        <help>Deprecated</help>   
+    </PropertyBoolean>
+
+    <PropertyNode nodeType="ChartXAxis" permission="h">
+        <name>xAxis</name>
+        <displayName>X Axis</displayName>
+        <help>X Axis properties of a chart</help>
+    </PropertyNode>
+    
+    <PropertyNode nodeType="ChartYAxis" permission="h">
+        <name>yAxis</name>
+        <displayName>Y Axis</displayName>
+        <help>Y Axis properties of a chart</help>
+    </PropertyNode>
+ 
+    <PropertyBoolean permission="h">
+		<name>legendEnabled</name>
+        <displayName>Enabled</displayName>
+		<category>Legend</category>
+        <description>Determines whether the chart legend is displayed or hidden.
+True means that the legend displays.
+False means that the legend does not display.</description>   
+		<default>1</default>
+		<visible>type!=Grid</visible>
+        <help>Determines whether the chart legend is displayed or hidden.</help>   
+    </PropertyBoolean>
+    
+    <PropertyBoolean permission="h">
+		<name>dataLegendEnabled</name>
+        <displayName>Data Legend</displayName>
+		<category>Legend</category>
+        <description>Determines whether the chart data legend is displayed or hidden.
+True means that the data legend displays.
+False means that the data legend does not display.</description>   
+		<default>1</default>
+		<visible>type!=Pie</visible>
+		<help>Determines whether the chart data legend is displayed or hidden.</help> 
+    </PropertyBoolean>
+ 
+    <PropertyString permission="h">
+		<name>legendPosition</name>
+        <displayName>Position</displayName>
+		<category>Legend</category>
+        <description>Location where the chart legend displays.</description>   
+		<default>Right</default>
+		<visible>type!=Grid</visible>
+        <help>Location where the chart legend displays.</help>    
+    </PropertyString>
+    
+    <PropertyInt permission="h">
+		<name>legendSpanPercentage</name>
+        <displayName>Span Percentage</displayName>
+		<category>Legend</category>
+        <description></description>   
+		<default>30</default>
+        <min>0</min>
+        <max>100</max>
+		<visible>type!=Grid</visible>
+		<help>Deprecated</help>  
+    </PropertyInt>
+ 
+    <PropertyString permission="rw">
+		<name>backgroundColor</name>
+        <displayName>Background Color</displayName>
+		<default>Black</default>
+		<category>Appearance</category>
+        <description>Color used for background of chart. Select a color from the drop-down list.</description>   
+		<visible>type!=Pie</visible>        
+        <help>Color used for background of chart.</help>   
+    </PropertyString>
+
+    <PropertyString permission="h">
+		<name>fontColor</name>
+        <displayName>Font Color</displayName>
+		<default>White</default>
+		<category>Appearance</category>
+        <description>Color used for foreground elements of chart such as the title, scales, scale divisions, and legend text.  Select a color from the drop-down list</description>
+        <visible>type!=Grid</visible> 
+        <help>Color used for foreground elements of chart such as the title, scales, scale divisions, and legend text.</help>
+    </PropertyString>
+
+    <PropertyBoolean permission="h">
+		<name>title</name>
+        <displayName>Show Title</displayName>
+		<default>1</default>
+		<category>Appearance</category>
+        <description></description>   
+        <help>Deprecated</help>  
+    </PropertyBoolean>
+ 
+    <PropertyNodeList nodeType="StatFilterGroup" permission="h">
+        <name>statFilterGroupList</name>
+        <help>List of statFilterGroups for this view</help>  
+    </PropertyNodeList>
+ 
+    <PropertyNodeList nodeType="StatSpec" permission="h">
+        <name>statSpecList</name>
+        <maxListLength>10000</maxListLength>       
+        <help>List of statSpecs for this view</help>  
+    </PropertyNodeList>
+ 
+    <PropertyBoolean permission="h">
+		<name>swapRowsColumns</name>
+		<category>Data</category>
+        <help>Deprecated</help> 
+    </PropertyBoolean>
+ 
+    <PropertyBoolean permission="h">
+		<name>matrixConfiguration</name>
+		<category>Data</category>
+		<description></description>   
+		<default>0</default>		
+		<help>Each filter is applied to each statSpec in matrix configuration instead of one-to-one.  
+		The total number of stats will be statFilterList.Count x statSpecList.Count</help>
+    </PropertyBoolean>
+ 
+    <PropertyBoolean permission="h">
+		<name>publisherLabels</name>
+		<category>Data</category>
+		<description></description> 
+		<default>0</default>				  
+		<help>Whether allow applications to publish the labels displayed in the view</help>
+    </PropertyBoolean>
+    
+    <PropertyBoolean permission="rw">
+		<name>threeD</name>
+        <displayName>Enable</displayName>
+		<category>3D</category>
+		<description>Show charts in 3D</description> 
+		<default>0</default>				  
+        <visible>type!=Grid</visible>
+        <help>Show charts in 3D</help>
+    </PropertyBoolean>
+    
+    <PropertyBoolean permission="rw">
+		<name>threeDRotate</name>
+        <displayName>Rotate</displayName>
+		<category>3D</category>
+		<description>Rotate charts in 3D</description> 
+		<default>0</default>				  
+		<visible>type!=Grid</visible>
+		<help>Rotate charts in 3D</help>
+    </PropertyBoolean>
+ 
+    <PropertyInt permission="rw">
+		<name>threeDRotateX</name>
+        <displayName>X Angle</displayName>
+		<category>3D</category>
+        <description>Angle to rotate 3D charts from the X Axis</description>   
+		<default>30</default>
+        <min>0</min>
+        <max>359</max>
+		<visible>type!=Grid</visible>
+		<help>Angle to rotate 3D charts from the X Axis</help>
+    </PropertyInt>
+    
+    <PropertyInt permission="rw">
+		<name>threeDRotateY</name>
+        <displayName>Y Angle</displayName>
+		<category>3D</category>
+        <description>Angle to rotate 3D charts from the Y Axis</description>   
+		<default>30</default>
+        <min>0</min>
+        <max>359</max>
+		<visible>type!=Grid</visible>
+		<help>Angle to rotate 3D charts from the Y Axis</help>
+    </PropertyInt>
+ 
+    <PropertyNodeList nodeType="StatAttributeList" permission="h">
+        <help>List of stat attributes, such as color</help>
+        <name>statAttributeListList</name>
+    </PropertyNodeList>
+    
+    <PropertyString permission="h">
+		<name>lineStyle</name>
+        <displayName>Line Style</displayName>
+		<category>Appearance</category>
+		<default>Solid</default>
+		<description>The style of each plotted line in a chart (Solid, Dash, Dot, etc)</description>
+		<visible>type==Line</visible>
+        <help>Deprecated</help>
+    </PropertyString>
+
+    <PropertyNodeList nodeType="CsvHeaderField" permission="h">
+        <name>csvHeaderFieldList</name>
+        <description>List of name value pairs to be displayed at the top of the csv file.</description>
+        <help>List of name value pairs to be displayed at the top of the csv file.</help>
+    </PropertyNodeList>
+    
+    <PropertyNode nodeType="CsvRequestOptions" permission="h">
+        <name>csvRequestOptions</name>
+        <description>Use this to specify whether a csv is to be generated for the parent StatView. Other options can be set to specify that column header and various label headers should be created in the csv.</description>
+        <help>Use this to specify whether a csv is to be generated for the parent StatView. Other options can be set to specify that column header and various label headers should be created in the csv.</help>
+    </PropertyNode> 
+    
+    <PropertyBoolean permission="h">
+		<name>visible</name>
+		<category>Data</category>
+		<description>This will allow application to create a view that is not displayed in StatViewer</description> 
+		<default>1</default>				  
+		<help>This will allow application to create a view that is not displayed in StatViewer</help> 
+    </PropertyBoolean>
+
+    <PropertyBoolean permission="h">
+		<name>sampleDataRequired</name>
+		<category>Data</category>
+		<description>This will allow application to enable/disable default sample data</description> 
+		<default>0</default>				  
+		<help>This will allow application to enable/disable default sample data</help> 
+    </PropertyBoolean>
+    
+    <Method2 name="MaxViewTime">
+        <help>Get the maximum time that a view will hold before dropping visible data, after this point the 
+        TestServer DataStore still contains data back to the beginning of a test</help>
+        <Argument name="time" direction="out" type="int64">
+            <help>The maximum time that a view will hold before dropping visible data, after this point the 
+            TestServer DataStore still contains data back to the beginning of a test</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="Commit">
+        <help>After adding new stats and setting properties commit adds the new stats a live test</help>
+    </Method2>
+    
+    <Method2 name="SaveAsTemplate">
+        <help>Save this view as a template in the DataStore for use in other tests</help>
+        <Argument name="name" direction="in" type="string">
+            <help>Save the view as a template in the DataStore with this name</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="GetStatSourceTypes">
+        <help>Concatenates all stat source types from every stat spec in this view</help>
+        <Argument name="statSourceTypes" direction="out" type="string">
+           <help>Concatenation all stat source types from every stat spec in this view</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="GetResultStartTime">
+        <help>Gets the starting time of a test result from the TestServer DataStore</help>
+        <Argument name="time" direction="out" type="int64">
+            <help>The starting time of a test result from the TestServer DataStore</help>
+        </Argument>
+    </Method2>
+            
+    <Method2 name="ExportCsv">
+        <help>Writes test results from the DataStore in csv format into a file on the TestServer</help>
+        <Argument name="fileName" direction="in" type="string">
+            <help>The name of file to write on the TestServer</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="GetStats">
+        <help>Get Stats from the DataStore on the TestServer</help>
+        <Argument name="statSetList" direction="out" type="StatConsumer.StatSetList">
+            <help>List of the stats returned</help>
+        </Argument>
+        <Argument name="beginTimestamp" direction="in" type="int64">
+            <help>Relative timestamp of the begining of requested stats</help>        
+        </Argument>
+        <Argument name="endTimestamp" direction="in" type="int64">
+            <help>Relative timestamp of the end of requested stats</help> 
+        </Argument>
+    </Method2>   
+   
+</Node>

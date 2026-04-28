@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-16"?>
+<GUIDescription>
+  <Form size="1027,644" scrollsize="750,390">
+    <Control ref="rangeList.autoGenerateMacRange" editor="aptixia.sm.DDCheckBox" location="223,189" size="130,24" tabIndex="60" text="Auto Generate Mac" />
+    <Control ref="rangeList.enableVlan" editor="aptixia.sm.DDCheckBox" location="85,191" size="104,24" tabIndex="59" text="Enable VLAN" />
+    <Control ref="rangeList.ipType" editor="aptixia.sm.DDRadioButton" location="178,35" size="50,18" tabIndex="3" text="IPv6" checkedValue="IPv6" tabstop="True" />
+    <Control ref="rangeList.ipType" editor="aptixia.sm.DDRadioButton" location="119,35" size="51,18" tabIndex="2" text="IPv4" checkedValue="IPv4" tabstop="True" />
+    <Control ref="rangeList.gatewayAddress" enable="rangeList.ipType==&quot;IPv4&quot;" editor="aptixia.sm.DDIPEdit" location="116,120" size="166,20" tabIndex="7" />
+    <Control editor="aptixia.sm.DDLabel" location="298,66" size="72,20" tabIndex="46" text="Increment By" />
+    <Control ref="rangeList.count" editor="aptixia.sm.DDLongEdit" location="182,91" size="100,20" tabIndex="6" />
+    <Control ref="rangeList.ipAddress" editor="aptixia.sm.DDIPEdit" location="116,63" size="166,20" tabIndex="4" ipmask="rangeList.prefix" ipType="rangeList.ipType" />
+    <Control ref="rangeList.incrementBy" editor="aptixia.sm.DDIPEdit" location="375,63" size="166,20" tabIndex="5" ipType="rangeList.ipType" />
+    <Control ref="rangeList" editor="aptixia.sm.DDListDeleteButton" location="23,242" size="22,23" tabIndex="12" text="" />
+    <Control editor="aptixia.sm.DDLabel" location="21,36" size="72,16" tabIndex="31" text="Type" />
+    <Control editor="aptixia.sm.DDLabel" location="21,123" size="72,20" tabIndex="27" text="Gateway" />
+    <Control ref="rangeList.enabled" editor="aptixia.sm.DDCheckBox" location="12,3" size="64,24" tabIndex="1" text="Enabled" />
+    <Control editor="aptixia.sm.DDLabel" location="21,94" size="52,20" tabIndex="19" text="Count" />
+    <Control editor="aptixia.sm.DDLabel" location="21,66" size="72,20" tabIndex="18" text="IP Address" />
+    <Control ref="rangeList" editor="aptixia.sm.DDListAddButton" location="0,242" size="22,23" tabIndex="11" text="" />
+    <Control ref="rangeList" editor="aptixia.sm.DDGridCtrl" location="0,271" size="1029,373" tabIndex="13" anchor="Top, Bottom, Left, Right" viewoptions="54">
+      <columns>
+        <column name="Enabled" databinding="enabled" visible="True" width="60" type="kCheckBox" />
+        <column name="IP Type" databinding="ipType" visible="True" width="60" type="kComboBox" />
+        <column name="IP Address/Mask" databinding="ipAddress" databindingIPType="ipType" databindingIPMask="prefix" visible="True" width="150" type="kIPEdit" />
+        <column name="Increment By" databinding="incrementBy" databindingIPType="ipType" visible="True" width="150" type="kIPEdit" />
+        <column name="Gateway" databinding="gatewayAddress" visible="True" width="150" type="kIPEdit" />
+        <column name="Count" databinding="count" visible="True" width="50" type="kIntEdit" />
+        <column name="VLAN Enable" databinding="enableVlan" visible="True" width="70" type="kCheckBox" />
+        <column name="MAC" databinding="macRange.mac" visible="True" width="50" type="kStringEdit" />
+        <column name="Mac Increment By" databinding="macRange.incrementBy" visible="True" width="50" type="kStringEdit" />
+        <column name="VLAN ID" databinding="vlanRange.vlanId" visible="True" width="50" type="kIntEdit" />
+        <column name="VLAN Increment By" databinding="vlanRange.vlanIncrementBy" visible="True" width="50" type="kIntEdit" />
+        <column name="VLAN Increment Every" databinding="vlanRange.vlanStepSize" visible="True" width="50" type="kIntEdit" />
+        <column name="VLAN priority" databinding="vlanRange.vlanPriority" visible="True" width="50" type="kIntEdit" />
+        <column name="Enable stacked VLAN" databinding="vlanRange.enableStackedVlan" visible="True" width="50" type="kIntEdit" />
+        <column name="VLAN Stacked Id" databinding="vlanRange.stackedVlanId" visible="True" width="50" type="kIntEdit" />
+        <column name="VLAN  Stacked Increment By" databinding="vlanRange.stackedVlanIncrementBy" visible="True" width="50" type="kIntEdit" />
+        <column name="VLAN Stacked Increment every" databinding="vlanRange.stackedVlanStepSize" visible="True" width="50" type="kIntEdit" />
+        <column name="VLAN Stacked Priority" databinding="vlanRange.stackedVlanPriority" visible="True" width="50" type="kIntEdit" />
+      </columns>
+    </Control>
+    <Control editor="aptixia.sm.DDGroupBox" location="1,7" size="1024,225" tabIndex="10" anchor="Top, Left, Right" text="  " />
+  </Form>
+</GUIDescription>

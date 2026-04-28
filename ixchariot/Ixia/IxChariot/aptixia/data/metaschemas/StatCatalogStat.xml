@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="StatCatalogStat" baseType="">
+ 	<help>A stat in the StatCatalog</help>
+    <PropertyString>
+        <name>name</name>
+        <displayName>Name</displayName> 
+        <default></default>
+        <help>The name of a stat in the StatCatalog</help>
+    </PropertyString>
+    <PropertyInt>
+        <name>id</name>
+        <displayName>ID</displayName>
+        <default>0</default>
+        <help>The id of a stat when StatType is set to ArrayStat</help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>valueType</name>
+        <displayName>ValueType</displayName>  
+        <default>0</default>
+        <help>The type of value stored in a stat: Counter, String or Pair</help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>statType</name>
+        <displayName>StatType</displayName>          
+        <default>0</default>
+        <help>Enumeration of the type of a stat: Default(0) or Array(1)</help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>indexMin</name>
+        <displayName>IndexMin</displayName>                  
+        <default>0</default>
+        <help>Minimum value of the possible range of ids for an ArrayStat</help>
+    </PropertyInt>
+    <PropertyInt>
+        <name>indexMax</name>
+        <displayName>IndexMax</displayName>                          
+        <default>0</default>
+        <help>Maximum value of the possible range of ids for an ArrayStat</help>
+    </PropertyInt>
+    <PropertyIntList>
+        <name>availableAggregationTypeList</name>
+        <displayName>AvailableAggregationTypeList</displayName>                                  
+        <min>0</min>
+        <max>19</max>
+        <help>List of the available aggregation type enumerations for a Stat in the StatCatalog</help>
+	<maxListLength>20</maxListLength>
+    </PropertyIntList>
+    <PropertyString>
+        <name>statEnginePath</name>
+        <displayName>StatEnginePath</displayName> 
+        <default></default>
+        <help>The path that the StatEngine uses to receive stats for a stat in the StatCatalog</help>
+    </PropertyString>
+    <PropertyString>
+        <name>description</name>
+        <displayName>Description</displayName>                                          
+        <default>Stat</default>
+        <help>The description of a stat in the StatCatalog</help>>
+    </PropertyString>
+</Node>

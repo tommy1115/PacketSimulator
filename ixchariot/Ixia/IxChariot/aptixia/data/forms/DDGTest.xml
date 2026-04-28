@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<GUIDescription>
+  <Form>
+    <Control ref="list[].stringVarB" editor="aptixia.sm.DDTextBox" enable="" show="" location="84,60" size="100,20" tabIndex="1" />
+    <Control ref="list" editor="aptixia.sm.DDListAddButton" enable="" show="" location="39,107" size="75,23" text="Add" tabIndex="3" />
+    <Control ref="list" editor="aptixia.sm.DDListDownButton" enable="" show="" location="197,79" size="75,23" text="Down" tabIndex="6" />
+    <Control ref="list" editor="aptixia.sm.DDListUpButton" enable="" show="" location="199,40" size="75,23" text="Up" tabIndex="8" />
+  </Form>
+</GUIDescription>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="EthernetELMPlugin" baseType="CardPlugin">	
+	<PropertyBoolean>
+        <name>negotiateMasterSlave</name>
+        <description>Enable the negotiation if true, disable if false.</description>
+    </PropertyBoolean>
+    <PropertyString>
+		<name>negotiationType</name>
+		<description>Type of negotiation.</description>
+		<default>master</default>
+        <choices>
+        	<choice value="master" name="Master" />
+        	<choice value="slave" name="Slave" />
+        </choices>
+    </PropertyString>
+    <help>Plugin to set Ethernet ELM specific settings in Ethernet ELM type ports.</help>
+</Node>
+

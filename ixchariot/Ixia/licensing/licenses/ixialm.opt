@@ -1,0 +1,208 @@
+# ########################################################################
+# Option file for Ixia license administration.
+# The options specified below are provided for example.
+# Please uncomment an option and specify the value as per your requirement 
+# to use it.
+# Note: Please restart IxiaLicenseServer service for enabling/disabling
+# any option.
+# ########################################################################
+
+
+# BORROW_LOWWATER
+# Set the number of BORROW licenses that cannot be borrowed.
+# Usage:
+# BORROW_LOWWATER IXIA_FEATURE1 10
+
+
+# DEBUGLOG
+# Writes debug log information for this vendor daemon to the specified file.
+# The addition of '+' before the logfile name is recommended to append the
+# log even after restarting IxiaLicenseServer service.
+# Usage:
+# DEBUGLOG + myixlmlog.log
+
+
+# EXCLUDE
+# Deny a USER, HOST, DISPLAY, INTERNET, PROJECT, GROUP or HOST_GROUP access
+# to a feature.
+# Usage:
+# EXCLUDE IXIA_FEATURE1 USER michael
+# EXCLUDE IXIA_FEATURE1 HOST MICHAEL-PC1
+# EXCLUDE IXIA_FEATURE1 DISPLAY MICHAEL-PC1
+# EXCLUDE IXIA_FEATURE1 INTERNET 10.205.20.67
+# EXCLUDE IXIA_FEATURE1 INTERNET 10.205.20.*
+#
+# For excluding Group:
+# GROUP MYGRP john michael doug
+# EXCLUDE IXIA_FEATURE1 GROUP MYGRP
+#
+# For excluding Host Group:
+# HOST_GROUP MYHGRP MICHAEL-LAP2 MICHAEL-PC2 JOHN-WORK-PC
+# EXCLUDE IXIA_FEATURE1 HOST_GROUP MYHGRP
+
+
+# EXCLUDE_BORROW
+# Deny a USER, HOST, DISPLAY, INTERNET, PROJECT, GROUP or HOST_GROUP ability
+# to borrow a feature.
+# Usage:
+# EXCLUDE_BORROW IXIA_FEATURE1 USER michael
+# EXCLUDE_BORROW IXIA_FEATURE1 HOST MICHAEL-PC1
+# EXCLUDE_BORROW IXIA_FEATURE1 DISPLAY MICHAEL-PC1
+# EXCLUDE_BORROW IXIA_FEATURE1 INTERNET 10.205.20.67
+# EXCLUDE_BORROW IXIA_FEATURE1 INTERNET 10.205.20.*
+#
+# For excluding Group:
+# GROUP MYGRP john michael doug
+# EXCLUDE_BORROW IXIA_FEATURE1 GROUP MYGRP
+#
+# For excluding Host Group:
+# HOST_GROUP MYHGRP MICHAEL-LAP2 MICHAEL-PC2 JOHN-WORK-PC
+# EXCLUDE_BORROW IXIA_FEATURE1 HOST_GROUP MYHGRP
+
+
+# EXCLUDEALL
+# Deny a USER, HOST, DISPLAY, INTERNET, PROJECT, GROUP or HOST_GROUP access
+# to all features served by ixialm.
+# Usage:
+# EXCLUDEALL USER michael
+# EXCLUDEALL HOST MICHAEL-PC1
+# EXCLUDEALL DISPLAY MICHAEL-PC1
+# EXCLUDEALL INTERNET 10.205.20.67
+# EXCLUDEALL INTERNET 10.205.20.*
+#
+# For excluding Group:
+# GROUP MYGRP john michael doug
+# EXCLUDEALL GROUP MYGRP
+#
+# For excluding Host Group:
+# HOST_GROUP MYHGRP MICHAEL-LAP2 MICHAEL-PC2 JOHN-WORK-PC
+# EXCLUDEALL HOST_GROUP MYHGRP
+
+
+# GROUP
+# Define a group of users for use with any options.
+# Usage:
+# GROUP MYGRP john michael doug
+
+
+# GROUPCASEINSENSITIVE
+# Sets case sensitivity for user and host lists specified in GROUP and
+# HOST_GROUP keywords. By default it is case sensitive.
+# Usage:
+# GROUPCASEINSENSITIVE ON
+
+
+# HOST_GROUP
+# Define a group of hosts for use with any options.
+# Usage:
+# HOST_GROUP MYHGRP MICHAEL-LAP2 MICHAEL-PC2 JOHN-WORK-PC
+
+
+# INCLUDE
+# Allow a USER, HOST, DISPLAY, INTERNET, PROJECT, GROUP or HOST_GROUP access
+# to a feature.
+# Usage:
+# INCLUDE IXIA_FEATURE1 USER michael
+# INCLUDE IXIA_FEATURE1 HOST MICHAEL-PC1
+# INCLUDE IXIA_FEATURE1 DISPLAY MICHAEL-PC1
+# INCLUDE IXIA_FEATURE1 INTERNET 10.205.20.67
+# INCLUDE IXIA_FEATURE1 INTERNET 10.205.20.*
+#
+# For including Group:
+# GROUP MYGRP john michael doug
+# INCLUDE IXIA_FEATURE1 GROUP MYGRP
+#
+# For including Host Group:
+# HOST_GROUP MYHGRP MICHAEL-LAP2 MICHAEL-PC2 JOHN-WORK-PC
+# INCLUDE IXIA_FEATURE1 HOST_GROUP MYHGRP
+
+
+# INCLUDE_BORROW
+# Allow a USER, HOST, DISPLAY, INTERNET, PROJECT, GROUP or HOST_GROUP ability
+# to borrow a feature.
+# Usage:
+# INCLUDE_BORROW IXIA_FEATURE1 USER michael
+# INCLUDE_BORROW IXIA_FEATURE1 HOST MICHAEL-PC1
+# INCLUDE_BORROW IXIA_FEATURE1 DISPLAY MICHAEL-PC1
+# INCLUDE_BORROW IXIA_FEATURE1 INTERNET 10.205.20.67
+# INCLUDE_BORROW IXIA_FEATURE1 INTERNET 10.205.20.*
+#
+# For including Group:
+# GROUP MYGRP john michael doug
+# INCLUDE_BORROW IXIA_FEATURE1 GROUP MYGRP
+#
+# For including Host Group:
+# HOST_GROUP MYHGRP MICHAEL-LAP2 MICHAEL-PC2 JOHN-WORK-PC
+# INCLUDE_BORROW IXIA_FEATURE1 HOST_GROUP MYHGRP
+
+
+# INCLUDEALL
+# Allow a USER, HOST, DISPLAY, INTERNET, PROJECT, GROUP or HOST_GROUP access
+# to all features served by ixialm.
+# Usage:
+# INCLUDEALL USER michael
+# INCLUDEALL HOST MICHAEL-PC1
+# INCLUDEALL DISPLAY MICHAEL-PC1
+# INCLUDEALL INTERNET 10.205.20.67
+# INCLUDEALL INTERNET 10.205.20.*
+#
+# For including Group:
+# GROUP MYGRP john michael doug
+# INCLUDEALL GROUP MYGRP
+#
+# For including Host Group:
+# HOST_GROUP MYHGRP MICHAEL-LAP2 MICHAEL-PC2 JOHN-WORK-PC
+# INCLUDEALL HOST_GROUP MYHGRP
+
+
+# MAX
+# Limit usage for a particular feature/group prioritizes usage among
+# USER, HOST, DISPLAY, INTERNET, PROJECT, GROUP or HOST_GROUP.
+# Usage:
+# MAX 5 IXIA_FEATURE1 USER michael
+# MAX 5 IXIA_FEATURE1 HOST MICHAEL-PC1
+# MAX 5 IXIA_FEATURE1 DISPLAY MICHAEL-PC1
+# MAX 5 IXIA_FEATURE1 INTERNET 10.205.20.67
+# MAX 5 IXIA_FEATURE1 INTERNET 10.205.20.*
+#
+# For setting up max limit for Group:
+# GROUP MYGRP john michael doug
+# MAX 5 IXIA_FEATURE1 GROUP MYGRP
+#
+# For setting up max limit for Host Group:
+# HOST_GROUP MYHGRP MICHAEL-LAP2 MICHAEL-PC2 JOHN-WORK-PC
+# MAX 5 IXIA_FEATURE1 HOST_GROUP MYHGRP
+
+
+# MAX_BORROW_HOURS
+# Changes the maximum borrow period for the specified feature.
+# Usage:
+# MAX_BORROW_HOURS IXIA_FEATURE1 36
+
+
+# NOLOG
+# Turn off logging of certain items in the debug log file 
+# (IN: Checkin, OUT: Checkout, DENIED: Denied).
+# NOLOG IN
+# NOLOG OUT
+# NOLOG DENIED
+
+
+# RESERVE
+# Reserve features for a USER, HOST, DISPLAY, INTERNET, PROJECT, GROUP
+# or HOST_GROUP.
+# Usage:
+# RESERVE 5 IXIA_FEATURE1 USER michael
+# RESERVE 5 IXIA_FEATURE1 HOST MICHAEL-PC1
+# RESERVE 5 IXIA_FEATURE1 DISPLAY MICHAEL-PC1
+# RESERVE 5 IXIA_FEATURE1 INTERNET 10.205.20.67
+# RESERVE 5 IXIA_FEATURE1 INTERNET 10.205.20.*
+#
+# For setting up max limit for Group:
+# GROUP MYGRP john michael doug
+# RESERVE 5 IXIA_FEATURE1 GROUP MYGRP
+#
+# For setting up max limit for Host Group:
+# HOST_GROUP MYHGRP MICHAEL-LAP2 MICHAEL-PC2 JOHN-WORK-PC
+# RESERVE 5 IXIA_FEATURE1 HOST_GROUP MYHGRP
+

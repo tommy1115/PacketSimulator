@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+    Generally, this should only contain information needed before a
+    plugin is loaded. Any other information should most likely gained
+    by instrospection of the plug-in object
+
+-->
+
+<Plugin>
+    <!-- ================================================================  -->
+
+    <!-- 
+        Version string for the plugin. For now, restrict yourself to
+        a sequence of dotted numbers (in string form). E.g. "1.0.5.2"
+    -->
+    <Version>1.0.0.0</Version>
+
+    <!-- A keyword string that uniquely identifies the plugin -->
+    <Type>FilterPlugin</Type>
+
+    <!-- An arbitrary string used for "captioning" the plugin -->
+    <Name>Filter</Name>
+    <!-- temporary, this is going away -->
+    <Class>Global</Class>
+
+</Plugin>

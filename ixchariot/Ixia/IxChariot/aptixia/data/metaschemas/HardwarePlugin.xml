@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="HardwarePlugin" baseType="StackElementPlugin">
+	<PropertyNode nodeType="CardPlugin" polymorphic="1">
+        <name>card</name>
+        <default>null</default>
+        <description>Polymorphic card plugin used in the hardware plugin.</description>
+    </PropertyNode>
+
+    <Method2 name="GetCardClassification">
+         <Argument name="classification" direction="out" type="string" >
+         <help>The classification for the card.</help>
+         </Argument>
+         <help>Method to get the card type or classification. </help>
+    </Method2>
+
+</Node>

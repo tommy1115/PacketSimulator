@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="L2tpPlugin" baseType="StackElementPlugin">
+
+<PropertyBoolean>
+    <name>enabled</name>
+    <default>true</default>
+</PropertyBoolean>
+
+<PropertyString>
+    <name>role</name>
+    <default>lac</default>
+    <choices>
+    <choice value="lac" name="L2TP Access Concentrator" />
+    <choice value="lns" name="L2TP Network Server" />
+    </choices>
+
+    <help>
+    The L2TP element can be an access concentrator (LAC) or network server (LNS)
+    </help>
+
+    <description>Role for L2TP element, access concentrator (LAC) or network server (LNS)</description>
+
+</PropertyString>
+
+<PropertyInt>
+    <name>setupRate</name>
+    <default>100</default>
+    <min>1</min>
+    <max>750</max>
+
+    <help>The rate per second, at which to set up L2TP tunnels and PPP sessions</help>
+    <description>Rate (per sec), for L2TP tunnel and PPP session setup</description>
+</PropertyInt>
+
+<PropertyBoolean>
+    <name>enableThrottling</name>
+    <default>true</default>
+
+    <help>
+    If checked the setup rate will be throttled once the outstanding 
+    sessions reach the value of 'maxOutstandingSessions'
+    </help>
+    <description>Throttle setup rate once the outstanding sessions reach 'maxOutstandingSessions'</description>
+</PropertyBoolean>
+
+<PropertyInt>
+    <name>maxOutstandingSessions</name>
+    <default>1000</default>
+    <min>1</min>
+    <max>1000</max>
+
+    <help>
+    The maximum number of sessions that may be outstanding while
+    new sessions are being attempted if the outstanding sessions
+    reach this limit, no more new sessions may be attempted until
+    the outstanding sessions come up.
+    </help>
+    <description>Max. no. of sessions outstanding while new sessions are being setup</description>
+
+</PropertyInt>
+
+<PropertyInt>
+    <name>teardownRate</name>
+    <default>100</default>
+    <min>1</min>
+    <max>750</max>
+
+    <help>
+    The rate per sec., at which to teardown up L2TP tunnels and PPP sessions
+    </help>
+    <description>The rate per sec for destroying L2TP tunnels and PPP sessions</description>
+</PropertyInt>
+
+<PropertyInt>
+    <name>numSessions</name>
+    <default>1</default>
+    <min>1</min>
+    <max>16000</max>
+
+    <help>The number of sessions to establish</help>
+    <description>The number of sessions to establish</description>
+</PropertyInt>
+
+<PropertyNode nodeType="L2tp">
+    <name>l2tp</name>
+
+    <description>Element that contains l2tp specific properties</description>
+</PropertyNode>
+
+<PropertyNode nodeType="PppL2tp">
+    <name>pppL2tp</name>
+
+    <description>Element that contains ppp specific properties</description>
+</PropertyNode>
+
+<PropertyNodeList nodeType="L2tpTunDestIpRange" type="sync">
+    <name>tunDestIpRanges</name>
+
+    <description>List of L2TP tunnel specifications</description>
+</PropertyNodeList>
+
+</Node>

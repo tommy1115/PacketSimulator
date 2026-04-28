@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="L2tp" baseType="">
+
+<PropertyInt>
+    <name>sessionsPerTunnel</name>
+    <default>1</default>
+    <min>1</min>
+    <max>16000</max>
+    <help>Number of sessions per L2TP tunnel</help>
+    <description>Number of sessions per L2TP tunnel</description>
+</PropertyInt>
+
+<PropertyString>
+    <name>sessionAllocMethod</name>
+    <default>nextTunnel</default>
+    <choices>
+    <choice value="nextTunnel" name="Create All Tunnels First" />
+    <choice value="fillTunnel" name="Create Sessions Per Tunnel First " />
+
+    <help>Ordering method for tunnel and session creation</help>
+    <description>Ordering method for tunnel and session creation</description>
+    </choices>
+</PropertyString>
+
+<PropertyInt>
+    <name>rws</name>
+    <default>10</default>
+    <min>1</min>
+    <max>2048</max>
+    <help>L2TP Receive Window Size</help>
+    <description>L2TP Receive Window Size</description>
+</PropertyInt>
+
+<PropertyInt>
+    <name>sourceUdpPort</name>
+    <default>1701</default>
+    <min>1</min>
+    <max>65535</max>
+
+    <help>UDP port to employ for tunneling sources</help>
+    <description>UDP port to employ for tunneling sources</description>
+</PropertyInt>
+
+<PropertyInt>
+    <name>destinationUdpPort</name>
+    <default>1701</default>
+    <min>1</min>
+    <max>65535</max>
+
+    <help>UDP port to employ for tunneling destinations</help>
+    <description>UDP port to employ for tunneling destinations</description>
+</PropertyInt>
+
+<PropertyBoolean>
+    <name>enableDataChecksum</name>
+    <default>false</default>
+
+    <help>If checked, UDP checksum is enabled on data plane packets</help>
+    <description>Enable/disable UDP checksums on data plane packets</description>
+</PropertyBoolean>
+
+<PropertyBoolean>
+    <name>enableControlChecksum</name>
+    <default>false</default>
+
+    <help>If checked, UDP checksum is enabled on control plane packets</help>
+    <description>Enable/disable UDP checksums on control plane packets</description>
+</PropertyBoolean>
+
+<PropertyBoolean>
+    <name>enableAvpHiding</name>
+    <default>false</default>
+
+    <help>If checked, Attribute Value Pair hiding is enabled</help>
+    <description>Enable/disable (A)ttribute (V)alue (P)air hiding</description>
+</PropertyBoolean>
+
+<PropertyString>
+    <name>tunnelAuthMode</name>
+    <default>none</default>
+    <choices>
+    <choice value="none" name="Tunnel Authentication Disabled" />
+    <choice value="hostname" name="Authenticate Hostname" />
+    </choices>
+
+    <help>Enables or disables L2TP tunnel authentication</help>
+    <description>Enable/disable L2TP tunnel authentication</description>
+</PropertyString>
+
+<PropertyString>
+    <name>localHostName</name>
+    <default>ixia</default>
+    <maxLength>32</maxLength>
+
+    <help>L2TP Local host name to be used in authentication</help>
+    <description>L2TP Local host name used during authentication</description>
+</PropertyString>
+
+<PropertyString>
+    <name>secret</name>
+    <default>ixia</default>
+    <maxLength>32</maxLength>
+
+    <help>L2TP secret to be used in authentication</help>
+    <description>L2TP secret used during authentication</description>
+</PropertyString>
+
+<PropertyString>
+    <name>peerHostName</name>
+    <default>ixia</default>
+    <maxLength>32</maxLength>
+
+    <help>L2TP peer host name to be used in authentication</help>
+    <description>L2TP peer host name used durint authentication</description>
+</PropertyString>
+
+<PropertyInt>
+    <name>tunnelStartId</name>
+    <default>1</default>
+    <min>1</min>
+    <max>65535</max>
+
+    <help>L2TP start tunnel identifier</help>
+    <description>L2TP start tunnel identifier</description>
+</PropertyInt>
+
+<PropertyInt>
+    <name>noCallTimeout</name>
+    <default>5</default>
+    <min>1</min>
+
+    <help>Timeout for no call establishment, in seconds</help>
+    <description>Timeout for no call establishment, in seconds</description>
+</PropertyInt>
+
+<PropertyString>
+    <name>framingCapability</name>
+    <default>sync</default>
+    <choices>
+        <choice value="1" name="Synchronous" />
+        <choice value="2" name="Asynchronous" />
+    </choices>
+
+    <help>Designates sync or async framing</help>
+    <description>Designates sync or async framing</description>
+</PropertyString>
+
+<PropertyString>
+    <name>bearerCapability</name>
+    <default>digital</default>
+    <choices>
+        <choice value="1" name="Digital" />
+        <choice value="2" name="Analog" />
+        <choice value="3" name="Both" />
+    </choices>
+
+    <description>Bear capability</description>
+</PropertyString>
+
+<PropertyInt>
+    <name>sessionStartId</name>
+    <default>1</default>
+    <min>1</min>
+    <max>65535</max>
+
+    <help>L2TP first session identifier</help>
+    <description>L2TP first session identifier</description>
+</PropertyInt>
+
+<PropertyString>
+    <name>bearerType</name>
+    <default>digital</default>
+    <choices>
+        <choice value="1" name="Digital" />
+        <choice value="2" name="Analog" />
+    </choices>
+
+    <description>Bearer Type</description>
+</PropertyString>
+
+<PropertyInt>
+    <name>txConnectSpeed</name>
+    <default>268435456</default>
+    <min>1</min>
+
+    <description>Transmission connection speed</description>
+</PropertyInt>
+
+<PropertyInt>
+    <name>rxConnectSpeed</name>
+    <default>268435456</default>
+    <min>1</min>
+
+    <description>Receive connection speed</description>
+</PropertyInt>
+
+<PropertyBoolean>
+    <name>enableOffsetBit</name>
+    <default>true</default>
+
+    <help>If checked, offset bit is enabled in L2TP data packets</help>
+    <description>If enabled, offset bit is enabled in L2TP data packets</description>
+</PropertyBoolean>
+
+<PropertyInt>
+    <name>offsetLen</name>
+    <default>0</default>
+    <min>0</min>
+    <max>256</max>
+    <maxLength>32</maxLength>
+
+    <help>L2TP offset length in bytes. Applicable only if offset bit set.</help>
+    <description>L2TP offset length in bytes</description>
+</PropertyInt>
+
+<PropertyInt>
+    <name>offsetByte</name>
+    <default>0</default>
+    <min>0</min>
+    <max>255</max>
+
+    <help>L2TP offset byte. Applicable only if offset bit is set.</help>
+    <description>L2TP offset byte</description>
+</PropertyInt>
+
+<PropertyBoolean>
+    <name>enableLengthBit</name>
+    <default>false</default>
+
+    <help>If checked, length bit is set in L2TP data packets.</help>
+    <description>If enabled, length bit set in L2TP data packets.</description>
+</PropertyBoolean>
+
+<PropertyBoolean>
+    <name>enableProxy</name>
+    <default>true</default>
+
+    <description>Enable/disable proxy</description>
+</PropertyBoolean>
+
+<PropertyBoolean>
+    <name>enableSequenceBit</name>
+    <default>false</default>
+
+   <help>If checked, sequence bit is set in L2TP data packets.</help>
+   <description>If enabled, sequence bit is set in L2TP data packets.</description>
+</PropertyBoolean>
+
+<PropertyBoolean>
+    <name>enableRedial</name>
+    <default>false</default>
+
+    <help>If checked, L2TP redial is enabled</help>
+    <description>If enabled, L2TP redial is activated</description>
+</PropertyBoolean>
+
+<PropertyInt>
+    <name>redialTimeout</name>
+    <default>10</default>
+    <min>1</min>
+    <max>2147483647</max> <!-- max signed int32 -->
+
+    <help>L2TP redial timeout, in seconds</help>
+    <description>L2TP redial timeout, in seconds</description>
+</PropertyInt>
+
+<PropertyInt>
+    <name>redialMax</name>
+    <default>20</default>
+    <min>1</min>
+    <max>2147483647</max> <!-- max signed int32 -->
+
+    <help>Maximum number of L2TP redial attempts</help>
+    <description>Max number of L2TP redial attempts</description>
+</PropertyInt>
+
+<PropertyInt>
+    <name>initTimeout</name>
+    <default>2</default>
+    <min>1</min>
+    <max>2147483647</max> <!-- max signed int32 -->
+
+    <description>Initial L2TP timeout</description>
+</PropertyInt>
+
+<PropertyInt>
+    <name>maxTimeout</name>
+    <default>8</default>
+    <min>1</min>
+    <max>2147483647</max> <!-- max signed int32 -->
+
+    <description>Max. L2TP timeout</description>
+</PropertyInt>
+
+<PropertyInt>
+    <name>l2tpRetries</name>
+    <default>30</default>
+    <min>1</min>
+    <max>2147483647</max> <!-- max signed int32 -->
+
+    <help>Number of L2TP retries</help>
+    <description>Number of L2TP retries</description>
+</PropertyInt>
+
+<PropertyBoolean>
+    <name>enableHello</name>
+    <default>false</default>
+
+    <help>If checked, L2TP hello request is enabled</help>
+    <description>If enabled, L2TP hello request is performed</description>
+</PropertyBoolean>
+
+<PropertyInt>
+    <name>helloTimeout</name>
+    <default>60</default>
+    <min>1</min>
+    <max>2147483647</max> <!-- max signed int32 -->
+
+    <help>Timeout for L2TP hello request, in seconds</help>
+    <description>Timeout for L2TP hello request, in seconds</description>
+</PropertyInt>
+
+</Node>

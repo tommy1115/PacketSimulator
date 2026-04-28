@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Node nodeType="SnmpPlugin" baseType="GenericStatSource">
+    <help>SNMP Stat Source TestServer plug in</help>
+	<PropertyNodeList nodeType="SnmpStatSource">
+		<name>snmpStatSources</name>
+		<displayName>SNMP Stat Sources</displayName>
+		<description>Configured for stat data collection SNMP Stat Sources</description>
+		<help>Configured for obtaining SNMP stat data collection of SnmpStatSources</help>
+	</PropertyNodeList>
+    <List name="MibVars" type="string"/>
+    <Struct name="SnmpTemplate" version="1">
+		<help></help>
+		<Member name="m_Name" type="string" version="1"/>
+		<Member name="m_Description" type="string" version="1"/>
+    </Struct>
+    <List name="SnmpTemplates" type="SnmpPlugin.SnmpTemplate"/>
+    <Method2 name="MibGetChildren">
+		<help>
+		</help>
+		<Argument name="sPath" direction="in" type="string"/>
+		<Argument name="childNodes" direction="out" type="SnmpPlugin.MibVars"/>
+    </Method2>
+    <Method2 name="MibGetType">
+		<help>
+		</help>
+		<Argument name="sPath" direction="in" type="string"/>
+		<Argument name="type" direction="out" type="string"/>
+    </Method2>
+    <Method2 name="MibGetDescription">
+		<help>
+		</help>
+		<Argument name="sPath" direction="in" type="string"/>
+		<Argument name="description" direction="out" type="string"/>
+    </Method2>
+    <Method2 name="MibResolveToName">
+		<help>
+		</help>
+		<Argument name="sPath" direction="in" type="string"/>
+		<Argument name="name" direction="out" type="string"/>
+    </Method2>
+    <Method2 name="MibResolveToOID">
+		<help>
+		</help>
+		<Argument name="sPath" direction="in" type="string"/>
+		<Argument name="oid" direction="out" type="string"/>
+    </Method2>
+    <Method2 name="MibAddNewMib">
+		<help>
+		</help>
+		<Argument name="FileName" direction="in" type="string"/>
+		<Argument name="body" direction="in" type="string"/>
+    </Method2>
+
+    <Method2 name="Init">
+		<help>Initializes the SNMP CAL plugin</help>
+    </Method2>
+    <Method2 name="PopulateStatCatalog">
+		<help>Initializes the SNMP CAL plugin</help>
+    </Method2>
+    
+    <Method2 name="TmplGetTemplates">
+		<help>
+		</help>
+		<Argument name="templates" direction="out" type="SnmpPlugin.SnmpTemplates"/>
+    </Method2>
+    <Method2 name="TmplRename">
+		<help>
+		</help>
+		<Argument name="oldName" direction="in" type="string"/>
+		<Argument name="newName" direction="in" type="string"/>
+		<Argument name="description" direction="in" type="string"/>
+    </Method2>
+    <Method2 name="TmplLoad">
+		<help>
+		</help>
+		<Argument name="name" direction="in" type="string"/>
+		<Argument name="result" direction="out" type="string"/>
+    </Method2>
+    <Method2 name="TmplSave">
+		<help>
+		</help>
+		<Argument name="name" direction="in" type="string"/>
+		<Argument name="body" direction="in" type="string"/>
+		<Argument name="result" direction="out" type="string"/>
+    </Method2>
+    <Method2 name="TmplRemove">
+		<help>
+		</help>
+		<Argument name="name" direction="in" type="string"/>
+    </Method2>
+    
+    <Method2 name="IsStarted">
+		<help>
+		</help>
+		<Argument name="result" direction="out" type="bool"/>
+    </Method2>
+    <Method2 name="IsSourceInUse">
+		<help>
+		</help>
+		<Argument name="name" direction="in" type="string"/>
+		<Argument name="result" direction="out" type="bool"/>
+    </Method2>
+    
+    <Method2 name="IsStatInUse">
+		<help>
+		</help>
+		<Argument name="source" direction="in" type="string"/>
+		<Argument name="stat" direction="in" type="string"/>
+		<Argument name="result" direction="out" type="bool"/>
+    </Method2>
+
+</Node>
+
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="AggregatedStat" baseType="StatSpec">
+    <help>A unique specification for a stat in StatView includes StatSpec plus a filter list</help>
+    <PropertyNodeList nodeType="StatFilter">
+		<name>statFilterList</name>
+		<description>List of filters selected by user or application</description>
+		<help>List of filters selected by user or application</help>
+    </PropertyNodeList>
+</Node>

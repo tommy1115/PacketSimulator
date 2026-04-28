@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ixia_message_file>
+
+<status>
+<id_string>Aptixia.GenericTestModel.StateMachine.EventNotHandledForState</id_string>
+<text>Event '%2%' not handled for state '%1%'</text>
+<description>
+    An event arrived that the current test state does not recognize.
+    This is probably due to an internal logic error in the test state
+    machine.
+</description>
+</status>
+
+<status>
+<id_string>Aptixia.GenericTestModel.StateMachine.UndefinedEvent</id_string>
+<text>Event '%1%' does not exist for this test's state machine</text>
+<description>
+    An event send was attempt arrived that is not defined by the current test.
+</description>
+</status>
+
+<status>
+<id_string>Aptixia.GenericTestModel.StateMachine.ExecutionError</id_string>
+<text>Error during execution of test phase: %1%</text>
+<description>
+    Error during execution of test phase
+</description>
+</status>
+
+
+<status>
+<id_string>Aptixia.GenericTestModel.StateMachine.IllegalOperation</id_string>
+<text>Operation '%1%' is illegal' while the test model is in state '%2%'</text>
+<description>
+    An operation was attempted that is illegal in the test's current state
+</description>
+</status>
+
+</ixia_message_file>

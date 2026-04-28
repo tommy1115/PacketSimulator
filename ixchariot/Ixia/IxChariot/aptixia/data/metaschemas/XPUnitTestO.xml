@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="XPUnitTestO" baseType="XProtocolObject">
+    <help>Used for internal unit testing</help>
+    <PropertyString>
+        <name>stringVarO</name>
+        <default>my most excellent string</default>
+        <help>Used for internal unit testing</help>
+    </PropertyString>
+
+    <Method2 name="GetTestStringO">
+        <help>Used for internal unit testing</help>
+        <Argument name="v" direction="out" type="string">
+        <help>Used for internal unit testing</help>
+        </Argument>
+    </Method2>
+</Node>

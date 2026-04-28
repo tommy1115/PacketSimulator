@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="DDGTest" baseType="DataDrivenFormBase">
+<help>Provides Unit Test facility for Data Driven Form</help>
+    <PropertyInt>
+	<name>intVar1</name>
+        <min>0</min>
+        <max>900</max>
+        <default>2</default>
+        <description>this is a test int</description>
+        <help>this is a lengthier help text for intVar1</help>
+    </PropertyInt>
+    <PropertyInt>
+	<name>intVar2</name>
+        <min>0</min>
+        <max>900</max>
+        <default>0</default>
+        <description>this is a test int</description>
+        <help>this is a lengthier help text intVar2</help>
+    </PropertyInt>
+    <PropertyBoolean>
+	<name>booleanVar1</name>
+        <default>0</default>
+        <description>this is a test boolean</description>
+        <help>this is a lengthier help text booleanVar1</help>
+    </PropertyBoolean>
+    <PropertyBoolean>
+	<name>booleanVar2</name>
+        <default>0</default>
+        <description>this is a test boolean</description>
+        <help>this is a lengthier help text booleanVar2</help>
+    </PropertyBoolean>
+    <PropertyDouble>
+	<name>doubleVar1</name>
+        <min>5.9</min>
+        <max>700.9</max>
+        <default>300.5</default>
+        <description>this is a test double</description>
+        <help>this is a lengthier double help text doubleVar1</help>
+    </PropertyDouble>
+    <PropertyDouble>
+	<name>doubleVar2</name>
+        <min>5.9</min>
+        <max>700.9</max>
+        <default>300.5</default>
+        <description>this is a test double</description>
+        <help>this is a lengthier double help text doubleVar2</help>
+    </PropertyDouble>
+    <PropertyString>
+        <name>stringVar1</name>
+        <minLength>0</minLength>
+        <maxLength>20</maxLength>
+        <default>2</default>
+        <description>this is a test string</description>
+        <help>this is a lengthier help text stringVar1</help>
+    </PropertyString>
+    <PropertyString>
+        <name>stringVar2</name>
+        <minLength>0</minLength>
+        <maxLength>20</maxLength>
+        <default>0</default>
+        <description>this is a test string</description>
+        <help>this is a lengthier help text stringVar2</help>
+    </PropertyString>
+    <PropertyString>
+        <name>stringVar3</name>
+        <minLength>0</minLength>
+        <maxLength>20</maxLength>
+        <default></default>
+        <description>this is a test string</description>
+        <help>this is a lengthier help text stringVar3</help>
+    </PropertyString>
+
+    <PropertyNodeList nodeType="NodeTestB">
+        <name>list</name>
+        <help>this is a lengthier help text list</help>
+    </PropertyNodeList>
+
+</Node>

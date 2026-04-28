@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ixia_message_file>
+  <status>
+    <id_string>Aptixia.Ranges.ParseError</id_string>
+    <text>Ranges plugin at %1% could not parse request. Message: '%1%'</text>
+    <description></description>
+  </status>
+  <status>
+    <id_string>Aptixia.Ranges.InternalError</id_string>
+    <text>Ranges plugin at %1% failed</text>
+    <description></description>
+  </status>
+  <status>
+    <id_string>Aptixia.Ranges.InvalidAddress</id_string>
+    <text>Ranges plugin at %1% failed with message: 'Invalid address: %1%'</text>
+    <description></description>
+  </status>
+  <status>
+    <id_string>Aptixia.Ranges.ParameterOverflow</id_string>
+    <text>Ranges plugin at %1% failed with message: '%1%'</text>
+    <description></description>
+  </status>
+  <status>
+    <id_string>Aptixia.Ranges.AddRouteFail</id_string> 
+    <text>Error when adding a new route. %1%</text> 
+    <description>This error is encountered when ranges plugin is trying to add a new route.</description> 
+  </status>
+</ixia_message_file>
+

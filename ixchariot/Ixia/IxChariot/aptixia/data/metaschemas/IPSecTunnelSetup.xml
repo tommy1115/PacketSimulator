@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="IPSecTunnelSetup" baseType="">
+    <PropertyInt>
+        <name>tunnelSweepSize</name>
+        <default>10</default>
+        <min>1</min>
+        <max>100</max>
+        <help>
+        Number of tunnels to be attempted in one sweep
+        </help>
+    </PropertyInt>
+
+    <PropertyInt>
+        <name>tunnelSetupTimeout</name>
+        <default>30</default>
+        <min>1</min>
+        <max>600</max>
+        <help>
+        Time to wait before declaring tunnel setup attempt failed
+        </help>
+    </PropertyInt>
+
+    <PropertyInt>
+        <name>numRetries</name>
+        <default>0</default>
+        <min>0</min>
+        <max>100</max>
+        <help>
+        Number of retries when tunnel negotiation timeout
+        </help>
+    </PropertyInt>
+
+    <PropertyInt>
+        <name>retryInterval</name>
+        <default>10</default>
+        <min>1</min>
+        <max>60</max>
+        <help>
+        Time to wait before retry the tunnel creation attempt
+        </help>
+    </PropertyInt>
+
+    <PropertyInt>
+        <name>retryDelay</name>
+        <default>10</default>
+        <min>1</min>
+        <max>60</max>
+        <help>
+        To put a delay beween subsequent attempts
+        </help>
+    </PropertyInt>
+</Node>

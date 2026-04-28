@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="TenGigabitWANPlugin" baseType="CardPlugin">
+<description>10 Gigabit WAN Ethernet card</description>
+	<PropertyString>
+        <name>interfaceType</name>
+        <description>Values can be kWANSonet or kWANSDH </description>
+        <default>kWANSonet</default>
+        <choices>
+        	<choice value="kWANSonet" name="WAN(Sonet)" />
+        	<choice value="kWANSDH" name="WAN(SDH)" />
+        </choices>
+    </PropertyString>
+    
+    <PropertyInt>
+		<name>c2Transmit</name>
+		<default>26</default>
+		<min>0</min>
+        <max>255</max>
+        <description>Value of Path signal label(C2 byte) to transmit.</description>
+    </PropertyInt>
+      
+    <PropertyInt>
+		<name>c2Expected</name>
+		<default>26</default>
+		<min>0</min>
+        <max>255</max>
+        <description>Value of Path signal label(C2 byte) expected.</description>
+    </PropertyInt>   
+    
+    <PropertyString>
+		<name>transmitClocking</name>
+		<description>values are "internal" or "recovered" or "external"</description>
+		<default>internal</default>
+        <choices>
+        	<choice value="internal" name="Internal" />
+        	<choice value="recovered" name="Recovered" />
+        	<choice value="external" name="External" />
+        </choices>
+    </PropertyString>
+    
+    <PropertyBoolean>
+		<name>enableFlowControl</name>
+		<default>false</default>
+    </PropertyBoolean>
+    
+    <PropertyString>
+		<name>directedAddress</name>
+		<default>01 80 C2 00 00 01</default>
+    </PropertyString>
+    
+    <PropertyBoolean>
+		<name>txIgnoresRxLinkFaults</name>
+		<default>false</default>
+    </PropertyBoolean>
+</Node>

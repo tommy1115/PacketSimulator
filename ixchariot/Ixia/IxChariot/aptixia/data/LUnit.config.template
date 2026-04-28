@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!-- LUnit.config -->
+<configuration>
+<lunit>
+ <logging>
+ <set key="always_send_to_console" value="true" />
+ </logging>
+ <defaults>
+  <set key="ixia_chassis" value="192.168.5.117" />
+  <set key="ixia_chassis_no" value="1" />
+  <set key="ixia_card_no" value="4" />
+  <set key="ixia_port_no" value="2" />
+  <set key="ixia_port_addr_format" value="10.{0}.{1}.{2}" />
+
+  <set key="iteration_multiplier" value="10" />
+ </defaults>
+</lunit>
+</configuration>

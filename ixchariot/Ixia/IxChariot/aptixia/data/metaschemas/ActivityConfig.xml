@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="ActivityConfig" baseType="XProtocolObject">
+
+	<Struct name="ActivityObjective" version="1">
+		<Member name="type"		type="string"	version="1"/>
+		<Member name="units"	type="string"	version="1"/>
+		<Member name="minLoad"	type="double"		version="1"/>
+		<Member name="maxLoad"	type="double"		version="1"/>
+	</Struct>
+	
+	<List name="ActivityObjectiveVector"	type="ActivityConfig.ActivityObjective" version="1"/>
+	
+	<Enum name="eActivityType">
+		<Choices>
+            <Choice symbol="kTypeClient" value="0" />
+            <Choice symbol="kTypeServer" value="1" />
+		</Choices>
+	</Enum>
+
+    <Struct name="Activity" version="1" >
+        <Member name="name"				type="string"			version="1" />
+        <Member name="type"				type="ActivityConfig.eActivityType"		version="1" />
+        <Member name="protocol"			type="string"			version="1" />
+        <Member name="adapterId"		type="string"			version="1" />
+        <Member name="supportsIterations" type="bool"			version="1" />
+        <Member name="supportsRandom"	type="bool"				version="1" />
+        <Member name="supportsPendingUsers" type="bool"			version="1" />
+        <Member name="minInterval"		type="int32"			version="1" />
+        <Member name="objectives"		type="ActivityConfig.ActivityObjectiveVector" version="1" />
+    </Struct>
+
+	<List name="ActivityVector"	type="ActivityConfig.Activity" version="1" />
+
+	<Struct name="ActivityModel" version="1">
+		<Member name="name"				type="string"		version="1" />
+		<Member name="type"				type="ActivityConfig.eActivityType"	version="1" />
+		<Member name="activities"		type="ActivityConfig.ActivityVector"	version="1" />
+	</Struct>
+	
+	<List name="ActivityModelVector"	type="ActivityConfig.ActivityModel" version="1"/>
+</Node> 

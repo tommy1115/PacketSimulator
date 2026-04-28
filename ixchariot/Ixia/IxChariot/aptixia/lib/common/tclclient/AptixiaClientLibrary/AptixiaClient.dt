@@ -1,0 +1,105 @@
+[comment {Aptixia Tcl Client}]
+[manpage_begin AptixiaClient n 1.1]
+[moddesc {Aptixia Tcl Client}]
+[titledesc {Aptixia Tcl Client}]
+[require Tcl 8.4]
+[require AptixiaClient 2.0]
+
+[description]
+[para]
+
+
+[section "The Aptixia Client Library"]
+The Aptixia Client Library provides client side access to an aptixia
+test server. 
+
+[section "Connecting to a test server"]
+
+[section {Managed vs Unmanaged data}]
+[subsection {Managed Data Types}]
+    TBD
+[subsection {Unmanaged Data Types}]
+    Unmanaged data types are used for conveying input, output, 
+    and input/output, parameter data in Object method calls.
+
+[section {Objects}]
+    Objects are Managed. They reflect Objects resident within the
+    TestServer.
+
+[section "Object Methods"]
+    [subsection "Method Calls on subobjects"]
+
+[section "Object Properties"]
+    Objects properties, being intrinsic elements in Objects, are Managed data
+
+[section "Simple Object Properties"]
+    [subsection "String Properties"]
+    [subsection "Int Properties"]
+    [subsection "Double Properties"]
+    [subsection "Boolean Properties"]
+    [subsection "Property Lists"]
+
+[section "SubObject Properities"]
+[section "Lists of SubObjects"]
+
+[section {Simple Unmanaged Data}]
+
+[section {Simple Unmanaged Data Types}]
+    [subsection {int8}]
+        In the tcl api library [const int8] values are represented as 
+        regular tcl integers
+
+    [subsection {int16}]
+        In the tcl api library [const int16] values are represented as 
+        regular tcl integers
+
+    [subsection {int32}]
+        In the tcl api library [const int32] values are represented as 
+        regular tcl integers
+    [subsection {int64}]
+        In the tcl api library [const int64] values are represented as 
+        regular tcl integers. This requires that Tcl 8.4 or greater
+        be used with the Aptixia Tcl Client Library.
+
+    [subsection {string}]
+        [const string] values are represented using normal tcl strings
+
+    [subsection {octets}]
+        In the tcl api library normal tcl strings are used as
+        [const octets] data elements. Tcl strings can
+        contain arbitrary binary (nonascii) characters such as '\0'
+        the tcl [const binary] command can be used to aid in creating
+        binary [const octets] blobs
+
+[section {Unmanaged Complex Data Types}]
+    [subsection "Simple Lists"]
+
+    [subsection "Node Lists"]
+
+    [subsection "Polymorphic Node Lists"]
+    Node Lists can be polymorphic. When these items in polymorphic node lists
+    are retrieved via accessors like 'Get' they are retrieved as
+    their characterized type, not as their generic base type.
+
+    [example_begin]
+    set pluginObject [lb]$portGroupObject stack childrenList Get 0[rb]
+    puts stderr [lb]$pluginObject info type[rb]
+    [example_end]
+
+    [subsection "Enums"]
+    Enums are implemented as classes. Usually you want to use them like
+    like constants.  To allow for, this Each enum class has a set of 
+    class constants for each possible value enumeration. Example:
+
+    [example_begin]
+    $myTestObject _Validate \
+        $::AptixiaClient::XProtocolObject::ValidateMode::kDefaultValidation
+    [example_end]
+
+
+[section "Example script"]
+[example_begin]
+[file "../../unitTests/tcltest/example.tcl"]
+[example_end]
+
+[manpage_end] 

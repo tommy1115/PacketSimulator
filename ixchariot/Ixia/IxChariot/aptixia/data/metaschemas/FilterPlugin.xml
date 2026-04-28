@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Node nodeType="FilterPlugin" baseType="GlobalPlugin">
+<help>FilterPlugin configures filter settings on a port.</help>
+<PropertyString>
+    <name>initialAction</name>
+    <description>Select merge to apply settings on top of existing ones. Select reset to apply settings on top of default configuration</description>
+    <default>reset</default>
+    <choices>
+    <choice value="reset" name="reset" />
+    <choice value="merge" name="merge" />
+    </choices>
+</PropertyString>
+<PropertyBoolean>
+    <name>all</name>
+    <default>true</default>
+    <description>Select to allow all packets to pass</description>
+</PropertyBoolean>
+<PropertyBoolean>
+    <name>pppoecontrol</name>
+    <default>false</default>
+    <description>Select to allow PPPoE control packets to pass</description>
+</PropertyBoolean>
+<PropertyBoolean>
+    <name>pppoenetwork</name>
+    <default>false</default>
+    <description>Select to allow PPPoE network packets to pass</description>
+</PropertyBoolean>
+<PropertyBoolean>
+    <name>isis</name>
+    <default>false</default>
+    <description>Select to allow ISIS packets to pass</description>
+</PropertyBoolean>
+<PropertyString>
+    <name>ip</name>
+    <default></default>
+    <choices>
+        <choice value='0' name='HOPOPT' description='IPv6 Hop-by-Hop Option [RFC1883]'></choice>
+        <choice value='1' name='ICMP' description='Internet Control Message Protocol '></choice>
+        <choice value='2' name='IGMP' description='Internet Group Management [RFC1112]'></choice>
+        <choice value='3' name='GGP' description='Gateway-to-Gateway [RFC823]'></choice>
+        <choice value='4' name='IP' description='IP in IP (encapsulation) [RFC2003]'></choice>
+        <choice value='5' name='ST' description='Stream [RFC1190,RFC1819]'></choice>
+        <choice value='6' name='TCP' description='Transmission Control [RFC793]'></choice>
+        <choice value='7' name='CBT' description='CBT [Ballardie]'></choice>
+        <choice value='9' name='IGP' description='any private interior gateway (used by Cisco for their IGRP) [IANA]'></choice>
+        <choice value='10' name='BBN-RCC-MON' description='BBN RCC Monitoring [SGC]'></choice>
+        <choice value='11' name='NVP-II' description='Network Voice Protocol [RFC741,SC3]'></choice>
+        <choice value='12' name='PUP' description='PUP [PUP,XEROX]'></choice>
+        <choice value='13' name='ARGUS' description='ARGUS [RWS4]'></choice>
+        <choice value='14' name='EMCON' description='EMCON [BN7]'></choice>
+        <choice value='15' name='XNET' description='Cross Net Debugger [IEN158,JFH2]'></choice>
+        <choice value='16' name='CHAOS' description='Chaos [NC3]'></choice>
+        <choice value='17' name='UDP' description='User Datagram [RFC768,JBP]'></choice>
+        <choice value='18' name='MUX' description='Multiplexing [IEN90,JBP]'></choice>
+        <choice value='19' name='DCN-MEAS' description='DCN Measurement Subsystems [DLM1]'></choice>
+        <choice value='20' name='HMP' description='Host Monitoring [RFC869,RH6]'></choice>
+        <choice value='21' name='PRM' description='Packet Radio Measurement [ZSU]'></choice>
+        <choice value='22' name='XNS-IDP' description='XEROX NS IDP [ETHERNET,XEROX]'></choice>
+        <choice value='23' name='TRUNK-1' description='Trunk-1 [BWB6]'></choice>
+        <choice value='24' name='TRUNK-2' description='Trunk-2 [BWB6]'></choice>
+        <choice value='25' name='LEAF-1' description='Leaf-1 [BWB6]'></choice>
+        <choice value='26' name='LEAF-2' description='Leaf-2 [BWB6]'></choice>
+        <choice value='27' name='RDP' description='Reliable Data Protocol [RFC908,RH6]'></choice>
+        <choice value='28' name='IRTP' description='Internet Reliable Transaction [RFC938,TXM]'></choice>
+        <choice value='29' name='ISO-TP4' description='ISO Transport Protocol Class 4 [RFC905,RC77]'></choice>
+        <choice value='30' name='NETBLT' description='Bulk Data Transfer Protocol [RFC969,DDC1]'></choice>
+        <choice value='31' name='MFE-NSP' description='MFE Network Services Protocol [MFENET,BCH2]'></choice>
+        <choice value='32' name='MERIT-INP' description='MERIT Internodal Protocol [HWB]'></choice>
+        <choice value='33' name='SEP' description='Sequential Exchange Protocol [JC120]'></choice>
+        <choice value='34' name='3PC' description='Third Party Connect Protocol [SAF3]'></choice>
+        <choice value='35' name='IDPR' description='Inter-Domain Policy Routing Protocol [MXS1]'></choice>
+        <choice value='36' name='XTP' description='XTP [GXC]'></choice>
+        <choice value='37' name='DDP' description='Datagram Delivery Protocol [WXC]'></choice>
+        <choice value='38' name='IDPR-CMTP' description='IDPR Control Message Transport Proto [MXS1]'></choice>
+        <choice value='39' name='TP++' description='TP++ Transport Protocol [DXF]'></choice>
+        <choice value='40' name='IL' description='IL Transport Protocol [Presotto]'></choice>
+        <choice value='41' name='IPv6' description='IPv6 over IPv4'></choice>
+        <choice value='42' name='SDRP' description='Source Demand Routing Protocol [DXE1]'></choice>
+        <choice value='43' name='IPv6-Route' description='Routing Header for IPv6 [Deering]'></choice>
+        <choice value='44' name='IPv6-Frag' description='Fragment Header for IPv6 [Deering]'></choice>
+        <choice value='45' name='IDRP' description='Inter-Domain Routing Protocol [Sue Hares]'></choice>
+        <choice value='46' name='RSVP' description='Reservation Protocol [Bob Braden]'></choice>
+        <choice value='47' name='GRE' description='General Routing Encapsulation [Tony Li]'></choice>
+        <choice value='48' name='MHRP' description='Mobile Host Routing Protocol[David Johnson]'></choice>
+        <choice value='49' name='BNA' description='BNA [Gary Salamon]'></choice>
+        <choice value='50' name='ESP' description='Encap Security Payload for IPv6 [RFC2406]'></choice>
+        <choice value='51' name='AH' description='Authentication Header for IPv6 [RFC2402]'></choice>
+        <choice value='52' name='I-NLSP' description='Integrated Net Layer Security'></choice>
+        <choice value='53' name='SWIPE' description='IP with Encryption [JI6]'></choice>
+        <choice value='54' name='NARP' description='NBMA Address Resolution Protocol [RFC1735]'></choice>
+        <choice value='55' name='MOBILE' description='IP Mobility [Perkins]'></choice>
+        <choice value='56' name='TLSP' description='Transport Layer Security Protocol using Kryptonet key management [Oberg]'></choice>
+        <choice value='57' name='SKIP' description='SKIP [Markson]'></choice>
+        <choice value='58' name='IPv6-ICMP' description='ICMP for IPv6 [RFC1883]'></choice>
+        <choice value='59' name='IPv6-NoNxt' description='No Next Header for IPv6 [RFC1883]'></choice>
+        <choice value='60' name='IPv6-Opts' description='Destination Options for IPv6 [RFC1883]'></choice>
+        <choice value='62' name='CFTP' description='CFTP [CFTP,HCF2]'></choice>
+        <choice value='64' name='SAT-EXPAK' description='SATNET and Backroom EXPAK [SHB]'></choice>
+        <choice value='65' name='KRYPTOLAN' description='Kryptolan [PXL1]'></choice>
+        <choice value='66' name='RVD' description='MIT Remote Virtual Disk Protocol [MBG]'></choice>
+        <choice value='67' name='IPPC' description='Internet Pluribus Packet Core [SHB]'></choice>
+        <choice value='69' name='SAT-MON' description='SATNET Monitoring [SHB]'></choice>
+        <choice value='70' name='VISA' description='VISA Protocol [GXT1]'></choice>
+        <choice value='71' name='IPCV' description='Internet Packet Core Utility [SHB]'></choice>
+        <choice value='72' name='CPNX' description='Computer Protocol Network Executive [DXM2]'></choice>
+        <choice value='73' name='CPHB' description='Computer Protocol Heart Beat [DXM2]'></choice>
+        <choice value='74' name='WSN' description='Wang Span Network [VXD]'></choice>
+        <choice value='75' name='PVP' description='Packet Video Protocol [SC3]'></choice>
+        <choice value='76' name='BR-SAT-MON' description='Backroom SATNET Monitoring [SHB]'></choice>
+        <choice value='77' name='SUN-ND' description='SUN ND PROTOCOL-Temporary [WM3]'></choice>
+        <choice value='78' name='WB-MON' description='WIDEBAND Monitoring [SHB]'></choice>
+        <choice value='79' name='WB-EXPAK' description='WIDEBAND EXPAK [SHB]'></choice>
+        <choice value='80' name='ISO-IP' description='ISO Internet Protocol [MTR]'></choice>
+        <choice value='81' name='VMTP' description='VMTP [DRC3]'></choice>
+        <choice value='82' name='SECURE-VMTP' description='SECURE-VMTP [DRC3]'></choice>
+        <choice value='83' name='VINES' description='VINES [BXH]'></choice>
+        <choice value='84' name='TTP' description='TTP [JXS]'></choice>
+        <choice value='85' name='NSFNET-IGP' description='NSFNET-IGP [HWB]'></choice>
+        <choice value='86' name='DGP' description='Dissimilar Gateway Protocol [DGP,ML109]'></choice>
+        <choice value='87' name='TCF' description='TCF [GAL5]'></choice>
+        <choice value='88' name='EIGRP' description='EIGRP [CISCO,GXS]'></choice>
+        <choice value='89' name='OSPFIGP' description='OSPFIGP [RFC1583,JTM4]'></choice>
+        <choice value='90' name='Sprite-RPC' description='Sprite RPC Protocol [SPRITE,BXW]'></choice>
+        <choice value='91' name='LARP' description='Locus Address Resolution Protocol [BXH]'></choice>
+        <choice value='92' name='MTP' description='Multicast Transport Protocol [SXA]'></choice>
+        <choice value='93' name='AX.25' description='AX.25 Frames [BK29]'></choice>
+        <choice value='94' name='IPIP' description='IP-within-IP Encapsulation Protocol [JI6]'></choice>
+        <choice value='95' name='MICP' description='Mobile Internetworking Control Pro. [JI6]'></choice>
+        <choice value='96' name='SCC-SP' description='Semaphore Communications Sec. Pro. [HXH]'></choice>
+        <choice value='97' name='ETHERIP' description='Ethernet-within-IP Encapsulation [RFC3378]'></choice>
+        <choice value='98' name='ENCAP' description='Encapsulation Header [RFC1241,RXB3]'></choice>
+        <choice value='100' name='GMTP' description='GMTP [RXB5]'></choice>
+        <choice value='101' name='IFMP' description='Ipsilon Flow Management Protocol [Hinden]'></choice>
+        <choice value='102' name='PNNI' description='PNNI over IP [Callon]'></choice>
+        <choice value='103' name='PIM' description='Protocol Independent Multicast [Farinacci]'></choice>
+        <choice value='104' name='ARIS' description='ARIS [Feldman]'></choice>
+        <choice value='105' name='SCPS' description='SCPS [Durst]'></choice>
+        <choice value='106' name='QNX' description='QNX [Hunter]'></choice>
+        <choice value='107' name='A/N' description='Active Networks [Braden]'></choice>
+        <choice value='108' name='IPComp' description='IP Payload Compression Protocol [RFC2393]'></choice>
+        <choice value='109' name='SNP' description='Sitara Networks Protocol [Sridhar]'></choice>
+        <choice value='110' name='Compaq-Peer' description='Compaq Peer Protocol [Volpe]'></choice>
+        <choice value='111' name='IPX-in-IP' description='IPX in IP [Lee]'></choice>
+        <choice value='112' name='VRRP' description='Virtual Router Redundancy Protocol [Hinden]'></choice>
+        <choice value='113' name='PGM' description='PGM Reliable Transport Protocol [Speakman]'></choice>
+        <choice value='115' name='L2TP' description='Layer Two Tunneling Protocol [Aboba]'></choice>
+        <choice value='116' name='DDX' description='D-II Data Exchange (DDX) [Worley]'></choice>
+        <choice value='117' name='IATP' description='Interactive Agent Transfer Protocol [Murphy]'></choice>
+        <choice value='118' name='STP' description='Schedule Transfer Protocol [JMP]'></choice>
+        <choice value='119' name='SRP' description='SpectraLink Radio Protocol [Hamilton]'></choice>
+        <choice value='120' name='UTI' description='UTI [Lothberg]'></choice>
+        <choice value='121' name='SMP' description='Simple Message Protocol [Ekblad]'></choice>
+        <choice value='122' name='SM' description='SM [Crowcroft]'></choice>
+        <choice value='123' name='PTP' description='Performance Transparency Protocol [Welzl]'></choice>
+        <choice value='124' name='ISIS-IPv4' description='ISIS over IPv4 [Przygienda]'></choice>
+        <choice value='125' name='FIRE' description='FIRE [Partridge]'></choice>
+        <choice value='126' name='CRTP' description='Combat Radio Transport Protocol [Sautter]'></choice>
+        <choice value='127' name='CRUDP' description='Combat Radio User Datagram [Sautter]'></choice>
+        <choice value='128' name='SSCOPMCE' description='SSCOPMCE [Waber]'></choice>
+        <choice value='129' name='IPLT' description='IPLT [Hollbach]'></choice>
+        <choice value='130' name='SPS' description='Secure Packet Shield [McIntosh]'></choice>
+        <choice value='131' name='PIPE' description='Private IP Encapsulation within IP [Petri]'></choice>
+        <choice value='132' name='SCTP' description='Stream Control Transmission Protocol [Stewart]'></choice>
+        <choice value='133' name='FC' description='Fibre Channel [Rajagopal]'></choice>
+        <choice value='134' name='RSVP-E2E-IGNORE' description='RSVP-E2E-IGNORE [RFC3175]'></choice>
+    </choices>
+    <description>Specify integral values in the range 0-255, which represent IP protocol types that are allowed. Multiple values can be specified by separating them with a ';'</description>
+</PropertyString>
+<PropertyString>
+    <name>tcp</name>
+    <default></default>
+    <choices>
+        <choice value='7' name='echo' description='ECHO over TCP'></choice>
+        <choice value='9' name='discard' description='sink null'></choice>
+        <choice value='11' name='systat' description='Active users'></choice>
+        <choice value='13' name='daytime' description='DAYTIME over TCP'></choice>
+        <choice value='17' name='qotd' description='Quote of the day'></choice>
+        <choice value='19' name='chargen' description='Character generator'></choice>
+        <choice value='20' name='ftp-data' description='FTP, data'></choice>
+        <choice value='21' name='ftp' description='FTP. control'></choice>
+        <choice value='23' name='telnet' description='TELNET over TCP'></choice>
+        <choice value='25' name='smtp' description='Simple Mail Transfer Protocol'></choice>
+        <choice value='37' name='time' description='timserver'></choice>
+        <choice value='42' name='nameserver' description='Host Name Server'></choice>
+        <choice value='43' name='nicname' description='whois'></choice>
+        <choice value='53' name='domain' description='Domain Name Server'></choice>
+        <choice value='70' name='gopher' description='GOPHER over TCP'></choice>
+        <choice value='79' name='finger' description='FINGER over TCP'></choice>
+        <choice value='80' name='http' description='World Wide Web'></choice>
+        <choice value='88' name='kerberos' description='Kerberos'></choice>
+        <choice value='101' name='hostname' description='NIC Host Name Server'></choice>
+        <choice value='102' name='iso-tsap' description='ISO-TSAP Class 0'></choice>
+        <choice value='107' name='rtelnet' description='Remote Telnet Service'></choice>
+        <choice value='109' name='pop2' description='Post Office Protocol - Version 2'></choice>
+        <choice value='110' name='pop3' description='Post Office Protocol - Version 3'></choice>
+        <choice value='111' name='sunrpc' description='SUN Remote Procedure Call'></choice>
+        <choice value='113' name='auth' description='Identification Protocol'></choice>
+        <choice value='117' name='uucp-path' description='UUCP-PATH over TCP'></choice>
+        <choice value='119' name='nntp' description='Network News Transfer Protocol'></choice>
+        <choice value='135' name='epmap' description='DCE endpoint resolution'></choice>
+        <choice value='137' name='netbios-ns' description='NETBIOS Name Service'></choice>
+        <choice value='139' name='netbios-ssn' description='NETBIOS Session Service'></choice>
+        <choice value='143' name='imap' description='Internet Message Access Protocol'></choice>
+        <choice value='158' name='pcmail-srv' description='PCMail Server'></choice>
+        <choice value='170' name='print-srv' description='Network PostScript'></choice>
+        <choice value='179' name='bgp' description='Border Gateway Protocol'></choice>
+        <choice value='194' name='irc' description='Internet Relay Chat Protocol'></choice>
+        <choice value='389' name='ldap' description='Lightweight Directory Access Protocol'></choice>
+        <choice value='443' name='https' description='MCom'></choice>
+        <choice value='445' name='microsoft-ds' description='MICROSOFT-DS over TCP'></choice>
+        <choice value='464' name='kpasswd' description='Kerberos (v5)'></choice>
+        <choice value='512' name='exec' description='Remote Process Execution'></choice>
+        <choice value='513' name='login' description='Remote Login'></choice>
+        <choice value='514' name='cmd' description='shell'></choice>
+        <choice value='515' name='printer' description='spooler'></choice>
+        <choice value='520' name='efs' description='Extended File Name Server'></choice>
+        <choice value='526' name='tempo' description='newdate'></choice>
+        <choice value='530' name='courier' description='rpc'></choice>
+        <choice value='531' name='conference' description='chat'></choice>
+        <choice value='532' name='netnews' description='readnews'></choice>
+        <choice value='540' name='uucp' description='uucpd'></choice>
+        <choice value='543' name='klogin' description='Kerberos login'></choice>
+        <choice value='544' name='kshell' description='Kerberos remote shell'></choice>
+        <choice value='556' name='remotefs' description='rfs rfs_server'></choice>
+        <choice value='636' name='ldaps' description='LDAP over TLS/SSL'></choice>
+        <choice value='666' name='doom' description='Doom Id Software'></choice>
+        <choice value='749' name='kerberos-adm' description='Kerberos administration'></choice>
+        <choice value='1109' name='kpop' description='Kerberos POP'></choice>
+        <choice value='1433' name='ms-sql-s' description='Microsoft-SQL-Server'></choice>
+        <choice value='1434' name='ms-sql-m' description='Microsoft-SQL-Monitor'></choice>
+        <choice value='1512' name='wins' description='Microsoft Windows Internet Name Service'></choice>
+        <choice value='1524' name='ingreslock' description='ingres'></choice>
+        <choice value='1723' name='pptp' description='Point-to-point tunnelling protocol'></choice>
+        <choice value='2053' name='knetd' description='Kerberos de-multiplexor'></choice>
+        <choice value='9535' name='man' description='Remote Man Server'></choice>
+    </choices>
+    <description>Specify port number 0-65535, which are allowed. Multiple values can be specified by separating them with a ';'</description>
+</PropertyString>
+<PropertyString>
+    <name>udp</name>
+    <default></default>
+    <choices>
+        <choice value='7' name='echo' description='ECHO over UDP'></choice>
+        <choice value='9' name='discard' description='sink null'></choice>
+        <choice value='13' name='daytime' description='DAYTIME over UDP'></choice>
+        <choice value='17' name='qotd' description='Quote of the day'></choice>
+        <choice value='19' name='chargen' description='Character generator'></choice>
+        <choice value='37' name='time' description='timserver'></choice>
+        <choice value='39' name='rlp' description='Resource Location Protocol'></choice>
+        <choice value='42' name='nameserver' description='Host Name Server'></choice>
+        <choice value='53' name='domain' description='Domain Name Server'></choice>
+        <choice value='67' name='bootps' description='Bootstrap Protocol Server'></choice>
+        <choice value='68' name='bootpc' description='Bootstrap Protocol Client'></choice>
+        <choice value='69' name='tftp' description='Trivial File Transfer'></choice>
+        <choice value='88' name='kerberos' description='Kerberos'></choice>
+        <choice value='111' name='sunrpc' description='SUN Remote Procedure Call'></choice>
+        <choice value='123' name='ntp' description='Network Time Protocol'></choice>
+        <choice value='135' name='epmap' description='DCE endpoint resolution'></choice>
+        <choice value='137' name='netbios-ns' description='NETBIOS Name Service'></choice>
+        <choice value='138' name='netbios-dgm' description='NETBIOS Datagram Service'></choice>
+        <choice value='161' name='snmp' description='SNMP'></choice>
+        <choice value='162' name='snmptrap' description='SNMP trap'></choice>
+        <choice value='213' name='ipx' description='IPX over IP'></choice>
+        <choice value='443' name='https' description='MCom'></choice>
+        <choice value='445' name='microsoft-ds' description='MICROSOFT-DS over UDP'></choice>
+        <choice value='464' name='kpasswd' description='Kerberos (v5)'></choice>
+        <choice value='500' name='isakmp' description='Internet Key Exchange'></choice>
+        <choice value='512' name='biff' description='comsat'></choice>
+        <choice value='513' name='who' description='whod'></choice>
+        <choice value='514' name='syslog' description='SYSLOG over UDP'></choice>
+        <choice value='517' name='talk' description='TALK over UDP'></choice>
+        <choice value='518' name='ntalk' description='NTALK over UDP'></choice>
+        <choice value='520' name='router' description='route routed'></choice>
+        <choice value='525' name='timed' description='timeserver'></choice>
+        <choice value='533' name='netwall' description='For emergency broadcasts'></choice>
+        <choice value='550' name='new-rwho' description='new-who'></choice>
+        <choice value='560' name='rmonitor' description='rmonitord'></choice>
+        <choice value='561' name='monitor' description='MONITOR over UDP'></choice>
+        <choice value='666' name='doom' description='Doom Id Software'></choice>
+        <choice value='749' name='kerberos-adm' description='Kerberos administration'></choice>
+        <choice value='750' name='kerberos-iv' description='Kerberos version IV'></choice>
+        <choice value='1167' name='phone' description='Conference calling'></choice>
+        <choice value='1433' name='ms-sql-s' description='Microsoft-SQL-Server'></choice>
+        <choice value='1434' name='ms-sql-m' description='Microsoft-SQL-Monitor'></choice>
+        <choice value='1512' name='wins' description='Microsoft Windows Internet Name Service'></choice>
+        <choice value='1701' name='l2tp' description='Layer Two Tunneling Protocol'></choice>
+        <choice value='1812' name='radius' description='RADIUS authentication protocol'></choice>
+        <choice value='1813' name='radacct' description='RADIUS accounting protocol'></choice>
+        <choice value='2049' name='nfsd' description='NFS server'></choice>
+    </choices>
+    <description>Specify port number 0-65535, which are allowed. Multiple values can be specified by separating them with a ';' </description>
+</PropertyString>
+<PropertyString>
+    <name>mac</name>
+    <default></default>
+    <choices>
+        <choice value='0x0800' name='IP' description='Internet Protocol'></choice>
+        <choice value='0x0805' name='ARP' description='Address Resolution Protocol'></choice>
+        <choice value='0x0806' name='IPv4' description='Internet Protocol'></choice>
+        <choice value='0x8035' name='RARP' description='Reverse Address Resolution Protocol'></choice>
+        <choice value='0x8100' name='VLAN' description='802.1Q VLAN Extended Header'></choice>
+        <choice value='0x8863' name='PPPoE Disc' description='PPPoE Discovery Message'></choice>
+        <choice value='0x8864' name='PPPoE Sess' description='PPPoE Session Message'></choice>
+        <choice value='0x88DD' name='IPv6' description='Internet Protocol Version 6'></choice>
+    </choices>
+    <description>Specify hexadecimal values upto 0xFFFF, that represent MAC types that are allowed. Multiple values can be specified by separating them with a ';'</description>
+</PropertyString>
+<PropertyString>
+    <name>icmp</name>
+    <default></default>
+    <choices>
+        <choice value='0' name='Echo Reply' description='RFC 792'></choice>
+        <choice value='8' name='Echo' description='RFC 792'></choice>
+    </choices>
+    <description>Specify integral values in the range 0-255, which represent the ICMP message types that are allowed. Multiple values can be specified by separating them with a ';'</description>
+</PropertyString>
+</Node>
+
+

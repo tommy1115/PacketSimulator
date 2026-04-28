@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Node nodeType="PortWatch" baseType="" serverInstantiate="1">
+
+	<help>Used for Port State Watches</help>
+	<Enum name="eEventType">
+		<help>The type of event. This can be used for creating an event mask</help>
+        <Choices>
+            <Choice symbol="kLink" value="1"/>
+            <Choice symbol="kTransmit" value="2"/>
+            <Choice symbol="kCapture" value="4"/>
+            <Choice symbol="kOwnership" value="8"/>
+            <Choice symbol="kPortCpuStatus" value="16"/>
+            <Choice symbol="kPortCpuDodStatus" value="32"/>
+        </Choices>
+    </Enum>
+    
+	<List name="EventList" type="PortWatch.eEventType">
+		<help>List of events types for notification</help>
+	</List>
+	
+	<PropertyStringList>
+        <name>portList</name>
+        <description>List of port ids to be watched</description>
+    </PropertyStringList>
+    
+    <PropertyBoolean>
+		<help>If true, first values for the notifying states will be sent as an event, otherwise the events will be sent only on transition</help>
+        <name>needInitialValues</name>
+        <default>false</default>
+    </PropertyBoolean>
+    
+    <Method2 name="SetEvents">
+         <help>Sets the port states to be watched</help>
+         <Argument name="eventList" direction="in" type="PortWatch.EventList">
+            <help>Describes for what events the user needs notifications</help>
+         </Argument>
+    </Method2>
+    <Method2 name="Apply">
+		 <help>Sends the current configuration to the chassis</help>
+    </Method2>
+    
+    <Method2 name="Destroy">
+		 <help>Unregisters from HwManager and destroys this object</help>
+    </Method2>
+
+    <Event name="StateChanged">
+		<help>event rised because a port changed its state</help>
+		<Argument name="port" type="PortGroup.Port">
+			<help>The port descriptor</help>
+        </Argument>
+        <Argument name="eventType" type="PortWatch.eEventType">
+			<help>Specifies what port state has changed</help>
+        </Argument>
+        <Argument name="oldValue" type="string">
+			<help>State value before this state change</help>
+        </Argument>
+        <Argument name="currentValue" type="string">
+			<help>State value after this state change.</help>
+        </Argument>
+    </Event>
+    
+</Node>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="IpV4V6Plugin" baseType="StackElementPlugin">
+    <help>
+    Network stack element plugin that manages IP v4 and v6 addresses
+    as a list of address blocks or 'ranges'.
+    </help>
+    <PropertyNodeList nodeType="IpV4V6Range" type="sync">
+        <name>rangeList</name>
+        <help>
+        The list of IP address ranges managed by this plugin. See IpV4V6Range for more details.
+        </help>
+    </PropertyNodeList>
+    <PropertyNode nodeType="Dhcp">
+        <name>dhcp</name>
+        <help>DHCP object for the IP plugin.</help>
+    </PropertyNode>
+</Node>

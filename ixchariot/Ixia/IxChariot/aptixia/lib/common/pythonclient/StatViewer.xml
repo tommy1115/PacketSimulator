@@ -1,0 +1,6414 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<aptixia formatVersion="1" schemaVersion="1">
+
+  <StatViewer type="StatViewer">
+
+    <statViewList 
+type="ListNode">
+
+      <StatView type="StatView">
+
+        <backgroundColor type="String">Black</backgroundColor>
+
+        <legendPosition
+type="String">Right</legendPosition>
+
+        <statAttributeListList type="ListNode">
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList
+type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color type="String">Blue</color>
+
+              </StatAttribute>
+</statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+<StatAttribute type="StatAttribute">
+
+                <color type="String">Chartreuse</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">Green</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">Yellow</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+        </statAttributeListList>
+
+        <swapRowsColumns type="Bool">0</swapRowsColumns>
+
+        <dataLegendEnabled
+type="Bool">1</dataLegendEnabled>
+
+        <legendSpanPercentage type="Int">30</legendSpanPercentage>
+
+        <xAxis type="ChartXAxis">
+
+          <scrollScale
+type="Bool">0</scrollScale>
+
+        </xAxis>
+
+        <csvRequestOptions type="CsvRequestOptions">
+
+          <OutputFileHeader type="Bool">0</OutputFileHeader>
+<OutputColumnHeader type="Bool">0</OutputColumnHeader>
+
+          <OutputFunctionHeader type="Bool">0</OutputFunctionHeader>
+
+          <OutputLabelHeader
+type="Bool">0</OutputLabelHeader>
+
+          <OutputCsv type="Bool">0</OutputCsv>
+
+        </csvRequestOptions>
+
+        <expanded type="Bool">1</expanded>
+<statSpecList type="ListNode">
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded
+type="Bool">0</expanded>
+
+            <statName type="String">Telnet Active Connections</statName>
+
+            <index type="Int">0</index>
+
+            <caption
+type="String">Concurrent Connections</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+<interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+<statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+<StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+<statName type="String">User Count</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">Simulated Users</caption>
+<enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Total Connections
+Succeeded</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">Connection Rate</caption>
+
+            <enabled
+type="Bool">1</enabled>
+
+            <aggregationType type="Int">5</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Total Transactions</statName>
+<index type="Int">0</index>
+
+            <caption type="String">Transaction Rate</caption>
+
+            <enabled type="Bool">1</enabled>
+<aggregationType type="Int">5</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+<CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated
+type="Bool">0</enumerated>
+
+          </StatSpec>
+
+        </statSpecList>
+
+        <statFilterGroupList type="ListNode">
+
+          <StatFilterGroup
+type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup
+type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup
+type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup
+type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+
+        </statFilterGroupList>
+<viewType type="String">Bar</viewType>
+
+        <matrixConfiguration type="Bool">0</matrixConfiguration>
+
+        <windowPosition type="String" />
+<legendEnabled type="Bool">1</legendEnabled>
+
+        <frequency type="Double">1</frequency>
+
+        <lineStyle type="String">Solid</lineStyle>
+<showGridLines type="Bool">1</showGridLines>
+
+        <fontColor type="String">White</fontColor>
+
+        <caption type="String">Telnet Client -
+Objectives</caption>
+
+        <csvHeaderFieldList type="ListNode" />
+
+        <enabled type="Bool">1</enabled>
+
+        <allowUserEdit type="Bool">0</allowUserEdit>
+<title type="Bool">1</title>
+
+        <yAxis type="ChartYAxis">
+
+          <yAxisRangeMax type="Int">100</yAxisRangeMax>
+
+          <logScale
+type="Bool">0</logScale>
+
+          <yAxisRangeMin type="Int">0</yAxisRangeMin>
+
+          <yAxisScrollScale type="Bool">0</yAxisScrollScale>
+<yAxisExtent type="Int">85</yAxisExtent>
+
+          <autoScale type="Bool">0</autoScale>
+
+          <yAxisRange type="String">Auto</yAxisRange>
+</yAxis>
+
+        <grayScale type="Bool">0</grayScale>
+
+        <timeSamples type="Int">300</timeSamples>
+
+      </StatView>
+
+      <StatView type="StatView">
+<backgroundColor type="String">Black</backgroundColor>
+
+        <legendPosition type="String">Right</legendPosition>
+
+        <statAttributeListList type="ListNode">
+<StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Blue</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Red</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Green</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+        </statAttributeListList>
+<swapRowsColumns type="Bool">0</swapRowsColumns>
+
+        <dataLegendEnabled type="Bool">1</dataLegendEnabled>
+
+        <legendSpanPercentage
+type="Int">30</legendSpanPercentage>
+
+        <xAxis type="ChartXAxis">
+
+          <scrollScale type="Bool">0</scrollScale>
+
+        </xAxis>
+<csvRequestOptions type="CsvRequestOptions">
+
+          <OutputFileHeader type="Bool">0</OutputFileHeader>
+
+          <OutputColumnHeader
+type="Bool">0</OutputColumnHeader>
+
+          <OutputFunctionHeader type="Bool">0</OutputFunctionHeader>
+
+          <OutputLabelHeader
+type="Bool">0</OutputLabelHeader>
+
+          <OutputCsv type="Bool">0</OutputCsv>
+
+        </csvRequestOptions>
+
+        <expanded type="Bool">0</expanded>
+<statSpecList type="ListNode">
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded
+type="Bool">0</expanded>
+
+            <statName type="String">Telnet Total Bytes Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption
+type="String">Transmit Rate</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">5</aggregationType>
+<interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+<statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+<StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+<statName type="String">Telnet Total Bytes Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">Receive Rate</caption>
+<enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">5</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Total Bytes Sent And
+Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">Tx/Rx Rate</caption>
+
+            <enabled
+type="Bool">1</enabled>
+
+            <aggregationType type="Int">5</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+        </statSpecList>
+
+        <statFilterGroupList type="ListNode">
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+</statFilterGroupList>
+
+        <viewType type="String">Bar</viewType>
+
+        <matrixConfiguration type="Bool">0</matrixConfiguration>
+
+        <windowPosition
+type="String" />
+
+        <legendEnabled type="Bool">1</legendEnabled>
+
+        <frequency type="Double">1</frequency>
+
+        <lineStyle
+type="String">Solid</lineStyle>
+
+        <showGridLines type="Bool">1</showGridLines>
+
+        <fontColor type="String">White</fontColor>
+
+        <caption
+type="String">Telnet Client - Throughput Objective</caption>
+
+        <csvHeaderFieldList type="ListNode" />
+
+        <enabled type="Bool">1</enabled>
+<allowUserEdit type="Bool">0</allowUserEdit>
+
+        <title type="Bool">1</title>
+
+        <yAxis type="ChartYAxis">
+
+          <yAxisRangeMax
+type="Int">100</yAxisRangeMax>
+
+          <logScale type="Bool">0</logScale>
+
+          <yAxisRangeMin type="Int">0</yAxisRangeMin>
+
+          <yAxisScrollScale
+type="Bool">0</yAxisScrollScale>
+
+          <yAxisExtent type="Int">85</yAxisExtent>
+
+          <autoScale type="Bool">0</autoScale>
+
+          <yAxisRange
+type="String">Auto</yAxisRange>
+
+        </yAxis>
+
+        <grayScale type="Bool">0</grayScale>
+
+        <timeSamples type="Int">300</timeSamples>
+</StatView>
+
+      <StatView type="StatView">
+
+        <backgroundColor type="String">Black</backgroundColor>
+
+        <legendPosition
+type="String">Right</legendPosition>
+
+        <statAttributeListList type="ListNode">
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList
+type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color type="String">Blue</color>
+
+              </StatAttribute>
+</statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+<StatAttribute type="StatAttribute">
+
+                <color type="String">Red</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">Green</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">Gray</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">Cyan</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">Fuchsia</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">Orange</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">Yellow</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+        </statAttributeListList>
+
+        <swapRowsColumns type="Bool">0</swapRowsColumns>
+
+        <dataLegendEnabled
+type="Bool">1</dataLegendEnabled>
+
+        <legendSpanPercentage type="Int">30</legendSpanPercentage>
+
+        <xAxis type="ChartXAxis">
+
+          <scrollScale
+type="Bool">0</scrollScale>
+
+        </xAxis>
+
+        <csvRequestOptions type="CsvRequestOptions">
+
+          <OutputFileHeader type="Bool">0</OutputFileHeader>
+<OutputColumnHeader type="Bool">0</OutputColumnHeader>
+
+          <OutputFunctionHeader type="Bool">0</OutputFunctionHeader>
+
+          <OutputLabelHeader
+type="Bool">0</OutputLabelHeader>
+
+          <OutputCsv type="Bool">0</OutputCsv>
+
+        </csvRequestOptions>
+
+        <expanded type="Bool">0</expanded>
+<statSpecList type="ListNode">
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded
+type="Bool">0</expanded>
+
+            <statName type="String">Telnet Total Echo Options Do Received</statName>
+
+            <index type="Int">0</index>
+<caption type="String">DO Received</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+<interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+<statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+<StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+<statName type="String">Telnet Total Echo Options Dont Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">DON'T
+Received</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated
+type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType
+type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec
+type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName
+type="String">Telnet Total Echo Options Will Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">WILL Received</caption>
+<enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Total Echo Options Wont
+Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">WON'T Received</caption>
+
+            <enabled
+type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Total Echo Options Do
+Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">DO Sent</caption>
+
+            <enabled type="Bool">1</enabled>
+<aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+<CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated
+type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+<expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Total Echo Options Dont Sent</statName>
+
+            <index type="Int">0</index>
+<caption type="String">DON'T Sent</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+<interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+<statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+<StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+<statName type="String">Telnet Total Echo Options Will Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">WILL
+Sent</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated
+type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType
+type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec
+type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName
+type="String">Telnet Total Echo Options Wont Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">WON'T Sent</caption>
+<enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+        </statSpecList>
+
+        <statFilterGroupList type="ListNode">
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+</statFilterGroupList>
+
+        <viewType type="String">Bar</viewType>
+
+        <matrixConfiguration type="Bool">0</matrixConfiguration>
+
+        <windowPosition
+type="String" />
+
+        <legendEnabled type="Bool">1</legendEnabled>
+
+        <frequency type="Double">1</frequency>
+
+        <lineStyle
+type="String">Solid</lineStyle>
+
+        <showGridLines type="Bool">1</showGridLines>
+
+        <fontColor type="String">White</fontColor>
+
+        <caption
+type="String">Telnet Client - Echo Option</caption>
+
+        <csvHeaderFieldList type="ListNode" />
+
+        <enabled type="Bool">1</enabled>
+
+        <allowUserEdit
+type="Bool">0</allowUserEdit>
+
+        <title type="Bool">1</title>
+
+        <yAxis type="ChartYAxis">
+
+          <yAxisRangeMax type="Int">100</yAxisRangeMax>
+<logScale type="Bool">0</logScale>
+
+          <yAxisRangeMin type="Int">0</yAxisRangeMin>
+
+          <yAxisScrollScale type="Bool">0</yAxisScrollScale>
+<yAxisExtent type="Int">85</yAxisExtent>
+
+          <autoScale type="Bool">0</autoScale>
+
+          <yAxisRange type="String">Auto</yAxisRange>
+</yAxis>
+
+        <grayScale type="Bool">0</grayScale>
+
+        <timeSamples type="Int">300</timeSamples>
+
+      </StatView>
+
+      <StatView type="StatView">
+<backgroundColor type="String">Black</backgroundColor>
+
+        <legendPosition type="String">Right</legendPosition>
+
+        <statAttributeListList type="ListNode">
+<StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Blue</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Red</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Green</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Gray</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Cyan</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Fuchsia</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Orange</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Yellow</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+        </statAttributeListList>
+<swapRowsColumns type="Bool">0</swapRowsColumns>
+
+        <dataLegendEnabled type="Bool">1</dataLegendEnabled>
+
+        <legendSpanPercentage
+type="Int">30</legendSpanPercentage>
+
+        <xAxis type="ChartXAxis">
+
+          <scrollScale type="Bool">0</scrollScale>
+
+        </xAxis>
+<csvRequestOptions type="CsvRequestOptions">
+
+          <OutputFileHeader type="Bool">0</OutputFileHeader>
+
+          <OutputColumnHeader
+type="Bool">0</OutputColumnHeader>
+
+          <OutputFunctionHeader type="Bool">0</OutputFunctionHeader>
+
+          <OutputLabelHeader
+type="Bool">0</OutputLabelHeader>
+
+          <OutputCsv type="Bool">0</OutputCsv>
+
+        </csvRequestOptions>
+
+        <expanded type="Bool">1</expanded>
+<statSpecList type="ListNode">
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded
+type="Bool">0</expanded>
+
+            <statName type="String">Telnet Total Suppress Go Ahead Options Do Received</statName>
+
+            <index type="Int">0</index>
+<caption type="String">DO Received</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+<interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+<statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+<StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+<statName type="String">Telnet Total Suppress Go Ahead Options Dont Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">DON'T
+Received</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated
+type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType
+type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec
+type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName
+type="String">Telnet Total Suppress Go Ahead Options Will Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">WILL
+Received</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated
+type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType
+type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec
+type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName
+type="String">Telnet Total Suppress Go Ahead Options Wont Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">WON'T
+Received</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated
+type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType
+type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec
+type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName
+type="String">Telnet Total Suppress Go Ahead Options Do Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">DO Sent</caption>
+<enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Total Suppress Go Ahead Options Dont
+Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">DON'T Sent</caption>
+
+            <enabled
+type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Total Suppress Go Ahead Options Will
+Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">WILL Sent</caption>
+
+            <enabled type="Bool">1</enabled>
+<aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+<CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated
+type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+<expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Total Suppress Go Ahead Options Wont Sent</statName>
+
+            <index
+type="Int">0</index>
+
+            <caption type="String">WON'T Sent</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType
+type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+<CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated
+type="Bool">0</enumerated>
+
+          </StatSpec>
+
+        </statSpecList>
+
+        <statFilterGroupList type="ListNode">
+
+          <StatFilterGroup
+type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup
+type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup
+type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup
+type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup
+type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup
+type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup
+type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup
+type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+
+        </statFilterGroupList>
+<viewType type="String">Bar</viewType>
+
+        <matrixConfiguration type="Bool">0</matrixConfiguration>
+
+        <windowPosition type="String" />
+<legendEnabled type="Bool">1</legendEnabled>
+
+        <frequency type="Double">1</frequency>
+
+        <lineStyle type="String">Solid</lineStyle>
+<showGridLines type="Bool">1</showGridLines>
+
+        <fontColor type="String">White</fontColor>
+
+        <caption type="String">Telnet Client - Suppress Go Ahead
+Option</caption>
+
+        <csvHeaderFieldList type="ListNode" />
+
+        <enabled type="Bool">1</enabled>
+
+        <allowUserEdit type="Bool">0</allowUserEdit>
+<title type="Bool">1</title>
+
+        <yAxis type="ChartYAxis">
+
+          <yAxisRangeMax type="Int">100</yAxisRangeMax>
+
+          <logScale
+type="Bool">0</logScale>
+
+          <yAxisRangeMin type="Int">0</yAxisRangeMin>
+
+          <yAxisScrollScale type="Bool">0</yAxisScrollScale>
+<yAxisExtent type="Int">85</yAxisExtent>
+
+          <autoScale type="Bool">0</autoScale>
+
+          <yAxisRange type="String">Auto</yAxisRange>
+</yAxis>
+
+        <grayScale type="Bool">0</grayScale>
+
+        <timeSamples type="Int">300</timeSamples>
+
+      </StatView>
+
+      <StatView type="StatView">
+<backgroundColor type="String">Black</backgroundColor>
+
+        <legendPosition type="String">Right</legendPosition>
+
+        <statAttributeListList type="ListNode">
+<StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Green</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Gray</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Cyan</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Fuchsia</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Orange</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Yellow</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Yellow</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Silver</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+        </statAttributeListList>
+<swapRowsColumns type="Bool">0</swapRowsColumns>
+
+        <dataLegendEnabled type="Bool">1</dataLegendEnabled>
+
+        <legendSpanPercentage
+type="Int">30</legendSpanPercentage>
+
+        <xAxis type="ChartXAxis">
+
+          <scrollScale type="Bool">0</scrollScale>
+
+        </xAxis>
+<csvRequestOptions type="CsvRequestOptions">
+
+          <OutputFileHeader type="Bool">0</OutputFileHeader>
+
+          <OutputColumnHeader
+type="Bool">0</OutputColumnHeader>
+
+          <OutputFunctionHeader type="Bool">0</OutputFunctionHeader>
+
+          <OutputLabelHeader
+type="Bool">0</OutputLabelHeader>
+
+          <OutputCsv type="Bool">0</OutputCsv>
+
+        </csvRequestOptions>
+
+        <expanded type="Bool">1</expanded>
+<statSpecList type="ListNode">
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded
+type="Bool">0</expanded>
+
+            <statName type="String">Telnet Total Line Mode Options Do Received</statName>
+
+            <index type="Int">0</index>
+<caption type="String">DO Received</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+<interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+<statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+<StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+<statName type="String">Telnet Total Line Mode Options Dont Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">DON'T
+Received</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated
+type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType
+type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec
+type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName
+type="String">Telnet Total Line Mode Options Will Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">WILL
+Received</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated
+type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType
+type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec
+type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName
+type="String">Telnet Total Line Mode Options Wont Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">WON'T
+Received</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated
+type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType
+type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec
+type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName
+type="String">Telnet Total Line Mode Options Do Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">DO Sent</caption>
+<enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Total Line Mode Options Dont
+Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">DON'T Sent</caption>
+
+            <enabled
+type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Total Line Mode Options Will
+Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">WILL Sent</caption>
+
+            <enabled type="Bool">1</enabled>
+<aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+<CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated
+type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+<expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Total Line Mode Options Wont Sent</statName>
+
+            <index type="Int">0</index>
+<caption type="String">WON'T Sent</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+<interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+<statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+</statSpecList>
+
+        <statFilterGroupList type="ListNode">
+
+          <StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+<caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+<caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+<caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+<caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+<caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+<caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+<caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+<caption type="String" />
+
+          </StatFilterGroup>
+
+        </statFilterGroupList>
+
+        <viewType type="String">Bar</viewType>
+
+        <matrixConfiguration
+type="Bool">0</matrixConfiguration>
+
+        <windowPosition type="String" />
+
+        <legendEnabled type="Bool">1</legendEnabled>
+
+        <frequency
+type="Double">1</frequency>
+
+        <lineStyle type="String">Solid</lineStyle>
+
+        <showGridLines type="Bool">1</showGridLines>
+
+        <fontColor
+type="String">White</fontColor>
+
+        <caption type="String">Telnet Client - Line Mode Option</caption>
+
+        <csvHeaderFieldList type="ListNode" />
+<enabled type="Bool">1</enabled>
+
+        <allowUserEdit type="Bool">0</allowUserEdit>
+
+        <title type="Bool">1</title>
+
+        <yAxis
+type="ChartYAxis">
+
+          <yAxisRangeMax type="Int">100</yAxisRangeMax>
+
+          <logScale type="Bool">0</logScale>
+
+          <yAxisRangeMin
+type="Int">0</yAxisRangeMin>
+
+          <yAxisScrollScale type="Bool">0</yAxisScrollScale>
+
+          <yAxisExtent type="Int">85</yAxisExtent>
+
+          <autoScale
+type="Bool">0</autoScale>
+
+          <yAxisRange type="String">Auto</yAxisRange>
+
+        </yAxis>
+
+        <grayScale type="Bool">0</grayScale>
+<timeSamples type="Int">300</timeSamples>
+
+      </StatView>
+
+      <StatView type="StatView">
+
+        <backgroundColor type="String">Black</backgroundColor>
+<legendPosition type="String">Right</legendPosition>
+
+        <statAttributeListList type="ListNode">
+
+          <StatAttributeList type="StatAttributeList">
+<statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color type="String">LawnGreen</color>
+</StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList
+type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color type="String">Red</color>
+
+              </StatAttribute>
+</statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+<StatAttribute type="StatAttribute">
+
+                <color type="String">Brown</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">Tomato</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">Yellow</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">Cyan</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">Orange</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">MediumVioletRed</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">SandyBrown</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">LightSeaGreen</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+        </statAttributeListList>
+
+        <swapRowsColumns type="Bool">0</swapRowsColumns>
+
+        <dataLegendEnabled
+type="Bool">1</dataLegendEnabled>
+
+        <legendSpanPercentage type="Int">30</legendSpanPercentage>
+
+        <xAxis type="ChartXAxis">
+
+          <scrollScale
+type="Bool">0</scrollScale>
+
+        </xAxis>
+
+        <csvRequestOptions type="CsvRequestOptions">
+
+          <OutputFileHeader type="Bool">0</OutputFileHeader>
+<OutputColumnHeader type="Bool">0</OutputColumnHeader>
+
+          <OutputFunctionHeader type="Bool">0</OutputFunctionHeader>
+
+          <OutputLabelHeader
+type="Bool">0</OutputLabelHeader>
+
+          <OutputCsv type="Bool">0</OutputCsv>
+
+        </csvRequestOptions>
+
+        <expanded type="Bool">1</expanded>
+<statSpecList type="ListNode">
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded
+type="Bool">0</expanded>
+
+            <statName type="String">Telnet Total Logins Succeeded</statName>
+
+            <index type="Int">0</index>
+<caption type="String">Logins Succeeded</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+<interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+<statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+<StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+<statName type="String">Telnet Total Logins Failed</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">Logins Failed</caption>
+<enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Total Logins Failed (Timed
+Out)</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">Logins Failed  (Timed Out)</caption>
+
+            <enabled
+type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Total Logins Failed
+(Other)</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">Logins Failed  (Other)</caption>
+
+            <enabled
+type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Total Commands Sent</statName>
+<index type="Int">0</index>
+
+            <caption type="String">Commands Sent</caption>
+
+            <enabled type="Bool">1</enabled>
+<aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+<CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated
+type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+<expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Total Commands Succeeded</statName>
+
+            <index type="Int">0</index>
+<caption type="String">Commands Succeeded</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+<interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+<statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+<StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+<statName type="String">Telnet Total Commands Failed</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">Commands
+Failed</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated
+type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType
+type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec
+type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName
+type="String">Telnet Total Commands Failed (Timed Out)</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">Commands Failed (Timed
+Out)</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated
+type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType
+type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec
+type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName
+type="String">Telnet Total Commands Failed (Other)</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">Commands Failed
+(Other)</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated
+type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType
+type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec
+type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName
+type="String">Telnet Total Sessions Completed</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">Sessions Completed</caption>
+<enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+        </statSpecList>
+
+        <statFilterGroupList type="ListNode">
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+</statFilterGroupList>
+
+        <viewType type="String">Bar</viewType>
+
+        <matrixConfiguration type="Bool">0</matrixConfiguration>
+
+        <windowPosition
+type="String" />
+
+        <legendEnabled type="Bool">1</legendEnabled>
+
+        <frequency type="Double">1</frequency>
+
+        <lineStyle
+type="String">Solid</lineStyle>
+
+        <showGridLines type="Bool">1</showGridLines>
+
+        <fontColor type="String">White</fontColor>
+
+        <caption
+type="String">Telnet Client - Sessions</caption>
+
+        <csvHeaderFieldList type="ListNode" />
+
+        <enabled type="Bool">1</enabled>
+
+        <allowUserEdit
+type="Bool">0</allowUserEdit>
+
+        <title type="Bool">1</title>
+
+        <yAxis type="ChartYAxis">
+
+          <yAxisRangeMax type="Int">100</yAxisRangeMax>
+<logScale type="Bool">0</logScale>
+
+          <yAxisRangeMin type="Int">0</yAxisRangeMin>
+
+          <yAxisScrollScale type="Bool">0</yAxisScrollScale>
+<yAxisExtent type="Int">85</yAxisExtent>
+
+          <autoScale type="Bool">0</autoScale>
+
+          <yAxisRange type="String">Auto</yAxisRange>
+</yAxis>
+
+        <grayScale type="Bool">0</grayScale>
+
+        <timeSamples type="Int">300</timeSamples>
+
+      </StatView>
+
+      <StatView type="StatView">
+<backgroundColor type="String">Black</backgroundColor>
+
+        <legendPosition type="String">Right</legendPosition>
+
+        <statAttributeListList type="ListNode">
+<StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">ff0000ff</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">ff80c0ff</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">ffff30c0</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">ffff80e0</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">ffffa0f0</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">ffc080c0</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+        </statAttributeListList>
+<swapRowsColumns type="Bool">0</swapRowsColumns>
+
+        <dataLegendEnabled type="Bool">1</dataLegendEnabled>
+
+        <legendSpanPercentage
+type="Int">30</legendSpanPercentage>
+
+        <xAxis type="ChartXAxis">
+
+          <scrollScale type="Bool">1</scrollScale>
+
+        </xAxis>
+<csvRequestOptions type="CsvRequestOptions">
+
+          <OutputFileHeader type="Bool">0</OutputFileHeader>
+
+          <OutputColumnHeader
+type="Bool">0</OutputColumnHeader>
+
+          <OutputFunctionHeader type="Bool">0</OutputFunctionHeader>
+
+          <OutputLabelHeader
+type="Bool">0</OutputLabelHeader>
+
+          <OutputCsv type="Bool">0</OutputCsv>
+
+        </csvRequestOptions>
+
+        <expanded type="Bool">0</expanded>
+<statSpecList type="ListNode">
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded
+type="Bool">0</expanded>
+
+            <statName type="String">TCP SYN Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption
+type="String">SYNs Sent</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+<interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+<statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+<StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+<statName type="String">TCP SYN_SYN-ACK Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">SYN/SYN-ACKs
+Received</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated
+type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType
+type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec
+type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName
+type="String">TCP FIN Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">FINs Sent</caption>
+
+            <enabled
+type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">TCP FIN Received</statName>
+<index type="Int">0</index>
+
+            <caption type="String">FINs Received</caption>
+
+            <enabled type="Bool">1</enabled>
+<aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+<CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated
+type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+<expanded type="Bool">0</expanded>
+
+            <statName type="String">TCP FIN-ACK Sent</statName>
+
+            <index type="Int">0</index>
+<caption type="String">FIN-ACKs Sent</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+<interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+<statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+<StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+<statName type="String">TCP FIN-ACK Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">FIN-ACKs Received</caption>
+<enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+        </statSpecList>
+
+        <statFilterGroupList type="ListNode">
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+</statFilterGroupList>
+
+        <viewType type="String">Bar</viewType>
+
+        <matrixConfiguration type="Bool">0</matrixConfiguration>
+
+        <windowPosition
+type="String" />
+
+        <legendEnabled type="Bool">1</legendEnabled>
+
+        <frequency type="Double">2</frequency>
+
+        <lineStyle
+type="String">Solid</lineStyle>
+
+        <showGridLines type="Bool">1</showGridLines>
+
+        <fontColor type="String">White</fontColor>
+
+        <caption
+type="String">Telnet Client - TCP Connections</caption>
+
+        <csvHeaderFieldList type="ListNode" />
+
+        <enabled type="Bool">1</enabled>
+
+        <allowUserEdit
+type="Bool">0</allowUserEdit>
+
+        <title type="Bool">1</title>
+
+        <yAxis type="ChartYAxis">
+
+          <yAxisRangeMax type="Int">100</yAxisRangeMax>
+<logScale type="Bool">0</logScale>
+
+          <yAxisRangeMin type="Int">0</yAxisRangeMin>
+
+          <yAxisScrollScale type="Bool">1</yAxisScrollScale>
+<yAxisExtent type="Int">85</yAxisExtent>
+
+          <autoScale type="Bool">0</autoScale>
+
+          <yAxisRange type="String">Auto</yAxisRange>
+</yAxis>
+
+        <grayScale type="Bool">0</grayScale>
+
+        <timeSamples type="Int">1000</timeSamples>
+
+      </StatView>
+
+      <StatView
+type="StatView">
+
+        <backgroundColor type="String">Black</backgroundColor>
+
+        <legendPosition type="String">Right</legendPosition>
+<statAttributeListList type="ListNode">
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">ffffc020</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">ffffe080</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">fffff0a0</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">ffc0c080</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">ffff30c0</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+        </statAttributeListList>
+
+        <swapRowsColumns type="Bool">0</swapRowsColumns>
+
+        <dataLegendEnabled
+type="Bool">1</dataLegendEnabled>
+
+        <legendSpanPercentage type="Int">30</legendSpanPercentage>
+
+        <xAxis type="ChartXAxis">
+
+          <scrollScale
+type="Bool">1</scrollScale>
+
+        </xAxis>
+
+        <csvRequestOptions type="CsvRequestOptions">
+
+          <OutputFileHeader type="Bool">0</OutputFileHeader>
+<OutputColumnHeader type="Bool">0</OutputColumnHeader>
+
+          <OutputFunctionHeader type="Bool">0</OutputFunctionHeader>
+
+          <OutputLabelHeader
+type="Bool">0</OutputLabelHeader>
+
+          <OutputCsv type="Bool">0</OutputCsv>
+
+        </csvRequestOptions>
+
+        <expanded type="Bool">0</expanded>
+<statSpecList type="ListNode">
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded
+type="Bool">0</expanded>
+
+            <statName type="String">TCP Connection Requests Failed</statName>
+
+            <index type="Int">0</index>
+<caption type="String">Connection Requests Failed</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType
+type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+<CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated
+type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+<expanded type="Bool">0</expanded>
+
+            <statName type="String">TCP Resets Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption
+type="String">Resets Sent</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+<interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+<statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+<StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+<statName type="String">TCP Resets Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">Resets Received</caption>
+<enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Client</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">TCP Retries</statName>
+<index type="Int">0</index>
+
+            <caption type="String">Retries</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType
+type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+<CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated
+type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Client</statSourceType>
+<expanded type="Bool">0</expanded>
+
+            <statName type="String">TCP Timeouts</statName>
+
+            <index type="Int">0</index>
+
+            <caption
+type="String">Timeouts</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+<interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+<statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+</statSpecList>
+
+        <statFilterGroupList type="ListNode">
+
+          <StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+<caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+<caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+<caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+<caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+<caption type="String" />
+
+          </StatFilterGroup>
+
+        </statFilterGroupList>
+
+        <viewType type="String">Bar</viewType>
+
+        <matrixConfiguration
+type="Bool">0</matrixConfiguration>
+
+        <windowPosition type="String" />
+
+        <legendEnabled type="Bool">1</legendEnabled>
+
+        <frequency
+type="Double">2</frequency>
+
+        <lineStyle type="String">Solid</lineStyle>
+
+        <showGridLines type="Bool">1</showGridLines>
+
+        <fontColor
+type="String">White</fontColor>
+
+        <caption type="String">Telnet Client - TCP Failures</caption>
+
+        <csvHeaderFieldList type="ListNode" />
+
+        <enabled
+type="Bool">1</enabled>
+
+        <allowUserEdit type="Bool">0</allowUserEdit>
+
+        <title type="Bool">1</title>
+
+        <yAxis type="ChartYAxis">
+<yAxisRangeMax type="Int">100</yAxisRangeMax>
+
+          <logScale type="Bool">0</logScale>
+
+          <yAxisRangeMin type="Int">0</yAxisRangeMin>
+<yAxisScrollScale type="Bool">1</yAxisScrollScale>
+
+          <yAxisExtent type="Int">85</yAxisExtent>
+
+          <autoScale type="Bool">0</autoScale>
+<yAxisRange type="String">Auto</yAxisRange>
+
+        </yAxis>
+
+        <grayScale type="Bool">0</grayScale>
+
+        <timeSamples
+type="Int">1000</timeSamples>
+
+      </StatView>
+
+      <StatView type="StatView">
+
+        <backgroundColor type="String">Black</backgroundColor>
+<legendPosition type="String">Right</legendPosition>
+
+        <statAttributeListList type="ListNode">
+
+          <StatAttributeList type="StatAttributeList">
+<statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color type="String">Blue</color>
+
+              </StatAttribute>
+</statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+<StatAttribute type="StatAttribute">
+
+                <color type="String">Red</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">Green</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+        </statAttributeListList>
+
+        <swapRowsColumns type="Bool">0</swapRowsColumns>
+
+        <dataLegendEnabled
+type="Bool">1</dataLegendEnabled>
+
+        <legendSpanPercentage type="Int">30</legendSpanPercentage>
+
+        <xAxis type="ChartXAxis">
+
+          <scrollScale
+type="Bool">0</scrollScale>
+
+        </xAxis>
+
+        <csvRequestOptions type="CsvRequestOptions">
+
+          <OutputFileHeader type="Bool">0</OutputFileHeader>
+<OutputColumnHeader type="Bool">0</OutputColumnHeader>
+
+          <OutputFunctionHeader type="Bool">0</OutputFunctionHeader>
+
+          <OutputLabelHeader
+type="Bool">0</OutputLabelHeader>
+
+          <OutputCsv type="Bool">0</OutputCsv>
+
+        </csvRequestOptions>
+
+        <expanded type="Bool">1</expanded>
+<statSpecList type="ListNode">
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+
+            <expanded
+type="Bool">0</expanded>
+
+            <statName type="String">Telnet Total Bytes Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption
+type="String">Transmit Rate</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">5</aggregationType>
+<interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+<statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+<StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+<statName type="String">Telnet Total Bytes Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">Send Rate</caption>
+<enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">5</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Total Bytes Sent And
+Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">Tx/Rx Rate</caption>
+
+            <enabled
+type="Bool">1</enabled>
+
+            <aggregationType type="Int">5</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+        </statSpecList>
+
+        <statFilterGroupList type="ListNode">
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+</statFilterGroupList>
+
+        <viewType type="String">Bar</viewType>
+
+        <matrixConfiguration type="Bool">0</matrixConfiguration>
+
+        <windowPosition
+type="String" />
+
+        <legendEnabled type="Bool">1</legendEnabled>
+
+        <frequency type="Double">1</frequency>
+
+        <lineStyle
+type="String">Solid</lineStyle>
+
+        <showGridLines type="Bool">1</showGridLines>
+
+        <fontColor type="String">White</fontColor>
+
+        <caption
+type="String">Telnet Server - Throughput</caption>
+
+        <csvHeaderFieldList type="ListNode" />
+
+        <enabled type="Bool">1</enabled>
+
+        <allowUserEdit
+type="Bool">0</allowUserEdit>
+
+        <title type="Bool">1</title>
+
+        <yAxis type="ChartYAxis">
+
+          <yAxisRangeMax type="Int">100</yAxisRangeMax>
+<logScale type="Bool">0</logScale>
+
+          <yAxisRangeMin type="Int">0</yAxisRangeMin>
+
+          <yAxisScrollScale type="Bool">0</yAxisScrollScale>
+<yAxisExtent type="Int">85</yAxisExtent>
+
+          <autoScale type="Bool">0</autoScale>
+
+          <yAxisRange type="String">Auto</yAxisRange>
+</yAxis>
+
+        <grayScale type="Bool">0</grayScale>
+
+        <timeSamples type="Int">300</timeSamples>
+
+      </StatView>
+
+      <StatView type="StatView">
+<backgroundColor type="String">Black</backgroundColor>
+
+        <legendPosition type="String">Right</legendPosition>
+
+        <statAttributeListList type="ListNode">
+<StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Blue</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Red</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Green</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Gray</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Cyan</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Fuchsia</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Orange</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Yellow</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+        </statAttributeListList>
+<swapRowsColumns type="Bool">0</swapRowsColumns>
+
+        <dataLegendEnabled type="Bool">1</dataLegendEnabled>
+
+        <legendSpanPercentage
+type="Int">30</legendSpanPercentage>
+
+        <xAxis type="ChartXAxis">
+
+          <scrollScale type="Bool">0</scrollScale>
+
+        </xAxis>
+<csvRequestOptions type="CsvRequestOptions">
+
+          <OutputFileHeader type="Bool">0</OutputFileHeader>
+
+          <OutputColumnHeader
+type="Bool">0</OutputColumnHeader>
+
+          <OutputFunctionHeader type="Bool">0</OutputFunctionHeader>
+
+          <OutputLabelHeader
+type="Bool">0</OutputLabelHeader>
+
+          <OutputCsv type="Bool">0</OutputCsv>
+
+        </csvRequestOptions>
+
+        <expanded type="Bool">1</expanded>
+<statSpecList type="ListNode">
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+
+            <expanded
+type="Bool">0</expanded>
+
+            <statName type="String">Telnet Echo Options DO Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption
+type="String">DO Sent</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+<interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+<statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+<StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+<statName type="String">Telnet Echo Options DONT Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">DON'T Sent</caption>
+<enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Echo Options WILL
+Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">WILL Sent</caption>
+
+            <enabled type="Bool">1</enabled>
+<aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+<CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated
+type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+<expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Echo Options WONT Sent</statName>
+
+            <index type="Int">0</index>
+<caption type="String">WON'T Sent</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+<interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+<statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+<StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+<statName type="String">Telnet Echo Options DO Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">DO
+Received</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated
+type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType
+type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec
+type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName
+type="String">Telnet Echo Options DONT Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">DON'T Received</caption>
+<enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Echo Options WILL
+Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">WILL Received</caption>
+
+            <enabled
+type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Echo Options WONT
+Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">WON'T Received</caption>
+
+            <enabled
+type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+        </statSpecList>
+
+        <statFilterGroupList type="ListNode">
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+</statFilterGroupList>
+
+        <viewType type="String">Bar</viewType>
+
+        <matrixConfiguration type="Bool">0</matrixConfiguration>
+
+        <windowPosition
+type="String" />
+
+        <legendEnabled type="Bool">1</legendEnabled>
+
+        <frequency type="Double">1</frequency>
+
+        <lineStyle
+type="String">Solid</lineStyle>
+
+        <showGridLines type="Bool">1</showGridLines>
+
+        <fontColor type="String">White</fontColor>
+
+        <caption
+type="String">Telnet Server - Echo Option</caption>
+
+        <csvHeaderFieldList type="ListNode" />
+
+        <enabled type="Bool">1</enabled>
+
+        <allowUserEdit
+type="Bool">0</allowUserEdit>
+
+        <title type="Bool">1</title>
+
+        <yAxis type="ChartYAxis">
+
+          <yAxisRangeMax type="Int">100</yAxisRangeMax>
+<logScale type="Bool">0</logScale>
+
+          <yAxisRangeMin type="Int">0</yAxisRangeMin>
+
+          <yAxisScrollScale type="Bool">0</yAxisScrollScale>
+<yAxisExtent type="Int">85</yAxisExtent>
+
+          <autoScale type="Bool">0</autoScale>
+
+          <yAxisRange type="String">Auto</yAxisRange>
+</yAxis>
+
+        <grayScale type="Bool">0</grayScale>
+
+        <timeSamples type="Int">300</timeSamples>
+
+      </StatView>
+
+      <StatView type="StatView">
+<backgroundColor type="String">Black</backgroundColor>
+
+        <legendPosition type="String">Right</legendPosition>
+
+        <statAttributeListList type="ListNode">
+<StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Blue</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Red</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Green</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Cyan</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Fuchsia</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Orange</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Yellow</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Silver</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+        </statAttributeListList>
+<swapRowsColumns type="Bool">0</swapRowsColumns>
+
+        <dataLegendEnabled type="Bool">1</dataLegendEnabled>
+
+        <legendSpanPercentage
+type="Int">30</legendSpanPercentage>
+
+        <xAxis type="ChartXAxis">
+
+          <scrollScale type="Bool">0</scrollScale>
+
+        </xAxis>
+<csvRequestOptions type="CsvRequestOptions">
+
+          <OutputFileHeader type="Bool">0</OutputFileHeader>
+
+          <OutputColumnHeader
+type="Bool">0</OutputColumnHeader>
+
+          <OutputFunctionHeader type="Bool">0</OutputFunctionHeader>
+
+          <OutputLabelHeader
+type="Bool">0</OutputLabelHeader>
+
+          <OutputCsv type="Bool">0</OutputCsv>
+
+        </csvRequestOptions>
+
+        <expanded type="Bool">1</expanded>
+<statSpecList type="ListNode">
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+
+            <expanded
+type="Bool">0</expanded>
+
+            <statName type="String">Telnet GA Suppress Options DO Sent</statName>
+
+            <index type="Int">0</index>
+<caption type="String">DO Sent</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+<interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+<statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+<StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+<statName type="String">Telnet GA Suppress Options DONT Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">DON'T
+Sent</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated
+type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType
+type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec
+type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName
+type="String">Telnet GA Suppress Options WILL Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">WILL Sent</caption>
+<enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet GA Suppress Options WONT
+Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">WON'T Sent</caption>
+
+            <enabled
+type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet GA Suppress Options DO
+Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">DO Received</caption>
+
+            <enabled
+type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet GA Suppress Options DONT
+Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">DON'T Received</caption>
+
+            <enabled
+type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet GA Suppress Options WILL
+Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">WILL Received</caption>
+
+            <enabled
+type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet GA Suppress Options WONT
+Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">WON'T Received</caption>
+
+            <enabled
+type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+        </statSpecList>
+
+        <statFilterGroupList type="ListNode">
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+</statFilterGroupList>
+
+        <viewType type="String">Bar</viewType>
+
+        <matrixConfiguration type="Bool">0</matrixConfiguration>
+
+        <windowPosition
+type="String" />
+
+        <legendEnabled type="Bool">1</legendEnabled>
+
+        <frequency type="Double">1</frequency>
+
+        <lineStyle
+type="String">Solid</lineStyle>
+
+        <showGridLines type="Bool">1</showGridLines>
+
+        <fontColor type="String">White</fontColor>
+
+        <caption
+type="String">Telnet Server - Suppress Go Ahead Option</caption>
+
+        <csvHeaderFieldList type="ListNode" />
+
+        <enabled type="Bool">1</enabled>
+<allowUserEdit type="Bool">0</allowUserEdit>
+
+        <title type="Bool">1</title>
+
+        <yAxis type="ChartYAxis">
+
+          <yAxisRangeMax
+type="Int">100</yAxisRangeMax>
+
+          <logScale type="Bool">0</logScale>
+
+          <yAxisRangeMin type="Int">0</yAxisRangeMin>
+
+          <yAxisScrollScale
+type="Bool">0</yAxisScrollScale>
+
+          <yAxisExtent type="Int">85</yAxisExtent>
+
+          <autoScale type="Bool">0</autoScale>
+
+          <yAxisRange
+type="String">Auto</yAxisRange>
+
+        </yAxis>
+
+        <grayScale type="Bool">0</grayScale>
+
+        <timeSamples type="Int">300</timeSamples>
+</StatView>
+
+      <StatView type="StatView">
+
+        <backgroundColor type="String">Black</backgroundColor>
+
+        <legendPosition
+type="String">Right</legendPosition>
+
+        <statAttributeListList type="ListNode">
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList
+type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color type="String">Blue</color>
+
+              </StatAttribute>
+</statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+<StatAttribute type="StatAttribute">
+
+                <color type="String">Red</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">Green</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">Cyan</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">Fuchsia</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">Orange</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">Yellow</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">Silver</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+        </statAttributeListList>
+
+        <swapRowsColumns type="Bool">0</swapRowsColumns>
+
+        <dataLegendEnabled
+type="Bool">1</dataLegendEnabled>
+
+        <legendSpanPercentage type="Int">30</legendSpanPercentage>
+
+        <xAxis type="ChartXAxis">
+
+          <scrollScale
+type="Bool">0</scrollScale>
+
+        </xAxis>
+
+        <csvRequestOptions type="CsvRequestOptions">
+
+          <OutputFileHeader type="Bool">0</OutputFileHeader>
+<OutputColumnHeader type="Bool">0</OutputColumnHeader>
+
+          <OutputFunctionHeader type="Bool">0</OutputFunctionHeader>
+
+          <OutputLabelHeader
+type="Bool">0</OutputLabelHeader>
+
+          <OutputCsv type="Bool">0</OutputCsv>
+
+        </csvRequestOptions>
+
+        <expanded type="Bool">1</expanded>
+<statSpecList type="ListNode">
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+
+            <expanded
+type="Bool">0</expanded>
+
+            <statName type="String">Telnet Line-mode Options DO Sent</statName>
+
+            <index type="Int">0</index>
+<caption type="String">DO Sent</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+<interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+<statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+<StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+<statName type="String">Telnet Line-mode Options DONT Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">DON'T
+Sent</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated
+type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType
+type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec
+type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName
+type="String">Telnet Line-mode Options WILL Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">WILL Sent</caption>
+<enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Line-mode Options WONT
+Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">WON'T Sent</caption>
+
+            <enabled
+type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Line-mode Options DO
+Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">DO Received</caption>
+
+            <enabled
+type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Line-mode Options DONT
+Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">DON'T Received</caption>
+
+            <enabled
+type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Line-mode Options WILL
+Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">WILL Received</caption>
+
+            <enabled
+type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Line-mode Options WONT
+Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">WON'T Received</caption>
+
+            <enabled
+type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+        </statSpecList>
+
+        <statFilterGroupList type="ListNode">
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+</statFilterGroupList>
+
+        <viewType type="String">Bar</viewType>
+
+        <matrixConfiguration type="Bool">0</matrixConfiguration>
+
+        <windowPosition
+type="String" />
+
+        <legendEnabled type="Bool">1</legendEnabled>
+
+        <frequency type="Double">1</frequency>
+
+        <lineStyle
+type="String">Solid</lineStyle>
+
+        <showGridLines type="Bool">1</showGridLines>
+
+        <fontColor type="String">White</fontColor>
+
+        <caption
+type="String">Telnet Server - Line Mode Option</caption>
+
+        <csvHeaderFieldList type="ListNode" />
+
+        <enabled type="Bool">1</enabled>
+
+        <allowUserEdit
+type="Bool">0</allowUserEdit>
+
+        <title type="Bool">1</title>
+
+        <yAxis type="ChartYAxis">
+
+          <yAxisRangeMax type="Int">100</yAxisRangeMax>
+<logScale type="Bool">0</logScale>
+
+          <yAxisRangeMin type="Int">0</yAxisRangeMin>
+
+          <yAxisScrollScale type="Bool">0</yAxisScrollScale>
+<yAxisExtent type="Int">85</yAxisExtent>
+
+          <autoScale type="Bool">0</autoScale>
+
+          <yAxisRange type="String">Auto</yAxisRange>
+</yAxis>
+
+        <grayScale type="Bool">0</grayScale>
+
+        <timeSamples type="Int">300</timeSamples>
+
+      </StatView>
+
+      <StatView type="StatView">
+<backgroundColor type="String">Black</backgroundColor>
+
+        <legendPosition type="String">Right</legendPosition>
+
+        <statAttributeListList type="ListNode">
+<StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Blue</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Green</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList
+type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color
+type="String">Green</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+        </statAttributeListList>
+<swapRowsColumns type="Bool">0</swapRowsColumns>
+
+        <dataLegendEnabled type="Bool">1</dataLegendEnabled>
+
+        <legendSpanPercentage
+type="Int">30</legendSpanPercentage>
+
+        <xAxis type="ChartXAxis">
+
+          <scrollScale type="Bool">0</scrollScale>
+
+        </xAxis>
+<csvRequestOptions type="CsvRequestOptions">
+
+          <OutputFileHeader type="Bool">0</OutputFileHeader>
+
+          <OutputColumnHeader
+type="Bool">0</OutputColumnHeader>
+
+          <OutputFunctionHeader type="Bool">0</OutputFunctionHeader>
+
+          <OutputLabelHeader
+type="Bool">0</OutputLabelHeader>
+
+          <OutputCsv type="Bool">0</OutputCsv>
+
+        </csvRequestOptions>
+
+        <expanded type="Bool">1</expanded>
+<statSpecList type="ListNode">
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+
+            <expanded
+type="Bool">0</expanded>
+
+            <statName type="String">Telnet Logins Succeeded</statName>
+
+            <index type="Int">0</index>
+
+            <caption
+type="String">Logins Succeeded</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+<interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+<statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+<StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+<statName type="String">Telnet Logins Failed</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">Logins Failed</caption>
+<enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">Telnet Commands Processed</statName>
+<index type="Int">0</index>
+
+            <caption type="String">Commands Processed</caption>
+
+            <enabled type="Bool">1</enabled>
+<aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+<CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated
+type="Bool">0</enumerated>
+
+          </StatSpec>
+
+        </statSpecList>
+
+        <statFilterGroupList type="ListNode">
+
+          <StatFilterGroup
+type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup
+type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup
+type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+
+        </statFilterGroupList>
+<viewType type="String">Bar</viewType>
+
+        <matrixConfiguration type="Bool">0</matrixConfiguration>
+
+        <windowPosition type="String" />
+<legendEnabled type="Bool">1</legendEnabled>
+
+        <frequency type="Double">1</frequency>
+
+        <lineStyle type="String">Solid</lineStyle>
+<showGridLines type="Bool">1</showGridLines>
+
+        <fontColor type="String">White</fontColor>
+
+        <caption type="String">Telnet Server - Sessions</caption>
+<csvHeaderFieldList type="ListNode" />
+
+        <enabled type="Bool">1</enabled>
+
+        <allowUserEdit type="Bool">0</allowUserEdit>
+
+        <title
+type="Bool">1</title>
+
+        <yAxis type="ChartYAxis">
+
+          <yAxisRangeMax type="Int">100</yAxisRangeMax>
+
+          <logScale type="Bool">0</logScale>
+<yAxisRangeMin type="Int">0</yAxisRangeMin>
+
+          <yAxisScrollScale type="Bool">0</yAxisScrollScale>
+
+          <yAxisExtent type="Int">85</yAxisExtent>
+<autoScale type="Bool">0</autoScale>
+
+          <yAxisRange type="String">Auto</yAxisRange>
+
+        </yAxis>
+
+        <grayScale type="Bool">0</grayScale>
+<timeSamples type="Int">300</timeSamples>
+
+      </StatView>
+
+      <StatView type="StatView">
+
+        <backgroundColor type="String">Black</backgroundColor>
+<legendPosition type="String">Right</legendPosition>
+
+        <statAttributeListList type="ListNode">
+
+          <StatAttributeList type="StatAttributeList">
+<statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color type="String">ff0000ff</color>
+</StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList
+type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color type="String">ff80c0ff</color>
+
+              </StatAttribute>
+</statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+<StatAttribute type="StatAttribute">
+
+                <color type="String">ffff30c0</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">ffff80e0</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">ffffa0f0</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">ffc080c0</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">ff10c020</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+        </statAttributeListList>
+
+        <swapRowsColumns type="Bool">0</swapRowsColumns>
+
+        <dataLegendEnabled
+type="Bool">1</dataLegendEnabled>
+
+        <legendSpanPercentage type="Int">30</legendSpanPercentage>
+
+        <xAxis type="ChartXAxis">
+
+          <scrollScale
+type="Bool">1</scrollScale>
+
+        </xAxis>
+
+        <csvRequestOptions type="CsvRequestOptions">
+
+          <OutputFileHeader type="Bool">0</OutputFileHeader>
+<OutputColumnHeader type="Bool">0</OutputColumnHeader>
+
+          <OutputFunctionHeader type="Bool">0</OutputFunctionHeader>
+
+          <OutputLabelHeader
+type="Bool">0</OutputLabelHeader>
+
+          <OutputCsv type="Bool">0</OutputCsv>
+
+        </csvRequestOptions>
+
+        <expanded type="Bool">0</expanded>
+<statSpecList type="ListNode">
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+
+            <expanded
+type="Bool">0</expanded>
+
+            <statName type="String">TCP SYN_SYN-ACK Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption
+type="String">SYN/SYN-ACKs Received</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+<interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+<statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+<StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+<statName type="String">TCP SYN-ACK Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">SYN-ACKs Sent</caption>
+<enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">TCP FIN Sent</statName>
+<index type="Int">0</index>
+
+            <caption type="String">FINs Sent</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType
+type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+<CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated
+type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+<expanded type="Bool">0</expanded>
+
+            <statName type="String">TCP FIN Received</statName>
+
+            <index type="Int">0</index>
+<caption type="String">FINs Received</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+<interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+<statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+<StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+<statName type="String">TCP FIN-ACK Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">FIN-ACKs Sent</caption>
+<enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">TCP FIN-ACK Received</statName>
+<index type="Int">0</index>
+
+            <caption type="String">FIN-ACKs Received</caption>
+
+            <enabled type="Bool">1</enabled>
+<aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+<CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated
+type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+<expanded type="Bool">0</expanded>
+
+            <statName type="String">TCP Accept Queue Entries</statName>
+
+            <index type="Int">0</index>
+<caption type="String">Accept Queue Entries</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+<interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+<statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+</statSpecList>
+
+        <statFilterGroupList type="ListNode">
+
+          <StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+<caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+<caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+<caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+<caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+<caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+<caption type="String" />
+
+          </StatFilterGroup>
+
+          <StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+<caption type="String" />
+
+          </StatFilterGroup>
+
+        </statFilterGroupList>
+
+        <viewType type="String">Bar</viewType>
+
+        <matrixConfiguration
+type="Bool">0</matrixConfiguration>
+
+        <windowPosition type="String" />
+
+        <legendEnabled type="Bool">1</legendEnabled>
+
+        <frequency
+type="Double">2</frequency>
+
+        <lineStyle type="String">Solid</lineStyle>
+
+        <showGridLines type="Bool">1</showGridLines>
+
+        <fontColor
+type="String">White</fontColor>
+
+        <caption type="String">Telnet Server - TCP Connections</caption>
+
+        <csvHeaderFieldList type="ListNode" />
+<enabled type="Bool">1</enabled>
+
+        <allowUserEdit type="Bool">0</allowUserEdit>
+
+        <title type="Bool">1</title>
+
+        <yAxis
+type="ChartYAxis">
+
+          <yAxisRangeMax type="Int">100</yAxisRangeMax>
+
+          <logScale type="Bool">0</logScale>
+
+          <yAxisRangeMin
+type="Int">0</yAxisRangeMin>
+
+          <yAxisScrollScale type="Bool">1</yAxisScrollScale>
+
+          <yAxisExtent type="Int">85</yAxisExtent>
+
+          <autoScale
+type="Bool">0</autoScale>
+
+          <yAxisRange type="String">Auto</yAxisRange>
+
+        </yAxis>
+
+        <grayScale type="Bool">0</grayScale>
+<timeSamples type="Int">1000</timeSamples>
+
+      </StatView>
+
+      <StatView type="StatView">
+
+        <backgroundColor type="String">Black</backgroundColor>
+<legendPosition type="String">Right</legendPosition>
+
+        <statAttributeListList type="ListNode">
+
+          <StatAttributeList type="StatAttributeList">
+<statAttributeList type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color type="String">ffffc020</color>
+</StatAttribute>
+
+            </statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList
+type="ListNode">
+
+              <StatAttribute type="StatAttribute">
+
+                <color type="String">ffffe080</color>
+
+              </StatAttribute>
+</statAttributeList>
+
+          </StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+<StatAttribute type="StatAttribute">
+
+                <color type="String">fffff0a0</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">ffc0c080</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">ffff30c0</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+          <StatAttributeList type="StatAttributeList">
+
+            <statAttributeList type="ListNode">
+
+              <StatAttribute
+type="StatAttribute">
+
+                <color type="String">ffffa0f0</color>
+
+              </StatAttribute>
+
+            </statAttributeList>
+</StatAttributeList>
+
+        </statAttributeListList>
+
+        <swapRowsColumns type="Bool">0</swapRowsColumns>
+
+        <dataLegendEnabled
+type="Bool">1</dataLegendEnabled>
+
+        <legendSpanPercentage type="Int">30</legendSpanPercentage>
+
+        <xAxis type="ChartXAxis">
+
+          <scrollScale
+type="Bool">1</scrollScale>
+
+        </xAxis>
+
+        <csvRequestOptions type="CsvRequestOptions">
+
+          <OutputFileHeader type="Bool">0</OutputFileHeader>
+<OutputColumnHeader type="Bool">0</OutputColumnHeader>
+
+          <OutputFunctionHeader type="Bool">0</OutputFunctionHeader>
+
+          <OutputLabelHeader
+type="Bool">0</OutputLabelHeader>
+
+          <OutputCsv type="Bool">0</OutputCsv>
+
+        </csvRequestOptions>
+
+        <expanded type="Bool">0</expanded>
+<statSpecList type="ListNode">
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+
+            <expanded
+type="Bool">0</expanded>
+
+            <statName type="String">TCP Connection Requests Failed</statName>
+
+            <index type="Int">0</index>
+<caption type="String">Connection Requests Failed</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType
+type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+<CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated
+type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+<expanded type="Bool">0</expanded>
+
+            <statName type="String">TCP Resets Sent</statName>
+
+            <index type="Int">0</index>
+
+            <caption
+type="String">Resets Sent</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+<interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+<statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+<StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+<statName type="String">TCP Resets Received</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">Resets Received</caption>
+<enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType
+type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+
+            <statName type="String">TCP Retries</statName>
+<index type="Int">0</index>
+
+            <caption type="String">Retries</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType
+type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+<CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated
+type="Bool">0</enumerated>
+
+          </StatSpec>
+
+          <StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+<expanded type="Bool">0</expanded>
+
+            <statName type="String">TCP Timeouts</statName>
+
+            <index type="Int">0</index>
+
+            <caption
+type="String">Timeouts</caption>
+
+            <enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+<interpolated type="Bool">1</interpolated>
+
+            <yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+<statType type="Int">0</statType>
+
+            <CsvStatLabel type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+<StatSpec type="StatSpec">
+
+            <statSourceType type="String">Telnet Server</statSourceType>
+
+            <expanded type="Bool">0</expanded>
+<statName type="String">TCP Listen Queue Drops</statName>
+
+            <index type="Int">0</index>
+
+            <caption type="String">Listen Queue Drops</caption>
+<enabled type="Bool">1</enabled>
+
+            <aggregationType type="Int">0</aggregationType>
+
+            <interpolated type="Bool">1</interpolated>
+<yAxisRange type="String">Main</yAxisRange>
+
+            <CsvFunctionLabel type="String" />
+
+            <statType type="Int">0</statType>
+
+            <CsvStatLabel
+type="String" />
+
+            <enumerated type="Bool">0</enumerated>
+
+          </StatSpec>
+
+        </statSpecList>
+
+        <statFilterGroupList type="ListNode">
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+<StatFilterGroup type="StatFilterGroup">
+
+            <statFilterList type="ListNode" />
+
+            <caption type="String" />
+
+          </StatFilterGroup>
+</statFilterGroupList>
+
+        <viewType type="String">Bar</viewType>
+
+        <matrixConfiguration type="Bool">0</matrixConfiguration>
+
+        <windowPosition
+type="String" />
+
+        <legendEnabled type="Bool">1</legendEnabled>
+
+        <frequency type="Double">2</frequency>
+
+        <lineStyle
+type="String">Solid</lineStyle>
+
+        <showGridLines type="Bool">1</showGridLines>
+
+        <fontColor type="String">White</fontColor>
+
+        <caption
+type="String">Telnet Server - TCP Failures</caption>
+
+        <csvHeaderFieldList type="ListNode" />
+
+        <enabled type="Bool">1</enabled>
+
+        <allowUserEdit
+type="Bool">0</allowUserEdit>
+
+        <title type="Bool">1</title>
+
+        <yAxis type="ChartYAxis">
+
+          <yAxisRangeMax type="Int">100</yAxisRangeMax>
+<logScale type="Bool">0</logScale>
+
+          <yAxisRangeMin type="Int">0</yAxisRangeMin>
+
+          <yAxisScrollScale type="Bool">1</yAxisScrollScale>
+<yAxisExtent type="Int">85</yAxisExtent>
+
+          <autoScale type="Bool">0</autoScale>
+
+          <yAxisRange type="String">Auto</yAxisRange>
+</yAxis>
+
+        <grayScale type="Bool">0</grayScale>
+
+        <timeSamples type="Int">1000</timeSamples>
+
+      </StatView>
+
+    </statViewList>
+<windowPositions type="String" />
+
+    <expanded type="Bool">0</expanded>
+
+  </StatViewer>
+
+</aptixia>

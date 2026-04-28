@@ -1,0 +1,510 @@
+
+<HTML>
+<TITLE>
+        Ixia Software Release Notes
+    : 
+        Ixia Licensing Release 2.20 SP2
+     : 
+       Build Number: 2.20.12.11 (February 28, 2006)
+    </TITLE>
+<BODY>
+
+<CENTER>
+<H1>
+        Ixia Software Release Notes
+    <BR>
+        Ixia Licensing Release 2.20 SP2
+    <BR>
+       Build Number: 2.20.12.11 (February 28, 2006)
+    </H1>
+</CENTER>
+<UL>
+<LI>
+<A HREF="#About This Release">About This Release</A>
+</LI>
+<LI>
+<A HREF="#What's New in Ixia Licensing (Since 2.10)">What's New in Ixia Licensing (Since 2.10)</A>
+</LI>
+<LI>
+<A HREF="#Installation Notes">Installation Notes</A>
+</LI>
+<LI>
+<A HREF="#Additional Documentation">Additional Documentation</A>
+</LI>
+<LI>
+<A HREF="#Known Issues List">Known Issues List</A>
+</LI>
+<LI>
+<A HREF="#Contacting Ixia">Contacting Ixia</A>
+</LI>
+<LI>
+<A HREF="#Resolved Defects List (since 2.10)">Resolved Defects List (since 2.10)</A>
+</LI>
+</UL>
+<BR>
+<HR>
+   
+
+<H2>
+<A NAME="About This Release">About This Release</A>
+</H2>
+<PRE>
+Ixia Licensing 2.20 SP2 is a minor releases of Ixia Licensing. It includes 
+several new features and bug fixes.
+
+
+In most circumstances, IxLicensing is packaged with and installed with an 
+application. The list of applications packaged with this version of Ixia 
+Licensing, as of the date of these release notes, is:
+
+    - IxChariot 6.25
+    - IxVerify 8.25
+    - IxProfile 1.15
+
+    
+There are cases, however, in which this separately packaged version of Ixia
+Licensing may be used. These include:
+
+    - In order to install a stand-alone license server for IxChariot, IxVerify or
+      IxProfile, which do not normally install a license server.
+      
+    - In order to install an additional license server.
+    
+    - To utilize the changes and fixes associated with this release for other 
+      software releases. This function is normally performed by Ixia support 
+      personnel.
+   
+         
+Important Changes
+-----------------
+The important changes included with this release are:
+
+    1. Remove usage of NIC MAC addresses in forming the unique "node ID" 
+       associated with a system. This value has been problematic, changing with 
+       replacement of NIC cards and use of wireless networks.
+       
+    2. Chassis locked applications may now be used via terminal server.
+    
+    3. Internal Ixia licenses may now be upgraded. In the past, internal licenses 
+       were issued only for the current software release. Newly issued internal 
+       licenses will now last for 180 days and may be used for any version of 
+       software, although the LRU's "Update" function must be applied. Older 
+       internal licenses should be allowed to expire.
+       
+    4. A licensing diagnostic is included in the IRU. See "Diagnostic Usage"
+       below.
+
+   
+Diagnostic Usage
+----------------
+A licensing management diagnostic is now included in the IRU and its usage is 
+described in the License Management Users Guide included with this package. It 
+is accessed from the IRU's "Manage Licenses" screen, using the Tools&gt;Diagnostic 
+menu option. It may be used by customers and support personnel, alike. 
+
+
+Use of IxChariot on Ixia Chassis
+--------------------------------
+This version of license management is also useful If IxChariot is installed on a 
+chassis (or host with an Ixia Demo Server) that is used with other licensed 
+application (IxVPN for example). This installs several additional licensing 
+components needed for the other applications.
+</PRE>
+<HR>
+   
+
+
+    
+        
+<H2>
+<A NAME="What's New in Ixia Licensing (Since 2.10)">What's New in Ixia Licensing (Since 2.10)</A>
+</H2>       
+
+
+
+<H2>Features</H2>
+
+
+
+
+<TABLE CELLSPACING="4" CELLPADDING="3" BORDER="2" WIDTH="90%">
+
+
+<TR BGCOLOR="#99CCFF">
+<TH>License Management</TH>
+</TR>
+
+
+
+
+
+
+<TR>
+<TD>The use of NIC MAC addresses in the formation of the system node ID has been removed.</TD>
+</TR>
+
+
+
+
+
+
+
+
+
+
+<TR>
+<TD>Chassis locked applications may now be used through Microsoft Remote Terminal Services.</TD>
+</TR>
+
+
+
+
+
+
+
+
+
+
+<TR>
+<TD>Internal Ixia licenses may now be upgraded to new application versions with the same license during the licenses maintenance period. Only an LRU Update is required.</TD>
+</TR>
+
+
+
+
+
+
+</TABLE>
+<BR>
+
+
+
+
+<HR>
+
+
+    
+
+<H2>
+<A NAME="Installation Notes">Installation Notes</A>
+</H2>
+<PRE>
+Removal of the use of NIC MAC addresses in forming the unique "node ID" for the 
+system has the effect of invalidating all licenses installed with License 
+Management version 2.10 or earlier. This is because licenses are locked to a 
+particular node ID, the algorithm by which the node ID is calculated has been 
+changed, so the current node ID no longer corresponds to existing licenses. 
+Normally, users who install a new version of software may use the IRU's "Update" 
+function to obtain an updated license; this will not work in this case. It is 
+necessary for the user to use the IRU's "Deregister" function followed by the 
+"Register" function. 
+
+REMEMBER, ALL LICENSES ASSOCIATED WITH THE NODE (CHASSIS OR PC) MUST BE 
+DEREGISTERED AND REGISTERED AFTER INSTALLATION OF LICENSE MANAGEMENT 2.20.
+
+IxChariot, IxProfile and IxVerify users will find that these products will
+automatically perform the deregister/register function.
+
+Chassis locked applications may now use terminal server. This may be accomplished 
+for an already issued license by using the LRU's "Update" function.
+</PRE>
+<HR> 
+
+
+
+<H2>
+<A NAME="Additional Documentation">Additional Documentation</A>
+</H2>
+<PRE>
+Please refer to our website at <A HREF="http://www.ixiacom.com/library">http://www.ixiacom.com/library</A>. PDF and HTML 
+versions of all documentation are available there.
+
+You will be required to provide a login and password to enter this section of 
+the web site. If you do not have the username and password, please forward your 
+request to <A HREF="mailto:support@ixiacom.com">mailto:support@ixiacom.com</A>.
+</PRE>
+<HR>
+
+ 
+
+
+
+    
+     
+        
+<H2>
+<A NAME="Known Issues List">Known Issues List</A>
+</H2>
+
+
+
+<H3>License Management</H3>
+
+
+<TABLE CELLSPACING="4" CELLPADDING="3" BORDER="2" WIDTH="90%">
+
+
+
+
+<TR BGCOLOR="#CC9999">
+
+
+<TH ALIGN="CENTER" WIDTH="75">Bug Number</TH>
+
+<TH ALIGN="CENTER">Notes</TH>
+
+
+</TR>
+
+
+
+
+
+
+<TR>
+
+
+<TD VALIGN="MIDDLE" WIDTH="75"><TT>59530</TT></TD>
+
+<TD><TT>Using a license server with Licensing Version 2.0 requires an IPv4 address on the license server.
+</TT></TD>
+
+
+</TR>
+
+
+<TR>
+
+
+<TD VALIGN="MIDDLE" WIDTH="75"><TT>60620</TT></TD>
+
+<TD><TT>Borrowed IxChariot licenses from pre-6.10 releases must be returned before registering 6.10 licenses.
+</TT></TD>
+
+
+</TR>
+
+
+<TR>
+
+
+<TD VALIGN="MIDDLE" WIDTH="75"><TT>60624</TT></TD>
+
+<TD><TT>The Itanium 64 platform is not supported for installation of Licensing Management software.
+</TT></TD>
+
+
+</TR>
+
+
+<TR>
+
+
+<TD VALIGN="MIDDLE" WIDTH="75"><TT>70665</TT></TD>
+
+<TD><TT>If a license for IxChariot has a maintenance end date prior to version 6.10, a registration may complete but will not be useful. The .lic file will show a pre-6.10 version.
+</TT></TD>
+
+
+</TR>
+
+
+<TR>
+
+
+<TD VALIGN="MIDDLE" WIDTH="75"><TT>71668</TT></TD>
+
+<TD><TT>When a license server is used to obtain floating licenses and the name of the license server (as opposed to its IP address) is used to reference the server, a slow DNS environment will slow down product operation. Either repair the DNS system or use the license server's IP address.
+</TT></TD>
+
+
+</TR>
+
+
+<TR>
+
+
+<TD VALIGN="MIDDLE" WIDTH="75"><TT>74931</TT></TD>
+
+<TD><TT>Ixia software products which incorporated License Management version 2.0 (such as IxAuthenticate 2.0), will silently downgrade a more recent License Management release. If such a situation occurs, re-install License Management from the most recent product media.
+</TT></TD>
+
+
+</TR>
+
+
+<TR>
+
+
+<TD VALIGN="MIDDLE" WIDTH="75"><TT>76722</TT></TD>
+
+<TD><TT>IxANVL users on Red Hat Linux 4.0 will be unable to obtain any licenses.
+</TT></TD>
+
+
+</TR>
+
+
+<TR>
+
+
+<TD VALIGN="MIDDLE" WIDTH="75"><TT>77169</TT></TD>
+
+<TD><TT>The unavailability of a license on a license server may result in an error code 2. The actual error is expressed in the "License server system does not support this feature" text displayed below the error number.
+</TT></TD>
+
+
+</TR>
+
+
+
+
+</TABLE>
+
+
+
+
+    
+<P>
+<HR>
+</P>
+
+    
+        
+<H2>
+<A NAME="Resolved Defects List (since 2.10)">Resolved Defects List (since 2.10)</A>
+</H2>
+
+
+
+<H3>License Management</H3>
+
+
+<TABLE CELLSPACING="4" CELLPADDING="3" BORDER="2" WIDTH="90%">
+
+
+
+
+<TR BGCOLOR="#99CCCC">
+
+
+<TH ALIGN="CENTER" WIDTH="75">Bug Number</TH>
+
+<TH ALIGN="CENTER">Notes</TH>
+
+
+</TR>
+
+
+
+
+
+
+<TR>
+
+
+<TD VALIGN="MIDDLE" WIDTH="75"><TT>60560</TT></TD>
+
+<TD><TT>Occasional 10053 errors from the license daemon when many pairs are licensed were resolved.
+</TT></TD>
+
+
+</TR>
+
+
+<TR>
+
+
+<TD VALIGN="MIDDLE" WIDTH="75"><TT>67237</TT></TD>
+
+<TD><TT>Systems with multiple NICs, or with wireless NICs would occasionally indicate invalid licenses. Rebooting might revalidate the license. Deregistration and registration would fix the license.
+</TT></TD>
+
+
+</TR>
+
+
+<TR>
+
+
+<TD VALIGN="MIDDLE" WIDTH="75"><TT>68061</TT></TD>
+
+<TD><TT>Additional instructions for proxy configuration are now included in the License Management Users Guide.
+</TT></TD>
+
+
+</TR>
+
+
+<TR>
+
+
+<TD VALIGN="MIDDLE" WIDTH="75"><TT>73853</TT></TD>
+
+<TD><TT>-5504 errors from the license daemon after installation are resolved.
+</TT></TD>
+
+
+</TR>
+
+
+<TR>
+
+
+<TD VALIGN="MIDDLE" WIDTH="75"><TT>74478</TT></TD>
+
+<TD><TT>A licensing diagnostic is now included. It may be accessed from the IRU's Manage License interface.
+</TT></TD>
+
+
+</TR>
+
+
+<TR>
+
+
+<TD VALIGN="MIDDLE" WIDTH="75"><TT>77312</TT></TD>
+
+<TD><TT>License Management installation would fail if the System Management window was open.
+</TT></TD>
+
+
+</TR>
+
+
+
+
+</TABLE>
+
+
+
+
+
+    
+<P>
+<HR>
+</P>
+    
+
+<H2>
+<A NAME="Contacting Ixia">Contacting Ixia</A>
+</H2>
+<PRE>
+Ixia support hours are 6:00AM PST to 6:00PM PST. 
+ 
+For technical assistance, including product repairs/RMA's, please email us at: 
+<A HREF="mailto:support@ixiacom.com">support@ixiacom.com</A> or phone us at (877) 367-4942. Outside the United States 
+phone us at 1-818-871-1800 (Option 1) 
+ 
+For technical assistance in Europe, Middle East, and Africa, please email us at: 
+<A HREF="mailto:eurosupport@ixiacom.com">eurosupport@ixiacom.com</A> or phone us at +44 1869 356370 (Option 5). 
+ 
+For technical assistance in India, please email us at: <A HREF="mailto:support-india@ixiacom.com">support-india@ixiacom.com</A> 
+or phone us at +91-80-30918500
+</PRE>
+<HR>
+
+
+
+</BODY>
+</HTML>

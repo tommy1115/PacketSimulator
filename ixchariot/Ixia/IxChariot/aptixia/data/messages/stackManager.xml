@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ixia_message_file>
+    <status>
+    <id_string>Aptixia.CoreTools.Tokenizer.UnknownSymbol</id_string>
+    <text>Invalid symbol in expression '%1%' at location '%2%'</text>
+    <description>
+    The expression contains a syntax error.
+
+    This is an internal error. contact ixia support and include
+    the details from error text.
+    </description>		
+    </status>
+
+    <status>
+    <id_string>Aptixia.CoreTools.Tokenizer.UnterminatedString</id_string>
+    <text>Unterminated string in expression '%1%' at location '%2%'</text>
+    <description>
+    The expression contains an unterminated string (Missing double quote).
+
+    This is an internal error. contact ixia support and include
+    the details from error text.
+    </description>		
+    </status>
+
+    <status>
+    <id_string>Aptixia.CoreTools.Tokenizer.SyntaxError</id_string>
+    <text>Syntax error in expression '%1%' at location '%2%'</text>
+    <description>
+    The expression contains a syntax error.
+
+    </description>		
+    </status>
+
+    <status>
+    <id_string>Aptixia.CoreTools.ExpressionParser.SyntaxError</id_string>
+    <text>Syntax error in expression '%1%' at location '%2%'</text>
+    <description>
+    The expression contains a syntax error.
+
+    This is an internal error. contact ixia support and include
+    the details from error text.
+    </description>		
+    </status>
+
+    <status>
+    <id_string>Aptixia.CoreTools.Expression.TypeError</id_string>
+    <text>Type error in expression '%1%'</text>
+    <description>
+    The expression contains a type error.
+
+    This is an internal error. contact ixia support and include
+    the details from error text.
+    </description>		
+    </status>
+    
+    <status>
+    <id_string>Aptixia.CoreTools.IMExecutive.TimedOut</id_string>
+    <text>Failed to get a response from interface manager</text>
+    <description>
+    Failed to get a response from Interface Manager on the port. 
+    </description>		
+    </status>
+
+
+</ixia_message_file>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Node nodeType="Vlan" baseType="">
+    <help>Represents the Vlan properties for an IP range</help>
+    <PropertyBoolean>
+		<!-- <obsolete>Vlan should be configured in the Ethernet plugin. Use vlanPrimaryKey to identify the ethernet vlan. This represents enabled in the first vlan range</obsolete> -->
+        <name>enabled</name>
+        <default>false</default>
+        <description>Set true to enable Vlan, false otherwise</description>
+        <help>Set true to enable Vlan, false otherwise</help>
+    </PropertyBoolean>
+    <PropertyInt>
+		<!-- <obsolete>Vlan should be configured in the Ethernet plugin. Use vlanPrimaryKey to identify the ethernet vlan. This represents id in the first vlan range</obsolete> -->
+        <name>id</name>
+        <default>0</default>
+        <description>Vlan id</description>
+        <help>Vlan id</help>
+    </PropertyInt>
+    <PropertyInt>
+		<!-- <obsolete>Vlan should be configured in the Ethernet plugin. Use vlanPrimaryKey to identify the ethernet vlan. This represents priority in the first vlan range</obsolete> -->
+        <name>priority</name>
+        <default>0</default>
+        <description>Vlan priority</description>
+        <help>Vlan priority</help>
+    </PropertyInt>
+    <PropertyInt>
+		<!-- <obsolete>Vlan should be configured in the Ethernet plugin. Use vlanPrimaryKey to identify the ethernet vlan. This represents stepSize in the first vlan range</obsolete> -->
+		<name>stepSize</name>
+		<default>10</default>
+		<description>Step size for the Vlan ids</description>
+		<help>Step size for the Vlan ids</help>
+    </PropertyInt>
+    <PropertyInt>
+		<!-- <obsolete>Vlan should be configured in the Ethernet plugin. Use vlanPrimaryKey to identify the ethernet vlan. This represents incrementBy in the first vlan range</obsolete> -->
+        <name>incrementBy</name>
+        <default>1</default>
+        <description>Increment Vlan id after every step size</description>
+        <help>Increment Vlan id after every step size</help>
+    </PropertyInt>
+</Node>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Generally, this should only contain information needed before a
+    plugin is loaded. Any other information should most likely gained
+    by instrospection of the plug-in object
+
+-->
+
+<Plugin>
+    <!-- ================================================================  -->
+
+    <!--
+        Version string for the plugin. For now, restrict yourself to
+        a sequence of dotted numbers (in string form). E.g. "1.0.5.2"
+    -->
+    <Version>2.10.0.1</Version>
+
+    <!--
+        A dotted keyword string that uniquely identifies the plugin
+    <Type>Aptixia.StackElement.Ip.PppoxPlugin</Type>
+    -->
+    <Type>PppoxPlugin</Type>
+
+    <!--
+        An arbitrary string used for "captioning" the plugin
+    -->
+    <Name>PPPoX</Name>
+    <!-- temporary, this is going away -->
+    <Class>Ip</Class>
+
+    <!-- ================================================================  -->
+
+    <!--
+    'canProvideBaseStyles' is a comma seperated list of base-stacking-styles
+    this plugin can support.
+
+    When another plugin tries to stack onto this plugin,
+    it cross checks the other plugin's 'canUseBaseStyles' list against it's own
+    'canProvideBaseStyles' list
+
+    If the cross check finds an intersection between the other
+    plugin's 'canUseBaseStyles' and this plugin's 'canProvideBaseStyles',
+    then the other plugin is allowed to stack on top of this plugin
+
+    Note: This plugin's 'Type' value is provided as a built-in
+    base-stacking-style In addition to the styles defined
+    in 'canProvideBaseStyle' below
+    -->
+    <!--
+    'canUseBaseStyles' is a comma seprated list of base-stacking-styles
+    this plugin is able stack on top of.
+
+    When this plugin tries to stack on top of another plugin,
+    it cross checks it own 'canUseBaseStyles' against other plugin's
+    'canProvideBaseStyles'.
+
+    If the cross check finds an intersection between the other
+    plugin's 'canProvideBaseStyles' and this plugin's 'canUseBaseStyles',
+    then this plugin is allowed to stack on top of other plugin
+
+    Note: "Root" is a special value for 'canUseBaseStyles' which means
+    that this plugin can be used as the root of a stacking tree
+    (it needs no base below it)
+    -->
+
+    <canUseBaseStyles>HardwareIPBase</canUseBaseStyles>
+    <canProvideBaseStyles></canProvideBaseStyles>
+    <!-- ================================================================  -->
+    <!-- Here is the list of supported card types and max number of interface supported on them. -->
+    <supportedCards>
+        <card type="10/100/1000 ALM T8" maxInterfaces="16000" />
+        <card type="10/100/1000 STX24" maxInterfaces="1000" />
+        <card type="10/100/1000 STX4" maxInterfaces="3000" />
+        <card type="10/100/1000 STXS2" maxInterfaces="3000" />
+        <card type="10/100/1000 STXS24" maxInterfaces="1000" />
+        <card type="10/100/1000 STXS4" maxInterfaces="1000" />
+        <card type="10/100/1000 STXS4-256MB" maxInterfaces="3000" />
+        <card type="10/100/1000 TXS4" maxInterfaces="1000" />
+        <card type="10/100/1000 TXS4-256MB" maxInterfaces="3000" />
+        <card type="1000 SFPS4" maxInterfaces="3000" />
+        <card type="10GE LSM" maxInterfaces="10000" />
+        <card type="10GE LSM XL6" maxInterfaces="10000" />
+        <card type="ATM 622 Multi-Rate-256MB" maxInterfaces="10000" />
+        <card type="ATM 622 Multi-Rate-512MB" maxInterfaces="10000" />
+        <card type="ATM/POS 622 Multi-Rate" maxInterfaces="10000" />
+        <card type="ATM/POS 622 Multi-Rate-256MB" maxInterfaces="10000" />
+        <card type="ATM/POS 622 Multi-Rate-512MB" maxInterfaces="10000" />
+        <card type="10/100/1000 XMS12" maxInterfaces="10000" />
+        <card type="10/100/1000 XMS12-256MB" maxInterfaces="10000" />
+        <card type="10GE LSM XM3" maxInterfaces="10000" />
+        <card type="10GE LSM LAN XFP" maxInterfaces="10000" />
+
+	    <card type="10/100/1000 LSM XMV16" maxInterfaces="16000" />
+	    <card type="10/100/1000 LSM XMV4" maxInterfaces="16000" />
+	    <card type="10/100/1000 ASM XMV12X" maxInterfaces="16000" />
+
+	    <card type="10/100/1000 CPM T8" maxInterfaces="16000"/>
+    </supportedCards>
+
+</Plugin>

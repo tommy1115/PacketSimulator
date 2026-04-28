@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="XPUnitTestA" baseType="XProtocolObject">
+<help>Provides Unit Test facility for object hierarchy</help>
+    <PropertyString>
+        <name>stringVar</name>
+        <default>xyz</default>
+        <help>string property</help>
+    </PropertyString>
+
+    <Method2 name="GetTestStringA">
+         <Argument name="v" direction="out" type="string">
+        <help>Returns a string</help>
+         </Argument>
+        <help>Test method</help>
+    </Method2>
+
+    <PropertyNode nodeType="XPUnitTestD">
+        <name>subNode</name>
+        <help>Test non-polymorphic node  </help>
+    </PropertyNode>
+    
+    <PropertyNode nodeType="XPUnitTestD"  polymorphic="1">
+        <name>secondReference</name>
+        <help>Test polymorphic node</help>
+    </PropertyNode>
+
+    <PropertyNodeList nodeType="XPUnitTestD">
+        <name>subNodeList</name>
+        <help>Test non-polymorphic node list</help>
+    </PropertyNodeList>
+</Node>

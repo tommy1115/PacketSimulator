@@ -1,0 +1,123 @@
+<?xml version="1.0" ?>
+<xs:schema targetNamespace="http://ixiacom.com" xmlns="http://ixiacom.com" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    attributeFormDefault="unqualified" elementFormDefault="qualified">
+    <xs:element name="TestScheduler" type="testSchedulerType" />
+    <xs:complexType name="testSchedulerType">
+        <xs:sequence>
+            <xs:element name="Schedulings" type="schedulingsType" />
+        </xs:sequence>
+        <xs:attribute name="version" type="xs:string" use="required" />
+    </xs:complexType>
+    <xs:complexType name="schedulingsType">
+        <xs:sequence>
+            <xs:element name="TestScheduling" type="testSchedulingType" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="testSchedulingType">
+        <xs:sequence>
+            <xs:element name="TestFileName" type="xs:string" minOccurs="1" maxOccurs="1" />
+            <xs:element name="StartDateTime" type="xs:string" minOccurs="1" maxOccurs="1" />
+            <xs:element name="Duration" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                    <xs:attribute name="hours" type="positiveIntType" use="required" />
+                    <xs:attribute name="minutes" type="intRange_0_59_Type" use="required" />
+                    <xs:attribute name="seconds" type="intRange_0_59_Type" use="required" />
+                    <xs:attribute name="isFixed" type="xs:boolean" use="required" />
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="Completions" type="positiveIntType" minOccurs="1" maxOccurs="1" />
+            <xs:element name="CompletionActions" type="completionActionsType" minOccurs="1" maxOccurs="1" />
+            <xs:element name="RecurrencePattern" type="recurrencePatternType" minOccurs="1" maxOccurs="1" />
+            <xs:element name="Messages" type="messagesType" />
+        </xs:sequence>
+        <xs:attribute name="description" type="xs:string" />
+    </xs:complexType>
+    <xs:complexType name="completionActionsType">
+        <xs:sequence>
+            <xs:element name="CopyTestFile" type="copyTestFileType" minOccurs="1" maxOccurs="1" />
+            <xs:element name="OnSuccess" type="actionType" minOccurs="0" maxOccurs="1" />
+            <xs:element name="OnFailure" type="actionType" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="actionType">
+        <xs:sequence>
+            <xs:element name="FileName" type="xs:string" minOccurs="1" maxOccurs="1" nillable="false" />
+            <xs:element name="Arguments" type="xs:string" minOccurs="0" maxOccurs="1" nillable="true" />
+        </xs:sequence>
+        <xs:attribute name="wait" type="xs:boolean" use="required" />
+    </xs:complexType>
+    <xs:complexType name="copyTestFileType">
+        <xs:sequence>
+            <xs:element name="CopyDir" type="xs:string" minOccurs="0" maxOccurs="1" nillable="true" />
+        </xs:sequence>
+        <xs:attribute name="required" type="xs:boolean" use="required" />
+    </xs:complexType>
+    <xs:complexType name="recurrencePatternType">
+        <xs:sequence>
+            <xs:element name="DaysInterval" type="positiveNonZeroIntType" minOccurs="0" />
+            <xs:element name="WeeksInterval" type="positiveNonZeroIntType" minOccurs="0" />
+            <xs:element name="WeekDaysToOccur" minOccurs="0">
+                <xs:complexType>
+                    <xs:attribute name="occurMonday" type="xs:boolean" use="required" />
+                    <xs:attribute name="occurTuesday" type="xs:boolean" use="required" />
+                    <xs:attribute name="occurWednesday" type="xs:boolean" use="required" />
+                    <xs:attribute name="occurThursday" type="xs:boolean" use="required" />
+                    <xs:attribute name="occurFriday" type="xs:boolean" use="required" />
+                    <xs:attribute name="occurSaturday" type="xs:boolean" use="required" />
+                    <xs:attribute name="occurSunday" type="xs:boolean" use="required" />
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="EndOfRecurrence" type="endOfRecurrenceType" minOccurs="0" />
+        </xs:sequence>
+        <xs:attribute name="type" type="recurrencePatternTypeEnum" use="required" />
+    </xs:complexType>
+    <xs:complexType name="endOfRecurrenceType">
+        <xs:sequence>
+            <xs:element name="NoCompletionsToEnd" type="positiveNonZeroIntType" minOccurs="0" />
+            <xs:element name="EndDateTime" type="xs:string" minOccurs="0" />
+        </xs:sequence>
+        <xs:attribute name="type" type="endOfRecurrenceTypeEnum" />
+    </xs:complexType>
+    <xs:simpleType name="positiveIntType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="positiveNonZeroIntType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="intRange_0_59_Type">
+        <xs:restriction base="xs:integer">
+            <xs:maxInclusive value="59" />
+            <xs:minInclusive value="0" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="recurrencePatternTypeEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="OneTimeOnly" />
+            <xs:enumeration value="Daily" />
+            <xs:enumeration value="Weekly" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="endOfRecurrenceTypeEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="RecurrenceDoesntEnd" />
+            <xs:enumeration value="EndAfterFixedCompletions" />
+            <xs:enumeration value="EndOnFixedDate" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="messagesType">
+        <xs:sequence>
+            <xs:element name="MessageReport" type="messageReportType" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="messageReportType">
+        <xs:sequence>
+            <xs:element name="ReportTime" type="xs:string" minOccurs="1" maxOccurs="1" />
+            <xs:element name="Code" type="xs:int" minOccurs="1" maxOccurs="1" />
+            <xs:element name="Message" type="xs:string" minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

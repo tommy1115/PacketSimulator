@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="StatAttributeList" baseType="">
+    <help>Contains the list of Statistic Attributes for a StatView</help> 
+    <PropertyNodeList nodeType="StatAttribute" polymorphic="0" permissions="ro">
+        <name>statAttributeList</name>
+        <help>List of Statistic Attributes for a StatView</help> 
+    </PropertyNodeList>
+</Node>

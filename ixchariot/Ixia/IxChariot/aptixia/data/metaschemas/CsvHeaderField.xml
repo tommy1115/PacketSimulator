@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="CsvHeaderField" baseType="TreeNode">
+    <description>Object representing name, value pair to output at the top of the generated csv file.</description>
+	<help>Generated csv file can have a list of name, value pair values written at the top. This object represents one such pair.</help>
+    <PropertyInt permission="h">
+		<name>sequenceNumber</name>
+        <displayName>sequenceNumber</displayName>
+		<category>CsvGenerator</category>
+        <description>Specifies the order in which the HeaderFields are written to the generated csv file.</description>   
+		<default>0</default>
+    </PropertyInt> 
+    <PropertyString permission="h">
+		<name>fieldName</name>
+        <displayName>FieldName</displayName>		
+		<category>CsvGenerator</category>
+        <description>FieldName</description>
+        <default>0</default>           
+    </PropertyString>
+    <PropertyString permission="h">
+		<name>fieldValue</name>
+        <displayName>FieldValue</displayName>		
+		<category>CsvGenerator</category>
+        <description>FieldValue</description>
+        <default>0</default>                
+    </PropertyString>    
+</Node>

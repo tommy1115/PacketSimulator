@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="TenGigabitLANPlugin" baseType="CardPlugin">
+<description>10 Gigabit LAN Ethernet card</description>
+	
+	<PropertyBoolean>
+		<name>enableFlowControl</name>
+		<default>false</default>
+    </PropertyBoolean>
+    
+    <PropertyString>
+		<name>directedAddress</name>
+		<default>01 80 C2 00 00 01</default>
+    </PropertyString>
+    
+    <PropertyBoolean>
+		<name>txIgnoresRxLinkFaults</name>
+		<default>false</default>
+    </PropertyBoolean>
+    
+    <PropertyString>
+		<name>transmitClocking</name>
+		<default>internal</default>
+        <choices>
+        	<choice value="internal" name="Internal" />
+        	<choice value="recovered" name="Recovered" />
+        	<choice value="external" name="External" />
+        </choices>
+        <description>Clock</description>
+        <help>This is for only 10GE LSM/LSM XL6/10 GE Xenpak/10GE XUAI</help>
+	</PropertyString>
+    
+    <PropertyBoolean>
+		<name>recoveredClock</name>
+		<default>false</default>
+		<help>.This is for transmit. This applies to only 10GE Uniphy card in LAN mode.</help>
+    </PropertyBoolean>
+    
+    <PropertyBoolean>
+		<name>laserOn</name>
+		<default>false</default>
+		<help>This applies to only 10GE Denali(LSM) card in LAN mode.</help>
+    </PropertyBoolean>
+    
+</Node>

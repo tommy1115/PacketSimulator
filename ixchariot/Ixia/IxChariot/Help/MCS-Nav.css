@@ -1,0 +1,177 @@
+H1  {
+        font-family : Verdana, Arial, Helvetica, sans-serif;
+        font-size : 16pt;
+        font-weight : normal;
+        text-align : center;
+        margin-top : 10pt;
+        margin-bottom : 18pt;
+}
+
+H2  {
+        font-family : Verdana, Arial, Helvetica, sans-serif;
+        font-size : 14pt;
+        font-weight : bold;
+        margin-left : .1in;
+        margin-top : 24pt;
+        margin-bottom : 6pt;
+
+}
+
+H3  {
+        font-family : Verdana, Arial, Helvetica, sans-serif;
+        font-size : 12pt;
+        font-weight : bold;
+        margin-left : .1in;
+        margin-top : 18pt;
+        margin-bottom : 6pt;
+}
+
+H4  {
+        font-family : Verdana, Arial, Helvetica, sans-serif;
+        font-size : 12pt;
+        font-weight : bold;
+        margin-left : .15in;
+        margin-top : 18pt;
+        margin-bottom : 6pt;
+
+}
+
+
+
+
+A:Visited  {
+        color : Maroon;
+}
+
+A:Active  {
+        color : Blue;
+}
+
+BODY  {
+        font-family : Verdana, Arial, Helvetica, sans-serif;
+        font-style : normal;
+        color : Black;
+        text-align : left;
+        text-decoration : none;
+        margin-right : .1in;
+        margin-left : .2in
+        font-size : small;
+        background-color : #ffffcc;
+}
+
+P  {
+        font-family : Verdana, Arial, Helvetica, sans-serif;
+        font-size : small;
+        font-weight : normal;
+        margin-left : .2in;
+}
+
+P.TaskIntro  {
+        font-weight : bold;
+        font-size : small;
+}
+
+P.URL  {
+        font-family : Verdana, Arial, Helvetica, sans-serif;
+        font-weight : normal;
+        font-size : small;
+        margin-left : 1in;
+        margin-top : 4pt;
+        margin-bottom : 4pt;
+}
+
+P.Indent  {
+        font-family : Verdana, Arial, Helvetica, sans-serif;
+        font-size : small;
+        font-weight : normal;
+        margin-left : .1in;
+        margin-top : 4pt;
+        margin-bottom : 4pt;
+}
+
+UL  {
+        font-family : Verdana, Arial, Helvetica, sans-serif;
+        list-style-type : disk;
+        font-size : small;
+
+}
+
+UL.Level2  {
+        font-family : Verdana, Arial, Helvetica, sans-serif;
+        list-style-type : circle;
+        font-size : small;
+}
+
+OL  {
+        font-family : Verdana, Arial, Helvetica, sans-serif;
+        list-style-type : decimal;
+        font-size : small;
+}
+
+OL.Level2  {
+        font-family : Verdana, Arial, Helvetica, sans-serif;
+        list-style-type : lower-alpha;
+        font-size : small;
+}
+
+PRE  {
+        font-family : Courier New, Courier, monospace;
+        margin-bottom : 10pt;
+        font-size : small;
+        margin-left : .35in;
+}
+
+PRE.Indent  {
+        font-family : Courier New, Courier, monospace;
+        font-size : small;
+        font-weight : normal;
+        margin-left : 0in;
+        margin-top : 0pt;
+        margin-bottom : 0pt;
+}
+
+PRE.IndentLevel2  {
+        font-family : Courier New, Courier, monospace;
+        font-size : small;
+        font-weight : normal;
+        margin-left : 0in;
+        margin-top : 0pt;
+        margin-bottom : 0pt;
+}
+
+TD  {
+        font-size : small;
+        font-family : Verdana, Arial, Helvetica, sans-serif;
+}
+
+B  {
+        font-weight : bold;
+}
+
+CITE  {
+        font-style : italic;
+}
+
+CODE  {
+        font-family : Courier New, Courier, monospace;
+        font-size : small;
+}
+
+I  {
+        font-style : italic;
+}
+
+KBD  {
+        font-family : Courier New, Courier, monospace;
+        font-size : small;
+}
+
+VAR  {
+        font-style : italic;
+}
+
+SUP  {
+        font-size : x-small;
+
+}
+

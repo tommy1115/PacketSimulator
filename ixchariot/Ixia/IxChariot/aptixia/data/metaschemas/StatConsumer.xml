@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="StatConsumer" baseType="TreeNode">
+    <help>Any consumer of stats, could be views or logs or other</help>
+    
+    <Enum name="eStatValueType">
+        <help>Stat value types supported</help>    
+        <Choices>
+            <Choice symbol="kInt" value="0" />
+            <Choice symbol="kString" value="1" />
+        </Choices>
+    </Enum>
+
+    <Struct name="StatValue" version="1">
+        <help>The value a stat at a point in time</help>
+        <Member name="id" type="int32" default="-1" version="1">
+            <help>The id of an array type stat value </help>
+        </Member> 
+        <Member name="type" type="int32" default="0" version="1">
+            <help>The type a stat value, int or string</help>
+        </Member> 
+        <Member name="intValue" type="int64" default="0" version="1" >
+            <help>The value of a stat when type is int</help>
+        </Member> 
+        <Member name="stringValue" type="string" default="" version="1" >
+            <help>The value of a stat when type is string</help>
+        </Member> 
+        <Member name="timestamp" type="int64" default="0" version="1" >
+            <help>The timestamp of a stat value</help>
+        </Member>         
+    </Struct>
+    
+    <List name="StatValueList" type="StatConsumer.StatValue" />
+    
+    <Struct name="StatChange" version="1">  
+        <help>A new change in a list of stats</help>
+        <Member name="newIndex" type="int64" default="-1" version="1" >
+            <help>The index of a new stat</help>
+        </Member>         
+        <Member name="resultIndex" type="int64" default="-1" version="1" >
+            <help>The index of stat set value within stat request result.
+            For each stat set value, there will be one set of stat result 
+            logged into the DataStore. And multiple set of values logged 
+            into views. This index will be identical with newIndex for result.
+            It will be referencing to the result newIndex in view based stat 
+            set value."</help>
+        </Member> 
+        <Member name="statSpecIndex" type="int64" default="-1" version="1" >
+            <help>The stat view statSpecList index of a new stat</help>
+        </Member>         
+        <Member name="statSourceType" type="string" default="" version="1" >
+            <help>The stat catalog source type of a new stat</help>
+        </Member>         
+        <Member name="statName" type="string" default="" version="1" >
+            <help>The stat catalog name of a new stat</help>
+        </Member>         
+        <Member name="statSpecCaption" type="string" default="" version="1" >
+            <help>The displayable caption of a new stat</help>
+        </Member>         
+        <Member name="csvStatLabel" type="string" default="" version="1" >
+            <help>The label of a new stat for a csv log</help>
+        </Member>         
+        <Member name="csvFunctionLabel" type="string" default="" version="1" >
+            <help>The label of the aggregation function for csv log</help>
+        </Member>
+        <Member name="filterGroupCaption" type="string" default="" version="1" >
+            <help>A shorter identifier for specific filter</help>
+        </Member>
+        <Member name="filterGroupToolTip" type="string" default="" version="1"  >
+            <help>A longer identifier for specific filter</help>
+        </Member>
+    </Struct>        
+
+    <List name="StatChangeList" type="StatConsumer.StatChange" />    
+
+    <Struct name="StatSet" version="1">
+        <help>A timestamped delivery of a set of stats along and changes in the list from the last delivery</help>
+        <Member name="timestamp" type="int64" default="0" version="1" >
+            <help>The timestamp for a stat set</help>
+        </Member>         
+        <Member name="stats" type="StatConsumer.StatValueList" version="1" >
+            <help>The list of stats in a stat set</help>
+        </Member>         
+        <Member name="changes" type="StatConsumer.StatChangeList" version="1" >
+            <help>The list of changes in a stat set</help>
+        </Member>         
+    </Struct>
+
+    <List name="StatSetList" type="StatConsumer.StatSet" />
+
+</Node>

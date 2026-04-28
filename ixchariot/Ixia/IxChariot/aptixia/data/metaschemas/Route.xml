@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Node nodeType="Route" baseType="">
+    <help>Route class represents a route</help>
+    <PropertyString>
+        <name>protocol</name>
+        <default>IPv4</default>
+        <choices>
+			<choice value="IPv4" name="IPv4" />
+			<choice value="IPv6" name="IPv6" />
+		</choices>
+		<description>Protocol family for which the route is configured.</description>
+    </PropertyString>
+    <PropertyString>
+        <name>targetType</name>
+        <default>net</default>
+        <choices>
+			<choice value="net" name="net" />
+			<choice value="host" name="host" />
+		</choices>
+		<description>net: the target is a network; host: the target is a host.</description>
+    </PropertyString>
+    <PropertyString>
+        <name>destinationIp</name>
+        <default>10.10.0.0</default>
+		<regexDescription>It is not a correct IP address.</regexDescription>
+        <description>The destination network or host.</description>
+        <help><![CDATA[The destination network or host. 
+        User can provide IP addresses in dotted decimal or host/network names.]]></help>
+    </PropertyString>
+    <PropertyString>
+        <name>gateway</name>
+        <default>10.10.10.1</default>
+		<regexDescription>It is not a correct IP address.</regexDescription>
+        <description>Route packets via a gateway.</description>
+        <help><![CDATA[Route packets via a gateway.  NOTE: The specified gateway must be reachable first. This usually means that you have to set up a static route
+        to the gateway beforehand. If you specify the address of one of your local interfaces, it will be used to  decide  about  the  interface  to
+        which the packets should be routed to. This is a BSDism compatibility hack.]]></help>
+    </PropertyString>
+    <PropertyString>
+        <name>mask</name>
+        <default>255.255.255.0</default>
+		<regex>\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b</regex>
+		<regexDescription>It is not a correct IP mask.</regexDescription>
+        <description>When adding a network route, the netmask to be used.</description>
+        <obsolete>Please use prefix instead.</obsolete>
+    </PropertyString>
+    <PropertyInt>
+        <name>prefixLength</name>
+        <default>24</default>
+        <min>1</min>
+        <max>128</max>
+        <description>This is the network prefix length when the target is a network.</description>
+    </PropertyInt>
+</Node>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="IPSecPhase1" baseType="">
+    <PropertyString>
+        <name>psk</name>
+        <default>ixvpn</default>
+    </PropertyString>
+
+    <PropertyString>
+        <name>lifeTime</name>
+        <default>3600</default>
+    </PropertyString>
+
+    <PropertyString>
+	<name>ikeMode</name>
+	<default>main</default>
+	<choices>
+	    <choice value="main"      	name="Main Mode" />
+	    <choice value="aggressive"  name="Aggressive Mode" />
+	</choices>
+    </PropertyString>
+
+    <PropertyString>
+	<name>hashAlgo</name>
+	<default>md5</default>
+	<choices>
+	    <choice value="md5"        	name="HMAC-MD5" />
+	    <choice value="sha1"       	name="HMAC-SHA1" />
+	</choices>
+    </PropertyString>
+
+    <PropertyString>
+	<name>dhGroup</name>
+	<default>dh2</default>
+	<choices>
+	    <choice value="dh1"       name="DH-1" />
+	    <choice value="dh2"       name="DH-2" />
+	    <choice value="dh5"       name="DH-5" />
+	    <choice value="dh14"      name="DH-14" />
+	    <choice value="dh15"      name="DH-15" />
+	    <choice value="dh16"      name="DH-16" />
+	</choices>
+    </PropertyString>
+
+    <PropertyString>
+	<name>encAlgo</name>
+	<default>3des</default>
+	<choices>
+	    <choice value="des"      	 name="DES" />
+	    <choice value="3des"     name="3-DES" />
+	    <choice value="aes128"       name="AES-128" />
+	    <choice value="aes192"       name="AES-192" />
+	    <choice value="aes256"       name="AES-256" />
+	</choices>
+    </PropertyString>
+
+</Node>

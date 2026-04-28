@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<GUIDescription>
+  <Form size="656,454">
+    <Control ref="" editor="aptixia.sm.DDTabControl" enable="" show="" location="5,15" size="647,434" tabIndex="0" anchor="Top, Bottom, Left, Right">
+      <tabpages>
+        <tabpage formFilename="basic.xml" name="Basic" />
+        <tabpage formFilename="advanced.xml" name="Advanced" />
+      </tabpages>
+    </Control>
+  </Form>
+</GUIDescription>

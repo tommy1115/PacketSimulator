@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Node nodeType="SnmpStatVariable" baseType="">
+	<PropertyString>
+		<name>name</name>
+		<displayName>Name</displayName>
+		<default></default>
+		<help>Name of SNMP Stat</help>
+	</PropertyString>
+	<PropertyString>
+		<name>oidText</name>
+		<displayName>OID Path</displayName>
+		<default></default>
+		<help>OID of MIB variable. May be in both textual and numerical form</help>
+	</PropertyString>
+</Node> 
+

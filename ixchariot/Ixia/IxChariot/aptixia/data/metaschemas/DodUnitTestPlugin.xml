@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Node nodeType="DodUnitTestPlugin" baseType="StackElementPlugin">
+    <help>Class to help unit test the DOD functionality </help>
+</Node>

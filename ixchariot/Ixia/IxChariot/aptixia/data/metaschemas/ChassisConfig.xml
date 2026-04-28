@@ -1,0 +1,1220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="ChassisConfig" baseType="">
+    <description>Object to provide certain services related to Chassis and port CPUs.</description>
+	<help>ChassisConfig object provides services to obtain Chassis and port configuration information,  
+	perform certain functions on the ports like takeOwnership, reboot port cpu etc.,, and
+	configure port's layer1 parameters.
+	</help>      
+    <PropertyNodeList nodeType="Chassis">
+        <name>chassisChain</name>
+        <description>The chassis chain object containing information about chassis chain.</description>
+    </PropertyNodeList>
+    
+    <PropertyBoolean>
+		<name>useConfigLayerV2</name>
+		<description>Boolean to indicate whether to use ConfigLayerV2 for TestConfigure</description>
+    </PropertyBoolean>
+    
+    <Struct name="PortAddress" version="1">
+        <help>Structure to hold information about the complete address of a port in a chassis.</help>
+        <Member name="chassisHostName" type="string" default="" version="1" >
+			<help>DNS name of the chassis.</help>
+        </Member>
+        <Member name="cardId" type="int32" default="0" version="1" >
+			<help>Identifier of the card the port belongs to.</help>
+        </Member>
+        <Member name="portId" type="int32" default="0" version="1" >
+			<help>Identifier of the port.</help>
+        </Member>
+    </Struct>
+
+    <List name="PortAddressVector" type="ChassisConfig.PortAddress" >
+		<help>List of Port address structure.</help>
+    </List>
+
+    <Enum name="eLinkState">
+        <Choices>
+            <Choice symbol="kLinkUp" value="0" >
+				<help>Represent the port Link up state.</help>
+            </Choice>
+            <Choice symbol="kLinkLoopBack" value="1" >
+				<help>Represent port Loop back state.</help>
+            </Choice>
+            <Choice symbol="kLinkPPPUp" value="2" >
+				<help>Represent the port Link pppUp state.</help>
+            </Choice>
+            <Choice symbol="kLinkDown" value="3" >
+				<help>Represent the port Link down state.</help>
+            </Choice>
+        </Choices>
+        <help>Value of the port link state</help>
+    </Enum>
+    
+    <Enum name="eLayer1Type">
+        <Choices>
+            <Choice symbol="kLayer1GenericType" value="0" >
+				<help>Generic type neither ethernet nor ATM.</help>
+            </Choice>
+            <Choice symbol="kBasicEthernetGenericType" value="1" >
+				<help>Basic Ethernet card type that only has autoNegotiate.</help>
+            </Choice>
+            <Choice symbol="kEthernetFiberType" value="2" >
+				<help>Card is of type SFPS4.</help>
+            </Choice>
+            <Choice symbol="kEthernetFiberOnlyType" value="3" >
+				<help>Card has only Fiber type.</help>
+            </Choice>
+            <Choice symbol="kEthernetGenericType" value="4" >
+				<help>Generic ethernet card like TXS4, TXS8 and ALM.</help>
+            </Choice>
+            <Choice symbol="kEthernetELMType" value="5" >
+				<help>Card of ELM type which has master/slave.</help>
+            </Choice>
+            <Choice symbol="kEthernetDualPhyType" value="6" >
+				<help>Card of type STXS4 with Copper/Fiber options.</help>
+            </Choice>
+            <Choice symbol="kGigabitEthernetGenericType" value="7" >
+				<help>Basic Gigabit Ethernet type.</help>
+            </Choice>
+            <Choice symbol="kGigabitXAUIType" value="8" >
+				<help>Card of XAUI type.</help>
+            </Choice>
+            <Choice symbol="kGigabitXenPakType" value="9" >
+				<help>Card of XenPAk type.</help>
+            </Choice>
+            <Choice symbol="kFiberGenericType" value="10" >
+				<help>Card to represnt generic Sonet type.</help>
+            </Choice>
+            <Choice symbol="kATMGenericType" value="11" >
+				<help>ATM type card.</help>
+            </Choice>
+            <Choice symbol="kPOSGenericType" value="12" >
+				<help>POS type card or ATM card in POS Mode.</help>
+            </Choice>
+            <Choice symbol="kTenGigabitWANType" value="13" >
+				<help>Card in 10 Gigabit LAN ethernet mode. </help>
+            </Choice>
+            <Choice symbol="kTenGigabitLANType" value="14" >
+				<help>Card in 10 gigabit WAN ethernet mode.</help>
+            </Choice>
+        </Choices>
+        <help>The Layer1 type of the card.</help>
+    </Enum>
+
+	<Enum name="eFileFormat">
+        <Choices>
+            <Choice symbol="kTxtFormat" value="0" >
+				<help>a text file suitable for import into a database.</help>
+            </Choice>
+            <Choice symbol="kCapFormat" value="1" >
+				<help>a binary format for use with IxExplorer's File Import function.</help>
+            </Choice>
+            <Choice symbol="kEncFormat" value="2" >
+				<help>a binary format for use with NAI's Sniffer program (Snifer 4.x).</help>
+            </Choice>
+            <Choice symbol="kEncOldFormat" value="3" >
+				<help>a binary format for use with NAI's Sniffer program (Snifer 1.x).</help>
+            </Choice>
+        </Choices>
+        <help>The type of the file</help>
+    </Enum>
+    
+    <List name="Layer1TypeList" type="ChassisConfig.eLayer1Type" >
+		<help>List of enumerators of type eLayer1Type.</help>
+    </List>
+
+	<Struct name="Port" version="1">
+		<help>Structure to hold information about a port.</help>
+        <Member name="portAddr" type="ChassisConfig.PortAddress" version="1" >
+			<help>Embedded structure containing port Address information.</help>
+        </Member>
+        <Member name="typeName" type="string" version="1" >
+			<help>Typename of the port</help>
+        </Member>
+        <Member name="owner" type="string" version="1" >
+			<help>Name of the port owner.</help>
+        </Member>
+        <Member name="linkSt" type="ChassisConfig.eLinkState" version="1" >
+			<help>The link state of the port.</help>
+        </Member>
+        <Member name="speed" type="int32" version="1" >
+			<help>The link speed of the port.</help>
+        </Member>
+        <Member name="duplex" type="int32" version="1" >
+			<help>The duplex of the port(either half or full).</help>
+        </Member>
+        <Member name="uniquePortNo" type="string" version="1" >
+			<help>The unique identifier used to identify the port. 
+			     It is unique to the chassis/card/port combination.
+			</help>
+        </Member>
+        <Member name="layer1Class" type="string" version="1" >
+			<help>String representing the layer1 class of the port. This can be Ethernet, ATM or POS.</help>
+        </Member>
+        <Member name="allowedLayer1Type" type="ChassisConfig.Layer1TypeList" version="1" >
+			<help>List of layer1types that can be applicable for this port in the current mode.</help>
+        </Member>
+    </Struct>
+
+    <List name="PortVector" type="ChassisConfig.Port" >
+		<help>List of Port structures.</help>
+    </List>    
+    
+	<Struct name="Card" version="1">
+		<help>Structure to hold information about a card in a chassis.</help>
+        <Member name="cardId" type="int32" version="1" >
+			<help>Identifier of the card.</help>
+        </Member>
+        <Member name="typeName" type="string" version="1" >
+        	<help>Name of card type.</help>
+        </Member>
+        <Member name="cardVersion" type="int32" version="1" >
+        	<help>Version of the card.</help>
+        </Member>
+        <Member name="fpgaVersion" type="int32" version="1" >
+        	<help>FPGA version of the card.</help>
+        </Member>
+        <Member name="portVector" type="ChassisConfig.PortVector" version="1" >
+        	<help>List of port structures containing information about all 
+        	      the ports in the card.
+        	</help>
+        </Member>
+    </Struct>
+
+    <List name="CardVector" type="ChassisConfig.Card" >
+		<help>List of card structures.</help>
+    </List>
+
+    <List name="StringVector" type="string" >
+		<help>List of strings.</help>
+	</List>
+		
+    <Struct name="XPChassis" version="1">
+		<help>Structure to hold the complete information about a Chassis.</help>
+        <Member name="chassisId" type="int32" version="1" >
+        	<help>Identifier for the Chassis.</help>
+        </Member>
+        <Member name="chassisName" type="string" version="1" >
+        	<help>Name of the Chassis.</help>
+        </Member>
+        <Member name="managementIp" type="string" version="1" >
+        	<help>Management IP or the base address of the chassis.</help>
+        </Member>
+        <Member name="typeName" type="string" version="1" >
+        	<help>Type of the chassis.</help>
+        </Member>
+        <Member name="sequenceNumber" type="int32" version="1" >
+        	<help>A number indicating sequence of the chassis.</help>
+        </Member>
+        <Member name="cardVector" type="ChassisConfig.CardVector" version="1" >
+        	<help>List of card strutures containing information 
+        	      about all the cards in the chassis.
+        	</help>
+        </Member>
+        <Member name="master" type="bool" version="1" >
+        	<help>boolean indicating whether the chassis is a master.(in a chain).</help>
+        </Member>
+    </Struct>
+
+  <Enum name="eTimeSource">
+    <Choices>
+      <Choice symbol="kInternal" value="0" >
+        <help>Internal timing for chassis.</help>
+      </Choice>
+      <Choice symbol="kGpsServer" value="1" >
+        <help>GPS unit.</help>
+      </Choice>
+      <Choice symbol="kCdma" value="2" >
+        <help>CDMA unit.</help>
+      </Choice>
+      <Choice symbol="kGpsAfd1Server" value="3" >
+        <help>GPS receiver.</help>
+      </Choice>
+    </Choices>
+    <help>Indicates the source for the time server for a chassis.</help>
+  </Enum>
+    
+    <Struct name="XPChassis2" version="1">
+		<help>Structure to hold the complete information about a Chassis.</help>
+        <Member name="chassisId" type="int32" version="1" >
+        	<help>Identifier for the Chassis.</help>
+        </Member>
+        <Member name="chassisName" type="string" version="1" >
+        	<help>Name of the Chassis.</help>
+        </Member>
+        <Member name="managementIp" type="string" version="1" >
+        	<help>Management IP or the base address of the chassis.</help>
+        </Member>
+        <Member name="typeName" type="string" version="1" >
+        	<help>Type of the chassis.</help>
+        </Member>
+        <Member name="sequenceNumber" type="int32" version="1" >
+        	<help>A number indicating sequence of the chassis.</help>
+        </Member>
+        <Member name="cardVector" type="ChassisConfig.CardVector" version="1" >
+        	<help>List of card strutures containing information 
+        	      about all the cards in the chassis.
+        	</help>
+        </Member>
+        <Member name="master" type="bool" version="1" >
+        	<help>boolean indicating whether the chassis is a master.(in a chain).</help>
+        </Member>
+        <Member name="cableLength" type="int32" version="1" >
+        	<help>Cable Length from previous chassis to the current chassis in a chain.</help>
+        </Member>
+        <Member name="timeSource" type="ChassisConfig.eTimeSource" version="1">
+            <help>The time source for the chassis.</help>
+        </Member>
+    </Struct>
+    
+    <Struct name="Layer1" version="1">
+		<help>Structure to hold information to set Layer1 information for the chassis.</help>
+        <Member name="chassisHostName" type="string" version="1" >
+        	<help>Host name of the chassis.</help>
+        </Member>
+        <Member name="xml" type="string" version="1" >
+        	<help>XML string containing information about the layer1 settings.</help>
+        </Member>
+    </Struct>
+
+    <Struct name="PackagePort" version="1">
+		<help>Structure to hold information on Dod packages to download and the ports to download to..</help>
+        <Member name="portAddr" type="ChassisConfig.PortAddress" version="1" >
+        	<help>Port address structure conatining information regarding the port.</help>
+        </Member>
+        <Member name="packages" type="ChassisConfig.StringVector" version="1" >
+        	<help>List of packages to download.</help>
+        </Member>
+    </Struct>
+
+    <List name="Layer1ConfigVector" type="ChassisConfig.Layer1" >
+		<help>List of Layer1 structures.</help>
+    </List>
+    <List name="PackagePortVector" type="ChassisConfig.PackagePort" >
+		<help>List of packagePort structures.</help>
+    </List>
+
+	<List name="LongVector" type="int32" >
+		<help>List of longs.</help>
+	</List>
+	<List name="BoolVector" type="bool" >
+		<help>List of booleans.</help>
+	</List>
+	
+	<Struct name="ChNicAddress" version="1">
+        <help>Struct to represent Nic Address</help>
+        <Member name="chassisIp" type="string" version="1">
+	        <help>Chassis ip</help>
+	    </Member>
+	    <Member name="cardId" type="int32" version="1">
+	        <help>Card id</help>
+	    </Member>
+	    <Member name="portId" type="int32" version="1">
+	        <help>Port id</help>
+	    </Member>
+	    <Member name="nicId" type="int32" version="1">
+	        <help>Nic id</help>
+	    </Member>
+    </Struct>
+	
+	<Struct name="ChNic" version="1">
+	    <help>Struct representing a NIC</help>
+	    <Member name="nicAddress" type="ChassisConfig.ChNicAddress" version="1">
+	        <help>The id of the NIC</help>
+	    </Member>
+	    <Member name="typeName" type="string" version="1">
+	        <help>Name of the type</help>
+	    </Member>
+	    <Member name="linkState" type="int32" version="1">
+	        <help>Whether the link is up or down</help>
+	    </Member>
+	    <Member name="speed" type="int32" version="1">
+	        <help>Speed</help>
+	    </Member>
+	    <Member name="duplex" type="int32" version="1">
+	        <help>Whether half or full duplex</help>
+	    </Member>
+	    <Member name="physicalType" type="ChassisConfig.eLayer1Type" version="1">
+	        <help>Physical type</help>
+	    </Member>
+	</Struct>
+	
+	<List name="SeqNicVector" type="ChassisConfig.ChNic" >
+		<help>List of NIC structures.</help>
+    </List>
+	
+   
+    
+    <List name="SeqNicAddressVector" type="ChassisConfig.ChNicAddress" >
+		<help>List of Nic Addresses structures.</help>
+    </List>
+
+    <Enum name="ePortAttribute">
+        <Choices>
+            <Choice symbol="kControlData" value="0" >
+				<help>Attribute to represent control or data capability.</help>
+            </Choice>
+            <Choice symbol="kPacketGroup" value="1" >
+				<help>Packet group attribute representing regular and wide packet group.</help>
+            </Choice>
+            <Choice symbol="kDataCaptureCapability" value="2" >
+				<help>Data capture capability.</help>
+            </Choice>
+            <Choice symbol="kMediaType" value="3" >
+				<help>Media type of the card(copper of fiber).</help>
+            </Choice>
+            <Choice symbol="kCardMode" value="4" >
+				<help>Attribute to represent Mode of the card.</help>
+            </Choice>
+            <Choice symbol="kSpeed" value="5" >
+				<help>Speed attribute.</help>
+            </Choice>
+        </Choices>
+        <help>Port attributes.</help>
+    </Enum>
+    
+    			
+    <Enum name="ePortCapabilityValues">
+        <Choices>
+			<Choice symbol="kControl" value="0" >
+				<help>Denotes Control capability.</help>
+            </Choice>
+            <Choice symbol="kData" value="1" >
+				<help>Denotes data capability.</help>
+            </Choice>
+            <Choice symbol="kRegularPacketGroup" value="2" >
+				<help>Denotes regular packet group receive mode capability.</help>
+            </Choice>
+            <Choice symbol="kWidePacketGroup" value="3" >
+				<help>Denotes wide packet group receive mode capability.</help>
+            </Choice>
+            <Choice symbol="kDataCaptureCapable" value="4" >
+				<help>Denotes data capture capability.</help>
+            </Choice>
+            <Choice symbol="kCopper" value="5" >
+				<help>Denotes card supports copper.</help>
+            </Choice>
+            <Choice symbol="kFiber" value="6" >
+				<help>Denotes card supports fiber.</help>
+            </Choice>
+            <Choice symbol="kGenericEthernetMode" value="7" >
+				<help>Denotes the card supports generic ethernet.</help>
+            </Choice>
+            <Choice symbol="kTenGigLANMode" value="8" >
+				<help>Denotes the card supports 10 Gigabit LAN.</help>
+            </Choice>
+            <Choice symbol="kTenGigWANMode" value="9" >
+				<help>Denotes the card supports 10 gigabit WAN.</help>
+            </Choice>
+            <Choice symbol="kATMMode" value="10" >
+				<help>Denotes the card supports ATM.</help>
+            </Choice>
+            <Choice symbol="kPOSMode" value="11" >
+				<help>Denotes the card supports POS.</help>
+            </Choice>            
+            <Choice symbol="kOC48POSMode" value="12" >
+				<help>Denotes the card supports OC 48 POS.</help>
+            </Choice>
+            <Choice symbol="kOC192POSMode" value="13" >
+				<help>Denotes that the card supports OC 192 POS.</help>
+            </Choice>
+            <Choice symbol="kHalf10" value="14" >
+				<help>Denotes the card supports 10 Half duplex speed.</help>
+            </Choice>
+            <Choice symbol="kFull10" value="15" >
+				<help>Denotes that the card supports 10 Full duplex speed.</help>
+            </Choice>
+            <Choice symbol="kHalf100" value="16" >
+				<help>Denotes that the card supports 100 Half duplex speed.</help>
+            </Choice>
+            <Choice symbol="kFull100" value="17" >
+				<help>Denotes the card supports 100 full duplex speed.</help>
+            </Choice>
+            <Choice symbol="kFull1000" value="18" >
+				<help>Denotes the card supports Gigabit speed.</help>
+            </Choice>
+        </Choices>
+        <help></help>
+    </Enum>
+    
+    
+    <Struct name="CapabilityMatrix" version="1">
+        <help>Structure containing an enumerator denoting a particular kind of capability and a boolean that is true if the 
+              port has that capability. For example if the enum if kFiber and boolean is true it means the port supports fiber mode.</help>
+        <Member name="portAttrib" type="ChassisConfig.ePortCapabilityValues" version="1">
+	        <help>The enumerator representing the capability</help>
+	    </Member>
+	    <Member name="featureCapability" type="bool" version="1">
+	        <help>Boolean value representing whether the capability value is supported or not.</help>
+	    </Member>
+    </Struct>
+    
+    <List name="CapabilityMatrixVector" type="ChassisConfig.CapabilityMatrix" >
+		<help>List of capabilityMatrix structures.</help>
+    </List>
+    
+    <Struct name="PortAddressWithProperties" version="1">
+        <help>Structure representing the capability values of one port.</help>        
+	    <Member name="cardID" type="int32" version="1">
+	        <help>Identifier of the card.</help>
+	    </Member>
+	    <Member name="portID" type="int32" version="1">
+	        <help>Identifier of the port.</help>
+	    </Member>
+	    <Member name="capabilityVector" type="ChassisConfig.CapabilityMatrixVector" version="1">
+	        <help>Capability list containing the information about the capability of the port.
+	        The list has one capabilityMatrix for each ePortCapabilityValues enumerator.</help>
+	    </Member>
+    </Struct>
+    
+    <List name="PortAddressWithPropertiesVector" type="ChassisConfig.PortAddressWithProperties" >
+		<help>List of PortAddressWithProperties structure.</help>
+    </List>
+
+    <List name="PortCapabilityEnumVector" type="ChassisConfig.ePortCapabilityValues" >
+		<help>List of Port attribute enumerators.</help>
+    </List>
+
+	
+    <Method2 name="EstablishConnection">
+        <help>Make a connection to the hardware manager.</help>
+        <Argument name="chassisHostName" type="string" direction="in" >
+			<help>List of ports of which to take ownership.</help>
+		</Argument>
+        <Argument name="retval" type="bool" direction="out" >
+			<help>List of ports of which to take ownership.</help>
+		</Argument>
+    </Method2>
+
+    <Method2 name="TakeOwnership">
+        <help>-deprecated- Take the ownership( optionally can force the taking of ownership)of a set of ports.</help>
+        <Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>List of ports of which to take ownership.</help>
+		</Argument>
+        <Argument name="forced" type="bool" direction="in" >
+			<help>Whether ownership should be taken forced.</help>
+		</Argument>
+    </Method2>
+
+    <Method2 name="ClearOwnership">
+        <help>-deprecated- Clear the ownership( optionally can force the clearing of ownership)of a set of ports.</help>
+        <Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>List of ports of which to clear ownership.</help>
+		</Argument>
+        <Argument name="forced" type="bool" direction="in" >
+			<help>Whether ownership should be force cleared.</help>
+		</Argument>
+    </Method2>
+    
+    <Method2 name="TakeOwnership_V2">
+        <help>Take the ownership( optionally can force the taking of ownership) of a set of ports.</help>
+        <Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>List of ports of which to take ownership.</help>
+		</Argument>
+        <Argument name="forced" type="bool" direction="in" >
+			<help>Whether ownership should be taken forced.</help>
+		</Argument>
+		<Argument name="portsFailed" type="ChassisConfig.StringVector" direction="out" >
+			<help>List of ports that could not be taken.</help>
+		</Argument>
+    </Method2>
+
+    <Method2 name="ClearOwnership_V2">
+        <help>Take the ownership( optionally can force the taking of ownership)of a set of ports.</help>
+        <Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>List of ports of which to take ownership.</help>
+		</Argument>
+        <Argument name="forced" type="bool" direction="in" >
+			<help>Whether ownership should be taken forced.</help>
+		</Argument>
+		<Argument name="portsFailed" type="ChassisConfig.StringVector" direction="out" >
+			<help>List of ports that could not be cleared.</help>
+		</Argument>
+    </Method2>
+
+    <Method2 name="GetPortInformation">
+        <help>Get the current port information such as speed, link state etc., for a set of ports. </help>
+        <Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of ports to get information.</help>
+		</Argument>
+        <Argument name="portInfo" type="ChassisConfig.PortVector" direction="out" >
+			<help>Reference to the port info structure.</help>
+		</Argument>
+    </Method2>
+
+    <!--
+    <Method2 name="SetUserData">
+        <help>Set the user data information in the chassis.</help>
+        <Argument name="chassisHostName" type="string" direction="in" >
+			<help>Name of the chassis.</help>
+        </Argument>
+        <Argument name="username" type="string" direction="in" >
+			<help>Name of the user.</help>
+        </Argument>
+        <Argument name="comment" type="string" direction="in" >
+			<help>Comment to add.</help>
+        </Argument>
+        <Argument name="timeout" type="int32" direction="in" >
+			<help>Timeout period in seconds.</help>
+        </Argument>
+    </Method2>
+    -->
+
+    <Method2 name="ResetPortCpu">
+        <help>Reboot the port CPU</help>
+        <Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of ports to reboot.</help>
+		</Argument>
+    </Method2>
+
+	<Method2 name="ResetPortCpu_V2">
+        <help>Reboot the port CPU</help>
+        <Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of ports to reboot.</help>
+		</Argument>
+		<Argument name="portsFailed" type="ChassisConfig.StringVector" direction="out" >
+			<help>List of ports that failed to reboot.</help>
+		</Argument>
+    </Method2>  
+    
+    <Method2 name="SetFactoryDefaults">
+        <help>Set the settings on the ports back to what was in factory defaults.</help>
+        <Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of Ports to set the factory defaults.</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="SetFactoryDefaults_V2">
+        <help>Set the settings on the ports back to what was in factory defaults.</help>
+        <Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of Ports to set the factory defaults.</help>
+        </Argument>
+        <Argument name="portsFailed" type="ChassisConfig.StringVector" direction="out" >
+			<help>List of ports that failed to set to factory defaults.</help>
+		</Argument>
+    </Method2>
+    
+    <Method2 name="SetModeDefaults">
+        <help>Set the settings on the ports back to what was in mode defaults.</help>
+        <Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of Ports to set the factory defaults.</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="SetModeDefaults_V2">
+        <help>Set the settings on the ports back to what was in mode defaults.</help>
+        <Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of Ports to set the mode defaults.</help>
+        </Argument>
+        <Argument name="portsFailed" type="ChassisConfig.StringVector" direction="out" >
+			<help>List of ports that failed to set to mode defaults.</help>
+		</Argument>
+    </Method2>
+    
+    <Method2 name="ConfigurePhysical">
+        <help>Configure layer1 information on the ports.</help>
+        <Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Ports to write the changes to.</help>
+        </Argument>
+        <Argument name="xml" type="string" direction="in" >
+			<help>The string containing the xml data.</help>
+		</Argument>
+    </Method2>
+			
+    <Method2 name="SetBaseAddress">
+        <help>Method to set the base management ip address used for the ports.</help>
+        <Argument name="chassisHostName" type="string" direction="in" >
+			<help>DNS name of the chassis.</help>
+		</Argument>
+        <Argument name="baseIpAddress" type="string" direction="in" >
+			<help>Base IP address to set to.</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="WriteChangesToPort">
+        <help>Method to enforce changes on the IxServer after making changes to a port via the chPort structure.</help>
+        <Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Ports to write the changes to.</help>
+        </Argument>
+        
+    </Method2>
+
+    <Method2 name="ClearPcpuGrpTimeStamp">
+        <help>Method to synchronize the time stamp on ports even within a chassis.</help>
+        <Argument name="chassisHostName" type="string" direction="in" >
+			<help>Dns name or IP address of the Chassis.</help>
+		</Argument>
+    </Method2>
+
+   <Method2 name="StartCapture">
+        <help>Method to start capture on ports.</help>
+	<Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of ports to start capture</help>
+		</Argument>
+    </Method2>
+
+   <Method2 name="StopCapture">
+        <help>Method to stop capture on ports.</help>
+	<Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of ports to stop capture</help>
+		</Argument>
+    </Method2>
+
+    <Method2 name="StartTransmit">
+        <help>Method to start transmsit.</help>
+	<Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of ports to start transmit.</help>
+		</Argument>
+    </Method2>
+
+    <Method2 name="StopTransmit">
+        <help>Method to stop transmsit.</help>
+	<Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of ports to stop transmit.</help>
+		</Argument>
+    </Method2>
+
+	<Method2 name="StartLatency">
+        <help>Method to start latency on ports.</help>
+	<Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of ports to start latency</help>
+		</Argument>
+    </Method2>
+
+   <Method2 name="StopLatency">
+        <help>Method to stop latency on ports.</help>
+	<Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of ports to stop latency</help>
+		</Argument>
+    </Method2>
+    
+    <Method2 name="ClearTimeStamp">
+        <help>Method to clear all time stamps in order to synchronize the time stamps throughout the chassis chain.</help>
+		<Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of ports to clear the timestamps.</help>
+		</Argument>
+    </Method2>
+
+    <Method2 name="SwitchToCapture">
+        <help>Method to switch the ports to capture mode.</help>
+		<Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of ports to switch to capture mode.</help>
+		</Argument>
+    </Method2>
+
+    <Method2 name="SwitchToPacketGroup">
+        <help>Method to switch the ports to packet groups mode.</help>
+		<Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of ports to switch to packet groups mode.</help>
+		</Argument>
+		<Argument name="portsFailed" type="ChassisConfig.StringVector" direction="out" >
+			<help>List of ports that failed to switch to packets .</help>
+		</Argument>
+    </Method2>
+
+    <Method2 name="SwitchToWidePacketGroup">
+        <help>Method to switch the ports to wide packet groups mode.</help>
+		<Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of ports to switch to wide packet groups mode.</help>
+		</Argument>
+		<Argument name="portsFailed" type="ChassisConfig.StringVector" direction="out" >
+			<help>List of ports that failed to switch to wide packets.</help>
+		</Argument>
+    </Method2>
+
+    <Method2 name="SwitchToPacketStreams">
+        <help>Method to switch the ports to packet streams mode.</help>
+	<Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of ports to switch to packet streams mode.</help>
+		</Argument>
+    </Method2>
+
+    <Method2 name="SwitchToAdvancedScheduler">
+        <help>Method to switch to advanced streams scheduler mode.</help>
+	<Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of ports to switch to advanced streams scheduler mode.</help>
+		</Argument>
+    </Method2>
+
+    <Method2 name="SimulateLinkState">
+        <help>Method to simulate the link (up and down).</help>
+	<Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of ports to simulate the link.</help>
+		</Argument>
+	<Argument name="linkStateUp" type="bool" direction="in" >
+			<help>TRUE if you want to have the link up and FALSE if simulate cable disconnect</help>
+		</Argument>
+    </Method2>
+
+    <Method2 name="SetCaptureFile">
+        <help>Method to write the capture buffer to a file.</help>
+	<Argument name="port" type="string" direction="in" >
+			<help>the port.</help>
+		</Argument>
+	<Argument name="numPackets" type="int32" direction="in" >
+		<help>Number of packets to retrieve.</help>
+	</Argument>
+	<Argument name="exportFileName" type="string" direction="in" >
+			<help>File name of the exported file capture buffer.</help>
+		</Argument>
+    </Method2>
+    
+    <Method2 name="SetCaptureFile_V2">
+        <help>Method to write the capture buffer to a file.</help>
+	<Argument name="port" type="string" direction="in" >
+			<help>the port.</help>
+		</Argument>
+	<Argument name="numPackets" type="int32" direction="in" >
+		<help>Number of packets to retrieve.</help>
+	</Argument>
+	<Argument name="fileFormat" type="ChassisConfig.eFileFormat" direction="in" >
+			<help>Format of the file.</help>
+		</Argument>
+	<Argument name="outFile" direction="out" type="file">
+            <help>file on the client with capture buffer</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="ImportPrtFile_V2">
+        <help>Method to import a port configuration to a list of ports.</help>
+	<Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of ports to import the file.</help>
+		</Argument>
+	<Argument name="inFile" direction="in" type="file">
+            <help>file port configuration</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="GetPortMemory">
+        <help>Method for getting the memory of a port.</help>
+	<Argument name="port" type="string" direction="in" >
+			<help>the port.</help>
+		</Argument>
+	<Argument name="mbytes" type="int32" direction="out" >
+			<help>number of Mbytes of the CPU port.</help>
+		</Argument>
+    </Method2>
+
+	<!--void GetMemory(in string port, out LongVector mbytesVector) raises (aptixia::Error);-->
+	<Method2 name="GetMemory">
+        <help>Method for getting the memory of a list of port.</help>
+	<Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of ports to switch to advanced streams scheduler mode.</help>
+		</Argument>
+	<Argument name="mbytesVector" type="ChassisConfig.LongVector" direction="out" >
+			<help>list of number of Mbytes of the CPU ports.</help>
+		</Argument>
+    </Method2>
+    
+    <Method2 name="FileBeginDownLoad">
+    <help>Method to signify beginning upload a File to the test server.This method must be used in conjunction with 
+    FileUploadSegment and FileEndDonwload.</help>
+         <Argument name="filename" type="string">
+         <help>Name of the file.</help>
+         </Argument>
+         <Argument name="sessionId" direction="out" type="int32">
+			<help>Session ID for upload the fileto tgest server.</help>
+         </Argument>
+    </Method2>
+        
+    <Method2 name="FileUploadSegment">
+    <help>Method to upload a segment to testServer. This method must be called using the sessionID obtained by a call to
+    FileBeginDownload methof.</help>
+         <Argument name="sessionID" type="int32">
+			<help>The session ID for the upload.</help>
+         </Argument>
+         <Argument name="segment" type="octets">
+			<help>The bytes containing the file segment.</help>
+         </Argument>
+    </Method2>
+
+    <Method2 name="FileEndDownLoad">
+    <help>Method to indicate that the file upload is complete.</help>
+         <Argument name="sessionID" type="int32">
+			<help>The session ID for the upload.</help>
+         </Argument>
+    </Method2>
+    
+    <Method2 name="ImportPrtFile">
+    <help>Method to import a prt file.</help>
+        <Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of ports to import the file</help>
+		</Argument>
+		<Argument name="sessionID" type="int32">
+			<help>Session ID for importing the file.</help>
+		</Argument>		
+        <Argument name="retval" type="bool" direction="out" >
+			<help>Return value of the method. If true, indicates success.</help>
+		</Argument>
+    </Method2>
+    
+    <Method2 name="GetChassisTopology">
+        <help>Get the complete information about the topology of the chassis, including card and port information.</help>
+        <Argument name="chassisHostName" type="string" direction="in" >
+			<help>Dns name or IP address of the Chassis.</help>
+		</Argument>
+        <Argument name="chassis" type="ChassisConfig.XPChassis" direction="out" >
+			<help>Reference to the structure containing the chassis topology information.</help>
+		</Argument>
+    </Method2>    
+    
+    <Method2 name="GetDetailedChassisTopology">
+        <help>Get the complete information about the topology of the chassis, including card and port information. This method also 
+              returns the capabilities of each of the ports in the chassis.
+        </help>
+        <Argument name="chassisHostName" type="string" direction="in" >
+			<help>Dns name or IP address of the Chassis.</help>
+		</Argument>
+        <Argument name="chassis" type="ChassisConfig.XPChassis2" direction="out" >
+			<help>Reference to the structure containing the chassis topology information.</help>
+		</Argument>
+		<Argument name="portVec" type="ChassisConfig.PortAddressWithPropertiesVector" direction="out" >
+			<help>Reference to the structure containing the Port capabilities information.</help>
+		</Argument>
+    </Method2>
+    
+
+    <Method2 name="CreateChassisChain">
+        <help>Creates the chassis chain the chassis using the configured chassis chain information.</help>
+    </Method2>
+    
+    <Method2 name="EstablishChassisConnection">
+		<help>EstablishConnection to the chassis</help>
+		<Argument name="chassisHostName" type="string" direction="in" >
+			<help>DNS name of the chassis.</help>
+		</Argument>
+		<Argument name="retval" type="string" direction="out" >
+			<help>DNS name of ip address of the connected chassis. If already connected with a different
+			alias, returns that alias.</help>
+		</Argument>
+	</Method2>
+	
+	<Method2 name="ClearStatistics">
+        <help>Method to start transmsit.</help>
+		<Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of ports to clear statistics.</help>
+		</Argument>
+    </Method2>
+    
+    <Method2 name="ClearStatistics_V2">
+        <help>Method to clear statistics. The method returns also the ports on which stats could not be cleared.</help>
+        <Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+            <help>Set of ports to clear statistics.</help>
+        </Argument>
+        <Argument name="portsFailed" type="ChassisConfig.StringVector" direction="out" >
+            <help>List of ports that could not be cleared of statistics.</help>
+        </Argument>
+    </Method2>
+
+	<Method2 name="GetNicVector">
+        <help>Returns the list of Nics for a particular port</help>
+        <Argument name="uniquePortId" type="string" direction="in">
+            <help>Port id for which the Nics are required</help>
+        </Argument>
+        <Argument name="nics" type="ChassisConfig.SeqNicVector" direction="out">
+            <help>Vector representing Nics</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="SetFactoryDefaultsForNics">
+        <help>Set the factory defaults</help>
+        <Argument name="nics" type="ChassisConfig.SeqNicAddressVector" direction="in">
+            <help>Nics for which the settings are to be made</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="ConfigurePhysicalForNics">
+        <help>Configure physical properties for Nics  </help>
+        <Argument name="nics" type="ChassisConfig.SeqNicAddressVector" direction="in">
+            <help>Vector of nics</help>
+        </Argument>
+        <Argument name="xml" type="string" direction="in">
+            <help>xml file that contains the configuration information.</help>
+        </Argument>
+    </Method2>
+    
+    <Method2 name="StartTrafficGeneration">
+        <help>Method to invoke a set of methods on a list of ports. This is a wrapper method that calls
+              StopTransmit, StopLatency, ClearStatistics, ClearTimeStamp.</help>
+		<Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of  ports to call the wrapper API on.</help>
+		</Argument>
+    </Method2>
+    
+    
+    <Method2 name="InvokeTranslatorModuleFunc">
+        <help>Method to invoke a translator module function in a chassis.</help>
+		<Argument name="chassisHostName" type="string" direction="in" >
+			<help>Hostname of the chassis to talk to.</help>
+		</Argument>
+		<Argument name="xml_in" type="string" direction="in" >
+			<help>xml file to be sent to the translator Module</help>
+		</Argument>
+		<Argument name="xmlStream" type="string" direction="out" >
+			<help>xml file response from the translator Module</help>
+		</Argument>		
+    </Method2>
+    
+    
+    
+    <Method2 name="DownloadPackagesToPorts">
+        <help>Method to download one package to a set of ports.</help>
+		<Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>List of ports to download to.</help>
+		</Argument>
+		<Argument name="File" type="file" direction="in" >
+			<help>Package to download.</help>
+		</Argument>
+		<Argument name="fileName" type="string" direction="in" >
+			<help>Package name to download.</help>
+		</Argument>			
+    </Method2>
+    
+    
+    <Method2 name="DeletePackagesFromPorts">
+        <help>Method to delete packages from a set of ports.</help>
+		<Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>List of ports to delete packages from.</help>
+		</Argument>
+		<Argument name="packages" type="ChassisConfig.StringVector" direction="in" >
+			<help>Package to delete.</help>
+		</Argument>	
+    </Method2>
+    
+    
+    
+    <Method2 name="InvokeTranslatorModuleFuncWithCompression">
+        <help>Method to call Translator module with compressed input and output streams.</help>
+		<Argument name="chassisHostName" type="string" direction="in" >
+			<help>Hostname of the chassis.</help>
+		</Argument>
+		<Argument name="xml_in" type="file" direction="in" >
+			<help>Compressed xml file stream  to be sent to the translator Module</help>
+		</Argument>
+		<Argument name="xmlStream" type="file" direction="out" >
+			<help>Compressed xml file stream received from the translator Module. </help>
+		</Argument>		
+    </Method2>
+    
+    <Method2 name="RebootPortCpuAndBlockUntilReady">
+        <help>Method to reboot the ports and then check if the ports are all ready.Method returns when all ports are ready.</help>
+        <Argument name="portsIn" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of ports to reboot and check for status.</help>
+		</Argument>
+		<Argument name="portsFailed" type="ChassisConfig.StringVector" direction="out" >
+			<help>List of ports that could not be rebooted.</help>
+		</Argument>
+    </Method2>
+    
+    <Method2 name="ConfigurePhysical_V2">
+        <help>Configure layer1 information on the ports and return failed ports.</help>
+        <Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Ports to write the changes to.</help>
+        </Argument>
+        <Argument name="xml" type="string" direction="in" >
+			<help>The string containing the xml data.</help>
+		</Argument>
+		<Argument name="portsFailed" type="ChassisConfig.StringVector" direction="out" >
+			<help>List of ports that could not be set with Layer1 partamters.</help>
+		</Argument>
+    </Method2>
+    
+    <Method2 name="PingChassis">
+		<help>Try connecting to chassis and see if it is up and Ixserver is also up</help>
+		<Argument name="chassisHostName" type="string" direction="in" >
+			<help>The string containing the chassisHostname.</help>
+		</Argument>
+		<Argument name="retval" type="bool" direction="out" >
+			<help>Return value of the method. If true, indicates success.</help>
+		</Argument>
+    </Method2>
+    
+    <Method2 name="GetPortInformation_V2">
+        <help>Get the current port information such as speed, link state etc., for a set of ports.
+				Return the failed ports.
+        </help>
+        <Argument name="ports" type="ChassisConfig.StringVector" direction="in" >
+			<help>Set of ports to get port information.</help>
+		</Argument>
+        <Argument name="portInfo" type="ChassisConfig.PortVector" direction="out" >
+			<help>Reference to the port info structure.</help>
+		</Argument>
+		<Argument name="portsFailed" type="ChassisConfig.StringVector" direction="out" >
+			<help>List of ports for which port information could not be obtained.</help>
+		</Argument>
+    </Method2>
+	
+	<Method2 name="GetFailedPortsForLayer1">
+        <help>Method to obtain failed ports from ConfigLayer_V2 through TestConfigure method.
+        </help>
+        <Argument name="portsFailed" type="ChassisConfig.StringVector" direction="out" >
+			<help>List of ports for Layer1 failed.</help>
+		</Argument>
+	</Method2>
+	
+	<Method2 name="RemoveChassisConnectionCache">
+		<help>Remove Chassis Connection Cache from testserver.</help>
+		<Argument name="chassisHostName" type="string" direction="in" >
+			<help>DNS name of the chassis.</help>
+		</Argument>
+	</Method2>
+	
+    <Struct name="CPDNicAddress" version="1">
+	    <help>Struct representing a NIC</help>
+	    <Member name="machineIp" type="string" version="1">
+	        <help>Machine ip</help>
+	    </Member>
+	    <Member name="nicId" type="int32" version="1">
+	        <help>NIC id</help>
+	    </Member>
+	</Struct>
+	
+	<List name="CPDNicAddressVector" type="ChassisConfig.CPDNicAddress" >
+		<help>List of NIC structures.</help>
+    </List>
+    
+    <Method2 name="GetVersion">
+		<help>Returns the PCDAP version</help>
+		<Argument name="machineIp" type="string" direction="in" >
+			<help>Machine ip.</help>
+		</Argument>
+		<Argument name="version" type="string" direction="out" >
+			<help>PCDAP version for the given machine ip</help>
+		</Argument>
+	</Method2>
+	
+	<Method2 name="GetManagementNicVector">
+		<help>Returns a vector of nic addresses</help>
+		<Argument name="machineIp" type="string" direction="in" >
+			<help>Machine ip</help>
+		</Argument>
+		<Argument name="nicVector" type="ChassisConfig.CPDNicAddressVector" direction="out" >
+			<help>Vector of nic addresses</help>
+		</Argument>
+	</Method2>
+	
+	<Method2 name="SetHostname">
+		<help>Sets the host name for the given pcdap machine</help>
+		<Argument name="machineIp" type="string" direction="in" >
+			<help>Machine ip</help>
+		</Argument>
+		<Argument name="hostname" type="string" direction="in" >
+			<help>Hostname to be set</help>
+		</Argument>
+	</Method2>
+	
+	<Method2 name="SetDnsServer">
+		<help>Sets the dns server for the given pcdap machine</help>
+		<Argument name="machineIp" type="string" direction="in" >
+			<help>Machine ip</help>
+		</Argument>
+		<Argument name="dnsServer" type="int32" direction="in" >
+			<help>Hostname to be set</help>
+		</Argument>
+	</Method2>
+	
+	<Method2 name="GetHardwareManagerBuildVersion">
+		<help>Gets the version</help>
+		<Argument name="machineIp" type="string" direction="in" >
+			<help>Machine ip</help>
+		</Argument>
+		<Argument name="version" type="string" direction="out" >
+			<help>Version</help>
+		</Argument>
+	</Method2>
+	
+	<Method2 name="SetDhcp">
+		<help>Sets the nic to use DHCP</help>
+		<Argument name="nicAddress" type="ChassisConfig.CPDNicAddress" direction="in" >
+			<help>Nic address</help>
+		</Argument>
+	</Method2>
+	
+	<Method2 name="SetStaticIp">
+		<help>Sets the nic to use static ip</help>
+		<Argument name="nicAddress" type="ChassisConfig.CPDNicAddress" direction="in" >
+			<help>Nic address</help>
+		</Argument>
+		<Argument name="ip" type="int32" direction="in" >
+			<help>Ip</help>
+		</Argument>
+		<Argument name="netmask" type="int32" direction="in" >
+			<help>Netmask</help>
+		</Argument>
+		<Argument name="gateway" type="int32" direction="in" >
+			<help>Gateway</help>
+		</Argument>
+	</Method2>
+	
+	<Method2 name="GetKernelCrashDump">
+		<help>Returns the last kernel crash dump</help>
+		<Argument name="machineIp" type="string" direction="in" >
+			<help>Machine ip</help>
+		</Argument>
+		<Argument name="crashDump" type="string" direction="out" >
+			<help>Kernel crash dump</help>
+		</Argument>
+	</Method2>
+	
+	<Method2 name="CPDConfigurePhysical">
+		<help>Configures the physical properties</help>
+		<Argument name="nicAddressVector" type="ChassisConfig.CPDNicAddressVector" direction="in" >
+			<help>Nic addresses</help>
+		</Argument>
+		<Argument name="configuration" type="string" direction="in" >
+			<help>Configuration to be set</help>
+		</Argument>
+	</Method2>
+	<Method2 name="DoesChassisSupportMultiNic">
+        <help>Returns true if the chassis is a PCDAP.</help>
+        <Argument name="chassisHostName" type="string" direction="in" >
+			<help>Dns name or IP address of the Chassis.</help>
+		</Argument>
+		<Argument name="retVal" type="bool" direction="out" >
+			<help>Return value.</help>
+		</Argument>
+    </Method2>    
+    <Method2 name="GetIxOSVersion">
+		<help>Returns the IxosVersion at the specified chassis address</help>
+		<Argument name="machineIp" type="string" direction="in" >
+			<help>Chassis Address.</help>
+		</Argument>
+		<Argument name="version" type="string" direction="out" >
+			<help>IXOS version</help>
+		</Argument>
+	</Method2>
+
+    <Method2 name="SetDelayStartTransmitTime">
+        <help>Set the number of seconds to delay test application after a start. Applicable for chassis chain.</help>
+        <Argument name="masterChassisIp" type="string" direction="in" >
+            <help>The master of the chassis chain.</help>
+        </Argument>
+        <Argument name="delay" type="int32" direction="in" >
+            <help>The delay value to be set.</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="GetDelayStartTransmitTime">
+        <help>Get the number of seconds to delay test application after a start. Applicable for chassis chain.</help>
+        <Argument name="masterChassisIp" type="string" direction="in" >
+            <help>The master of the chassis chain.</help>
+        </Argument>
+        <Argument name="delay" type="int32" direction="out" >
+            <help>The return value.</help>
+        </Argument>
+    </Method2>
+
+  <Method2 name="GetChassisTimeSource">
+    <help>Get the source for the time server of the chassis.</help>
+    <Argument name="chassisIp" type="string" direction="in" >
+      <help>The chassis IP.</help>
+    </Argument>
+    <Argument name="source" type="ChassisConfig.eTimeSource" direction="out" >
+      <help>The return value.</help>
+    </Argument>
+  </Method2>
+
+</Node>
+
+	

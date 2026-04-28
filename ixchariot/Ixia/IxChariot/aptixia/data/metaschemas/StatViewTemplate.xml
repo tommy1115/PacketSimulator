@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="StatViewTemplate" baseType="ServiceExtension">
+    <help>API to the TestServer DataStore for ViewTemplates</help>
+    <Struct name="TemplateInfo" version="1">
+        <help>Structure to describe a template in the TestServer DataStore</help>
+        <Member name="name" type="string" default="" version="1" >
+            <help>The name of a template</help>
+        </Member>
+        <Member name="statSourceTypes" type="string" default="" version="1" >
+            <help>The stat source types included in a template</help>
+        </Member>
+        <Member name="userDefined" type="bool" version="1" >
+            <help>A template can be user defined or system defined.  System defined is not editable by a user</help>
+        </Member>
+        <Member name="enabled" type="bool" version="1" >
+            <help>Enabled templates will be added to the stat view list when commitCatalog is called for matching statSourceTypes</help>
+        </Member>
+    </Struct>
+    
+    <List name="TemplateInfoList" type="StatViewTemplate.TemplateInfo" /> 
+
+    <Method2 name="Create">
+         <help>Creates a new stat view without adding it to the DataStore</help>
+         <Argument name="statView" direction="out" type="StatView">
+            <help>Stat view returned</help>
+         </Argument> 
+    </Method2>
+    
+    <Method2 name="Add">
+         <help>Adds a new stat view to the DataStore</help>
+         <Argument name="templateInfo" direction="inout" type="StatViewTemplate.TemplateInfo">
+            <help>Properties of the new template</help>
+         </Argument>
+         <Argument name="xml" direction="in" type="string">
+            <help>Properties of the stat view for the new template</help>
+         </Argument>        
+    </Method2>
+   
+    <Method2 name="Delete">
+         <help>Deletes a template from the DataStore</help>
+         <Argument name="name" direction="in" type="string">
+            <help>The name of the template to delete</help>
+         </Argument>        
+    </Method2>
+    
+    <Method2 name="Exists">
+         <help>Checks if a template already exists in the DataStore</help>
+         <Argument name="exists" direction="out" type="bool">
+            <help>The return value</help>
+         </Argument>    
+         <Argument name="name" direction="in" type="string">
+            <help>The name of the template to check for</help>
+         </Argument>        
+    </Method2>
+    
+    <Method2 name="GetList">
+         <help>Get a list of all of the templates in the DataStore for a client application</help>
+         <Argument name="list" direction="out" type="StatViewTemplate.TemplateInfoList">
+            <help>The list returned</help>
+         </Argument>    
+    </Method2>
+    
+    <Method2 name="GetViewXml">
+         <help>Get the stat view xml of a template in the DataStore</help>    
+         <Argument name="name" direction="in" type="string">
+            <help>The name of the template</help>   
+         </Argument>    
+         <Argument name="xml" direction="out" type="string">
+            <help>The xml returned</help>   
+         </Argument>    
+    </Method2>
+    
+    <Method2 name="Rename">
+         <help>Rename a template in the DataStore</help>    
+         <Argument name="name" direction="in" type="string">
+            <help>The name of the template to rename</help>  
+         </Argument>    
+         <Argument name="newName" direction="in" type="string">
+            <help>The new name for the template</help>  
+         </Argument>    
+    </Method2>
+    
+    <Method2 name="Enable">
+         <help>Enable or disable a template in the DataStore.  Enabled templates will be added to the stat view list when commitCatalog is called for matching statSourceTypes</help>      
+         <Argument name="name" direction="in" type="string">
+            <help>The name of a template to enable or disable</help> 
+         </Argument>    
+         <Argument name="enable" direction="in" type="bool">
+            <help>Enable or disable a template</help>
+         </Argument>    
+    </Method2>
+    
+    <Method2 name="SaveAs">
+         <help>Save a template in the DataStore with a new name</help>
+         <Argument name="name" direction="in" type="string">
+            <help>The name of a template to save</help>
+         </Argument>
+         <Argument name="newName" direction="in" type="string">
+            <help>The name of the new template</help>
+         </Argument>    
+    </Method2>
+    
+</Node>

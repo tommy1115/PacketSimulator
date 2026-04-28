@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>   
+
+<Node nodeType="XPBootstrap" baseType="XProtocolObject">
+    <help>Main x-protocol infrastructure regression testing object</help>
+
+    <Enum name="eMyEnum">
+        <help>A test enum (user defined type)</help>
+        <Choices>
+            <Choice symbol="kSymbol1" value="5"/>
+            <Choice symbol="kSymbol2" value="6"/>
+            <Choice symbol="kSymbol3" value="9"/>
+        </Choices>
+    </Enum>
+
+    <Struct name="InnerStruct" version="2">
+        <help>A simple test struct (user defined type)</help>
+        <Member name="anInt32" type="int32" default="931" version="1">
+            <help>A 32 bit int contained in a struct</help>
+        </Member>
+    </Struct>
+
+    <List name="ListInt8" type="int8">
+        <help>A list of 8 bit integers (user defined type)</help>
+    </List>
+
+    <Struct name="MyStruct" version="2">
+        <help>A complex structure (user defined type)</help>
+        <Member name="anInt8" type="int8" default="3" version="1">
+            <help>An 8 bit integer</help>
+        </Member>
+        <Member name="anInt16" type="int16" default="8" version="1">
+            <help>A 16 bit integer</help>
+        </Member>
+        <Member name="anInt32" type="int32" default="1" version="2">
+            <help>A 32 bit integer</help>
+        </Member>
+        <Member name="anInt64" type="int64" default="999" version="2">
+            <help>A 64 bit integer</help>
+        </Member>
+        <Member name="aBool" type="bool" default="1" version="2">
+            <help>A bool</help>
+        </Member>
+        <Member name="aDouble" type="double" default="3.5" version="1">
+            <help>A double</help>
+        </Member>
+        <Member name="aString" type="string" default="abcdef" version="1">
+            <help>A string</help>
+        </Member>
+        <Member name="anOctets" type="octets" version="1">
+            <help>A array of octets</help>
+        </Member>
+        <Member name="anEnum" type="XPBootstrap.eMyEnum" version="1">
+            <help>An enum</help>
+        </Member>
+        <Member name="aStruct" type="XPBootstrap.InnerStruct" version="1">
+            <help>An embedded struct</help>
+        </Member>
+        <Member name="aList" type="XPBootstrap.ListInt8" version="1">
+            <help>A list of 8 bit integers</help>
+        </Member>
+    </Struct>
+
+    <List name="ListInt16" type="int16">
+        <help>A list of 16 bit integers</help>
+    </List>
+    <List name="ListInt32" type="int32">
+        <help>A list of 32 bit integers</help>
+    </List>
+    <List name="ListInt64" type="int64">
+        <help>A list of 64 bit integers</help>
+    </List>
+    <List name="ListBool" type="bool">
+        <help>A list of bools</help>
+    </List>
+    <List name="ListDouble" type="double">
+        <help>A list of doubles</help>
+    </List>
+    <List name="ListString" type="string">
+        <help>A list of strings</help>
+    </List>
+    <List name="ListOctets" type="octets">
+        <help>A list of octet arrays</help>
+    </List>
+    <List name="ListEnum" type="XPBootstrap.eMyEnum">
+        <help>A list of enums</help>
+    </List>
+    <List name="ListStruct" type="XPBootstrap.MyStruct">
+        <help>A list of complex structures</help>
+    </List>
+    <List name="ListList" type="XPBootstrap.ListInt8">
+        <help>A list of lists of 8 bit integers</help>
+    </List>
+
+    <Method2 name="Ping">
+        <help>Empty function to check basic connecticity</help>
+    </Method2>
+
+    <Method2 name="Int8Test">
+        <help>
+          Basic types test. Returns argument 2 incremented by 1 in argument 3 
+          and argument 1 incremented by 1 in argument 2.
+        </help>
+        <Argument name="inInt8" type="int8">
+            <help>Argument 1</help>
+        </Argument>
+        <Argument name="inoutInt8" direction="inout" type="int8">
+            <help>Argument 2</help>
+        </Argument>
+        <Argument name="outInt8" direction="out" type="int8">
+            <help>Argument 3</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="Int16Test">
+        <help>
+          Basic types test. Returns argument 2 incremented by 1 in argument 3 
+          and argument 1 incremented by 1 in argument 2.
+        </help>
+        <Argument name="inInt16" type="int16">
+            <help>Argument 1</help>
+        </Argument>
+        <Argument name="inoutInt16" direction="inout" type="int16">
+            <help>Argument 2</help>
+        </Argument>
+        <Argument name="outInt16" direction="out" type="int16">
+            <help>Argument 3</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="Int32Test">
+        <help>
+          Basic types test. Returns argument 2 incremented by 1 in argument 3 
+          and argument 1 incremented by 1 in argument 2.
+        </help>
+        <Argument name="inInt32" type="int32">
+            <help>Argument 1</help>
+        </Argument>
+        <Argument name="inoutInt32" direction="inout" type="int32">
+            <help>Argument 2</help>
+        </Argument>
+        <Argument name="outInt32" direction="out" type="int32">
+            <help>Argument 3</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="Int64Test" type="static">
+        <help>
+          Basic types test. Returns argument 2 incremented by 1 in argument 3 
+          and argument 1 incremented by 1 in argument 2.
+        </help>
+        <Argument name="inInt64" type="int64">
+            <help>Argument 1</help>
+        </Argument>
+        <Argument name="inoutInt64" direction="inout" type="int64">
+            <help>Argument 2</help>
+        </Argument>
+        <Argument name="outInt64" direction="out" type="int64">
+            <help>Argument 3</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="BoolTest" type="static">
+        <help>
+          Basic types test. Returns NOT argument 2 in argument 3 
+          and NOT argument 1 in argument 2.
+        </help>
+        <Argument name="inBool" type="bool">
+            <help>Argument 1</help>
+        </Argument>
+        <Argument name="inoutBool" direction="inout" type="bool">
+            <help>Argument 2</help>
+        </Argument>
+        <Argument name="outBool" direction="out" type="bool">
+            <help>Argument 3</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="DoubleTest">
+        <help>
+          Basic types test. Returns argument 2 incremented by 1 in argument 3 
+          and argument 1 incremented by 1 in argument 2.
+        </help>
+        <Argument name="inDouble" type="double">
+            <help>Argument 1</help>
+        </Argument>
+        <Argument name="inoutDouble" direction="inout" type="double">
+            <help>Argument 2</help>
+        </Argument>
+        <Argument name="outDouble" direction="out" type="double">
+            <help>Argument 3</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="StringTest">
+        <help>
+          Basic types test. Returns argument 2 appended to itself in argument 3 
+          and argument 1 appended to itself in argument 2.
+        </help>
+        <Argument name="inString" type="string">
+            <help>Argument 1</help>
+        </Argument>
+        <Argument name="inoutString" direction="inout" type="string">
+            <help>Argument 2</help>
+        </Argument>
+        <Argument name="outString" direction="out" type="string">
+            <help>Argument 3</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="OctetsTest">
+        <help>
+          Basic types test. Returns argument 2 in argument 3 
+          and argument 1 in argument 2.
+        </help>
+        <Argument name="inOctets" type="octets">
+            <help>Argument 1</help>
+        </Argument>
+        <Argument name="inoutOctets" direction="inout" type="octets">
+            <help>Argument 2</help>
+        </Argument>
+        <Argument name="outOctets" direction="out" type="octets">
+            <help>Argument 3</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="FileTest">
+        <help>
+          File argument test. Returns the file passed in argument 1 as argument 2.
+        </help>
+        <Argument name="inFile" type="file">
+            <help>Argument 1</help>
+        </Argument>
+        <Argument name="outFile" direction="out" type="file">
+            <help>Argument 2</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="EnumTest">
+        <help>
+          Basic types test. Returns argument 2 in argument 3 
+          and argument 1 in argument 2.
+        </help>
+        <Argument name="inEnum" type="XPBootstrap.eMyEnum">
+            <help>Argument 1</help>
+        </Argument>
+        <Argument name="inoutEnum" direction="inout" type="XPBootstrap.eMyEnum">
+            <help>Argument 2</help>
+        </Argument>
+        <Argument name="outEnum" direction="out" type="XPBootstrap.eMyEnum">
+            <help>Argument 3</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="StructTest">
+        <help>
+          Basic types test. Returns argument 2 in argument 3 
+          and argument 1 in argument 2.
+        </help>
+        <Argument name="inStruct" type="XPBootstrap.MyStruct">
+            <help>Argument 1</help>
+        </Argument>
+        <Argument name="inoutStruct" direction="inout" type="XPBootstrap.MyStruct">
+            <help>Argument 2</help>
+        </Argument>
+        <Argument name="outStruct" direction="out" type="XPBootstrap.MyStruct">
+            <help>Argument 3</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="ListTestInt8">
+        <help>
+          Basic types test. Returns argument 2 in argument 3 
+          and argument 1 in argument 2.
+        </help>
+        <Argument name="inList" type="XPBootstrap.ListInt8">
+            <help>Argument 1</help>
+        </Argument>
+        <Argument name="inoutList" direction="inout" type="XPBootstrap.ListInt8">
+            <help>Argument 2</help>
+        </Argument>
+        <Argument name="outList" direction="out" type="XPBootstrap.ListInt8">
+            <help>Argument 3</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="ListTestInt16">
+        <help>
+          Basic types test. Returns argument 2 in argument 3 
+          and argument 1 in argument 2.
+        </help>
+        <Argument name="inList" type="XPBootstrap.ListInt16">
+            <help>Argument 1</help>
+        </Argument>
+        <Argument name="inoutList" direction="inout" type="XPBootstrap.ListInt16">
+            <help>Argument 2</help>
+        </Argument>
+        <Argument name="outList" direction="out" type="XPBootstrap.ListInt16">
+            <help>Argument 3</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="ListTestInt32">
+        <help>
+          Basic types test. Returns argument 2 in argument 3 
+          and argument 1 in argument 2.
+        </help>
+        <Argument name="inList" type="XPBootstrap.ListInt32">
+            <help>Argument 1</help>
+        </Argument>
+        <Argument name="inoutList" direction="inout" type="XPBootstrap.ListInt32">
+            <help>Argument 1</help>
+        </Argument>
+        <Argument name="outList" direction="out" type="XPBootstrap.ListInt32">
+            <help>Argument 1</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="ListTestInt64">
+        <help>
+          Basic types test. Returns argument 2 in argument 3 
+          and argument 1 in argument 2.
+        </help>
+        <Argument name="inList" type="XPBootstrap.ListInt64">
+            <help>Argument 1</help>
+        </Argument>
+        <Argument name="inoutList" direction="inout" type="XPBootstrap.ListInt64">
+            <help>Argument 2</help>
+        </Argument>
+        <Argument name="outList" direction="out" type="XPBootstrap.ListInt64">
+            <help>Argument 3</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="ListTestBool">
+        <help>
+          Basic types test. Returns argument 2 in argument 3 
+          and argument 1 in argument 2.
+        </help>
+        <Argument name="inList" type="XPBootstrap.ListBool">
+            <help>Argument 1</help>
+        </Argument>
+        <Argument name="inoutList" direction="inout" type="XPBootstrap.ListBool">
+            <help>Argument 2</help>
+        </Argument>
+        <Argument name="outList" direction="out" type="XPBootstrap.ListBool">
+            <help>Argument 3</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="ListTestDouble">
+        <help>
+          Basic types test. Returns argument 2 in argument 3 
+          and argument 1 in argument 2.
+        </help>
+        <Argument name="inList" type="XPBootstrap.ListDouble">
+            <help>Argument 1</help>
+        </Argument>
+        <Argument name="inoutList" direction="inout" type="XPBootstrap.ListDouble">
+            <help>Argument 2</help>
+        </Argument>
+        <Argument name="outList" direction="out" type="XPBootstrap.ListDouble">
+            <help>Argument 3</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="ListTestString">
+        <help>
+          Basic types test. Returns argument 2 in argument 3 
+          and argument 1 in argument 2.
+        </help>
+        <Argument name="inList" type="XPBootstrap.ListString">
+            <help>Argument 1</help>
+        </Argument>
+        <Argument name="inoutList" direction="inout" type="XPBootstrap.ListString">
+            <help>Argument 2</help>
+        </Argument>
+        <Argument name="outList" direction="out" type="XPBootstrap.ListString">
+            <help>Argument 3</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="ListTestOctets">
+        <help>
+          Basic types test. Returns argument 2 in argument 3 
+          and argument 1 in argument 2.
+        </help>
+        <Argument name="inList" type="XPBootstrap.ListOctets">
+            <help>Argument 1</help>
+        </Argument>
+        <Argument name="inoutList" direction="inout" type="XPBootstrap.ListOctets">
+            <help>Argument 2</help>
+        </Argument>
+        <Argument name="outList" direction="out" type="XPBootstrap.ListOctets">
+            <help>Argument 3</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="ListTestEnum">
+        <help>
+          Basic types test. Returns argument 2 in argument 3 
+          and argument 1 in argument 2.
+        </help>
+        <Argument name="inList" type="XPBootstrap.ListEnum">
+            <help>Argument 1</help>
+        </Argument>
+        <Argument name="inoutList" direction="inout" type="XPBootstrap.ListEnum">
+            <help>Argument 2</help>
+        </Argument>
+        <Argument name="outList" direction="out" type="XPBootstrap.ListEnum">
+            <help>Argument 3</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="ListTestStruct">
+        <help>
+          Basic types test. Returns argument 2 in argument 3 
+          and argument 1 in argument 2.
+        </help>
+        <Argument name="inList" type="XPBootstrap.ListStruct">
+            <help>Argument 1</help>
+        </Argument>
+        <Argument name="inoutList" direction="inout" type="XPBootstrap.ListStruct">
+            <help>Argument 2</help>
+        </Argument>
+        <Argument name="outList" direction="out" type="XPBootstrap.ListStruct">
+            <help>Argument 3</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="ListTestList">
+        <help>
+          Basic types test. Returns argument 2 in argument 3 
+          and argument 1 in argument 2.
+        </help>
+        <Argument name="inList" type="XPBootstrap.ListList">
+            <help>Argument 1</help>
+        </Argument>
+        <Argument name="inoutList" direction="inout" type="XPBootstrap.ListList">
+            <help>Argument 2</help>
+        </Argument>
+        <Argument name="outList" direction="out" type="XPBootstrap.ListList">
+            <help>Argument 3</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="ObjectTest">
+        <help>
+           Returns a reference to self/this.
+        </help>
+        <Argument name="outObject" direction="out" type="XPBootstrap">
+            <help>Reference to self/this</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="CreateTestObject">
+        <help>
+           Creates an XPUnitTest regression object
+        </help>
+        <Argument name="unitTest" direction="out" type="XPUnitTest">
+            <help>Reference to the created regression object</help>
+        </Argument>
+    </Method2>
+
+    <Method2 name="TestUserDefinedTypeScope">
+        <help>
+           Dummy call to test foreign scopes
+        </help>
+        <Argument name="anEnum" direction="inout" type="XPUnitTest.eUnitTestEnum">
+            <help>An enum in a different scope</help>
+        </Argument>
+        <Argument name="aStruct" direction="inout" type="XPUnitTest.UnitTestStruct">
+            <help>A structure in a different scope</help>
+        </Argument>
+        <Argument name="aList" direction="inout" type="XPUnitTest.UnitTestList">
+            <help>A list in a different scope</help>
+        </Argument>
+    </Method2>
+</Node>
+    

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Node nodeType="ChartXAxis" baseType="ChartAxis">
+    <help>X Axis Properties for StatViewer Charts</help>
+
+    <PropertyBoolean permission="h">
+        <name>scrollScale</name>
+        <displayName>Enable Scroll Scale</displayName>
+        <category>XAxis</category>
+        <default>true</default>
+        <description>Enable Scaling Scrollbar on X Axis</description>
+        <help>Deprecated</help>
+    </PropertyBoolean>
+
+</Node>
