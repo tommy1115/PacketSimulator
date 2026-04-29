@@ -5,6 +5,7 @@ REM TODO: close firewall and sleep
 REM Usage: ts004_packet_simulator_onelink.bat [E1 Address]   [E2 Address]   [Target] [Version] [Target Name]
 REM    ex: ts004_packet_simulator_onelink.bat 192.168.99.100 192.168.99.200
 REM    ex: ts004_packet_simulator_onelink.bat 192.168.99.100 192.168.99.200 GTNet    0.10.0    GTBoosterLauncher
+REM    ex: ts004_packet_simulator_onelink.bat 192.168.99.100 192.168.99.200 AIFlow   1.1.5.0   GameTurbo
 REM git Should be included in the PATH
 REM Define Error Output Color
 set "RED=4"
@@ -57,10 +58,10 @@ set "StartTime=%T_DATETIME:~0,14%"
 echo Packet_Simulator_Start_Time=%StartTime%
 
 REM TODO(REQ): script and protocol change to array[]
-REM TODO(REQ): 紀錄 CPU, RAM 在執行前中後(執行中要定期取值並取得最大值) (還沒測試)
+REM TODO(REQ): 紀錄 CPU, RAM 在執行前中後(執行中要定期取值並取得最大值)
 
-    REM ===== 執行前（取樣 5 秒）=====
-    echo "正在進行執行前取樣 20 秒...""
+    REM ===== 執行前 =====
+    echo "正在進行執行前取樣 1 秒...""
     for /L %%i in (1,1,1) do (
         set "cpu_int=0"
         set "ram_mb=0"
@@ -155,7 +156,7 @@ for /f %%b in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"
                             )
 
                             REM ===== 執行後 =====
-                            echo "正在進行執行後取樣 (20秒)..."
+                            echo "正在進行執行後取樣 (3秒)..."
                             for /L %%i in (1,1,3) do (
                                 set "cpu_int=0"
                                 set "ram_mb=0"
