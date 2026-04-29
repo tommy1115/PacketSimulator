@@ -76,153 +76,153 @@ proc output {pairs time duration} {
           [chrPair get $pairs PROTOCOL],\
           [chrPair get $pairs E1_ADDR],\
           [chrPair get $pairs E2_ADDR]"
-    if {[catch {set consecutive_lost [chrPairResults get $pairs CONSECUTIVE_LOST]}] == 0} {
-        set value [format "%.3f" $consecutive_lost]
-        append result ", $value"
-    } else {
-        append result ", "
-    }
+    # if {[catch {set consecutive_lost [chrPairResults get $pairs CONSECUTIVE_LOST]}] == 0} {
+    #     set value [format "%.3f" $consecutive_lost]
+    #     append result ", $value"
+    # } else {
+    #     append result ", "
+    # }
 
-    if {[catch {set cpu_util_e1 [chrPairResults get $pairs CPU_UTIL_E1]}] == 0} {
-        set value [format "%.3f" $cpu_util_e1]
-        append result ", $value"
-    } else {
-        append result ", "
-    }
+    # if {[catch {set cpu_util_e1 [chrPairResults get $pairs CPU_UTIL_E1]}] == 0} {
+    #     set value [format "%.3f" $cpu_util_e1]
+    #     append result ", $value"
+    # } else {
+    #     append result ", "
+    # }
 
-    if {[catch {set cpu_util_e2 [chrPairResults get $pairs CPU_UTIL_E2]}] == 0} {
-        set value [format "%.3f" $cpu_util_e2]
-        append result ", $value"
-    } else {
-        append result ", "
-    }
+    # if {[catch {set cpu_util_e2 [chrPairResults get $pairs CPU_UTIL_E2]}] == 0} {
+    #     set value [format "%.3f" $cpu_util_e2]
+    #     append result ", $value"
+    # } else {
+    #     append result ", "
+    # }
 
-    if {[catch {set delay_factor [chrPairResults get $pairs DELAY_FACTOR]}] == 0} {
-        set value [format "%.3f" $delay_factor]
-        append result ", $value"
-    } else {
-        append result ", "
-    }
+    # if {[catch {set delay_factor [chrPairResults get $pairs DELAY_FACTOR]}] == 0} {
+    #     set value [format "%.3f" $delay_factor]
+    #     append result ", $value"
+    # } else {
+    #     append result ", "
+    # }
 
-    if {[catch {set delay_variation [chrPairResults get $pairs DELAY_VARIATION]}] == 0} {
-        set value [format "%.3f" $delay_variation]
-        append result ", $value"
-    } else {
-        append result ", "
-    }
+    # if {[catch {set delay_variation [chrPairResults get $pairs DELAY_VARIATION]}] == 0} {
+    #     set value [format "%.3f" $delay_variation]
+    #     append result ", $value"
+    # } else {
+    #     append result ", "
+    # }
 
-    if {[catch {set end_to_end_delay [chrPairResults get $pairs END_TO_END_DELAY]}] == 0} {
-        set value [format "%.3f" $end_to_end_delay]
-        append result ", $value"
-    } else {
-        append result ", "
-    }
+    # if {[catch {set end_to_end_delay [chrPairResults get $pairs END_TO_END_DELAY]}] == 0} {
+    #     set value [format "%.3f" $end_to_end_delay]
+    #     append result ", $value"
+    # } else {
+    #     append result ", "
+    # }
 
-    if {[catch {set jitter [chrPairResults get $pairs JITTER]}] == 0} {
-        set avg [format "%.3f" [lindex $jitter 0]]
-        set min [format "%.3f" [lindex $jitter 1]]
-        set max [format "%.3f" [lindex $jitter 2]]
+    # if {[catch {set jitter [chrPairResults get $pairs JITTER]}] == 0} {
+    #     set avg [format "%.3f" [lindex $jitter 0]]
+    #     set min [format "%.3f" [lindex $jitter 1]]
+    #     set max [format "%.3f" [lindex $jitter 2]]
         
-        append result ", $avg, $min, $max"
-    } else {
-        append result ", , , "
-    }
+    #     append result ", $avg, $min, $max"
+    # } else {
+    #     append result ", , , "
+    # }
 
-    if {[catch {set media_loss_rate [chrPairResults get $pairs MEDIA_LOSS_RATE]}] == 0} {
-        set value [format "%.3f" $media_loss_rate]
-        append result ", $value"
-    } else {
-        append result ", "
-    }
+    # if {[catch {set media_loss_rate [chrPairResults get $pairs MEDIA_LOSS_RATE]}] == 0} {
+    #     set value [format "%.3f" $media_loss_rate]
+    #     append result ", $value"
+    # } else {
+    #     append result ", "
+    # }
 
-    if {[catch {set mos_estimate [chrPairResults get $pairs MOS_ESTIMATE]}] == 0} {
-        set avg [format "%.3f" [lindex $mos_estimate 0]]
-        set min [format "%.3f" [lindex $mos_estimate 1]]
-        set max [format "%.3f" [lindex $mos_estimate 2]]
+    # if {[catch {set mos_estimate [chrPairResults get $pairs MOS_ESTIMATE]}] == 0} {
+    #     set avg [format "%.3f" [lindex $mos_estimate 0]]
+    #     set min [format "%.3f" [lindex $mos_estimate 1]]
+    #     set max [format "%.3f" [lindex $mos_estimate 2]]
         
-        append result ", $avg, $min, $max"
-    } else {
-        append result ", , , "
-    }
+    #     append result ", $avg, $min, $max"
+    # } else {
+    #     append result ", , , "
+    # }
 
-    if {[catch {set one_way_delay [chrPairResults get $pairs ONE_WAY_DELAY]}] == 0} {
-        set avg [format "%.3f" [lindex $one_way_delay 0]]
-        set min [format "%.3f" [lindex $one_way_delay 1]]
-        set max [format "%.3f" [lindex $one_way_delay 2]]
+    # if {[catch {set one_way_delay [chrPairResults get $pairs ONE_WAY_DELAY]}] == 0} {
+    #     set avg [format "%.3f" [lindex $one_way_delay 0]]
+    #     set min [format "%.3f" [lindex $one_way_delay 1]]
+    #     set max [format "%.3f" [lindex $one_way_delay 2]]
         
-        append result ", $avg, $min, $max"
-    } else {
-        append result ", , , "
-    }
+    #     append result ", $avg, $min, $max"
+    # } else {
+    #     append result ", , , "
+    # }
 
-    if {[catch {set r_value [chrPairResults get $pairs R_VALUE]}] == 0} {
-        set min ""
-        set max ""
-        set avg [format "%.3f" [lindex $r_value 0]]
-        catch {set min [format "%.3f" [lindex $r_value 1]]}
-        catch {set max [format "%.3f" [lindex $r_value 2]]}
+    # if {[catch {set r_value [chrPairResults get $pairs R_VALUE]}] == 0} {
+    #     set min ""
+    #     set max ""
+    #     set avg [format "%.3f" [lindex $r_value 0]]
+    #     catch {set min [format "%.3f" [lindex $r_value 1]]}
+    #     catch {set max [format "%.3f" [lindex $r_value 2]]}
 
-        append result ", $avg, $min, $max"
-    } else {
-        append result ", , , "
-    }
+    #     append result ", $avg, $min, $max"
+    # } else {
+    #     append result ", , , "
+    # }
 
-    if {[catch {set rel_precision [chrPairResults get $pairs REL_PRECISION]}] == 0} {
-        set value [format "%.3f" $rel_precision]
-        append result ", $value"
-    } else {
-        append result ", "
-    }
+    # if {[catch {set rel_precision [chrPairResults get $pairs REL_PRECISION]}] == 0} {
+    #     set value [format "%.3f" $rel_precision]
+    #     append result ", $value"
+    # } else {
+    #     append result ", "
+    # }
 
-    if {[catch {set resp_time [chrPairResults get $pairs RESP_TIME]}] == 0} {
-        set avg [format "%.3f" [lindex $resp_time 0]]
-        set min [format "%.3f" [lindex $resp_time 1]]
-        set max [format "%.3f" [lindex $resp_time 2]]
+    # if {[catch {set resp_time [chrPairResults get $pairs RESP_TIME]}] == 0} {
+    #     set avg [format "%.3f" [lindex $resp_time 0]]
+    #     set min [format "%.3f" [lindex $resp_time 1]]
+    #     set max [format "%.3f" [lindex $resp_time 2]]
         
-        append result ", $avg, $min, $max"
-    } else {
-        append result ", , , "
-    }
+    #     append result ", $avg, $min, $max"
+    # } else {
+    #     append result ", , , "
+    # }
 
-    if {[catch {set rssi_e1 [chrPairResults get $pairs RSSI_E1]}] == 0} {
-        set avg [format "%.3f" [lindex $rssi_e1 0]]
-        set min [format "%.3f" [lindex $rssi_e1 1]]
-        set max [format "%.3f" [lindex $rssi_e1 2]]
+    # if {[catch {set rssi_e1 [chrPairResults get $pairs RSSI_E1]}] == 0} {
+    #     set avg [format "%.3f" [lindex $rssi_e1 0]]
+    #     set min [format "%.3f" [lindex $rssi_e1 1]]
+    #     set max [format "%.3f" [lindex $rssi_e1 2]]
         
-        append result ", $avg, $min, $max"
-    } else {
-        append result ", , , "
-    }
+    #     append result ", $avg, $min, $max"
+    # } else {
+    #     append result ", , , "
+    # }
 
-    if {[catch {set rssi_e2 [chrPairResults get $pairs RSSI_E2]}] == 0} {
-        set avg [format "%.3f" [lindex $rssi_e2 0]]
-        set min [format "%.3f" [lindex $rssi_e2 1]]
-        set max [format "%.3f" [lindex $rssi_e2 2]]
+    # if {[catch {set rssi_e2 [chrPairResults get $pairs RSSI_E2]}] == 0} {
+    #     set avg [format "%.3f" [lindex $rssi_e2 0]]
+    #     set min [format "%.3f" [lindex $rssi_e2 1]]
+    #     set max [format "%.3f" [lindex $rssi_e2 2]]
         
-        append result ", $avg, $min, $max"
-    } else {
-        append result ", , , "
-    }
+    #     append result ", $avg, $min, $max"
+    # } else {
+    #     append result ", , , "
+    # }
 
-    if {[catch {set throughput [chrPairResults get $pairs THROUGHPUT]}] == 0} {
-        set avg [format "%.3f" [lindex $throughput 0]]
-        set min [format "%.3f" [lindex $throughput 1]]
-        set max [format "%.3f" [lindex $throughput 2]]
+    # if {[catch {set throughput [chrPairResults get $pairs THROUGHPUT]}] == 0} {
+    #     set avg [format "%.3f" [lindex $throughput 0]]
+    #     set min [format "%.3f" [lindex $throughput 1]]
+    #     set max [format "%.3f" [lindex $throughput 2]]
 
-        append result ", $avg, $min, $max"
-    } else {
-        append result ", , , "
-    }
+    #     append result ", $avg, $min, $max"
+    # } else {
+    #     append result ", , , "
+    # }
 
-    if {[catch {set trans_rate [chrPairResults get $pairs TRANS_RATE]}] == 0} {
-        set avg [format "%.3f" [lindex $trans_rate 0]]
-        set min [format "%.3f" [lindex $trans_rate 1]]
-        set max [format "%.3f" [lindex $trans_rate 2]]
+    # if {[catch {set trans_rate [chrPairResults get $pairs TRANS_RATE]}] == 0} {
+    #     set avg [format "%.3f" [lindex $trans_rate 0]]
+    #     set min [format "%.3f" [lindex $trans_rate 1]]
+    #     set max [format "%.3f" [lindex $trans_rate 2]]
         
-        append result ", $avg, $min, $max"
-    } else {
-        append result ", , , "
-    }
+    #     append result ", $avg, $min, $max"
+    # } else {
+    #     append result ", , , "
+    # }
 
     # puts $result
     puts $file $result
