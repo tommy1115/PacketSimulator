@@ -44,14 +44,6 @@ echo "Test","Target","Version","Round","CPU_before","CPU_during","CPU_after","RA
 REM Modify down below
 
 :x
-set cpu_max_before=0
-set cpu_max_during=0
-set cpu_max_after=0
-
-set ram_max_before=0
-set ram_max_during=0
-set ram_max_after=0
-
 set /a round=%round%+1
 for /f %%I in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"') do set "T_DATETIME=%%I"
 set "StartTime=%T_DATETIME:~0,14%"
@@ -59,30 +51,6 @@ echo Packet_Simulator_Start_Time=%StartTime%
 
 REM TODO(REQ): script and protocol change to array[]
 REM TODO(REQ): 紀錄 CPU, RAM 在執行前中後(執行中要定期取值並取得最大值)
-
-    REM ===== 執行前 =====
-    echo "正在進行執行前取樣 3 秒...""
-    for /L %%i in (1,1,3) do (
-        set "cpu_int=0"
-        set "ram_mb=0"
-
-        for /f %%d in ('powershell -NoProfile -Command "$name='!target_name!'; $cores=[Environment]::ProcessorCount; $p1=Get-Process -Name $name -EA 0; if(-not $p1){0; exit}; $c1=($p1 | Measure-Object CPU -Sum).Sum; Start-Sleep -Milliseconds 1000; $p2=Get-Process -Name $name -EA 0; if(-not $p2){0; exit}; $c2=($p2 | Measure-Object CPU -Sum).Sum; [Math]::Round((($c2-$c1) * 100) / $cores)"') do (
-            set "cpu_int=%%d"
-        )
-        if !cpu_int! GTR !cpu_max_before! set "cpu_max_before=!cpu_int!"
-
-        for /f %%e in ('powershell -NoProfile -Command "$name='!target_name!'; $samples=(Get-Counter '\Process(*)\Working Set - Private').CounterSamples | Where-Object { $_.InstanceName -eq $name.ToLower() -or $_.InstanceName -like ($name.ToLower() + '#*') }; if($samples){ [int](($samples | Measure-Object CookedValue -Sum).Sum / 1MB) } else { 0 }"') do (
-            set "ram_mb=%%e"
-        )
-        if !ram_mb! GTR !ram_max_before! set "ram_max_before=!ram_mb!"
-
-        REM 注意：echo 內容不要包含括號，避免 Batch 語法解析錯誤
-        echo "迴圈 %%i : CPU !cpu_int!%% [Max !cpu_max_before!%%], RAM !ram_mb!MB [Max !ram_max_before!MB]"
-        
-        timeout /t 1 >nul
-    )
-
-for /f %%b in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"') do (
     set idx=1
     for /r %%i in (*.scr) do (
         set "scripts[!idx!]=%%i"
@@ -130,10 +98,41 @@ for /f %%b in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"
                 if "!RUN!"=="1" (
                     for %%p in (!PROTOCOLS!) do (
                         for /f %%t in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"') do (
-                            REM start /b 啟動應用程式而不開啟新的 命令提示字元 視窗
-                            start "" /b tclsh TS004_OneLink_OnePair.tcl %~1 %~2 %%s %%p !DURATION! "%%t" 2>> nul
+                            REM initialize cpu and ram max values
+                            set cpu_max_before=0
+                            set cpu_max_during=0
+                            set cpu_max_after=0
+                            set ram_max_before=0
+                            set ram_max_during=0
+                            set ram_max_after=0
 
-                            REM ===== Duration=====
+                            REM ===== Before execution =====
+                            echo "Before execution 3 seconds..."
+                            for /L %%k in (1,1,3) do (
+                                set "cpu_int=0"
+                                set "ram_mb=0"
+
+                                for /f %%d in ('powershell -NoProfile -Command "$name='!target_name!'; $cores=[Environment]::ProcessorCount; $p1=Get-Process -Name $name -EA 0; if(-not $p1){0; exit}; $c1=($p1 | Measure-Object CPU -Sum).Sum; Start-Sleep -Milliseconds 1000; $p2=Get-Process -Name $name -EA 0; if(-not $p2){0; exit}; $c2=($p2 | Measure-Object CPU -Sum).Sum; [Math]::Round((($c2-$c1) * 100) / $cores)"') do (
+                                    set "cpu_int=%%d"
+                                )
+                                if !cpu_int! GTR !cpu_max_before! set "cpu_max_before=!cpu_int!"
+
+                                for /f %%e in ('powershell -NoProfile -Command "$name='!target_name!'; $samples=(Get-Counter '\Process(*)\Working Set - Private').CounterSamples | Where-Object { $_.InstanceName -eq $name.ToLower() -or $_.InstanceName -like ($name.ToLower() + '#*') }; if($samples){ [int](($samples | Measure-Object CookedValue -Sum).Sum / 1MB) } else { 0 }"') do (
+                                    set "ram_mb=%%e"
+                                )
+                                if !ram_mb! GTR !ram_max_before! set "ram_max_before=!ram_mb!"
+
+                                REM 注意：echo 內容不要包含括號，避免 Batch 語法解析錯誤
+                                echo "Before execution, iteration %%k: CPU !cpu_int!%% [Max !cpu_max_before!%%], RAM !ram_mb!MB [Max !ram_max_before!MB]"
+                                
+                                timeout /t 1 >nul
+                            )
+
+                            REM start /b 啟動應用程式而不開啟新的 命令提示字元 視窗
+                            @REM start "" /b tclsh TS004_OneLink_OnePair.tcl %~1 %~2 %%s %%p !DURATION! "%%t" 2>> nul
+                            start "" /b tclsh TS004_OneLink_OnePair.tcl %~1 %~2 %%s %%p !DURATION! "%%t"
+
+                            REM ===== Execution =====
                             set /a loops=DURATION/interval
                             echo !loops!
 
@@ -153,14 +152,14 @@ for /f %%b in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"
                                 )
                                 if !ram_mb! GTR !ram_max_during! set "ram_max_during=!ram_mb!"
 
-                                echo "執行中第 %%k 次 : CPU !cpu_int!%% [Max:!cpu_max_during!%%], RAM !ram_mb!MB [Max:!ram_max_during!MB]"
+                                echo "Execution in progress, iteration %%k: CPU !cpu_int!%% [Max:!cpu_max_during!%%], RAM !ram_mb!MB [Max:!ram_max_during!MB]"
 
                                 REM ---- every 10 sec ----
                                 timeout /t !interval! >nul
                             )
 
-                            REM ===== 執行後 =====
-                            echo "正在進行執行後取樣 (3秒)..."
+                            REM ===== After execution =====
+                            echo "After execution 3 seconds..."
                             for /L %%k in (1,1,3) do (
                                 set "cpu_int=0"
                                 set "ram_mb=0"
@@ -177,11 +176,11 @@ for /f %%b in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"
                                 )
                                 if !ram_mb! GTR !ram_max_after! set "ram_max_after=!ram_mb!"
 
-                                echo "執行後第 %%k 次 : CPU !cpu_int!%% [Max:!cpu_max_after!%%], RAM !ram_mb!MB [Max:!ram_max_after!MB]"
+                                echo "After execution, iteration %%k: CPU !cpu_int!%% [Max:!cpu_max_after!%%], RAM !ram_mb!MB [Max:!ram_max_after!MB]"
                                 timeout /t 1 >nul
                             )
 
-                            REM ===== 寫入 CSV =====
+                            REM ===== Write to CSV =====
                             echo "%0","%target%","%target_version%","!round!", ^
                             "!cpu_max_before!","!cpu_max_during!","!cpu_max_after!", ^
                             "!ram_max_before!","!ram_max_during!","!ram_max_after!" >> %csvfile%
@@ -194,9 +193,8 @@ for /f %%b in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"
             )
         )
     )
-    timeout /t 10000
+    @REM timeout /t 10000
 
-)
 goto x
 
 for /r %%i in (*.scr) do (

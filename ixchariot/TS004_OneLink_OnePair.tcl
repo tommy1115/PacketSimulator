@@ -35,12 +35,14 @@ proc argsParser args {
               puts "arg2 :: Number"
         }
         default {
-            set e1 "192.168.50.99" ;
-            set e2 "100.100.100.100" ;
-            set currentScript "" ;
-            set currentProtocol "" ;
-            set timeout 60 ;
-            set timestamp "";
+            # set e1 "192.168.50.99" ;
+            # set e2 "100.100.100.100" ;
+            set e1 {}
+            set e2 {}
+            set currentScript ""
+            set currentProtocol ""
+            set timeout 60
+            set timestamp ""
 
             set args [string map { - "" } $args]
             for {set i 0} {$i < [llength $args]} { incr i 2} {
@@ -50,9 +52,14 @@ proc argsParser args {
                     return "Unknown Args :: $a - For Help :: argsParser -?";
                 }
                 set b [lindex $args [expr $i+1]]
-                set $a $b 
+
+                if { $a == "e1" && $a == "e2" } {
+                    set $a [split $b " "]
+                } else {
+                    set $a $b
+                }
             }
-        }   
+        }
     }   
 }
 
@@ -69,6 +76,7 @@ proc output {pairs time duration} {
         set appl_name [string map {, ""} $tmp_appl_name]
     }
 
+    puts ""
     set result "$time,\
           $duration,\
           $scr_name,\
