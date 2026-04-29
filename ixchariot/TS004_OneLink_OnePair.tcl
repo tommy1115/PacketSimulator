@@ -15,6 +15,7 @@
 proc argsParser args {
     global e1
     global e2
+    global pairs_per_group
     global currentScript
     global currentProtocol
     global timeout
@@ -39,6 +40,7 @@ proc argsParser args {
             # set e2 "100.100.100.100" ;
             set e1 {}
             set e2 {}
+            set pairs_per_group 16
             set currentScript ""
             set currentProtocol ""
             set timeout 60
@@ -48,12 +50,12 @@ proc argsParser args {
             for {set i 0} {$i < [llength $args]} { incr i 2} {
                 set a [lindex $args $i]
                 # puts [lindex $args $i]
-                if { $a != "e1" && $a != "e2" && $a != "currentScript" && $a != "currentProtocol" && $a != "timeout" && $a != "timestamp" } {
+                if { $a != "e1" && $a != "e2" && $a != "pairs_per_group" && $a != "currentScript" && $a != "currentProtocol" && $a != "timeout" && $a != "timestamp" } {
                     return "Unknown Args :: $a - For Help :: argsParser -?";
                 }
                 set b [lindex $args [expr $i+1]]
 
-                if { $a == "e1" && $a == "e2" } {
+                if { $a == "e1" || $a == "e2" } {
                     set $a [split $b " "]
                 } else {
                     set $a $b
@@ -76,7 +78,6 @@ proc output {pairs time duration} {
         set appl_name [string map {, ""} $tmp_appl_name]
     }
 
-    puts ""
     set result "$time,\
           $duration,\
           $scr_name,\
@@ -239,98 +240,38 @@ proc output {pairs time duration} {
 
 argsParser -e1 [lindex $argv 0]\
            -e2 [lindex $argv 1]\
-           -currentScript [lindex $argv 2]\
-           -currentProtocol [lindex $argv 3]\
-           -timeout [lindex $argv 4]\
-           -timestamp [lindex $argv 5]
+           -pairs_per_group [lindex $argv 2]\
+           -currentScript [lindex $argv 3]\
+           -currentProtocol [lindex $argv 4]\
+           -timeout [lindex $argv 5]\
+           -timestamp [lindex $argv 6]
 
 load "Ixia\\IxChariot\\ChariotExt.dll"
 package require ChariotExt
 
 ############################## Modify down below ##############################
+
 ###############################################################################
-# HTTPtext script test, 10 groups, 16 pairs per group
+# Start test
 ###############################################################################
-proc httptext_test {} {
-    global test timestamp currentScript currentProtocol timeout
-    # TODO(REQ): 要測試的 IP 由外部參數傳進來 
-    # set base_e1 "192.168.99."
-    # set base_e2 "100.100.100."
-    # set start_suffix_e1 50
-    # set start_suffix_e2 100
-    # set total_groups 10
-    # set pairs_per_group 16
-    set base_e1 "192.168.0."
-    set base_e2 "192.168.0."
-    set start_suffix_e1 136
-    set start_suffix_e2 156
-    set total_groups 1
-    set pairs_per_group 16
+proc start_test {} {
+    global test e1 e2 pairs_per_group currentProtocol currentScript timestamp timeout
 
-    set allPairs {}
-
-    for {set g 0} {$g < $total_groups} {incr g} {
-        set current_suffix_e1 [expr $start_suffix_e1 + $g]
-        set current_suffix_e2 [expr $start_suffix_e2 + $g]
-        set e1_ip "${base_e1}${current_suffix_e1}"
-        set e2_ip "${base_e2}${current_suffix_e2}"
-
+    set pairList {}
+    foreach ip1 $e1 ip2 $e2 {
+        if {$ip1 == "" || $ip2 == ""} {
+            continue
+        }
         for {set p 0} {$p < $pairs_per_group} {incr p} {
             set pair [chrPair new]
-            chrPair set $pair E1_ADDR $e1_ip E2_ADDR $e2_ip
+            chrPair set $pair E1_ADDR $ip1 E2_ADDR $ip2
             chrPair set $pair PROTOCOL $currentProtocol
             chrPair useScript $pair $currentScript
             catch {chrPair setScriptVar $pair send_buffer_size 65486}
             catch {chrPair setScriptVar $pair receive_buffer_size 65486}
-
-            if {[catch {chrTest addPair $test $pair}] == 0} {
-                lappend allPairs $pair
-            }
+            catch {chrTest addPair $test $pair}
         }
     }
-
-    ###############################################################################
-    # Start HTTPtext test with 160 pairs
-    ###############################################################################
-    if {[catch {chrTest start $test}] == 0} {
-        if {![chrTest isStopped $test $timeout]} {
-            chrTest stop $test
-        }
-        foreach p_obj $allPairs {
-            output $p_obj $timestamp $timeout
-        }
-    } else {
-        return
-    }
-}
-
-###############################################################################
-# All scripts test
-###############################################################################
-proc allscript_test {} {
-    global test e1 e2 currentProtocol currentScript timestamp timeout
-    set pair [chrPair new]
-    chrPair set $pair E1_ADDR $e1 E2_ADDR $e2
-    chrPair set $pair PROTOCOL $currentProtocol
-    chrPair useScript $pair $currentScript
-    catch {chrPair setScriptVar $pair send_buffer_size 65486}
-    catch {chrPair setScriptVar $pair receive_buffer_size 65486}
-    ###############################################################################
-
-    ###############################################################################
-    # puts "    $currentProtocol: $e2  --> $e1"
-    set pairReverse [chrPair new]
-    chrPair copy $pairReverse $pair
-    chrPair set $pairReverse E1_ADDR $e2 E2_ADDR $e1
-    ###############################################################################
-
-    catch {chrTest addPair $test $pair}
-    catch {chrTest addPair $test $pairReverse}
-
-    ###############################################################################
-    # Start
-    ###############################################################################
-    # puts "$currentScript, Start"
 
     if {[catch {chrTest start $test}] != 0} {
         return
@@ -341,20 +282,16 @@ proc allscript_test {} {
         chrTest stop $test
     }
 
-    if {![chrTest isStopped $test 10]} {
-        chrTest stop $test
-    }
-    
-    # set timestamp [chrTest get $test STOP_TIME]
-    # puts "$currentScript, Stop"
-    # puts "###############################################################################"
-
     ###############################################################################
     # Information
     ###############################################################################
+    set filename "new_file.txt"
+    set file [open $filename "a"]
 
-    output $pair $timestamp $timeout
-    output $pairReverse $timestamp $timeout
+    set result "$e1,$e2"
+    puts "$result"
+    puts $file $result
+    close $file
 }
 
 # puts "###############################################################################"
@@ -366,12 +303,8 @@ chrRunOpts set $runOpts TEST_DURATION $timeout
 chrRunOpts set $runOpts CPU_UTIL 1
 chrRunOpts set $runOpts STOP_AFTER_NUM_PAIRS_FAIL 170
 
-if {[string match -nocase "*HTTPtext.scr*" $currentScript]} {
-    httptext_test
-} else {
-    allscript_test
-}
-catch {chrTest delete $test force}
+start_test
 
+catch {chrTest delete $test force}
 
 return

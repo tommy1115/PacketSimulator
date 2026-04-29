@@ -2,10 +2,10 @@
 
 REM TODO: close firewall and sleep
 
-REM Usage: ts004_packet_simulator_onelink.bat [E1 Address]   [E2 Address]   [Target] [Version] [Target Name]
+REM Usage: ts004_packet_simulator_onelink.bat [E1 Address]   [E2 Address]   [Target] [Version] [Target Name]      [Duration] [Interval] [Total group] [pairs per group]
 REM    ex: ts004_packet_simulator_onelink.bat 192.168.99.100 192.168.99.200
 REM    ex: ts004_packet_simulator_onelink.bat 192.168.99.100 192.168.99.200 GTNet    0.10.0    GTBoosterLauncher
-REM    ex: ts004_packet_simulator_onelink.bat 192.168.99.100 192.168.99.200 AIFlow   1.1.5.0   GameTurbo
+REM    ex: ts004_packet_simulator_onelink.bat 192.168.99.100 192.168.99.200 AIFlow   1.1.5.0   GameTurbo          3600       10         10            16
 REM git Should be included in the PATH
 REM Define Error Output Color
 set "RED=4"
@@ -25,6 +25,10 @@ cd ixchariot
 
 setlocal enabledelayedexpansion
 
+set ip1=%1
+set ip2=%2
+set total_group=%8
+set pairs_per_group=%9
 set target=%3
 set target_version=%4
 set target_name=%5
@@ -38,10 +42,41 @@ set ram_max=0
 set file_path=new_file.txt
 set "csvfile=%~dp0rep\log\out.csv"
 
+REM 確保 new_file.txt, out.csv 不存在
+if exist "!file_path!" del /f /q "!file_path!" >nul 2>&1
+if exist "!csvfile!" del /f /q "!csvfile!" >nul 2>&1
+
 @REM echo "Test","Target","Version","Round","CPU_min","CPU_max","RAM_min(KB)","RAM_max(KB)","Timestamp","Duration","SCRIPT_FILENAME","APPL_SCRIPT_NAME","Protocol","E1_ADDR","E2_ADDR","CONSECUTIVE_LOST","CPU_UTIL_E1","CPU_UTIL_E2","DELAY_FACTOR","DELAY_VARIATION","END_TO_END_DELAY","JITTER_AVG","JITTER_MIN","JITTER_MAX","MEDIA_LOSS_RATE","MOS_ESTIMATE_AVG","MOS_ESTIMATE_MIN","MOS_ESTIMATE_MAX","ONE_WAY_DELAY_AVG","ONE_WAY_DELAY_MIN","ONE_WAY_DELAY_MAX","R_VALUE_AVG","R_VALUE_MIN","R_VALUE_MAX","REL_PRECISION","RESP_TIME_AVG","RESP_TIME_MIN","RESP_TIME_MAX","RSSI_E1_AVG","RSSI_E1_MIN","RSSI_E1_MAX","RSSI_E2_AVG","RSSI_E2_MIN","RSSI_E2_MAX","THROUGHPUT_AVG","THROUGHPUT_MIN","THROUGHPUT_MAX","TRANS_RATE_AVG","TRANS_RATE_MIN","TRANS_RATE_MAX" >> %csvfile%
-echo "Test","Target","Version","Round","CPU_before","CPU_during","CPU_after","RAM_before(MB)","RAM_during(MB)","RAM_after(MB)","Timestamp","Duration","SCRIPT_FILENAME","APPL_SCRIPT_NAME","Protocol","E1_ADDR","E2_ADDR" >> %csvfile%
+echo "Test","Target","Version","Round","CPU_before","CPU_during","CPU_after","RAM_before(MB)","RAM_during(MB)","RAM_after(MB)","Timestamp","Duration","SCRIPT_FILENAME","Protocol","E1_ADDR","E2_ADDR" >> %csvfile%
 
 REM Modify down below
+
+REM modify e1, e2 to new_e1, new_e2
+for /f "tokens=1-4 delims=." %%a in ("%ip1%") do (
+    set e1_prefix=%%a.%%b.%%c
+    set /a e1_last=%%d
+)
+for /f "tokens=1-4 delims=." %%a in ("%ip2%") do (
+    set e2_prefix=%%a.%%b.%%c
+    set /a e2_last=%%d
+)
+set "e1=!ip1!"
+set "e2=!ip2!"
+set new_e1=
+set new_e2=
+set /a stop_idx=%total_group% - 1
+for /l %%i in (0,1,%stop_idx%) do (
+    set /a current_e1_last=%e1_last% + %%i
+    set /a current_e2_last=%e2_last% + %%i
+
+    if "%%i"=="0" (
+        set "new_e1=!e1_prefix!.!current_e1_last!"
+        set "new_e2=!e2_prefix!.!current_e2_last!"
+    ) else (
+        set "new_e1=!new_e1! !e1_prefix!.!current_e1_last!"
+        set "new_e2=!new_e2! !e2_prefix!.!current_e2_last!"
+    )
+)
 
 :x
 set /a round=%round%+1
@@ -92,6 +127,8 @@ REM TODO(REQ): 紀錄 CPU, RAM 在執行前中後(執行中要定期取值並取
                     REM %%~nxs 檔名加副檔名 (HTTPtext.scr)
                     if /i "%%~ns"=="!SCRIPT_PATH!" (
                         set "RUN=1"
+                        set "e1=!new_e1!"
+                        set "e2=!new_e2!"
                     )
                 )
 
@@ -130,7 +167,7 @@ REM TODO(REQ): 紀錄 CPU, RAM 在執行前中後(執行中要定期取值並取
 
                             REM start /b 啟動應用程式而不開啟新的 命令提示字元 視窗
                             @REM start "" /b tclsh TS004_OneLink_OnePair.tcl %~1 %~2 %%s %%p !DURATION! "%%t" 2>> nul
-                            start "" /b tclsh TS004_OneLink_OnePair.tcl %~1 %~2 %%s %%p !DURATION! "%%t"
+                            start "" /b tclsh TS004_OneLink_OnePair.tcl "!e1!" "!e2!" "!pairs_per_group!" "%%s" "%%p" "!DURATION!" "%%t"
 
                             REM ===== Execution =====
                             set /a loops=DURATION/interval
@@ -181,10 +218,13 @@ REM TODO(REQ): 紀錄 CPU, RAM 在執行前中後(執行中要定期取值並取
                             )
 
                             REM ===== Write to CSV =====
-                            echo "%0","%target%","%target_version%","!round!", ^
-                            "!cpu_max_before!","!cpu_max_during!","!cpu_max_after!", ^
-                            "!ram_max_before!","!ram_max_during!","!ram_max_after!" >> %csvfile%
-
+                            for /f "delims=" %%c in (!file_path!) do (
+                                echo "%0","%target%","%target_version%","!round!",^
+                                "!cpu_max_before!","!cpu_max_during!","!cpu_max_after!",^
+                                "!ram_max_before!","!ram_max_during!","!ram_max_after!",^
+                                "!T_DATETIME!","!DURATION!","%%~nxs","%%p",%%c >> %csvfile%
+                            )
+                            del !file_path!
                             echo ## !T_DATETIME!, %%p, %%s --------------------------------------
                             timeout /t 10
                         )
@@ -193,7 +233,6 @@ REM TODO(REQ): 紀錄 CPU, RAM 在執行前中後(執行中要定期取值並取
             )
         )
     )
-    @REM timeout /t 10000
 
 goto x
 
