@@ -69,12 +69,12 @@ REM TODO(REQ): 紀錄 CPU, RAM 在執行前中後(執行中要定期取值並取
         for /f %%d in ('powershell -NoProfile -Command "$name='!target_name!'; $cores=[Environment]::ProcessorCount; $p1=Get-Process -Name $name -EA 0; if(-not $p1){0; exit}; $c1=($p1 | Measure-Object CPU -Sum).Sum; Start-Sleep -Milliseconds 1000; $p2=Get-Process -Name $name -EA 0; if(-not $p2){0; exit}; $c2=($p2 | Measure-Object CPU -Sum).Sum; [Math]::Round((($c2-$c1) * 100) / $cores)"') do (
             set "cpu_int=%%d"
         )
-        if "!cpu_int!" GTR "!cpu_max_before!" set "cpu_max_before=!cpu_int!"
+        if !cpu_int! GTR !cpu_max_before! set "cpu_max_before=!cpu_int!"
 
         for /f %%e in ('powershell -NoProfile -Command "$name='!target_name!'; $samples=(Get-Counter '\Process(*)\Working Set - Private').CounterSamples | Where-Object { $_.InstanceName -eq $name.ToLower() -or $_.InstanceName -like ($name.ToLower() + '#*') }; if($samples){ [int](($samples | Measure-Object CookedValue -Sum).Sum / 1MB) } else { 0 }"') do (
             set "ram_mb=%%e"
         )
-        if "!ram_mb!" GTR "!ram_max_before!" set "ram_max_before=!ram_mb!"
+        if !ram_mb! GTR !ram_max_before! set "ram_max_before=!ram_mb!"
 
         REM 注意：echo 內容不要包含括號，避免 Batch 語法解析錯誤
         echo "迴圈 %%i : CPU !cpu_int!%% [Max !cpu_max_before!%%], RAM !ram_mb!MB [Max !ram_max_before!MB]"
@@ -145,13 +145,13 @@ for /f %%b in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"
                                 for /f %%d in ('powershell -NoProfile -Command "$name='!target_name!'; $cores=[Environment]::ProcessorCount; $p1=Get-Process -Name $name -EA 0; if(-not $p1){0; exit}; $c1=($p1 | Measure-Object CPU -Sum).Sum; Start-Sleep -Milliseconds 1000; $p2=Get-Process -Name $name -EA 0; if(-not $p2){0; exit}; $c2=($p2 | Measure-Object CPU -Sum).Sum; [Math]::Round((($c2-$c1) * 100) / $cores)"') do (
                                     set "cpu_int=%%d"
                                 )
-                                if "!cpu_int!" GTR "!cpu_max_during!" set "cpu_max_during=!cpu_int!"
+                                if !cpu_int! GTR !cpu_max_during! set "cpu_max_during=!cpu_int!"
 
                                 REM ---- RAM ----
                                 for /f %%e in ('powershell -NoProfile -Command "$name='!target_name!'; $samples=(Get-Counter '\Process(*)\Working Set - Private').CounterSamples | Where-Object { $_.InstanceName -eq $name.ToLower() -or $_.InstanceName -like ($name.ToLower() + '#*') }; if($samples){ [int](($samples | Measure-Object CookedValue -Sum).Sum / 1MB) } else { 0 }"') do (
                                     set "ram_mb=%%e"
                                 )
-                                if "!ram_mb!" GTR "!ram_max_during!" set "ram_max_during=!ram_mb!"
+                                if !ram_mb! GTR !ram_max_during! set "ram_max_during=!ram_mb!"
 
                                 echo "執行中第 %%k 次 : CPU !cpu_int!%% [Max:!cpu_max_during!%%], RAM !ram_mb!MB [Max:!ram_max_during!MB]"
 
@@ -169,13 +169,13 @@ for /f %%b in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"
                                 for /f %%d in ('powershell -NoProfile -Command "$name='!target_name!'; $cores=[Environment]::ProcessorCount; $p1=Get-Process -Name $name -EA 0; if(-not $p1){0; exit}; $c1=($p1 | Measure-Object CPU -Sum).Sum; Start-Sleep -Milliseconds 1000; $p2=Get-Process -Name $name -EA 0; if(-not $p2){0; exit}; $c2=($p2 | Measure-Object CPU -Sum).Sum; [Math]::Round((($c2-$c1) * 100) / $cores)"') do (
                                     set "cpu_int=%%d"
                                 )
-                                if "!cpu_int!" GTR "!cpu_max_after!" set "cpu_max_after=!cpu_int!"
+                                if !cpu_int! GTR !cpu_max_after! set "cpu_max_after=!cpu_int!"
 
                                 REM ---- RAM  ----
                                 for /f %%e in ('powershell -NoProfile -Command "$name='!target_name!'; $samples=(Get-Counter '\Process(*)\Working Set - Private').CounterSamples | Where-Object { $_.InstanceName -eq $name.ToLower() -or $_.InstanceName -like ($name.ToLower() + '#*') }; if($samples){ [int](($samples | Measure-Object CookedValue -Sum).Sum / 1MB) } else { 0 }"') do (
                                     set "ram_mb=%%e"
                                 )
-                                if "!ram_mb!" GTR "!ram_max_after!" set "ram_max_after=!ram_mb!"
+                                if !ram_mb! GTR !ram_max_after! set "ram_max_after=!ram_mb!"
 
                                 echo "執行後第 %%k 次 : CPU !cpu_int!%% [Max:!cpu_max_after!%%], RAM !ram_mb!MB [Max:!ram_max_after!MB]"
                                 timeout /t 1 >nul
