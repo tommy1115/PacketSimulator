@@ -30,7 +30,6 @@ set target_version=%4
 set target_name=%5
 set duration=%6
 set interval=%7
-set /a loops=duration/interval
 set round=0
 set cpu_min=10
 set cpu_max=0
@@ -91,21 +90,16 @@ for /f %%b in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"
     set script_total=!idx!
     @REM echo !script_total!
 
-    set "case[1].script=HTTPtext"
-    set "case[1].protocol=TCP"
-    set "case[1].duration=!duration!"
-    set "case[2].script=all"
-    set "case[2].protocol=TCP,UDP,RTP"
-    set "case[2].duration=60"
-    set "case_total=2"
-    @REM @REM set "case_total=0" 
-    @REM :SymLoop 
+    set case[1].script=HTTPtext
+    set case[1].protocol=TCP
+    set case[1].duration=!duration!
+    set case[2].script=all
+    set case[2].protocol=TCP,UDP,RTP
+    set case[2].duration=60
+    set case_total=2
 
-    @REM if defined case[!case_total!].script ( 
-    @REM     echo !case[%case_total%].script!
-    @REM     set /a x+=1
-    @REM     GOTO :SymLoop 
-    @REM )
+    @REM echo !case[1].script!, !case[1].protocol!, !case[1].duration!, !case[2].script!, !case[2].protocol!, !case[2].duration!
+    @REM timeout /t 10000
     @REM @REM for /f "tokens=2 delims=[]" %%i in ('set case[') do (
     @REM @REM     set /a case_total+=1
     @REM @REM )
@@ -123,6 +117,10 @@ for /f %%b in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"
                 if /i "!SCRIPT_PATH!"=="all" (
                     set "RUN=1"
                 ) else (
+                    REM %%s 完整路徑 (C:\builds\work\PacketSimulator\ixchariot\HTTPtext.scr)
+                    REM %%~ns 僅檔名 (HTTPtext)
+                    REM %%~xs 僅副檔名 (.scr)
+                    REM %%~nxs 檔名加副檔名 (HTTPtext.scr)
                     if /i "%%~ns"=="!SCRIPT_PATH!" (
                         set "RUN=1"
                     )
@@ -131,9 +129,14 @@ for /f %%b in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"
                 if "!RUN!"=="1" (
                     for %%p in (!PROTOCOLS!) do (
                         for /f %%t in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"') do (
+                            REM start /b 啟動應用程式而不開啟新的 命令提示字元 視窗
                             start "" /b tclsh TS004_OneLink_OnePair.tcl %~1 %~2 %%s %%p !DURATION! "%%t" 2>> nul
+
                             REM ===== Duration=====
-                             for /L %%i in (1,1,!loops!) do (
+                            set /a loops=DURATION/interval
+                            echo !loops!
+
+                            for /L %%k in (1,1,!loops!) do (
                                 set "cpu_int=0"
                                 set "ram_mb=0"
 
@@ -149,7 +152,7 @@ for /f %%b in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"
                                 )
                                 if "!ram_mb!" GTR "!ram_max_during!" set "ram_max_during=!ram_mb!"
 
-                                echo "執行中第 %%i 次 : CPU !cpu_int!%% [Max:!cpu_max_during!%%], RAM !ram_mb!MB [Max:!ram_max_during!MB]"
+                                echo "執行中第 %%k 次 : CPU !cpu_int!%% [Max:!cpu_max_during!%%], RAM !ram_mb!MB [Max:!ram_max_during!MB]"
 
                                 REM ---- every 10 sec ----
                                 timeout /t !interval! >nul
@@ -157,7 +160,7 @@ for /f %%b in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"
 
                             REM ===== 執行後 =====
                             echo "正在進行執行後取樣 (3秒)..."
-                            for /L %%i in (1,1,3) do (
+                            for /L %%k in (1,1,3) do (
                                 set "cpu_int=0"
                                 set "ram_mb=0"
 
@@ -173,7 +176,7 @@ for /f %%b in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"
                                 )
                                 if "!ram_mb!" GTR "!ram_max_after!" set "ram_max_after=!ram_mb!"
 
-                                echo "執行後第 %%i 次 : CPU !cpu_int!%% [Max:!cpu_max_after!%%], RAM !ram_mb!MB [Max:!ram_max_after!MB]"
+                                echo "執行後第 %%k 次 : CPU !cpu_int!%% [Max:!cpu_max_after!%%], RAM !ram_mb!MB [Max:!ram_max_after!MB]"
                                 timeout /t 1 >nul
                             )
 
@@ -181,7 +184,7 @@ for /f %%b in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"
                             echo "%0","%target%","%target_version%","!round!", ^
                             "!cpu_max_before!","!cpu_max_during!","!cpu_max_after!", ^
                             "!ram_max_before!","!ram_max_during!","!ram_max_after!" >> %csvfile%
-                            
+
                             echo ## !T_DATETIME!, %%p, %%s --------------------------------------
                             timeout /t 10
                         )
