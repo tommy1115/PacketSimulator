@@ -60,17 +60,17 @@ REM TODO(REQ): script and protocol change to array[]
 REM TODO(REQ): 紀錄 CPU, RAM 在執行前中後(執行中要定期取值並取得最大值)
 
     REM ===== 執行前 =====
-    echo "正在進行執行前取樣 1 秒...""
-    for /L %%i in (1,1,1) do (
+    echo "正在進行執行前取樣 3 秒...""
+    for /L %%i in (1,1,3) do (
         set "cpu_int=0"
         set "ram_mb=0"
 
-        for /f %%d in ('powershell -NoProfile -Command "$p=Get-CimInstance Win32_PerfFormattedData_PerfProc_Process -Filter \"Name = '!target_name!'\" | Measure-Object -Property PercentProcessorTime -Sum; $cores=(Get-CimInstance Win32_ComputerSystem).NumberOfLogicalProcessors; if($p.Sum){ [int]($p.Sum / $cores) } else { echo 0 }"') do (
+        for /f %%d in ('powershell -NoProfile -Command "$name='!target_name!'; $cores=[Environment]::ProcessorCount; $p1=Get-Process -Name $name -EA 0; if(-not $p1){0; exit}; $c1=($p1 | Measure-Object CPU -Sum).Sum; Start-Sleep -Milliseconds 1000; $p2=Get-Process -Name $name -EA 0; if(-not $p2){0; exit}; $c2=($p2 | Measure-Object CPU -Sum).Sum; [Math]::Round((($c2-$c1) * 100) / $cores)"') do (
             set "cpu_int=%%d"
         )
         if "!cpu_int!" GTR "!cpu_max_before!" set "cpu_max_before=!cpu_int!"
 
-        for /f %%e in ('powershell -NoProfile -Command "$p=Get-Process !target_name! -EA 0; if($p){ [int](($p|Measure-Object WorkingSet64 -Sum).Sum/1MB) } else { 0 }"') do (
+        for /f %%e in ('powershell -NoProfile -Command "$name='!target_name!'; $samples=(Get-Counter '\Process(*)\Working Set - Private').CounterSamples | Where-Object { $_.InstanceName -eq $name.ToLower() -or $_.InstanceName -like ($name.ToLower() + '#*') }; if($samples){ [int](($samples | Measure-Object CookedValue -Sum).Sum / 1MB) } else { 0 }"') do (
             set "ram_mb=%%e"
         )
         if "!ram_mb!" GTR "!ram_max_before!" set "ram_max_before=!ram_mb!"
@@ -141,13 +141,13 @@ for /f %%b in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"
                                 set "ram_mb=0"
 
                                 REM ---- CPU ----
-                                for /f %%d in ('powershell -NoProfile -Command "$p=Get-CimInstance Win32_PerfFormattedData_PerfProc_Process -Filter \"Name = '!target_name!'\" | Measure-Object -Property PercentProcessorTime -Sum; $cores=(Get-CimInstance Win32_ComputerSystem).NumberOfLogicalProcessors; if($p.Sum){ [int]($p.Sum / $cores) } else { echo 0 }"') do (
+                                for /f %%d in ('powershell -NoProfile -Command "$name='!target_name!'; $cores=[Environment]::ProcessorCount; $p1=Get-Process -Name $name -EA 0; if(-not $p1){0; exit}; $c1=($p1 | Measure-Object CPU -Sum).Sum; Start-Sleep -Milliseconds 1000; $p2=Get-Process -Name $name -EA 0; if(-not $p2){0; exit}; $c2=($p2 | Measure-Object CPU -Sum).Sum; [Math]::Round((($c2-$c1) * 100) / $cores)"') do (
                                     set "cpu_int=%%d"
                                 )
                                 if "!cpu_int!" GTR "!cpu_max_during!" set "cpu_max_during=!cpu_int!"
 
                                 REM ---- RAM ----
-                                for /f %%e in ('powershell -NoProfile -Command "$p=Get-Process !target_name! -EA 0; if($p){ [int](($p|Measure-Object WorkingSet64 -Sum).Sum/1MB) } else { 0 }"') do (
+                                for /f %%e in ('powershell -NoProfile -Command "$name='!target_name!'; $samples=(Get-Counter '\Process(*)\Working Set - Private').CounterSamples | Where-Object { $_.InstanceName -eq $name.ToLower() -or $_.InstanceName -like ($name.ToLower() + '#*') }; if($samples){ [int](($samples | Measure-Object CookedValue -Sum).Sum / 1MB) } else { 0 }"') do (
                                     set "ram_mb=%%e"
                                 )
                                 if "!ram_mb!" GTR "!ram_max_during!" set "ram_max_during=!ram_mb!"
@@ -165,13 +165,13 @@ for /f %%b in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"
                                 set "ram_mb=0"
 
                                 REM ---- CPU ----
-                                for /f %%d in ('powershell -NoProfile -Command "$p=Get-CimInstance Win32_PerfFormattedData_PerfProc_Process -Filter \"Name = '!target_name!'\" | Measure-Object -Property PercentProcessorTime -Sum; $cores=(Get-CimInstance Win32_ComputerSystem).NumberOfLogicalProcessors; if($p.Sum){ [int]($p.Sum / $cores) } else { echo 0 }"') do (
+                                for /f %%d in ('powershell -NoProfile -Command "$name='!target_name!'; $cores=[Environment]::ProcessorCount; $p1=Get-Process -Name $name -EA 0; if(-not $p1){0; exit}; $c1=($p1 | Measure-Object CPU -Sum).Sum; Start-Sleep -Milliseconds 1000; $p2=Get-Process -Name $name -EA 0; if(-not $p2){0; exit}; $c2=($p2 | Measure-Object CPU -Sum).Sum; [Math]::Round((($c2-$c1) * 100) / $cores)"') do (
                                     set "cpu_int=%%d"
                                 )
                                 if "!cpu_int!" GTR "!cpu_max_after!" set "cpu_max_after=!cpu_int!"
 
                                 REM ---- RAM  ----
-                                for /f %%e in ('powershell -NoProfile -Command "$p=Get-Process !target_name! -EA 0; if($p){ [int](($p|Measure-Object WorkingSet64 -Sum).Sum/1MB) } else { 0 }"') do (
+                                for /f %%e in ('powershell -NoProfile -Command "$name='!target_name!'; $samples=(Get-Counter '\Process(*)\Working Set - Private').CounterSamples | Where-Object { $_.InstanceName -eq $name.ToLower() -or $_.InstanceName -like ($name.ToLower() + '#*') }; if($samples){ [int](($samples | Measure-Object CookedValue -Sum).Sum / 1MB) } else { 0 }"') do (
                                     set "ram_mb=%%e"
                                 )
                                 if "!ram_mb!" GTR "!ram_max_after!" set "ram_max_after=!ram_mb!"
