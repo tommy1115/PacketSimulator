@@ -144,8 +144,8 @@ REM TODO(REQ): 紀錄 CPU, RAM 在執行前中後(執行中要定期取值並取
                             set ram_max_after=0
 
                             REM ===== Before execution =====
-                            echo "Before execution 3 seconds..."
-                            for /L %%k in (1,1,3) do (
+                            echo "Before execution 30 seconds..."
+                            for /L %%k in (1,1,30) do (
                                 set "cpu_int=0"
                                 set "ram_mb=0"
 
@@ -191,13 +191,14 @@ REM TODO(REQ): 紀錄 CPU, RAM 在執行前中後(執行中要定期取值並取
 
                                 echo "Execution in progress, iteration %%k: CPU !cpu_int!%% [Max:!cpu_max_during!%%], RAM !ram_mb!MB [Max:!ram_max_during!MB]"
 
-                                REM ---- every 10 sec ----
+                                REM ---- every sec ----
                                 timeout /t !interval! >nul
                             )
+                            timeout /t 180
 
                             REM ===== After execution =====
-                            echo "After execution 3 seconds..."
-                            for /L %%k in (1,1,3) do (
+                            echo "After execution 30 seconds..."
+                            for /L %%k in (1,1,30) do (
                                 set "cpu_int=0"
                                 set "ram_mb=0"
 
