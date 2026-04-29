@@ -289,7 +289,6 @@ proc start_test {} {
     set file [open $filename "a"]
 
     set result "$e1,$e2"
-    puts "$result"
     puts $file $result
     close $file
 }
