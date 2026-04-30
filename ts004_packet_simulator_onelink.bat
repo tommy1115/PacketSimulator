@@ -219,10 +219,7 @@ for /l %%i in (1,1,!case_total!) do (
 
                         REM ===== Write to CSV =====
                         for /f "delims=" %%c in (!file_path!) do (
-                            echo "%0","%target%","%target_version%","!round!",^
-                            "!cpu_max_before!","!cpu_max_during!","!cpu_max_after!",^
-                            "!ram_max_before!","!ram_max_during!","!ram_max_after!",^
-                            "!T_DATETIME!","!DURATION!","%%~nxs","%%p",%%c >> %csvfile%
+                            echo "%0","%target%","%target_version%","!round!","!cpu_max_before!","!cpu_max_during!","!cpu_max_after!","!ram_max_before!","!ram_max_during!","!ram_max_after!","!T_DATETIME!","!DURATION!","%%~nxs","%%p",%%c >> %csvfile%
                         )
                         del !file_path!
                         echo ## !T_DATETIME!, %%p, %%s --------------------------------------
