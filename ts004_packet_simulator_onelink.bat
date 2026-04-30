@@ -145,7 +145,7 @@ for /l %%i in (1,1,!case_total!) do (
 
                         REM ===== Before execution =====
                         echo "Before execution 60 seconds..."
-                        for /L %%k in (1,1,1) do (
+                        for /L %%k in (1,1,30) do (
                             set "cpu_int=0"
                             set "ram_mb=0"
 
@@ -193,11 +193,11 @@ for /l %%i in (1,1,!case_total!) do (
                             REM ---- every sec ----
                             timeout /t !interval! >nul
                         )
-                        @REM timeout /t 600
+                        timeout /t 600
 
                         REM ===== After execution =====
                         echo "After execution 30 seconds..."
-                        for /L %%k in (1,1,1) do (
+                        for /L %%k in (1,1,30) do (
                             set "cpu_int=0"
                             set "ram_mb=0"
 
