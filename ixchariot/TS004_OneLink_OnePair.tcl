@@ -277,7 +277,16 @@ proc start_test {} {
         return
     }
 
-    # TODO(REQ): isStopped 定義
+    # DESCRIPTION
+    #     The chrTest isStopped subcommand waits until the test is stopped or the timeout is reached.
+    #     chrTest isStopped test ?timeout? 
+    # ARGUMENTS
+    #     - test
+    #         The handle returned by chrTest new.
+    #     - timeout
+    #         The time in seconds to wait for the test to stop or CHR_INFINITE (optional). If timeout is not provided, this subcommand returns immediately with the test status.
+    # RETURNED DATA
+    #     The returned data provides True (1) if the test is stopped; False (0) if the timeout has expired.
     if {![chrTest isStopped $test [expr $timeout]]} {
         chrTest stop $test
     }

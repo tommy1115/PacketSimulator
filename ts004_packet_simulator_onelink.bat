@@ -83,37 +83,32 @@ for /f "tokens=1* delims=:" %%a in (!raw_target!) do (
     set "target_version=%%b"
 )
 
-:x
-set /a round=%round%+1
-for /f %%I in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"') do set "T_DATETIME=%%I"
-set "StartTime=%T_DATETIME:~0,14%"
-echo Packet_Simulator_Start_Time=%StartTime%
-
-REM TODO(REQ): script and protocol change to array[]
-REM TODO(REQ): 紀錄 CPU, RAM 在執行前中後(執行中要定期取值並取得最大值)
+REM 紀錄所有 .scr
 set idx=1
 for /r %%i in (*.scr) do (
     set "scripts[!idx!]=%%i"
     set /a idx+=1
 )
 set script_total=!idx!
-@REM echo !script_total!
 
+REM TODO(REQ): script and protocol change to array[]
 set case[1].script=HTTPtext
 set case[1].protocol=TCP
 set case[1].duration=!duration!
 set case[2].script=all
 set case[2].protocol=TCP,UDP,RTP
 set case[2].duration=60
-set case_total=2
+set case_total=0
 
-@REM echo !case[1].script!, !case[1].protocol!, !case[1].duration!, !case[2].script!, !case[2].protocol!, !case[2].duration!
-@REM timeout /t 10000
-@REM @REM for /f "tokens=2 delims=[]" %%i in ('set case[') do (
-@REM @REM     set /a case_total+=1
-@REM @REM )
-@REM echo !case_total!
+for /f %%i in ('set case[ ^| find /c ".script"') do set case_total=%%i
 
+:x
+set /a round=%round%+1
+for /f %%I in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"') do set "T_DATETIME=%%I"
+set "StartTime=%T_DATETIME:~0,14%"
+echo Packet_Simulator_Start_Time=%StartTime%
+
+REM 紀錄 CPU, RAM 在執行前中後(執行中要定期取值並取得最大值)
 for /l %%i in (1,1,!case_total!) do (
     set "SCRIPT_PATH=!case[%%i].script!"
     set "PROTOCOLS=!case[%%i].protocol!"
@@ -121,7 +116,7 @@ for /l %%i in (1,1,!case_total!) do (
     @REM echo !SCRIPT_PATH!, !PROTOCOLS!, !DURATION!
 
     for /l %%j in (1,1,!script_total!) do (
-        for %%s in (!scripts[%%j]!) do (
+        for %%s in ("!scripts[%%j]!") do (
             set "RUN=0"
             if /i "!SCRIPT_PATH!"=="all" (
                 set "RUN=1"
@@ -149,8 +144,8 @@ for /l %%i in (1,1,!case_total!) do (
                         set ram_max_after=0
 
                         REM ===== Before execution =====
-                        echo "Before execution 30 seconds..."
-                        for /L %%k in (1,1,30) do (
+                        echo "Before execution 60 seconds..."
+                        for /L %%k in (1,1,1) do (
                             set "cpu_int=0"
                             set "ram_mb=0"
 
@@ -198,11 +193,11 @@ for /l %%i in (1,1,!case_total!) do (
                             REM ---- every sec ----
                             timeout /t !interval! >nul
                         )
-                        timeout /t 180
+                        @REM timeout /t 600
 
                         REM ===== After execution =====
                         echo "After execution 30 seconds..."
-                        for /L %%k in (1,1,30) do (
+                        for /L %%k in (1,1,1) do (
                             set "cpu_int=0"
                             set "ram_mb=0"
 
