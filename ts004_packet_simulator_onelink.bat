@@ -39,7 +39,8 @@ set cpu_max=0
 set ram_min=0
 set ram_max=0
 set file_path=new_file.txt
-set "csvfile=%~dp0rep\log\out.csv"
+for /f %%I in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMddHHmmss"') do set "time=%%I"
+set "csvfile=%~dp0rep\log\out_!time!.csv"
 
 REM 確保 new_file.txt, out.csv 不存在
 if exist "!file_path!" del /f /q "!file_path!" >nul 2>&1
